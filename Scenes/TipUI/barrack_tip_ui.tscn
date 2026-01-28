@@ -1,0 +1,581 @@
+[gd_scene load_steps=18 format=3 uid="uid://x6f71hgxasuw"]
+
+[ext_resource type="PackedScene" uid="uid://bw0kjoybdcexh" path="res://Scenes/Classes/tip_ui.tscn" id="1_blmvb"]
+[ext_resource type="Texture2D" uid="uid://cvkchuw573sbv" path="res://Assets/Images/UI/Pages/page1.png" id="2_wqf1g"]
+[ext_resource type="Texture2D" uid="uid://dh77u8mjtmvs8" path="res://Assets/Images/UI/Pages/green.png" id="3_88a0p"]
+[ext_resource type="Texture2D" uid="uid://caa3nswfjeb5a" path="res://Assets/Animations/Flags/defence-flow_13.png" id="4_q0vyn"]
+[ext_resource type="Texture2D" uid="uid://by73o04f416y2" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1-show.png" id="5_hgoiu"]
+[ext_resource type="Texture2D" uid="uid://csaxsmpnbhtfg" path="res://Assets/Images/DefenceTowers/UI/UI-based.png" id="6_5qt6r"]
+[ext_resource type="Texture2D" uid="uid://ekuygya1xab8" path="res://Assets/Images/DefenceTowers/UI/level_up.png" id="7_73wga"]
+[ext_resource type="Texture2D" uid="uid://7xl2wnc5nk41" path="res://Assets/Images/DefenceTowers/UI/flag_button_select.png" id="8_w8p07"]
+[ext_resource type="Texture2D" uid="uid://cx7pbvojh7rji" path="res://Assets/Images/DefenceTowers/UI/sell.png" id="9_g1b4h"]
+[ext_resource type="Texture2D" uid="uid://fg1y0i3ubnh4" path="res://Assets/Images/DefenceTowers/UI/集结范围.png" id="10_najqe"]
+[ext_resource type="FontFile" uid="uid://drfv8ak22g1rm" path="res://Assets/Fonts/simhei.ttf" id="11_56xm7"]
+[ext_resource type="Texture2D" uid="uid://dfbih2xrqaeli" path="res://Assets/Images/UI/Cursors/UnitMove/UnitMove0012.png" id="11_nafau"]
+[ext_resource type="Texture2D" uid="uid://ckk0fomsomqpb" path="res://Assets/Animations/Soldiers/LV1/SoldierLV1-move_04.png" id="12_llrmg"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="12_vhluo"]
+
+[sub_resource type="Animation" id="Animation_1c5pv"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Paper/Flag:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Paper/Flag:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Paper/Flag:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Paper/Flag:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Paper/Label:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Paper/Label2:visible_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Paper/Lv1-show:modulate:r")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Paper/Lv1-show:modulate:g")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Paper/Lv1-show:modulate:b")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Paper/Lv1-show:modulate:a")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Paper/Lv1-show2:modulate:r")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Paper/Lv1-show2:modulate:g")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/12/type = "bezier"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Paper/Lv1-show2:modulate:b")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Paper/Lv1-show2:modulate:a")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/14/type = "bezier"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Paper/OKButton:position:x")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(49.2187, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/15/type = "bezier"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Paper/OKButton:position:y")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(211.433, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/16/type = "bezier"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Paper/OKButton:rotation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath(".:can_control")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_bpfey"]
+resource_name = "entry"
+length = 3.0
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Paper/Flag:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(1, 1.3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Paper/Flag:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(1, 1.3)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Paper/Flag:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(1, 1.3)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Paper/Flag:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(1, 1.3)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Paper/Label:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(1.3, 1.7)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Paper/Label2:visible_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(1.6, 2)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Paper/Lv1-show:modulate:r")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(2, 2.3)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Paper/Lv1-show:modulate:g")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(2, 2.3)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Paper/Lv1-show:modulate:b")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(2, 2.3)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Paper/Lv1-show:modulate:a")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(2, 2.3)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Paper/Lv1-show2:modulate:r")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(2.3, 2.6)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Paper/Lv1-show2:modulate:g")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(2.3, 2.6)
+}
+tracks/12/type = "bezier"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Paper/Lv1-show2:modulate:b")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(2.3, 2.6)
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Paper/Lv1-show2:modulate:a")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(2.3, 2.6)
+}
+tracks/14/type = "bezier"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Paper/OKButton:position:x")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(49.2187, -0.25, 0, 0.25, 0, 49.2187, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(2.7, 3)
+}
+tracks/15/type = "bezier"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Paper/OKButton:position:y")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(137.951, -0.25, 0, 0.25, 0, 211.433, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(2.7, 3)
+}
+tracks/16/type = "bezier"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Paper/OKButton:rotation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(2.7, 3)
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("ButtonAppearAudio:playing")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(2.7),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath(".:can_control")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_005wb"]
+_data = {
+"RESET": SubResource("Animation_1c5pv"),
+"entry": SubResource("Animation_bpfey")
+}
+
+[node name="BarrackTipUI" instance=ExtResource("1_blmvb")]
+
+[node name="Paper" parent="." index="2"]
+texture = ExtResource("2_wqf1g")
+region_rect = Rect2(81, 71, 665, 489)
+
+[node name="Title" parent="Paper" index="0"]
+position = Vector2(-6.23897, -217.671)
+texture = ExtResource("3_88a0p")
+offset = Vector2(0, -50)
+
+[node name="Label" parent="Paper/Title" index="0"]
+offset_top = -89.0011
+offset_bottom = 68.9989
+text = "提示"
+
+[node name="OKButton" parent="Paper" index="1"]
+offset_left = 49.2187
+offset_right = 283.219
+
+[node name="Label" parent="Paper/OKButton" index="0"]
+text = "好的！"
+
+[node name="Flag" type="Sprite2D" parent="Paper" index="2"]
+position = Vector2(-222.524, -135.178)
+rotation = 0.238619
+scale = Vector2(0.195396, 0.195396)
+texture = ExtResource("4_q0vyn")
+
+[node name="Lv1-show" type="Sprite2D" parent="Paper" index="3"]
+position = Vector2(-172.612, 18.717)
+scale = Vector2(0.627608, 0.627608)
+texture = ExtResource("5_hgoiu")
+
+[node name="Ui-based" type="Sprite2D" parent="Paper/Lv1-show" index="0"]
+texture = ExtResource("6_5qt6r")
+
+[node name="LevelUp" type="Sprite2D" parent="Paper/Lv1-show/Ui-based" index="0"]
+position = Vector2(-1.10455, -104.932)
+texture = ExtResource("7_73wga")
+
+[node name="FlagButton" type="Sprite2D" parent="Paper/Lv1-show/Ui-based" index="1"]
+position = Vector2(96.0955, 48.6)
+texture = ExtResource("8_w8p07")
+
+[node name="Sell" type="Sprite2D" parent="Paper/Lv1-show/Ui-based" index="2"]
+position = Vector2(-1.10455, 98.3046)
+texture = ExtResource("9_g1b4h")
+
+[node name="Label2" type="Label" parent="Paper/Lv1-show" index="1"]
+offset_left = 133.0
+offset_top = 27.0
+offset_right = 471.0
+offset_bottom = 243.0
+scale = Vector2(0.260426, 0.260426)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("12_vhluo")
+theme_override_font_sizes/font_size = 72
+text = "点击此更改集结点"
+autowrap_mode = 3
+
+[node name="Lv1-show2" type="Sprite2D" parent="Paper" index="4"]
+position = Vector2(138.644, 16.6373)
+scale = Vector2(0.627608, 0.627608)
+texture = ExtResource("5_hgoiu")
+
+[node name="集结范围" type="Sprite2D" parent="Paper/Lv1-show2" index="0"]
+position = Vector2(0, 40.8682)
+scale = Vector2(1, 0.6)
+texture = ExtResource("10_najqe")
+
+[node name="UnitMove0001" type="Sprite2D" parent="Paper/Lv1-show2" index="1"]
+position = Vector2(118.186, 101.618)
+scale = Vector2(0.554052, 0.554052)
+texture = ExtResource("11_nafau")
+
+[node name="Flag2" type="Sprite2D" parent="Paper/Lv1-show2" index="2"]
+position = Vector2(120.395, 65.1682)
+scale = Vector2(0.159335, 0.159335)
+texture = ExtResource("4_q0vyn")
+
+[node name="SoldierLv1-move04" type="Sprite2D" parent="Paper/Lv1-show2" index="3"]
+position = Vector2(47.7182, 99.8796)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("12_llrmg")
+
+[node name="SoldierLv1-move05" type="Sprite2D" parent="Paper/Lv1-show2" index="4"]
+position = Vector2(-13.0319, 99.8796)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("12_llrmg")
+
+[node name="SoldierLv1-move06" type="Sprite2D" parent="Paper/Lv1-show2" index="5"]
+position = Vector2(17.8954, 138.539)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("12_llrmg")
+
+[node name="Label3" type="Label" parent="Paper/Lv1-show2" index="6"]
+offset_left = -124.813
+offset_top = 170.1
+offset_right = 1026.19
+offset_bottom = 317.1
+scale = Vector2(0.260426, 0.260426)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("12_vhluo")
+theme_override_font_sizes/font_size = 72
+text = "选择可调集区域内的位置，点击使你的士兵前往目标位置"
+autowrap_mode = 3
+
+[node name="Label" type="Label" parent="Paper" index="5"]
+offset_left = -184.397
+offset_top = -171.919
+offset_right = 607.603
+offset_bottom = -98.919
+scale = Vector2(0.388287, 0.388287)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("11_56xm7")
+theme_override_font_sizes/font_size = 72
+text = "发挥军队的主观能动性！"
+
+[node name="Label2" type="Label" parent="Paper" index="6"]
+offset_left = -179.0
+offset_top = -132.0
+offset_right = 1562.0
+offset_bottom = 68.0
+scale = Vector2(0.260426, 0.260426)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("12_vhluo")
+theme_override_font_sizes/font_size = 72
+text = "通过更改兵营的集结点，调集士兵前往不同区域进行拦截防御"
+autowrap_mode = 3
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="." index="6"]
+libraries = {
+"": SubResource("AnimationLibrary_005wb")
+}
+autoplay = "entry"

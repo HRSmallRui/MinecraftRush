@@ -1,0 +1,520 @@
+[gd_scene load_steps=117 format=3 uid="uid://u2adgh7wjmdi"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_gmurg"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="2_2l0jx"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_4.gd" id="2_uhptf"]
+[ext_resource type="Texture2D" uid="uid://ccdjennpkjoik" path="res://Assets/Images/UI/InformationBar/尸国正规军.png" id="3_jg3ng"]
+[ext_resource type="Texture2D" uid="uid://dx4fr574rcf3j" path="res://Assets/Animations/Enemies/4尸国正规军/attack_00.png" id="5_w4b5p"]
+[ext_resource type="Texture2D" uid="uid://cma55oguvh8iu" path="res://Assets/Animations/Enemies/4尸国正规军/attack_01.png" id="6_dvxrt"]
+[ext_resource type="Texture2D" uid="uid://br6n3wmrm6s3p" path="res://Assets/Animations/Enemies/4尸国正规军/attack_02.png" id="7_eo2pr"]
+[ext_resource type="Texture2D" uid="uid://nslkof6jl6hb" path="res://Assets/Animations/Enemies/4尸国正规军/attack_03.png" id="8_0lcd4"]
+[ext_resource type="Texture2D" uid="uid://c6mhom584hthy" path="res://Assets/Animations/Enemies/4尸国正规军/attack_04.png" id="9_0ykfe"]
+[ext_resource type="Texture2D" uid="uid://c6i4h7uqbmwbi" path="res://Assets/Animations/Enemies/4尸国正规军/attack_05.png" id="10_won2s"]
+[ext_resource type="Texture2D" uid="uid://c3eqjeufdptvp" path="res://Assets/Animations/Enemies/4尸国正规军/attack_06.png" id="11_uaxta"]
+[ext_resource type="Texture2D" uid="uid://b4enhnbypdshe" path="res://Assets/Animations/Enemies/4尸国正规军/attack_07.png" id="12_h0wpl"]
+[ext_resource type="Texture2D" uid="uid://b84lnjvije0rl" path="res://Assets/Animations/Enemies/4尸国正规军/attack_08.png" id="13_tmyja"]
+[ext_resource type="Texture2D" uid="uid://8o5yvr28lsjp" path="res://Assets/Animations/Enemies/4尸国正规军/attack_09.png" id="14_mjk3w"]
+[ext_resource type="Texture2D" uid="uid://lhfhkgddqgpf" path="res://Assets/Animations/Enemies/4尸国正规军/attack_10.png" id="15_v6kpr"]
+[ext_resource type="Texture2D" uid="uid://slo86hp15xgg" path="res://Assets/Animations/Enemies/4尸国正规军/attack_11.png" id="16_g8unq"]
+[ext_resource type="Texture2D" uid="uid://dvc4t48aq7kyl" path="res://Assets/Animations/Enemies/4尸国正规军/attack_12.png" id="17_6jm4v"]
+[ext_resource type="Texture2D" uid="uid://dswtjn4877vxb" path="res://Assets/Animations/Enemies/4尸国正规军/attack_13.png" id="18_ehwq1"]
+[ext_resource type="Texture2D" uid="uid://b2ln11m6mffd1" path="res://Assets/Animations/Enemies/4尸国正规军/attack_14.png" id="19_f6o51"]
+[ext_resource type="Texture2D" uid="uid://cy46d7vr2s48x" path="res://Assets/Animations/Enemies/4尸国正规军/attack_15.png" id="20_ghxi1"]
+[ext_resource type="Texture2D" uid="uid://cvnf180yr4s7b" path="res://Assets/Animations/Enemies/4尸国正规军/attack_16.png" id="21_q8sqr"]
+[ext_resource type="Texture2D" uid="uid://j4epaf8e41ch" path="res://Assets/Animations/Enemies/4尸国正规军/attack_17.png" id="22_lxw8n"]
+[ext_resource type="Texture2D" uid="uid://da2xp81vpf8ne" path="res://Assets/Animations/Enemies/4尸国正规军/attack_18.png" id="23_g2uk6"]
+[ext_resource type="Texture2D" uid="uid://bhc1tp753x1w8" path="res://Assets/Animations/Enemies/4尸国正规军/attack_19.png" id="24_1xfa5"]
+[ext_resource type="Texture2D" uid="uid://774irs7bq3c0" path="res://Assets/Animations/Enemies/4尸国正规军/attack_20.png" id="25_0shnj"]
+[ext_resource type="Texture2D" uid="uid://dixqn68kof6p3" path="res://Assets/Animations/Enemies/4尸国正规军/attack_21.png" id="26_auylk"]
+[ext_resource type="Texture2D" uid="uid://uykgio5aynhf" path="res://Assets/Animations/Enemies/4尸国正规军/attack_22.png" id="27_ciuap"]
+[ext_resource type="Texture2D" uid="uid://c6whex0ume3am" path="res://Assets/Animations/Enemies/4尸国正规军/attack_23.png" id="28_ig124"]
+[ext_resource type="Texture2D" uid="uid://djfe603ippx0d" path="res://Assets/Animations/Enemies/4尸国正规军/attack_24.png" id="29_fpqj6"]
+[ext_resource type="Texture2D" uid="uid://c4o5v7qkmgmet" path="res://Assets/Animations/Enemies/4尸国正规军/move-back_00.png" id="30_ebdra"]
+[ext_resource type="Texture2D" uid="uid://h7lk17a12lfh" path="res://Assets/Animations/Enemies/4尸国正规军/die_00.png" id="30_l0b3c"]
+[ext_resource type="Texture2D" uid="uid://bxdtv40sishmw" path="res://Assets/Animations/Enemies/4尸国正规军/die_01.png" id="31_fe836"]
+[ext_resource type="Texture2D" uid="uid://bj6ov3inijht3" path="res://Assets/Animations/Enemies/4尸国正规军/move-back_01.png" id="31_sthwr"]
+[ext_resource type="Texture2D" uid="uid://cyrxi74otxqqh" path="res://Assets/Animations/Enemies/4尸国正规军/move-back_02.png" id="32_h1oom"]
+[ext_resource type="Texture2D" uid="uid://d3augmuftxx3r" path="res://Assets/Animations/Enemies/4尸国正规军/die_02.png" id="32_hflr4"]
+[ext_resource type="Texture2D" uid="uid://bqk2ts8ysus8x" path="res://Assets/Animations/Enemies/4尸国正规军/die_03.png" id="33_mtbny"]
+[ext_resource type="Texture2D" uid="uid://cb8xx4sdji8ml" path="res://Assets/Animations/Enemies/4尸国正规军/move-back_03.png" id="33_ukfv2"]
+[ext_resource type="Texture2D" uid="uid://csj4ru83bqpt0" path="res://Assets/Animations/Enemies/4尸国正规军/move-back_04.png" id="34_lg4jd"]
+[ext_resource type="Texture2D" uid="uid://dl5u7766mc48c" path="res://Assets/Animations/Enemies/4尸国正规军/die_04.png" id="34_p5dy1"]
+[ext_resource type="Texture2D" uid="uid://bepflggcelpl3" path="res://Assets/Animations/Enemies/4尸国正规军/move-back_05.png" id="35_hvva0"]
+[ext_resource type="Texture2D" uid="uid://cph83lmvudeuf" path="res://Assets/Animations/Enemies/4尸国正规军/die_05.png" id="35_q65wi"]
+[ext_resource type="Texture2D" uid="uid://ypvd5h3cfgy7" path="res://Assets/Animations/Enemies/4尸国正规军/move-back_06.png" id="36_4pdld"]
+[ext_resource type="Texture2D" uid="uid://1vga7gsaq24h" path="res://Assets/Animations/Enemies/4尸国正规军/die_06.png" id="36_etehp"]
+[ext_resource type="Texture2D" uid="uid://183o2fg4kr5s" path="res://Assets/Animations/Enemies/4尸国正规军/die_07.png" id="37_cv67t"]
+[ext_resource type="Texture2D" uid="uid://x680vimeio7a" path="res://Assets/Animations/Enemies/4尸国正规军/move-back_07.png" id="37_w0dwc"]
+[ext_resource type="Texture2D" uid="uid://bx3m8m68eubh1" path="res://Assets/Animations/Enemies/4尸国正规军/die_08.png" id="38_g3yk0"]
+[ext_resource type="Texture2D" uid="uid://dvk3nexft102c" path="res://Assets/Animations/Enemies/4尸国正规军/move-back_08.png" id="38_pkkdk"]
+[ext_resource type="Texture2D" uid="uid://cqbhdlrjx7tlk" path="res://Assets/Animations/Enemies/4尸国正规军/die_09.png" id="39_as7cy"]
+[ext_resource type="Texture2D" uid="uid://mw3l7c1s7ryp" path="res://Assets/Animations/Enemies/4尸国正规军/move-back_09.png" id="39_hs0ap"]
+[ext_resource type="Texture2D" uid="uid://c17xsa253n13u" path="res://Assets/Animations/Enemies/4尸国正规军/die_10.png" id="40_4actg"]
+[ext_resource type="Texture2D" uid="uid://dp7rh58xk4im0" path="res://Assets/Animations/Enemies/4尸国正规军/move-back_10.png" id="40_04j0w"]
+[ext_resource type="Texture2D" uid="uid://2b142doq5157" path="res://Assets/Animations/Enemies/4尸国正规军/die_11.png" id="41_fd4to"]
+[ext_resource type="Texture2D" uid="uid://bhylys2ypj3nf" path="res://Assets/Animations/Enemies/4尸国正规军/move-back_11.png" id="41_kb3r8"]
+[ext_resource type="Texture2D" uid="uid://cpk8mdhgdfx6f" path="res://Assets/Animations/Enemies/4尸国正规军/die_12.png" id="42_iscxg"]
+[ext_resource type="Texture2D" uid="uid://b0m2g0vpavxly" path="res://Assets/Animations/Enemies/4尸国正规军/move-back_12.png" id="42_wqeew"]
+[ext_resource type="Texture2D" uid="uid://nmouis8h1osq" path="res://Assets/Animations/Enemies/4尸国正规军/move-back_13.png" id="43_k7oi6"]
+[ext_resource type="Texture2D" uid="uid://6j5x6wticrju" path="res://Assets/Animations/Enemies/4尸国正规军/move-back_14.png" id="44_xk78a"]
+[ext_resource type="Texture2D" uid="uid://uy4y00fqidr7" path="res://Assets/Animations/Enemies/4尸国正规军/move-back_15.png" id="45_n3hyo"]
+[ext_resource type="Texture2D" uid="uid://bu07r0ykxp08b" path="res://Assets/Animations/Enemies/4尸国正规军/move-back_16.png" id="46_h7ijf"]
+[ext_resource type="Texture2D" uid="uid://b28rqix1x7myd" path="res://Assets/Animations/Enemies/4尸国正规军/move-back_17.png" id="47_31v0k"]
+[ext_resource type="Texture2D" uid="uid://cfs4vcwi6i5dp" path="res://Assets/Animations/Enemies/4尸国正规军/move-back_18.png" id="48_t6eek"]
+[ext_resource type="Texture2D" uid="uid://b0mshn2msh0j4" path="res://Assets/Animations/Enemies/4尸国正规军/move-back_19.png" id="49_derk0"]
+[ext_resource type="Texture2D" uid="uid://cqda0vdev2kpx" path="res://Assets/Animations/Enemies/4尸国正规军/move-back_20.png" id="50_0tgfa"]
+[ext_resource type="Texture2D" uid="uid://clcw75av1d6it" path="res://Assets/Animations/Enemies/4尸国正规军/move-back_21.png" id="51_ab2ex"]
+[ext_resource type="Texture2D" uid="uid://rg7i38qq7oae" path="res://Assets/Animations/Enemies/4尸国正规军/move-back_22.png" id="52_0k2u1"]
+[ext_resource type="Texture2D" uid="uid://chjt4238s6qx" path="res://Assets/Animations/Enemies/4尸国正规军/move-back_23.png" id="53_1kufk"]
+[ext_resource type="Texture2D" uid="uid://d32ryi7rehe36" path="res://Assets/Animations/Enemies/4尸国正规军/move-front_00.png" id="54_4yybq"]
+[ext_resource type="Texture2D" uid="uid://c2v3l8o2wdkmn" path="res://Assets/Animations/Enemies/4尸国正规军/move-front_01.png" id="55_iskry"]
+[ext_resource type="Texture2D" uid="uid://2d1gyjxyind6" path="res://Assets/Animations/Enemies/4尸国正规军/move-front_02.png" id="56_kpgri"]
+[ext_resource type="Texture2D" uid="uid://d0de63mklyqh0" path="res://Assets/Animations/Enemies/4尸国正规军/move-front_03.png" id="57_j8356"]
+[ext_resource type="Texture2D" uid="uid://djxixabbdu24n" path="res://Assets/Animations/Enemies/4尸国正规军/move-front_04.png" id="58_3cer3"]
+[ext_resource type="Texture2D" uid="uid://dqu61kjgpep31" path="res://Assets/Animations/Enemies/4尸国正规军/move-front_05.png" id="59_t343q"]
+[ext_resource type="Texture2D" uid="uid://bdyg05c13cp3x" path="res://Assets/Animations/Enemies/4尸国正规军/move-front_06.png" id="60_vh6np"]
+[ext_resource type="Texture2D" uid="uid://cv37fxn7f2d8n" path="res://Assets/Animations/Enemies/4尸国正规军/move-front_07.png" id="61_58k6y"]
+[ext_resource type="Texture2D" uid="uid://dhvrq5qqs46ws" path="res://Assets/Animations/Enemies/4尸国正规军/move-front_08.png" id="62_oeovw"]
+[ext_resource type="Texture2D" uid="uid://ccqkvqrdhmpmi" path="res://Assets/Animations/Enemies/4尸国正规军/move-front_09.png" id="63_6eweg"]
+[ext_resource type="Texture2D" uid="uid://x03hx5hi61fp" path="res://Assets/Animations/Enemies/4尸国正规军/move-front_10.png" id="64_ivhma"]
+[ext_resource type="Texture2D" uid="uid://bqj1b2j3xnfbt" path="res://Assets/Animations/Enemies/4尸国正规军/move-front_11.png" id="65_uwmw7"]
+[ext_resource type="Texture2D" uid="uid://cskwq0uhvf80d" path="res://Assets/Animations/Enemies/4尸国正规军/move-front_12.png" id="66_h0vko"]
+[ext_resource type="Texture2D" uid="uid://tru6nlx1jyjt" path="res://Assets/Animations/Enemies/4尸国正规军/move-front_13.png" id="67_oed71"]
+[ext_resource type="Texture2D" uid="uid://cq3d0n66bipb0" path="res://Assets/Animations/Enemies/4尸国正规军/move-front_14.png" id="68_k4tyr"]
+[ext_resource type="Texture2D" uid="uid://bdwq3fxv2rwdx" path="res://Assets/Animations/Enemies/4尸国正规军/move-front_15.png" id="69_44uvj"]
+[ext_resource type="Texture2D" uid="uid://ilpp7hoh1pqg" path="res://Assets/Animations/Enemies/4尸国正规军/move-front_16.png" id="70_8c2jb"]
+[ext_resource type="Texture2D" uid="uid://cpbnl45sjuq81" path="res://Assets/Animations/Enemies/4尸国正规军/move-front_17.png" id="71_a5wot"]
+[ext_resource type="Texture2D" uid="uid://dei73yfr3r8b7" path="res://Assets/Animations/Enemies/4尸国正规军/move-front_18.png" id="72_5aqhp"]
+[ext_resource type="Texture2D" uid="uid://3oppt0u1y4pj" path="res://Assets/Animations/Enemies/4尸国正规军/move-front_19.png" id="73_ov8b8"]
+[ext_resource type="Texture2D" uid="uid://bsq74obplpps6" path="res://Assets/Animations/Enemies/4尸国正规军/move-front_20.png" id="74_wogoe"]
+[ext_resource type="Texture2D" uid="uid://cb78pq58oi6x5" path="res://Assets/Animations/Enemies/4尸国正规军/move-front_21.png" id="75_qn08v"]
+[ext_resource type="Texture2D" uid="uid://bgulfg4kwl03i" path="res://Assets/Animations/Enemies/4尸国正规军/move-front_22.png" id="76_f8hx7"]
+[ext_resource type="Texture2D" uid="uid://18unpgyxw0o2" path="res://Assets/Animations/Enemies/4尸国正规军/move-front_23.png" id="77_egk2y"]
+[ext_resource type="Texture2D" uid="uid://dbnrqnsfetq6a" path="res://Assets/Animations/Enemies/4尸国正规军/move-normal_00.png" id="78_08ma0"]
+[ext_resource type="Texture2D" uid="uid://craps0abwchay" path="res://Assets/Animations/Enemies/4尸国正规军/move-normal_01.png" id="79_4o38x"]
+[ext_resource type="Texture2D" uid="uid://c58d0dp6skv4y" path="res://Assets/Animations/Enemies/4尸国正规军/move-normal_02.png" id="80_hiy22"]
+[ext_resource type="Texture2D" uid="uid://d1uy60kvxdkjq" path="res://Assets/Animations/Enemies/4尸国正规军/move-normal_03.png" id="81_rqtv2"]
+[ext_resource type="Texture2D" uid="uid://lw3ire87gkq5" path="res://Assets/Animations/Enemies/4尸国正规军/move-normal_04.png" id="82_ilokc"]
+[ext_resource type="Texture2D" uid="uid://7g4oncvcxkp2" path="res://Assets/Animations/Enemies/4尸国正规军/move-normal_05.png" id="83_uv2n2"]
+[ext_resource type="Texture2D" uid="uid://bfq8a3j5nkdk2" path="res://Assets/Animations/Enemies/4尸国正规军/move-normal_06.png" id="84_olw2s"]
+[ext_resource type="Texture2D" uid="uid://h2a7t0qt3m1u" path="res://Assets/Animations/Enemies/4尸国正规军/move-normal_07.png" id="85_rxyqf"]
+[ext_resource type="Texture2D" uid="uid://d2mufn85rbnyb" path="res://Assets/Animations/Enemies/4尸国正规军/move-normal_08.png" id="86_14cud"]
+[ext_resource type="Texture2D" uid="uid://bv61fqaa10bce" path="res://Assets/Animations/Enemies/4尸国正规军/move-normal_09.png" id="87_k3qg0"]
+[ext_resource type="Texture2D" uid="uid://3pddir7bjx4j" path="res://Assets/Animations/Enemies/4尸国正规军/move-normal_10.png" id="88_po61m"]
+[ext_resource type="Texture2D" uid="uid://beoabdpnbnbc2" path="res://Assets/Animations/Enemies/4尸国正规军/move-normal_11.png" id="89_7upgk"]
+[ext_resource type="Texture2D" uid="uid://bpo7jytvidryj" path="res://Assets/Animations/Enemies/4尸国正规军/move-normal_12.png" id="90_6kysh"]
+[ext_resource type="Texture2D" uid="uid://joll3ad8lr0o" path="res://Assets/Animations/Enemies/4尸国正规军/move-normal_13.png" id="91_32qag"]
+[ext_resource type="Texture2D" uid="uid://bhl0wy8to7tin" path="res://Assets/Animations/Enemies/4尸国正规军/move-normal_14.png" id="92_004as"]
+[ext_resource type="Texture2D" uid="uid://c0nk5wbnfq1vr" path="res://Assets/Animations/Enemies/4尸国正规军/move-normal_15.png" id="93_0elj5"]
+[ext_resource type="Texture2D" uid="uid://cw6bqf44q7xp2" path="res://Assets/Animations/Enemies/4尸国正规军/move-normal_16.png" id="94_5ii66"]
+[ext_resource type="Texture2D" uid="uid://t5ombdor66xb" path="res://Assets/Animations/Enemies/4尸国正规军/move-normal_17.png" id="95_kwlqq"]
+[ext_resource type="Texture2D" uid="uid://lorl4bjbilgn" path="res://Assets/Animations/Enemies/4尸国正规军/move-normal_18.png" id="96_b6a4e"]
+[ext_resource type="Texture2D" uid="uid://b4lh074mvwlsy" path="res://Assets/Animations/Enemies/4尸国正规军/move-normal_19.png" id="97_41bfv"]
+[ext_resource type="Texture2D" uid="uid://cpojrb1rteq0t" path="res://Assets/Animations/Enemies/4尸国正规军/move-normal_20.png" id="98_3l7ij"]
+[ext_resource type="Texture2D" uid="uid://cba7c47ajgbt7" path="res://Assets/Animations/Enemies/4尸国正规军/move-normal_21.png" id="99_16hua"]
+[ext_resource type="Texture2D" uid="uid://dy21yi2q4l6hf" path="res://Assets/Animations/Enemies/4尸国正规军/move-normal_22.png" id="100_47w8y"]
+[ext_resource type="Texture2D" uid="uid://drlcjsp63g1qu" path="res://Assets/Animations/Enemies/4尸国正规军/move-normal_23.png" id="101_wba8p"]
+
+[sub_resource type="Resource" id="Resource_1r2aj"]
+script = ExtResource("2_2l0jx")
+health = 150
+dodge_rate = 0.0
+near_damage_low = 8
+near_damage_high = 16
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.4
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 0.8
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g325h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_w4b5p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dvxrt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_eo2pr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0lcd4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0ykfe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_won2s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_uaxta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_h0wpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_tmyja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_mjk3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_v6kpr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_g8unq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_6jm4v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ehwq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_f6o51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ghxi1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_q8sqr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_lxw8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_g2uk6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_1xfa5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_0shnj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_auylk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ciuap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_ig124")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_fpqj6")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_l0b3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_fe836")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_hflr4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_mtbny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_p5dy1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_q65wi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_etehp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_cv67t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_g3yk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_as7cy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_4actg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_fd4to")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_iscxg")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_w4b5p")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_ebdra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_sthwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_h1oom")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_ukfv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_lg4jd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_hvva0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_4pdld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_w0dwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_pkkdk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_hs0ap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_04j0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_kb3r8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_wqeew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_k7oi6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_xk78a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_n3hyo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_h7ijf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_31v0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_t6eek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_derk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_0tgfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_ab2ex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_0k2u1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_1kufk")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("54_4yybq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_iskry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_kpgri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_j8356")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_3cer3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_t343q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_vh6np")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_58k6y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_oeovw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_6eweg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_ivhma")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_uwmw7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_h0vko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_oed71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_k4tyr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_44uvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_8c2jb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_a5wot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_5aqhp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_ov8b8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_wogoe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_qn08v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_f8hx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_egk2y")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("78_08ma0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_4o38x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_hiy22")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_rqtv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_ilokc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_uv2n2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_olw2s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_rxyqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_14cud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_k3qg0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_po61m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_7upgk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_6kysh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_32qag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_004as")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_0elj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_5ii66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_kwlqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_b6a4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_41bfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_3l7ij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_16hua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_47w8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_wba8p")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 24.0
+}]
+
+[node name="Enemy4" instance=ExtResource("1_gmurg")]
+script = ExtResource("2_uhptf")
+enemy_name = "尸国正规军"
+enemy_id = 4
+enemy_texture = ExtResource("3_jg3ng")
+start_data = SubResource("Resource_1r2aj")
+bounty = 8
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(3.38813e-21, -95)
+sprite_frames = SubResource("SpriteFrames_g325h")
+animation = &"move_normal"
+
+[node name="EnemyButton" parent="UnitBody" index="4"]
+offset_left = -48.0
+offset_right = 50.0

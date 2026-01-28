@@ -1,0 +1,579 @@
+[gd_scene load_steps=120 format=3 uid="uid://bccm6sjsetyyj"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_388bg"]
+[ext_resource type="Texture2D" uid="uid://c2j7jvx437d0y" path="res://Assets/Images/UI/InformationBar/EnemyChapter4/史莱姆.png" id="2_03s5n"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_39.gd" id="2_8mktg"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="2_pvmb8"]
+[ext_resource type="AudioStream" uid="uid://sehnxvlavjwu" path="res://Assets/Sounds/FXs/Enemies/史莱姆/大型史莱姆1.wav" id="3_44wxv"]
+[ext_resource type="AudioStream" uid="uid://cbl0di0wcb05x" path="res://Assets/Sounds/FXs/Enemies/史莱姆/史莱姆攻击2.wav" id="4_3juo4"]
+[ext_resource type="AudioStream" uid="uid://c3s8nm807180s" path="res://Assets/Sounds/FXs/Enemies/史莱姆/大型史莱姆2.wav" id="4_bl4i0"]
+[ext_resource type="AudioStream" uid="uid://dcgfmrbt30wrb" path="res://Assets/Sounds/FXs/Enemies/史莱姆/大型史莱姆3.wav" id="5_d5eh1"]
+[ext_resource type="AudioStream" uid="uid://d8sn0pw5ay13" path="res://Assets/Sounds/FXs/Enemies/史莱姆/大型史莱姆4.wav" id="6_8goch"]
+[ext_resource type="Texture2D" uid="uid://bj7em8clhidfh" path="res://Assets/Animations/Enemies/39史莱姆/die_00.png" id="9_j0mud"]
+[ext_resource type="Texture2D" uid="uid://dts4yh4can8d" path="res://Assets/Animations/Enemies/39史莱姆/die_01.png" id="10_y63tq"]
+[ext_resource type="Texture2D" uid="uid://bc4cnuhleqnt3" path="res://Assets/Animations/Enemies/39史莱姆/die_02.png" id="11_lji7e"]
+[ext_resource type="Texture2D" uid="uid://weneq2a1vsjh" path="res://Assets/Animations/Enemies/39史莱姆/die_03.png" id="12_6p7t5"]
+[ext_resource type="Texture2D" uid="uid://cka25sjrtc81n" path="res://Assets/Animations/Enemies/39史莱姆/die_04.png" id="13_m4uxj"]
+[ext_resource type="Texture2D" uid="uid://cqhs0wxghkglc" path="res://Assets/Animations/Enemies/39史莱姆/die_05.png" id="14_okvoq"]
+[ext_resource type="Texture2D" uid="uid://b5imv6l1535mc" path="res://Assets/Animations/Enemies/39史莱姆/die_06.png" id="15_e5vdt"]
+[ext_resource type="Texture2D" uid="uid://d34wex4ufojs1" path="res://Assets/Animations/Enemies/39史莱姆/die_07.png" id="16_w1jnu"]
+[ext_resource type="Texture2D" uid="uid://bra21kdvkku6i" path="res://Assets/Animations/Enemies/39史莱姆/die_08.png" id="17_uu1nr"]
+[ext_resource type="Texture2D" uid="uid://q25y7srpaide" path="res://Assets/Animations/Enemies/39史莱姆/die_09.png" id="18_dai5f"]
+[ext_resource type="Texture2D" uid="uid://cnia84othwevq" path="res://Assets/Animations/Enemies/39史莱姆/die_10.png" id="19_d4f0y"]
+[ext_resource type="Texture2D" uid="uid://t8dndegkiwp3" path="res://Assets/Animations/Enemies/39史莱姆/die_11.png" id="20_3s00u"]
+[ext_resource type="Texture2D" uid="uid://dq2frgm4bqixq" path="res://Assets/Animations/Enemies/39史莱姆/move_back_00.png" id="21_f8iy1"]
+[ext_resource type="Texture2D" uid="uid://csgoqkbbftbiv" path="res://Assets/Animations/Enemies/39史莱姆/move_back_01.png" id="22_jea1r"]
+[ext_resource type="Texture2D" uid="uid://b42pdst5k2k8s" path="res://Assets/Animations/Enemies/39史莱姆/move_back_02.png" id="23_q8pb7"]
+[ext_resource type="Texture2D" uid="uid://bi4dx5tfnh4ep" path="res://Assets/Animations/Enemies/39史莱姆/move_back_03.png" id="24_sau8x"]
+[ext_resource type="Texture2D" uid="uid://c243o2octdfl8" path="res://Assets/Animations/Enemies/39史莱姆/move_back_04.png" id="25_n0b2o"]
+[ext_resource type="Texture2D" uid="uid://f2wvjb81igrq" path="res://Assets/Animations/Enemies/39史莱姆/move_back_05.png" id="26_qo1p7"]
+[ext_resource type="Texture2D" uid="uid://dda7e1dcym2le" path="res://Assets/Animations/Enemies/39史莱姆/move_back_06.png" id="27_p5gcr"]
+[ext_resource type="Texture2D" uid="uid://c1fkubb1qq56k" path="res://Assets/Animations/Enemies/39史莱姆/move_back_07.png" id="28_sx6iy"]
+[ext_resource type="Texture2D" uid="uid://h3wwbg6ixcqn" path="res://Assets/Animations/Enemies/39史莱姆/move_back_08.png" id="29_bvrfo"]
+[ext_resource type="Texture2D" uid="uid://01fnsq3wit2n" path="res://Assets/Animations/Enemies/39史莱姆/move_back_09.png" id="30_x56a1"]
+[ext_resource type="Texture2D" uid="uid://cn5xibyffgilo" path="res://Assets/Animations/Enemies/39史莱姆/move_back_10.png" id="31_w8gyq"]
+[ext_resource type="Texture2D" uid="uid://d1peqma3w67xj" path="res://Assets/Animations/Enemies/39史莱姆/move_back_11.png" id="32_cw87w"]
+[ext_resource type="Texture2D" uid="uid://docjk8f8tkrbp" path="res://Assets/Animations/Enemies/39史莱姆/move_back_12.png" id="33_uwcjb"]
+[ext_resource type="Texture2D" uid="uid://bebr13545y62b" path="res://Assets/Animations/Enemies/39史莱姆/move_back_13.png" id="34_fjgtp"]
+[ext_resource type="Texture2D" uid="uid://t830y77aiv6a" path="res://Assets/Animations/Enemies/39史莱姆/move_back_14.png" id="35_4fepu"]
+[ext_resource type="Texture2D" uid="uid://dlikrrexn3fjs" path="res://Assets/Animations/Enemies/39史莱姆/move_back_15.png" id="36_pam8o"]
+[ext_resource type="Texture2D" uid="uid://ccjpyixl868un" path="res://Assets/Animations/Enemies/39史莱姆/move_back_16.png" id="37_axr6b"]
+[ext_resource type="Texture2D" uid="uid://buhg477wemux3" path="res://Assets/Animations/Enemies/39史莱姆/move_back_17.png" id="38_ksuui"]
+[ext_resource type="Texture2D" uid="uid://ch7ncsk1irc0a" path="res://Assets/Animations/Enemies/39史莱姆/move_back_18.png" id="39_hw1ek"]
+[ext_resource type="Texture2D" uid="uid://83i82gvydyhe" path="res://Assets/Animations/Enemies/39史莱姆/move_back_19.png" id="40_enyvf"]
+[ext_resource type="Texture2D" uid="uid://blh3tw2rgv346" path="res://Assets/Animations/Enemies/39史莱姆/move_back_20.png" id="41_sauud"]
+[ext_resource type="Texture2D" uid="uid://ccj2e8amq0riu" path="res://Assets/Animations/Enemies/39史莱姆/move_back_21.png" id="42_7t1kg"]
+[ext_resource type="Texture2D" uid="uid://cltu01qvif3bl" path="res://Assets/Animations/Enemies/39史莱姆/move_back_22.png" id="43_qh4x1"]
+[ext_resource type="Texture2D" uid="uid://hcwg246srmi7" path="res://Assets/Animations/Enemies/39史莱姆/move_back_23.png" id="44_unas1"]
+[ext_resource type="Texture2D" uid="uid://ghvplpept125" path="res://Assets/Animations/Enemies/39史莱姆/move_back_24.png" id="45_jv65u"]
+[ext_resource type="Texture2D" uid="uid://cr4xlnaopqv6v" path="res://Assets/Animations/Enemies/39史莱姆/move_back_25.png" id="46_rhxef"]
+[ext_resource type="Texture2D" uid="uid://d4egjkib3iy30" path="res://Assets/Animations/Enemies/39史莱姆/move_back_26.png" id="47_cvxi3"]
+[ext_resource type="Texture2D" uid="uid://bdkvt7wjtnskr" path="res://Assets/Animations/Enemies/39史莱姆/move_back_27.png" id="48_2klo7"]
+[ext_resource type="Texture2D" uid="uid://dc61fhqebu7y" path="res://Assets/Animations/Enemies/39史莱姆/move_back_28.png" id="49_vbjme"]
+[ext_resource type="Texture2D" uid="uid://c1cogjiu3nqs4" path="res://Assets/Animations/Enemies/39史莱姆/move_back_29.png" id="50_ep4r3"]
+[ext_resource type="Texture2D" uid="uid://bt0mpyxi8hei1" path="res://Assets/Animations/Enemies/39史莱姆/move_back_30.png" id="51_c7fs8"]
+[ext_resource type="Texture2D" uid="uid://qi6mbulnuu2t" path="res://Assets/Animations/Enemies/39史莱姆/move_front_00.png" id="52_j4uag"]
+[ext_resource type="Texture2D" uid="uid://b8mry74b44qcd" path="res://Assets/Animations/Enemies/39史莱姆/move_front_01.png" id="53_ns6a0"]
+[ext_resource type="Texture2D" uid="uid://7mltar8k6n3k" path="res://Assets/Animations/Enemies/39史莱姆/move_front_02.png" id="54_ccy3q"]
+[ext_resource type="Texture2D" uid="uid://cm83neoslkhqr" path="res://Assets/Animations/Enemies/39史莱姆/move_front_03.png" id="55_bt4lm"]
+[ext_resource type="Texture2D" uid="uid://hniyjlgkykq8" path="res://Assets/Animations/Enemies/39史莱姆/move_front_04.png" id="56_oqgb7"]
+[ext_resource type="Texture2D" uid="uid://b4nrmo2hevln7" path="res://Assets/Animations/Enemies/39史莱姆/move_front_05.png" id="57_egjah"]
+[ext_resource type="Texture2D" uid="uid://rmyg1wxphbuo" path="res://Assets/Animations/Enemies/39史莱姆/move_front_06.png" id="58_kiwqw"]
+[ext_resource type="Texture2D" uid="uid://7q0iyrmx1tr6" path="res://Assets/Animations/Enemies/39史莱姆/move_front_07.png" id="59_o22p8"]
+[ext_resource type="Texture2D" uid="uid://dw4wmcxlcshrc" path="res://Assets/Animations/Enemies/39史莱姆/move_front_08.png" id="60_pbjwv"]
+[ext_resource type="Texture2D" uid="uid://w5qjoqerv7kw" path="res://Assets/Animations/Enemies/39史莱姆/move_front_09.png" id="61_6vjsn"]
+[ext_resource type="Texture2D" uid="uid://bk5xkieh2sm1e" path="res://Assets/Animations/Enemies/39史莱姆/move_front_10.png" id="62_1whu2"]
+[ext_resource type="Texture2D" uid="uid://bybj2sex0q3hm" path="res://Assets/Animations/Enemies/39史莱姆/move_front_11.png" id="63_be58x"]
+[ext_resource type="Texture2D" uid="uid://blpvscjwepyos" path="res://Assets/Animations/Enemies/39史莱姆/move_front_12.png" id="64_xeli6"]
+[ext_resource type="Texture2D" uid="uid://dl1eb3nap5gk1" path="res://Assets/Animations/Enemies/39史莱姆/move_front_13.png" id="65_c0as3"]
+[ext_resource type="Texture2D" uid="uid://bc3gadsp3dp6l" path="res://Assets/Animations/Enemies/39史莱姆/move_front_14.png" id="66_aq5qu"]
+[ext_resource type="Texture2D" uid="uid://bew05wi64imti" path="res://Assets/Animations/Enemies/39史莱姆/move_front_15.png" id="67_j3wvf"]
+[ext_resource type="Texture2D" uid="uid://qkpv22ko6nsj" path="res://Assets/Animations/Enemies/39史莱姆/move_front_16.png" id="68_itv7w"]
+[ext_resource type="Texture2D" uid="uid://c6un3v2ht8ju0" path="res://Assets/Animations/Enemies/39史莱姆/move_front_17.png" id="69_5ty6q"]
+[ext_resource type="Texture2D" uid="uid://db8ct1dkr6oxe" path="res://Assets/Animations/Enemies/39史莱姆/move_front_18.png" id="70_dt6w0"]
+[ext_resource type="Texture2D" uid="uid://rpiq7locoj3s" path="res://Assets/Animations/Enemies/39史莱姆/move_front_19.png" id="71_il3od"]
+[ext_resource type="Texture2D" uid="uid://b0fcju10hjmfq" path="res://Assets/Animations/Enemies/39史莱姆/move_front_20.png" id="72_b0jmp"]
+[ext_resource type="Texture2D" uid="uid://d0l2kv3v5gsl5" path="res://Assets/Animations/Enemies/39史莱姆/move_front_21.png" id="73_gewum"]
+[ext_resource type="Texture2D" uid="uid://bb0kqwplunpeg" path="res://Assets/Animations/Enemies/39史莱姆/move_front_22.png" id="74_4hs6j"]
+[ext_resource type="Texture2D" uid="uid://cwsioabxs3yls" path="res://Assets/Animations/Enemies/39史莱姆/move_front_23.png" id="75_rehem"]
+[ext_resource type="Texture2D" uid="uid://66smx3pa4ht5" path="res://Assets/Animations/Enemies/39史莱姆/move_front_24.png" id="76_atnr5"]
+[ext_resource type="Texture2D" uid="uid://dps3h3hwlor5e" path="res://Assets/Animations/Enemies/39史莱姆/move_front_25.png" id="77_lnqqa"]
+[ext_resource type="Texture2D" uid="uid://crhnjyop04wm4" path="res://Assets/Animations/Enemies/39史莱姆/move_front_26.png" id="78_ww8mg"]
+[ext_resource type="Texture2D" uid="uid://r2enex5apcoa" path="res://Assets/Animations/Enemies/39史莱姆/move_front_27.png" id="79_mmxe7"]
+[ext_resource type="Texture2D" uid="uid://bk5pd324its0r" path="res://Assets/Animations/Enemies/39史莱姆/move_front_28.png" id="80_8svkq"]
+[ext_resource type="Texture2D" uid="uid://bpien0u2442ty" path="res://Assets/Animations/Enemies/39史莱姆/move_front_29.png" id="81_l80l5"]
+[ext_resource type="Texture2D" uid="uid://d37qcq1v1lgl5" path="res://Assets/Animations/Enemies/39史莱姆/move_front_30.png" id="82_m067b"]
+[ext_resource type="Texture2D" uid="uid://f1psjxakf0hi" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_00.png" id="84_e8ufs"]
+[ext_resource type="Texture2D" uid="uid://r67lspxtcswh" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_01.png" id="85_0wlyj"]
+[ext_resource type="Texture2D" uid="uid://bae7jcbvo0qst" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_02.png" id="86_tr72q"]
+[ext_resource type="Texture2D" uid="uid://c7ioaiwbjwtrh" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_03.png" id="87_1w8by"]
+[ext_resource type="Texture2D" uid="uid://b7y4lmkwg6qa0" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_04.png" id="88_8jgmm"]
+[ext_resource type="Texture2D" uid="uid://dd1bin2hxyj3y" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_05.png" id="89_lb7uj"]
+[ext_resource type="Texture2D" uid="uid://c7wu3dfy2c5pm" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_06.png" id="90_jqs3f"]
+[ext_resource type="Texture2D" uid="uid://bj18x8ujltk8s" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_07.png" id="91_3xns2"]
+[ext_resource type="Texture2D" uid="uid://dxc7mj7vwmf13" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_08.png" id="92_8ehp3"]
+[ext_resource type="Texture2D" uid="uid://d1gpugcfsw00e" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_09.png" id="93_nyd76"]
+[ext_resource type="Texture2D" uid="uid://dik08spm5i0qd" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_10.png" id="94_esckr"]
+[ext_resource type="Texture2D" uid="uid://dxt1vn1g4ug4t" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_11.png" id="95_ikmxl"]
+[ext_resource type="Texture2D" uid="uid://b7d1xc6eo55vv" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_12.png" id="96_ikt1a"]
+[ext_resource type="Texture2D" uid="uid://b55kt52xlv0mr" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_13.png" id="97_py6ma"]
+[ext_resource type="Texture2D" uid="uid://ccjmibop7dk63" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_14.png" id="98_xo245"]
+[ext_resource type="Texture2D" uid="uid://dsgpdc72d6wel" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_15.png" id="99_rcdlr"]
+[ext_resource type="Texture2D" uid="uid://l03k8edqrtjm" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_16.png" id="100_k42cf"]
+[ext_resource type="Texture2D" uid="uid://dpjla2idxnsh3" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_17.png" id="101_i1u26"]
+[ext_resource type="Texture2D" uid="uid://cuk1xgi3urdmt" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_18.png" id="102_hrm6i"]
+[ext_resource type="Texture2D" uid="uid://x24y5hdyjkyk" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_19.png" id="103_w38xx"]
+[ext_resource type="Texture2D" uid="uid://b4eysfqns3hti" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_20.png" id="104_5b7w6"]
+[ext_resource type="Texture2D" uid="uid://upnna24yh4ma" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_21.png" id="105_o74mj"]
+[ext_resource type="Texture2D" uid="uid://dwexv8ee7kgpc" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_22.png" id="106_i0hi4"]
+[ext_resource type="Texture2D" uid="uid://bfl5fahta3q64" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_23.png" id="107_lv2xd"]
+[ext_resource type="Texture2D" uid="uid://7m2cshlklveh" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_24.png" id="108_ni21r"]
+[ext_resource type="Texture2D" uid="uid://dmsj053u3tgis" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_25.png" id="109_g3mus"]
+[ext_resource type="Texture2D" uid="uid://cr3w37t5rcng8" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_26.png" id="110_xem6j"]
+[ext_resource type="Texture2D" uid="uid://djodwkxgoncjf" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_27.png" id="111_s20hl"]
+[ext_resource type="Texture2D" uid="uid://ddhxmq01ew721" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_28.png" id="112_cxjra"]
+[ext_resource type="Texture2D" uid="uid://bmyhau0fj8oqu" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_29.png" id="113_d78tc"]
+[ext_resource type="Texture2D" uid="uid://y3itr74eo7gk" path="res://Assets/Animations/Enemies/39史莱姆/move_normal_30.png" id="114_4p8np"]
+[ext_resource type="AudioStream" uid="uid://bsn52x18c1tkf" path="res://Assets/Sounds/FXs/Enemies/史莱姆/史莱姆攻击1.wav" id="114_utn53"]
+
+[sub_resource type="Resource" id="Resource_4stly"]
+script = ExtResource("2_pvmb8")
+health = 1200
+dodge_rate = 0.0
+near_damage_low = 10
+near_damage_high = 20
+near_attack_speed = 0.3
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.0
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 0.4
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_75fie"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_j0mud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_j0mud")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_j0mud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_y63tq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_lji7e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6p7t5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_m4uxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_okvoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_e5vdt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_w1jnu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_uu1nr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_dai5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_d4f0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_3s00u")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_j0mud")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_f8iy1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_jea1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_q8pb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_sau8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_n0b2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_qo1p7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_p5gcr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_sx6iy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_bvrfo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_x56a1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_w8gyq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_cw87w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_uwcjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_fjgtp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_4fepu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_pam8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_axr6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_ksuui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_hw1ek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_enyvf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_sauud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_7t1kg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_qh4x1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_unas1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_jv65u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_rhxef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_cvxi3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_2klo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_vbjme")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_ep4r3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_c7fs8")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("52_j4uag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_ns6a0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_ccy3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_bt4lm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_oqgb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_egjah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_kiwqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_o22p8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_pbjwv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_6vjsn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_1whu2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_be58x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_xeli6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_c0as3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_aq5qu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_j3wvf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_itv7w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_5ty6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_dt6w0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_il3od")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_b0jmp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_gewum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_4hs6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_rehem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_atnr5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_lnqqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_ww8mg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_mmxe7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_8svkq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_l80l5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_m067b")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("84_e8ufs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_0wlyj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_tr72q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_1w8by")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_8jgmm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_lb7uj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_jqs3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_3xns2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_8ehp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_nyd76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_esckr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_ikmxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_ikt1a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_py6ma")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_xo245")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_rcdlr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_k42cf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_i1u26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_hrm6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_w38xx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_5b7w6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_o74mj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_i0hi4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_lv2xd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_ni21r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_g3mus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_xem6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_s20hl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_cxjra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_d78tc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_4p8np")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 24.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f2m8p"]
+size = Vector2(220, 115)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g5ct7"]
+radius = 8.06226
+
+[node name="Enemy39" node_paths=PackedStringArray("summon_area_list") instance=ExtResource("1_388bg")]
+script = ExtResource("2_8mktg")
+attack_audio_list = Array[AudioStream]([ExtResource("114_utn53"), ExtResource("4_3juo4")])
+summon_area_list = [NodePath("SummonArea1"), NodePath("SummonArea2"), NodePath("SummonArea3"), NodePath("SummonArea4")]
+enemy_name = "史莱姆"
+enemy_id = 39
+enemy_texture = ExtResource("2_03s5n")
+enemy_type = 2
+start_data = SubResource("Resource_4stly")
+lives_taken = 3
+bounty = 80
+die_audio_stream_list = Array[AudioStream]([ExtResource("3_44wxv"), ExtResource("4_bl4i0"), ExtResource("5_d5eh1"), ExtResource("6_8goch")])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(5, -105)
+sprite_frames = SubResource("SpriteFrames_75fie")
+animation = &"attack"
+autoplay = "idle"
+
+[node name="BodyCollision" parent="UnitBody" index="1"]
+position = Vector2(0, -37.5)
+shape = SubResource("RectangleShape2D_f2m8p")
+
+[node name="HurtBox" parent="UnitBody" index="2"]
+position = Vector2(0, -115)
+scale = Vector2(9.35678, 9.35678)
+
+[node name="SelectSprite" parent="UnitBody" index="3"]
+scale = Vector2(9.00184, 9.00184)
+
+[node name="EnemyButton" parent="UnitBody" index="4"]
+offset_left = -123.0
+offset_top = -250.0
+offset_right = 125.0
+
+[node name="HealthBar" parent="UnitBody" index="5"]
+offset_left = -125.0
+offset_top = -285.0
+offset_right = 175.0
+offset_bottom = -276.0
+scale = Vector2(0.821736, 1.88085)
+
+[node name="AttackAudio" type="AudioStreamPlayer" parent="." index="5"]
+stream = ExtResource("114_utn53")
+volume_db = -4.0
+bus = &"Sound"
+
+[node name="SummonArea1" type="Area2D" parent="." index="6"]
+position = Vector2(67, 0)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SummonArea1" index="0"]
+shape = SubResource("CircleShape2D_g5ct7")
+
+[node name="SummonArea2" type="Area2D" parent="." index="7"]
+position = Vector2(-63, 0)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SummonArea2" index="0"]
+shape = SubResource("CircleShape2D_g5ct7")
+
+[node name="SummonArea3" type="Area2D" parent="." index="8"]
+position = Vector2(0, 33)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SummonArea3" index="0"]
+shape = SubResource("CircleShape2D_g5ct7")
+
+[node name="SummonArea4" type="Area2D" parent="." index="9"]
+position = Vector2(0, -36)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SummonArea4" index="0"]
+shape = SubResource("CircleShape2D_g5ct7")

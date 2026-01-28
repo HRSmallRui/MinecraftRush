@@ -1,0 +1,228 @@
+[gd_scene load_steps=25 format=3 uid="uid://58cc8ohjp6pd"]
+
+[ext_resource type="PackedScene" uid="uid://7cx0j7xjwcwi" path="res://Scenes/Classes/ally_class.tscn" id="1_gnit5"]
+[ext_resource type="Script" path="res://Scripts/Allys/Heroes/hero_class.gd" id="2_cdc0d"]
+[ext_resource type="Script" path="res://Scripts/Allys/Heroes/hero_ui.gd" id="3_3s246"]
+[ext_resource type="Texture2D" uid="uid://dx83ywwqyf0v0" path="res://Assets/Images/UI/HeroUI/hero_battle_ui.png" id="3_05h3l"]
+[ext_resource type="Texture2D" uid="uid://bee7msvwd7hrt" path="res://Assets/Images/UI/HeroUI/hero_battle_ui_select.png" id="4_miyxj"]
+[ext_resource type="Texture2D" uid="uid://cvc5pqffrv7f" path="res://Assets/Images/UI/HeroHall/HeadTexs/Steve.png" id="5_j4e7s"]
+[ext_resource type="Texture2D" uid="uid://dpixs5csmnirl" path="res://Assets/Images/UI/血条.png" id="6_8c0lp"]
+[ext_resource type="Texture2D" uid="uid://e3sf2je37b0e" path="res://Assets/Images/UI/HeroUI/hero_exp_progress.png" id="7_8nbkf"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="8_k3btp"]
+[ext_resource type="Texture2D" uid="uid://ddf78x1qcm0pr" path="res://Assets/Images/UI/HeroUI/hero_rebirth_progress.png" id="10_pxfu4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3k412"]
+atlas = ExtResource("3_05h3l")
+region = Rect2(31, 6, 207, 231)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujo8x"]
+atlas = ExtResource("4_miyxj")
+region = Rect2(31, 6, 207, 231)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6ek0"]
+atlas = ExtResource("3_05h3l")
+region = Rect2(31, 6, 207, 231)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rw3i7"]
+atlas = ExtResource("3_05h3l")
+region = Rect2(31, 6, 207, 231)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rnidt"]
+atlas = ExtResource("4_miyxj")
+region = Rect2(31, 6, 207, 231)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rdjx"]
+atlas = ExtResource("6_8c0lp")
+region = Rect2(0, 27, 300, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xe1e3"]
+atlas = ExtResource("6_8c0lp")
+region = Rect2(0, 89, 300, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ccqhn"]
+atlas = ExtResource("7_8nbkf")
+region = Rect2(44, 215, 182, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qu5e"]
+atlas = ExtResource("7_8nbkf")
+region = Rect2(44, 189, 182, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpx7o"]
+atlas = ExtResource("10_pxfu4")
+region = Rect2(40, 14, 188, 187)
+
+[sub_resource type="Animation" id="Animation_sxhpn"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HeroUnitButton:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(891, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_hueme"]
+resource_name = "entry"
+length = 0.4
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HeroUnitButton:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1090, -0.25, 0, 0.25, 0, 891, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+
+[sub_resource type="Animation" id="Animation_f0lkp"]
+resource_name = "entry_mobile"
+length = 0.4
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HeroUnitButton:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1090, -0.25, 0, 0.25, 0, 855, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1lq1m"]
+_data = {
+"RESET": SubResource("Animation_sxhpn"),
+"entry": SubResource("Animation_hueme"),
+"entry_mobile": SubResource("Animation_f0lkp")
+}
+
+[node name="HeroClass" instance=ExtResource("1_gnit5")]
+script = ExtResource("2_cdc0d")
+hero_level = 1
+hero_exp = 0
+skill_levels = Array[int]([0, 0, 0, 0, 0])
+heal_speeds = Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
+teleport_limit_length = 0.0
+hero_property_block = null
+skill1_exp_get = Array[int]([0, 0, 0])
+skill2_exp_get = Array[int]([0, 0, 0])
+skill3_exp_get = Array[int]([0, 0, 0])
+skill4_exp_get = Array[int]([0, 0, 0])
+ally_texture = null
+ally_type = 2
+
+[node name="HeroUI" type="CanvasLayer" parent="." index="4" node_paths=PackedStringArray("linked_hero")]
+layer = 10
+script = ExtResource("3_3s246")
+linked_hero = NodePath("..")
+normal_bar_texture = SubResource("AtlasTexture_3k412")
+hover_bar_texture = SubResource("AtlasTexture_ujo8x")
+
+[node name="HeroUnitButton" type="TextureButton" parent="HeroUI" index="0"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = -225.0
+offset_right = 222.0
+offset_bottom = 6.0
+grow_vertical = 0
+scale = Vector2(0.715881, 0.715881)
+focus_mode = 0
+texture_normal = SubResource("AtlasTexture_i6ek0")
+texture_pressed = SubResource("AtlasTexture_rw3i7")
+texture_hover = SubResource("AtlasTexture_rnidt")
+texture_disabled = SubResource("AtlasTexture_i6ek0")
+stretch_mode = 3
+
+[node name="HealthProgressBar" type="TextureProgressBar" parent="HeroUI/HeroUnitButton" index="0"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 13.9688
+offset_top = 194.166
+offset_right = 313.969
+offset_bottom = 203.166
+scale = Vector2(0.597845, 1.61282)
+max_value = 1.0
+step = 0.0
+value = 0.67
+texture_under = SubResource("AtlasTexture_4rdjx")
+texture_progress = SubResource("AtlasTexture_xe1e3")
+
+[node name="HeroTexture" type="TextureRect" parent="HeroUI/HeroUnitButton" index="1"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 12.5719
+offset_top = 12.572
+offset_right = 538.572
+offset_bottom = 538.572
+scale = Vector2(0.344332, 0.344332)
+texture = ExtResource("5_j4e7s")
+
+[node name="XP_ProgressBar" type="TextureProgressBar" parent="HeroUI/HeroUnitButton" index="2"]
+layout_mode = 0
+offset_left = 12.5719
+offset_top = 208.135
+offset_right = 194.572
+offset_bottom = 216.135
+scale = Vector2(1, 1.2794)
+max_value = 1.0
+step = 0.0
+value = 0.585
+texture_under = SubResource("AtlasTexture_ccqhn")
+texture_progress = SubResource("AtlasTexture_1qu5e")
+
+[node name="HeroLevelLabel" type="Label" parent="HeroUI/HeroUnitButton" index="3"]
+z_index = 1
+layout_mode = 0
+offset_left = 13.0
+offset_top = 181.594
+offset_right = 565.0
+offset_bottom = 245.594
+scale = Vector2(0.328486, 0.328486)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("8_k3btp")
+theme_override_font_sizes/font_size = 64
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RebirthProgressBar" type="TextureProgressBar" parent="HeroUI/HeroUnitButton" index="4"]
+layout_mode = 0
+offset_left = 11.175
+offset_top = 12.5719
+offset_right = 199.175
+offset_bottom = 199.572
+scale = Vector2(0.970988, 0.970988)
+max_value = 1.0
+step = 0.0
+value = 0.635
+fill_mode = 3
+texture_progress = SubResource("AtlasTexture_fpx7o")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HeroUI" index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_1lq1m")
+}
+autoplay = "entry"
+
+[node name="NavigationComponent" type="Node2D" parent="." index="5"]
+
+[node name="NavigationTimer" type="Timer" parent="NavigationComponent" index="0"]
+wait_time = 0.1
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="NavigationComponent" index="1"]
+avoidance_enabled = true
+debug_path_custom_color = Color(1, 0, 0, 1)
+
+[connection signal="pressed" from="HeroUI/HeroUnitButton" to="HeroUI" method="_on_hero_unit_button_pressed"]
+[connection signal="timeout" from="NavigationComponent/NavigationTimer" to="." method="_on_navigation_timer_timeout"]

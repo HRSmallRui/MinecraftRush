@@ -1,0 +1,51 @@
+[gd_scene load_steps=10 format=3 uid="uid://e2sxqdv2uwcp"]
+
+[ext_resource type="PackedScene" uid="uid://caufauw6v502y" path="res://Scenes/Classes/bullet_class.tscn" id="1_sn34b"]
+[ext_resource type="Script" path="res://Scripts/Bullets/magic_ball.gd" id="2_n6xlh"]
+[ext_resource type="PackedScene" uid="uid://bty5kl2yr61xk" path="res://Scenes/Effects/god_magic_ball_tail.tscn" id="3_ebv4i"]
+[ext_resource type="PackedScene" uid="uid://ctd1v8j1staxg" path="res://Scenes/Effects/god_magic_ball_hit.tscn" id="4_rjlka"]
+[ext_resource type="Texture2D" uid="uid://g5e5e02gdi1o" path="res://Assets/Images/Bullets/magic_bullet5.png" id="5_btdsq"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/light_component.gd" id="6_07to8"]
+
+[sub_resource type="Gradient" id="Gradient_xm1bb"]
+colors = PackedColorArray(0.27451, 1, 0.968627, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4y71s"]
+gradient = SubResource("Gradient_xm1bb")
+fill = 1
+fill_from = Vector2(0.491453, 0.529915)
+fill_to = Vector2(0.82906, 0.24359)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u8x6c"]
+
+[node name="MagicBall" instance=ExtResource("1_sn34b")]
+z_index = 2
+script = ExtResource("2_n6xlh")
+magic_ball_tail_scene = ExtResource("3_ebv4i")
+hit_effect_scene = ExtResource("4_rjlka")
+damage_type = 4
+move_type = 1
+bullet_speed = 1000.0
+damage_source = "MagicBall"
+
+[node name="BulletSprite" parent="." index="0"]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_btdsq")
+
+[node name="LightComponent" type="PointLight2D" parent="BulletSprite" index="0"]
+scale = Vector2(0.801215, 0.801215)
+energy = 1.5
+texture = SubResource("GradientTexture2D_4y71s")
+texture_scale = 2.8
+script = ExtResource("6_07to8")
+
+[node name="HitBox" parent="." index="1"]
+scale = Vector2(1.45384, 1.45384)
+collision_mask = 96
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+shape = SubResource("CircleShape2D_u8x6c")
+
+[node name="TailTimer" type="Timer" parent="FreeTimer" index="0"]
+wait_time = 0.05
+autostart = true

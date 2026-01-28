@@ -1,0 +1,437 @@
+[gd_scene load_steps=96 format=3 uid="uid://1pnh7kfn41ap"]
+
+[ext_resource type="PackedScene" uid="uid://i17sy4bx2dfh" path="res://Scenes/DefenceTowers/BarrackTowers/barrack_tower.tscn" id="1_jgvgm"]
+[ext_resource type="Script" path="res://Scripts/Datas/BarrackData.gd" id="2_d6um0"]
+[ext_resource type="PackedScene" uid="uid://drjvqvw33m3ab" path="res://Scenes/DefenceTowers/tower_button.tscn" id="2_dc2v8"]
+[ext_resource type="PackedScene" uid="uid://y52cl5a62ec5" path="res://Scenes/Allys/Soldiers/soldier_lv_3.tscn" id="3_jqqnj"]
+[ext_resource type="Texture2D" uid="uid://bie2qmv6celuf" path="res://Assets/Images/DefenceTowers/Barracks/LV4-2.png" id="3_vwyrb"]
+[ext_resource type="Texture2D" uid="uid://coymcu5vkkomm" path="res://Assets/Images/DefenceTowers/Barracks/LV4-2-select.png" id="4_uv6uy"]
+[ext_resource type="Texture2D" uid="uid://da7c0h5ydwfvd" path="res://Assets/Images/DefenceTowers/Barracks/LV4-2-NO.png" id="5_127si"]
+[ext_resource type="Texture2D" uid="uid://bjbf5ayoxsyi8" path="res://Assets/Images/DefenceTowers/Barracks/LV4-1.png" id="6_ajfl5"]
+[ext_resource type="Texture2D" uid="uid://dvx5q5o8isaht" path="res://Assets/Images/DefenceTowers/Barracks/LV4-1-select.png" id="7_ly4f6"]
+[ext_resource type="Texture2D" uid="uid://bneq8l4wi8ark" path="res://Assets/Images/DefenceTowers/Barracks/LV4-1-NO.png" id="8_8qm0u"]
+[ext_resource type="Texture2D" uid="uid://bjsps06oirmu4" path="res://Assets/Images/DefenceTowers/Barracks/LV4-3.png" id="9_jnm52"]
+[ext_resource type="Texture2D" uid="uid://2nx4jxbseqs8" path="res://Assets/Images/DefenceTowers/Barracks/LV4-3-select.png" id="10_7gydy"]
+[ext_resource type="Texture2D" uid="uid://b7j7htsuh2gle" path="res://Assets/Images/DefenceTowers/Barracks/LV4-3-NO.png" id="11_lx0y3"]
+[ext_resource type="Texture2D" uid="uid://41lc8yi4oyqb" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV3/Barrack_LV3.png" id="13_m0ids"]
+[ext_resource type="Texture2D" uid="uid://b8v55lfxnmdsi" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV3/Barrack_L3_fire.png" id="14_12ged"]
+[ext_resource type="Texture2D" uid="uid://bfhvapkruvlxi" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_00.png" id="15_iu0or"]
+[ext_resource type="Texture2D" uid="uid://bhtojqaoy0bfd" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_01.png" id="16_mnquk"]
+[ext_resource type="Texture2D" uid="uid://b1bpi8i343gth" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_02.png" id="17_gwmea"]
+[ext_resource type="Texture2D" uid="uid://b737hfn8wyfoi" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_03.png" id="18_dpwhu"]
+[ext_resource type="Texture2D" uid="uid://c562s2bwfm6vu" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_04.png" id="19_2y3gk"]
+[ext_resource type="Texture2D" uid="uid://cnwtqs1fwsv2n" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_05.png" id="20_c441a"]
+[ext_resource type="Texture2D" uid="uid://c3acsnxu7orbg" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_06.png" id="21_awus3"]
+[ext_resource type="Texture2D" uid="uid://c3kvja30numo5" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_07.png" id="22_xfbfv"]
+[ext_resource type="Texture2D" uid="uid://c1ugp65ywtj8l" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_08.png" id="23_dbci7"]
+[ext_resource type="Texture2D" uid="uid://bq76dcj682o0g" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_09.png" id="24_54d2o"]
+[ext_resource type="Texture2D" uid="uid://bd0oocvjxmiag" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_10.png" id="25_kqghr"]
+[ext_resource type="Texture2D" uid="uid://cvjhbjq4e0fcr" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_11.png" id="26_6jouw"]
+[ext_resource type="Texture2D" uid="uid://jl3jy0vdo8o" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_12.png" id="27_qgm5p"]
+[ext_resource type="Texture2D" uid="uid://5vmlmlhedejk" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_13.png" id="28_w0xte"]
+[ext_resource type="Texture2D" uid="uid://duejxqkwinmuu" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_14.png" id="29_53tej"]
+[ext_resource type="Texture2D" uid="uid://cuet0si2kuwd8" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_15.png" id="30_cx12x"]
+[ext_resource type="Texture2D" uid="uid://bcsnanvrm7c2o" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_16.png" id="31_kky1m"]
+[ext_resource type="Texture2D" uid="uid://bagbqf7couxjs" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_17.png" id="32_3axcu"]
+[ext_resource type="Texture2D" uid="uid://c0qqg75n0qanf" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_18.png" id="33_j6evo"]
+[ext_resource type="Texture2D" uid="uid://dtgmv4b2wkuc8" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_19.png" id="34_ln5sl"]
+[ext_resource type="Texture2D" uid="uid://dj8pd8kjpa0d3" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_20.png" id="35_ywr66"]
+[ext_resource type="Texture2D" uid="uid://bu2d2x2pij5pn" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_21.png" id="36_53jhm"]
+[ext_resource type="Texture2D" uid="uid://dldipxgnkyakh" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_22.png" id="37_lndi0"]
+[ext_resource type="Texture2D" uid="uid://bfx2kt5d0abfj" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_23.png" id="38_exqpe"]
+[ext_resource type="Texture2D" uid="uid://dgyiakm1pm2n3" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_24.png" id="39_pnxbx"]
+[ext_resource type="Texture2D" uid="uid://ds1fnu7l53it" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_25.png" id="40_wms1m"]
+[ext_resource type="Texture2D" uid="uid://dkkjs06rsi3gv" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_26.png" id="41_oirnm"]
+[ext_resource type="Texture2D" uid="uid://clo0pgh0x8v4b" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_27.png" id="42_4qjwj"]
+[ext_resource type="Texture2D" uid="uid://dtunb5swwu455" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_28.png" id="43_k3ur5"]
+[ext_resource type="Texture2D" uid="uid://bdrv6336etxxs" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV3/Barrack_L3_flag.png" id="44_74f4j"]
+[ext_resource type="Texture2D" uid="uid://cuced6iidbnub" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_00.png" id="45_2p8x5"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/light_component.gd" id="45_tx6i6"]
+[ext_resource type="Texture2D" uid="uid://427s7cedo12g" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_01.png" id="46_4pauy"]
+[ext_resource type="Texture2D" uid="uid://dpkivocb2k8ep" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_02.png" id="47_pg0u3"]
+[ext_resource type="Texture2D" uid="uid://4wjspfg4uhby" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_03.png" id="48_e8qg4"]
+[ext_resource type="Texture2D" uid="uid://c148u4btrb7ok" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_04.png" id="49_sioku"]
+[ext_resource type="Texture2D" uid="uid://bsglhb4fns04i" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_05.png" id="50_th16m"]
+[ext_resource type="Texture2D" uid="uid://bswvj8mel7bgq" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_06.png" id="51_8n1oe"]
+[ext_resource type="Texture2D" uid="uid://cvoxeyuigepi6" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_07.png" id="52_onqga"]
+[ext_resource type="Texture2D" uid="uid://b3ccylk1nlsr5" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_08.png" id="53_0qlg0"]
+[ext_resource type="Texture2D" uid="uid://cd7ldt8hdtpam" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_09.png" id="54_qtsae"]
+[ext_resource type="Texture2D" uid="uid://160guc2fkssn" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_10.png" id="55_irywp"]
+[ext_resource type="Texture2D" uid="uid://dmidt4gqlvvvv" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_11.png" id="56_yt881"]
+[ext_resource type="Texture2D" uid="uid://0gmcmum2xucb" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_12.png" id="57_gs380"]
+[ext_resource type="Texture2D" uid="uid://bkbkrm7vbyprt" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_13.png" id="58_ivq18"]
+[ext_resource type="Texture2D" uid="uid://ck8dkqd0h78av" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_14.png" id="59_bbokv"]
+[ext_resource type="Texture2D" uid="uid://bfpexquynmjtr" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_15.png" id="60_fhqrd"]
+[ext_resource type="Texture2D" uid="uid://diktbwmo8v5tn" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_16.png" id="61_u8jd5"]
+[ext_resource type="Texture2D" uid="uid://c4nn3rp6anpwf" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_17.png" id="62_51i20"]
+[ext_resource type="Texture2D" uid="uid://dm22yr1v0bp75" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_18.png" id="63_rkf7h"]
+[ext_resource type="Texture2D" uid="uid://8as1bgjfje8c" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_19.png" id="64_fygra"]
+[ext_resource type="Texture2D" uid="uid://cbshw38a58p16" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_20.png" id="65_sjafh"]
+[ext_resource type="Texture2D" uid="uid://7tikivo5qhw7" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_21.png" id="66_obyi2"]
+[ext_resource type="Texture2D" uid="uid://dtqpk3nc2ka6u" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_22.png" id="67_ujor6"]
+[ext_resource type="Texture2D" uid="uid://3csen54pmf24" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_23.png" id="68_nmw12"]
+[ext_resource type="Texture2D" uid="uid://crbq2u82pvvrf" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_24.png" id="69_enupa"]
+[ext_resource type="Texture2D" uid="uid://b8w65yvlaylao" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_25.png" id="70_nglmo"]
+[ext_resource type="Texture2D" uid="uid://djlxrka8tpccd" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_26.png" id="71_135r4"]
+[ext_resource type="Texture2D" uid="uid://cn3c4vxwq3tb4" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_27.png" id="72_dnjhx"]
+[ext_resource type="Texture2D" uid="uid://b4qp0adgh6x1t" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_28.png" id="73_mfjhp"]
+[ext_resource type="Texture2D" uid="uid://hnqunidwyudy" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_29.png" id="74_lv63r"]
+[ext_resource type="Texture2D" uid="uid://dqt6v7nn3qka8" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_30.png" id="75_rfhkx"]
+[ext_resource type="Texture2D" uid="uid://btsyuktmsc02b" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_31.png" id="76_rblq3"]
+[ext_resource type="Texture2D" uid="uid://6gwl8wfvcxda" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_32.png" id="77_gahfc"]
+[ext_resource type="Texture2D" uid="uid://barm2jen0oexo" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_33.png" id="78_ltatj"]
+[ext_resource type="Texture2D" uid="uid://be13t6j15fump" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_34.png" id="79_0sxyo"]
+[ext_resource type="Texture2D" uid="uid://c08k1oyq3as1h" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_35.png" id="80_r7euy"]
+[ext_resource type="Texture2D" uid="uid://dybuhkij2f65w" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_36.png" id="81_i652o"]
+[ext_resource type="Texture2D" uid="uid://xvqkyb4rs0h8" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_37.png" id="82_l3e4n"]
+[ext_resource type="Texture2D" uid="uid://cj011hqd46l8v" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_38.png" id="83_20r7l"]
+[ext_resource type="Texture2D" uid="uid://d15jqhe5sycaq" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_39.png" id="84_sxbi6"]
+[ext_resource type="Texture2D" uid="uid://4c6wmusa5k7v" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFlag/only_flag_40.png" id="85_ts6lb"]
+
+[sub_resource type="Resource" id="Resource_3o2wo"]
+script = ExtResource("2_d6um0")
+soldier_health = 150
+damage_low = 6
+damage_high = 10
+armor = 0.3
+rebirth_time = 10
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3vlac"]
+atlas = ExtResource("3_vwyrb")
+region = Rect2(17, 18, 62, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjgpb"]
+atlas = ExtResource("6_ajfl5")
+region = Rect2(17, 18, 62, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bok6u"]
+atlas = ExtResource("9_jnm52")
+region = Rect2(17, 18, 62, 61)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mmuch"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_iu0or")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_mnquk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_gwmea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_dpwhu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_2y3gk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_c441a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_awus3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_xfbfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_dbci7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_54d2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_kqghr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_6jouw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_qgm5p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_w0xte")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_53tej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_cx12x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_kky1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_3axcu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_j6evo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_ln5sl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ywr66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_53jhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_lndi0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_exqpe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_pnxbx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_wms1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_oirnm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_4qjwj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_k3ur5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_kjuav"]
+colors = PackedColorArray(1, 0.698039, 0.0784314, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ggd2q"]
+gradient = SubResource("Gradient_kjuav")
+fill = 1
+fill_from = Vector2(0.491453, 0.529915)
+fill_to = Vector2(0.82906, 0.24359)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t8c4b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("45_2p8x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_4pauy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_pg0u3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_e8qg4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_sioku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_th16m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_8n1oe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_onqga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_0qlg0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_qtsae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_irywp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_yt881")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_gs380")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_ivq18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_bbokv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_fhqrd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_u8jd5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_51i20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_rkf7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_fygra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_sjafh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_obyi2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_ujor6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_nmw12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_enupa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_nglmo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_135r4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_dnjhx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_mfjhp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_lv63r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_rfhkx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_rblq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_gahfc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_ltatj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_0sxyo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_r7euy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_i652o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_l3e4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_20r7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_sxbi6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_ts6lb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[node name="BarrackTowerLV3" instance=ExtResource("1_jgvgm")]
+barrack_data = SubResource("Resource_3o2wo")
+soldier_scene = ExtResource("3_jqqnj")
+is_new_tower = false
+tower_name = "骑士兵营"
+tower_id = 3
+tower_level = 3
+tower_value = 340
+
+[node name="TowerButton" parent="." index="2"]
+offset_left = -63.0
+offset_top = -82.0
+offset_right = 62.0
+
+[node name="Circle" parent="TowerUI" index="4"]
+position = Vector2(0, -36)
+
+[node name="TowerButton" parent="TowerUI/Circle" index="1" node_paths=PackedStringArray("tower") instance=ExtResource("2_dc2v8")]
+offset_left = -31.0006
+offset_top = -132.0
+offset_right = 30.9994
+offset_bottom = -70.9999
+texture_normal = SubResource("AtlasTexture_3vlac")
+texture_pressed = SubResource("AtlasTexture_3vlac")
+texture_hover = ExtResource("4_uv6uy")
+texture_disabled = ExtResource("5_127si")
+tower = NodePath("../../..")
+tower_type = 1
+id = 5
+price = 230
+unlocked_level = 10
+
+[node name="TowerButton2" parent="TowerUI/Circle" index="2" node_paths=PackedStringArray("tower") instance=ExtResource("2_dc2v8")]
+offset_left = -128.0
+offset_top = -92.9994
+offset_right = -66.0004
+offset_bottom = -31.9993
+texture_normal = SubResource("AtlasTexture_gjgpb")
+texture_pressed = SubResource("AtlasTexture_gjgpb")
+texture_hover = ExtResource("7_ly4f6")
+texture_disabled = ExtResource("8_8qm0u")
+tower = NodePath("../../..")
+tower_type = 1
+id = 4
+price = 230
+unlocked_level = 4
+
+[node name="TowerButton3" parent="TowerUI/Circle" index="3" node_paths=PackedStringArray("tower") instance=ExtResource("2_dc2v8")]
+offset_left = 67.9996
+offset_top = -93.0003
+offset_right = 130.0
+offset_bottom = -32.0002
+texture_normal = SubResource("AtlasTexture_bok6u")
+texture_pressed = SubResource("AtlasTexture_bok6u")
+texture_hover = ExtResource("10_7gydy")
+texture_disabled = ExtResource("11_lx0y3")
+tower = NodePath("../../..")
+tower_type = 1
+id = 6
+price = 230
+unlocked_level = 13
+
+[node name="TowerSprite" type="Sprite2D" parent="." index="8"]
+position = Vector2(-3, -23)
+scale = Vector2(1.17344, 1.17344)
+texture = ExtResource("13_m0ids")
+
+[node name="BarrackL2Fire" type="Sprite2D" parent="." index="9"]
+position = Vector2(-11, -16)
+texture = ExtResource("14_12ged")
+
+[node name="Fire" type="AnimatedSprite2D" parent="BarrackL2Fire" index="0"]
+position = Vector2(-47, 5)
+sprite_frames = SubResource("SpriteFrames_mmuch")
+autoplay = "default"
+
+[node name="LightComponent" type="PointLight2D" parent="BarrackL2Fire" index="1"]
+position = Vector2(-46, 9)
+scale = Vector2(0.801215, 0.801215)
+energy = 1.5
+texture = SubResource("GradientTexture2D_ggd2q")
+texture_scale = 2.8
+script = ExtResource("45_tx6i6")
+
+[node name="BarrackL2Flag" type="Sprite2D" parent="." index="10"]
+position = Vector2(7, -22)
+texture = ExtResource("44_74f4j")
+
+[node name="Flag" type="AnimatedSprite2D" parent="BarrackL2Flag" index="0"]
+position = Vector2(50, -4)
+sprite_frames = SubResource("SpriteFrames_t8c4b")
+autoplay = "default"

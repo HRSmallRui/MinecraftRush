@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://jm81licgdjgs"]
+
+[ext_resource type="Script" path="res://Scripts/Skills/robort_lighting_area.gd" id="1_8y7ys"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cx2wb"]
+radius = 73.9444
+
+[node name="RobortLightingArea" type="Area2D"]
+collision_layer = 0
+collision_mask = 96
+script = ExtResource("1_8y7ys")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.30286, 0.911999)
+shape = SubResource("CircleShape2D_cx2wb")
+debug_color = Color(0, 0.615, 0.615, 0)

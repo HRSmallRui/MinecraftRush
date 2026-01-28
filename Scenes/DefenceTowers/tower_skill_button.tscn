@@ -1,0 +1,119 @@
+[gd_scene load_steps=14 format=3 uid="uid://cjpn07gcbekr1"]
+
+[ext_resource type="Texture2D" uid="uid://b3b32svcu5tk7" path="res://Assets/Images/DefenceTowers/Barracks/UI/皇家审判.png" id="1_u71t2"]
+[ext_resource type="Texture2D" uid="uid://dpt3vg5ibiue5" path="res://Assets/Images/DefenceTowers/Barracks/UI/皇家审判select.png" id="2_t6l8y"]
+[ext_resource type="Texture2D" uid="uid://dyta3jt48e2jh" path="res://Assets/Images/DefenceTowers/Barracks/UI/皇家审判no.png" id="3_yh3os"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/tower_skill_button.gd" id="4_3dms5"]
+[ext_resource type="Texture2D" uid="uid://dkkvqrebxwj01" path="res://Assets/Images/DefenceTowers/UI/price_bar_panel.png" id="5_4vlmm"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="6_tn6tn"]
+[ext_resource type="Texture2D" uid="uid://byxm7nquh1h5d" path="res://Assets/Images/DefenceTowers/UI/tower_skill_point.png" id="7_hrn2q"]
+[ext_resource type="AudioStream" uid="uid://duvqp5eu8d8c3" path="res://Assets/Sounds/FXs/UIs/mcexp.wav" id="8_tpn3r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t52ah"]
+atlas = ExtResource("1_u71t2")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8dkqw"]
+atlas = ExtResource("2_t6l8y")
+region = Rect2(1, 1, 94, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dooom"]
+atlas = ExtResource("3_yh3os")
+region = Rect2(6, 5, 85, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4w3g"]
+atlas = ExtResource("5_4vlmm")
+region = Rect2(17, 18, 62, 61)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sk0m0"]
+content_margin_left = 49.0
+content_margin_top = 14.0
+content_margin_right = 44.0
+content_margin_bottom = 14.0
+texture = SubResource("AtlasTexture_s4w3g")
+
+[node name="TowerSkillButton" type="TextureButton"]
+offset_left = -141.25
+offset_top = -83.7494
+offset_right = -56.2504
+offset_bottom = 1.25064
+focus_mode = 0
+texture_normal = SubResource("AtlasTexture_t52ah")
+texture_pressed = SubResource("AtlasTexture_t52ah")
+texture_hover = SubResource("AtlasTexture_8dkqw")
+texture_disabled = SubResource("AtlasTexture_dooom")
+stretch_mode = 3
+script = ExtResource("4_3dms5")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 22.5003
+offset_top = 67.4999
+offset_right = 96.5003
+offset_bottom = 97.4999
+scale = Vector2(0.570777, 0.570777)
+theme_override_styles/panel = SubResource("StyleBoxTexture_sk0m0")
+
+[node name="PriceLabel" type="Label" parent="Panel"]
+modulate = Color(1, 1, 0, 1)
+layout_mode = 0
+offset_left = 7.0
+offset_top = 4.0
+offset_right = 189.0
+offset_bottom = 78.0
+scale = Vector2(0.326788, 0.326788)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("6_tn6tn")
+theme_override_font_sizes/font_size = 64
+text = "70"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SkillPointContainer" type="Sprite2D" parent="."]
+position = Vector2(42.25, 3.7494)
+rotation = -0.785398
+scale = Vector2(0.175826, 0.175826)
+texture = ExtResource("5_4vlmm")
+region_enabled = true
+region_rect = Rect2(17, 18, 62, 61)
+
+[node name="SkillPoint1" type="Sprite2D" parent="SkillPointContainer"]
+texture = ExtResource("7_hrn2q")
+region_enabled = true
+region_rect = Rect2(17, 18, 62, 61)
+
+[node name="SkillPointContainer2" type="Sprite2D" parent="."]
+position = Vector2(61.25, 22.7494)
+rotation = -0.785398
+scale = Vector2(0.175826, 0.175826)
+texture = ExtResource("5_4vlmm")
+region_enabled = true
+region_rect = Rect2(17, 18, 62, 61)
+
+[node name="SkillPoint2" type="Sprite2D" parent="SkillPointContainer2"]
+texture = ExtResource("7_hrn2q")
+region_enabled = true
+region_rect = Rect2(17, 18, 62, 61)
+
+[node name="SkillPointContainer3" type="Sprite2D" parent="."]
+position = Vector2(79.25, 40.7494)
+rotation = -0.785398
+scale = Vector2(0.175826, 0.175826)
+texture = ExtResource("5_4vlmm")
+region_enabled = true
+region_rect = Rect2(17, 18, 62, 61)
+
+[node name="SkillPoint3" type="Sprite2D" parent="SkillPointContainer3"]
+texture = ExtResource("7_hrn2q")
+region_enabled = true
+region_rect = Rect2(17, 18, 62, 61)
+
+[node name="ClickAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_tpn3r")
+max_polyphony = 3
+bus = &"Sound"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

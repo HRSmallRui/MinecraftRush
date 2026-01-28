@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://dtyu2t5hq40nc"]
+
+[ext_resource type="PackedScene" uid="uid://b1245qux56fh4" path="res://Scenes/Classes/defence_tower_class.tscn" id="1_inxnb"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/ArcherTowers/archer_tower.gd" id="2_axafu"]
+[ext_resource type="Texture2D" uid="uid://bo4q5wo18lqp1" path="res://Assets/Images/DefenceTowers/Based/royal-build.png" id="3_mtae4"]
+[ext_resource type="Texture2D" uid="uid://cqx34wicbeheb" path="res://Assets/Images/UI/InformationBar/arrow-id-1.png" id="3_pourd"]
+[ext_resource type="Texture2D" uid="uid://c5ux4kta4lhxy" path="res://Assets/Images/DefenceTowers/Based/royal-build-select.png" id="4_l8af1"]
+
+[node name="ArcherTower" node_paths=PackedStringArray("shooter_list") instance=ExtResource("1_inxnb")]
+script = ExtResource("2_axafu")
+start_data = null
+shooter_list = []
+tower_type = 0
+tower_texture = ExtResource("3_pourd")
+tower_skill_levels = Array[int]([0, 0])
+
+[node name="BasedSprite" parent="Based" index="0"]
+texture = ExtResource("3_mtae4")
+
+[node name="BasedSpriteSelect" parent="Based" index="1"]
+texture = ExtResource("4_l8af1")
+
+[node name="TowerArea" parent="." index="6"]
+collision_mask = 96
+
+[node name="TowerSprite" type="Sprite2D" parent="." index="7"]
+
+[node name="NormalAttackTimer" type="Timer" parent="." index="8"]
+one_shot = true

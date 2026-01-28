@@ -1,0 +1,108 @@
+[gd_scene load_steps=23 format=3 uid="uid://cqkga82q85ygo"]
+
+[ext_resource type="PackedScene" uid="uid://bjfa3t67tpsbr" path="res://Scenes/Buffs/property_buff.tscn" id="1_ydv0i"]
+[ext_resource type="Script" path="res://Scripts/Buffs/property_buff_block.gd" id="2_06fxx"]
+[ext_resource type="Texture2D" uid="uid://c2kjir8ohx7d1" path="res://Assets/Images/Effects/LightningSheild/0001.png" id="3_6qv6o"]
+[ext_resource type="Texture2D" uid="uid://ksxvql627fl3" path="res://Assets/Images/Effects/LightningSheild/0002.png" id="4_jnmt5"]
+[ext_resource type="Texture2D" uid="uid://be5i2bpicvfv3" path="res://Assets/Images/Effects/LightningSheild/0003.png" id="5_axqxv"]
+[ext_resource type="Texture2D" uid="uid://bx7bexxw03u8x" path="res://Assets/Images/Effects/LightningSheild/0004.png" id="6_ptwby"]
+[ext_resource type="Texture2D" uid="uid://jm6lyrnn01u1" path="res://Assets/Images/Effects/LightningSheild/0005.png" id="7_a6dmp"]
+[ext_resource type="Texture2D" uid="uid://c4n1q31q74buo" path="res://Assets/Images/Effects/LightningSheild/0006.png" id="8_6138t"]
+[ext_resource type="Texture2D" uid="uid://dkm1pw3ui0jnk" path="res://Assets/Images/Effects/LightningSheild/0007.png" id="9_80xgh"]
+[ext_resource type="Texture2D" uid="uid://yqxlmpeggako" path="res://Assets/Images/Effects/LightningSheild/0008.png" id="10_7eyvp"]
+[ext_resource type="Texture2D" uid="uid://bb1lydl1ya62h" path="res://Assets/Images/Effects/LightningSheild/0009.png" id="11_fl8a0"]
+[ext_resource type="Texture2D" uid="uid://dh35cfp4f2km" path="res://Assets/Images/Effects/LightningSheild/0010.png" id="12_j42ht"]
+[ext_resource type="Texture2D" uid="uid://cc0el1owp3w7s" path="res://Assets/Images/Effects/LightningSheild/0011.png" id="13_ba1ow"]
+[ext_resource type="Texture2D" uid="uid://b4npdfarivlf8" path="res://Assets/Images/Effects/LightningSheild/0012.png" id="14_4kbvb"]
+[ext_resource type="Texture2D" uid="uid://bmeoe1s0vd7vr" path="res://Assets/Images/Effects/LightningSheild/0013.png" id="15_uatre"]
+[ext_resource type="Texture2D" uid="uid://b4epva8r1mu10" path="res://Assets/Images/Effects/LightningSheild/0014.png" id="16_k7eyv"]
+[ext_resource type="Texture2D" uid="uid://cu6l1bxlayrlm" path="res://Assets/Images/Effects/LightningSheild/0015.png" id="17_g133s"]
+[ext_resource type="Texture2D" uid="uid://3i6rm3ld7pt2" path="res://Assets/Images/Effects/LightningSheild/0016.png" id="18_kfcnd"]
+
+[sub_resource type="Resource" id="Resource_0pw8x"]
+script = ExtResource("2_06fxx")
+property_type = 6
+operation_type = 0
+operation_data = 0.1
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_da6ya"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_6qv6o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jnmt5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_axqxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ptwby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_a6dmp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6138t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_80xgh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7eyvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_fl8a0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_j42ht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ba1ow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4kbvb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_uatre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_k7eyv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_g133s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_kfcnd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 16.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_bej1h"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1b38u"]
+gradient = SubResource("Gradient_bej1h")
+fill = 1
+fill_from = Vector2(0.478632, 0.495726)
+fill_to = Vector2(0.816239, 0.850427)
+
+[node name="LightningSheild" instance=ExtResource("1_ydv0i")]
+buff_blocks = Array[ExtResource("2_06fxx")]([SubResource("Resource_0pw8x")])
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0"]
+modulate = Color(0.309804, 1, 1, 1)
+position = Vector2(0, -19)
+scale = Vector2(1.25, 1.25)
+sprite_frames = SubResource("SpriteFrames_da6ya")
+autoplay = "default"
+frame_progress = 0.0844158
+
+[node name="PointLight2D" type="PointLight2D" parent="." index="1"]
+position = Vector2(0, -19)
+color = Color(0.498039, 1, 1, 1)
+blend_mode = 2
+texture = SubResource("GradientTexture2D_1b38u")

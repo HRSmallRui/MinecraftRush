@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccvx8y8q5xa1g"]
+
+[ext_resource type="PackedScene" uid="uid://bjfa3t67tpsbr" path="res://Scenes/Buffs/property_buff.tscn" id="1_p831e"]
+[ext_resource type="Script" path="res://Scripts/Buffs/property_buff_block.gd" id="2_gm7e0"]
+
+[sub_resource type="Resource" id="Resource_rlg4b"]
+script = ExtResource("2_gm7e0")
+property_type = 8
+operation_type = 0
+operation_data = 0.9
+
+[node name="MikeWaterBuff" instance=ExtResource("1_p831e")]
+buff_blocks = Array[ExtResource("2_gm7e0")]([SubResource("Resource_rlg4b")])
+duration = 12.0
+buff_tag = "MikeWaterBuff"

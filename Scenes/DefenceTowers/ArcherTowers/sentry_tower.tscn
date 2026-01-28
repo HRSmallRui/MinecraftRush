@@ -1,0 +1,482 @@
+[gd_scene load_steps=83 format=3 uid="uid://dprxgaxbaogqs"]
+
+[ext_resource type="PackedScene" uid="uid://dtyu2t5hq40nc" path="res://Scenes/DefenceTowers/ArcherTowers/archer_tower.tscn" id="1_uvpqa"]
+[ext_resource type="Script" path="res://Scripts/Datas/TowerData.gd" id="2_1alja"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/ArcherTowers/sentry_tower.gd" id="2_6l6lk"]
+[ext_resource type="Texture2D" uid="uid://btqp3wn0ulubt" path="res://Assets/Images/UI/InformationBar/arrow-id-6.png" id="2_ioo5i"]
+[ext_resource type="PackedScene" uid="uid://cjpn07gcbekr1" path="res://Scenes/DefenceTowers/tower_skill_button.tscn" id="4_ntvwl"]
+[ext_resource type="Texture2D" uid="uid://bo521r3mdgmp" path="res://Assets/Images/DefenceTowers/Archers/UI/牢笼.png" id="6_2u5aw"]
+[ext_resource type="Texture2D" uid="uid://tqrg2d2cgi3x" path="res://Assets/Images/DefenceTowers/Archers/Towers/LV4-3.png" id="6_xs3y8"]
+[ext_resource type="Texture2D" uid="uid://bigahgxmmt6iw" path="res://Assets/Images/DefenceTowers/Archers/UI/牢笼select.png" id="7_lbopb"]
+[ext_resource type="Texture2D" uid="uid://dcq2yrpeqk76q" path="res://Assets/Animations/Archers/LV4-3/Archer-LV4-3shoot_00.png" id="7_mgm2o"]
+[ext_resource type="Texture2D" uid="uid://bnexemmdqbi6n" path="res://Assets/Images/DefenceTowers/Archers/UI/牢笼disabled.png" id="8_e27ud"]
+[ext_resource type="Texture2D" uid="uid://dry30k433o2lu" path="res://Assets/Animations/Archers/LV4-3/Archer-back-LV4-3-shoot_00.png" id="8_guhjg"]
+[ext_resource type="Texture2D" uid="uid://nncrtcnd3qy3" path="res://Assets/Images/DefenceTowers/Archers/UI/变节者.png" id="9_far7m"]
+[ext_resource type="Texture2D" uid="uid://voxy00bwghq5" path="res://Assets/Animations/Archers/LV4-3/Archer-back-LV4-3-shoot_01.png" id="9_gkjvr"]
+[ext_resource type="Texture2D" uid="uid://b82j20o0y5t2t" path="res://Assets/Images/DefenceTowers/Archers/UI/变节者select.png" id="10_2ko10"]
+[ext_resource type="Texture2D" uid="uid://dc18c0e6ha5mr" path="res://Assets/Animations/Archers/LV4-3/Archer-back-LV4-3-shoot_02.png" id="10_tvj0s"]
+[ext_resource type="Texture2D" uid="uid://cyesmq8uuv3fy" path="res://Assets/Animations/Archers/LV4-3/Archer-back-LV4-3-shoot_03.png" id="11_c2tu8"]
+[ext_resource type="Texture2D" uid="uid://fl7ygyt3f2ea" path="res://Assets/Images/DefenceTowers/Archers/UI/变节者disabled.png" id="11_c7a5c"]
+[ext_resource type="Texture2D" uid="uid://bnlljfe8bex1p" path="res://Assets/Animations/Archers/LV4-3/Archer-back-LV4-3-shoot_04.png" id="12_iafmw"]
+[ext_resource type="Texture2D" uid="uid://di244pjtyyl2a" path="res://Assets/Images/DefenceTowers/UI/flag_button.png" id="12_kq06h"]
+[ext_resource type="Texture2D" uid="uid://yjsdw2tgelx6" path="res://Assets/Animations/Archers/LV4-3/Archer-back-LV4-3-shoot_05.png" id="13_4ww32"]
+[ext_resource type="Texture2D" uid="uid://7xl2wnc5nk41" path="res://Assets/Images/DefenceTowers/UI/flag_button_select.png" id="13_75i3t"]
+[ext_resource type="Texture2D" uid="uid://dm5farovhod5v" path="res://Assets/Animations/Archers/LV4-3/Archer-back-LV4-3-shoot_06.png" id="14_172lc"]
+[ext_resource type="Texture2D" uid="uid://cusr3khw38x41" path="res://Assets/Animations/Archers/LV4-3/Archer-back-LV4-3-shoot_07.png" id="15_lovks"]
+[ext_resource type="Texture2D" uid="uid://84f1fc6poual" path="res://Assets/Animations/Archers/LV4-3/Archer-back-LV4-3-shoot_08.png" id="16_yyw28"]
+[ext_resource type="Texture2D" uid="uid://046nqq8he83i" path="res://Assets/Animations/Archers/LV4-3/Archer-back-LV4-3-shoot_09.png" id="17_nvr6c"]
+[ext_resource type="Texture2D" uid="uid://dceiptsfveucp" path="res://Assets/Animations/Archers/LV4-3/Archer-back-LV4-3-shoot_10.png" id="18_gxkmj"]
+[ext_resource type="Texture2D" uid="uid://bdwwp5khdkwut" path="res://Assets/Animations/Archers/LV4-3/Archer-back-LV4-3-shoot_11.png" id="19_f1k3q"]
+[ext_resource type="Texture2D" uid="uid://b83nd8yfsycrt" path="res://Assets/Animations/Archers/LV4-3/Archer-back-LV4-3-shoot_12.png" id="20_t1yym"]
+[ext_resource type="Texture2D" uid="uid://c38wwqliwnq28" path="res://Assets/Animations/Archers/LV4-3/Archer-back-LV4-3-shoot_13.png" id="21_4lsq8"]
+[ext_resource type="Texture2D" uid="uid://cxlosb6kqpf57" path="res://Assets/Animations/Archers/LV4-3/Archer-back-LV4-3-shoot_14.png" id="22_vpt60"]
+[ext_resource type="Texture2D" uid="uid://7okmpm05nsll" path="res://Assets/Animations/Archers/LV4-3/Archer-back-LV4-3-shoot_15.png" id="23_aukrj"]
+[ext_resource type="Texture2D" uid="uid://ca8sr4hoas2ys" path="res://Assets/Animations/Archers/LV4-3/Archer-back-LV4-3-shoot_16.png" id="24_fnewv"]
+[ext_resource type="Texture2D" uid="uid://1nsjv7e0wkwt" path="res://Assets/Animations/Archers/LV4-3/Archer-back-LV4-3-shoot_17.png" id="25_unwve"]
+[ext_resource type="Texture2D" uid="uid://dnqrecaot57v3" path="res://Assets/Animations/Archers/LV4-3/Archer-back-LV4-3-shoot_18.png" id="26_8cxf3"]
+[ext_resource type="Texture2D" uid="uid://dhxdl4gcvwr1f" path="res://Assets/Animations/Archers/LV4-3/Archer-back-LV4-3-shoot_19.png" id="27_tg246"]
+[ext_resource type="Texture2D" uid="uid://1n6dm3eihf5e" path="res://Assets/Animations/Archers/LV4-3/Archer-back-LV4-3-shoot_20.png" id="28_5ywq1"]
+[ext_resource type="Texture2D" uid="uid://cdpbsmmminp15" path="res://Assets/Animations/Archers/LV4-3/Archer-back-LV4-3-shoot_21.png" id="29_jo0j4"]
+[ext_resource type="Texture2D" uid="uid://c0ybaeshndvb3" path="res://Assets/Animations/Archers/LV4-3/Archer-back-LV4-3-shoot_22.png" id="30_13y36"]
+[ext_resource type="Texture2D" uid="uid://br83ewf2a3pnf" path="res://Assets/Animations/Archers/LV4-3/Archer-back-LV4-3-shoot_23.png" id="31_d82r7"]
+[ext_resource type="Texture2D" uid="uid://bl5bqqsojqe" path="res://Assets/Animations/Archers/LV4-3/Archer-back-LV4-3-shoot_24.png" id="32_s0vq6"]
+[ext_resource type="Texture2D" uid="uid://bun80whovrh35" path="res://Assets/Animations/Archers/LV4-3/Archer-back-LV4-3-shoot_25.png" id="33_xwl4p"]
+[ext_resource type="Texture2D" uid="uid://byielq7uxdje1" path="res://Assets/Animations/Archers/LV4-3/Archer-back-LV4-3-shoot_26.png" id="34_ecp6t"]
+[ext_resource type="Texture2D" uid="uid://dd73gfp5pajme" path="res://Assets/Animations/Archers/LV4-3/Archer-back-LV4-3-shoot_27.png" id="35_7fgto"]
+[ext_resource type="Texture2D" uid="uid://u0na2ipgbmjg" path="res://Assets/Animations/Archers/LV4-3/Archer-LV4-3shoot_01.png" id="36_sf2px"]
+[ext_resource type="Texture2D" uid="uid://b5sjyhdqs43dg" path="res://Assets/Animations/Archers/LV4-3/Archer-LV4-3shoot_02.png" id="37_aei3b"]
+[ext_resource type="Texture2D" uid="uid://ckyd8b81i466l" path="res://Assets/Animations/Archers/LV4-3/Archer-LV4-3shoot_03.png" id="38_bhjy5"]
+[ext_resource type="Texture2D" uid="uid://cilykc6601yvg" path="res://Assets/Animations/Archers/LV4-3/Archer-LV4-3shoot_04.png" id="39_uwtsb"]
+[ext_resource type="Texture2D" uid="uid://bluxnrlsnmawm" path="res://Assets/Animations/Archers/LV4-3/Archer-LV4-3shoot_05.png" id="40_rwt6t"]
+[ext_resource type="Texture2D" uid="uid://b3rht3pq8le2j" path="res://Assets/Animations/Archers/LV4-3/Archer-LV4-3shoot_06.png" id="41_baoad"]
+[ext_resource type="Texture2D" uid="uid://difidbipvmsoo" path="res://Assets/Animations/Archers/LV4-3/Archer-LV4-3shoot_07.png" id="42_farwb"]
+[ext_resource type="Texture2D" uid="uid://cb07ojp3785gk" path="res://Assets/Animations/Archers/LV4-3/Archer-LV4-3shoot_08.png" id="43_t0aao"]
+[ext_resource type="Texture2D" uid="uid://hyqeuaqpgvto" path="res://Assets/Animations/Archers/LV4-3/Archer-LV4-3shoot_09.png" id="44_02u5t"]
+[ext_resource type="Texture2D" uid="uid://clsprknbmlik0" path="res://Assets/Animations/Archers/LV4-3/Archer-LV4-3shoot_10.png" id="45_ewc8n"]
+[ext_resource type="Texture2D" uid="uid://v11hq74wmdd1" path="res://Assets/Animations/Archers/LV4-3/Archer-LV4-3shoot_11.png" id="46_hqxor"]
+[ext_resource type="Texture2D" uid="uid://gux6bi6tswn4" path="res://Assets/Animations/Archers/LV4-3/Archer-LV4-3shoot_12.png" id="47_lpg4a"]
+[ext_resource type="Texture2D" uid="uid://bw8p0keomkodo" path="res://Assets/Animations/Archers/LV4-3/Archer-LV4-3shoot_13.png" id="48_sk87g"]
+[ext_resource type="Texture2D" uid="uid://phkl3vc6ka7e" path="res://Assets/Animations/Archers/LV4-3/Archer-LV4-3shoot_14.png" id="49_81l6r"]
+[ext_resource type="Texture2D" uid="uid://bscerkenk7ekw" path="res://Assets/Animations/Archers/LV4-3/Archer-LV4-3shoot_15.png" id="50_l5e2n"]
+[ext_resource type="Texture2D" uid="uid://ccqgpn1150w37" path="res://Assets/Animations/Archers/LV4-3/Archer-LV4-3shoot_16.png" id="51_kgxhm"]
+[ext_resource type="Texture2D" uid="uid://57vnhf1sii1w" path="res://Assets/Animations/Archers/LV4-3/Archer-LV4-3shoot_17.png" id="52_wni72"]
+[ext_resource type="Texture2D" uid="uid://dncipvo0tvf40" path="res://Assets/Animations/Archers/LV4-3/Archer-LV4-3shoot_18.png" id="53_1ehy2"]
+[ext_resource type="Texture2D" uid="uid://ckyk8yv7npfbm" path="res://Assets/Animations/Archers/LV4-3/Archer-LV4-3shoot_19.png" id="54_tbk0i"]
+[ext_resource type="Texture2D" uid="uid://co8x6dv8kn2oo" path="res://Assets/Animations/Archers/LV4-3/Archer-LV4-3shoot_20.png" id="55_ucw42"]
+[ext_resource type="Texture2D" uid="uid://dwr68h1yh8tfh" path="res://Assets/Animations/Archers/LV4-3/Archer-LV4-3shoot_21.png" id="56_7wb0l"]
+[ext_resource type="Texture2D" uid="uid://c4uhkq35gbjwn" path="res://Assets/Animations/Archers/LV4-3/Archer-LV4-3shoot_22.png" id="57_q3ss1"]
+[ext_resource type="Texture2D" uid="uid://c4xhdtpdr1qqa" path="res://Assets/Animations/Archers/LV4-3/Archer-LV4-3shoot_23.png" id="58_hy85s"]
+[ext_resource type="Texture2D" uid="uid://c4qhk0jx4b0e0" path="res://Assets/Animations/Archers/LV4-3/Archer-LV4-3shoot_24.png" id="59_tqm4j"]
+[ext_resource type="Texture2D" uid="uid://dr33um5g40q5n" path="res://Assets/Animations/Archers/LV4-3/Archer-LV4-3shoot_25.png" id="60_pmish"]
+[ext_resource type="Texture2D" uid="uid://tpjxgn7eyf6v" path="res://Assets/Animations/Archers/LV4-3/Archer-LV4-3shoot_26.png" id="61_2d4fr"]
+[ext_resource type="Texture2D" uid="uid://bs4lt7bwoxa71" path="res://Assets/Animations/Archers/LV4-3/Archer-LV4-3shoot_27.png" id="62_l3kry"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/ArcherTowers/illager_shooter.gd" id="63_48s85"]
+[ext_resource type="PackedScene" uid="uid://b7mqh1cdjarom" path="res://Scenes/Bullets/illaget_shhoter_arrow.tscn" id="64_g1l3k"]
+[ext_resource type="Texture2D" uid="uid://fg1y0i3ubnh4" path="res://Assets/Images/DefenceTowers/UI/集结范围.png" id="71_8ihk3"]
+
+[sub_resource type="Resource" id="Resource_mgmmv"]
+script = ExtResource("2_1alja")
+damage_low = 13
+damage_high = 20
+attack_speed = 0.4
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_df14m"]
+atlas = ExtResource("6_2u5aw")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ally"]
+atlas = ExtResource("8_e27ud")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwx2v"]
+atlas = ExtResource("9_far7m")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4jcmp"]
+atlas = ExtResource("11_c7a5c")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7uyx3"]
+atlas = ExtResource("12_kq06h")
+region = Rect2(17, 18, 62, 61)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n3ykp"]
+radius = 73.9444
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_grqh0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_mgm2o")
+}],
+"loop": true,
+"name": &"idle_front",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_guhjg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_gkjvr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tvj0s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_c2tu8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_iafmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_4ww32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_172lc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_lovks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_yyw28")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_nvr6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_gxkmj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_f1k3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_t1yym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_4lsq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_vpt60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_aukrj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_fnewv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_unwve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_8cxf3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_tg246")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_5ywq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_jo0j4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_13y36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_d82r7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_s0vq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_xwl4p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_ecp6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_7fgto")
+}],
+"loop": false,
+"name": &"shoot_back",
+"speed": 45.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_mgm2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_sf2px")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_aei3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_bhjy5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_uwtsb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_rwt6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_baoad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_farwb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_t0aao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_02u5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_ewc8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_hqxor")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_lpg4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_sk87g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_81l6r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_l5e2n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_kgxhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_wni72")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_1ehy2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_tbk0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_ucw42")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_7wb0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_q3ss1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_hy85s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_tqm4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_pmish")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_2d4fr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_l3kry")
+}],
+"loop": false,
+"name": &"shoot_front",
+"speed": 45.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_poxqe"]
+radius = 73.9444
+
+[node name="SentryTower" node_paths=PackedStringArray("shooter_list", "linked_areas") instance=ExtResource("1_uvpqa")]
+script = ExtResource("2_6l6lk")
+start_data = SubResource("Resource_mgmmv")
+shooter_list = [NodePath("TowerSprite/IllagerShooter"), NodePath("TowerSprite/IllagerShooter2")]
+tower_name = "劫掠哨塔"
+tower_texture = ExtResource("2_ioo5i")
+tower_id = 6
+tower_level = 4
+tower_value = 570
+start_tower_range = 500
+linked_areas = [NodePath("TowerArea"), NodePath("CageConditionArea")]
+
+[node name="TowerButton" parent="." index="2"]
+offset_top = -120.0
+
+[node name="Circle" parent="TowerUI" index="4"]
+position = Vector2(0, -45)
+
+[node name="TowerSkillButton" parent="TowerUI/Circle" index="1" node_paths=PackedStringArray("linked_tower") instance=ExtResource("4_ntvwl")]
+offset_left = -140.001
+offset_top = -139.999
+offset_right = -55.001
+offset_bottom = -54.9993
+texture_normal = SubResource("AtlasTexture_df14m")
+texture_pressed = SubResource("AtlasTexture_df14m")
+texture_hover = ExtResource("7_lbopb")
+texture_disabled = SubResource("AtlasTexture_5ally")
+linked_tower = NodePath("../../..")
+skill_name = "牢笼"
+skill_prices = Array[int]([175, 100, 100])
+skill_intro = PackedStringArray("释放牢笼困住最多两个敌人2s，期间敌人无法行动，依然可以正常受到外界伤害。", "释放牢笼困住最多两个敌人3s，期间敌人无法行动，依然可以正常受到外界伤害。", "释放牢笼困住最多两个敌人4s，期间敌人无法行动，依然可以正常受到外界伤害。")
+skill_words = "笼中鸟因何飞？"
+
+[node name="TowerSkillButton2" parent="TowerUI/Circle" index="2" node_paths=PackedStringArray("linked_tower") instance=ExtResource("4_ntvwl")]
+offset_left = 53.7494
+offset_top = -140.0
+offset_right = 138.749
+offset_bottom = -55.0002
+texture_normal = SubResource("AtlasTexture_uwx2v")
+texture_pressed = SubResource("AtlasTexture_uwx2v")
+texture_hover = ExtResource("10_2ko10")
+texture_disabled = SubResource("AtlasTexture_4jcmp")
+linked_tower = NodePath("../../..")
+skill_name = "变节者"
+skill_id = 1
+skill_prices = Array[int]([250, 175, 175])
+skill_intro = PackedStringArray("召唤两名变节者参与战斗，远程攻击伤害或拦截敌人。", "提高变节者的最大生命值，攻击力与护甲。", "进一步提高变节者的最大生命值，攻击力与护甲。")
+skill_words = "王侯将相，宁有种乎！"
+
+[node name="FlagButton" type="TextureButton" parent="TowerUI/Circle" index="3"]
+offset_left = 68.7501
+offset_top = 14.9997
+offset_right = 130.75
+offset_bottom = 75.9997
+focus_mode = 0
+texture_normal = SubResource("AtlasTexture_7uyx3")
+texture_pressed = SubResource("AtlasTexture_7uyx3")
+texture_hover = ExtResource("13_75i3t")
+stretch_mode = 3
+
+[node name="CageConditionArea" type="Area2D" parent="." index="7"]
+z_index = 100
+scale = Vector2(2.8, 2.8)
+collision_layer = 0
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CageConditionArea" index="0"]
+scale = Vector2(1, 0.7)
+shape = SubResource("CircleShape2D_n3ykp")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="TowerSprite" parent="." index="8"]
+position = Vector2(1, 16)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("6_xs3y8")
+offset = Vector2(-6.73448, -50.5086)
+region_rect = Rect2(197, 320, 120, 124)
+
+[node name="IllagerShooter" type="AnimatedSprite2D" parent="TowerSprite" index="0" node_paths=PackedStringArray("tower")]
+position = Vector2(-9.16667, -80.8333)
+sprite_frames = SubResource("SpriteFrames_grqh0")
+animation = &"idle_front"
+autoplay = "idle_front"
+script = ExtResource("63_48s85")
+tower = NodePath("../..")
+summon_frame = 13
+arrow_scene = ExtResource("64_g1l3k")
+
+[node name="FrontNoFlip" type="Marker2D" parent="TowerSprite/IllagerShooter" index="0"]
+position = Vector2(7.5, 4.167)
+
+[node name="FrontFlip" type="Marker2D" parent="TowerSprite/IllagerShooter" index="1"]
+position = Vector2(-9.167, 4.167)
+
+[node name="BackFlip" type="Marker2D" parent="TowerSprite/IllagerShooter" index="2"]
+position = Vector2(-7.5, -3.333)
+
+[node name="BackNoFlip" type="Marker2D" parent="TowerSprite/IllagerShooter" index="3"]
+position = Vector2(7.5, -3.333)
+
+[node name="IllagerShooter2" type="AnimatedSprite2D" parent="TowerSprite" index="1" node_paths=PackedStringArray("tower")]
+position = Vector2(14.1667, -80.8333)
+sprite_frames = SubResource("SpriteFrames_grqh0")
+animation = &"idle_front"
+autoplay = "idle_front"
+script = ExtResource("63_48s85")
+tower = NodePath("../..")
+summon_frame = 13
+arrow_scene = ExtResource("64_g1l3k")
+
+[node name="FrontNoFlip" type="Marker2D" parent="TowerSprite/IllagerShooter2" index="0"]
+position = Vector2(7.5, 4.167)
+
+[node name="FrontFlip" type="Marker2D" parent="TowerSprite/IllagerShooter2" index="1"]
+position = Vector2(-9.167, 4.167)
+
+[node name="BackFlip" type="Marker2D" parent="TowerSprite/IllagerShooter2" index="2"]
+position = Vector2(-7.5, -3.333)
+
+[node name="BackNoFlip" type="Marker2D" parent="TowerSprite/IllagerShooter2" index="3"]
+position = Vector2(7.5, -3.333)
+
+[node name="UnitMoveArea" type="Area2D" parent="." index="10"]
+z_index = 100
+scale = Vector2(4, 4)
+collision_layer = 2
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitMoveArea" index="0"]
+scale = Vector2(1, 0.7)
+shape = SubResource("CircleShape2D_poxqe")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="UnitMoveArea" index="1"]
+scale = Vector2(0.386533, 0.270573)
+texture = ExtResource("71_8ihk3")
+
+[node name="FirstMoveRays" type="Node2D" parent="." index="11"]
+scale = Vector2(3.6, 3.6)
+
+[node name="RayCast2D" type="RayCast2D" parent="FirstMoveRays" index="0"]
+target_position = Vector2(0, 52)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D2" type="RayCast2D" parent="FirstMoveRays" index="1"]
+target_position = Vector2(54, 35)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D3" type="RayCast2D" parent="FirstMoveRays" index="2"]
+target_position = Vector2(75, 0)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D4" type="RayCast2D" parent="FirstMoveRays" index="3"]
+target_position = Vector2(54, -35)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D5" type="RayCast2D" parent="FirstMoveRays" index="4"]
+target_position = Vector2(0, -52)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D6" type="RayCast2D" parent="FirstMoveRays" index="5"]
+target_position = Vector2(-54, -35)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D7" type="RayCast2D" parent="FirstMoveRays" index="6"]
+target_position = Vector2(-75, 0)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D8" type="RayCast2D" parent="FirstMoveRays" index="7"]
+target_position = Vector2(-54, 35)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="CageTimer" type="Timer" parent="." index="12"]
+wait_time = 12.0
+one_shot = true
+
+[connection signal="input_event" from="UnitMoveArea" to="." method="_on_unit_move_area_input_event"]

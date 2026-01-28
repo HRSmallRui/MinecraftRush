@@ -1,0 +1,445 @@
+[gd_scene load_steps=91 format=3 uid="uid://c4m8muh7cl3bi"]
+
+[ext_resource type="PackedScene" uid="uid://bdp6vlymmmpu3" path="res://Scenes/Allys/SummonAllys/summon_ally_class.tscn" id="1_ck4jo"]
+[ext_resource type="Script" path="res://Scripts/Allys/SummonAllys/changer_soldier.gd" id="2_5kn44"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="3_1ttep"]
+[ext_resource type="Texture2D" uid="uid://cut55o8a5g60h" path="res://Assets/Images/UI/InformationBar/变节者.png" id="4_vgwkq"]
+[ext_resource type="PackedScene" uid="uid://dwaokbtnrpbwn" path="res://Scenes/Bullets/straight_arrow.tscn" id="5_e6l4p"]
+[ext_resource type="Texture2D" uid="uid://xy7v0hp524j2" path="res://Assets/Animations/Soldiers/Changer/attack_00.png" id="6_syyw5"]
+[ext_resource type="Texture2D" uid="uid://538wokm6p4vl" path="res://Assets/Animations/Soldiers/Changer/attack_01.png" id="7_oge4a"]
+[ext_resource type="Texture2D" uid="uid://btpiciq61wwgr" path="res://Assets/Animations/Soldiers/Changer/attack_02.png" id="8_iukdx"]
+[ext_resource type="Texture2D" uid="uid://bjjdu05ubp6u" path="res://Assets/Animations/Soldiers/Changer/attack_03.png" id="9_10rxn"]
+[ext_resource type="Texture2D" uid="uid://b4l2cxuhe0qqn" path="res://Assets/Animations/Soldiers/Changer/attack_04.png" id="10_vfy2k"]
+[ext_resource type="Texture2D" uid="uid://6klpuiw8odxv" path="res://Assets/Animations/Soldiers/Changer/attack_05.png" id="11_efe3w"]
+[ext_resource type="Texture2D" uid="uid://beeblb1lkqlty" path="res://Assets/Animations/Soldiers/Changer/attack_06.png" id="12_11afu"]
+[ext_resource type="Texture2D" uid="uid://cya5yl6fojmbl" path="res://Assets/Animations/Soldiers/Changer/attack_07.png" id="13_prrod"]
+[ext_resource type="Texture2D" uid="uid://1b2hv84iwqxr" path="res://Assets/Animations/Soldiers/Changer/attack_08.png" id="14_gm2gv"]
+[ext_resource type="Texture2D" uid="uid://db2m0cmue4keh" path="res://Assets/Animations/Soldiers/Changer/attack_09.png" id="15_i2sbx"]
+[ext_resource type="Texture2D" uid="uid://dlnjgm8lq2xd4" path="res://Assets/Animations/Soldiers/Changer/attack_10.png" id="16_jfwox"]
+[ext_resource type="Texture2D" uid="uid://bg7w5ww31hiha" path="res://Assets/Animations/Soldiers/Changer/attack_11.png" id="17_0x047"]
+[ext_resource type="Texture2D" uid="uid://c3al20wvpuwgr" path="res://Assets/Animations/Soldiers/Changer/attack_12.png" id="18_04vmw"]
+[ext_resource type="Texture2D" uid="uid://dw0hw50hfju2t" path="res://Assets/Animations/Soldiers/Changer/attack_13.png" id="19_yw83c"]
+[ext_resource type="Texture2D" uid="uid://yi6uo22de55v" path="res://Assets/Animations/Soldiers/Changer/attack_14.png" id="20_dijsm"]
+[ext_resource type="Texture2D" uid="uid://byq0qyni8xeq4" path="res://Assets/Animations/Soldiers/Changer/attack_15.png" id="21_pnxre"]
+[ext_resource type="Texture2D" uid="uid://nohmih3m0obx" path="res://Assets/Animations/Soldiers/Changer/attack_16.png" id="22_l5com"]
+[ext_resource type="Texture2D" uid="uid://d1elmie28wy8c" path="res://Assets/Animations/Soldiers/Changer/attack_17.png" id="23_a6keq"]
+[ext_resource type="Texture2D" uid="uid://c65yg1dum54dv" path="res://Assets/Animations/Soldiers/Changer/attack_18.png" id="24_0bthv"]
+[ext_resource type="Texture2D" uid="uid://b1rno3g2a21jf" path="res://Assets/Animations/Soldiers/Changer/attack_19.png" id="25_35pc8"]
+[ext_resource type="Texture2D" uid="uid://b4ohg2yptjb45" path="res://Assets/Animations/Soldiers/Changer/attack_20.png" id="26_4mgck"]
+[ext_resource type="Texture2D" uid="uid://l27wue3xhmhp" path="res://Assets/Animations/Soldiers/Changer/die_00.png" id="27_2u02g"]
+[ext_resource type="Texture2D" uid="uid://bnf241ifp2u6j" path="res://Assets/Animations/Soldiers/Changer/die_01.png" id="28_3ouks"]
+[ext_resource type="Texture2D" uid="uid://byp67n85amtbj" path="res://Assets/Animations/Soldiers/Changer/die_02.png" id="29_i0mjw"]
+[ext_resource type="Texture2D" uid="uid://dcd1mhn0dqeo4" path="res://Assets/Animations/Soldiers/Changer/die_03.png" id="30_eh5ay"]
+[ext_resource type="Texture2D" uid="uid://chr17mshbqrki" path="res://Assets/Animations/Soldiers/Changer/die_04.png" id="31_ull36"]
+[ext_resource type="Texture2D" uid="uid://d2vbl6w72r4ue" path="res://Assets/Animations/Soldiers/Changer/die_05.png" id="32_svlai"]
+[ext_resource type="Texture2D" uid="uid://doix1748nkt2l" path="res://Assets/Animations/Soldiers/Changer/die_06.png" id="33_2u7f3"]
+[ext_resource type="Texture2D" uid="uid://ctco0npvuwycp" path="res://Assets/Animations/Soldiers/Changer/die_07.png" id="34_d6aoo"]
+[ext_resource type="Texture2D" uid="uid://bd8j0hggiyvkw" path="res://Assets/Animations/Soldiers/Changer/die_08.png" id="35_4u6ib"]
+[ext_resource type="Texture2D" uid="uid://dtbbbdjtrnm45" path="res://Assets/Animations/Soldiers/Changer/die_09.png" id="36_ve0rp"]
+[ext_resource type="Texture2D" uid="uid://cgk22v2f6rcco" path="res://Assets/Animations/Soldiers/Changer/die_10.png" id="37_12er7"]
+[ext_resource type="Texture2D" uid="uid://bt2i5rudgecgd" path="res://Assets/Animations/Soldiers/Changer/die_11.png" id="38_csa8h"]
+[ext_resource type="Texture2D" uid="uid://bh7peh84upx7q" path="res://Assets/Animations/Soldiers/Changer/die_12.png" id="39_2ln7f"]
+[ext_resource type="Texture2D" uid="uid://ct2vyqdl18lef" path="res://Assets/Animations/Soldiers/Changer/far_attack_00.png" id="40_6u5jl"]
+[ext_resource type="Texture2D" uid="uid://bt82ywg17dbeq" path="res://Assets/Animations/Soldiers/Changer/far_attack_01.png" id="41_csqif"]
+[ext_resource type="Texture2D" uid="uid://c8edrnxcv22kr" path="res://Assets/Animations/Soldiers/Changer/far_attack_02.png" id="42_j5jm6"]
+[ext_resource type="Texture2D" uid="uid://v60fmbgfxj4m" path="res://Assets/Animations/Soldiers/Changer/far_attack_03.png" id="43_5v1e3"]
+[ext_resource type="Texture2D" uid="uid://bfj27lwrobjq0" path="res://Assets/Animations/Soldiers/Changer/far_attack_04.png" id="44_h1ne7"]
+[ext_resource type="Texture2D" uid="uid://pomsr4ageofk" path="res://Assets/Animations/Soldiers/Changer/far_attack_05.png" id="45_6r32s"]
+[ext_resource type="Texture2D" uid="uid://b35nxio1adl0p" path="res://Assets/Animations/Soldiers/Changer/far_attack_06.png" id="46_ww6kc"]
+[ext_resource type="Texture2D" uid="uid://dq74n5ha6ubkd" path="res://Assets/Animations/Soldiers/Changer/far_attack_07.png" id="47_a7fj3"]
+[ext_resource type="Texture2D" uid="uid://uvyflwroon00" path="res://Assets/Animations/Soldiers/Changer/far_attack_08.png" id="48_wbtsa"]
+[ext_resource type="Texture2D" uid="uid://cdcj23v1nmoue" path="res://Assets/Animations/Soldiers/Changer/far_attack_09.png" id="49_ecfgr"]
+[ext_resource type="Texture2D" uid="uid://dhmhoujvpyxfm" path="res://Assets/Animations/Soldiers/Changer/far_attack_10.png" id="50_pes4w"]
+[ext_resource type="Texture2D" uid="uid://7cuvgfgrd5cs" path="res://Assets/Animations/Soldiers/Changer/far_attack_11.png" id="51_6lk45"]
+[ext_resource type="Texture2D" uid="uid://d3bojrcmxblnc" path="res://Assets/Animations/Soldiers/Changer/far_attack_12.png" id="52_7m1py"]
+[ext_resource type="Texture2D" uid="uid://cow2ar6mowtqe" path="res://Assets/Animations/Soldiers/Changer/far_attack_13.png" id="53_vroe1"]
+[ext_resource type="Texture2D" uid="uid://c23kjhmaj65eu" path="res://Assets/Animations/Soldiers/Changer/far_attack_14.png" id="54_hxl82"]
+[ext_resource type="Texture2D" uid="uid://4p61xfjrflcu" path="res://Assets/Animations/Soldiers/Changer/far_attack_15.png" id="55_8363u"]
+[ext_resource type="Texture2D" uid="uid://bglhkpwyu23gw" path="res://Assets/Animations/Soldiers/Changer/far_attack_16.png" id="56_ifjmr"]
+[ext_resource type="Texture2D" uid="uid://dbxxudql33e1u" path="res://Assets/Animations/Soldiers/Changer/far_attack_17.png" id="57_1cia7"]
+[ext_resource type="Texture2D" uid="uid://bsblp0vejr561" path="res://Assets/Animations/Soldiers/Changer/far_attack_18.png" id="58_uifg8"]
+[ext_resource type="Texture2D" uid="uid://btjtr1788wrji" path="res://Assets/Animations/Soldiers/Changer/far_attack_19.png" id="59_drxab"]
+[ext_resource type="Texture2D" uid="uid://brp7gwelt7r0" path="res://Assets/Animations/Soldiers/Changer/far_attack_20.png" id="60_5otew"]
+[ext_resource type="Texture2D" uid="uid://bq23h0d05sqxe" path="res://Assets/Animations/Soldiers/Changer/far_attack_21.png" id="61_sw63y"]
+[ext_resource type="Texture2D" uid="uid://fhdxeg21asvn" path="res://Assets/Animations/Soldiers/Changer/far_attack_22.png" id="62_yjig0"]
+[ext_resource type="Texture2D" uid="uid://dtxvuhdwu5cnd" path="res://Assets/Animations/Soldiers/Changer/far_attack_23.png" id="63_wvmwq"]
+[ext_resource type="Texture2D" uid="uid://bc4htu2fq686f" path="res://Assets/Animations/Soldiers/Changer/far_attack_24.png" id="64_8q2u2"]
+[ext_resource type="Texture2D" uid="uid://dxbk1cdmqk3ie" path="res://Assets/Animations/Soldiers/Changer/far_attack_25.png" id="65_m0iss"]
+[ext_resource type="Texture2D" uid="uid://ct755bwgfdfvw" path="res://Assets/Animations/Soldiers/Changer/far_attack_26.png" id="66_wdv4c"]
+[ext_resource type="Texture2D" uid="uid://bvb2oso3mfald" path="res://Assets/Animations/Soldiers/Changer/far_attack_27.png" id="67_w8ugy"]
+[ext_resource type="Texture2D" uid="uid://kwd02bmvexdn" path="res://Assets/Animations/Soldiers/Changer/far_attack_28.png" id="68_pw034"]
+[ext_resource type="Texture2D" uid="uid://cqplbkou05w17" path="res://Assets/Animations/Soldiers/Changer/far_attack_29.png" id="69_8jtwc"]
+[ext_resource type="Texture2D" uid="uid://d15lg4645ai4c" path="res://Assets/Animations/Soldiers/Changer/far_attack_30.png" id="70_1eydf"]
+[ext_resource type="Texture2D" uid="uid://dmmgg6wvfnj5u" path="res://Assets/Animations/Soldiers/Changer/far_attack_31.png" id="71_vuha1"]
+[ext_resource type="Texture2D" uid="uid://ct0dvf5r6vyhf" path="res://Assets/Animations/Soldiers/Changer/far_attack_32.png" id="72_14tx0"]
+[ext_resource type="Texture2D" uid="uid://cerlwfwwjwben" path="res://Assets/Animations/Soldiers/Changer/far_attack_33.png" id="73_ukqij"]
+[ext_resource type="Texture2D" uid="uid://yqsve14ctglt" path="res://Assets/Animations/Soldiers/Changer/far_attack_34.png" id="74_hsipb"]
+[ext_resource type="Texture2D" uid="uid://dijdqbc3xynbo" path="res://Assets/Animations/Soldiers/Changer/move_01.png" id="76_3h5k2"]
+[ext_resource type="Texture2D" uid="uid://cs7xghwbn4asn" path="res://Assets/Animations/Soldiers/Changer/move_03.png" id="78_lrf4c"]
+[ext_resource type="Texture2D" uid="uid://b318iecl608jx" path="res://Assets/Animations/Soldiers/Changer/move_05.png" id="80_7ybow"]
+[ext_resource type="Texture2D" uid="uid://whrux7dpaq45" path="res://Assets/Animations/Soldiers/Changer/move_07.png" id="82_rpu6x"]
+[ext_resource type="Texture2D" uid="uid://505br204lyci" path="res://Assets/Animations/Soldiers/Changer/move_09.png" id="84_gko5f"]
+[ext_resource type="Texture2D" uid="uid://ccoljaidpyl5m" path="res://Assets/Animations/Soldiers/Changer/move_11.png" id="86_r73nq"]
+[ext_resource type="Texture2D" uid="uid://domerwtnly740" path="res://Assets/Animations/Soldiers/Changer/move_13.png" id="88_f5iy1"]
+[ext_resource type="Texture2D" uid="uid://ca3rlowsxhlpp" path="res://Assets/Animations/Soldiers/Changer/move_15.png" id="90_g61v4"]
+[ext_resource type="Texture2D" uid="uid://bggury5ol33h1" path="res://Assets/Animations/Soldiers/Changer/move_17.png" id="92_vwhq2"]
+[ext_resource type="Texture2D" uid="uid://d23ruldvxw50o" path="res://Assets/Animations/Soldiers/Changer/move_19.png" id="94_e1kec"]
+[ext_resource type="Texture2D" uid="uid://bpljyqbh1vmdk" path="res://Assets/Animations/Soldiers/Changer/move_21.png" id="96_3oghv"]
+[ext_resource type="Texture2D" uid="uid://ccjch85jx77fm" path="res://Assets/Animations/Soldiers/Changer/move_23.png" id="98_ajrf8"]
+
+[sub_resource type="Resource" id="Resource_o4lds"]
+script = ExtResource("3_1ttep")
+health = 150
+dodge_rate = 0.0
+near_damage_low = 6
+near_damage_high = 8
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 30
+far_damage_high = 40
+far_attack_speed = 2.0
+far_damage_range = 340
+armor = 0.3
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 2.2
+
+[sub_resource type="Resource" id="Resource_eeh4a"]
+script = ExtResource("3_1ttep")
+health = 200
+dodge_rate = 0.0
+near_damage_low = 7
+near_damage_high = 10
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 35
+far_damage_high = 50
+far_attack_speed = 2.0
+far_damage_range = 340
+armor = 0.3
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 2.2
+
+[sub_resource type="Resource" id="Resource_fm4l7"]
+script = ExtResource("3_1ttep")
+health = 250
+dodge_rate = 0.0
+near_damage_low = 8
+near_damage_high = 12
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 40
+far_damage_high = 60
+far_attack_speed = 2.0
+far_damage_range = 340
+armor = 0.3
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 2.2
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_naewh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_syyw5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_oge4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_iukdx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_10rxn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_vfy2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_efe3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_11afu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_prrod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_gm2gv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_i2sbx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_jfwox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_0x047")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_04vmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_yw83c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_dijsm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_pnxre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_l5com")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_a6keq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_0bthv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_35pc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_4mgck")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_2u02g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_3ouks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_i0mjw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_eh5ay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_ull36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_svlai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_2u7f3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_d6aoo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_4u6ib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_ve0rp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_12er7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_csa8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_2ln7f")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("40_6u5jl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_csqif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_j5jm6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_5v1e3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_h1ne7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_6r32s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_ww6kc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_a7fj3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_wbtsa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_ecfgr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_pes4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_6lk45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_7m1py")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_vroe1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_hxl82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_8363u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_ifjmr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_1cia7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_uifg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_drxab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_5otew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_sw63y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_yjig0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_wvmwq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_8q2u2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_m0iss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_wdv4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_w8ugy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_pw034")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_8jtwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_1eydf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_vuha1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_14tx0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_ukqij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_hsipb")
+}],
+"loop": false,
+"name": &"far_attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_syyw5")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("76_3h5k2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_lrf4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_7ybow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_rpu6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_gko5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_r73nq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_f5iy1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_g61v4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_vwhq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_e1kec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_3oghv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_ajrf8")
+}],
+"loop": true,
+"name": &"move",
+"speed": 24.0
+}]
+
+[node name="ChangerSoldier" instance=ExtResource("1_ck4jo")]
+script = ExtResource("2_5kn44")
+unit_list = Array[ExtResource("3_1ttep")]([SubResource("Resource_o4lds"), SubResource("Resource_eeh4a"), SubResource("Resource_fm4l7")])
+heal_speed_list = Array[int]([15, 20, 25])
+ally_name = "变节者"
+ally_level = 4
+ally_texture = ExtResource("4_vgwkq")
+ally_type = 0
+far_attack_bullet_scene = ExtResource("5_e6l4p")
+intercepting_range = 150
+rebirth_time = 10
+
+[node name="AllySprite" parent="UnitBody" index="0"]
+position = Vector2(-4.76837e-07, -95)
+sprite_frames = SubResource("SpriteFrames_naewh")
+animation = &"move"
+autoplay = "idle"
+frame_progress = 0.348644
+flip_h = true

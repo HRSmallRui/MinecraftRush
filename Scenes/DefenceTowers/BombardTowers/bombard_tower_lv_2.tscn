@@ -1,0 +1,163 @@
+[gd_scene load_steps=32 format=3 uid="uid://68jse87rauc4"]
+
+[ext_resource type="PackedScene" uid="uid://bbhe3d6c7dhtc" path="res://Scenes/DefenceTowers/BombardTowers/bombard_tower.tscn" id="1_o03pg"]
+[ext_resource type="PackedScene" uid="uid://drjvqvw33m3ab" path="res://Scenes/DefenceTowers/tower_button.tscn" id="2_agdho"]
+[ext_resource type="Script" path="res://Scripts/Datas/TowerData.gd" id="2_al2v3"]
+[ext_resource type="Texture2D" uid="uid://dhfv2wmhnc36n" path="res://Assets/Animations/Bombards/LV2/炮塔-LV2-attack_06.png" id="4_d5rk5"]
+[ext_resource type="Texture2D" uid="uid://cbukkeysej6yf" path="res://Assets/Animations/Bombards/LV2/炮塔-LV2-attack_07.png" id="5_k141p"]
+[ext_resource type="Texture2D" uid="uid://gpdp351fgcbq" path="res://Assets/Animations/Bombards/LV2/炮塔-LV2-attack_08.png" id="6_4pgup"]
+[ext_resource type="Texture2D" uid="uid://b7rae8gjvgtlx" path="res://Assets/Animations/Bombards/LV2/炮塔-LV2-attack_09.png" id="7_sqt21"]
+[ext_resource type="Texture2D" uid="uid://c7glivvfdxekc" path="res://Assets/Animations/Bombards/LV2/炮塔-LV2-attack_10.png" id="8_uqjfc"]
+[ext_resource type="Texture2D" uid="uid://cic60ncpwqnkh" path="res://Assets/Animations/Bombards/LV2/炮塔-LV2-attack_11.png" id="9_6bb54"]
+[ext_resource type="Texture2D" uid="uid://ddyxbd3r36371" path="res://Assets/Animations/Bombards/LV2/炮塔-LV2-attack_12.png" id="10_mdeea"]
+[ext_resource type="Texture2D" uid="uid://c2ab8f3sw16ox" path="res://Assets/Animations/Bombards/LV2/炮塔-LV2-attack_13.png" id="11_u7wji"]
+[ext_resource type="Texture2D" uid="uid://dpboq5yatjckj" path="res://Assets/Animations/Bombards/LV2/炮塔-LV2-attack_14.png" id="12_lqote"]
+[ext_resource type="Texture2D" uid="uid://cp7erplqpnagk" path="res://Assets/Animations/Bombards/LV2/炮塔-LV2-attack_15.png" id="13_u5piv"]
+[ext_resource type="Texture2D" uid="uid://cha3yh2ewwa8v" path="res://Assets/Animations/Bombards/LV2/炮塔-LV2-attack_16.png" id="14_rvgf5"]
+[ext_resource type="Texture2D" uid="uid://ndmbg3kgvsfv" path="res://Assets/Animations/Bombards/LV2/炮塔-LV2-attack_17.png" id="15_5nlqa"]
+[ext_resource type="Texture2D" uid="uid://bfriu3laqxwo5" path="res://Assets/Animations/Bombards/LV2/炮塔-LV2-attack_18.png" id="16_0bc3f"]
+[ext_resource type="Texture2D" uid="uid://hkrkf38sq5jl" path="res://Assets/Animations/Bombards/LV2/炮塔-LV2-attack_19.png" id="17_3u0mt"]
+[ext_resource type="Texture2D" uid="uid://c51bcw8xavh58" path="res://Assets/Animations/Bombards/LV2/炮塔-LV2-attack_20.png" id="18_qfy7x"]
+[ext_resource type="Texture2D" uid="uid://cbt2iyfd082um" path="res://Assets/Animations/Bombards/LV2/炮塔-LV2-attack_21.png" id="19_fc3eh"]
+[ext_resource type="Texture2D" uid="uid://dtlnyl3r3v3et" path="res://Assets/Animations/Bombards/LV2/炮塔-LV2-attack_22.png" id="20_7s2yy"]
+[ext_resource type="Texture2D" uid="uid://bfbds03aib2l8" path="res://Assets/Animations/Bombards/LV2/炮塔-LV2-attack_23.png" id="21_0jnbc"]
+[ext_resource type="Texture2D" uid="uid://c6u1u7tilcwff" path="res://Assets/Animations/Bombards/LV2/炮塔-LV2-attack_24.png" id="22_p6mli"]
+[ext_resource type="Texture2D" uid="uid://eemn3mb33mqp" path="res://Assets/Animations/Bombards/LV2/炮塔-LV2-attack_25.png" id="23_uekdq"]
+[ext_resource type="Texture2D" uid="uid://bxf2ki3a7pa36" path="res://Assets/Animations/Bombards/LV2/炮塔-LV2-attack_26.png" id="24_nfk1h"]
+[ext_resource type="Texture2D" uid="uid://byx5f53wm0fkt" path="res://Assets/Animations/Bombards/LV2/炮塔-LV2-attack_27.png" id="25_q0dca"]
+[ext_resource type="Texture2D" uid="uid://drhskyrgu0tdr" path="res://Assets/Animations/Bombards/LV2/炮塔-LV2-attack_28.png" id="26_dvd0e"]
+[ext_resource type="Texture2D" uid="uid://cymynie2rp4y4" path="res://Assets/Animations/Bombards/LV2/炮塔-LV2-attack_29.png" id="27_4ivrw"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/BombardTowers/bombard_tower_sprite.gd" id="28_s60yq"]
+[ext_resource type="PackedScene" uid="uid://bg0dopq0vcpfj" path="res://Scenes/Bullets/shell_lv2.tscn" id="29_euav6"]
+
+[sub_resource type="Resource" id="Resource_jmbkg"]
+script = ExtResource("2_al2v3")
+damage_low = 20
+damage_high = 40
+attack_speed = 3.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k2pti"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_d5rk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_k141p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4pgup")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_sqt21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_uqjfc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6bb54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_mdeea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_u7wji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_lqote")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_u5piv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_rvgf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_5nlqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_0bc3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_3u0mt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_qfy7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_fc3eh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_7s2yy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_0jnbc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_p6mli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_uekdq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_nfk1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_q0dca")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_dvd0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_4ivrw")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_d5rk5")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="BombardTowerLV2" node_paths=PackedStringArray("bombard_tower_sprite") instance=ExtResource("1_o03pg")]
+start_data = SubResource("Resource_jmbkg")
+bombard_tower_sprite = NodePath("BombardTowerSprite")
+tower_name = "红石火炮"
+tower_id = 2
+tower_level = 2
+tower_value = 345
+start_tower_range = 320
+
+[node name="Circle" parent="TowerUI" index="4"]
+position = Vector2(0, -18)
+
+[node name="TowerButton" parent="TowerUI/Circle" index="1" node_paths=PackedStringArray("tower") instance=ExtResource("2_agdho")]
+offset_left = -31.0006
+offset_top = -132.0
+offset_right = 30.9994
+offset_bottom = -70.9999
+tower = NodePath("../../..")
+tower_type = 3
+id = 3
+price = 320
+unlocked_level = 3
+
+[node name="BombardTowerSprite" type="AnimatedSprite2D" parent="." index="8" node_paths=PackedStringArray("tower")]
+position = Vector2(0, -13)
+scale = Vector2(0.908275, 0.908275)
+sprite_frames = SubResource("SpriteFrames_k2pti")
+animation = &"attack"
+autoplay = "idle"
+frame = 4
+script = ExtResource("28_s60yq")
+summon_frame = 4
+tower = NodePath("..")
+shell_scene = ExtResource("29_euav6")
+
+[node name="SummonMarker" type="Marker2D" parent="BombardTowerSprite" index="0"]
+position = Vector2(-0.926442, -29.6461)

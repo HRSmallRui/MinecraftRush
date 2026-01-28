@@ -1,0 +1,125 @@
+[gd_scene load_steps=12 format=3 uid="uid://dcqlwpqyykpkq"]
+
+[ext_resource type="Script" path="res://Scripts/Enemies/boss_ui.gd" id="1_m14j4"]
+[ext_resource type="Texture2D" uid="uid://cqx34wicbeheb" path="res://Assets/Images/UI/InformationBar/arrow-id-1.png" id="2_of70x"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="3_85tmj"]
+[ext_resource type="Texture2D" uid="uid://cp1cqhni537ib" path="res://Assets/Images/UI/InformationBar/血条long.png" id="4_ok8ll"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uaibh"]
+bg_color = Color(0, 0, 0, 0.435294)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c32qt"]
+bg_color = Color(0, 0, 0, 0.568627)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22nvb"]
+atlas = ExtResource("4_ok8ll")
+region = Rect2(54, 7, 612, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xn4jj"]
+atlas = ExtResource("4_ok8ll")
+region = Rect2(54, 48, 612, 23)
+
+[sub_resource type="Animation" id="Animation_4rfue"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(16, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_2j85n"]
+resource_name = "entry"
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-144, -0.25, 0, 0.25, 0, 16, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jqpjr"]
+_data = {
+"RESET": SubResource("Animation_4rfue"),
+"entry": SubResource("Animation_2j85n")
+}
+
+[node name="BossUI" type="CanvasLayer"]
+script = ExtResource("1_m14j4")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -257.0
+offset_top = 16.0
+offset_right = 519.0
+offset_bottom = 146.0
+grow_horizontal = 2
+scale = Vector2(0.752839, 0.752839)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_uaibh")
+
+[node name="BossContainer" type="PanelContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 28.0
+offset_top = -50.5
+offset_right = 156.0
+offset_bottom = 77.5
+grow_vertical = 2
+scale = Vector2(0.771739, 0.771739)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_c32qt")
+
+[node name="HeadTexture" type="TextureRect" parent="Panel/BossContainer"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("2_of70x")
+
+[node name="NameLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 25.0
+offset_right = 288.0
+offset_bottom = 57.0
+theme_override_fonts/font = ExtResource("3_85tmj")
+theme_override_font_sizes/font_size = 32
+text = " 射手高台"
+
+[node name="HealthBar" type="TextureProgressBar" parent="Panel"]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 75.7134
+offset_right = 765.0
+offset_bottom = 98.7134
+max_value = 1.0
+step = 0.0
+texture_under = SubResource("AtlasTexture_22nvb")
+texture_progress = SubResource("AtlasTexture_xn4jj")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_jqpjr")
+}
+autoplay = "entry"

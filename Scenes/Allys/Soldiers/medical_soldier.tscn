@@ -1,0 +1,237 @@
+[gd_scene load_steps=14 format=3 uid="uid://c3vpcx83qnasy"]
+
+[ext_resource type="PackedScene" uid="uid://bgi3ibffayb11" path="res://Scenes/Allys/Soldiers/soldier_class.tscn" id="1_k7vli"]
+[ext_resource type="Script" path="res://Scripts/Allys/Soldiers/medical_soldier.gd" id="2_pal8j"]
+[ext_resource type="Texture2D" uid="uid://buei8fpkmdfmv" path="res://Assets/Images/UI/InformationBar/SoldierLV4-3.png" id="3_776iv"]
+[ext_resource type="SpriteFrames" uid="uid://ct7mvf8stdd8p" path="res://Assets/Animations/Soldiers/LV4-3/SpriteFrames/normal_soldier.res" id="4_8tm87"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="4_enf6x"]
+[ext_resource type="PackedScene" uid="uid://dedxksecpul4j" path="res://Scenes/Bullets/medical_potion.tscn" id="5_rn2dp"]
+[ext_resource type="Texture2D" uid="uid://nuh13t4tya7t" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV4-3/HealEffect.png" id="7_04l2n"]
+[ext_resource type="AudioStream" uid="uid://b6k07hqofnnxa" path="res://Assets/Sounds/FXs/Heroes/Fuchen/护盾.wav" id="8_7btx2"]
+
+[sub_resource type="Resource" id="Resource_tjxm1"]
+script = ExtResource("4_enf6x")
+health = 250
+dodge_rate = 0.0
+near_damage_low = 7
+near_damage_high = 12
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.3
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 2.5
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_307yl"]
+radius = 73.9444
+
+[sub_resource type="Animation" id="Animation_hpw4l"]
+resource_name = "Appear"
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HealEffect:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 5, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HealEffect:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 5, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HealEffect:modulate:r")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HealEffect:modulate:g")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HealEffect:modulate:b")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HealEffect:modulate:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="Animation" id="Animation_lxap7"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HealEffect:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HealEffect:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HealEffect:modulate:r")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HealEffect:modulate:g")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HealEffect:modulate:b")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HealEffect:modulate:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iodud"]
+_data = {
+"Appear": SubResource("Animation_hpw4l"),
+"RESET": SubResource("Animation_lxap7")
+}
+
+[node name="MedicalSoldier" instance=ExtResource("1_k7vli")]
+script = ExtResource("2_pal8j")
+soldier_name_list = Array[String](["白求恩", "南丁格尔", "巴斯德", "居里", "弗莱明", "班廷", "张仲景", "李时珍", "伊万 巴甫洛夫", "盘尼西林", "弗洛康", "科赫", "琴纳", "钱德拉塞卡", "弗雷德里克", "富兰克林"])
+ally_name = "医疗护卫队"
+ally_level = 4
+ally_texture = ExtResource("3_776iv")
+start_data = SubResource("Resource_tjxm1")
+far_attack_bullet_scene = ExtResource("5_rn2dp")
+intercepting_range = 125
+heal_speed = 25
+rebirth_time = 10
+
+[node name="AllySprite" parent="UnitBody" index="0"]
+position = Vector2(-25, -105)
+sprite_frames = ExtResource("4_8tm87")
+animation = &"heal"
+
+[node name="HealArea" type="Area2D" parent="UnitBody" index="8"]
+scale = Vector2(1.6, 1.6)
+collision_layer = 0
+collision_mask = 24
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/HealArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_307yl")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="FarAttackMarker" parent="UnitBody" index="9"]
+position = Vector2(55, -160)
+
+[node name="FarAttackMarkerFlip" parent="UnitBody" index="10"]
+position = Vector2(-55, -160)
+
+[node name="HealEffect" type="Sprite2D" parent="UnitBody" index="11"]
+z_index = -1
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("7_04l2n")
+
+[node name="HealAnimationPlayer" type="AnimationPlayer" parent="UnitBody" index="12"]
+libraries = {
+"": SubResource("AnimationLibrary_iodud")
+}
+speed_scale = 2.0
+
+[node name="PassiveHealTimer" type="Timer" parent="." index="7"]
+wait_time = 0.8
+
+[node name="SkillHealTimer" type="Timer" parent="." index="8"]
+wait_time = 12.0
+one_shot = true
+
+[node name="HealAudio" type="AudioStreamPlayer" parent="." index="9"]
+stream = ExtResource("8_7btx2")
+volume_db = -8.0
+bus = &"Sound"
+
+[connection signal="timeout" from="PassiveHealTimer" to="." method="_on_passive_heal_timer_timeout"]

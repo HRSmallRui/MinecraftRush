@@ -1,0 +1,534 @@
+[gd_scene load_steps=126 format=3 uid="uid://1jntuff0cxsu"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_jcr5l"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_34.gd" id="2_77gc8"]
+[ext_resource type="Texture2D" uid="uid://dyk287agyoepk" path="res://Assets/Images/UI/InformationBar/EnemyChapter4/卫道士.png" id="3_w4r8m"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="4_8tag7"]
+[ext_resource type="PackedScene" uid="uid://dcjuved17hj6j" path="res://Scenes/Enemies/EnemyComponents/appear_audio_component.tscn" id="5_nht0b"]
+[ext_resource type="AudioStream" uid="uid://bhnbp6gaahps4" path="res://Assets/Sounds/FXs/Enemies/卫道士/卫道士死亡1.wav" id="5_sbk5t"]
+[ext_resource type="AudioStream" uid="uid://c6xgb7ltsuupm" path="res://Assets/Sounds/FXs/Enemies/卫道士/卫道士出现1.wav" id="6_7tuco"]
+[ext_resource type="AudioStream" uid="uid://dgjiwhymjxsdo" path="res://Assets/Sounds/FXs/Enemies/卫道士/卫道士死亡2.wav" id="6_7x71u"]
+[ext_resource type="AudioStream" uid="uid://brl1ms7c6rlsm" path="res://Assets/Sounds/FXs/Enemies/卫道士/卫道士死亡3.wav" id="7_8ky6k"]
+[ext_resource type="AudioStream" uid="uid://8xcwtrjdw4fg" path="res://Assets/Sounds/FXs/Enemies/卫道士/卫道士出现2.wav" id="7_lg44y"]
+[ext_resource type="AudioStream" uid="uid://ddw0astxyeilr" path="res://Assets/Sounds/FXs/Enemies/卫道士/卫道士出现3.wav" id="8_r0pi6"]
+[ext_resource type="Texture2D" uid="uid://cvjfdendb1pq6" path="res://Assets/Animations/Enemies/34卫道士/attack_00.png" id="8_uwj1y"]
+[ext_resource type="AudioStream" uid="uid://bpdqv5dlfasa0" path="res://Assets/Sounds/FXs/Enemies/卫道士/卫道士出现4.wav" id="9_ppkkj"]
+[ext_resource type="Texture2D" uid="uid://bg3v82w6njyac" path="res://Assets/Animations/Enemies/34卫道士/attack_01.png" id="9_san36"]
+[ext_resource type="AudioStream" uid="uid://2dx2hd4qw5nq" path="res://Assets/Sounds/FXs/Enemies/卫道士/卫道士出现5.wav" id="10_mytqw"]
+[ext_resource type="Texture2D" uid="uid://bemufvg8enimm" path="res://Assets/Animations/Enemies/34卫道士/attack_02.png" id="10_ufpom"]
+[ext_resource type="Texture2D" uid="uid://vfm4hmxktpp1" path="res://Assets/Animations/Enemies/34卫道士/attack_03.png" id="11_yi8mx"]
+[ext_resource type="Texture2D" uid="uid://6wybd68iw027" path="res://Assets/Animations/Enemies/34卫道士/attack_04.png" id="12_h3lyj"]
+[ext_resource type="Texture2D" uid="uid://bvbgghywrm4ku" path="res://Assets/Animations/Enemies/34卫道士/attack_05.png" id="13_rwaot"]
+[ext_resource type="Texture2D" uid="uid://bgqbqllmwa8lg" path="res://Assets/Animations/Enemies/34卫道士/attack_06.png" id="14_0u5tc"]
+[ext_resource type="Texture2D" uid="uid://8s1ao74rpr2c" path="res://Assets/Animations/Enemies/34卫道士/attack_07.png" id="15_eoddo"]
+[ext_resource type="Texture2D" uid="uid://bb820ki10ypbh" path="res://Assets/Animations/Enemies/34卫道士/attack_08.png" id="16_2gy48"]
+[ext_resource type="Texture2D" uid="uid://dxtnc7sdgmh18" path="res://Assets/Animations/Enemies/34卫道士/attack_09.png" id="17_5wsvp"]
+[ext_resource type="Texture2D" uid="uid://12haudlrypv4" path="res://Assets/Animations/Enemies/34卫道士/attack_10.png" id="18_orbgt"]
+[ext_resource type="Texture2D" uid="uid://dna0rin4dmcpw" path="res://Assets/Animations/Enemies/34卫道士/attack_11.png" id="19_66f7i"]
+[ext_resource type="Texture2D" uid="uid://c07aqyuawtnex" path="res://Assets/Animations/Enemies/34卫道士/attack_12.png" id="20_iqpuf"]
+[ext_resource type="Texture2D" uid="uid://bd8v0flkvuxqq" path="res://Assets/Animations/Enemies/34卫道士/attack_13.png" id="21_t05fy"]
+[ext_resource type="Texture2D" uid="uid://c4iuaqtime30s" path="res://Assets/Animations/Enemies/34卫道士/attack_14.png" id="22_4cn3g"]
+[ext_resource type="Texture2D" uid="uid://fuukh7puwems" path="res://Assets/Animations/Enemies/34卫道士/attack_15.png" id="23_nc0h2"]
+[ext_resource type="Texture2D" uid="uid://tdqeltkgsyqf" path="res://Assets/Animations/Enemies/34卫道士/attack_16.png" id="24_4h7w1"]
+[ext_resource type="Texture2D" uid="uid://cfukuchpupj5o" path="res://Assets/Animations/Enemies/34卫道士/attack_17.png" id="25_tlycy"]
+[ext_resource type="Texture2D" uid="uid://8c0ctxyqii2u" path="res://Assets/Animations/Enemies/34卫道士/attack_18.png" id="26_pmwv4"]
+[ext_resource type="Texture2D" uid="uid://dw6w43u0aslpk" path="res://Assets/Animations/Enemies/34卫道士/attack_19.png" id="27_5uq4p"]
+[ext_resource type="Texture2D" uid="uid://clpa8cl53ntvq" path="res://Assets/Animations/Enemies/34卫道士/attack_20.png" id="28_t1lt0"]
+[ext_resource type="Texture2D" uid="uid://bt0huetiyoykg" path="res://Assets/Animations/Enemies/34卫道士/attack_21.png" id="29_nylm5"]
+[ext_resource type="Texture2D" uid="uid://bbi7joo48874k" path="res://Assets/Animations/Enemies/34卫道士/attack_22.png" id="30_ynww0"]
+[ext_resource type="Texture2D" uid="uid://s2e8wocmqbyn" path="res://Assets/Animations/Enemies/34卫道士/attack_23.png" id="31_g7xi1"]
+[ext_resource type="Texture2D" uid="uid://b2q6da00tlvtd" path="res://Assets/Animations/Enemies/34卫道士/attack_24.png" id="32_5ax5s"]
+[ext_resource type="Texture2D" uid="uid://cwwq0457172k2" path="res://Assets/Animations/Enemies/34卫道士/die_00.png" id="33_p30ta"]
+[ext_resource type="Texture2D" uid="uid://56txcpveplk7" path="res://Assets/Animations/Enemies/34卫道士/die_01.png" id="34_c3kda"]
+[ext_resource type="Texture2D" uid="uid://d3uabfnyd6xsk" path="res://Assets/Animations/Enemies/34卫道士/die_02.png" id="35_icnob"]
+[ext_resource type="Texture2D" uid="uid://bh6jtocbrij8k" path="res://Assets/Animations/Enemies/34卫道士/die_03.png" id="36_xge6d"]
+[ext_resource type="Texture2D" uid="uid://dly0bji24efqb" path="res://Assets/Animations/Enemies/34卫道士/die_04.png" id="37_vnbgk"]
+[ext_resource type="Texture2D" uid="uid://b6vupuffh8uoh" path="res://Assets/Animations/Enemies/34卫道士/die_05.png" id="38_ymgpw"]
+[ext_resource type="Texture2D" uid="uid://so4tav2tyl12" path="res://Assets/Animations/Enemies/34卫道士/die_06.png" id="39_pxbsr"]
+[ext_resource type="Texture2D" uid="uid://he30ux2la713" path="res://Assets/Animations/Enemies/34卫道士/die_07.png" id="40_j27qo"]
+[ext_resource type="Texture2D" uid="uid://dwhaydepl6t1l" path="res://Assets/Animations/Enemies/34卫道士/die_08.png" id="41_jevov"]
+[ext_resource type="Texture2D" uid="uid://baoithnuixfqq" path="res://Assets/Animations/Enemies/34卫道士/die_09.png" id="42_ne2at"]
+[ext_resource type="Texture2D" uid="uid://df2hnquyfaybs" path="res://Assets/Animations/Enemies/34卫道士/die_10.png" id="43_w4i3q"]
+[ext_resource type="Texture2D" uid="uid://cai213fmbmr8v" path="res://Assets/Animations/Enemies/34卫道士/die_11.png" id="44_j45ir"]
+[ext_resource type="Texture2D" uid="uid://bnh42c4aabnhc" path="res://Assets/Animations/Enemies/34卫道士/die_12.png" id="45_frhp3"]
+[ext_resource type="Texture2D" uid="uid://cprd6jeucgjq8" path="res://Assets/Animations/Enemies/34卫道士/move_back_00.png" id="46_cy4ox"]
+[ext_resource type="Texture2D" uid="uid://doc3ac2qdic0a" path="res://Assets/Animations/Enemies/34卫道士/move_back_01.png" id="47_nt7kv"]
+[ext_resource type="Texture2D" uid="uid://c5q8qk52t53bo" path="res://Assets/Animations/Enemies/34卫道士/move_back_02.png" id="48_uvyjc"]
+[ext_resource type="Texture2D" uid="uid://dvxj0mq68qs0c" path="res://Assets/Animations/Enemies/34卫道士/move_back_03.png" id="49_gcohn"]
+[ext_resource type="Texture2D" uid="uid://lqnb8tyh5p6m" path="res://Assets/Animations/Enemies/34卫道士/move_back_04.png" id="50_vhv41"]
+[ext_resource type="Texture2D" uid="uid://ucbwyey025rm" path="res://Assets/Animations/Enemies/34卫道士/move_back_05.png" id="51_orjwd"]
+[ext_resource type="Texture2D" uid="uid://doaame77t3epv" path="res://Assets/Animations/Enemies/34卫道士/move_back_06.png" id="52_gfmp3"]
+[ext_resource type="Texture2D" uid="uid://ca3n66rpvdw3r" path="res://Assets/Animations/Enemies/34卫道士/move_back_07.png" id="53_m6g1c"]
+[ext_resource type="Texture2D" uid="uid://b0fpuqor36nhf" path="res://Assets/Animations/Enemies/34卫道士/move_back_08.png" id="54_ucoi6"]
+[ext_resource type="Texture2D" uid="uid://drcjgjw4i71fe" path="res://Assets/Animations/Enemies/34卫道士/move_back_09.png" id="55_b2aro"]
+[ext_resource type="Texture2D" uid="uid://cksfrbj2142wj" path="res://Assets/Animations/Enemies/34卫道士/move_back_10.png" id="56_3qrvo"]
+[ext_resource type="Texture2D" uid="uid://boq2la3irqv47" path="res://Assets/Animations/Enemies/34卫道士/move_back_11.png" id="57_7qdvj"]
+[ext_resource type="Texture2D" uid="uid://dp4g83p0xl4ss" path="res://Assets/Animations/Enemies/34卫道士/move_back_12.png" id="58_bgxod"]
+[ext_resource type="Texture2D" uid="uid://b3k7kyhp2hp5t" path="res://Assets/Animations/Enemies/34卫道士/move_back_13.png" id="59_swnoi"]
+[ext_resource type="Texture2D" uid="uid://d0uqudvch4adq" path="res://Assets/Animations/Enemies/34卫道士/move_back_14.png" id="60_t1n2j"]
+[ext_resource type="Texture2D" uid="uid://cf6nbeetncljq" path="res://Assets/Animations/Enemies/34卫道士/move_back_15.png" id="61_y0ujd"]
+[ext_resource type="Texture2D" uid="uid://c1wc1teu20s82" path="res://Assets/Animations/Enemies/34卫道士/move_back_16.png" id="62_ha63l"]
+[ext_resource type="Texture2D" uid="uid://cx7n423ed43uc" path="res://Assets/Animations/Enemies/34卫道士/move_back_17.png" id="63_yk1cy"]
+[ext_resource type="Texture2D" uid="uid://dtrbqid6h72n3" path="res://Assets/Animations/Enemies/34卫道士/move_back_18.png" id="64_8jev0"]
+[ext_resource type="Texture2D" uid="uid://3kjpptq37r2e" path="res://Assets/Animations/Enemies/34卫道士/move_back_19.png" id="65_5gwfy"]
+[ext_resource type="Texture2D" uid="uid://ddk2wefindd5h" path="res://Assets/Animations/Enemies/34卫道士/move_back_20.png" id="66_cc6k0"]
+[ext_resource type="Texture2D" uid="uid://c72d4u44xb217" path="res://Assets/Animations/Enemies/34卫道士/move_back_21.png" id="67_t2g6e"]
+[ext_resource type="Texture2D" uid="uid://c0brvjw8xfu06" path="res://Assets/Animations/Enemies/34卫道士/move_back_22.png" id="68_i3o30"]
+[ext_resource type="Texture2D" uid="uid://g3lsval3fxr4" path="res://Assets/Animations/Enemies/34卫道士/move_back_23.png" id="69_xokyj"]
+[ext_resource type="Texture2D" uid="uid://dngwkjmc8n2ua" path="res://Assets/Animations/Enemies/34卫道士/move_front_00.png" id="70_quqeb"]
+[ext_resource type="Texture2D" uid="uid://ds1qxuyyhxdyf" path="res://Assets/Animations/Enemies/34卫道士/move_front_01.png" id="71_04f1r"]
+[ext_resource type="Texture2D" uid="uid://cfabos58tiox5" path="res://Assets/Animations/Enemies/34卫道士/move_front_02.png" id="72_ncgoq"]
+[ext_resource type="Texture2D" uid="uid://c6tq4l7ybupgn" path="res://Assets/Animations/Enemies/34卫道士/move_front_03.png" id="73_jr333"]
+[ext_resource type="Texture2D" uid="uid://d06qhmo3kk7s3" path="res://Assets/Animations/Enemies/34卫道士/move_front_04.png" id="74_arpjh"]
+[ext_resource type="Texture2D" uid="uid://jxh2v3ysinhk" path="res://Assets/Animations/Enemies/34卫道士/move_front_05.png" id="75_rdcv3"]
+[ext_resource type="Texture2D" uid="uid://blogvx8r28j00" path="res://Assets/Animations/Enemies/34卫道士/move_front_06.png" id="76_bcx73"]
+[ext_resource type="Texture2D" uid="uid://bnwnmjpjgbruy" path="res://Assets/Animations/Enemies/34卫道士/move_front_07.png" id="77_3obh1"]
+[ext_resource type="Texture2D" uid="uid://d3myt5u6y0iw8" path="res://Assets/Animations/Enemies/34卫道士/move_front_08.png" id="78_3oibc"]
+[ext_resource type="Texture2D" uid="uid://ctwkum5xhd03" path="res://Assets/Animations/Enemies/34卫道士/move_front_09.png" id="79_427qt"]
+[ext_resource type="Texture2D" uid="uid://b065p28pm35jn" path="res://Assets/Animations/Enemies/34卫道士/move_front_10.png" id="80_s5fmv"]
+[ext_resource type="Texture2D" uid="uid://b1b0r5e2vq3pg" path="res://Assets/Animations/Enemies/34卫道士/move_front_11.png" id="81_5qdhd"]
+[ext_resource type="Texture2D" uid="uid://chusidj1v5jg2" path="res://Assets/Animations/Enemies/34卫道士/move_front_12.png" id="82_6b5j2"]
+[ext_resource type="Texture2D" uid="uid://cvitbcp74bbo2" path="res://Assets/Animations/Enemies/34卫道士/move_front_13.png" id="83_jb1d2"]
+[ext_resource type="Texture2D" uid="uid://8xxqdutssu6n" path="res://Assets/Animations/Enemies/34卫道士/move_front_14.png" id="84_ce0ji"]
+[ext_resource type="Texture2D" uid="uid://cmlnttucs6jfb" path="res://Assets/Animations/Enemies/34卫道士/move_front_15.png" id="85_23uc3"]
+[ext_resource type="Texture2D" uid="uid://c4xl52b3ncjg0" path="res://Assets/Animations/Enemies/34卫道士/move_front_16.png" id="86_rcali"]
+[ext_resource type="Texture2D" uid="uid://cpvru54ioasov" path="res://Assets/Animations/Enemies/34卫道士/move_front_17.png" id="87_xgtrr"]
+[ext_resource type="Texture2D" uid="uid://b4mydv467s2c8" path="res://Assets/Animations/Enemies/34卫道士/move_front_18.png" id="88_07sh6"]
+[ext_resource type="Texture2D" uid="uid://2w44ygx8ar8f" path="res://Assets/Animations/Enemies/34卫道士/move_front_19.png" id="89_h16gb"]
+[ext_resource type="Texture2D" uid="uid://icvbpfc2bpkg" path="res://Assets/Animations/Enemies/34卫道士/move_front_20.png" id="90_vchus"]
+[ext_resource type="Texture2D" uid="uid://cc8svlwkhujmo" path="res://Assets/Animations/Enemies/34卫道士/move_front_21.png" id="91_ocytt"]
+[ext_resource type="Texture2D" uid="uid://d1p5phbaai3ne" path="res://Assets/Animations/Enemies/34卫道士/move_front_22.png" id="92_ne4kl"]
+[ext_resource type="Texture2D" uid="uid://fsy21oy3kbya" path="res://Assets/Animations/Enemies/34卫道士/move_front_23.png" id="93_812om"]
+[ext_resource type="Texture2D" uid="uid://k5u147shkae4" path="res://Assets/Animations/Enemies/34卫道士/move_normal_00.png" id="94_s2qe6"]
+[ext_resource type="Texture2D" uid="uid://bhwf763k8pl5" path="res://Assets/Animations/Enemies/34卫道士/move_normal_01.png" id="95_ofnmv"]
+[ext_resource type="Texture2D" uid="uid://ckwdgfhgh4g0v" path="res://Assets/Animations/Enemies/34卫道士/move_normal_02.png" id="96_fe3rn"]
+[ext_resource type="Texture2D" uid="uid://ckhf6p0ukltlm" path="res://Assets/Animations/Enemies/34卫道士/move_normal_03.png" id="97_k3wql"]
+[ext_resource type="Texture2D" uid="uid://drthwch1bd3py" path="res://Assets/Animations/Enemies/34卫道士/move_normal_04.png" id="98_4w4vt"]
+[ext_resource type="Texture2D" uid="uid://clurkjfurdusu" path="res://Assets/Animations/Enemies/34卫道士/move_normal_05.png" id="99_kvcks"]
+[ext_resource type="Texture2D" uid="uid://c11faq6s1ps6r" path="res://Assets/Animations/Enemies/34卫道士/move_normal_06.png" id="100_mqctq"]
+[ext_resource type="Texture2D" uid="uid://bq752g142v64p" path="res://Assets/Animations/Enemies/34卫道士/move_normal_07.png" id="101_6djlb"]
+[ext_resource type="Texture2D" uid="uid://befu7pd0kj4i7" path="res://Assets/Animations/Enemies/34卫道士/move_normal_08.png" id="102_1tllq"]
+[ext_resource type="Texture2D" uid="uid://dxmmgsrjhkwta" path="res://Assets/Animations/Enemies/34卫道士/move_normal_09.png" id="103_y3xpx"]
+[ext_resource type="Texture2D" uid="uid://c45w2gsxplvm8" path="res://Assets/Animations/Enemies/34卫道士/move_normal_10.png" id="104_pfvs0"]
+[ext_resource type="Texture2D" uid="uid://6ije32mg1h7m" path="res://Assets/Animations/Enemies/34卫道士/move_normal_11.png" id="105_2x7n0"]
+[ext_resource type="Texture2D" uid="uid://tkmq7l4o0d1j" path="res://Assets/Animations/Enemies/34卫道士/move_normal_12.png" id="106_35sdj"]
+[ext_resource type="Texture2D" uid="uid://u1xuhcetyxu0" path="res://Assets/Animations/Enemies/34卫道士/move_normal_13.png" id="107_6pj3x"]
+[ext_resource type="Texture2D" uid="uid://d11a3d1aciixj" path="res://Assets/Animations/Enemies/34卫道士/move_normal_14.png" id="108_qcax8"]
+[ext_resource type="Texture2D" uid="uid://cxgy4krm6tgjj" path="res://Assets/Animations/Enemies/34卫道士/move_normal_15.png" id="109_nmjrl"]
+[ext_resource type="Texture2D" uid="uid://2noccbwjpj8v" path="res://Assets/Animations/Enemies/34卫道士/move_normal_16.png" id="110_kbtds"]
+[ext_resource type="Texture2D" uid="uid://b4lsvw3v4tp8w" path="res://Assets/Animations/Enemies/34卫道士/move_normal_17.png" id="111_8xmhm"]
+[ext_resource type="Texture2D" uid="uid://8w68yn5ps0ci" path="res://Assets/Animations/Enemies/34卫道士/move_normal_18.png" id="112_hkn08"]
+[ext_resource type="Texture2D" uid="uid://cmshxnqtn1s1v" path="res://Assets/Animations/Enemies/34卫道士/move_normal_19.png" id="113_78tad"]
+[ext_resource type="Texture2D" uid="uid://cmxaw5km6conc" path="res://Assets/Animations/Enemies/34卫道士/move_normal_20.png" id="114_majw1"]
+[ext_resource type="Texture2D" uid="uid://d1yhnxupxwqhn" path="res://Assets/Animations/Enemies/34卫道士/move_normal_21.png" id="115_2djsd"]
+[ext_resource type="Texture2D" uid="uid://dny8xtfgt7npc" path="res://Assets/Animations/Enemies/34卫道士/move_normal_22.png" id="116_pad35"]
+[ext_resource type="Texture2D" uid="uid://cuji8x6585ixd" path="res://Assets/Animations/Enemies/34卫道士/move_normal_23.png" id="117_nwrdv"]
+
+[sub_resource type="Resource" id="Resource_kml7u"]
+script = ExtResource("4_8tag7")
+health = 600
+dodge_rate = 0.0
+near_damage_low = 70
+near_damage_high = 90
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.4
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 0.8
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8l5af"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_uwj1y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_san36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ufpom")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_yi8mx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_h3lyj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_rwaot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_0u5tc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_eoddo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_2gy48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_5wsvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_orbgt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_66f7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_iqpuf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_t05fy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_4cn3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_nc0h2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_4h7w1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_tlycy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_pmwv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_5uq4p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_t1lt0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_nylm5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_ynww0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_g7xi1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_5ax5s")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_p30ta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_c3kda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_icnob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_xge6d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_vnbgk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_ymgpw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_pxbsr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_j27qo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_jevov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_ne2at")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_w4i3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_j45ir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_frhp3")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_uwj1y")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("46_cy4ox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_nt7kv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_uvyjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_gcohn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_vhv41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_orjwd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_gfmp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_m6g1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_ucoi6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_b2aro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_3qrvo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_7qdvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_bgxod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_swnoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_t1n2j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_y0ujd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_ha63l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_yk1cy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_8jev0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_5gwfy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_cc6k0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_t2g6e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_i3o30")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_xokyj")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("70_quqeb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_04f1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_ncgoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_jr333")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_arpjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_rdcv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_bcx73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_3obh1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_3oibc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_427qt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_s5fmv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_5qdhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_6b5j2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_jb1d2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_ce0ji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_23uc3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_rcali")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_xgtrr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_07sh6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_h16gb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_vchus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_ocytt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_ne4kl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_812om")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("94_s2qe6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_ofnmv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_fe3rn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_k3wql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_4w4vt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_kvcks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_mqctq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_6djlb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_1tllq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_y3xpx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_pfvs0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_2x7n0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_35sdj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_6pj3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_qcax8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_nmjrl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_kbtds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_8xmhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_hkn08")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_78tad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_majw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_2djsd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_pad35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_nwrdv")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 24.0
+}]
+
+[node name="Enemy34" groups=["illager"] instance=ExtResource("1_jcr5l")]
+script = ExtResource("2_77gc8")
+enemy_name = "卫道士"
+enemy_id = 34
+enemy_texture = ExtResource("3_w4r8m")
+start_data = SubResource("Resource_kml7u")
+bounty = 25
+die_audio_stream_list = Array[AudioStream]([ExtResource("5_sbk5t"), ExtResource("6_7x71u"), ExtResource("7_8ky6k")])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(0, -115)
+sprite_frames = SubResource("SpriteFrames_8l5af")
+animation = &"attack"
+autoplay = "idle"
+
+[node name="EnemyButton" parent="UnitBody" index="4"]
+offset_left = -48.0
+offset_right = 50.0
+
+[node name="AppearAudioComponent" parent="." index="5" instance=ExtResource("5_nht0b")]
+appear_audio_list = Array[AudioStream]([ExtResource("6_7tuco"), ExtResource("7_lg44y"), ExtResource("8_r0pi6"), ExtResource("9_ppkkj"), ExtResource("10_mytqw")])

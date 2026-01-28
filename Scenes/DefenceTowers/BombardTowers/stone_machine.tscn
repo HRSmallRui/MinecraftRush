@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6semrq10485e"]
+
+[ext_resource type="PackedScene" uid="uid://bbhe3d6c7dhtc" path="res://Scenes/DefenceTowers/BombardTowers/bombard_tower.tscn" id="1_nsok0"]
+[ext_resource type="Script" uid="uid://yfgew61kyfh0" path="res://Scripts/Datas/TowerData.gd" id="2_7c1bu"]
+[ext_resource type="Texture2D" uid="uid://blknslx4kpdor" path="res://Assets/Images/UI/InformationBar/bombard-id-6.png" id="2_7rt1n"]
+
+[sub_resource type="Resource" id="Resource_n6640"]
+script = ExtResource("2_7c1bu")
+damage_low = 50
+damage_high = 100
+attack_speed = 3.0
+
+[node name="StoneMachine" instance=ExtResource("1_nsok0")]
+start_data = SubResource("Resource_n6640")
+tower_name = "投石机"
+tower_texture = ExtResource("2_7rt1n")
+tower_id = 6
+tower_level = 4
+tower_value = 1065
+start_tower_range = 360

@@ -1,0 +1,2726 @@
+[gd_scene load_steps=64 format=3 uid="uid://cn2kbe07up2b1"]
+
+[ext_resource type="Script" path="res://Scripts/UI-Components/Map/seen_book_ui.gd" id="1_6v3gq"]
+[ext_resource type="SpriteFrames" uid="uid://dseu0qph8pxkf" path="res://Assets/Animations/Book2/seen_book_animation.res" id="2_xco8u"]
+[ext_resource type="Texture2D" uid="uid://08xnqnqn18s2" path="res://Assets/Images/UI/Pages/pxArt (1).png" id="15_ynqwl"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Map/skill_slot.gd" id="28_kuf2r"]
+[ext_resource type="PackedScene" uid="uid://diqhwcqew3fpg" path="res://Scenes/UI-Components/Map/skill_check.tscn" id="29_5wutq"]
+[ext_resource type="Texture2D" uid="uid://b6b1736pwbqd0" path="res://Assets/Images/DefenceTowers/Barracks/UI/神圣盾牌.png" id="30_vv8m3"]
+[ext_resource type="Texture2D" uid="uid://djhw1aj8f1yp2" path="res://Assets/Images/DefenceTowers/Barracks/UI/皇家庇佑.png" id="31_jtm54"]
+[ext_resource type="Texture2D" uid="uid://dn2otgerw5wti" path="res://Assets/Images/DefenceTowers/Magics/UI/铁傀儡.png" id="32_utbqi"]
+[ext_resource type="Texture2D" uid="uid://bjjaglw47b50i" path="res://Assets/Images/DefenceTowers/Magics/UI/尘解.png" id="33_68751"]
+[ext_resource type="Texture2D" uid="uid://cqod48s6goy1w" path="res://Assets/Images/DefenceTowers/Archers/UI/黑曜石.png" id="34_4x36d"]
+[ext_resource type="Texture2D" uid="uid://i180tjhpnnrt" path="res://Assets/Images/DefenceTowers/Archers/UI/碎石.png" id="35_jcd2m"]
+[ext_resource type="Texture2D" uid="uid://hh3pyt0mh3kr" path="res://Assets/Images/DefenceTowers/Bombards/UI/天谴.png" id="36_nkmy2"]
+[ext_resource type="Texture2D" uid="uid://dy7vdykbfx458" path="res://Assets/Images/DefenceTowers/Bombards/UI/演算者机甲.png" id="37_6rppa"]
+[ext_resource type="Texture2D" uid="uid://blyy83vpkbsgx" path="res://Assets/Images/DefenceTowers/Archers/UI/背后一刺.png" id="38_d0bif"]
+[ext_resource type="Texture2D" uid="uid://b1u5ifth4hyot" path="res://Assets/Images/DefenceTowers/Archers/UI/沙狼.png" id="39_ctfme"]
+[ext_resource type="Texture2D" uid="uid://b37dcwqrx2mqe" path="res://Assets/Images/DefenceTowers/Barracks/UI/尖刺.png" id="40_5dxdx"]
+[ext_resource type="Texture2D" uid="uid://brui64sdfauii" path="res://Assets/Images/DefenceTowers/Barracks/UI/大刀斩.png" id="41_5odxy"]
+[ext_resource type="Texture2D" uid="uid://bvr8yjtg3pnlw" path="res://Assets/Images/DefenceTowers/Barracks/UI/赐福.png" id="42_i4c28"]
+[ext_resource type="Texture2D" uid="uid://1twi2mkn2i0a" path="res://Assets/Images/DefenceTowers/Bombards/UI/活塞虫.png" id="43_l1o4n"]
+[ext_resource type="Texture2D" uid="uid://decucfsrr8oe" path="res://Assets/Images/DefenceTowers/Bombards/UI/高能坍缩.png" id="44_36i4m"]
+[ext_resource type="Texture2D" uid="uid://c7net4flivij3" path="res://Assets/Images/DefenceTowers/Magics/UI/毒雾.png" id="45_m2fsi"]
+[ext_resource type="Texture2D" uid="uid://cwq23kf0b5flc" path="res://Assets/Images/DefenceTowers/Magics/UI/死亡诅咒.png" id="46_spud4"]
+[ext_resource type="Texture2D" uid="uid://bf21kld438av6" path="res://Assets/Images/DefenceTowers/Barracks/UI/感染.png" id="47_hf0gu"]
+[ext_resource type="Texture2D" uid="uid://cmqigkhk13nd4" path="res://Assets/Images/DefenceTowers/Barracks/UI/毒瓶.png" id="48_u6vo8"]
+[ext_resource type="Texture2D" uid="uid://bwwf7f7mqabee" path="res://Assets/Images/DefenceTowers/Barracks/UI/急救光环.png" id="49_uu7mn"]
+[ext_resource type="Texture2D" uid="uid://bo521r3mdgmp" path="res://Assets/Images/DefenceTowers/Archers/UI/牢笼.png" id="50_xk864"]
+[ext_resource type="Texture2D" uid="uid://nncrtcnd3qy3" path="res://Assets/Images/DefenceTowers/Archers/UI/变节者.png" id="51_wgiwd"]
+[ext_resource type="Texture2D" uid="uid://kpwo2cowmbg7" path="res://Assets/Images/DefenceTowers/Magics/UI/点金术.png" id="52_fbrd3"]
+[ext_resource type="Texture2D" uid="uid://2qnqh7mbqx6c" path="res://Assets/Images/DefenceTowers/Magics/UI/兴奋剂.png" id="53_pcbvq"]
+[ext_resource type="AudioStream" uid="uid://cljwp32ofd5qj" path="res://Assets/Sounds/FXs/UIs/bookopen.mp3" id="57_fdcqy"]
+[ext_resource type="PackedScene" uid="uid://5wpq8h2i2s8m" path="res://Scenes/UI-Components/normal_button.tscn" id="59_6fevo"]
+[ext_resource type="Texture2D" uid="uid://ct888tw8pxe47" path="res://Assets/Images/UI/SeenBook/书签-locked.png" id="60_2ifpw"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Map/tag.gd" id="60_7ec31"]
+[ext_resource type="Texture2D" uid="uid://c7h5s6xs8k7xl" path="res://Assets/Images/UI/SeenBook/书签-unlocked.png" id="61_dhc6r"]
+[ext_resource type="Texture2D" uid="uid://ks6e1b3elf2o" path="res://Assets/Images/UI/SeenBook/towers.png" id="62_qgg8v"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="63_s54qx"]
+[ext_resource type="AudioStream" uid="uid://ckytwx1c0ug78" path="res://Assets/Sounds/FXs/UIs/bookchange.mp3" id="65_bu74k"]
+[ext_resource type="Texture2D" uid="uid://leywpy37ebda" path="res://Assets/Images/UI/SeenBook/enemies.png" id="65_jht6o"]
+[ext_resource type="PackedScene" uid="uid://dwl05icpd3c7f" path="res://Scenes/UI-Components/Map/seen_book_button.tscn" id="66_6acht"]
+[ext_resource type="FontFile" uid="uid://drfv8ak22g1rm" path="res://Assets/Fonts/simhei.ttf" id="67_nfc8t"]
+[ext_resource type="Texture2D" uid="uid://t8t13hhfditg" path="res://Assets/Images/UI/SeenBook/DefenceTowers/Textures/Archer0.png" id="68_bmxi0"]
+[ext_resource type="Texture2D" uid="uid://dw2g3yb708dk7" path="res://Assets/Images/UI/DataUIs/damage_physics.res" id="70_syndx"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Map/property_icon.gd" id="71_blhtp"]
+[ext_resource type="Texture2D" uid="uid://bhe2i0ciou46g" path="res://Assets/Images/UI/DataUIs/timer.res" id="72_70agu"]
+[ext_resource type="Texture2D" uid="uid://q8p0gwed57be" path="res://Assets/Images/UI/DataUIs/range.res" id="73_cworg"]
+[ext_resource type="Texture2D" uid="uid://cmcwqpp82dvp0" path="res://Assets/Images/UI/DataUIs/health.res" id="74_8xwb4"]
+[ext_resource type="Texture2D" uid="uid://c8vp5eiamfg0f" path="res://Assets/Images/UI/DataUIs/armor.res" id="75_mgkpj"]
+[ext_resource type="Texture2D" uid="uid://dpj3fnem0wc6f" path="res://Assets/Images/UI/DataUIs/rebirth.res" id="76_d3aj4"]
+[ext_resource type="Texture2D" uid="uid://0ei3o4fr7bgx" path="res://Assets/Images/UI/DataUIs/damage_magic.res" id="77_xjb70"]
+[ext_resource type="Texture2D" uid="uid://6ufqcro4277b" path="res://Assets/Images/UI/DataUIs/damage_bombard.res" id="78_ekvid"]
+[ext_resource type="Texture2D" uid="uid://kelw0hee61lg" path="res://Assets/Images/UI/DataUIs/magic_defence.res" id="79_5lxiw"]
+[ext_resource type="Texture2D" uid="uid://byyd535swvohv" path="res://Assets/Images/UI/DataUIs/speed.res" id="80_1ig3u"]
+[ext_resource type="Texture2D" uid="uid://dw1icid5xvbj3" path="res://Assets/Images/UI/DataUIs/lives_taken.res" id="81_0jclb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8y28"]
+atlas = ExtResource("60_2ifpw")
+region = Rect2(65, 91, 124, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfa65"]
+atlas = ExtResource("61_dhc6r")
+region = Rect2(65, 91, 124, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfghg"]
+atlas = ExtResource("62_qgg8v")
+region = Rect2(160, 166, 212, 213)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kprpv"]
+atlas = ExtResource("65_jht6o")
+region = Rect2(155, 160, 222, 228)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ss3fd"]
+bg_color = Color(0.203408, 0.168445, 0.0941481, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Animation" id="Animation_2o0yy"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TagTower:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TagTower:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TagTower:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TagTower:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TagEnemy:modulate:r")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TagEnemy:modulate:g")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("TagEnemy:modulate:b")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("TagEnemy:modulate:a")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("RightPanel:modulate:r")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("RightPanel:modulate:g")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("RightPanel:modulate:b")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("RightPanel:modulate:a")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/12/type = "bezier"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("CloseButton:modulate:r")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("CloseButton:modulate:g")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/14/type = "bezier"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("CloseButton:modulate:b")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/15/type = "bezier"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("CloseButton:modulate:a")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/16/type = "bezier"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("LeftPanel:modulate:r")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.0005, 0, 0.0005, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/17/type = "bezier"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("LeftPanel:modulate:g")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.0005, 0, 0.0005, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/18/type = "bezier"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("LeftPanel:modulate:b")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.0005, 0, 0.0005, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/19/type = "bezier"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("LeftPanel:modulate:a")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.0005, 0, 0.0005, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("StopPanel:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_aurgh"]
+resource_name = "Show"
+length = 0.4
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TagTower:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TagTower:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TagTower:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TagTower:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TagEnemy:modulate:r")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TagEnemy:modulate:g")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("TagEnemy:modulate:b")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("TagEnemy:modulate:a")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("LeftPanel:modulate:r")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("LeftPanel:modulate:g")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("LeftPanel:modulate:b")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("LeftPanel:modulate:a")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/12/type = "bezier"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("RightPanel:modulate:r")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("RightPanel:modulate:g")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/14/type = "bezier"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("RightPanel:modulate:b")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/15/type = "bezier"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("RightPanel:modulate:a")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("TagTower:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("TagEnemy:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("LeftPanel:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("RightPanel:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("CloseButton:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/21/type = "bezier"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("CloseButton:modulate:r")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/22/type = "bezier"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("CloseButton:modulate:g")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/23/type = "bezier"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("CloseButton:modulate:b")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/24/type = "bezier"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("CloseButton:modulate:a")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("StopPanel:visible")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_dx41o"]
+resource_name = "hide"
+length = 0.4
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TagTower:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0, 1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TagTower:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0, 1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TagTower:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0, 1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TagTower:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0, 0, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TagEnemy:modulate:r")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0, 1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TagEnemy:modulate:g")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0, 1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("TagEnemy:modulate:b")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0, 1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("TagEnemy:modulate:a")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0, 0, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("LeftPanel:modulate:r")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0, 1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("LeftPanel:modulate:g")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0, 1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("LeftPanel:modulate:b")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0, 1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("LeftPanel:modulate:a")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0, 0, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/12/type = "bezier"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("RightPanel:modulate:r")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0, 1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("RightPanel:modulate:g")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0, 1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/14/type = "bezier"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("RightPanel:modulate:b")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0, 1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/15/type = "bezier"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("RightPanel:modulate:a")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0, 0, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("StopPanel:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ucmot"]
+_data = {
+"RESET": SubResource("Animation_2o0yy"),
+"Show": SubResource("Animation_aurgh"),
+"hide": SubResource("Animation_dx41o")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fqghh"]
+bg_color = Color(0, 0, 0, 0.568627)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="SeenBookUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6v3gq")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -34.0
+offset_top = -20.0
+offset_right = 34.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_force_pass_scroll_events = false
+
+[node name="BookSprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2.5, 2.5)
+sprite_frames = ExtResource("2_xco8u")
+animation = &"Open"
+autoplay = "Idle"
+frame = 55
+frame_progress = 1.0
+centered = false
+
+[node name="BookAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("57_fdcqy")
+volume_db = 10.0
+autoplay = true
+bus = &"Sound"
+
+[node name="CloseButton" parent="." instance=ExtResource("59_6fevo")]
+layout_mode = 0
+offset_left = 1675.0
+offset_top = 968.0
+offset_right = 2006.0
+offset_bottom = 1111.0
+scale = Vector2(0.659273, 0.659273)
+button_title = "关闭"
+
+[node name="TagTower" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 244.0
+offset_top = 261.0
+offset_right = 284.0
+offset_bottom = 301.0
+scale = Vector2(0.602805, 0.602805)
+mouse_filter = 2
+script = ExtResource("60_7ec31")
+
+[node name="TagButton" type="TextureButton" parent="TagTower"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 46.0
+offset_right = 134.0
+offset_bottom = 118.0
+rotation = 3.14159
+scale = Vector2(2.64836, 2.11051)
+focus_mode = 0
+texture_normal = SubResource("AtlasTexture_o8y28")
+texture_disabled = SubResource("AtlasTexture_hfa65")
+
+[node name="TextureRect" type="TextureRect" parent="TagTower"]
+layout_mode = 0
+offset_left = -268.0
+offset_top = -71.0
+offset_right = -56.0
+offset_bottom = 142.0
+scale = Vector2(0.355606, 0.355606)
+mouse_filter = 2
+texture = SubResource("AtlasTexture_xfghg")
+
+[node name="TagLabel" type="Label" parent="TagTower"]
+layout_mode = 0
+offset_left = -191.0
+offset_top = -77.0
+offset_right = -22.0
+offset_bottom = 15.0
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 48
+text = "防御塔"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ChangeAudio" type="AudioStreamPlayer" parent="TagTower"]
+stream = ExtResource("65_bu74k")
+max_polyphony = 4
+bus = &"Sound"
+
+[node name="TagEnemy" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 244.0
+offset_top = 415.0
+offset_right = 284.0
+offset_bottom = 455.0
+scale = Vector2(0.602805, 0.602805)
+mouse_filter = 2
+script = ExtResource("60_7ec31")
+tag_type = 1
+
+[node name="TagButton" type="TextureButton" parent="TagEnemy"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 46.0
+offset_right = 134.0
+offset_bottom = 118.0
+rotation = 3.14159
+scale = Vector2(2.64836, 2.11051)
+focus_mode = 0
+texture_normal = SubResource("AtlasTexture_o8y28")
+texture_disabled = SubResource("AtlasTexture_hfa65")
+
+[node name="TextureRect" type="TextureRect" parent="TagEnemy"]
+layout_mode = 0
+offset_left = -268.0
+offset_top = -71.0
+offset_right = -56.0
+offset_bottom = 142.0
+scale = Vector2(0.355606, 0.355606)
+mouse_filter = 2
+texture = SubResource("AtlasTexture_kprpv")
+
+[node name="TagLabel" type="Label" parent="TagEnemy"]
+layout_mode = 0
+offset_left = -191.0
+offset_top = -77.0
+offset_right = -22.0
+offset_bottom = 15.0
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 48
+text = "敌人"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ChangeAudio" type="AudioStreamPlayer" parent="TagEnemy"]
+stream = ExtResource("65_bu74k")
+max_polyphony = 4
+bus = &"Sound"
+
+[node name="LeftPanel" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TowerSlot" type="Control" parent="LeftPanel"]
+anchors_preset = 0
+offset_left = 327.0
+offset_top = 123.0
+offset_right = 962.0
+offset_bottom = 966.0
+
+[node name="NameLabel" type="Label" parent="LeftPanel/TowerSlot"]
+layout_mode = 0
+offset_top = 6.0
+offset_right = 691.0
+offset_bottom = 70.0
+scale = Vector2(0.914421, 0.914421)
+theme_override_colors/font_color = Color(0.211137, 0.121043, 0.0180422, 1)
+theme_override_colors/font_outline_color = Color(0.211765, 0.121569, 0.0196078, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 64
+text = "防御塔"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LeftPanel/TowerSlot"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 125.0
+offset_right = 580.0
+offset_bottom = 778.0
+theme_override_constants/separation = 25
+
+[node name="LV1" type="HBoxContainer" parent="LeftPanel/TowerSlot/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 70
+
+[node name="SeenBookButton" parent="LeftPanel/TowerSlot/VBoxContainer/LV1" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+seen_book_ui = NodePath("../../../../..")
+
+[node name="SeenBookButton2" parent="LeftPanel/TowerSlot/VBoxContainer/LV1" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+button_check_type = 1
+seen_book_ui = NodePath("../../../../..")
+
+[node name="SeenBookButton3" parent="LeftPanel/TowerSlot/VBoxContainer/LV1" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+button_check_type = 2
+seen_book_ui = NodePath("../../../../..")
+
+[node name="SeenBookButton4" parent="LeftPanel/TowerSlot/VBoxContainer/LV1" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+button_check_type = 3
+seen_book_ui = NodePath("../../../../..")
+
+[node name="LV2" type="HBoxContainer" parent="LeftPanel/TowerSlot/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 70
+
+[node name="SeenBookButton" parent="LeftPanel/TowerSlot/VBoxContainer/LV2" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+button_check_id = 1
+seen_book_ui = NodePath("../../../../..")
+
+[node name="SeenBookButton2" parent="LeftPanel/TowerSlot/VBoxContainer/LV2" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+button_check_type = 1
+button_check_id = 1
+seen_book_ui = NodePath("../../../../..")
+
+[node name="SeenBookButton3" parent="LeftPanel/TowerSlot/VBoxContainer/LV2" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+button_check_type = 2
+button_check_id = 1
+seen_book_ui = NodePath("../../../../..")
+
+[node name="SeenBookButton4" parent="LeftPanel/TowerSlot/VBoxContainer/LV2" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+button_check_type = 3
+button_check_id = 1
+seen_book_ui = NodePath("../../../../..")
+
+[node name="LV3" type="HBoxContainer" parent="LeftPanel/TowerSlot/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 70
+
+[node name="SeenBookButton" parent="LeftPanel/TowerSlot/VBoxContainer/LV3" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+button_check_id = 2
+seen_book_ui = NodePath("../../../../..")
+
+[node name="SeenBookButton2" parent="LeftPanel/TowerSlot/VBoxContainer/LV3" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+button_check_type = 1
+button_check_id = 2
+seen_book_ui = NodePath("../../../../..")
+
+[node name="SeenBookButton3" parent="LeftPanel/TowerSlot/VBoxContainer/LV3" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+button_check_type = 2
+button_check_id = 2
+seen_book_ui = NodePath("../../../../..")
+
+[node name="SeenBookButton4" parent="LeftPanel/TowerSlot/VBoxContainer/LV3" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+button_check_type = 3
+button_check_id = 2
+seen_book_ui = NodePath("../../../../..")
+
+[node name="MarginContainer" type="MarginContainer" parent="LeftPanel/TowerSlot/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 35
+
+[node name="LV4" type="HBoxContainer" parent="LeftPanel/TowerSlot/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 70
+
+[node name="SeenBookButton" parent="LeftPanel/TowerSlot/VBoxContainer/LV4" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+button_check_id = 3
+seen_book_ui = NodePath("../../../../..")
+
+[node name="SeenBookButton2" parent="LeftPanel/TowerSlot/VBoxContainer/LV4" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+button_check_type = 1
+button_check_id = 3
+seen_book_ui = NodePath("../../../../..")
+
+[node name="SeenBookButton3" parent="LeftPanel/TowerSlot/VBoxContainer/LV4" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+button_check_type = 2
+button_check_id = 3
+seen_book_ui = NodePath("../../../../..")
+
+[node name="SeenBookButton4" parent="LeftPanel/TowerSlot/VBoxContainer/LV4" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+button_check_type = 3
+button_check_id = 3
+seen_book_ui = NodePath("../../../../..")
+
+[node name="LV5" type="HBoxContainer" parent="LeftPanel/TowerSlot/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 70
+
+[node name="SeenBookButton" parent="LeftPanel/TowerSlot/VBoxContainer/LV5" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+button_check_id = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="SeenBookButton2" parent="LeftPanel/TowerSlot/VBoxContainer/LV5" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+button_check_type = 1
+button_check_id = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="SeenBookButton3" parent="LeftPanel/TowerSlot/VBoxContainer/LV5" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+button_check_type = 2
+button_check_id = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="SeenBookButton4" parent="LeftPanel/TowerSlot/VBoxContainer/LV5" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+button_check_type = 3
+button_check_id = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="LV6" type="HBoxContainer" parent="LeftPanel/TowerSlot/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 70
+
+[node name="SeenBookButton" parent="LeftPanel/TowerSlot/VBoxContainer/LV6" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+button_check_id = 5
+seen_book_ui = NodePath("../../../../..")
+
+[node name="SeenBookButton2" parent="LeftPanel/TowerSlot/VBoxContainer/LV6" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+button_check_type = 1
+button_check_id = 5
+seen_book_ui = NodePath("../../../../..")
+
+[node name="SeenBookButton3" parent="LeftPanel/TowerSlot/VBoxContainer/LV6" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+button_check_type = 2
+button_check_id = 5
+seen_book_ui = NodePath("../../../../..")
+
+[node name="SeenBookButton4" parent="LeftPanel/TowerSlot/VBoxContainer/LV6" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+button_check_type = 3
+button_check_id = 5
+seen_book_ui = NodePath("../../../../..")
+
+[node name="Base" type="Label" parent="LeftPanel/TowerSlot"]
+layout_mode = 0
+offset_top = 63.0
+offset_right = 691.0
+offset_bottom = 127.0
+scale = Vector2(0.914421, 0.914421)
+theme_override_colors/font_color = Color(0.211137, 0.121043, 0.0180422, 1)
+theme_override_colors/font_outline_color = Color(0.211765, 0.121569, 0.0196078, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 36
+text = "基本"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Advanced" type="Label" parent="LeftPanel/TowerSlot"]
+layout_mode = 0
+offset_top = 420.0
+offset_right = 691.0
+offset_bottom = 484.0
+scale = Vector2(0.914421, 0.914421)
+theme_override_colors/font_color = Color(0.211137, 0.121043, 0.0180422, 1)
+theme_override_colors/font_outline_color = Color(0.211765, 0.121569, 0.0196078, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 36
+text = "进阶"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnemySlot" type="Control" parent="LeftPanel"]
+visible = false
+anchors_preset = 0
+offset_left = 327.0
+offset_top = 123.0
+offset_right = 962.0
+offset_bottom = 966.0
+
+[node name="NameLabel" type="Label" parent="LeftPanel/EnemySlot"]
+layout_mode = 0
+offset_top = 6.0
+offset_right = 691.0
+offset_bottom = 70.0
+scale = Vector2(0.914421, 0.914421)
+theme_override_colors/font_color = Color(0.211137, 0.121043, 0.0180422, 1)
+theme_override_colors/font_outline_color = Color(0.211765, 0.121569, 0.0196078, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 64
+text = "敌人"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="LeftPanel/EnemySlot"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 72.0
+offset_right = 619.0
+offset_bottom = 817.0
+mouse_filter = 0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="GridContainer" type="GridContainer" parent="LeftPanel/EnemySlot/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 8
+columns = 6
+
+[node name="EnemyButton" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton2" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton3" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton4" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton5" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton6" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton7" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton8" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton9" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton10" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton11" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton12" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton13" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton14" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton15" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton16" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton17" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton18" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton19" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton20" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton21" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton22" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton23" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton24" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton25" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton26" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton27" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton28" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton29" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton30" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton31" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton32" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton33" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton34" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton35" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton36" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton37" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton38" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton39" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton40" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton41" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton42" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton43" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton44" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton45" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton46" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton47" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton48" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton49" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton50" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton51" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton52" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton53" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton54" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton55" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton56" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton57" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton58" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton59" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="EnemyButton60" parent="LeftPanel/EnemySlot/ScrollContainer/GridContainer" node_paths=PackedStringArray("seen_book_ui") instance=ExtResource("66_6acht")]
+layout_mode = 2
+mouse_filter = 1
+button_check_type = 4
+seen_book_ui = NodePath("../../../../..")
+
+[node name="RightPanel" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NameLabel" type="Label" parent="RightPanel"]
+layout_mode = 0
+offset_left = 964.0
+offset_top = 145.0
+offset_right = 2102.0
+offset_bottom = 261.0
+scale = Vector2(0.56165, 0.56165)
+theme_override_colors/font_color = Color(0.211765, 0.121569, 0.0196078, 1)
+theme_override_colors/font_outline_color = Color(0.211765, 0.121569, 0.0196078, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("67_nfc8t")
+theme_override_font_sizes/font_size = 72
+text = "——射手高台——"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="RightPanel"]
+layout_mode = 0
+offset_left = 965.0
+offset_top = 185.0
+offset_right = 1603.0
+offset_bottom = 519.0
+
+[node name="SeenBookTexture" type="TextureRect" parent="RightPanel/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("68_bmxi0")
+
+[node name="Sprite2D" type="Sprite2D" parent="RightPanel/CenterContainer"]
+position = Vector2(310, 153)
+scale = Vector2(1.03433, 1.03433)
+texture = ExtResource("15_ynqwl")
+
+[node name="IntroLabel" type="Label" parent="RightPanel"]
+layout_mode = 0
+offset_left = 1038.0
+offset_top = 510.0
+offset_right = 2435.0
+offset_bottom = 753.0
+scale = Vector2(0.395003, 0.395003)
+theme_override_colors/font_color = Color(0.211765, 0.121569, 0.0196078, 1)
+theme_override_colors/font_outline_color = Color(0.211765, 0.121569, 0.0196078, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 64
+text = "在最恶劣的环境成长的最强大的战士，他们所信仰的神明赐予他们奇异强大的力量，来犯的敌军无一不会在其大刀面前战栗不止。"
+autowrap_mode = 3
+
+[node name="ArcherSlot" type="Control" parent="RightPanel"]
+anchors_preset = 0
+offset_left = 962.0
+offset_top = 137.0
+offset_right = 1002.0
+offset_bottom = 177.0
+
+[node name="Damage" type="Panel" parent="RightPanel/ArcherSlot"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 488.0
+offset_right = 568.0
+offset_bottom = 535.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ss3fd")
+
+[node name="PropertyIcon" type="TextureRect" parent="RightPanel/ArcherSlot/Damage" node_paths=PackedStringArray("seen_book_ui")]
+layout_mode = 0
+offset_left = -17.0
+offset_top = -12.0
+offset_right = 23.0
+offset_bottom = 56.0
+texture = ExtResource("70_syndx")
+stretch_mode = 4
+script = ExtResource("71_blhtp")
+icon_type = 6
+seen_book_ui = NodePath("../../../..")
+
+[node name="PropertyLabel" type="Label" parent="RightPanel/ArcherSlot/Damage"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 1.0
+offset_right = 886.0
+offset_bottom = 92.0
+scale = Vector2(0.502974, 0.502974)
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 64
+text = "4 - 6"
+vertical_alignment = 1
+
+[node name="CD" type="Panel" parent="RightPanel/ArcherSlot"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 570.0
+offset_right = 298.0
+offset_bottom = 617.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ss3fd")
+
+[node name="PropertyIcon" type="TextureRect" parent="RightPanel/ArcherSlot/CD" node_paths=PackedStringArray("seen_book_ui")]
+layout_mode = 0
+offset_left = -26.0
+offset_top = -12.0
+offset_right = 33.0
+offset_bottom = 56.0
+texture = ExtResource("72_70agu")
+stretch_mode = 4
+script = ExtResource("71_blhtp")
+icon_type = 7
+seen_book_ui = NodePath("../../../..")
+
+[node name="PropertyLabel" type="Label" parent="RightPanel/ArcherSlot/CD"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 1.0
+offset_right = 343.0
+offset_bottom = 92.0
+scale = Vector2(0.502974, 0.502974)
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 64
+text = "中"
+vertical_alignment = 1
+
+[node name="Range" type="Panel" parent="RightPanel/ArcherSlot"]
+layout_mode = 0
+offset_left = 359.0
+offset_top = 570.0
+offset_right = 566.0
+offset_bottom = 617.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ss3fd")
+
+[node name="PropertyIcon" type="TextureRect" parent="RightPanel/ArcherSlot/Range" node_paths=PackedStringArray("seen_book_ui")]
+layout_mode = 0
+offset_left = -26.0
+offset_top = -4.0
+offset_right = 33.0
+offset_bottom = 55.0
+texture = ExtResource("73_cworg")
+stretch_mode = 4
+script = ExtResource("71_blhtp")
+icon_type = 8
+seen_book_ui = NodePath("../../../..")
+
+[node name="PropertyLabel" type="Label" parent="RightPanel/ArcherSlot/Range"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 1.0
+offset_right = 343.0
+offset_bottom = 92.0
+scale = Vector2(0.502974, 0.502974)
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 64
+text = "中"
+vertical_alignment = 1
+
+[node name="BarrackSlot" type="Control" parent="RightPanel"]
+visible = false
+anchors_preset = 0
+offset_left = 962.0
+offset_top = 137.0
+offset_right = 1002.0
+offset_bottom = 177.0
+
+[node name="Health" type="Panel" parent="RightPanel/BarrackSlot"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 488.0
+offset_right = 298.0
+offset_bottom = 535.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ss3fd")
+
+[node name="PropertyIcon" type="TextureRect" parent="RightPanel/BarrackSlot/Health" node_paths=PackedStringArray("seen_book_ui")]
+layout_mode = 0
+offset_left = -26.0
+offset_top = -10.0
+offset_right = 33.0
+offset_bottom = 49.0
+scale = Vector2(1.04584, 1.04584)
+texture = ExtResource("74_8xwb4")
+stretch_mode = 4
+script = ExtResource("71_blhtp")
+seen_book_ui = NodePath("../../../..")
+
+[node name="PropertyLabel" type="Label" parent="RightPanel/BarrackSlot/Health"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 1.0
+offset_right = 343.0
+offset_bottom = 92.0
+scale = Vector2(0.502974, 0.502974)
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 56
+text = "50"
+vertical_alignment = 1
+
+[node name="Attack" type="Panel" parent="RightPanel/BarrackSlot"]
+layout_mode = 0
+offset_left = 359.0
+offset_top = 488.0
+offset_right = 566.0
+offset_bottom = 535.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ss3fd")
+
+[node name="PropertyIcon" type="TextureRect" parent="RightPanel/BarrackSlot/Attack" node_paths=PackedStringArray("seen_book_ui")]
+layout_mode = 0
+offset_left = -16.0
+offset_top = -15.0
+offset_right = 24.0
+offset_bottom = 53.0
+scale = Vector2(1.09497, 1.09497)
+texture = ExtResource("70_syndx")
+stretch_mode = 4
+script = ExtResource("71_blhtp")
+icon_type = 1
+seen_book_ui = NodePath("../../../..")
+
+[node name="PropertyLabel" type="Label" parent="RightPanel/BarrackSlot/Attack"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 1.0
+offset_right = 343.0
+offset_bottom = 92.0
+scale = Vector2(0.502974, 0.502974)
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 46
+text = "1 - 3"
+vertical_alignment = 1
+
+[node name="Armor" type="Panel" parent="RightPanel/BarrackSlot"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 571.0
+offset_right = 298.0
+offset_bottom = 618.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ss3fd")
+
+[node name="PropertyIcon" type="TextureRect" parent="RightPanel/BarrackSlot/Armor" node_paths=PackedStringArray("seen_book_ui")]
+layout_mode = 0
+offset_left = -26.0
+offset_top = -10.0
+offset_right = 33.0
+offset_bottom = 49.0
+scale = Vector2(1.04584, 1.04584)
+texture = ExtResource("75_mgkpj")
+stretch_mode = 4
+script = ExtResource("71_blhtp")
+icon_type = 2
+seen_book_ui = NodePath("../../../..")
+
+[node name="PropertyLabel" type="Label" parent="RightPanel/BarrackSlot/Armor"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 1.0
+offset_right = 343.0
+offset_bottom = 92.0
+scale = Vector2(0.502974, 0.502974)
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 56
+text = "无"
+vertical_alignment = 1
+
+[node name="Rebirth" type="Panel" parent="RightPanel/BarrackSlot"]
+layout_mode = 0
+offset_left = 359.0
+offset_top = 571.0
+offset_right = 566.0
+offset_bottom = 618.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ss3fd")
+
+[node name="PropertyIcon" type="TextureRect" parent="RightPanel/BarrackSlot/Rebirth" node_paths=PackedStringArray("seen_book_ui")]
+layout_mode = 0
+offset_left = -19.0
+offset_top = -13.0
+offset_right = 35.0
+offset_bottom = 56.0
+scale = Vector2(0.851173, 0.851173)
+texture = ExtResource("76_d3aj4")
+stretch_mode = 4
+script = ExtResource("71_blhtp")
+icon_type = 9
+seen_book_ui = NodePath("../../../..")
+
+[node name="PropertyLabel" type="Label" parent="RightPanel/BarrackSlot/Rebirth"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 1.0
+offset_right = 343.0
+offset_bottom = 92.0
+scale = Vector2(0.502974, 0.502974)
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 46
+text = "10s"
+vertical_alignment = 1
+
+[node name="MagicSlot" type="Control" parent="RightPanel"]
+visible = false
+anchors_preset = 0
+offset_left = 962.0
+offset_top = 137.0
+offset_right = 1002.0
+offset_bottom = 177.0
+
+[node name="Damage" type="Panel" parent="RightPanel/MagicSlot"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 488.0
+offset_right = 568.0
+offset_bottom = 535.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ss3fd")
+
+[node name="PropertyIcon" type="TextureRect" parent="RightPanel/MagicSlot/Damage" node_paths=PackedStringArray("seen_book_ui")]
+layout_mode = 0
+offset_left = -33.0
+offset_top = -29.0
+offset_right = 34.0
+offset_bottom = 57.0
+texture = ExtResource("77_xjb70")
+stretch_mode = 3
+script = ExtResource("71_blhtp")
+icon_type = 6
+seen_book_ui = NodePath("../../../..")
+
+[node name="PropertyLabel" type="Label" parent="RightPanel/MagicSlot/Damage"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 1.0
+offset_right = 873.0
+offset_bottom = 92.0
+scale = Vector2(0.502974, 0.502974)
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 64
+text = "4 - 6"
+vertical_alignment = 1
+
+[node name="CD" type="Panel" parent="RightPanel/MagicSlot"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 570.0
+offset_right = 298.0
+offset_bottom = 617.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ss3fd")
+
+[node name="PropertyIcon" type="TextureRect" parent="RightPanel/MagicSlot/CD" node_paths=PackedStringArray("seen_book_ui")]
+layout_mode = 0
+offset_left = -26.0
+offset_top = -12.0
+offset_right = 33.0
+offset_bottom = 56.0
+texture = ExtResource("72_70agu")
+stretch_mode = 4
+script = ExtResource("71_blhtp")
+icon_type = 7
+seen_book_ui = NodePath("../../../..")
+
+[node name="PropertyLabel" type="Label" parent="RightPanel/MagicSlot/CD"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 1.0
+offset_right = 343.0
+offset_bottom = 92.0
+scale = Vector2(0.502974, 0.502974)
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 64
+text = "中"
+vertical_alignment = 1
+
+[node name="Range" type="Panel" parent="RightPanel/MagicSlot"]
+layout_mode = 0
+offset_left = 359.0
+offset_top = 570.0
+offset_right = 566.0
+offset_bottom = 617.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ss3fd")
+
+[node name="PropertyIcon" type="TextureRect" parent="RightPanel/MagicSlot/Range" node_paths=PackedStringArray("seen_book_ui")]
+layout_mode = 0
+offset_left = -26.0
+offset_top = -4.0
+offset_right = 33.0
+offset_bottom = 55.0
+texture = ExtResource("73_cworg")
+stretch_mode = 4
+script = ExtResource("71_blhtp")
+icon_type = 8
+seen_book_ui = NodePath("../../../..")
+
+[node name="PropertyLabel" type="Label" parent="RightPanel/MagicSlot/Range"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 1.0
+offset_right = 343.0
+offset_bottom = 92.0
+scale = Vector2(0.502974, 0.502974)
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 64
+text = "中"
+vertical_alignment = 1
+
+[node name="BombardSlot" type="Control" parent="RightPanel"]
+visible = false
+anchors_preset = 0
+offset_left = 962.0
+offset_top = 137.0
+offset_right = 1002.0
+offset_bottom = 177.0
+
+[node name="Damage" type="Panel" parent="RightPanel/BombardSlot"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 488.0
+offset_right = 568.0
+offset_bottom = 535.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ss3fd")
+
+[node name="PropertyIcon" type="TextureRect" parent="RightPanel/BombardSlot/Damage" node_paths=PackedStringArray("seen_book_ui")]
+layout_mode = 0
+offset_left = -33.0
+offset_top = -17.0
+offset_right = 47.0
+offset_bottom = 73.0
+scale = Vector2(0.818986, 0.818986)
+texture = ExtResource("78_ekvid")
+stretch_mode = 3
+script = ExtResource("71_blhtp")
+icon_type = 6
+seen_book_ui = NodePath("../../../..")
+
+[node name="PropertyLabel" type="Label" parent="RightPanel/BombardSlot/Damage"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 1.0
+offset_right = 873.0
+offset_bottom = 92.0
+scale = Vector2(0.502974, 0.502974)
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 64
+text = "4 - 6"
+vertical_alignment = 1
+
+[node name="CD" type="Panel" parent="RightPanel/BombardSlot"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 570.0
+offset_right = 298.0
+offset_bottom = 617.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ss3fd")
+
+[node name="PropertyIcon" type="TextureRect" parent="RightPanel/BombardSlot/CD" node_paths=PackedStringArray("seen_book_ui")]
+layout_mode = 0
+offset_left = -26.0
+offset_top = -12.0
+offset_right = 33.0
+offset_bottom = 56.0
+texture = ExtResource("72_70agu")
+stretch_mode = 4
+script = ExtResource("71_blhtp")
+icon_type = 7
+seen_book_ui = NodePath("../../../..")
+
+[node name="PropertyLabel" type="Label" parent="RightPanel/BombardSlot/CD"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 1.0
+offset_right = 343.0
+offset_bottom = 92.0
+scale = Vector2(0.502974, 0.502974)
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 64
+text = "中"
+vertical_alignment = 1
+
+[node name="Range" type="Panel" parent="RightPanel/BombardSlot"]
+layout_mode = 0
+offset_left = 359.0
+offset_top = 570.0
+offset_right = 566.0
+offset_bottom = 617.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ss3fd")
+
+[node name="PropertyIcon" type="TextureRect" parent="RightPanel/BombardSlot/Range" node_paths=PackedStringArray("seen_book_ui")]
+layout_mode = 0
+offset_left = -26.0
+offset_top = -4.0
+offset_right = 33.0
+offset_bottom = 55.0
+texture = ExtResource("73_cworg")
+stretch_mode = 4
+script = ExtResource("71_blhtp")
+icon_type = 8
+seen_book_ui = NodePath("../../../..")
+
+[node name="PropertyLabel" type="Label" parent="RightPanel/BombardSlot/Range"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 1.0
+offset_right = 343.0
+offset_bottom = 92.0
+scale = Vector2(0.502974, 0.502974)
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 64
+text = "中"
+vertical_alignment = 1
+
+[node name="EnemySlot" type="Control" parent="RightPanel"]
+visible = false
+anchors_preset = 0
+offset_left = 962.0
+offset_top = 137.0
+offset_right = 1002.0
+offset_bottom = 177.0
+
+[node name="Health" type="Panel" parent="RightPanel/EnemySlot"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 488.0
+offset_right = 298.0
+offset_bottom = 535.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ss3fd")
+
+[node name="PropertyIcon" type="TextureRect" parent="RightPanel/EnemySlot/Health" node_paths=PackedStringArray("seen_book_ui")]
+layout_mode = 0
+offset_left = -26.0
+offset_top = -10.0
+offset_right = 33.0
+offset_bottom = 49.0
+scale = Vector2(1.04584, 1.04584)
+texture = ExtResource("74_8xwb4")
+stretch_mode = 4
+script = ExtResource("71_blhtp")
+seen_book_ui = NodePath("../../../..")
+
+[node name="PropertyLabel" type="Label" parent="RightPanel/EnemySlot/Health"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 1.0
+offset_right = 343.0
+offset_bottom = 92.0
+scale = Vector2(0.502974, 0.502974)
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 56
+text = "50"
+vertical_alignment = 1
+
+[node name="Attack" type="Panel" parent="RightPanel/EnemySlot"]
+layout_mode = 0
+offset_left = 359.0
+offset_top = 488.0
+offset_right = 566.0
+offset_bottom = 535.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ss3fd")
+
+[node name="PropertyIcon" type="TextureRect" parent="RightPanel/EnemySlot/Attack" node_paths=PackedStringArray("seen_book_ui")]
+layout_mode = 0
+offset_left = -16.0
+offset_top = -15.0
+offset_right = 24.0
+offset_bottom = 53.0
+scale = Vector2(1.09497, 1.09497)
+texture = ExtResource("70_syndx")
+stretch_mode = 4
+script = ExtResource("71_blhtp")
+icon_type = 1
+seen_book_ui = NodePath("../../../..")
+
+[node name="PropertyLabel" type="Label" parent="RightPanel/EnemySlot/Attack"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 1.0
+offset_right = 343.0
+offset_bottom = 92.0
+scale = Vector2(0.502974, 0.502974)
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 56
+text = "1 - 3"
+vertical_alignment = 1
+
+[node name="Armor" type="Panel" parent="RightPanel/EnemySlot"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 571.0
+offset_right = 298.0
+offset_bottom = 618.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ss3fd")
+
+[node name="PropertyIcon" type="TextureRect" parent="RightPanel/EnemySlot/Armor" node_paths=PackedStringArray("seen_book_ui")]
+layout_mode = 0
+offset_left = -26.0
+offset_top = -10.0
+offset_right = 33.0
+offset_bottom = 49.0
+scale = Vector2(1.04584, 1.04584)
+texture = ExtResource("75_mgkpj")
+stretch_mode = 4
+script = ExtResource("71_blhtp")
+icon_type = 2
+seen_book_ui = NodePath("../../../..")
+
+[node name="PropertyLabel" type="Label" parent="RightPanel/EnemySlot/Armor"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 1.0
+offset_right = 343.0
+offset_bottom = 92.0
+scale = Vector2(0.502974, 0.502974)
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 56
+text = "无"
+vertical_alignment = 1
+
+[node name="MagicDefence" type="Panel" parent="RightPanel/EnemySlot"]
+layout_mode = 0
+offset_left = 359.0
+offset_top = 571.0
+offset_right = 566.0
+offset_bottom = 618.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ss3fd")
+
+[node name="PropertyIcon" type="TextureRect" parent="RightPanel/EnemySlot/MagicDefence" node_paths=PackedStringArray("seen_book_ui")]
+layout_mode = 0
+offset_left = -21.0
+offset_top = -11.0
+offset_right = 43.0
+offset_bottom = 58.0
+scale = Vector2(0.966909, 0.966909)
+texture = ExtResource("79_5lxiw")
+stretch_mode = 4
+script = ExtResource("71_blhtp")
+icon_type = 3
+seen_book_ui = NodePath("../../../..")
+
+[node name="PropertyLabel" type="Label" parent="RightPanel/EnemySlot/MagicDefence"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 1.0
+offset_right = 343.0
+offset_bottom = 92.0
+scale = Vector2(0.502974, 0.502974)
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 56
+text = "无"
+vertical_alignment = 1
+
+[node name="Speed" type="Panel" parent="RightPanel/EnemySlot"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 660.0
+offset_right = 298.0
+offset_bottom = 707.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ss3fd")
+
+[node name="PropertyIcon" type="TextureRect" parent="RightPanel/EnemySlot/Speed" node_paths=PackedStringArray("seen_book_ui")]
+layout_mode = 0
+offset_left = -46.0
+offset_top = -10.0
+offset_right = 24.0
+offset_bottom = 52.0
+scale = Vector2(1.04584, 1.04584)
+texture = ExtResource("80_1ig3u")
+stretch_mode = 4
+script = ExtResource("71_blhtp")
+icon_type = 4
+seen_book_ui = NodePath("../../../..")
+
+[node name="PropertyLabel" type="Label" parent="RightPanel/EnemySlot/Speed"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 1.0
+offset_right = 343.0
+offset_bottom = 92.0
+scale = Vector2(0.502974, 0.502974)
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 56
+text = "无"
+vertical_alignment = 1
+
+[node name="LivesTaken" type="Panel" parent="RightPanel/EnemySlot"]
+layout_mode = 0
+offset_left = 359.0
+offset_top = 660.0
+offset_right = 566.0
+offset_bottom = 707.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ss3fd")
+
+[node name="PropertyIcon" type="TextureRect" parent="RightPanel/EnemySlot/LivesTaken" node_paths=PackedStringArray("seen_book_ui")]
+layout_mode = 0
+offset_left = -21.0
+offset_top = -9.0
+offset_right = 44.0
+offset_bottom = 60.0
+scale = Vector2(0.996646, 0.996646)
+texture = ExtResource("81_0jclb")
+stretch_mode = 4
+script = ExtResource("71_blhtp")
+icon_type = 5
+seen_book_ui = NodePath("../../../..")
+
+[node name="PropertyLabel" type="Label" parent="RightPanel/EnemySlot/LivesTaken"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 1.0
+offset_right = 343.0
+offset_bottom = 92.0
+scale = Vector2(0.502974, 0.502974)
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 46
+text = "10s"
+vertical_alignment = 1
+
+[node name="SpecialTagLabel" type="Label" parent="RightPanel/EnemySlot"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 740.0
+offset_right = 806.0
+offset_bottom = 804.0
+scale = Vector2(0.429294, 0.429294)
+theme_override_colors/font_color = Color(0.203922, 0.168627, 0.0941176, 1)
+theme_override_colors/font_outline_color = Color(0.203922, 0.168627, 0.0941176, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 64
+text = "#无法拦截；死后离开坐骑"
+
+[node name="SkillSlot" type="Control" parent="RightPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("28_kuf2r")
+
+[node name="Label" type="Label" parent="RightPanel/SkillSlot"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 1032.0
+offset_top = 782.0
+offset_right = 2852.0
+offset_bottom = 846.0
+scale = Vector2(0.286824, 0.286824)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 64
+text = "特殊"
+horizontal_alignment = 1
+
+[node name="RoyalGuard" type="HBoxContainer" parent="RightPanel/SkillSlot"]
+visible = false
+layout_mode = 0
+offset_left = 1011.0
+offset_top = 815.0
+offset_right = 1107.0
+offset_bottom = 911.0
+scale = Vector2(1.11568, 1.11568)
+theme_override_constants/separation = 110
+
+[node name="SkillCheck" parent="RightPanel/SkillSlot/RoyalGuard" node_paths=PackedStringArray("intro_panel", "intro_name_label", "intro_label") instance=ExtResource("29_5wutq")]
+layout_mode = 2
+skill_name = "皇家审判"
+skill_intro = "发动一次强力斩击，造成高额真实伤害。"
+intro_panel = NodePath("../../../../IntroPanel")
+intro_name_label = NodePath("../../../../IntroPanel/IntroNameLabel")
+intro_label = NodePath("../../../../IntroPanel/IntroIntroLabel")
+
+[node name="SkillCheck2" parent="RightPanel/SkillSlot/RoyalGuard" node_paths=PackedStringArray("intro_panel", "intro_name_label", "intro_label") instance=ExtResource("29_5wutq")]
+layout_mode = 2
+texture = ExtResource("30_vv8m3")
+skill_name = "神圣盾牌"
+skill_intro = "提高少许护甲，每次受到伤害都有概率免疫。"
+intro_panel = NodePath("../../../../IntroPanel")
+intro_name_label = NodePath("../../../../IntroPanel/IntroNameLabel")
+intro_label = NodePath("../../../../IntroPanel/IntroIntroLabel")
+
+[node name="SkillCheck3" parent="RightPanel/SkillSlot/RoyalGuard" node_paths=PackedStringArray("intro_panel", "intro_name_label", "intro_label") instance=ExtResource("29_5wutq")]
+layout_mode = 2
+texture = ExtResource("31_jtm54")
+skill_name = "皇家庇佑"
+skill_intro = "提高周围一定范围内其他友军的护甲，自身获得总伤减免的效果。"
+intro_panel = NodePath("../../../../IntroPanel")
+intro_name_label = NodePath("../../../../IntroPanel/IntroNameLabel")
+intro_label = NodePath("../../../../IntroPanel/IntroIntroLabel")
+
+[node name="ProtectorChurch" type="HBoxContainer" parent="RightPanel/SkillSlot"]
+visible = false
+layout_mode = 0
+offset_left = 1059.0
+offset_top = 815.0
+offset_right = 1491.0
+offset_bottom = 911.0
+scale = Vector2(1.11568, 1.11568)
+theme_override_constants/separation = 240
+
+[node name="SkillCheck" parent="RightPanel/SkillSlot/ProtectorChurch" node_paths=PackedStringArray("intro_panel", "intro_name_label", "intro_label") instance=ExtResource("29_5wutq")]
+layout_mode = 2
+texture = ExtResource("32_utbqi")
+skill_name = "铁傀儡"
+skill_intro = "召唤一只强大且坚韧的铁傀儡，在道路上拦截并伤害敌人。"
+intro_panel = NodePath("../../../../IntroPanel")
+intro_name_label = NodePath("../../../../IntroPanel/IntroNameLabel")
+intro_label = NodePath("../../../../IntroPanel/IntroIntroLabel")
+
+[node name="SkillCheck2" parent="RightPanel/SkillSlot/ProtectorChurch" node_paths=PackedStringArray("intro_panel", "intro_name_label", "intro_label") instance=ExtResource("29_5wutq")]
+layout_mode = 2
+texture = ExtResource("33_68751")
+skill_name = "尘解"
+skill_intro = "释放一个法阵，尘解法阵中的所有敌人，并对精英敌人造成高额魔法伤害。"
+intro_panel = NodePath("../../../../IntroPanel")
+intro_name_label = NodePath("../../../../IntroPanel/IntroNameLabel")
+intro_label = NodePath("../../../../IntroPanel/IntroIntroLabel")
+
+[node name="StoneTower" type="HBoxContainer" parent="RightPanel/SkillSlot"]
+visible = false
+layout_mode = 0
+offset_left = 1059.0
+offset_top = 815.0
+offset_right = 1491.0
+offset_bottom = 911.0
+scale = Vector2(1.11568, 1.11568)
+theme_override_constants/separation = 240
+
+[node name="SkillCheck" parent="RightPanel/SkillSlot/StoneTower" node_paths=PackedStringArray("intro_panel", "intro_name_label", "intro_label") instance=ExtResource("29_5wutq")]
+layout_mode = 2
+texture = ExtResource("34_4x36d")
+skill_name = "黑曜石"
+skill_intro = "造成高额伤害，并眩晕敌人片刻。"
+intro_panel = NodePath("../../../../IntroPanel")
+intro_name_label = NodePath("../../../../IntroPanel/IntroNameLabel")
+intro_label = NodePath("../../../../IntroPanel/IntroIntroLabel")
+
+[node name="SkillCheck2" parent="RightPanel/SkillSlot/StoneTower" node_paths=PackedStringArray("intro_panel", "intro_name_label", "intro_label") instance=ExtResource("29_5wutq")]
+layout_mode = 2
+texture = ExtResource("35_jcd2m")
+skill_name = "碎石"
+skill_intro = "扔出的石头会炸开，对小范围内所有敌人造成小额物理伤害。"
+intro_panel = NodePath("../../../../IntroPanel")
+intro_name_label = NodePath("../../../../IntroPanel/IntroNameLabel")
+intro_label = NodePath("../../../../IntroPanel/IntroIntroLabel")
+
+[node name="OperatorTurret" type="HBoxContainer" parent="RightPanel/SkillSlot"]
+visible = false
+layout_mode = 0
+offset_left = 1059.0
+offset_top = 815.0
+offset_right = 1491.0
+offset_bottom = 911.0
+scale = Vector2(1.11568, 1.11568)
+theme_override_constants/separation = 240
+
+[node name="SkillCheck" parent="RightPanel/SkillSlot/OperatorTurret" node_paths=PackedStringArray("intro_panel", "intro_name_label", "intro_label") instance=ExtResource("29_5wutq")]
+layout_mode = 2
+texture = ExtResource("36_nkmy2")
+skill_name = "天谴"
+skill_intro = "对小范围敌人造成真实伤害，并眩晕片刻。"
+intro_panel = NodePath("../../../../IntroPanel")
+intro_name_label = NodePath("../../../../IntroPanel/IntroNameLabel")
+intro_label = NodePath("../../../../IntroPanel/IntroIntroLabel")
+
+[node name="SkillCheck2" parent="RightPanel/SkillSlot/OperatorTurret" node_paths=PackedStringArray("intro_panel", "intro_name_label", "intro_label") instance=ExtResource("29_5wutq")]
+layout_mode = 2
+texture = ExtResource("37_6rppa")
+skill_name = "演算者机甲"
+skill_intro = "召唤一架超强机甲，在道路上拦截并伤害敌人。"
+intro_panel = NodePath("../../../../IntroPanel")
+intro_name_label = NodePath("../../../../IntroPanel/IntroNameLabel")
+intro_label = NodePath("../../../../IntroPanel/IntroIntroLabel")
+
+[node name="DesertSentryTower" type="HBoxContainer" parent="RightPanel/SkillSlot"]
+visible = false
+layout_mode = 0
+offset_left = 1059.0
+offset_top = 815.0
+offset_right = 1491.0
+offset_bottom = 911.0
+scale = Vector2(1.11568, 1.11568)
+theme_override_constants/separation = 240
+
+[node name="SkillCheck" parent="RightPanel/SkillSlot/DesertSentryTower" node_paths=PackedStringArray("intro_panel", "intro_name_label", "intro_label") instance=ExtResource("29_5wutq")]
+layout_mode = 2
+texture = ExtResource("38_d0bif")
+skill_name = "背后一刺"
+skill_intro = "对单个敌人造成高额真实伤害，并有概率立即处决该敌人。"
+intro_panel = NodePath("../../../../IntroPanel")
+intro_name_label = NodePath("../../../../IntroPanel/IntroNameLabel")
+intro_label = NodePath("../../../../IntroPanel/IntroIntroLabel")
+
+[node name="SkillCheck2" parent="RightPanel/SkillSlot/DesertSentryTower" node_paths=PackedStringArray("intro_panel", "intro_name_label", "intro_label") instance=ExtResource("29_5wutq")]
+layout_mode = 2
+texture = ExtResource("39_ctfme")
+skill_name = "沙狼"
+skill_intro = "召唤一头沙狼沿路径移动数秒，对沿途敌人造成少量伤害并眩晕命中敌人。"
+intro_panel = NodePath("../../../../IntroPanel")
+intro_name_label = NodePath("../../../../IntroPanel/IntroNameLabel")
+intro_label = NodePath("../../../../IntroPanel/IntroIntroLabel")
+
+[node name="EpeeChurch" type="HBoxContainer" parent="RightPanel/SkillSlot"]
+visible = false
+layout_mode = 0
+offset_left = 1011.0
+offset_top = 815.0
+offset_right = 1519.0
+offset_bottom = 911.0
+scale = Vector2(1.11568, 1.11568)
+theme_override_constants/separation = 110
+
+[node name="SkillCheck" parent="RightPanel/SkillSlot/EpeeChurch" node_paths=PackedStringArray("intro_panel", "intro_name_label", "intro_label") instance=ExtResource("29_5wutq")]
+layout_mode = 2
+texture = ExtResource("40_5dxdx")
+skill_name = "尖刺"
+skill_intro = "提高大刀兵单次攻击造成的伤害。"
+intro_panel = NodePath("../../../../IntroPanel")
+intro_name_label = NodePath("../../../../IntroPanel/IntroNameLabel")
+intro_label = NodePath("../../../../IntroPanel/IntroIntroLabel")
+
+[node name="SkillCheck2" parent="RightPanel/SkillSlot/EpeeChurch" node_paths=PackedStringArray("intro_panel", "intro_name_label", "intro_label") instance=ExtResource("29_5wutq")]
+layout_mode = 2
+texture = ExtResource("41_5odxy")
+skill_name = "大刀斩"
+skill_intro = "对面前一定范围内的所有敌人造成一次高额伤害。"
+intro_panel = NodePath("../../../../IntroPanel")
+intro_name_label = NodePath("../../../../IntroPanel/IntroNameLabel")
+intro_label = NodePath("../../../../IntroPanel/IntroIntroLabel")
+
+[node name="SkillCheck3" parent="RightPanel/SkillSlot/EpeeChurch" node_paths=PackedStringArray("intro_panel", "intro_name_label", "intro_label") instance=ExtResource("29_5wutq")]
+layout_mode = 2
+texture = ExtResource("42_i4c28")
+skill_name = "神赐"
+skill_intro = "死亡时有一定概率复活，恢复大量生命值，并无敌少许时间。"
+intro_panel = NodePath("../../../../IntroPanel")
+intro_name_label = NodePath("../../../../IntroPanel/IntroNameLabel")
+intro_label = NodePath("../../../../IntroPanel/IntroIntroLabel")
+
+[node name="NuclearTurret" type="HBoxContainer" parent="RightPanel/SkillSlot"]
+visible = false
+layout_mode = 0
+offset_left = 1059.0
+offset_top = 815.0
+offset_right = 1491.0
+offset_bottom = 911.0
+scale = Vector2(1.11568, 1.11568)
+theme_override_constants/separation = 240
+
+[node name="SkillCheck" parent="RightPanel/SkillSlot/NuclearTurret" node_paths=PackedStringArray("intro_panel", "intro_name_label", "intro_label") instance=ExtResource("29_5wutq")]
+layout_mode = 2
+texture = ExtResource("43_l1o4n")
+skill_name = "活塞虫轰炸机"
+skill_intro = "召唤一架活塞虫轰炸机沿道路朝出怪口移动，沿途持续对地面敌人进行轰炸。"
+intro_panel = NodePath("../../../../IntroPanel")
+intro_name_label = NodePath("../../../../IntroPanel/IntroNameLabel")
+intro_label = NodePath("../../../../IntroPanel/IntroIntroLabel")
+
+[node name="SkillCheck2" parent="RightPanel/SkillSlot/NuclearTurret" node_paths=PackedStringArray("intro_panel", "intro_name_label", "intro_label") instance=ExtResource("29_5wutq")]
+layout_mode = 2
+texture = ExtResource("44_36i4m")
+skill_name = "高能坍缩"
+skill_intro = "制造一片坍缩区域，持续对区域内的敌人造成真实伤害。"
+intro_panel = NodePath("../../../../IntroPanel")
+intro_name_label = NodePath("../../../../IntroPanel/IntroNameLabel")
+intro_label = NodePath("../../../../IntroPanel/IntroIntroLabel")
+
+[node name="WitchTower" type="HBoxContainer" parent="RightPanel/SkillSlot"]
+visible = false
+layout_mode = 0
+offset_left = 1059.0
+offset_top = 815.0
+offset_right = 1491.0
+offset_bottom = 911.0
+scale = Vector2(1.11568, 1.11568)
+theme_override_constants/separation = 240
+
+[node name="SkillCheck" parent="RightPanel/SkillSlot/WitchTower" node_paths=PackedStringArray("intro_panel", "intro_name_label", "intro_label") instance=ExtResource("29_5wutq")]
+layout_mode = 2
+texture = ExtResource("45_m2fsi")
+skill_name = "毒雾"
+skill_intro = "释放一片毒雾对范围内敌人持续造成真实伤害，并削弱敌人。"
+intro_panel = NodePath("../../../../IntroPanel")
+intro_name_label = NodePath("../../../../IntroPanel/IntroNameLabel")
+intro_label = NodePath("../../../../IntroPanel/IntroIntroLabel")
+
+[node name="SkillCheck2" parent="RightPanel/SkillSlot/WitchTower" node_paths=PackedStringArray("intro_panel", "intro_name_label", "intro_label") instance=ExtResource("29_5wutq")]
+layout_mode = 2
+texture = ExtResource("46_spud4")
+skill_name = "死亡诅咒"
+skill_intro = "诅咒一名敌人持续削弱，并在敌人死亡时引爆敌人造成范围伤害。"
+intro_panel = NodePath("../../../../IntroPanel")
+intro_name_label = NodePath("../../../../IntroPanel/IntroNameLabel")
+intro_label = NodePath("../../../../IntroPanel/IntroIntroLabel")
+
+[node name="MedicalCamp" type="HBoxContainer" parent="RightPanel/SkillSlot"]
+visible = false
+layout_mode = 0
+offset_left = 1011.0
+offset_top = 815.0
+offset_right = 1519.0
+offset_bottom = 911.0
+scale = Vector2(1.11568, 1.11568)
+theme_override_constants/separation = 110
+
+[node name="SkillCheck" parent="RightPanel/SkillSlot/MedicalCamp" node_paths=PackedStringArray("intro_panel", "intro_name_label", "intro_label") instance=ExtResource("29_5wutq")]
+layout_mode = 2
+texture = ExtResource("47_hf0gu")
+skill_name = "感染"
+skill_intro = "医疗兵的普攻可以感染敌人，敌人在死亡时会自爆并感染周围的敌人。"
+intro_panel = NodePath("../../../../IntroPanel")
+intro_name_label = NodePath("../../../../IntroPanel/IntroNameLabel")
+intro_label = NodePath("../../../../IntroPanel/IntroIntroLabel")
+
+[node name="SkillCheck2" parent="RightPanel/SkillSlot/MedicalCamp" node_paths=PackedStringArray("intro_panel", "intro_name_label", "intro_label") instance=ExtResource("29_5wutq")]
+layout_mode = 2
+texture = ExtResource("48_u6vo8")
+skill_name = "毒瓶"
+skill_intro = "医疗兵获得远程攻击能力，扔出毒瓶伤害敌人的同时感染敌人。"
+intro_panel = NodePath("../../../../IntroPanel")
+intro_name_label = NodePath("../../../../IntroPanel/IntroNameLabel")
+intro_label = NodePath("../../../../IntroPanel/IntroIntroLabel")
+
+[node name="SkillCheck3" parent="RightPanel/SkillSlot/MedicalCamp" node_paths=PackedStringArray("intro_panel", "intro_name_label", "intro_label") instance=ExtResource("29_5wutq")]
+layout_mode = 2
+texture = ExtResource("49_uu7mn")
+skill_name = "急救光环"
+skill_intro = "医疗兵生命较低时释放急救光环，恢复自己与周围友军一定生命。"
+intro_panel = NodePath("../../../../IntroPanel")
+intro_name_label = NodePath("../../../../IntroPanel/IntroNameLabel")
+intro_label = NodePath("../../../../IntroPanel/IntroIntroLabel")
+
+[node name="SentryTower" type="HBoxContainer" parent="RightPanel/SkillSlot"]
+visible = false
+layout_mode = 0
+offset_left = 1059.0
+offset_top = 815.0
+offset_right = 1491.0
+offset_bottom = 911.0
+scale = Vector2(1.11568, 1.11568)
+theme_override_constants/separation = 240
+
+[node name="SkillCheck" parent="RightPanel/SkillSlot/SentryTower" node_paths=PackedStringArray("intro_panel", "intro_name_label", "intro_label") instance=ExtResource("29_5wutq")]
+layout_mode = 2
+texture = ExtResource("50_xk864")
+skill_name = "牢笼"
+skill_intro = "降下牢笼，困住单个敌人一段时间。"
+intro_panel = NodePath("../../../../IntroPanel")
+intro_name_label = NodePath("../../../../IntroPanel/IntroNameLabel")
+intro_label = NodePath("../../../../IntroPanel/IntroIntroLabel")
+
+[node name="SkillCheck2" parent="RightPanel/SkillSlot/SentryTower" node_paths=PackedStringArray("intro_panel", "intro_name_label", "intro_label") instance=ExtResource("29_5wutq")]
+layout_mode = 2
+texture = ExtResource("51_wgiwd")
+skill_name = "变节者"
+skill_intro = "召唤两名变节者参与战斗，变节者可以拦截敌人，也可以远程攻击敌人。"
+intro_panel = NodePath("../../../../IntroPanel")
+intro_name_label = NodePath("../../../../IntroPanel/IntroNameLabel")
+intro_label = NodePath("../../../../IntroPanel/IntroIntroLabel")
+
+[node name="AlchemistTower" type="HBoxContainer" parent="RightPanel/SkillSlot"]
+layout_mode = 0
+offset_left = 1059.0
+offset_top = 815.0
+offset_right = 1491.0
+offset_bottom = 911.0
+scale = Vector2(1.11568, 1.11568)
+theme_override_constants/separation = 240
+
+[node name="SkillCheck" parent="RightPanel/SkillSlot/AlchemistTower" node_paths=PackedStringArray("intro_panel", "intro_name_label", "intro_label") instance=ExtResource("29_5wutq")]
+layout_mode = 2
+texture = ExtResource("52_fbrd3")
+skill_name = "点金术"
+skill_intro = "将敌人变成无法行动金像一段时间，在此期间如果击败敌人可以获得更多赏金。"
+intro_panel = NodePath("../../../../IntroPanel")
+intro_name_label = NodePath("../../../../IntroPanel/IntroNameLabel")
+intro_label = NodePath("../../../../IntroPanel/IntroIntroLabel")
+
+[node name="SkillCheck2" parent="RightPanel/SkillSlot/AlchemistTower" node_paths=PackedStringArray("intro_panel", "intro_name_label", "intro_label") instance=ExtResource("29_5wutq")]
+layout_mode = 2
+texture = ExtResource("53_pcbvq")
+skill_name = "兴奋剂"
+skill_intro = "提高射程范围内所有我方单位的各项属性，并获得生命恢复的效果。"
+intro_panel = NodePath("../../../../IntroPanel")
+intro_name_label = NodePath("../../../../IntroPanel/IntroNameLabel")
+intro_label = NodePath("../../../../IntroPanel/IntroIntroLabel")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ucmot")
+}
+speed_scale = 2.0
+
+[node name="StopPanel" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="IntroPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1742.0
+offset_top = 766.0
+offset_right = 2043.0
+offset_bottom = 884.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_fqghh")
+
+[node name="IntroNameLabel" type="Label" parent="IntroPanel"]
+modulate = Color(1, 1, 0, 1)
+layout_mode = 0
+offset_left = 14.0
+offset_top = 2.0
+offset_right = 511.0
+offset_bottom = 90.0
+scale = Vector2(0.414434, 0.414434)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 64
+text = "生命值"
+vertical_alignment = 1
+
+[node name="IntroIntroLabel" type="Label" parent="IntroPanel"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 43.0
+offset_right = 680.0
+offset_bottom = 188.0
+scale = Vector2(0.414434, 0.414434)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("63_s54qx")
+theme_override_font_sizes/font_size = 48
+text = "单位所能承受的伤害上限。"
+autowrap_mode = 3
+
+[connection signal="update" from="." to="RightPanel/SkillSlot" method="_on_seen_book_ui_update"]
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="TagTower/TagButton" to="TagTower" method="_on_tag_button_pressed"]
+[connection signal="pressed" from="TagEnemy/TagButton" to="TagEnemy" method="_on_tag_button_pressed"]

@@ -1,0 +1,100 @@
+[gd_scene load_steps=8 format=3 uid="uid://bs0e17ygi2jqj"]
+
+[ext_resource type="Theme" uid="uid://bsmybxfgtqmwt" path="res://Assets/Resources/hero_button_normal.tres" id="1_qiaub"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Map/hero_skill_button.gd" id="2_qolca"]
+[ext_resource type="Texture2D" uid="uid://drv0dbf2kutls" path="res://Assets/Images/UI/HeroHall/SkillTextures/Steve/战神之刃-normal.png" id="3_v6npv"]
+[ext_resource type="Texture2D" uid="uid://bwwfkhx6iaie4" path="res://Assets/Images/UI/HeroHall/经验球.png" id="4_mnrfx"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="5_wtv6x"]
+[ext_resource type="Texture2D" uid="uid://d212dg7a55jm4" path="res://Assets/Images/UI/HeroHall/level_progress.png" id="6_yomcc"]
+[ext_resource type="AudioStream" uid="uid://duvqp5eu8d8c3" path="res://Assets/Sounds/FXs/UIs/mcexp.wav" id="7_ip8ec"]
+
+[node name="HeroSkillButton" type="Button"]
+custom_minimum_size = Vector2(120, 120)
+focus_mode = 0
+theme = ExtResource("1_qiaub")
+script = ExtResource("2_qolca")
+
+[node name="SkillTexture" type="Sprite2D" parent="."]
+position = Vector2(60, 64)
+scale = Vector2(0.710363, 0.710363)
+texture = ExtResource("3_v6npv")
+region_enabled = true
+region_rect = Rect2(67, 67, 121, 122)
+
+[node name="PriceBar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 120.0
+offset_right = 194.0
+offset_bottom = 176.0
+scale = Vector2(0.452786, 0.452786)
+mouse_filter = 2
+theme = ExtResource("1_qiaub")
+
+[node name="PriceBall" type="TextureRect" parent="PriceBar"]
+layout_mode = 0
+offset_left = 13.2513
+offset_top = 6.62563
+offset_right = 1093.25
+offset_bottom = 1086.63
+scale = Vector2(0.0396605, 0.0396605)
+texture = ExtResource("4_mnrfx")
+
+[node name="PriceLabel" type="Label" parent="PriceBar"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 6.20853
+offset_right = 247.0
+offset_bottom = 92.2085
+scale = Vector2(0.543911, 0.543911)
+theme_override_fonts/font = ExtResource("5_wtv6x")
+theme_override_font_sizes/font_size = 64
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelUnder1" type="Sprite2D" parent="."]
+position = Vector2(25.8346, 11.8954)
+scale = Vector2(0.375173, 0.375173)
+texture = ExtResource("6_yomcc")
+region_enabled = true
+region_rect = Rect2(16, 31, 97, 20)
+
+[node name="LevelUnder2" type="Sprite2D" parent="."]
+position = Vector2(59.7705, 11.8954)
+scale = Vector2(0.375173, 0.375173)
+texture = ExtResource("6_yomcc")
+region_enabled = true
+region_rect = Rect2(16, 31, 97, 20)
+
+[node name="LevelUnder3" type="Sprite2D" parent="."]
+position = Vector2(93.7064, 11.8954)
+scale = Vector2(0.375173, 0.375173)
+texture = ExtResource("6_yomcc")
+region_enabled = true
+region_rect = Rect2(16, 31, 97, 20)
+
+[node name="Level1" type="Sprite2D" parent="."]
+position = Vector2(25.8346, 11.8954)
+scale = Vector2(0.375173, 0.375173)
+texture = ExtResource("6_yomcc")
+region_enabled = true
+region_rect = Rect2(19, 71, 83, 14)
+
+[node name="Level2" type="Sprite2D" parent="."]
+position = Vector2(59.7705, 11.8954)
+scale = Vector2(0.375173, 0.375173)
+texture = ExtResource("6_yomcc")
+region_enabled = true
+region_rect = Rect2(19, 71, 83, 14)
+
+[node name="Level3" type="Sprite2D" parent="."]
+position = Vector2(93.7064, 11.8954)
+scale = Vector2(0.375173, 0.375173)
+texture = ExtResource("6_yomcc")
+region_enabled = true
+region_rect = Rect2(19, 71, 83, 14)
+
+[node name="ClickAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_ip8ec")
+bus = &"Sound"

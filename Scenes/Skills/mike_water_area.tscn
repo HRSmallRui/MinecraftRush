@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0kit0a3hqmel"]
+
+[ext_resource type="Script" path="res://Scripts/Skills/mike_water_area.gd" id="1_qsy6i"]
+[ext_resource type="Texture2D" uid="uid://clg14gs7wy7te" path="res://Assets/Images/Effects/mike_water_effect.png" id="2_65smc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ttrns"]
+radius = 73.9444
+
+[node name="MikeWaterArea" type="Area2D"]
+collision_layer = 0
+collision_mask = 32
+script = ExtResource("1_qsy6i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 1.4)
+shape = SubResource("CircleShape2D_ttrns")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="MikeWaterEffect" type="Sprite2D" parent="."]
+scale = Vector2(1.1191, 1.1191)
+texture = ExtResource("2_65smc")
+offset = Vector2(-4, -28)

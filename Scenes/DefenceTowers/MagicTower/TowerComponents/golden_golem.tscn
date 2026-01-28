@@ -1,0 +1,130 @@
+[gd_scene load_steps=20 format=3 uid="uid://cs45lami2bq5v"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_cw6jx"]
+[ext_resource type="Script" path="res://Scripts/Enemies/golden_golem.gd" id="2_0jgmj"]
+[ext_resource type="Texture2D" uid="uid://7fwwgok2hayv" path="res://Assets/Images/UI/InformationBar/金傀儡.png" id="3_81lt0"]
+[ext_resource type="AudioStream" uid="uid://dm824q146kchv" path="res://Assets/Sounds/FXs/Allys/铁傀儡/死亡.wav" id="4_4nb5r"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="4_5hiyd"]
+[ext_resource type="Texture2D" uid="uid://gg0j3b0o84b0" path="res://Assets/Images/DefenceTowers/Magics/Towers/LV4-3/GoldenGolem/idle_0.png" id="5_q6m6i"]
+[ext_resource type="Texture2D" uid="uid://bbqknilfamipr" path="res://Assets/Images/DefenceTowers/Magics/Towers/LV4-3/GoldenGolem/die_00.png" id="6_cj14s"]
+[ext_resource type="Texture2D" uid="uid://dp3hcmvv2f23j" path="res://Assets/Images/DefenceTowers/Magics/Towers/LV4-3/GoldenGolem/die_01.png" id="7_4hcfq"]
+[ext_resource type="Texture2D" uid="uid://cydyuenmk0cdm" path="res://Assets/Images/DefenceTowers/Magics/Towers/LV4-3/GoldenGolem/die_02.png" id="8_5h45h"]
+[ext_resource type="Texture2D" uid="uid://ce0jwvp2qywas" path="res://Assets/Images/DefenceTowers/Magics/Towers/LV4-3/GoldenGolem/die_03.png" id="9_nxgud"]
+[ext_resource type="Texture2D" uid="uid://c75r0ovtesxkh" path="res://Assets/Images/DefenceTowers/Magics/Towers/LV4-3/GoldenGolem/die_04.png" id="10_1c0yg"]
+[ext_resource type="Texture2D" uid="uid://dg431afybsnpd" path="res://Assets/Images/DefenceTowers/Magics/Towers/LV4-3/GoldenGolem/die_05.png" id="11_5r21n"]
+[ext_resource type="Texture2D" uid="uid://cxqyfd80q3rfe" path="res://Assets/Images/DefenceTowers/Magics/Towers/LV4-3/GoldenGolem/die_06.png" id="12_qq7fv"]
+[ext_resource type="Texture2D" uid="uid://d2gw052j0g1sh" path="res://Assets/Images/DefenceTowers/Magics/Towers/LV4-3/GoldenGolem/die_07.png" id="13_8rsqt"]
+[ext_resource type="Texture2D" uid="uid://bhtft03glosam" path="res://Assets/Images/DefenceTowers/Magics/Towers/LV4-3/GoldenGolem/die_08.png" id="14_prkdp"]
+[ext_resource type="Texture2D" uid="uid://bduks4807ny86" path="res://Assets/Images/DefenceTowers/Magics/Towers/LV4-3/GoldenGolem/die_09.png" id="15_a74ox"]
+[ext_resource type="Texture2D" uid="uid://bfbq21u18yt4p" path="res://Assets/Images/DefenceTowers/Magics/Towers/LV4-3/GoldenGolem/die_10.png" id="16_ilbbf"]
+
+[sub_resource type="Resource" id="Resource_7vsmp"]
+script = ExtResource("4_5hiyd")
+health = 0
+dodge_rate = 0.0
+near_damage_low = 0
+near_damage_high = 0
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.2
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 0.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0070i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_cj14s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4hcfq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5h45h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_nxgud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1c0yg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5r21n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_qq7fv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_8rsqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_prkdp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_a74ox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ilbbf")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_q6m6i")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="GoldenGolem" groups=["no_live", "special"] instance=ExtResource("1_cw6jx")]
+script = ExtResource("2_0jgmj")
+enemy_name = "黄金傀儡"
+enemy_id = -1
+enemy_texture = ExtResource("3_81lt0")
+enemy_type = 2
+start_data = SubResource("Resource_7vsmp")
+die_audio_stream_list = Array[AudioStream]([ExtResource("4_4nb5r")])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(50, -85)
+sprite_frames = SubResource("SpriteFrames_0070i")
+animation = &"die"
+autoplay = "idle"
+
+[node name="HurtBox" parent="UnitBody" index="2"]
+position = Vector2(0, -95)
+scale = Vector2(7.38902, 7.38902)
+
+[node name="SelectSprite" parent="UnitBody" index="3"]
+scale = Vector2(5.60251, 5.60251)
+
+[node name="EnemyButton" parent="UnitBody" index="4"]
+offset_left = -78.0
+offset_top = -225.0
+offset_right = 80.0
+
+[node name="HealthBar" parent="UnitBody" index="5"]
+offset_left = -105.0
+offset_top = -255.0
+offset_right = 195.0
+offset_bottom = -246.0
+scale = Vector2(0.682891, 1.88085)
+
+[node name="RelayTimer" type="Timer" parent="." index="5"]
+wait_time = 4.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="RelayTimer" to="." method="_on_timer_timeout"]

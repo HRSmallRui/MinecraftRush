@@ -1,0 +1,1255 @@
+[gd_scene load_steps=139 format=3 uid="uid://bjsrqyt1e7fcq"]
+
+[ext_resource type="PackedScene" uid="uid://05u6aueicvo4" path="res://Scenes/Classes/stage_class.tscn" id="1_quedn"]
+[ext_resource type="Script" path="res://Library/EnemySummon/stage_summon_config.gd" id="3_y3kfg"]
+[ext_resource type="AudioStream" uid="uid://cudoongsdo5nn" path="res://Assets/Sounds/Music/雨林-准备2.mp3" id="5_osrog"]
+[ext_resource type="AudioStream" uid="uid://by4n5nvfb1ild" path="res://Assets/Sounds/Music/雨林-战斗2.mp3" id="6_y68wf"]
+[ext_resource type="Texture2D" uid="uid://cedt3di5c3bnb" path="res://Assets/Images/Stages/Stage7/stage7-based.png" id="7_ilh0s"]
+[ext_resource type="Texture2D" uid="uid://pe1sf035jhvg" path="res://Assets/Animations/StageComponents/保护点.png" id="8_esquh"]
+[ext_resource type="Script" path="res://Scripts/Stages/protection_point.gd" id="9_pgrll"]
+[ext_resource type="Texture2D" uid="uid://cb7n0rp6m5v2t" path="res://Assets/Images/Stages/Flag.png" id="14_jcoci"]
+[ext_resource type="Texture2D" uid="uid://c77akitvab0om" path="res://Assets/Images/Stages/Stage7/stage7-tree_mask1.png" id="15_jkf85"]
+[ext_resource type="Texture2D" uid="uid://cmq5pcbu385si" path="res://Assets/Images/Stages/Stage7/stage7-tree_mask2.png" id="16_jvuwd"]
+[ext_resource type="Texture2D" uid="uid://c0uuer5s44da" path="res://Assets/Images/Stages/Stage7/CoconutTreeAnimation/loop_00.png" id="17_2mj60"]
+[ext_resource type="Texture2D" uid="uid://ego8sj3iico5" path="res://Assets/Images/Stages/Stage7/CoconutTreeAnimation/loop_01.png" id="18_q0fsi"]
+[ext_resource type="Texture2D" uid="uid://dk210bd4neqfn" path="res://Assets/Images/Stages/Stage7/CoconutTreeAnimation/loop_02.png" id="19_n5blx"]
+[ext_resource type="Texture2D" uid="uid://bjhyc67g3u31t" path="res://Assets/Images/Stages/Stage7/CoconutTreeAnimation/loop_03.png" id="20_okka4"]
+[ext_resource type="Texture2D" uid="uid://dsb4y6fjxerpo" path="res://Assets/Images/Stages/Stage7/CoconutTreeAnimation/loop_04.png" id="21_qdqau"]
+[ext_resource type="Texture2D" uid="uid://4r2ikcbaovk0" path="res://Assets/Images/Stages/Stage7/CoconutTreeAnimation/loop_05.png" id="22_ky4iw"]
+[ext_resource type="Texture2D" uid="uid://dt1sv3gwf3omb" path="res://Assets/Images/Stages/Stage7/CoconutTreeAnimation/loop_06.png" id="23_54lfl"]
+[ext_resource type="Texture2D" uid="uid://ck6qcydweceuj" path="res://Assets/Images/Stages/Stage7/CoconutTreeAnimation/loop_07.png" id="24_1xql4"]
+[ext_resource type="Texture2D" uid="uid://dt0yfk0jto15k" path="res://Assets/Images/Stages/Stage7/CoconutTreeAnimation/loop_08.png" id="25_tutrq"]
+[ext_resource type="Texture2D" uid="uid://bt2d6o67ytvmo" path="res://Assets/Images/Stages/Stage7/CoconutTreeAnimation/loop_09.png" id="26_eaxvh"]
+[ext_resource type="Texture2D" uid="uid://c8xtlkyqfv4so" path="res://Assets/Images/Stages/Stage7/CoconutTreeAnimation/loop_10.png" id="27_gva7n"]
+[ext_resource type="Texture2D" uid="uid://pas1eckjhn5q" path="res://Assets/Images/Stages/Stage7/CoconutTreeAnimation/loop_11.png" id="28_57sho"]
+[ext_resource type="Texture2D" uid="uid://c7nidr04kii3w" path="res://Assets/Images/Stages/Stage7/CoconutTreeAnimation/loop_12.png" id="29_wx0xp"]
+[ext_resource type="Texture2D" uid="uid://vwn3wq6qskcy" path="res://Assets/Images/Stages/Stage7/CoconutTreeAnimation/loop_13.png" id="30_bkxvc"]
+[ext_resource type="Texture2D" uid="uid://b3jlnuwdh5xvv" path="res://Assets/Images/Stages/Stage7/CoconutTreeAnimation/loop_14.png" id="31_r7m5l"]
+[ext_resource type="Texture2D" uid="uid://b34xyohqdfph4" path="res://Assets/Images/Stages/Stage7/CoconutTreeAnimation/loop_15.png" id="32_102gl"]
+[ext_resource type="Texture2D" uid="uid://bmpaye6dhsi6w" path="res://Assets/Images/Stages/Stage7/CoconutTreeAnimation/loop_16.png" id="33_2pqo7"]
+[ext_resource type="Texture2D" uid="uid://d0ybfu53futlt" path="res://Assets/Images/Stages/Stage7/CoconutTreeAnimation/loop_17.png" id="34_gruta"]
+[ext_resource type="Texture2D" uid="uid://b1epckos4110j" path="res://Assets/Images/Stages/Stage7/CoconutTreeAnimation/loop_18.png" id="35_657mg"]
+[ext_resource type="Script" path="res://Scripts/StageComponents/coconut_tree.gd" id="36_ykiuh"]
+[ext_resource type="PackedScene" uid="uid://i2ikd0xvj08u" path="res://Scenes/StageComponents/rain_layer.tscn" id="37_1dv70"]
+[ext_resource type="Texture2D" uid="uid://ddqgkjf4hqkwm" path="res://Assets/Animations/StageComponents/Lakes/Pop/1.png" id="38_eb3ne"]
+[ext_resource type="Texture2D" uid="uid://b4pc24p1a2xf7" path="res://Assets/Animations/StageComponents/Lakes/Pop/2.png" id="39_qfxpg"]
+[ext_resource type="Texture2D" uid="uid://dieswkn0alrhm" path="res://Assets/Images/Stages/Stage7/hammer.png" id="39_y8bl1"]
+[ext_resource type="Texture2D" uid="uid://rbod4mupa2y6" path="res://Assets/Animations/StageComponents/Lakes/Pop/3.png" id="40_aw6hj"]
+[ext_resource type="Texture2D" uid="uid://bwl8sfa6ltkub" path="res://Assets/Animations/StageComponents/Lakes/Pop/4.png" id="41_0xsbp"]
+[ext_resource type="Texture2D" uid="uid://b4suedr63w8b4" path="res://Assets/Animations/StageComponents/Lakes/Pop/5.png" id="42_uu6ue"]
+[ext_resource type="Texture2D" uid="uid://dqdrc2e80mptv" path="res://Assets/Animations/StageComponents/Lakes/Pop/6.png" id="43_jp7nl"]
+[ext_resource type="Script" path="res://Scripts/StageComponents/lake_pop.gd" id="44_4y4yt"]
+[ext_resource type="Resource" uid="uid://dj1l0mx4ck1k7" path="res://Library/SummonConfigs/Stage7/Diamond/path1.res" id="45_j3vad"]
+[ext_resource type="Script" path="res://Scripts/Classes/enemy_path.gd" id="45_rwfvc"]
+[ext_resource type="Resource" uid="uid://b7ve764edvist" path="res://Library/SummonConfigs/Stage7/Diamond/path2.res" id="46_rxetw"]
+[ext_resource type="Resource" uid="uid://cc75kndhf10gk" path="res://Library/SummonConfigs/Stage7/Diamond/path3.res" id="47_mqnwx"]
+[ext_resource type="Resource" uid="uid://bfi5qk8eirsym" path="res://Library/SummonConfigs/Stage7/Diamond/path4.res" id="48_6leqj"]
+[ext_resource type="Resource" uid="uid://bderk25bpoilw" path="res://Library/SummonConfigs/Stage7/Diamond/path5.res" id="49_cbg2b"]
+[ext_resource type="Resource" uid="uid://d3spqew5e0n1d" path="res://Library/SummonConfigs/Stage7/Diamond/path6.res" id="50_jxp4x"]
+[ext_resource type="Resource" uid="uid://du5p2iods4ms1" path="res://Library/SummonConfigs/Stage7/Diamond/path7.res" id="51_86v7w"]
+[ext_resource type="Resource" uid="uid://dauh7m3mvfjrt" path="res://Library/SummonConfigs/Stage7/Diamond/path8.res" id="52_g8cd2"]
+[ext_resource type="Resource" uid="uid://2ue1n54deb0u" path="res://Library/SummonConfigs/Stage7/Diamond/path9.res" id="53_16xh1"]
+[ext_resource type="Script" path="res://Scripts/Enemies/EnemyComponents/water_enemy_path.gd" id="54_nfa2a"]
+[ext_resource type="Resource" uid="uid://cfjn68a66g3rv" path="res://Library/SummonConfigs/Stage7/Diamond/path10.res" id="55_xrhpb"]
+[ext_resource type="Resource" uid="uid://chw1trgo4rog5" path="res://Library/SummonConfigs/Stage7/Diamond/path11.res" id="56_p7vwa"]
+[ext_resource type="Resource" uid="uid://ctuuswq5m5j01" path="res://Library/SummonConfigs/Stage7/Diamond/path12.res" id="57_mycxm"]
+[ext_resource type="Script" path="res://Library/EnemySummon/wave_summon_text.gd" id="57_ovstj"]
+[ext_resource type="Script" path="res://Library/EnemySummon/SummonTextBlock/summon_text_block_chapter2.gd" id="58_kkhwc"]
+[ext_resource type="Script" path="res://Library/EnemySummon/SummonTextBlock/summon_text_block.gd" id="58_mu747"]
+[ext_resource type="PackedScene" uid="uid://d0sta1lv6shgl" path="res://Scenes/DefenceTowers/defence_tower_based.tscn" id="58_w6c3j"]
+[ext_resource type="Script" path="res://Scripts/summon_count_porcess.gd" id="59_nka0l"]
+[ext_resource type="PackedScene" uid="uid://4j747edyffkd" path="res://Scenes/UI-Components/Stages/wave_button.tscn" id="59_vbyqq"]
+[ext_resource type="Texture2D" uid="uid://d4h7uga26vrgq" path="res://Assets/Images/UI/wave-direction.png" id="60_lo04h"]
+[ext_resource type="Script" path="res://Library/EnemySummon/path_summon_block.gd" id="60_t8yic"]
+[ext_resource type="PackedScene" uid="uid://dijjgy2lt1p7w" path="res://Scenes/UI-Components/Stages/wave_panel.tscn" id="61_53ltq"]
+[ext_resource type="Script" path="res://Scripts/path_config_load.gd" id="61_o32hq"]
+
+[sub_resource type="Resource" id="Resource_a3eio"]
+script = ExtResource("3_y3kfg")
+next_wave_timers = Array[float]([60.0, 65.0, 65.0, 70.0])
+wave_exist_timers = Array[float]([15.0, 20.0, 25.0, 30.0])
+wave_money_get = Array[int]([20, 40, 60, 80])
+reinforce_cooling_fast = Array[float]([10.0, 15.0, 20.0, 25.0])
+firerain_cooling_fast = Array[float]([40.0, 60.0, 70.0, 80.0])
+hero_skill_cooling_fast = Array[float]([30.0, 35.0, 40.0, 50.0])
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_he47j"]
+size = Vector2(3200, 1440)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3aos7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_2mj60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_q0fsi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_n5blx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_okka4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_qdqau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ky4iw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_54lfl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_1xql4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_tutrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_eaxvh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_gva7n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_57sho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_wx0xp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_bkxvc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_r7m5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_102gl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_2pqo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_gruta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_657mg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6lkjn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_2mj60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_q0fsi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_n5blx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_okka4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_qdqau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ky4iw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_54lfl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_1xql4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_tutrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_eaxvh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_gva7n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_57sho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_wx0xp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_bkxvc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_r7m5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_102gl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_2pqo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_gruta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_657mg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p7b3s"]
+size = Vector2(3214, 1459)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_psnp3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("38_eb3ne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_qfxpg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_aw6hj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_0xsbp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_uu6ue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_jp7nl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_vkp47"]
+vertices = PackedVector2Array(409.219, 531.609, 109.359, 164.008, 380.563, 15.9922, 3190.93, 10.0234, 3185.03, 920.273, 3068.09, 1017.57, 3034.06, 1081.62, 2942.83, 1159.11, 2875.51, 1208.16, 2673.25, 1219.03, 2254.51, 1102.23, 1148.06, 1428.02, 7.10938, 1433.94, 12.9609, 909.227, 123.289, 753.977, 1260.72, 1281.77, 2280.32, 1257.14, 1373.43, 1235.47, 1431.77, 1179.18, 1570.46, 1109.15, 1517.99, 1175.21, 1764.39, 1006, 1989.04, 1095.04)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(0, 5, 6, 7, 8, 9, 10), PackedInt32Array(11, 12, 13, 14, 0, 15), PackedInt32Array(9, 16, 10), PackedInt32Array(17, 15, 0, 18), PackedInt32Array(19, 20, 18, 0), PackedInt32Array(21, 19, 0), PackedInt32Array(21, 0, 10), PackedInt32Array(21, 10, 22)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(94, 161, 378, 6, 3201, 0, 3195, 925, 3076, 1024, 3042, 1088, 2949, 1167, 2879, 1218, 2674, 1229, 2272, 1268, 2246, 1112, 1987, 1105, 1765, 1017, 1577, 1117, 1523, 1185, 1436, 1189, 1379, 1244, 1267, 1290, 1153, 1438, -3, 1444, 3, 906, 116, 747, 395, 530)])
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_nrqd4"]
+vertices = PackedVector2Array(796.539, 207.719, 449.258, 136.453, 405.258, 114.844, 444.953, 70.5703, 629.93, 93.8125, 865.742, 162.883, 946.227, 335.727, 966.063, 263.203, 1019.56, 350.922, 975.102, 499.688, 1043.96, 418.703, 1044.99, 591.992, 555.82, 990.023, 399.391, 994.727, 387.688, 926.102, 657.172, 904.859, 754.789, 948.453, 869.617, 826.211, 908.57, 874.992, 1014.67, 739.68, 952.672, 696.438, 3117.28, 778.539, 3048.98, 820.969, 2959.72, 793.406, 2959.71, 793.398, 3041.13, 722.773, 3125.95, 691.93, 3194.77, 689.383, 3193.17, 763.727, 2808.14, 930.938, 2863.84, 987.078, 2747.97, 1064.66, 2695.44, 1004.7, 2637.39, 1089.88, 2574.45, 1017.11, 2454.49, 1070.32, 2457.81, 992.117, 2339.15, 993.742, 2340.45, 865.492, 2252.82, 868.18, 2265.9, 686.156, 2175.03, 681.656, 2222.86, 597.867, 2063.4, 477.523, 2038.77, 305.133, 2157.49, 477.273, 2187.04, 529.547, 1204.19, 367.711, 1174.97, 301.227, 1412.63, 260.492, 1593.51, 222.891, 1335.04, 213.18, 1501.99, 155.891, 1620.69, 148.039, 1798.67, 245.227, 1790.84, 169.797, 1894.47, 203.039, 1930.4, 304.922, 2228.56, 519.172, 2345, 529.891, 2307.91, 455.281, 2442.03, 436.781, 2411.94, 339.117, 2496.68, 341.406, 2551.4, 271.203, 2481.34, 234.008, 2556.14, 179.352, 2618.59, 234.938, 2672.24, 155.156, 2704.38, 237.031, 2783.36, 172.711, 2827.03, 268.453, 2940.03, 234.977, 3194, 311.742, 2922.93, 305.039, 3194, 237.883)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 0, 5, 7, 8), PackedInt32Array(9, 6, 8, 10, 11), PackedInt32Array(12, 13, 14, 15, 16), PackedInt32Array(16, 15, 17, 18), PackedInt32Array(19, 18, 17, 20, 11), PackedInt32Array(11, 20, 9), PackedInt32Array(21, 22, 23, 24, 25, 26), PackedInt32Array(26, 27, 28, 21), PackedInt32Array(29, 23, 22, 30, 31), PackedInt32Array(32, 29, 31, 33), PackedInt32Array(34, 32, 33, 35), PackedInt32Array(36, 34, 35, 37), PackedInt32Array(38, 36, 37, 39), PackedInt32Array(40, 38, 39, 41, 42), PackedInt32Array(42, 41, 43, 44, 45, 46), PackedInt32Array(47, 10, 8, 48, 49), PackedInt32Array(50, 49, 48, 51, 52, 53), PackedInt32Array(54, 50, 53, 55, 56), PackedInt32Array(57, 54, 56, 44), PackedInt32Array(43, 57, 44), PackedInt32Array(42, 46, 58, 59), PackedInt32Array(59, 58, 60, 61), PackedInt32Array(61, 60, 62, 63), PackedInt32Array(64, 63, 62, 65, 66), PackedInt32Array(67, 64, 66, 68), PackedInt32Array(69, 67, 68, 70), PackedInt32Array(71, 69, 70, 72), PackedInt32Array(73, 74, 71, 72, 75)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(441, 60, 389, 118, 446, 146, 792, 217, 937, 341, 965, 500, 943, 693, 863, 818, 655, 895, 376, 917, 391, 1005, 557, 1000, 758, 958, 915, 883, 1024, 744, 1055, 593, 1054, 426, 1208, 377, 1416, 270, 1594, 233, 1796, 255, 1924, 313, 2055, 483, 2166, 686, 2244, 873, 2332, 1001, 2451, 1080, 2638, 1100, 2752, 1074, 2870, 995, 3055, 829, 3121, 788, 3203, 772, 3205, 679, 3124, 682, 3036, 714, 2953, 786, 2802, 923, 2692, 995, 2575, 1007, 2463, 983, 2349, 860, 2275, 682, 2236, 602, 2351, 538, 2450, 443, 2505, 347, 2558, 279, 2621, 245, 2703, 247, 2824, 278, 2921, 315, 3204, 322, 3204, 228, 2942, 225, 2786, 163, 2672, 145, 2552, 170, 2474, 227, 2404, 333, 2301, 448, 2224, 510, 2192, 518, 2166, 472, 2046, 298, 1899, 194, 1793, 160, 1621, 138, 1500, 146, 1331, 204, 1171, 292, 1024, 339, 974, 257, 871, 154, 632, 84)])
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_y1r72"]
+vertices = PackedVector2Array(1812.8, 345.789, 1819.76, 262.297, 1903.43, 302.531, 1884.54, 383.477, 993.898, 1431.15, 912.008, 1432.76, 937.641, 1290.86, 1008.29, 1364.58, 1048.72, 1222.06, 1001.96, 1139.46, 1074.35, 1177.97, 1097.49, 969.297, 1154.36, 1029.96, 1276.96, 828.148, 1238.36, 895.953, 1205.51, 817.68, 1286.77, 743.273, 1559.44, 700.094, 1400.02, 774.82, 1399.46, 684.938, 1570.06, 602.656, 1664.34, 646.648, 1689.5, 519.656, 1770, 553.844, 1829.72, 488.242, 1762.22, 444.891)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(8, 7, 6, 9), PackedInt32Array(10, 8, 9, 11, 12), PackedInt32Array(13, 14, 12, 11, 15, 16), PackedInt32Array(17, 18, 13, 16, 19, 20, 21), PackedInt32Array(21, 20, 22, 23), PackedInt32Array(24, 23, 22, 25, 3), PackedInt32Array(0, 3, 25)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(1811, 247, 1915, 297, 1894, 387, 1838, 494, 1777, 561, 1670, 655, 1564, 709, 1404, 784, 1284, 836, 1247, 901, 1163, 1035, 1083, 1183, 1058, 1226, 1018, 1367, 1002, 1441, 900, 1443, 928, 1288, 993, 1135, 1089, 964, 1198, 811, 1281, 735, 1395, 676, 1565, 594, 1683, 512, 1754, 439, 1803, 343)])
+
+[sub_resource type="Curve2D" id="Curve2D_uynff"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -46, 119, -30.052, -3.53553, 30.052, 3.53553, 427, 116, -31.8198, -9.54594, 31.8198, 9.54594, 708, 153, -20.3563, -22.6923, 20.3563, 22.6923, 896, 244, -16.0181, -24.6945, 16.0181, 24.6945, 995, 362, -41.0463, 5.67307, 41.0463, -5.67307, 1087, 372, 0, 0, 0, 0, 1236, 317, -18.354, 7.00791, 18.354, -7.00791, 1436, 227, -43.9677, 5.82705, 43.9677, -5.82705, 1533, 196, -41.3191, -6.35678, 41.3191, 6.35678, 1741, 203, 0, 0, 0, 0, 1868, 234, 0, 0, 0, 0, 1979, 308, 0, 0, 0, 0, 2060, 401, 0, 0, 0, 0, 2158, 549, 0, 0, 0, 0, 2198, 642, -12.9783, -33.7435, 12.9783, 33.7435, 2259, 786, -24, -23.75, 24, 23.75, 2367, 969, -11.75, -4.75, 11.75, 4.75, 2463, 1035, -36, 2, 36, -2, 2617, 1060, -31.5, 17.75, 31.5, -17.75, 2766, 1021, -7.5, 7.75, 7.5, -7.75, 2912, 897, -9.75, 7, 9.75, -7, 3026, 785, -21.25, 9, 21.25, -9, 3123, 734, 0, 0, 0, 0, 3332, 724)
+}
+point_count = 24
+
+[sub_resource type="Curve2D" id="Curve2D_iwe1b"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -51, 96, -30.052, -3.53553, 30.052, 3.53553, 433, 89, -31.8198, -9.54594, 31.8198, 9.54594, 727, 126, -20.3563, -22.6923, 20.3563, 22.6923, 921, 219, -16.0181, -22.8405, 16.0181, 22.8405, 1011, 339, -42.9004, 13.8839, 42.9004, -13.8839, 1089, 338, 0, 0, 0, 0, 1230, 283, -18.354, 7.00791, 18.354, -7.00791, 1427, 188, -44.4974, 4.76758, 44.4974, -4.76758, 1536, 165, -41.3191, -6.35678, 41.3191, 6.35678, 1747, 172, 0, 0, 0, 0, 1891, 209, -9.2703, -9.53517, 9.2703, 9.53517, 2001, 283, 0, 0, 0, 0, 2088, 375, -3.97299, -10.3298, 3.97299, 10.3298, 2187, 531, 0, 0, 0, 0, 2238, 631, -12.9783, -33.7435, 12.9783, 33.7435, 2292, 771, -26.9135, -23.75, 26.9135, 23.75, 2387, 949, -24.7284, -7.92839, 24.7284, 7.92839, 2485, 1002, -36, 2, 36, -2, 2619, 1027, -31.5, 17.75, 31.5, -17.75, 2759, 983, -19.1543, 19.7192, 19.1543, -19.7192, 2892, 870, -15.7346, 16.1344, 15.7346, -16.1344, 3015, 752, -21.25, 9, 21.25, -9, 3118, 701, 0, 0, 0, 0, 3334, 695)
+}
+point_count = 24
+
+[sub_resource type="Curve2D" id="Curve2D_pghqg"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -50, 146, -32.297, 0.112467, 32.297, -0.112467, 422, 139, -33.7841, -1.68871, 33.7841, 1.68871, 693, 177, -20.3563, -22.6923, 20.3563, 22.6923, 868, 256, -29.7682, -34.7967, 29.7682, 34.7967, 962, 367, -85.103, 16.6171, 85.103, -16.6171, 1073, 411, 0, 0, 0, 0, 1244, 342, -18.354, 7.00791, 18.354, -7.00791, 1430, 253, -43.9677, 5.82705, 43.9677, -5.82705, 1532, 226, -41.3191, -6.35678, 41.3191, 6.35678, 1729, 232, -9.54093, -5.61231, 9.54093, 5.61231, 1847, 258, -15.1532, -10.3828, 15.1532, 10.3828, 1946, 321, 0, 0, 0, 0, 2032, 416, 0, 0, 0, 0, 2118, 558, 0, 0, 0, 0, 2165, 646, -12.9783, -33.7435, 12.9783, 33.7435, 2225, 789, -24, -23.75, 24, 23.75, 2336, 984, -11.75, -4.75, 11.75, 4.75, 2448, 1059, -36, 2, 36, -2, 2616, 1085, -31.5, 17.75, 31.5, -17.75, 2777, 1044, -7.5, 7.75, 7.5, -7.75, 2930, 920, -9.75, 7, 9.75, -7, 3038, 814, -21.25, 9, 21.25, -9, 3128, 763, 0, 0, 0, 0, 3331, 752)
+}
+point_count = 24
+
+[sub_resource type="Curve2D" id="Curve2D_ve71y"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -73, 938, -76.0391, -6.36781, 76.0391, 6.36781, 115, 987, 0, 0, 0, 0, 256, 988, -22.4746, 3.74577, 22.4746, -3.74577, 429, 976, -33.9028, 5.82705, 33.9028, -5.82705, 587, 960, -44.0761, 15.1006, 44.0761, -15.1006, 688, 933, -11.2373, 4.12035, 11.2373, -4.12035, 835, 879, 0, 0, 0, 0, 899, 836, -9.36442, 34.0865, 9.36442, -34.0865, 977, 735, -3.37119, 35.9594, 3.37119, -35.9594, 1002, 614, 0, 0, 0, 0, 1002, 509, -1.76777, 30.052, 1.76777, -30.052, 999, 434, -16.617, 19.0919, 16.617, -19.0919, 1018, 386, -28.6378, 9.19239, 28.6378, -9.19239, 1101, 368, -28.9914, 9.8995, 28.9914, -9.8995, 1245, 311, 0, 0, 0, 0, 1408, 234, -20.8111, 5.64873, 20.8111, -5.64873, 1490, 204, 0, 0, 0, 0, 1589, 194, 0, 0, 0, 0, 1716, 201, -31.183, -12.5992, 31.183, 12.5992, 1864, 235, -32.7579, -30.8681, 32.7579, 30.8681, 1986, 316, -18.5838, -24.2535, 18.5838, 24.2535, 2057, 400, 0, 0, 0, 0, 2129, 502, -41.2624, -6.92957, 41.2624, 6.92957, 2190, 557, 0, 0, 0, 0, 2250, 551, 0, 0, 0, 0, 2319, 502, 0, 0, 0, 0, 2383, 440, 0, 0, 0, 0, 2468, 342, -9.44941, 15.749, 9.44941, -15.749, 2508, 274, -24.8834, 9.13443, 24.8834, -9.13443, 2580, 220, -28.3482, -0.31498, 28.3482, 0.31498, 2658, 202, -17.9539, -3.46478, 17.9539, 3.46478, 2767, 214, 0, 0, 0, 0, 2836, 245, -27.0883, -6.61459, 27.0883, 6.61459, 2917, 277, 0, 0, 0, 0, 3044, 279, 0, 0, 0, 0, 3288, 279)
+}
+point_count = 36
+
+[sub_resource type="Curve2D" id="Curve2D_gv110"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -68, 914, -76.0391, -6.36781, 76.0391, 6.36781, 121, 964, 0, 0, 0, 0, 256, 961, -22.4746, 3.74577, 22.4746, -3.74577, 434, 950, 0, 0, 0, 0, 590, 927, -26.595, 10.8627, 26.595, -10.8627, 678, 906, -11.2373, 4.12035, 11.2373, -4.12035, 825, 855, 0, 0, 0, 0, 891, 815, -9.36442, 34.0865, 9.36442, -34.0865, 949, 714, -3.37119, 35.9594, 3.37119, -35.9594, 973, 601, 0, 0, 0, 0, 979, 506, 0.880888, 30.5817, -0.880888, -30.5817, 974, 428, -22.8944, 11.9514, 22.8944, -11.9514, 995, 365, -28.6378, 9.19239, 28.6378, -9.19239, 1099, 334, -28.9914, 9.8995, 28.9914, -9.8995, 1236, 283, 0, 0, 0, 0, 1400, 200, -20.8111, 5.64873, 20.8111, -5.64873, 1491, 169, 0, 0, 0, 0, 1594, 164, 0, 0, 0, 0, 1722, 168, -31.183, -12.5992, 31.183, 12.5992, 1874, 204, -32.7579, -30.8681, 32.7579, 30.8681, 2006, 287, -18.5838, -24.2535, 18.5838, 24.2535, 2088, 375, 0, 0, 0, 0, 2162, 485, -30.599, 7.66244, 30.599, -7.66244, 2212, 534, 0, 0, 0, 0, 2262, 512, 0, 0, 0, 0, 2312, 465, 0, 0, 0, 0, 2371, 406, 0, 0, 0, 0, 2447, 305, -9.44941, 15.749, 9.44941, -15.749, 2492, 239, -24.8834, 9.13443, 24.8834, -9.13443, 2570, 186, -28.3482, -0.31498, 28.3482, 0.31498, 2656, 165, -17.9539, -3.46478, 17.9539, 3.46478, 2774, 178, 0, 0, 0, 0, 2861, 212, -27.0883, -6.61459, 27.0883, 6.61459, 2925, 234, 0, 0, 0, 0, 3049, 241, 0, 0, 0, 0, 3286, 238)
+}
+point_count = 36
+
+[sub_resource type="Curve2D" id="Curve2D_rxs17"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -83, 965, -76.0391, -6.36781, 76.0391, 6.36781, 100, 1011, 0, 0, 0, 0, 253, 1014, -22.4746, 3.74577, 22.4746, -3.74577, 428, 1003, 0, 0, 0, 0, 593, 981, -33.4815, 9.80324, 33.4815, -9.80324, 690, 960, -44.0807, 21.6015, 44.0807, -21.6015, 849, 911, 0, 0, 0, 0, 914, 861, -9.36442, 34.0865, 9.36442, -34.0865, 1011, 736, -3.37119, 35.9594, 3.37119, -35.9594, 1035, 616, 0, 0, 0, 0, 1038, 539, 0, 0, 0, 0, 1038, 504, 2.012, 18.0828, -2.012, -18.0828, 1034, 460, -5.02732, 4.6889, 5.02732, -4.6889, 1032, 421, -21.3627, 5.83928, 21.3627, -5.83928, 1107, 401, -28.7265, 14.4022, 28.7265, -14.4022, 1253, 339, 0, 0, 0, 0, 1406, 261, -20.8111, 5.64873, 20.8111, -5.64873, 1488, 233, 0, 0, 0, 0, 1582, 222, 0, 0, 0, 0, 1702, 230, -36.5093, -20.7673, 36.5093, 20.7673, 1848, 259, -32.7579, -30.8681, 32.7579, 30.8681, 1952, 328, -18.5838, -24.2535, 18.5838, 24.2535, 2021, 402, 0, 0, 0, 0, 2090, 512, -47.562, -2.20486, 47.562, 2.20486, 2175, 600, 0, 0, 0, 0, 2258, 583, 0, 0, 0, 0, 2337, 535, 0, 0, 0, 0, 2409, 467, 0, 0, 0, 0, 2494, 354, -9.44941, 15.749, 9.44941, -15.749, 2524, 302, -24.8834, 9.13443, 24.8834, -9.13443, 2585, 253, -28.3482, -0.31498, 28.3482, 0.31498, 2654, 236, -17.9539, -3.46478, 17.9539, 3.46478, 2749, 244, 0, 0, 0, 0, 2816, 268, -27.0883, -6.61459, 27.0883, 6.61459, 2909, 305, 0, 0, 0, 0, 3044, 312, 0, 0, 0, 0, 3287, 312)
+}
+point_count = 37
+
+[sub_resource type="Curve2D" id="Curve2D_7hivf"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 944, 1519, -4.67194, 44.0497, 4.67194, -44.0497, 947, 1435, 0, 0, 0, 0, 983, 1308, -8.67646, 27.0305, 8.67646, -27.0305, 1028, 1172, -19.799, 33.9411, 19.799, -33.9411, 1118, 1018, -25.4558, 31.4663, 25.4558, -31.4663, 1196, 891, -26.8701, 17.6777, 26.8701, -17.6777, 1314, 775, -32.1734, 14.8492, 32.1734, -14.8492, 1430, 728, -25.4558, 16.2635, 25.4558, -16.2635, 1637, 614, -16.9706, 18.7383, 16.9706, -18.7383, 1729, 544, -20.7887, 36.2227, 20.7887, -36.2227, 1798, 450, -24.5685, 17.9539, 24.5685, -17.9539, 1867, 294, -22.9936, -14.1741, 22.9936, 14.1741, 1944, 281, -15.1191, -15.1191, 15.1191, 15.1191, 2008, 336, 0, 0, 0, 0, 2093, 447, -22.6786, -18.5838, 22.6786, 18.5838, 2154, 537, -29.9231, 7.24455, 29.9231, -7.24455, 2240, 556, 0, 0, 0, 0, 2328, 492, -33.3879, 34.9628, 33.3879, -34.9628, 2426, 394, -18.2689, 25.8284, 18.2689, -25.8284, 2491, 300, -37.7976, 10.0794, 37.7976, -10.0794, 2571, 226, -18.8988, 3.46478, 18.8988, -3.46478, 2645, 202, -29.9231, -2.51984, 29.9231, 2.51984, 2720, 203, -21.0224, -8.40896, 21.0224, 8.40896, 2807, 229, -34.4768, -7.14762, 34.4768, 7.14762, 2909, 275, 0, 0, 0, 0, 3046, 281, 0, 0, 0, 0, 3287, 278)
+}
+point_count = 27
+
+[sub_resource type="Curve2D" id="Curve2D_egt1d"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 915, 1519, -4.67194, 44.0497, 4.67194, -44.0497, 921, 1423, 0, 0, 0, 0, 950, 1295, -8.67646, 27.0305, 8.67646, -27.0305, 999, 1160, -19.799, 33.9411, 19.799, -33.9411, 1088, 998, -25.4558, 31.4663, 25.4558, -31.4663, 1180, 859, -26.8701, 17.6777, 26.8701, -17.6777, 1306, 743, -32.1734, 14.8492, 32.1734, -14.8492, 1415, 690, -25.4558, 16.2635, 25.4558, -16.2635, 1623, 587, -16.9706, 18.7383, 16.9706, -18.7383, 1709, 512, -20.7887, 36.2227, 20.7887, -36.2227, 1778, 426, -24.5685, 17.9539, 24.5685, -17.9539, 1851, 271, -24.9579, -3.79134, 24.9579, 3.79134, 1928, 244, -15.3997, -17.0834, 15.3997, 17.0834, 2025, 302, 0, 0, 0, 0, 2126, 429, -19.3112, -19.9869, 19.3112, 19.9869, 2180, 517, -21.7853, 10.0507, 21.7853, -10.0507, 2236, 529, 0, 0, 0, 0, 2308, 466, -29.1787, 39.4527, 29.1787, -39.4527, 2399, 372, -18.2689, 25.8284, 18.2689, -25.8284, 2463, 280, -50.9866, 23.2683, 50.9866, -23.2683, 2561, 191, -21.1437, 0.939244, 21.1437, -0.939244, 2645, 166, -29.9231, -2.51984, 29.9231, 2.51984, 2720, 170, -21.0224, -8.40896, 21.0224, 8.40896, 2818, 192, -34.4768, -7.14762, 34.4768, 7.14762, 2918, 232, 0, 0, 0, 0, 3050, 240, 0, 0, 0, 0, 3286, 237)
+}
+point_count = 27
+
+[sub_resource type="Curve2D" id="Curve2D_o00kg"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 976, 1523, -4.67194, 44.0497, 4.67194, -44.0497, 981, 1437, 0, 0, 0, 0, 1019, 1311, -8.67646, 27.0305, 8.67646, -27.0305, 1060, 1181, -19.799, 33.9411, 19.799, -33.9411, 1141, 1033, -25.4558, 31.4663, 25.4558, -31.4663, 1215, 916, -26.8701, 17.6777, 26.8701, -17.6777, 1321, 806, -32.1734, 14.8492, 32.1734, -14.8492, 1438, 753, -25.4558, 16.2635, 25.4558, -16.2635, 1650, 644, -16.9706, 18.7383, 16.9706, -18.7383, 1746, 569, -20.7887, 36.2227, 20.7887, -36.2227, 1821, 464, -13.6245, 31.4234, 13.6245, -31.4234, 1879, 321, -13.7332, -5.75565, 13.7332, 5.75565, 1925, 303, -12.8741, -16.2415, 12.8741, 16.2415, 1982, 356, 0, 0, 0, 0, 2060, 457, -32.7807, -25.038, 32.7807, 25.038, 2130, 576, -52.9336, 19.8722, 52.9336, -19.8722, 2234, 591, -25.2554, 28.3422, 25.2554, -28.3422, 2355, 519, -28.6174, 39.7333, 28.6174, -39.7333, 2452, 410, -16.5852, 26.6702, 16.5852, -26.6702, 2515, 317, -27.4149, 14.2886, 27.4149, -14.2886, 2575, 255, -18.8988, 3.46478, 18.8988, -3.46478, 2640, 237, -29.9231, -2.51984, 29.9231, 2.51984, 2712, 239, -21.0224, -8.40896, 21.0224, 8.40896, 2790, 257, -34.4768, -7.14762, 34.4768, 7.14762, 2896, 301, 0, 0, 0, 0, 3042, 312, 0, 0, 0, 0, 3287, 312)
+}
+point_count = 27
+
+[sub_resource type="Curve2D" id="Curve2D_pobsf"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2222, 1190, 0, 0, 0, 0, 2264, 1111, -9.43874, 16.9897, 9.43874, -16.9897, 2307, 1041, -36.1585, -8.82941, 36.1585, 8.82941, 2372, 994, -26.0678, -9.24986, 26.0678, 9.24986, 2462, 1026, -18.9202, -2.10224, 18.9202, 2.10224, 2565, 1056, -29.0109, 7.14762, 29.0109, -7.14762, 2660, 1056, -48.772, 36.579, 48.772, -36.579, 2788, 1004, 0, 0, 0, 0, 2887, 921, 0, 0, 0, 0, 2964, 846, -42.0661, 16.6677, 42.0661, -16.6677, 3051, 772, -34.526, 4.7622, 34.526, -4.7622, 3133, 732, 0, 0, 0, 0, 3332, 722)
+}
+point_count = 13
+
+[sub_resource type="Curve2D" id="Curve2D_5ibxa"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2203, 1162, 0, 0, 0, 0, 2238, 1097, -13.4072, 20.5614, 13.4072, -20.5614, 2286, 1020, -32.6813, 4.32247, 32.6813, -4.32247, 2367, 958, -28.4489, -11.631, 28.4489, 11.631, 2465, 992, -18.9202, -2.10224, 18.9202, 2.10224, 2575, 1023, -29.0109, 7.14762, 29.0109, -7.14762, 2660, 1019, -48.772, 36.579, 48.772, -36.579, 2779, 969, 0, 0, 0, 0, 2873, 886, 0, 0, 0, 0, 2944, 822, -42.8598, 23.0173, 42.8598, -23.0173, 3036, 735, -34.526, 4.7622, 34.526, -4.7622, 3129, 700, 0, 0, 0, 0, 3334, 696)
+}
+point_count = 13
+
+[sub_resource type="Curve2D" id="Curve2D_c2pgm"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2244, 1227, -12.5, 23, 12.5, -23, 2290, 1125, -9.43874, 16.9897, 9.43874, -16.9897, 2326, 1066, -39.6585, -8.82941, 39.6585, 8.82941, 2379, 1029, -26.0678, -9.24986, 26.0678, 9.24986, 2450, 1057, -18.9202, -2.10224, 18.9202, 2.10224, 2559, 1080, -29.0109, 7.14762, 29.0109, -7.14762, 2657, 1080, -45.522, 30.079, 45.522, -30.079, 2799, 1030, 0, 0, 0, 0, 2903, 942, 0, 0, 0, 0, 2989, 864, -42.0661, 16.6677, 42.0661, -16.6677, 3073, 792, -37.276, 3.5122, 37.276, -3.5122, 3145, 759, 0, 0, 0, 0, 3330, 752)
+}
+point_count = 13
+
+[sub_resource type="Resource" id="Resource_qax6h"]
+metadata/__load_path__ = "res://Assets/Images/UI/SkillButton/Firerain/firerain-canuse.png"
+
+[sub_resource type="Resource" id="Resource_qneuu"]
+metadata/__load_path__ = "res://Assets/Images/UI/SkillButton/Firerain/firerain-select.png"
+
+[sub_resource type="Resource" id="Resource_87trf"]
+metadata/__load_path__ = "res://Assets/Images/UI/SkillButton/Reinforce/reinforce_canuse.png"
+
+[sub_resource type="Resource" id="Resource_s4115"]
+metadata/__load_path__ = "res://Assets/Images/UI/SkillButton/Reinforce/reinforce_select.png"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lldhd"]
+size = Vector2(3284, 1516)
+
+[sub_resource type="Resource" id="Resource_hijee"]
+script = ExtResource("58_kkhwc")
+enemy_name = "野区丧尸"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_cb72p"]
+script = ExtResource("58_kkhwc")
+enemy_name = "溺尸"
+enemy_count = 17
+
+[sub_resource type="Resource" id="Resource_yd7ym"]
+script = ExtResource("58_kkhwc")
+enemy_name = "腐化爬行者"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_hr0kc"]
+script = ExtResource("57_ovstj")
+wave_summon_text_list = Array[ExtResource("58_mu747")]([SubResource("Resource_hijee"), SubResource("Resource_cb72p"), SubResource("Resource_yd7ym")])
+
+[sub_resource type="Resource" id="Resource_es2cg"]
+script = ExtResource("58_kkhwc")
+enemy_name = "终末"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_vksjk"]
+script = ExtResource("58_kkhwc")
+enemy_name = "野区丧尸"
+enemy_count = 18
+
+[sub_resource type="Resource" id="Resource_i004r"]
+script = ExtResource("58_kkhwc")
+enemy_name = "腐化爬行者"
+enemy_count = 7
+
+[sub_resource type="Resource" id="Resource_rmqm0"]
+script = ExtResource("58_kkhwc")
+enemy_name = "腐化蜘蛛"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_cajot"]
+script = ExtResource("57_ovstj")
+wave_summon_text_list = Array[ExtResource("58_mu747")]([SubResource("Resource_es2cg"), SubResource("Resource_vksjk"), SubResource("Resource_i004r"), SubResource("Resource_rmqm0")])
+
+[sub_resource type="Resource" id="Resource_7xbm3"]
+script = ExtResource("58_kkhwc")
+enemy_name = "丛林幻翼"
+enemy_count = 29
+
+[sub_resource type="Resource" id="Resource_0slqv"]
+script = ExtResource("57_ovstj")
+wave_summon_text_list = Array[ExtResource("58_mu747")]([SubResource("Resource_7xbm3")])
+
+[sub_resource type="Resource" id="Resource_ekavn"]
+script = ExtResource("58_kkhwc")
+enemy_name = "野区丧尸"
+enemy_count = 28
+
+[sub_resource type="Resource" id="Resource_iflfw"]
+script = ExtResource("58_kkhwc")
+enemy_name = "终末"
+enemy_count = 3
+
+[sub_resource type="Resource" id="Resource_fodts"]
+script = ExtResource("58_kkhwc")
+enemy_name = "腐化爬行者"
+enemy_count = 14
+
+[sub_resource type="Resource" id="Resource_3aicj"]
+script = ExtResource("57_ovstj")
+wave_summon_text_list = Array[ExtResource("58_mu747")]([SubResource("Resource_ekavn"), SubResource("Resource_iflfw"), SubResource("Resource_fodts")])
+
+[sub_resource type="Resource" id="Resource_5wxd4"]
+script = ExtResource("58_kkhwc")
+enemy_name = "野区丧尸"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_ywyew"]
+script = ExtResource("58_kkhwc")
+enemy_name = "腐化爬行者"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_3dhu7"]
+script = ExtResource("58_kkhwc")
+enemy_name = "溺尸"
+enemy_count = 15
+
+[sub_resource type="Resource" id="Resource_o2ybn"]
+script = ExtResource("58_kkhwc")
+enemy_name = "腐化蜘蛛"
+enemy_count = 8
+
+[sub_resource type="Resource" id="Resource_1o7if"]
+script = ExtResource("57_ovstj")
+wave_summon_text_list = Array[ExtResource("58_mu747")]([SubResource("Resource_5wxd4"), SubResource("Resource_ywyew"), SubResource("Resource_3dhu7"), SubResource("Resource_o2ybn")])
+
+[sub_resource type="Resource" id="Resource_mo1k0"]
+script = ExtResource("58_kkhwc")
+enemy_name = "终末"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_ggw0j"]
+script = ExtResource("58_kkhwc")
+enemy_name = "野区丧尸"
+enemy_count = 27
+
+[sub_resource type="Resource" id="Resource_jpxh7"]
+script = ExtResource("58_kkhwc")
+enemy_name = "腐化爬行者"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_ukqgk"]
+script = ExtResource("58_kkhwc")
+enemy_name = "溺尸斗士"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_kjmhk"]
+script = ExtResource("57_ovstj")
+wave_summon_text_list = Array[ExtResource("58_mu747")]([SubResource("Resource_mo1k0"), SubResource("Resource_ggw0j"), SubResource("Resource_jpxh7"), SubResource("Resource_ukqgk")])
+
+[sub_resource type="Resource" id="Resource_tf6ix"]
+script = ExtResource("58_kkhwc")
+enemy_name = "丛林幻翼"
+enemy_count = 27
+
+[sub_resource type="Resource" id="Resource_skwt0"]
+script = ExtResource("57_ovstj")
+wave_summon_text_list = Array[ExtResource("58_mu747")]([SubResource("Resource_tf6ix")])
+
+[sub_resource type="Resource" id="Resource_1mdjm"]
+script = ExtResource("58_kkhwc")
+enemy_name = "终末"
+enemy_count = 3
+
+[sub_resource type="Resource" id="Resource_0cyat"]
+script = ExtResource("58_kkhwc")
+enemy_name = "野区丧尸"
+enemy_count = 33
+
+[sub_resource type="Resource" id="Resource_j5l2q"]
+script = ExtResource("58_kkhwc")
+enemy_name = "腐化爬行者"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_6dm8d"]
+script = ExtResource("57_ovstj")
+wave_summon_text_list = Array[ExtResource("58_mu747")]([SubResource("Resource_1mdjm"), SubResource("Resource_0cyat"), SubResource("Resource_j5l2q")])
+
+[sub_resource type="Resource" id="Resource_67byb"]
+script = ExtResource("58_kkhwc")
+enemy_name = "溺尸斗士"
+enemy_count = 9
+
+[sub_resource type="Resource" id="Resource_6vwlr"]
+script = ExtResource("58_kkhwc")
+enemy_name = "腐化爬行者"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_vh4jy"]
+script = ExtResource("58_kkhwc")
+enemy_name = "腐化蜘蛛"
+enemy_count = 11
+
+[sub_resource type="Resource" id="Resource_o734r"]
+script = ExtResource("57_ovstj")
+wave_summon_text_list = Array[ExtResource("58_mu747")]([SubResource("Resource_67byb"), SubResource("Resource_6vwlr"), SubResource("Resource_vh4jy")])
+
+[sub_resource type="Resource" id="Resource_at4j8"]
+script = ExtResource("58_kkhwc")
+enemy_name = "丧尸野狼"
+enemy_count = 10
+
+[sub_resource type="Resource" id="Resource_fkg6a"]
+script = ExtResource("58_kkhwc")
+enemy_name = "溺尸斗士"
+enemy_count = 8
+
+[sub_resource type="Resource" id="Resource_avy2f"]
+script = ExtResource("58_kkhwc")
+enemy_name = "腐化爬行者"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_aixel"]
+script = ExtResource("58_kkhwc")
+enemy_name = "腐化蜘蛛"
+enemy_count = 8
+
+[sub_resource type="Resource" id="Resource_lbegu"]
+script = ExtResource("57_ovstj")
+wave_summon_text_list = Array[ExtResource("58_mu747")]([SubResource("Resource_at4j8"), SubResource("Resource_fkg6a"), SubResource("Resource_avy2f"), SubResource("Resource_aixel")])
+
+[sub_resource type="Resource" id="Resource_0xsmp"]
+script = ExtResource("58_kkhwc")
+enemy_name = "溺尸斗士"
+enemy_count = 13
+
+[sub_resource type="Resource" id="Resource_dicvo"]
+script = ExtResource("58_kkhwc")
+enemy_name = "腐化蜘蛛"
+enemy_count = 5
+
+[sub_resource type="Resource" id="Resource_kvrsh"]
+script = ExtResource("58_kkhwc")
+enemy_name = "腐化爬行者"
+enemy_count = 13
+
+[sub_resource type="Resource" id="Resource_o3r2x"]
+script = ExtResource("57_ovstj")
+wave_summon_text_list = Array[ExtResource("58_mu747")]([SubResource("Resource_0xsmp"), SubResource("Resource_dicvo"), SubResource("Resource_kvrsh")])
+
+[sub_resource type="Resource" id="Resource_wtaga"]
+script = ExtResource("58_kkhwc")
+enemy_name = "溺尸斗士"
+enemy_count = 12
+
+[sub_resource type="Resource" id="Resource_xnh5k"]
+script = ExtResource("58_kkhwc")
+enemy_name = "腐化蜘蛛"
+enemy_count = 12
+
+[sub_resource type="Resource" id="Resource_clxkc"]
+script = ExtResource("58_kkhwc")
+enemy_name = "腐化爬行者"
+enemy_count = 14
+
+[sub_resource type="Resource" id="Resource_moulh"]
+script = ExtResource("58_kkhwc")
+enemy_name = "丧尸野狼"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_aih8f"]
+script = ExtResource("57_ovstj")
+wave_summon_text_list = Array[ExtResource("58_mu747")]([SubResource("Resource_wtaga"), SubResource("Resource_xnh5k"), SubResource("Resource_clxkc"), SubResource("Resource_moulh")])
+
+[node name="Stage7Diamond" instance=ExtResource("1_quedn")]
+stage_count = 7
+stage_mode = 1
+limit_tech_level = 3
+current_health = 1
+current_money = 1800
+total_waves = 5
+stage_summon_config = SubResource("Resource_a3eio")
+
+[node name="EnemyScenePreloadConfig" parent="." index="0"]
+chapter1_preload = false
+chapter2_preload = true
+
+[node name="StageCamera" parent="." index="2"]
+position = Vector2(2237, 684)
+min_zoom_length_desktop = 0.75
+
+[node name="CollisionShape2D" parent="StageCamera" index="0"]
+position = Vector2(1600, 720)
+shape = SubResource("RectangleShape2D_he47j")
+
+[node name="PreparationMusic" parent="Musics" index="0"]
+stream = ExtResource("5_osrog")
+
+[node name="BattleMusic" parent="Musics" index="1"]
+stream = ExtResource("6_y68wf")
+
+[node name="BasedSprite" parent="Background" index="0"]
+texture = ExtResource("7_ilh0s")
+
+[node name="ProtectionPoint" parent="Background/BasedSprite" index="0"]
+position = Vector2(3157, 273)
+
+[node name="ProtectionPoint2" type="Sprite2D" parent="Background/BasedSprite" index="1"]
+position = Vector2(3099, 736)
+texture = ExtResource("8_esquh")
+script = ExtResource("9_pgrll")
+
+[node name="Flag" parent="Background" index="1"]
+position = Vector2(3158, 218)
+texture = null
+
+[node name="Flag2" type="Sprite2D" parent="Background" index="2"]
+position = Vector2(3158, 345)
+texture = ExtResource("14_jcoci")
+offset = Vector2(-7, -22)
+region_enabled = true
+region_rect = Rect2(40, 38, 40, 73)
+
+[node name="Flag3" type="Sprite2D" parent="Background" index="3"]
+position = Vector2(3083, 692)
+texture = ExtResource("14_jcoci")
+offset = Vector2(-7, -22)
+region_enabled = true
+region_rect = Rect2(40, 38, 40, 73)
+
+[node name="Flag4" type="Sprite2D" parent="Background" index="4"]
+position = Vector2(3118, 804)
+texture = ExtResource("14_jcoci")
+offset = Vector2(-7, -22)
+region_enabled = true
+region_rect = Rect2(40, 38, 40, 73)
+
+[node name="TreeMask1" type="Sprite2D" parent="Background" index="5"]
+position = Vector2(390, 581)
+texture = ExtResource("15_jkf85")
+centered = false
+offset = Vector2(-390, -581)
+
+[node name="TreeMask2" type="Sprite2D" parent="Background" index="6"]
+z_index = 1
+texture = ExtResource("16_jvuwd")
+centered = false
+
+[node name="CoconutTrees" type="Node2D" parent="Background" index="7"]
+y_sort_enabled = true
+
+[node name="CoconutTree" type="AnimatedSprite2D" parent="Background/CoconutTrees" index="0" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(1143, 677)
+sprite_frames = SubResource("SpriteFrames_3aos7")
+autoplay = "default"
+speed_scale = 0.5
+offset = Vector2(-31, -105)
+script = ExtResource("36_ykiuh")
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="CoconutTree2" type="AnimatedSprite2D" parent="Background/CoconutTrees" index="1" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(940, 936)
+sprite_frames = SubResource("SpriteFrames_6lkjn")
+autoplay = "default"
+speed_scale = 0.5
+offset = Vector2(-31, -105)
+script = ExtResource("36_ykiuh")
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="CoconutTree3" type="AnimatedSprite2D" parent="Background/CoconutTrees" index="2" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(1365, 1010)
+sprite_frames = SubResource("SpriteFrames_6lkjn")
+autoplay = "default"
+speed_scale = 0.5
+offset = Vector2(-31, -105)
+script = ExtResource("36_ykiuh")
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="CoconutTree4" type="AnimatedSprite2D" parent="Background/CoconutTrees" index="3" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(1795, 945)
+sprite_frames = SubResource("SpriteFrames_6lkjn")
+autoplay = "default"
+speed_scale = 0.5
+offset = Vector2(-31, -105)
+script = ExtResource("36_ykiuh")
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="CoconutTree5" type="AnimatedSprite2D" parent="Background/CoconutTrees" index="4" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(1972, 828)
+sprite_frames = SubResource("SpriteFrames_6lkjn")
+autoplay = "default"
+speed_scale = 0.5
+offset = Vector2(-31, -105)
+script = ExtResource("36_ykiuh")
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="CoconutTree6" type="AnimatedSprite2D" parent="Background/CoconutTrees" index="5" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(1395, 393)
+sprite_frames = SubResource("SpriteFrames_6lkjn")
+autoplay = "default"
+speed_scale = 0.5
+offset = Vector2(-31, -105)
+script = ExtResource("36_ykiuh")
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="CoconutTree7" type="AnimatedSprite2D" parent="Background/CoconutTrees" index="6" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(1335, 88)
+sprite_frames = SubResource("SpriteFrames_6lkjn")
+autoplay = "default"
+speed_scale = 0.5
+offset = Vector2(-31, -105)
+script = ExtResource("36_ykiuh")
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="CoconutTree8" type="AnimatedSprite2D" parent="Background/CoconutTrees" index="7" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(2271, 195)
+sprite_frames = SubResource("SpriteFrames_6lkjn")
+autoplay = "default"
+speed_scale = 0.5
+offset = Vector2(-31, -105)
+script = ExtResource("36_ykiuh")
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="CoconutTree9" type="AnimatedSprite2D" parent="Background/CoconutTrees" index="8" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(2583, 648)
+sprite_frames = SubResource("SpriteFrames_6lkjn")
+autoplay = "default"
+speed_scale = 0.5
+offset = Vector2(-31, -105)
+script = ExtResource("36_ykiuh")
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="CoconutTree10" type="AnimatedSprite2D" parent="Background/CoconutTrees" index="9" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(2802, 654)
+sprite_frames = SubResource("SpriteFrames_6lkjn")
+autoplay = "default"
+speed_scale = 0.5
+offset = Vector2(-31, -105)
+script = ExtResource("36_ykiuh")
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="CoconutTree11" type="AnimatedSprite2D" parent="Background/CoconutTrees" index="10" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(2474, 1196)
+sprite_frames = SubResource("SpriteFrames_6lkjn")
+autoplay = "default"
+speed_scale = 0.5
+offset = Vector2(-31, -105)
+script = ExtResource("36_ykiuh")
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="CoconutTree12" type="AnimatedSprite2D" parent="Background/CoconutTrees" index="11" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(2978, 111)
+sprite_frames = SubResource("SpriteFrames_6lkjn")
+autoplay = "default"
+speed_scale = 0.5
+offset = Vector2(-31, -105)
+script = ExtResource("36_ykiuh")
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="CoconutTree13" type="AnimatedSprite2D" parent="Background/CoconutTrees" index="12" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(1156, 1304)
+sprite_frames = SubResource("SpriteFrames_6lkjn")
+autoplay = "default"
+speed_scale = 0.5
+offset = Vector2(-31, -105)
+script = ExtResource("36_ykiuh")
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="RainLayer" parent="Background" index="8" instance=ExtResource("37_1dv70")]
+
+[node name="RainLayer" parent="Background/RainLayer" index="0"]
+wave_step_list = Array[int]([0, 0, 0, 0, 0])
+
+[node name="CollisionShape2D" parent="Background/RainLayer/HitArea" index="0"]
+position = Vector2(1597, 719.5)
+shape = SubResource("RectangleShape2D_p7b3s")
+
+[node name="LakePops" type="Node2D" parent="Background" index="9"]
+
+[node name="LakePop" type="AnimatedSprite2D" parent="Background/LakePops" index="0" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(1658, 1197)
+sprite_frames = SubResource("SpriteFrames_psnp3")
+autoplay = "default"
+frame_progress = 0.545891
+script = ExtResource("44_4y4yt")
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="LakePop2" type="AnimatedSprite2D" parent="Background/LakePops" index="1" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(2043, 1362)
+sprite_frames = SubResource("SpriteFrames_psnp3")
+autoplay = "default"
+frame_progress = 0.340908
+script = ExtResource("44_4y4yt")
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="LakePop3" type="AnimatedSprite2D" parent="Background/LakePops" index="2" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(1537, 1387)
+sprite_frames = SubResource("SpriteFrames_psnp3")
+autoplay = "default"
+frame_progress = 0.952057
+script = ExtResource("44_4y4yt")
+show_on_raining_step = 1
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="LakePop4" type="AnimatedSprite2D" parent="Background/LakePops" index="3" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(1312, 1393)
+sprite_frames = SubResource("SpriteFrames_psnp3")
+autoplay = "default"
+frame_progress = 0.439037
+script = ExtResource("44_4y4yt")
+show_on_raining_step = 2
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="LakePop5" type="AnimatedSprite2D" parent="Background/LakePops" index="4" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(2594, 1333)
+sprite_frames = SubResource("SpriteFrames_psnp3")
+autoplay = "default"
+frame_progress = 0.439037
+script = ExtResource("44_4y4yt")
+show_on_raining_step = 1
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="LakePop6" type="AnimatedSprite2D" parent="Background/LakePops" index="5" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(2957, 1310)
+sprite_frames = SubResource("SpriteFrames_psnp3")
+autoplay = "default"
+frame_progress = 0.439037
+script = ExtResource("44_4y4yt")
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="LakePop7" type="AnimatedSprite2D" parent="Background/LakePops" index="6" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(3154, 1156)
+sprite_frames = SubResource("SpriteFrames_psnp3")
+autoplay = "default"
+frame_progress = 0.439037
+script = ExtResource("44_4y4yt")
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="LakePop8" type="AnimatedSprite2D" parent="Background/LakePops" index="7" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(3121, 1309)
+sprite_frames = SubResource("SpriteFrames_psnp3")
+autoplay = "default"
+frame_progress = 0.439037
+script = ExtResource("44_4y4yt")
+show_on_raining_step = 1
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="LakePop9" type="AnimatedSprite2D" parent="Background/LakePops" index="8" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(3050, 1408)
+sprite_frames = SubResource("SpriteFrames_psnp3")
+autoplay = "default"
+frame_progress = 0.439037
+script = ExtResource("44_4y4yt")
+show_on_raining_step = 2
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="LakePop10" type="AnimatedSprite2D" parent="Background/LakePops" index="9" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(2778, 1436)
+sprite_frames = SubResource("SpriteFrames_psnp3")
+autoplay = "default"
+frame_progress = 0.439037
+script = ExtResource("44_4y4yt")
+show_on_raining_step = 3
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="LakePop11" type="AnimatedSprite2D" parent="Background/LakePops" index="10" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(2254, 1373)
+sprite_frames = SubResource("SpriteFrames_psnp3")
+autoplay = "default"
+frame_progress = 0.439037
+script = ExtResource("44_4y4yt")
+show_on_raining_step = 3
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="LakePop12" type="AnimatedSprite2D" parent="Background/LakePops" index="11" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(1903, 1408)
+sprite_frames = SubResource("SpriteFrames_psnp3")
+autoplay = "default"
+frame_progress = 0.439037
+script = ExtResource("44_4y4yt")
+show_on_raining_step = 3
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="LakePop14" type="AnimatedSprite2D" parent="Background/LakePops" index="12" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(1651, 1343)
+sprite_frames = SubResource("SpriteFrames_psnp3")
+autoplay = "default"
+frame_progress = 0.439037
+script = ExtResource("44_4y4yt")
+show_on_raining_step = 1
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="LakePop15" type="AnimatedSprite2D" parent="Background/LakePops" index="13" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(2181, 1316)
+sprite_frames = SubResource("SpriteFrames_psnp3")
+autoplay = "default"
+frame_progress = 0.439037
+script = ExtResource("44_4y4yt")
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="LakePop16" type="AnimatedSprite2D" parent="Background/LakePops" index="14" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(2755, 1318)
+sprite_frames = SubResource("SpriteFrames_psnp3")
+autoplay = "default"
+frame_progress = 0.439037
+script = ExtResource("44_4y4yt")
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="LakePop17" type="AnimatedSprite2D" parent="Background/LakePops" index="15" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(1917, 1242)
+sprite_frames = SubResource("SpriteFrames_psnp3")
+autoplay = "default"
+frame_progress = 0.439037
+script = ExtResource("44_4y4yt")
+show_on_raining_step = 1
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="LakePop18" type="AnimatedSprite2D" parent="Background/LakePops" index="16" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(3051, 1195)
+sprite_frames = SubResource("SpriteFrames_psnp3")
+autoplay = "default"
+frame_progress = 0.439037
+script = ExtResource("44_4y4yt")
+show_on_raining_step = 1
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="LakePop13" type="AnimatedSprite2D" parent="Background/LakePops" index="17" node_paths=PackedStringArray("linked_rain_system")]
+position = Vector2(1494, 1235)
+scale = Vector2(0.37388, 0.608432)
+sprite_frames = SubResource("SpriteFrames_psnp3")
+autoplay = "default"
+frame_progress = 0.820737
+script = ExtResource("44_4y4yt")
+show_on_raining_step = 1
+linked_rain_system = NodePath("../../RainLayer/RainLayer")
+
+[node name="Hammer" type="Sprite2D" parent="Background" index="10"]
+position = Vector2(2227, 286)
+scale = Vector2(0.569332, 0.569332)
+texture = ExtResource("39_y8bl1")
+offset = Vector2(1, -29)
+
+[node name="StageNavigationRegion" parent="." index="7"]
+navigation_polygon = SubResource("NavigationPolygon_vkp47")
+
+[node name="FirerainRandomRegion" parent="FirerainRandomRegions" index="0"]
+navigation_polygon = SubResource("NavigationPolygon_nrqd4")
+
+[node name="FirerainRandomRegion2" type="NavigationRegion2D" parent="FirerainRandomRegions" index="1"]
+navigation_polygon = SubResource("NavigationPolygon_y1r72")
+use_edge_connections = false
+navigation_layers = 2
+
+[node name="EnemyPath" type="Path2D" parent="Enemies" index="0"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_uynff")
+script = ExtResource("45_rwfvc")
+path_summon_config = ExtResource("45_j3vad")
+
+[node name="EnemyPath2" type="Path2D" parent="Enemies" index="1"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_iwe1b")
+script = ExtResource("45_rwfvc")
+path_summon_config = ExtResource("46_rxetw")
+
+[node name="EnemyPath3" type="Path2D" parent="Enemies" index="2"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_pghqg")
+script = ExtResource("45_rwfvc")
+path_summon_config = ExtResource("47_mqnwx")
+
+[node name="EnemyPath4" type="Path2D" parent="Enemies" index="3"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_ve71y")
+script = ExtResource("45_rwfvc")
+path_summon_config = ExtResource("48_6leqj")
+
+[node name="EnemyPath5" type="Path2D" parent="Enemies" index="4"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_gv110")
+script = ExtResource("45_rwfvc")
+path_summon_config = ExtResource("49_cbg2b")
+
+[node name="EnemyPath6" type="Path2D" parent="Enemies" index="5"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_rxs17")
+script = ExtResource("45_rwfvc")
+path_summon_config = ExtResource("50_jxp4x")
+
+[node name="EnemyPath7" type="Path2D" parent="Enemies" index="6"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_7hivf")
+script = ExtResource("45_rwfvc")
+path_summon_config = ExtResource("51_86v7w")
+
+[node name="EnemyPath8" type="Path2D" parent="Enemies" index="7"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_egt1d")
+script = ExtResource("45_rwfvc")
+path_summon_config = ExtResource("52_g8cd2")
+
+[node name="EnemyPath9" type="Path2D" parent="Enemies" index="8"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_o00kg")
+script = ExtResource("45_rwfvc")
+path_summon_config = ExtResource("53_16xh1")
+
+[node name="EnemyPath10" type="Path2D" parent="Enemies" index="9"]
+curve = SubResource("Curve2D_pobsf")
+script = ExtResource("54_nfa2a")
+path_summon_config = ExtResource("55_xrhpb")
+
+[node name="EnemyPath11" type="Path2D" parent="Enemies" index="10"]
+curve = SubResource("Curve2D_5ibxa")
+script = ExtResource("54_nfa2a")
+path_summon_config = ExtResource("56_p7vwa")
+
+[node name="EnemyPath12" type="Path2D" parent="Enemies" index="11"]
+curve = SubResource("Curve2D_c2pgm")
+script = ExtResource("54_nfa2a")
+path_summon_config = ExtResource("57_mycxm")
+
+[node name="DefenceTowerBased" parent="Towers" index="0" instance=ExtResource("58_w6c3j")]
+position = Vector2(890, 401)
+based_skin = 1
+
+[node name="DefenceTowerBased2" parent="Towers" index="1" instance=ExtResource("58_w6c3j")]
+position = Vector2(794, 267)
+based_skin = 1
+
+[node name="DefenceTowerBased3" parent="Towers" index="2" instance=ExtResource("58_w6c3j")]
+position = Vector2(585, 212)
+based_skin = 1
+
+[node name="DefenceTowerBased4" parent="Towers" index="3" instance=ExtResource("58_w6c3j")]
+position = Vector2(900, 598)
+based_skin = 1
+
+[node name="DefenceTowerBased5" parent="Towers" index="4" instance=ExtResource("58_w6c3j")]
+position = Vector2(758, 825)
+based_skin = 1
+
+[node name="DefenceTowerBased6" parent="Towers" index="5" instance=ExtResource("58_w6c3j")]
+position = Vector2(524, 880)
+based_skin = 1
+
+[node name="DefenceTowerBased7" parent="Towers" index="6" instance=ExtResource("58_w6c3j")]
+position = Vector2(714, 1004)
+based_skin = 1
+
+[node name="DefenceTowerBased8" parent="Towers" index="7" instance=ExtResource("58_w6c3j")]
+position = Vector2(1043, 827)
+based_skin = 1
+
+[node name="DefenceTowerBased9" parent="Towers" index="8" instance=ExtResource("58_w6c3j")]
+position = Vector2(1141, 476)
+based_skin = 1
+
+[node name="DefenceTowerBased10" parent="Towers" index="9" instance=ExtResource("58_w6c3j")]
+position = Vector2(1281, 201)
+based_skin = 3
+
+[node name="DefenceTowerBased12" parent="Towers" index="10" instance=ExtResource("58_w6c3j")]
+position = Vector2(1740, 288)
+based_skin = 3
+
+[node name="DefenceTowerBased14" parent="Towers" index="11" instance=ExtResource("58_w6c3j")]
+position = Vector2(1532, 279)
+based_skin = 3
+
+[node name="DefenceTowerBased15" parent="Towers" index="12" instance=ExtResource("58_w6c3j")]
+position = Vector2(1927, 151)
+based_skin = 3
+
+[node name="DefenceTowerBased16" parent="Towers" index="13" instance=ExtResource("58_w6c3j")]
+position = Vector2(2214, 445)
+based_skin = 3
+
+[node name="DefenceTowerBased17" parent="Towers" index="14" instance=ExtResource("58_w6c3j")]
+position = Vector2(1929, 416)
+based_skin = 3
+
+[node name="DefenceTowerBased18" parent="Towers" index="15" instance=ExtResource("58_w6c3j")]
+position = Vector2(2310, 626)
+based_skin = 3
+
+[node name="DefenceTowerBased19" parent="Towers" index="16" instance=ExtResource("58_w6c3j")]
+position = Vector2(2063, 619)
+based_skin = 3
+
+[node name="DefenceTowerBased20" parent="Towers" index="17" instance=ExtResource("58_w6c3j")]
+position = Vector2(2549, 959)
+based_skin = 3
+
+[node name="DefenceTowerBased21" parent="Towers" index="18" instance=ExtResource("58_w6c3j")]
+position = Vector2(2656, 285)
+based_skin = 3
+
+[node name="DefenceTowerBased22" parent="Towers" index="19" instance=ExtResource("58_w6c3j")]
+position = Vector2(2971, 185)
+based_skin = 3
+
+[node name="DefenceTowerBased23" parent="Towers" index="20" instance=ExtResource("58_w6c3j")]
+position = Vector2(2855, 341)
+based_skin = 3
+
+[node name="DefenceTowerBased24" parent="Towers" index="21" instance=ExtResource("58_w6c3j")]
+position = Vector2(2452, 173)
+based_skin = 3
+
+[node name="DefenceTowerBased25" parent="Towers" index="22" instance=ExtResource("58_w6c3j")]
+position = Vector2(2180, 901)
+based_skin = 3
+
+[node name="DefenceTowerBased26" parent="Towers" index="23" instance=ExtResource("58_w6c3j")]
+position = Vector2(2773, 1111)
+based_skin = 3
+
+[node name="DefenceTowerBased27" parent="Towers" index="24" instance=ExtResource("58_w6c3j")]
+position = Vector2(2866, 793)
+based_skin = 3
+
+[node name="DefenceTowerBased28" parent="Towers" index="25" instance=ExtResource("58_w6c3j")]
+position = Vector2(2745, 896)
+based_skin = 3
+
+[node name="DefenceTowerBased29" parent="Towers" index="26" instance=ExtResource("58_w6c3j")]
+position = Vector2(1446, 594)
+based_skin = 3
+
+[node name="DefenceTowerBased30" parent="Towers" index="27" instance=ExtResource("58_w6c3j")]
+position = Vector2(1422, 827)
+based_skin = 3
+
+[node name="DefenceTowerBased31" parent="Towers" index="28" instance=ExtResource("58_w6c3j")]
+position = Vector2(1658, 470)
+based_skin = 3
+
+[node name="DefenceTowerBased32" parent="Towers" index="29" instance=ExtResource("58_w6c3j")]
+position = Vector2(1667, 710)
+based_skin = 3
+
+[node name="PauseButton" parent="StageUI" index="3"]
+texture_hover = null
+
+[node name="FirerainButton" parent="StageUI/SkillButtonContainer" index="0"]
+texture_normal = SubResource("Resource_qax6h")
+texture_select = SubResource("Resource_qneuu")
+
+[node name="ReinforceButton" parent="StageUI/SkillButtonContainer" index="1"]
+texture_normal = SubResource("Resource_87trf")
+texture_select = SubResource("Resource_s4115")
+
+[node name="SkillTexture" parent="StageUI/SkillCursor" index="0"]
+texture = null
+
+[node name="Selection" parent="StageUI/SkillCursor" index="1"]
+texture = null
+
+[node name="CollisionShape2D" parent="ClickArea" index="0"]
+position = Vector2(1591, 712)
+shape = SubResource("RectangleShape2D_lldhd")
+
+[node name="WaveButton" parent="WaveButtons" index="0" node_paths=PackedStringArray("linked_wave_panel") instance=ExtResource("59_vbyqq")]
+offset_left = 518.0
+offset_top = 115.0
+offset_right = 518.0
+offset_bottom = 115.0
+linked_wave_panel = NodePath("../WavePanel")
+summon_text_list = Array[ExtResource("57_ovstj")]([SubResource("Resource_hr0kc"), SubResource("Resource_cajot"), null, SubResource("Resource_0slqv"), SubResource("Resource_3aicj")])
+
+[node name="Direction" type="Sprite2D" parent="WaveButtons/WaveButton" index="5"]
+show_behind_parent = true
+position = Vector2(1.25, 1.25)
+rotation = -3.02886
+scale = Vector2(0.942457, 0.942457)
+texture = ExtResource("60_lo04h")
+
+[node name="WaveButton2" parent="WaveButtons" index="1" node_paths=PackedStringArray("linked_wave_panel") instance=ExtResource("59_vbyqq")]
+offset_left = 544.0
+offset_top = 953.0
+offset_right = 544.0
+offset_bottom = 953.0
+linked_wave_panel = NodePath("../WavePanel2")
+summon_text_list = Array[ExtResource("57_ovstj")]([SubResource("Resource_1o7if"), SubResource("Resource_kjmhk"), null, SubResource("Resource_skwt0"), SubResource("Resource_6dm8d")])
+
+[node name="Direction" type="Sprite2D" parent="WaveButtons/WaveButton2" index="5"]
+show_behind_parent = true
+position = Vector2(1.25, 1.25)
+rotation = -3.17089
+scale = Vector2(0.942457, 0.942457)
+texture = ExtResource("60_lo04h")
+
+[node name="WaveButton3" parent="WaveButtons" index="2" node_paths=PackedStringArray("linked_wave_panel") instance=ExtResource("59_vbyqq")]
+offset_left = 1001.0
+offset_top = 1253.0
+offset_right = 1001.0
+offset_bottom = 1253.0
+linked_wave_panel = NodePath("../WavePanel3")
+summon_text_list = Array[ExtResource("57_ovstj")]([SubResource("Resource_o734r"), null, SubResource("Resource_lbegu"), SubResource("Resource_o3r2x"), SubResource("Resource_aih8f")])
+
+[node name="Direction" type="Sprite2D" parent="WaveButtons/WaveButton3" index="5"]
+show_behind_parent = true
+position = Vector2(1.25, 1.25)
+rotation = -4.36938
+scale = Vector2(0.942457, 0.942457)
+texture = ExtResource("60_lo04h")
+
+[node name="WavePanel" parent="WaveButtons" index="3" instance=ExtResource("61_53ltq")]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 68.0
+offset_right = 1198.0
+offset_bottom = 362.0
+
+[node name="WavePanel2" parent="WaveButtons" index="4" instance=ExtResource("61_53ltq")]
+layout_mode = 0
+offset_left = 606.0
+offset_top = 881.0
+offset_right = 1210.0
+offset_bottom = 1175.0
+
+[node name="WavePanel3" parent="WaveButtons" index="5" instance=ExtResource("61_53ltq")]
+layout_mode = 0
+offset_left = 1034.0
+offset_top = 1121.0
+offset_right = 1638.0
+offset_bottom = 1415.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PathArea" index="0"]
+polygon = PackedVector2Array(446, 73, 412, 119, 452, 160, 604, 173, 755, 206, 853, 251, 922, 327, 956, 403, 965, 534, 947, 681, 906, 767, 812, 839, 655, 892, 453, 914, 405, 961, 456, 1011, 620, 992, 812, 943, 916, 881, 1003, 791, 1047, 666, 1061, 487, 1057, 429, 1258, 351, 1464, 252, 1556, 234, 1664, 236, 1816, 262, 1912, 308, 1957, 351, 2032, 454, 2110, 569, 2162, 686, 2230, 836, 2270, 922, 2328, 1000, 2416, 1051, 2458, 1081, 2568, 1098, 2714, 1089, 2807, 1038, 2906, 963, 3006, 873, 3079, 807, 3168, 773, 3201, 768, 3201, 679, 3140, 679, 3073, 706, 3015, 725, 2877, 856, 2774, 946, 2671, 1004, 2541, 1004, 2441, 973, 2371, 899, 2329, 829, 2302, 757, 2280, 701, 2239, 607, 2344, 546, 2425, 468, 2497, 384, 2518, 329, 2564, 281, 2616, 250, 2714, 247, 2799, 273, 2913, 321, 3020, 322, 3120, 328, 3207, 325, 3203, 228, 3058, 232, 2947, 227, 2863, 200, 2733, 152, 2693, 145, 2617, 151, 2538, 178, 2465, 241, 2401, 332, 2311, 435, 2238, 502, 2200, 519, 2187, 512, 2131, 418, 2078, 345, 1998, 261, 1861, 174, 1634, 141, 1537, 140, 1382, 187, 1277, 242, 1070, 325, 1023, 344, 984, 271, 876, 162, 716, 104, 557, 77)
+
+[node name="PolygonHide" type="CollisionPolygon2D" parent="PathArea" index="1"]
+polygon = PackedVector2Array(901, 1441, 1001, 1442, 1026, 1334, 1056, 1224, 1108, 1131, 1179, 1000, 1254, 890, 1305, 829, 1411, 778, 1538, 724, 1682, 646, 1781, 558, 1851, 472, 1902, 370, 1911, 302, 1826, 260, 1813, 265, 1796, 352, 1754, 437, 1672, 521, 1600, 571, 1538, 611, 1424, 661, 1315, 716, 1242, 766, 1206, 800, 1147, 875, 1107, 927, 1056, 1021, 993, 1140, 958, 1219, 935, 1284, 917, 1354)
+
+[node name="Node2D" type="Node2D" parent="." index="19" node_paths=PackedStringArray("enemy_parnt_node")]
+script = ExtResource("59_nka0l")
+enemy_parnt_node = NodePath("../Enemies")
+max_wave_count = 5
+process_summon_blocks = Array[ExtResource("60_t8yic")]([ExtResource("45_j3vad"), ExtResource("46_rxetw"), ExtResource("47_mqnwx"), ExtResource("48_6leqj"), ExtResource("49_cbg2b"), ExtResource("50_jxp4x"), ExtResource("51_86v7w"), ExtResource("52_g8cd2"), ExtResource("53_16xh1"), ExtResource("55_xrhpb"), ExtResource("56_p7vwa"), ExtResource("57_mycxm")])
+
+[node name="Node" type="Node" parent="Node2D" index="0" node_paths=PackedStringArray("enemy_parent_node")]
+script = ExtResource("61_o32hq")
+enemy_parent_node = NodePath("../../Enemies")
+config_path_front = "res://Library/SummonConfigs/Stage7/Diamond/"
+loading_count = 12
+
+[node name="HeroSummonMarker" parent="." index="20"]
+position = Vector2(3159, 280)
+
+[node name="ColorRect" parent="BlackColor" index="0"]
+offset_left = 6.0
+offset_top = -3.0
+offset_right = 6.0
+offset_bottom = -3.0
+
+[editable path="Background/RainLayer"]

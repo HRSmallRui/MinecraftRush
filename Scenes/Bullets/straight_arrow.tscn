@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://dwaokbtnrpbwn"]
+
+[ext_resource type="PackedScene" uid="uid://caufauw6v502y" path="res://Scenes/Classes/bullet_class.tscn" id="1_ylrfo"]
+[ext_resource type="Script" path="res://Scripts/Bullets/physics_arrow.gd" id="2_la4cj"]
+[ext_resource type="Texture2D" uid="uid://c6selkcma2jq4" path="res://Assets/Images/Bullets/箭.png" id="3_67i1v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o5n3q"]
+radius = 11.0
+
+[sub_resource type="Curve" id="Curve_3es4e"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 2.99159, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_mnl6y"]
+colors = PackedColorArray(1, 1, 1, 0.717647, 1, 1, 1, 0)
+
+[node name="PhysicsArrow" instance=ExtResource("1_ylrfo")]
+script = ExtResource("2_la4cj")
+move_type = 1
+bullet_speed = 1000.0
+
+[node name="BulletSprite" parent="." index="0"]
+rotation = 0.645772
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_67i1v")
+
+[node name="HitBox" parent="." index="1"]
+collision_mask = 96
+monitorable = false
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+shape = SubResource("CircleShape2D_o5n3q")
+
+[node name="FreeTimer" parent="." index="2"]
+wait_time = 4.0
+
+[node name="Tail" type="Line2D" parent="." index="3"]
+top_level = true
+width_curve = SubResource("Curve_3es4e")
+gradient = SubResource("Gradient_mnl6y")
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 16
+
+[node name="TailTimer" type="Timer" parent="Tail" index="0"]
+wait_time = 0.05
+autostart = true

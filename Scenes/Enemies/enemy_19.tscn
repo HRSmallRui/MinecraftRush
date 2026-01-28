@@ -1,0 +1,772 @@
+[gd_scene load_steps=184 format=3 uid="uid://bbn8cyt45bue8"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_t4tx2"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_19.gd" id="2_2n76r"]
+[ext_resource type="Texture2D" uid="uid://d4lakq52b4xkc" path="res://Assets/Images/UI/InformationBar/尸壳.png" id="3_iavwd"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="4_i1i0s"]
+[ext_resource type="AudioStream" uid="uid://dw1xc50um8dws" path="res://Assets/Sounds/FXs/Enemies/尸壳/尸壳死亡1.wav" id="5_oa8pg"]
+[ext_resource type="AudioStream" uid="uid://dpppdrj6vx40o" path="res://Assets/Sounds/FXs/Enemies/尸壳/尸壳死亡2.wav" id="6_y3j0t"]
+[ext_resource type="AudioStream" uid="uid://d0pnofrboijy" path="res://Assets/Sounds/FXs/Enemies/尸壳/尸壳死亡3.wav" id="7_k8wk8"]
+[ext_resource type="PackedScene" uid="uid://dcjuved17hj6j" path="res://Scenes/Enemies/EnemyComponents/appear_audio_component.tscn" id="8_ma5ev"]
+[ext_resource type="Texture2D" uid="uid://dhmuaubg7bwug" path="res://Assets/Animations/Enemies/19尸壳/attack_00.png" id="8_wg8do"]
+[ext_resource type="AudioStream" uid="uid://cwt2rga6wmbip" path="res://Assets/Sounds/FXs/Enemies/尸壳/尸壳出现1.wav" id="9_lwovh"]
+[ext_resource type="Texture2D" uid="uid://bmip167dalfjv" path="res://Assets/Animations/Enemies/19尸壳/attack_01.png" id="9_rrtjm"]
+[ext_resource type="AudioStream" uid="uid://ddwrkohhv4ma2" path="res://Assets/Sounds/FXs/Enemies/尸壳/尸壳出现2.wav" id="10_226qy"]
+[ext_resource type="Texture2D" uid="uid://dlfea4vemoqhf" path="res://Assets/Animations/Enemies/19尸壳/attack_02.png" id="10_ca76e"]
+[ext_resource type="AudioStream" uid="uid://cdlnobqdkucyt" path="res://Assets/Sounds/FXs/Enemies/尸壳/尸壳出现3.wav" id="11_ifr76"]
+[ext_resource type="Texture2D" uid="uid://uja0y085lxne" path="res://Assets/Animations/Enemies/19尸壳/attack_03.png" id="11_ov2ej"]
+[ext_resource type="Texture2D" uid="uid://cuu2uqqpvgecg" path="res://Assets/Animations/Enemies/19尸壳/attack_04.png" id="12_ul1rc"]
+[ext_resource type="Texture2D" uid="uid://bco1xg4wru4g2" path="res://Assets/Animations/Enemies/19尸壳/attack_05.png" id="13_43lp3"]
+[ext_resource type="Texture2D" uid="uid://d1y0ybj0ypn5q" path="res://Assets/Animations/Enemies/19尸壳/attack_06.png" id="14_qiddm"]
+[ext_resource type="Texture2D" uid="uid://cun0wyw0om6nf" path="res://Assets/Animations/Enemies/19尸壳/attack_07.png" id="15_4mp1q"]
+[ext_resource type="Texture2D" uid="uid://cb6ktqf10hvuf" path="res://Assets/Animations/Enemies/19尸壳/attack_08.png" id="16_e1lsx"]
+[ext_resource type="Texture2D" uid="uid://b1wsq0cyaflln" path="res://Assets/Animations/Enemies/19尸壳/attack_09.png" id="17_eow0o"]
+[ext_resource type="Texture2D" uid="uid://bt3ni3dgh4fhj" path="res://Assets/Animations/Enemies/19尸壳/attack_10.png" id="18_gc30u"]
+[ext_resource type="Texture2D" uid="uid://c47up8dc3u1oe" path="res://Assets/Animations/Enemies/19尸壳/attack_11.png" id="19_2rpcu"]
+[ext_resource type="Texture2D" uid="uid://wl6lp2c8c3gs" path="res://Assets/Animations/Enemies/19尸壳/attack_12.png" id="20_yit8m"]
+[ext_resource type="Texture2D" uid="uid://5vw2qxfuovhv" path="res://Assets/Animations/Enemies/19尸壳/attack_13.png" id="21_oc0k2"]
+[ext_resource type="Texture2D" uid="uid://cxxijpg856ewb" path="res://Assets/Animations/Enemies/19尸壳/attack_14.png" id="22_5ilsj"]
+[ext_resource type="Texture2D" uid="uid://cc2yxslahoy3w" path="res://Assets/Animations/Enemies/19尸壳/attack_15.png" id="23_covj7"]
+[ext_resource type="Texture2D" uid="uid://b4p1i5j7pixip" path="res://Assets/Animations/Enemies/19尸壳/attack_16.png" id="24_pdwbn"]
+[ext_resource type="Texture2D" uid="uid://0r22mgpxgs81" path="res://Assets/Animations/Enemies/19尸壳/attack_17.png" id="25_wr276"]
+[ext_resource type="Texture2D" uid="uid://dbmqo88b8tfaj" path="res://Assets/Animations/Enemies/19尸壳/attack_18.png" id="26_8hjap"]
+[ext_resource type="Texture2D" uid="uid://bxnl2d4oh1inf" path="res://Assets/Animations/Enemies/19尸壳/attack_19.png" id="27_f0tun"]
+[ext_resource type="Texture2D" uid="uid://cbv6tpkr1rvm" path="res://Assets/Animations/Enemies/19尸壳/attack_20.png" id="28_1u2jl"]
+[ext_resource type="Texture2D" uid="uid://b51mh8io8m828" path="res://Assets/Animations/Enemies/19尸壳/attack_21.png" id="29_607vu"]
+[ext_resource type="Texture2D" uid="uid://duhkl1ala25it" path="res://Assets/Animations/Enemies/19尸壳/attack_22.png" id="30_6eym5"]
+[ext_resource type="Texture2D" uid="uid://c5y1eyy3dcthj" path="res://Assets/Animations/Enemies/19尸壳/attack_23.png" id="31_8soh2"]
+[ext_resource type="Texture2D" uid="uid://dvvnwj7v466sv" path="res://Assets/Animations/Enemies/19尸壳/attack_24.png" id="32_l1tr8"]
+[ext_resource type="Texture2D" uid="uid://dy7q14igwdcno" path="res://Assets/Animations/Enemies/19尸壳/attack_25.png" id="33_r56yx"]
+[ext_resource type="Texture2D" uid="uid://kb6o41sl0r0o" path="res://Assets/Animations/Enemies/19尸壳/attack_26.png" id="34_bn1ru"]
+[ext_resource type="Texture2D" uid="uid://c6nn0cxrmrbur" path="res://Assets/Animations/Enemies/19尸壳/attack_27.png" id="35_ugp5x"]
+[ext_resource type="Texture2D" uid="uid://chwmiq5em5ec3" path="res://Assets/Animations/Enemies/19尸壳/attack_28.png" id="36_dc2xo"]
+[ext_resource type="Texture2D" uid="uid://cn3uy33c5tei6" path="res://Assets/Animations/Enemies/19尸壳/attack_29.png" id="37_y3c8s"]
+[ext_resource type="Texture2D" uid="uid://cmyivthn7kg1x" path="res://Assets/Animations/Enemies/19尸壳/attack_30.png" id="38_s1uyg"]
+[ext_resource type="Texture2D" uid="uid://cva6kno4ffuui" path="res://Assets/Animations/Enemies/19尸壳/die_00.png" id="39_267ac"]
+[ext_resource type="Texture2D" uid="uid://ddt1hm5sexnil" path="res://Assets/Animations/Enemies/19尸壳/die_01.png" id="40_mjs0u"]
+[ext_resource type="Texture2D" uid="uid://ct0h6lr73d8sx" path="res://Assets/Animations/Enemies/19尸壳/die_02.png" id="41_6qrwv"]
+[ext_resource type="Texture2D" uid="uid://cexu0pgh6bdjk" path="res://Assets/Animations/Enemies/19尸壳/die_03.png" id="42_hoax6"]
+[ext_resource type="Texture2D" uid="uid://chqb0yf6mdich" path="res://Assets/Animations/Enemies/19尸壳/die_04.png" id="43_5a27k"]
+[ext_resource type="Texture2D" uid="uid://b6kbo7d8e1mw0" path="res://Assets/Animations/Enemies/19尸壳/die_05.png" id="44_pyrn3"]
+[ext_resource type="Texture2D" uid="uid://c505hbprabtr5" path="res://Assets/Animations/Enemies/19尸壳/die_06.png" id="45_ky3i4"]
+[ext_resource type="Texture2D" uid="uid://dmq0votv4vy53" path="res://Assets/Animations/Enemies/19尸壳/die_07.png" id="46_k6v38"]
+[ext_resource type="Texture2D" uid="uid://bmr6gq05p1buq" path="res://Assets/Animations/Enemies/19尸壳/die_08.png" id="47_djp57"]
+[ext_resource type="Texture2D" uid="uid://b1w0wm635icw6" path="res://Assets/Animations/Enemies/19尸壳/die_09.png" id="48_6womh"]
+[ext_resource type="Texture2D" uid="uid://dascm8yyib50o" path="res://Assets/Animations/Enemies/19尸壳/die_10.png" id="49_rlopw"]
+[ext_resource type="Texture2D" uid="uid://cyreblrh4euga" path="res://Assets/Animations/Enemies/19尸壳/die_11.png" id="50_t7u2t"]
+[ext_resource type="Texture2D" uid="uid://b5clm07k6qrw0" path="res://Assets/Animations/Enemies/19尸壳/die_12.png" id="51_3ipe1"]
+[ext_resource type="Texture2D" uid="uid://j2mwak5o4ar0" path="res://Assets/Animations/Enemies/19尸壳/die_13.png" id="52_dwmrn"]
+[ext_resource type="Texture2D" uid="uid://cn8jfiojhaptc" path="res://Assets/Animations/Enemies/19尸壳/die_14.png" id="53_scftd"]
+[ext_resource type="Texture2D" uid="uid://bfcvrbagksjlj" path="res://Assets/Animations/Enemies/19尸壳/die_15.png" id="54_w8pja"]
+[ext_resource type="Texture2D" uid="uid://cdufy6j5qdk13" path="res://Assets/Animations/Enemies/19尸壳/die_16.png" id="55_ynj60"]
+[ext_resource type="Texture2D" uid="uid://da3fj0nc8mhda" path="res://Assets/Animations/Enemies/19尸壳/die_17.png" id="56_lelf8"]
+[ext_resource type="Texture2D" uid="uid://cj5jyx2p0w15h" path="res://Assets/Animations/Enemies/19尸壳/die_18.png" id="57_4t7th"]
+[ext_resource type="Texture2D" uid="uid://bw3a4yd7qjdou" path="res://Assets/Animations/Enemies/19尸壳/die_19.png" id="58_j0lni"]
+[ext_resource type="Texture2D" uid="uid://b865wewbnu5qw" path="res://Assets/Animations/Enemies/19尸壳/die_20.png" id="59_gils0"]
+[ext_resource type="Texture2D" uid="uid://dvtiq2x1m8e08" path="res://Assets/Animations/Enemies/19尸壳/move_back_00.png" id="60_4tdyv"]
+[ext_resource type="Texture2D" uid="uid://odyvv546m7sv" path="res://Assets/Animations/Enemies/19尸壳/move_back_01.png" id="61_hql76"]
+[ext_resource type="Texture2D" uid="uid://b2cy2qkfejh0v" path="res://Assets/Animations/Enemies/19尸壳/move_back_02.png" id="62_7ut3j"]
+[ext_resource type="Texture2D" uid="uid://ccij82u36g6xt" path="res://Assets/Animations/Enemies/19尸壳/move_back_03.png" id="63_448po"]
+[ext_resource type="Texture2D" uid="uid://c8i36nywx7lau" path="res://Assets/Animations/Enemies/19尸壳/move_back_04.png" id="64_7tgox"]
+[ext_resource type="Texture2D" uid="uid://bc3lg7khe5yft" path="res://Assets/Animations/Enemies/19尸壳/move_back_05.png" id="65_c221o"]
+[ext_resource type="Texture2D" uid="uid://ci4gavy5hsl8a" path="res://Assets/Animations/Enemies/19尸壳/move_back_06.png" id="66_7h7yq"]
+[ext_resource type="Texture2D" uid="uid://ceienk150gn3f" path="res://Assets/Animations/Enemies/19尸壳/move_back_07.png" id="67_64auq"]
+[ext_resource type="Texture2D" uid="uid://byegauy1oqjjs" path="res://Assets/Animations/Enemies/19尸壳/move_back_08.png" id="68_ow7bj"]
+[ext_resource type="Texture2D" uid="uid://bqntrqdej5pa7" path="res://Assets/Animations/Enemies/19尸壳/move_back_09.png" id="69_m5x6u"]
+[ext_resource type="Texture2D" uid="uid://cet203wcj4wqo" path="res://Assets/Animations/Enemies/19尸壳/move_back_10.png" id="70_odxaa"]
+[ext_resource type="Texture2D" uid="uid://bmy44ulb4xcu4" path="res://Assets/Animations/Enemies/19尸壳/move_back_11.png" id="71_cfj8i"]
+[ext_resource type="Texture2D" uid="uid://rlklwj2a5ouq" path="res://Assets/Animations/Enemies/19尸壳/move_back_12.png" id="72_7y3qk"]
+[ext_resource type="Texture2D" uid="uid://ynoa2pvk8y86" path="res://Assets/Animations/Enemies/19尸壳/move_back_13.png" id="73_fe7yw"]
+[ext_resource type="Texture2D" uid="uid://drpetu8cxdol0" path="res://Assets/Animations/Enemies/19尸壳/move_back_14.png" id="74_j57u1"]
+[ext_resource type="Texture2D" uid="uid://db0erccbs4ff5" path="res://Assets/Animations/Enemies/19尸壳/move_back_15.png" id="75_exhk4"]
+[ext_resource type="Texture2D" uid="uid://df3xuu15n5w3y" path="res://Assets/Animations/Enemies/19尸壳/move_back_16.png" id="76_hkwm0"]
+[ext_resource type="Texture2D" uid="uid://fouovqw3448g" path="res://Assets/Animations/Enemies/19尸壳/move_back_17.png" id="77_sn6fo"]
+[ext_resource type="Texture2D" uid="uid://p7hku2wjmela" path="res://Assets/Animations/Enemies/19尸壳/move_back_18.png" id="78_2yrl4"]
+[ext_resource type="Texture2D" uid="uid://84npoi8281qd" path="res://Assets/Animations/Enemies/19尸壳/move_back_19.png" id="79_mmtp1"]
+[ext_resource type="Texture2D" uid="uid://cdirqm6yh65k4" path="res://Assets/Animations/Enemies/19尸壳/move_back_20.png" id="80_7q27f"]
+[ext_resource type="Texture2D" uid="uid://es1fvpvjewsr" path="res://Assets/Animations/Enemies/19尸壳/move_back_21.png" id="81_i6s4n"]
+[ext_resource type="Texture2D" uid="uid://b1qlmldup2ic" path="res://Assets/Animations/Enemies/19尸壳/move_back_22.png" id="82_kc871"]
+[ext_resource type="Texture2D" uid="uid://bwbfpwloysahd" path="res://Assets/Animations/Enemies/19尸壳/move_back_23.png" id="83_yga5n"]
+[ext_resource type="Texture2D" uid="uid://iyc2746sscft" path="res://Assets/Animations/Enemies/19尸壳/move_back_24.png" id="84_5bbs0"]
+[ext_resource type="Texture2D" uid="uid://rub7svnfd0yw" path="res://Assets/Animations/Enemies/19尸壳/move_back_25.png" id="85_u5kht"]
+[ext_resource type="Texture2D" uid="uid://rpmykq8cr4ej" path="res://Assets/Animations/Enemies/19尸壳/move_back_26.png" id="86_0whr4"]
+[ext_resource type="Texture2D" uid="uid://7sn71l3cety3" path="res://Assets/Animations/Enemies/19尸壳/move_back_27.png" id="87_6ulc2"]
+[ext_resource type="Texture2D" uid="uid://vb1hr4tr1mb3" path="res://Assets/Animations/Enemies/19尸壳/move_back_28.png" id="88_bfg5e"]
+[ext_resource type="Texture2D" uid="uid://db7edqh5s2fqh" path="res://Assets/Animations/Enemies/19尸壳/move_back_29.png" id="89_remh7"]
+[ext_resource type="Texture2D" uid="uid://lwgh22nd62lq" path="res://Assets/Animations/Enemies/19尸壳/move_back_30.png" id="90_isd7d"]
+[ext_resource type="Texture2D" uid="uid://ej3ai8dw21n5" path="res://Assets/Animations/Enemies/19尸壳/move_back_31.png" id="91_3t2kq"]
+[ext_resource type="Texture2D" uid="uid://tspcnel0e8d7" path="res://Assets/Animations/Enemies/19尸壳/move_back_32.png" id="92_r6sxh"]
+[ext_resource type="Texture2D" uid="uid://dr0r8vtb8dke3" path="res://Assets/Animations/Enemies/19尸壳/move_back_33.png" id="93_4hfcx"]
+[ext_resource type="Texture2D" uid="uid://cbvu12lbe5atu" path="res://Assets/Animations/Enemies/19尸壳/move_back_34.png" id="94_hpnh3"]
+[ext_resource type="Texture2D" uid="uid://c3lekpmpctpa5" path="res://Assets/Animations/Enemies/19尸壳/move_back_35.png" id="95_206wb"]
+[ext_resource type="Texture2D" uid="uid://b6vc3kcxt11ya" path="res://Assets/Animations/Enemies/19尸壳/move_back_36.png" id="96_exs10"]
+[ext_resource type="Texture2D" uid="uid://sknahfhmqvt0" path="res://Assets/Animations/Enemies/19尸壳/move_back_37.png" id="97_tt17b"]
+[ext_resource type="Texture2D" uid="uid://dso0hf6p1nl3e" path="res://Assets/Animations/Enemies/19尸壳/move_back_38.png" id="98_rhwpq"]
+[ext_resource type="Texture2D" uid="uid://dn40m6j1q7v6h" path="res://Assets/Animations/Enemies/19尸壳/move_front_00.png" id="99_u8whc"]
+[ext_resource type="Texture2D" uid="uid://dqpy4l73rmujs" path="res://Assets/Animations/Enemies/19尸壳/move_front_01.png" id="100_x57y4"]
+[ext_resource type="Texture2D" uid="uid://72kf120xvo1j" path="res://Assets/Animations/Enemies/19尸壳/move_front_02.png" id="101_j5ae6"]
+[ext_resource type="Texture2D" uid="uid://bgyqeofqxgisu" path="res://Assets/Animations/Enemies/19尸壳/move_front_03.png" id="102_in3gx"]
+[ext_resource type="Texture2D" uid="uid://dmikyf8afjxhn" path="res://Assets/Animations/Enemies/19尸壳/move_front_04.png" id="103_jjwe8"]
+[ext_resource type="Texture2D" uid="uid://f7a3faxoald1" path="res://Assets/Animations/Enemies/19尸壳/move_front_05.png" id="104_68x10"]
+[ext_resource type="Texture2D" uid="uid://bx5g4h8sm5xn1" path="res://Assets/Animations/Enemies/19尸壳/move_front_06.png" id="105_tkihq"]
+[ext_resource type="Texture2D" uid="uid://cdgtjvbflts53" path="res://Assets/Animations/Enemies/19尸壳/move_front_07.png" id="106_kmtep"]
+[ext_resource type="Texture2D" uid="uid://cap40n7sy4o5r" path="res://Assets/Animations/Enemies/19尸壳/move_front_08.png" id="107_3c216"]
+[ext_resource type="Texture2D" uid="uid://cg2cyryuw0a7h" path="res://Assets/Animations/Enemies/19尸壳/move_front_09.png" id="108_a6row"]
+[ext_resource type="Texture2D" uid="uid://r14q6q8tibxu" path="res://Assets/Animations/Enemies/19尸壳/move_front_10.png" id="109_80wpb"]
+[ext_resource type="Texture2D" uid="uid://fp4d7swfj467" path="res://Assets/Animations/Enemies/19尸壳/move_front_11.png" id="110_tke8x"]
+[ext_resource type="Texture2D" uid="uid://dkhikri1unrvh" path="res://Assets/Animations/Enemies/19尸壳/move_front_12.png" id="111_t6k1x"]
+[ext_resource type="Texture2D" uid="uid://dfl6y5tdo6p1j" path="res://Assets/Animations/Enemies/19尸壳/move_front_13.png" id="112_jfgdm"]
+[ext_resource type="Texture2D" uid="uid://dhkui54u0trcu" path="res://Assets/Animations/Enemies/19尸壳/move_front_14.png" id="113_w0h7n"]
+[ext_resource type="Texture2D" uid="uid://ck8clkclgjtmo" path="res://Assets/Animations/Enemies/19尸壳/move_front_15.png" id="114_xdg3h"]
+[ext_resource type="Texture2D" uid="uid://crc8875j2vym4" path="res://Assets/Animations/Enemies/19尸壳/move_front_16.png" id="115_80fss"]
+[ext_resource type="Texture2D" uid="uid://6opqrfyyh72e" path="res://Assets/Animations/Enemies/19尸壳/move_front_17.png" id="116_kqyvn"]
+[ext_resource type="Texture2D" uid="uid://c83rsq4f1p2ql" path="res://Assets/Animations/Enemies/19尸壳/move_front_18.png" id="117_7a52j"]
+[ext_resource type="Texture2D" uid="uid://bw5s01dhkrpgs" path="res://Assets/Animations/Enemies/19尸壳/move_front_19.png" id="118_3gak6"]
+[ext_resource type="Texture2D" uid="uid://jciumyffsoge" path="res://Assets/Animations/Enemies/19尸壳/move_front_20.png" id="119_tj47j"]
+[ext_resource type="Texture2D" uid="uid://bmduufyjkcgd5" path="res://Assets/Animations/Enemies/19尸壳/move_front_21.png" id="120_vqpdp"]
+[ext_resource type="Texture2D" uid="uid://cyv2lr1sw65ed" path="res://Assets/Animations/Enemies/19尸壳/move_front_22.png" id="121_qbpkd"]
+[ext_resource type="Texture2D" uid="uid://cvoxv2wubfljq" path="res://Assets/Animations/Enemies/19尸壳/move_front_23.png" id="122_gm8g8"]
+[ext_resource type="Texture2D" uid="uid://bj5bt4whx6p14" path="res://Assets/Animations/Enemies/19尸壳/move_front_24.png" id="123_60l6g"]
+[ext_resource type="Texture2D" uid="uid://d26tcn18too1y" path="res://Assets/Animations/Enemies/19尸壳/move_front_25.png" id="124_4jhiy"]
+[ext_resource type="Texture2D" uid="uid://buuq0p82dwltw" path="res://Assets/Animations/Enemies/19尸壳/move_front_26.png" id="125_k5yn5"]
+[ext_resource type="Texture2D" uid="uid://dqslbal0ni721" path="res://Assets/Animations/Enemies/19尸壳/move_front_27.png" id="126_j3quv"]
+[ext_resource type="Texture2D" uid="uid://bechkqj8lcqoa" path="res://Assets/Animations/Enemies/19尸壳/move_front_28.png" id="127_v52ky"]
+[ext_resource type="Texture2D" uid="uid://bk31xsp0t8kfe" path="res://Assets/Animations/Enemies/19尸壳/move_front_29.png" id="128_ashiu"]
+[ext_resource type="Texture2D" uid="uid://bawrd6yiktc3n" path="res://Assets/Animations/Enemies/19尸壳/move_front_30.png" id="129_nscw8"]
+[ext_resource type="Texture2D" uid="uid://b73rrsxitjjeq" path="res://Assets/Animations/Enemies/19尸壳/move_front_31.png" id="130_2mi23"]
+[ext_resource type="Texture2D" uid="uid://mkswt0owum16" path="res://Assets/Animations/Enemies/19尸壳/move_front_32.png" id="131_q2g4g"]
+[ext_resource type="Texture2D" uid="uid://5bay5h8m4n55" path="res://Assets/Animations/Enemies/19尸壳/move_front_33.png" id="132_655fv"]
+[ext_resource type="Texture2D" uid="uid://6hcih7aeitia" path="res://Assets/Animations/Enemies/19尸壳/move_front_34.png" id="133_3cw0j"]
+[ext_resource type="Texture2D" uid="uid://chp6vk17dla0c" path="res://Assets/Animations/Enemies/19尸壳/move_front_35.png" id="134_jcnj6"]
+[ext_resource type="Texture2D" uid="uid://be1bh2gt8ndie" path="res://Assets/Animations/Enemies/19尸壳/move_front_36.png" id="135_1uk8t"]
+[ext_resource type="Texture2D" uid="uid://c1d2ltghdh1oa" path="res://Assets/Animations/Enemies/19尸壳/move_front_37.png" id="136_r1e0s"]
+[ext_resource type="Texture2D" uid="uid://daukg4uu2kd11" path="res://Assets/Animations/Enemies/19尸壳/move_front_38.png" id="137_g25b8"]
+[ext_resource type="Texture2D" uid="uid://b4n2a3eoom7g8" path="res://Assets/Animations/Enemies/19尸壳/move_normal_00.png" id="138_c2alw"]
+[ext_resource type="Texture2D" uid="uid://but7fgg5yc1jk" path="res://Assets/Animations/Enemies/19尸壳/move_normal_01.png" id="139_1nvck"]
+[ext_resource type="Texture2D" uid="uid://cptrmb8sfmks4" path="res://Assets/Animations/Enemies/19尸壳/move_normal_02.png" id="140_o5k4x"]
+[ext_resource type="Texture2D" uid="uid://c2rjo1hbmwjbd" path="res://Assets/Animations/Enemies/19尸壳/move_normal_03.png" id="141_rt8xq"]
+[ext_resource type="Texture2D" uid="uid://bs2yq684vgj1r" path="res://Assets/Animations/Enemies/19尸壳/move_normal_04.png" id="142_074iy"]
+[ext_resource type="Texture2D" uid="uid://txbxuj0bmo03" path="res://Assets/Animations/Enemies/19尸壳/move_normal_05.png" id="143_pccij"]
+[ext_resource type="Texture2D" uid="uid://bivy3e4xyg2om" path="res://Assets/Animations/Enemies/19尸壳/move_normal_06.png" id="144_g3sl0"]
+[ext_resource type="Texture2D" uid="uid://8nxp880d1xgx" path="res://Assets/Animations/Enemies/19尸壳/move_normal_07.png" id="145_ryn3x"]
+[ext_resource type="Texture2D" uid="uid://c0og4orlke73b" path="res://Assets/Animations/Enemies/19尸壳/move_normal_08.png" id="146_0lqwk"]
+[ext_resource type="Texture2D" uid="uid://nm02wewfagax" path="res://Assets/Animations/Enemies/19尸壳/move_normal_09.png" id="147_en2fu"]
+[ext_resource type="Texture2D" uid="uid://dsa53qkppy7f4" path="res://Assets/Animations/Enemies/19尸壳/move_normal_10.png" id="148_mj4kj"]
+[ext_resource type="Texture2D" uid="uid://cvgxaekwvngqs" path="res://Assets/Animations/Enemies/19尸壳/move_normal_11.png" id="149_mplh8"]
+[ext_resource type="Texture2D" uid="uid://bih43a5d5kd8b" path="res://Assets/Animations/Enemies/19尸壳/move_normal_12.png" id="150_m3hcx"]
+[ext_resource type="Texture2D" uid="uid://jjw08majuxfx" path="res://Assets/Animations/Enemies/19尸壳/move_normal_13.png" id="151_lpuvr"]
+[ext_resource type="Texture2D" uid="uid://sa30gfp6fnqm" path="res://Assets/Animations/Enemies/19尸壳/move_normal_14.png" id="152_7j18o"]
+[ext_resource type="Texture2D" uid="uid://b37vo2pqpboyi" path="res://Assets/Animations/Enemies/19尸壳/move_normal_15.png" id="153_6wh0y"]
+[ext_resource type="Texture2D" uid="uid://qf6q8got8w0s" path="res://Assets/Animations/Enemies/19尸壳/move_normal_16.png" id="154_m8wl1"]
+[ext_resource type="Texture2D" uid="uid://cjao4dqxksjwd" path="res://Assets/Animations/Enemies/19尸壳/move_normal_17.png" id="155_se558"]
+[ext_resource type="Texture2D" uid="uid://j6lo56oyjdgo" path="res://Assets/Animations/Enemies/19尸壳/move_normal_18.png" id="156_q13r2"]
+[ext_resource type="Texture2D" uid="uid://vwb8rwe0kmi7" path="res://Assets/Animations/Enemies/19尸壳/move_normal_19.png" id="157_whyyt"]
+[ext_resource type="Texture2D" uid="uid://bqfeflmpot00e" path="res://Assets/Animations/Enemies/19尸壳/move_normal_20.png" id="158_vvdpd"]
+[ext_resource type="Texture2D" uid="uid://stxlmrih6yd7" path="res://Assets/Animations/Enemies/19尸壳/move_normal_21.png" id="159_g12q6"]
+[ext_resource type="Texture2D" uid="uid://drqfgtxg6pva" path="res://Assets/Animations/Enemies/19尸壳/move_normal_22.png" id="160_ljuic"]
+[ext_resource type="Texture2D" uid="uid://dpm5dwv14o6ji" path="res://Assets/Animations/Enemies/19尸壳/move_normal_23.png" id="161_v3txf"]
+[ext_resource type="Texture2D" uid="uid://cf8xpn2q1ov8p" path="res://Assets/Animations/Enemies/19尸壳/move_normal_24.png" id="162_j5acj"]
+[ext_resource type="Texture2D" uid="uid://qeaiec3i2rrt" path="res://Assets/Animations/Enemies/19尸壳/move_normal_25.png" id="163_s0yyd"]
+[ext_resource type="Texture2D" uid="uid://b6odf5jotsvga" path="res://Assets/Animations/Enemies/19尸壳/move_normal_26.png" id="164_ntgt5"]
+[ext_resource type="Texture2D" uid="uid://dnoflpuunssy6" path="res://Assets/Animations/Enemies/19尸壳/move_normal_27.png" id="165_qmojj"]
+[ext_resource type="Texture2D" uid="uid://g8evymnepex5" path="res://Assets/Animations/Enemies/19尸壳/move_normal_28.png" id="166_4vvow"]
+[ext_resource type="Texture2D" uid="uid://dlkjtl17demjw" path="res://Assets/Animations/Enemies/19尸壳/move_normal_29.png" id="167_1nkxc"]
+[ext_resource type="Texture2D" uid="uid://c5ibpvqipealy" path="res://Assets/Animations/Enemies/19尸壳/move_normal_30.png" id="168_hpxrc"]
+[ext_resource type="Texture2D" uid="uid://dqvr5hcgc3gjd" path="res://Assets/Animations/Enemies/19尸壳/move_normal_31.png" id="169_2ja25"]
+[ext_resource type="Texture2D" uid="uid://bhhnna8yejv5y" path="res://Assets/Animations/Enemies/19尸壳/move_normal_32.png" id="170_mknxl"]
+[ext_resource type="Texture2D" uid="uid://bo1ffn13u1wfs" path="res://Assets/Animations/Enemies/19尸壳/move_normal_33.png" id="171_cf8ge"]
+[ext_resource type="Texture2D" uid="uid://bytrqhiefnlj1" path="res://Assets/Animations/Enemies/19尸壳/move_normal_34.png" id="172_jvp1c"]
+[ext_resource type="Texture2D" uid="uid://bmcgkl45rkvy" path="res://Assets/Animations/Enemies/19尸壳/move_normal_35.png" id="173_ug0l4"]
+[ext_resource type="Texture2D" uid="uid://b6upxxbf7b58m" path="res://Assets/Animations/Enemies/19尸壳/move_normal_36.png" id="174_lnpc8"]
+[ext_resource type="Texture2D" uid="uid://b77xnf48f6ht3" path="res://Assets/Animations/Enemies/19尸壳/move_normal_37.png" id="175_qm3i8"]
+[ext_resource type="Texture2D" uid="uid://dfomqnbcerb33" path="res://Assets/Animations/Enemies/19尸壳/move_normal_38.png" id="176_yd5wv"]
+[ext_resource type="Texture2D" uid="uid://dguta5lfpeaua" path="res://Assets/Animations/Enemies/19尸壳/move_normal_39.png" id="177_12ulr"]
+
+[sub_resource type="Resource" id="Resource_4twn0"]
+script = ExtResource("4_i1i0s")
+health = 160
+dodge_rate = 0.0
+near_damage_low = 10
+near_damage_high = 15
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.0
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 0.6
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2nvdf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_wg8do")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_rrtjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ca76e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ov2ej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ul1rc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_43lp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qiddm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4mp1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_e1lsx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_eow0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_gc30u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_2rpcu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_yit8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_oc0k2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_5ilsj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_covj7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_pdwbn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_wr276")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_8hjap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_f0tun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_1u2jl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_607vu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_6eym5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_8soh2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_l1tr8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_r56yx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_bn1ru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ugp5x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_dc2xo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_y3c8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_s1uyg")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 35.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("39_267ac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_mjs0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_6qrwv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_hoax6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_5a27k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_pyrn3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_ky3i4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_k6v38")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_djp57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_6womh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_rlopw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_t7u2t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_3ipe1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_dwmrn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_scftd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_w8pja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_ynj60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_lelf8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_4t7th")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_j0lni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_gils0")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_wg8do")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("60_4tdyv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_hql76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_7ut3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_448po")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_7tgox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_c221o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_7h7yq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_64auq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_ow7bj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_m5x6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_odxaa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_cfj8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_7y3qk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_fe7yw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_j57u1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_exhk4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_hkwm0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_sn6fo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_2yrl4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_mmtp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_7q27f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_i6s4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_kc871")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_yga5n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_5bbs0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_u5kht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_0whr4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_6ulc2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_bfg5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_remh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_isd7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_3t2kq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_r6sxh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_4hfcx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_hpnh3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_206wb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_exs10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_tt17b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_rhwpq")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("99_u8whc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_x57y4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_j5ae6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_in3gx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_jjwe8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_68x10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_tkihq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_kmtep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_3c216")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_a6row")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_80wpb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_tke8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_t6k1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_jfgdm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_w0h7n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_xdg3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_80fss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_kqyvn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_7a52j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_3gak6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_tj47j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_vqpdp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_qbpkd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_gm8g8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_60l6g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_4jhiy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_k5yn5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_j3quv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_v52ky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_ashiu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_nscw8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_2mi23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_q2g4g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_655fv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_3cw0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_jcnj6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_1uk8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_r1e0s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_g25b8")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("138_c2alw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_1nvck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_o5k4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_rt8xq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_074iy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_pccij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_g3sl0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_ryn3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_0lqwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_en2fu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_mj4kj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_mplh8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_m3hcx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_lpuvr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_7j18o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_6wh0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_m8wl1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_se558")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_q13r2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_whyyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("158_vvdpd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_g12q6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_ljuic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_v3txf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_j5acj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_s0yyd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_ntgt5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_qmojj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("166_4vvow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("167_1nkxc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("168_hpxrc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("169_2ja25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("170_mknxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("171_cf8ge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_jvp1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("173_ug0l4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_lnpc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("175_qm3i8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("176_yd5wv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("177_12ulr")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 24.0
+}]
+
+[node name="Enemy19" groups=["desert", "undead"] instance=ExtResource("1_t4tx2")]
+script = ExtResource("2_2n76r")
+enemy_name = "尸壳"
+enemy_id = 19
+enemy_texture = ExtResource("3_iavwd")
+start_data = SubResource("Resource_4twn0")
+bounty = 4
+die_audio_stream_list = Array[AudioStream]([ExtResource("5_oa8pg"), ExtResource("6_y3j0t"), ExtResource("7_k8wk8")])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(25, -85)
+sprite_frames = SubResource("SpriteFrames_2nvdf")
+animation = &"attack"
+autoplay = "idle"
+
+[node name="EnemyButton" parent="UnitBody" index="4"]
+offset_left = -48.0
+offset_right = 50.0
+
+[node name="AppearAudioComponent" parent="." index="5" instance=ExtResource("8_ma5ev")]
+appear_audio_list = Array[AudioStream]([ExtResource("9_lwovh"), ExtResource("10_226qy"), ExtResource("11_ifr76")])

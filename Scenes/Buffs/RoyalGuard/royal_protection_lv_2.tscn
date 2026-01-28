@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://bopg7y2i6l45i"]
+
+[ext_resource type="PackedScene" uid="uid://bjfa3t67tpsbr" path="res://Scenes/Buffs/property_buff.tscn" id="1_u2rr2"]
+[ext_resource type="Script" path="res://Scripts/Buffs/property_buff_block.gd" id="2_b761e"]
+[ext_resource type="Script" path="res://Scripts/Buffs/royal_protection_lv_1.gd" id="2_ntl0v"]
+[ext_resource type="Texture2D" uid="uid://c8vp5eiamfg0f" path="res://Assets/Images/UI/DataUIs/armor.res" id="3_ouyyb"]
+
+[sub_resource type="Resource" id="Resource_bkie1"]
+script = ExtResource("2_b761e")
+property_type = 5
+operation_type = 0
+operation_data = 0.1
+
+[node name="RoyalProtectionLV2" instance=ExtResource("1_u2rr2")]
+script = ExtResource("2_ntl0v")
+buff_blocks = Array[ExtResource("2_b761e")]([SubResource("Resource_bkie1")])
+duration = 2.0
+buff_level = 2
+buff_tag = "RoyalProtection"
+
+[node name="Effect" type="Sprite2D" parent="." index="0"]
+modulate = Color(1, 1, 1, 0.847059)
+texture = ExtResource("3_ouyyb")

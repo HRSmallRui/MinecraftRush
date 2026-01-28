@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmghffnwe663h"]
+
+[ext_resource type="PackedScene" uid="uid://bjfa3t67tpsbr" path="res://Scenes/Buffs/property_buff.tscn" id="1_nkdqv"]
+[ext_resource type="Script" path="res://Scripts/Buffs/property_buff_block.gd" id="2_6refc"]
+
+[sub_resource type="Resource" id="Resource_3tisc"]
+script = ExtResource("2_6refc")
+property_type = 1
+operation_type = 1
+operation_data = 2.0
+
+[sub_resource type="Resource" id="Resource_mwep8"]
+script = ExtResource("2_6refc")
+property_type = 2
+operation_type = 1
+operation_data = 2.0
+
+[node name="MikeFireBuff" instance=ExtResource("1_nkdqv")]
+buff_blocks = Array[ExtResource("2_6refc")]([SubResource("Resource_3tisc"), SubResource("Resource_mwep8")])
+duration = 12.0
+buff_tag = "MikeFireBuff"

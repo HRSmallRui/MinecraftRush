@@ -1,0 +1,1387 @@
+[gd_scene load_steps=269 format=3 uid="uid://b7nmquf4icsws"]
+
+[ext_resource type="PackedScene" uid="uid://58cc8ohjp6pd" path="res://Scenes/Allys/Heroes/hero_class.tscn" id="1_6ohj6"]
+[ext_resource type="Texture2D" uid="uid://b65o81wdbsw7l" path="res://Assets/Images/UI/HeroHall/HeadTexs/Fuchen.png" id="2_7r13c"]
+[ext_resource type="Script" path="res://Scripts/Allys/Heroes/fuchen.gd" id="2_lpagh"]
+[ext_resource type="Resource" uid="uid://c2ltxu5vo3jy3" path="res://Library/Heroes/HeroPropertyBlocks/Fuchen.tres" id="2_vmfd8"]
+[ext_resource type="Texture2D" uid="uid://bogj23c18updw" path="res://Assets/Images/UI/InformationBar/Fuchen.png" id="4_45pkp"]
+[ext_resource type="PackedScene" uid="uid://c063ssypuf6my" path="res://Scenes/Bullets/purple_magic_ball.tscn" id="4_xexlq"]
+[ext_resource type="Texture2D" uid="uid://bavc5v3d6lurc" path="res://Assets/Images/DefenceTowers/Magics/Towers/LV4-1/heart-purple.png" id="5_41p50"]
+[ext_resource type="AudioStream" uid="uid://fr2csv8b0ofi" path="res://Assets/Sounds/FXs/DefenceTowers/ProtectorChurch/Ray1.wav" id="6_bn04r"]
+[ext_resource type="Texture2D" uid="uid://cjtsv28lgw3rn" path="res://Assets/Animations/Heroes/Fuchen/attack_00.png" id="6_nb4l8"]
+[ext_resource type="Texture2D" uid="uid://nhg04l35ui82" path="res://Assets/Animations/Heroes/Fuchen/attack_01.png" id="7_kdpr0"]
+[ext_resource type="AudioStream" uid="uid://dt6x3iyeqcmqd" path="res://Assets/Sounds/FXs/DefenceTowers/ProtectorChurch/RayElec.wav" id="7_vlkcg"]
+[ext_resource type="Texture2D" uid="uid://cvjt2ppqpcwhp" path="res://Assets/Animations/Heroes/Fuchen/attack_02.png" id="8_5o0ro"]
+[ext_resource type="AudioStream" uid="uid://5vm66inghgpc" path="res://Assets/Sounds/FXs/Heroes/Fuchen/末日.wav" id="8_mkxfg"]
+[ext_resource type="Texture2D" uid="uid://djt552elcvioj" path="res://Assets/Animations/Heroes/Fuchen/attack_03.png" id="9_wd06i"]
+[ext_resource type="Texture2D" uid="uid://fygi7j16nuy2" path="res://Assets/Animations/Heroes/Fuchen/attack_04.png" id="10_sl26c"]
+[ext_resource type="Texture2D" uid="uid://240om66o7y32" path="res://Assets/Animations/Heroes/Fuchen/attack_05.png" id="11_6dkkm"]
+[ext_resource type="Texture2D" uid="uid://c1qw011h7tr8m" path="res://Assets/Animations/Heroes/Fuchen/attack_06.png" id="12_nn27g"]
+[ext_resource type="Texture2D" uid="uid://dtjpsjp40nxuo" path="res://Assets/Animations/Heroes/Fuchen/attack_07.png" id="13_crbfo"]
+[ext_resource type="Texture2D" uid="uid://ds3bvnay4mow7" path="res://Assets/Animations/Heroes/Fuchen/attack_08.png" id="14_bk304"]
+[ext_resource type="Texture2D" uid="uid://ctgu0h0qorw0" path="res://Assets/Animations/Heroes/Fuchen/attack_09.png" id="15_e7sxg"]
+[ext_resource type="Texture2D" uid="uid://dhlkjoe6b5s3p" path="res://Assets/Animations/Heroes/Fuchen/attack_10.png" id="16_4uc08"]
+[ext_resource type="Texture2D" uid="uid://fn3ffoovwhgg" path="res://Assets/Animations/Heroes/Fuchen/attack_11.png" id="17_7ykv8"]
+[ext_resource type="Texture2D" uid="uid://dxl3ajn1lfb3" path="res://Assets/Animations/Heroes/Fuchen/attack_12.png" id="18_f2uht"]
+[ext_resource type="Texture2D" uid="uid://cllkpmv2o8yya" path="res://Assets/Animations/Heroes/Fuchen/attack_13.png" id="19_heajv"]
+[ext_resource type="Texture2D" uid="uid://dgsurv0wv56n3" path="res://Assets/Animations/Heroes/Fuchen/attack_14.png" id="20_aisat"]
+[ext_resource type="Texture2D" uid="uid://eorcvwpeq3lu" path="res://Assets/Animations/Heroes/Fuchen/attack_15.png" id="21_pbes5"]
+[ext_resource type="Texture2D" uid="uid://clf772mxpqxsx" path="res://Assets/Animations/Heroes/Fuchen/attack_16.png" id="22_xfcym"]
+[ext_resource type="Texture2D" uid="uid://be8uhd43gop2o" path="res://Assets/Animations/Heroes/Fuchen/attack_17.png" id="23_d8hms"]
+[ext_resource type="Texture2D" uid="uid://dtqyrnbdapivd" path="res://Assets/Animations/Heroes/Fuchen/attack_18.png" id="24_tubjm"]
+[ext_resource type="Texture2D" uid="uid://b2vvkdal51cvy" path="res://Assets/Animations/Heroes/Fuchen/attack_19.png" id="25_ocrtq"]
+[ext_resource type="Texture2D" uid="uid://vs47topcf40w" path="res://Assets/Animations/Heroes/Fuchen/attack_20.png" id="26_t860o"]
+[ext_resource type="Texture2D" uid="uid://crtbj3pw35ok7" path="res://Assets/Animations/Heroes/Fuchen/attack_21.png" id="27_lbd3u"]
+[ext_resource type="Texture2D" uid="uid://cm4w822qprejq" path="res://Assets/Animations/Heroes/Fuchen/attack_22.png" id="28_yqomq"]
+[ext_resource type="Texture2D" uid="uid://bd34y6h7pvj3f" path="res://Assets/Animations/Heroes/Fuchen/attack_23.png" id="29_1hdpm"]
+[ext_resource type="Texture2D" uid="uid://cqmafna8h5d08" path="res://Assets/Animations/Heroes/Fuchen/attack_24.png" id="30_hglbs"]
+[ext_resource type="Texture2D" uid="uid://b2jtwo1lnemii" path="res://Assets/Animations/Heroes/Fuchen/attack_25.png" id="31_rg13o"]
+[ext_resource type="Texture2D" uid="uid://breqf3o8to8pd" path="res://Assets/Animations/Heroes/Fuchen/attack_26.png" id="32_p04xb"]
+[ext_resource type="Texture2D" uid="uid://c66l16cdamyyb" path="res://Assets/Animations/Heroes/Fuchen/attack_27.png" id="33_5yam0"]
+[ext_resource type="Texture2D" uid="uid://b5bxo3yq3orry" path="res://Assets/Animations/Heroes/Fuchen/attack_28.png" id="34_q07bd"]
+[ext_resource type="Texture2D" uid="uid://btbjid3wk5y41" path="res://Assets/Animations/Heroes/Fuchen/attack_29.png" id="35_ju1yb"]
+[ext_resource type="Texture2D" uid="uid://ctk8lk7dvhdmq" path="res://Assets/Animations/Heroes/Fuchen/attack_30.png" id="36_3lc5j"]
+[ext_resource type="Texture2D" uid="uid://cpq7ijq2p0lax" path="res://Assets/Animations/Heroes/Fuchen/die_00.png" id="37_o1gf8"]
+[ext_resource type="Texture2D" uid="uid://bwyfa3nogwqpb" path="res://Assets/Animations/Heroes/Fuchen/die_01.png" id="38_imemp"]
+[ext_resource type="Texture2D" uid="uid://b5q4nqtw7fcaf" path="res://Assets/Animations/Heroes/Fuchen/die_02.png" id="39_rwoep"]
+[ext_resource type="Texture2D" uid="uid://dnio64r8rl88f" path="res://Assets/Animations/Heroes/Fuchen/die_03.png" id="40_jw2kr"]
+[ext_resource type="Texture2D" uid="uid://d1wbcl2y25w4d" path="res://Assets/Animations/Heroes/Fuchen/die_04.png" id="41_tgo1q"]
+[ext_resource type="Texture2D" uid="uid://ce3jp1vmg0bk" path="res://Assets/Animations/Heroes/Fuchen/die_05.png" id="42_0av6n"]
+[ext_resource type="Texture2D" uid="uid://cnhx6mpvcxdi0" path="res://Assets/Animations/Heroes/Fuchen/die_06.png" id="43_yuekp"]
+[ext_resource type="Texture2D" uid="uid://bavfu7lj3gs2a" path="res://Assets/Animations/Heroes/Fuchen/die_07.png" id="44_vs1u7"]
+[ext_resource type="Texture2D" uid="uid://d4jghioj6vwtj" path="res://Assets/Animations/Heroes/Fuchen/die_08.png" id="45_hhkf7"]
+[ext_resource type="Texture2D" uid="uid://5hfmre1ras34" path="res://Assets/Animations/Heroes/Fuchen/die_09.png" id="46_7gxwq"]
+[ext_resource type="Texture2D" uid="uid://duo8w37cr4241" path="res://Assets/Animations/Heroes/Fuchen/die_10.png" id="47_4ivp5"]
+[ext_resource type="Texture2D" uid="uid://cw6dfqsyknvp" path="res://Assets/Animations/Heroes/Fuchen/die_11.png" id="48_0g6pv"]
+[ext_resource type="Texture2D" uid="uid://bra76nyr32y53" path="res://Assets/Animations/Heroes/Fuchen/die_12.png" id="49_t2orx"]
+[ext_resource type="Texture2D" uid="uid://b3nx0u4vsyxku" path="res://Assets/Animations/Heroes/Fuchen/die_13.png" id="50_3y8li"]
+[ext_resource type="Texture2D" uid="uid://cp055doyplke" path="res://Assets/Animations/Heroes/Fuchen/die_14.png" id="51_og4kb"]
+[ext_resource type="Texture2D" uid="uid://b12kt47ucoc6p" path="res://Assets/Animations/Heroes/Fuchen/die_15.png" id="52_f3vng"]
+[ext_resource type="Texture2D" uid="uid://c74o7sjow5om4" path="res://Assets/Animations/Heroes/Fuchen/die_16.png" id="53_xs7aw"]
+[ext_resource type="Texture2D" uid="uid://bsxomt26l80tw" path="res://Assets/Animations/Heroes/Fuchen/die_17.png" id="54_gjoqk"]
+[ext_resource type="Texture2D" uid="uid://cynvlhusmb0jn" path="res://Assets/Animations/Heroes/Fuchen/die_18.png" id="55_rcklk"]
+[ext_resource type="Texture2D" uid="uid://b7k46n2a8xlh4" path="res://Assets/Animations/Heroes/Fuchen/die_19.png" id="56_q6uuw"]
+[ext_resource type="Texture2D" uid="uid://bgqofat4djxm2" path="res://Assets/Animations/Heroes/Fuchen/die_20.png" id="57_wksqk"]
+[ext_resource type="Texture2D" uid="uid://dy32raex3kefk" path="res://Assets/Animations/Heroes/Fuchen/die_21.png" id="58_uilq4"]
+[ext_resource type="Texture2D" uid="uid://dg7e01jia7ght" path="res://Assets/Animations/Heroes/Fuchen/die_22.png" id="59_oxolx"]
+[ext_resource type="Texture2D" uid="uid://diowux3408n0f" path="res://Assets/Animations/Heroes/Fuchen/die_23.png" id="60_p1idd"]
+[ext_resource type="Texture2D" uid="uid://o0vmrvlv52vc" path="res://Assets/Animations/Heroes/Fuchen/die_24.png" id="61_jiv3d"]
+[ext_resource type="Texture2D" uid="uid://dy160cv84i74p" path="res://Assets/Animations/Heroes/Fuchen/die_25.png" id="62_iopb8"]
+[ext_resource type="Texture2D" uid="uid://cau83y3cq5min" path="res://Assets/Animations/Heroes/Fuchen/die_26.png" id="63_kk21i"]
+[ext_resource type="Texture2D" uid="uid://cp8i12hdskohp" path="res://Assets/Animations/Heroes/Fuchen/die_27.png" id="64_y2ig2"]
+[ext_resource type="Texture2D" uid="uid://dsepqm5wias8e" path="res://Assets/Animations/Heroes/Fuchen/far_attack_00.png" id="65_c053g"]
+[ext_resource type="Texture2D" uid="uid://8mvw4gdgt16c" path="res://Assets/Animations/Heroes/Fuchen/far_attack_01.png" id="66_sq1k5"]
+[ext_resource type="Texture2D" uid="uid://bhmnre77yf42c" path="res://Assets/Animations/Heroes/Fuchen/far_attack_02.png" id="67_6sssf"]
+[ext_resource type="Texture2D" uid="uid://d3meegrc2p6eg" path="res://Assets/Animations/Heroes/Fuchen/far_attack_03.png" id="68_2asd5"]
+[ext_resource type="Texture2D" uid="uid://dw84cqyp5kkof" path="res://Assets/Animations/Heroes/Fuchen/far_attack_04.png" id="69_s0f1d"]
+[ext_resource type="Texture2D" uid="uid://chkq60812fg3m" path="res://Assets/Animations/Heroes/Fuchen/far_attack_05.png" id="70_xiels"]
+[ext_resource type="Texture2D" uid="uid://cm7g3a44e7xsc" path="res://Assets/Animations/Heroes/Fuchen/far_attack_06.png" id="71_3d1r4"]
+[ext_resource type="Texture2D" uid="uid://dmec4mmsylsx4" path="res://Assets/Animations/Heroes/Fuchen/far_attack_07.png" id="72_ur7nr"]
+[ext_resource type="Texture2D" uid="uid://btlxpxlo8wkbi" path="res://Assets/Animations/Heroes/Fuchen/far_attack_08.png" id="73_7e5xh"]
+[ext_resource type="Texture2D" uid="uid://db7pcd6paag4c" path="res://Assets/Animations/Heroes/Fuchen/far_attack_09.png" id="74_rd7gv"]
+[ext_resource type="Texture2D" uid="uid://bjxskajljfquj" path="res://Assets/Animations/Heroes/Fuchen/far_attack_10.png" id="75_kobew"]
+[ext_resource type="Texture2D" uid="uid://b1pieduswtrg" path="res://Assets/Animations/Heroes/Fuchen/far_attack_11.png" id="76_1pm8j"]
+[ext_resource type="Texture2D" uid="uid://b0q12so7q6pc8" path="res://Assets/Animations/Heroes/Fuchen/far_attack_12.png" id="77_o72h0"]
+[ext_resource type="Texture2D" uid="uid://dfvdpw04034qa" path="res://Assets/Animations/Heroes/Fuchen/far_attack_13.png" id="78_f7wci"]
+[ext_resource type="Texture2D" uid="uid://dc01hjm223707" path="res://Assets/Animations/Heroes/Fuchen/far_attack_14.png" id="79_21ltg"]
+[ext_resource type="Texture2D" uid="uid://bjq3uwcadensa" path="res://Assets/Animations/Heroes/Fuchen/far_attack_15.png" id="80_7n5tv"]
+[ext_resource type="Texture2D" uid="uid://d36rvjiugp3g7" path="res://Assets/Animations/Heroes/Fuchen/far_attack_16.png" id="81_wxwd2"]
+[ext_resource type="Texture2D" uid="uid://cur4w3hhpt30x" path="res://Assets/Animations/Heroes/Fuchen/far_attack_17.png" id="82_ln136"]
+[ext_resource type="Texture2D" uid="uid://bll2qk4j18qkv" path="res://Assets/Animations/Heroes/Fuchen/far_attack_18.png" id="83_ntclh"]
+[ext_resource type="Texture2D" uid="uid://e4n3qbyyk6gm" path="res://Assets/Animations/Heroes/Fuchen/far_attack_19.png" id="84_wn4hr"]
+[ext_resource type="Texture2D" uid="uid://gtuub4h0gyju" path="res://Assets/Animations/Heroes/Fuchen/far_attack_20.png" id="85_4v057"]
+[ext_resource type="Texture2D" uid="uid://ql4pfayofyix" path="res://Assets/Animations/Heroes/Fuchen/far_attack_21.png" id="86_cc088"]
+[ext_resource type="Texture2D" uid="uid://j7lgm3ddpf2q" path="res://Assets/Animations/Heroes/Fuchen/far_attack_22.png" id="87_wqw4v"]
+[ext_resource type="Texture2D" uid="uid://ctmfrr0r2ct4o" path="res://Assets/Animations/Heroes/Fuchen/far_attack_23.png" id="88_tlnun"]
+[ext_resource type="Texture2D" uid="uid://jm4s810aj44" path="res://Assets/Animations/Heroes/Fuchen/far_attack_24.png" id="89_be5v4"]
+[ext_resource type="Texture2D" uid="uid://uy0kedt25mli" path="res://Assets/Animations/Heroes/Fuchen/far_attack_25.png" id="90_alsqv"]
+[ext_resource type="Texture2D" uid="uid://5ie2go4wiwrs" path="res://Assets/Animations/Heroes/Fuchen/far_attack_26.png" id="91_oju0x"]
+[ext_resource type="Texture2D" uid="uid://b3xo0e6611pmx" path="res://Assets/Animations/Heroes/Fuchen/far_attack_27.png" id="92_q5x7k"]
+[ext_resource type="Texture2D" uid="uid://cii66lsrgvft7" path="res://Assets/Animations/Heroes/Fuchen/far_attack_28.png" id="93_6bp6o"]
+[ext_resource type="Texture2D" uid="uid://cp87k73af36y3" path="res://Assets/Animations/Heroes/Fuchen/far_attack_29.png" id="94_co2c1"]
+[ext_resource type="Texture2D" uid="uid://hrm4tg43kjyo" path="res://Assets/Animations/Heroes/Fuchen/far_attack_30.png" id="95_nnwf7"]
+[ext_resource type="Texture2D" uid="uid://cckx4dwub1tf8" path="res://Assets/Animations/Heroes/Fuchen/far_attack_31.png" id="96_y671u"]
+[ext_resource type="Texture2D" uid="uid://c0bkmbtpx2n1t" path="res://Assets/Animations/Heroes/Fuchen/far_attack_32.png" id="97_imcux"]
+[ext_resource type="Texture2D" uid="uid://y3xerpypcdux" path="res://Assets/Animations/Heroes/Fuchen/move_0.png" id="98_s6nwc"]
+[ext_resource type="Texture2D" uid="uid://cydt02b3wnrgm" path="res://Assets/Animations/Heroes/Fuchen/skill2_00.png" id="99_uaets"]
+[ext_resource type="Texture2D" uid="uid://bifynyvnuvtl3" path="res://Assets/Animations/Heroes/Fuchen/skill2_01.png" id="100_btlu6"]
+[ext_resource type="Texture2D" uid="uid://c6isb7kra8q3m" path="res://Assets/Animations/Heroes/Fuchen/skill2_02.png" id="101_o1461"]
+[ext_resource type="Texture2D" uid="uid://dah18q54trc22" path="res://Assets/Animations/Heroes/Fuchen/skill2_03.png" id="102_erd7l"]
+[ext_resource type="Texture2D" uid="uid://hcxt4hejwkui" path="res://Assets/Animations/Heroes/Fuchen/skill2_04.png" id="103_xyn0t"]
+[ext_resource type="Texture2D" uid="uid://bgoyq56y87wjf" path="res://Assets/Animations/Heroes/Fuchen/skill2_05.png" id="104_qswv2"]
+[ext_resource type="Texture2D" uid="uid://cvfn5fwsp758c" path="res://Assets/Animations/Heroes/Fuchen/skill2_06.png" id="105_s00ab"]
+[ext_resource type="Texture2D" uid="uid://bsem7vshtqfl1" path="res://Assets/Animations/Heroes/Fuchen/skill2_07.png" id="106_a35o2"]
+[ext_resource type="Texture2D" uid="uid://b5emmtw7qs13y" path="res://Assets/Animations/Heroes/Fuchen/skill2_08.png" id="107_1p8a0"]
+[ext_resource type="Texture2D" uid="uid://lw7i444qb3ei" path="res://Assets/Animations/Heroes/Fuchen/skill2_09.png" id="108_ouur4"]
+[ext_resource type="Texture2D" uid="uid://78ngby0pnoxy" path="res://Assets/Animations/Heroes/Fuchen/skill2_10.png" id="109_00onu"]
+[ext_resource type="Texture2D" uid="uid://rbvnq4htorid" path="res://Assets/Animations/Heroes/Fuchen/skill2_11.png" id="110_7mkcn"]
+[ext_resource type="Texture2D" uid="uid://dkdxtv6dd48f3" path="res://Assets/Animations/Heroes/Fuchen/skill2_12.png" id="111_qdgol"]
+[ext_resource type="Texture2D" uid="uid://cythexy31sxfd" path="res://Assets/Animations/Heroes/Fuchen/skill2_13.png" id="112_16b14"]
+[ext_resource type="Texture2D" uid="uid://dpso2oo1h13nl" path="res://Assets/Animations/Heroes/Fuchen/skill2_14.png" id="113_ptt34"]
+[ext_resource type="Texture2D" uid="uid://2aehsfe6lnnw" path="res://Assets/Animations/Heroes/Fuchen/skill2_15.png" id="114_tbsjq"]
+[ext_resource type="Texture2D" uid="uid://csgu6jxnc36ov" path="res://Assets/Animations/Heroes/Fuchen/skill2_16.png" id="115_nuru8"]
+[ext_resource type="Texture2D" uid="uid://nittcl1iucn6" path="res://Assets/Animations/Heroes/Fuchen/skill2_17.png" id="116_srmed"]
+[ext_resource type="Texture2D" uid="uid://bj5w7stuga3xc" path="res://Assets/Animations/Heroes/Fuchen/skill2_18.png" id="117_4rmq8"]
+[ext_resource type="Texture2D" uid="uid://1vln0t6358lj" path="res://Assets/Animations/Heroes/Fuchen/skill2_19.png" id="118_bhs36"]
+[ext_resource type="Texture2D" uid="uid://domyodwq4dkg4" path="res://Assets/Animations/Heroes/Fuchen/skill2_20.png" id="119_venha"]
+[ext_resource type="Texture2D" uid="uid://66vv701f5a06" path="res://Assets/Animations/Heroes/Fuchen/skill2_21.png" id="120_a1ltk"]
+[ext_resource type="Texture2D" uid="uid://drcjk0vl5m8pu" path="res://Assets/Animations/Heroes/Fuchen/skill2_22.png" id="121_l41w1"]
+[ext_resource type="Texture2D" uid="uid://bmv7gb3em8ph8" path="res://Assets/Animations/Heroes/Fuchen/skill2_23.png" id="122_t8g40"]
+[ext_resource type="Texture2D" uid="uid://dkq1t831bk8ja" path="res://Assets/Animations/Heroes/Fuchen/skill2_24.png" id="123_s5d16"]
+[ext_resource type="Texture2D" uid="uid://bq3yyxkfd0452" path="res://Assets/Animations/Heroes/Fuchen/skill2_25.png" id="124_qr25x"]
+[ext_resource type="Texture2D" uid="uid://dv5ymn7thgdix" path="res://Assets/Animations/Heroes/Fuchen/skill2_26.png" id="125_g2xt0"]
+[ext_resource type="Texture2D" uid="uid://ctemkdqrcacgd" path="res://Assets/Animations/Heroes/Fuchen/skill2_27.png" id="126_jrt67"]
+[ext_resource type="Texture2D" uid="uid://c5ljyefe267dl" path="res://Assets/Animations/Heroes/Fuchen/skill2_28.png" id="127_d2mvn"]
+[ext_resource type="Texture2D" uid="uid://d1rkh1hrvw6i0" path="res://Assets/Animations/Heroes/Fuchen/skill2_29.png" id="128_1vpps"]
+[ext_resource type="Texture2D" uid="uid://c21rot4txvss2" path="res://Assets/Animations/Heroes/Fuchen/skill2_30.png" id="129_mflom"]
+[ext_resource type="Texture2D" uid="uid://dit78feer0esy" path="res://Assets/Animations/Heroes/Fuchen/skill3_00.png" id="130_g0ew6"]
+[ext_resource type="Texture2D" uid="uid://bxwrgl8eu0akr" path="res://Assets/Animations/Heroes/Fuchen/skill3_01.png" id="131_gamao"]
+[ext_resource type="Texture2D" uid="uid://bl7m556t47g3v" path="res://Assets/Animations/Heroes/Fuchen/skill3_02.png" id="132_ndvyn"]
+[ext_resource type="Texture2D" uid="uid://e0ei5whyv6dj" path="res://Assets/Animations/Heroes/Fuchen/skill3_03.png" id="133_4qyvl"]
+[ext_resource type="Texture2D" uid="uid://6hpgn3omftsx" path="res://Assets/Animations/Heroes/Fuchen/skill3_04.png" id="134_vd2su"]
+[ext_resource type="Texture2D" uid="uid://clmq06xjwvjmj" path="res://Assets/Animations/Heroes/Fuchen/skill3_05.png" id="135_pvsc8"]
+[ext_resource type="Texture2D" uid="uid://bvdkjkeimwja1" path="res://Assets/Animations/Heroes/Fuchen/skill3_06.png" id="136_jh2ew"]
+[ext_resource type="Texture2D" uid="uid://dkw80x4jh2kjo" path="res://Assets/Animations/Heroes/Fuchen/skill3_07.png" id="137_rek20"]
+[ext_resource type="Texture2D" uid="uid://bv1k16jxtvd6j" path="res://Assets/Animations/Heroes/Fuchen/skill3_08.png" id="138_b1mvv"]
+[ext_resource type="Texture2D" uid="uid://byio7hwvej3dx" path="res://Assets/Animations/Heroes/Fuchen/skill3_09.png" id="139_7nl7a"]
+[ext_resource type="Texture2D" uid="uid://77nljqx5oo7q" path="res://Assets/Animations/Heroes/Fuchen/skill3_10.png" id="140_naw5a"]
+[ext_resource type="Texture2D" uid="uid://ghsdew8dqjxf" path="res://Assets/Animations/Heroes/Fuchen/skill3_11.png" id="141_lwow8"]
+[ext_resource type="Texture2D" uid="uid://djleeqko24rin" path="res://Assets/Animations/Heroes/Fuchen/skill3_12.png" id="142_lh07r"]
+[ext_resource type="Texture2D" uid="uid://bgeiobysd7q5k" path="res://Assets/Animations/Heroes/Fuchen/skill3_13.png" id="143_naoyf"]
+[ext_resource type="Texture2D" uid="uid://dbf4nljisew7u" path="res://Assets/Animations/Heroes/Fuchen/skill3_14.png" id="144_coxdt"]
+[ext_resource type="Texture2D" uid="uid://cvq7ym7mhwhji" path="res://Assets/Animations/Heroes/Fuchen/skill3_15.png" id="145_jbuaq"]
+[ext_resource type="Texture2D" uid="uid://bamjvc43ng4jk" path="res://Assets/Animations/Heroes/Fuchen/skill3_16.png" id="146_lmdb3"]
+[ext_resource type="Texture2D" uid="uid://dadv678vpaotg" path="res://Assets/Animations/Heroes/Fuchen/skill3_17.png" id="147_ufqja"]
+[ext_resource type="Texture2D" uid="uid://davvffun1w68l" path="res://Assets/Animations/Heroes/Fuchen/skill3_18.png" id="148_le5sh"]
+[ext_resource type="Texture2D" uid="uid://cumuh0r77nl5s" path="res://Assets/Animations/Heroes/Fuchen/skill3_19.png" id="149_uoyha"]
+[ext_resource type="Texture2D" uid="uid://c0blrtrasuivb" path="res://Assets/Animations/Heroes/Fuchen/skill3_20.png" id="150_rv0n5"]
+[ext_resource type="Texture2D" uid="uid://bsxtbd7l4p3uu" path="res://Assets/Animations/Heroes/Fuchen/skill3_21.png" id="151_v8e68"]
+[ext_resource type="Texture2D" uid="uid://n6o13gva4h85" path="res://Assets/Animations/Heroes/Fuchen/skill3_22.png" id="152_sjavq"]
+[ext_resource type="Texture2D" uid="uid://jdabpfa3vuyx" path="res://Assets/Animations/Heroes/Fuchen/skill3_23.png" id="153_72wkl"]
+[ext_resource type="Texture2D" uid="uid://dwhp77ajeydg1" path="res://Assets/Animations/Heroes/Fuchen/skill3_24.png" id="154_50hte"]
+[ext_resource type="Texture2D" uid="uid://c1v3er3hxb2gn" path="res://Assets/Animations/Heroes/Fuchen/skill3_25.png" id="155_5itw5"]
+[ext_resource type="Texture2D" uid="uid://chyrerlht63jj" path="res://Assets/Animations/Heroes/Fuchen/skill3_26.png" id="156_jnm2i"]
+[ext_resource type="Texture2D" uid="uid://cr2x6euu152s3" path="res://Assets/Animations/Heroes/Fuchen/skill3_27.png" id="157_qqmbx"]
+[ext_resource type="Texture2D" uid="uid://6bbx4dcau7un" path="res://Assets/Animations/Heroes/Fuchen/skill3_28.png" id="158_pg2v6"]
+[ext_resource type="Texture2D" uid="uid://dq1idtmnosytl" path="res://Assets/Animations/Heroes/Fuchen/skill3_29.png" id="159_13p2i"]
+[ext_resource type="Texture2D" uid="uid://cn5aacw0klvot" path="res://Assets/Animations/Heroes/Fuchen/skill3_30.png" id="160_3p21j"]
+[ext_resource type="Texture2D" uid="uid://bjcsc2txbalp7" path="res://Assets/Animations/Heroes/Fuchen/skill3_31.png" id="161_fg5hk"]
+[ext_resource type="Texture2D" uid="uid://b3row5tb2yge6" path="res://Assets/Animations/Heroes/Fuchen/skill3_32.png" id="162_m734d"]
+[ext_resource type="Texture2D" uid="uid://885jq0efhd6c" path="res://Assets/Animations/Heroes/Fuchen/skill3_33.png" id="163_hp0rw"]
+[ext_resource type="Texture2D" uid="uid://bsfq0bdgipjyc" path="res://Assets/Animations/Heroes/Fuchen/skill3_34.png" id="164_c1qr2"]
+[ext_resource type="Texture2D" uid="uid://c7nfhehiy4y4c" path="res://Assets/Animations/Heroes/Fuchen/skill3_35.png" id="165_jr6of"]
+[ext_resource type="Texture2D" uid="uid://bfki4nrynfhrk" path="res://Assets/Animations/Heroes/Fuchen/skill3_36.png" id="166_7qixp"]
+[ext_resource type="Texture2D" uid="uid://bgb8wtu5h1k0j" path="res://Assets/Animations/Heroes/Fuchen/skill3_37.png" id="167_c6wtc"]
+[ext_resource type="Texture2D" uid="uid://bxhdh1emk0iut" path="res://Assets/Animations/Heroes/Fuchen/skill3_38.png" id="168_a0oro"]
+[ext_resource type="Texture2D" uid="uid://cjtx3c8e3kcg7" path="res://Assets/Animations/Heroes/Fuchen/skill3_39.png" id="169_aesnn"]
+[ext_resource type="Texture2D" uid="uid://e1datmtg1bei" path="res://Assets/Animations/Heroes/Fuchen/skill3_40.png" id="170_wi6qq"]
+[ext_resource type="Texture2D" uid="uid://dk11i2ufrb2ir" path="res://Assets/Animations/Heroes/Fuchen/skill3_41.png" id="171_ft1e8"]
+[ext_resource type="Texture2D" uid="uid://y6a2q2nxnpta" path="res://Assets/Animations/Heroes/Fuchen/skill3_42.png" id="172_8pp7i"]
+[ext_resource type="Texture2D" uid="uid://c1hgdi26yrb3j" path="res://Assets/Animations/Heroes/Fuchen/skill3_43.png" id="173_dbu75"]
+[ext_resource type="Texture2D" uid="uid://bxmofnbqiur00" path="res://Assets/Animations/Heroes/Fuchen/skill3_44.png" id="174_3alc1"]
+[ext_resource type="Texture2D" uid="uid://ckwwvft0lq5iw" path="res://Assets/Animations/Heroes/Fuchen/skill3_45.png" id="175_qp8hj"]
+[ext_resource type="Texture2D" uid="uid://cs3ng3vpbxoif" path="res://Assets/Animations/Heroes/Fuchen/skill3_46.png" id="176_spkh4"]
+[ext_resource type="Texture2D" uid="uid://co83qo1mc8lr0" path="res://Assets/Animations/Heroes/Fuchen/skill3_47.png" id="177_iyvp8"]
+[ext_resource type="Texture2D" uid="uid://dsmx4lkw2xiss" path="res://Assets/Animations/Heroes/Fuchen/skill3_48.png" id="178_t4shh"]
+[ext_resource type="Texture2D" uid="uid://bp4f1xrwvwaq6" path="res://Assets/Animations/Heroes/Fuchen/skill4_end_00.png" id="179_3dvac"]
+[ext_resource type="Texture2D" uid="uid://cgv4520xh1xek" path="res://Assets/Animations/Heroes/Fuchen/skill4_end_01.png" id="180_e27tb"]
+[ext_resource type="Texture2D" uid="uid://dde0vr85d8u5" path="res://Assets/Animations/Heroes/Fuchen/skill4_end_02.png" id="181_7xf76"]
+[ext_resource type="Texture2D" uid="uid://dcowmtpkat4wh" path="res://Assets/Animations/Heroes/Fuchen/skill4_end_03.png" id="182_mbg6w"]
+[ext_resource type="Texture2D" uid="uid://bida6u75me8c1" path="res://Assets/Animations/Heroes/Fuchen/skill4_end_04.png" id="183_1xwm5"]
+[ext_resource type="Texture2D" uid="uid://btdfxq28hixdq" path="res://Assets/Animations/Heroes/Fuchen/skill4_end_05.png" id="184_gs7ya"]
+[ext_resource type="Texture2D" uid="uid://1pm5nq2whc63" path="res://Assets/Animations/Heroes/Fuchen/skill4_end_06.png" id="185_ydtwa"]
+[ext_resource type="Texture2D" uid="uid://i8e0k2sm6c6n" path="res://Assets/Animations/Heroes/Fuchen/skill4_end_07.png" id="186_e44lr"]
+[ext_resource type="Texture2D" uid="uid://bkbl7luxoid4p" path="res://Assets/Animations/Heroes/Fuchen/skill4_end_08.png" id="187_2y76v"]
+[ext_resource type="Texture2D" uid="uid://dc50wlyb74imh" path="res://Assets/Animations/Heroes/Fuchen/skill4_end_09.png" id="188_eayud"]
+[ext_resource type="Texture2D" uid="uid://bn2q6m2uqmvxu" path="res://Assets/Animations/Heroes/Fuchen/skill4_end_10.png" id="189_y0233"]
+[ext_resource type="Texture2D" uid="uid://by446fdafrmwg" path="res://Assets/Animations/Heroes/Fuchen/skill4_end_11.png" id="190_mu0cv"]
+[ext_resource type="Texture2D" uid="uid://qwi4jolod2lg" path="res://Assets/Animations/Heroes/Fuchen/skill4_end_12.png" id="191_g2wv4"]
+[ext_resource type="Texture2D" uid="uid://c30vxbxgpbbuo" path="res://Assets/Animations/Heroes/Fuchen/skill4_end_13.png" id="192_eu74a"]
+[ext_resource type="Texture2D" uid="uid://om3hqvbei7pt" path="res://Assets/Animations/Heroes/Fuchen/skill4_start_19.png" id="193_atjqo"]
+[ext_resource type="Texture2D" uid="uid://thwjbm7rjm4d" path="res://Assets/Animations/Heroes/Fuchen/skill4_start_00.png" id="194_q2jom"]
+[ext_resource type="Texture2D" uid="uid://dw35w7f10pymm" path="res://Assets/Animations/Heroes/Fuchen/skill4_start_01.png" id="195_4qrpa"]
+[ext_resource type="Texture2D" uid="uid://bh4731knbpvwy" path="res://Assets/Animations/Heroes/Fuchen/skill4_start_02.png" id="196_q43m4"]
+[ext_resource type="Texture2D" uid="uid://cpesg0epkff2b" path="res://Assets/Animations/Heroes/Fuchen/skill4_start_03.png" id="197_25dxk"]
+[ext_resource type="Texture2D" uid="uid://f8ykdcnhwf34" path="res://Assets/Animations/Heroes/Fuchen/skill4_start_04.png" id="198_po7sf"]
+[ext_resource type="Texture2D" uid="uid://bbpk8gy5ym05l" path="res://Assets/Animations/Heroes/Fuchen/skill4_start_05.png" id="199_rnhk6"]
+[ext_resource type="Texture2D" uid="uid://bnwwgp2v3ffit" path="res://Assets/Animations/Heroes/Fuchen/skill4_start_06.png" id="200_wkwxy"]
+[ext_resource type="Texture2D" uid="uid://dcu72e6vm1fpu" path="res://Assets/Animations/Heroes/Fuchen/skill4_start_07.png" id="201_tyyl5"]
+[ext_resource type="Texture2D" uid="uid://dftawroix02hc" path="res://Assets/Animations/Heroes/Fuchen/skill4_start_08.png" id="202_bfrcb"]
+[ext_resource type="Texture2D" uid="uid://ccj36vvue4qir" path="res://Assets/Animations/Heroes/Fuchen/skill4_start_09.png" id="203_acwus"]
+[ext_resource type="Texture2D" uid="uid://cleib54ed6qsm" path="res://Assets/Animations/Heroes/Fuchen/skill4_start_10.png" id="204_cxuht"]
+[ext_resource type="Texture2D" uid="uid://x2fhfverqlj1" path="res://Assets/Animations/Heroes/Fuchen/skill4_start_11.png" id="205_bl53c"]
+[ext_resource type="Texture2D" uid="uid://bu8upyr53nwi1" path="res://Assets/Animations/Heroes/Fuchen/skill4_start_12.png" id="206_dq3qs"]
+[ext_resource type="Texture2D" uid="uid://fs5ws2r8q6cu" path="res://Assets/Animations/Heroes/Fuchen/skill4_start_13.png" id="207_tg15m"]
+[ext_resource type="Texture2D" uid="uid://dx8yg3qq1uefq" path="res://Assets/Animations/Heroes/Fuchen/skill4_start_14.png" id="208_8fi3a"]
+[ext_resource type="Texture2D" uid="uid://xksmf3hseirb" path="res://Assets/Animations/Heroes/Fuchen/skill4_start_15.png" id="209_a7sgo"]
+[ext_resource type="Texture2D" uid="uid://dik4wfk88uvy5" path="res://Assets/Animations/Heroes/Fuchen/skill4_start_16.png" id="210_82g4e"]
+[ext_resource type="Texture2D" uid="uid://cy6drhv32eksd" path="res://Assets/Animations/Heroes/Fuchen/skill4_start_17.png" id="211_hf7tw"]
+[ext_resource type="Texture2D" uid="uid://hue6xnlrvuo4" path="res://Assets/Animations/Heroes/Fuchen/skill4_start_18.png" id="212_f2c71"]
+[ext_resource type="Texture2D" uid="uid://bk7miis38y7oy" path="res://Assets/Animations/Heroes/Fuchen/teleport_00.png" id="213_rbp33"]
+[ext_resource type="Texture2D" uid="uid://xvdnni8igd2k" path="res://Assets/Animations/Heroes/Fuchen/teleport_01.png" id="214_cb82b"]
+[ext_resource type="Texture2D" uid="uid://b744trbourqy3" path="res://Assets/Animations/Heroes/Fuchen/teleport_02.png" id="215_1wlim"]
+[ext_resource type="Texture2D" uid="uid://dotqsw4upxr1" path="res://Assets/Animations/Heroes/Fuchen/teleport_03.png" id="216_h01xy"]
+[ext_resource type="Texture2D" uid="uid://dq5d8k0ajpbmh" path="res://Assets/Animations/Heroes/Fuchen/teleport_04.png" id="217_t3ufr"]
+[ext_resource type="Texture2D" uid="uid://dpuwwhrwv8f3n" path="res://Assets/Animations/Heroes/Fuchen/teleport_05.png" id="218_1xhqo"]
+[ext_resource type="Texture2D" uid="uid://uyrfiuxja7c7" path="res://Assets/Animations/Heroes/Fuchen/teleport_06.png" id="219_eumij"]
+[ext_resource type="Texture2D" uid="uid://u28n8qpgsbmf" path="res://Assets/Animations/Heroes/Fuchen/teleport_07.png" id="220_3112t"]
+[ext_resource type="Texture2D" uid="uid://cjnhd1jf2y13r" path="res://Assets/Animations/Heroes/Fuchen/teleport_08.png" id="221_xyos7"]
+[ext_resource type="Texture2D" uid="uid://dcdwiy3h7167" path="res://Assets/Animations/Heroes/Fuchen/teleport_09.png" id="222_fqcp8"]
+[ext_resource type="Texture2D" uid="uid://bef8r4035t0k7" path="res://Assets/Animations/Heroes/Fuchen/teleport_10.png" id="223_l5qhj"]
+[ext_resource type="Texture2D" uid="uid://bv6s3wayi12qs" path="res://Assets/Animations/Heroes/Fuchen/teleport_11.png" id="224_p3kcg"]
+[ext_resource type="Texture2D" uid="uid://s4x6qk2o61bh" path="res://Assets/Animations/Heroes/Fuchen/teleport_12.png" id="225_ajtxy"]
+[ext_resource type="Texture2D" uid="uid://sj7iwqyp6r3" path="res://Assets/Animations/Heroes/Fuchen/teleport_13.png" id="226_pwlkw"]
+[ext_resource type="Texture2D" uid="uid://dmrx708qhxcsf" path="res://Assets/Animations/Heroes/Fuchen/teleport_14.png" id="227_ic44t"]
+[ext_resource type="Texture2D" uid="uid://btk5nwms0vd6i" path="res://Assets/Animations/Heroes/Fuchen/teleport_15.png" id="228_0ubrq"]
+[ext_resource type="Texture2D" uid="uid://bh70cto4ghwb5" path="res://Assets/Animations/Heroes/Fuchen/teleport_16.png" id="229_vlhja"]
+[ext_resource type="Texture2D" uid="uid://6e1gc3bhvoik" path="res://Assets/Animations/Heroes/Fuchen/teleport_17.png" id="230_mahc7"]
+[ext_resource type="Texture2D" uid="uid://cbpy1qtkp3jgd" path="res://Assets/Animations/Heroes/Fuchen/teleport_18.png" id="231_se4ku"]
+[ext_resource type="Texture2D" uid="uid://c5puw86rnkm7v" path="res://Assets/Animations/Heroes/Fuchen/teleport_19.png" id="232_8im80"]
+[ext_resource type="Texture2D" uid="uid://c83plcrnjybdy" path="res://Assets/Animations/Heroes/Fuchen/teleport_20.png" id="233_ii34x"]
+[ext_resource type="Texture2D" uid="uid://pljuwididnhe" path="res://Assets/Animations/Heroes/Fuchen/teleport_21.png" id="234_cdelq"]
+[ext_resource type="Texture2D" uid="uid://xhfkckatc5sw" path="res://Assets/Animations/Heroes/Fuchen/teleport_22.png" id="235_e42ci"]
+[ext_resource type="Texture2D" uid="uid://dx2lawcr0nsq5" path="res://Assets/Animations/Heroes/Fuchen/teleport_23.png" id="236_kdre6"]
+[ext_resource type="Texture2D" uid="uid://4b1h808xsshw" path="res://Assets/Animations/Heroes/Fuchen/teleport_24.png" id="237_y17pt"]
+[ext_resource type="Texture2D" uid="uid://c6kcexcuc1ng4" path="res://Assets/Animations/Heroes/Fuchen/teleport_25.png" id="238_vebil"]
+[ext_resource type="Texture2D" uid="uid://qtoylsn2gy5o" path="res://Assets/Animations/Heroes/Fuchen/teleport_26.png" id="239_uim8d"]
+[ext_resource type="Texture2D" uid="uid://cphyoe21lw6o4" path="res://Assets/Animations/Heroes/Fuchen/teleport_27.png" id="240_ypa66"]
+[ext_resource type="Texture2D" uid="uid://bl181jiey3af2" path="res://Assets/Animations/Heroes/Fuchen/teleport_28.png" id="241_ualg1"]
+[ext_resource type="Texture2D" uid="uid://bl1wpagjuwj7c" path="res://Assets/Animations/Heroes/Fuchen/teleport_29.png" id="242_s14u4"]
+[ext_resource type="Texture2D" uid="uid://5aeoxy0brwo3" path="res://Assets/Animations/Heroes/Fuchen/teleport_30.png" id="243_as4dp"]
+[ext_resource type="Texture2D" uid="uid://dcd17a3wymh08" path="res://Assets/Animations/Heroes/Fuchen/teleport_31.png" id="244_xt1bn"]
+[ext_resource type="Texture2D" uid="uid://bfkqfjrpiq4pc" path="res://Assets/Animations/Heroes/Fuchen/teleport_32.png" id="245_yheun"]
+[ext_resource type="Texture2D" uid="uid://jqdedldrmym3" path="res://Assets/Animations/Heroes/Fuchen/teleport_33.png" id="246_mo74o"]
+[ext_resource type="Texture2D" uid="uid://xqf1npd2um1u" path="res://Assets/Animations/Heroes/Fuchen/teleport_34.png" id="247_r8y3c"]
+[ext_resource type="Texture2D" uid="uid://wv1qofxyalte" path="res://Assets/Animations/Heroes/Fuchen/teleport_35.png" id="248_tyv41"]
+[ext_resource type="Script" path="res://Scripts/Allys/Heroes/fuchen_magic_heart.gd" id="250_wthqo"]
+[ext_resource type="Texture2D" uid="uid://f0e5qhu3dxxu" path="res://Assets/Animations/Heroes/Fuchen/sheild.png" id="251_2cgs8"]
+[ext_resource type="AudioStream" uid="uid://cq0hmmp6grfpw" path="res://Assets/Sounds/FXs/Battles/魔法拳.wav" id="252_x3ul6"]
+[ext_resource type="AudioStream" uid="uid://cvr85147a6civ" path="res://Assets/Sounds/FXs/Enemies/瞬移1.wav" id="253_kgf8d"]
+[ext_resource type="AudioStream" uid="uid://c7r7ydgqlmmlf" path="res://Assets/Sounds/FXs/Enemies/瞬移2.wav" id="254_kd8mn"]
+[ext_resource type="AudioStream" uid="uid://b6k07hqofnnxa" path="res://Assets/Sounds/FXs/Heroes/Fuchen/护盾.wav" id="256_uq2fj"]
+
+[sub_resource type="Animation" id="Animation_qw00w"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_18vrh"]
+resource_name = "rotation"
+length = 0.6
+loop_mode = 1
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(1, 0),
+"points": PackedFloat32Array(0, 0, 0, 0, 0, 6.28319, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7lkih"]
+_data = {
+"RESET": SubResource("Animation_qw00w"),
+"rotation": SubResource("Animation_18vrh")
+}
+
+[sub_resource type="Animation" id="Animation_f8r87"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-55, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_twews"]
+resource_name = "move_loop"
+loop_mode = 2
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-115, -0.25, 0, 0.25, 0, -245, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k7yit"]
+_data = {
+"RESET": SubResource("Animation_f8r87"),
+"move_loop": SubResource("Animation_twews")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gcqhy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_nb4l8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kdpr0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5o0ro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wd06i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_sl26c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_6dkkm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nn27g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_crbfo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_bk304")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_e7sxg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_4uc08")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_7ykv8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_f2uht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_heajv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_aisat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_pbes5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_xfcym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_d8hms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_tubjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ocrtq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_t860o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_lbd3u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_yqomq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_1hdpm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_hglbs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_rg13o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_p04xb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_5yam0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_q07bd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ju1yb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_3lc5j")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_o1gf8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_imemp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_rwoep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_jw2kr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_tgo1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_0av6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_yuekp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_vs1u7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_hhkf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_7gxwq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_4ivp5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_0g6pv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_t2orx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_3y8li")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_og4kb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_f3vng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_xs7aw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_gjoqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_rcklk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_q6uuw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_wksqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_uilq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_oxolx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_p1idd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_jiv3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_iopb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_kk21i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_y2ig2")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("65_c053g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_sq1k5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_6sssf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_2asd5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_s0f1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_xiels")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_3d1r4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_ur7nr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_7e5xh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_rd7gv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_kobew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_1pm8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_o72h0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_f7wci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_21ltg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_7n5tv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_wxwd2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_ln136")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_ntclh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_wn4hr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_4v057")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_cc088")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_wqw4v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_tlnun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_be5v4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_alsqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_oju0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_q5x7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_6bp6o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_co2c1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_nnwf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_y671u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_imcux")
+}],
+"loop": false,
+"name": &"far_attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_nb4l8")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("98_s6nwc")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("99_uaets")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_btlu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_o1461")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_erd7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_xyn0t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_qswv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_s00ab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_a35o2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_1p8a0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_ouur4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_00onu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_7mkcn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_qdgol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_16b14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_ptt34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_tbsjq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_nuru8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_srmed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_4rmq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_bhs36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_venha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_a1ltk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_l41w1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_t8g40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_s5d16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_qr25x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_g2xt0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_jrt67")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_d2mvn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_1vpps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_mflom")
+}],
+"loop": false,
+"name": &"rebirth",
+"speed": 45.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("99_uaets")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_btlu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_o1461")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_erd7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_xyn0t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_qswv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_s00ab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_a35o2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_1p8a0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_ouur4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_00onu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_7mkcn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_qdgol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_16b14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_ptt34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_tbsjq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_nuru8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_srmed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_4rmq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_bhs36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_venha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_a1ltk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_l41w1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_t8g40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_s5d16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_qr25x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_g2xt0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_jrt67")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_d2mvn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_1vpps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_mflom")
+}],
+"loop": false,
+"name": &"skill2",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("130_g0ew6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_gamao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_ndvyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_4qyvl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_vd2su")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_pvsc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_jh2ew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_rek20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_b1mvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_7nl7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_naw5a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_lwow8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_lh07r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_naoyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_coxdt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_jbuaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_lmdb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_ufqja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_le5sh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_uoyha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_rv0n5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_v8e68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_sjavq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_72wkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_50hte")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_5itw5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_jnm2i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_qqmbx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("158_pg2v6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_13p2i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_3p21j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_fg5hk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_m734d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_hp0rw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_c1qr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_jr6of")
+}, {
+"duration": 1.0,
+"texture": ExtResource("166_7qixp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("167_c6wtc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("168_a0oro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("169_aesnn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("170_wi6qq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("171_ft1e8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_8pp7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("173_dbu75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_3alc1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("175_qp8hj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("176_spkh4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("177_iyvp8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("178_t4shh")
+}],
+"loop": false,
+"name": &"skill3",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("179_3dvac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("180_e27tb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("181_7xf76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("182_mbg6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("183_1xwm5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("184_gs7ya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("185_ydtwa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("186_e44lr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("187_2y76v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("188_eayud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("189_y0233")
+}, {
+"duration": 1.0,
+"texture": ExtResource("190_mu0cv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("191_g2wv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("192_eu74a")
+}],
+"loop": false,
+"name": &"skill4_end",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("193_atjqo")
+}],
+"loop": true,
+"name": &"skill4_loop",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("194_q2jom")
+}, {
+"duration": 1.0,
+"texture": ExtResource("195_4qrpa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("196_q43m4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("197_25dxk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("198_po7sf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("199_rnhk6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("200_wkwxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("201_tyyl5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("202_bfrcb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("203_acwus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("204_cxuht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("205_bl53c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("206_dq3qs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("207_tg15m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("208_8fi3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("209_a7sgo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("210_82g4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("211_hf7tw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("212_f2c71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("193_atjqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("193_atjqo")
+}],
+"loop": false,
+"name": &"skill4_start",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("213_rbp33")
+}, {
+"duration": 1.0,
+"texture": ExtResource("214_cb82b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("215_1wlim")
+}, {
+"duration": 1.0,
+"texture": ExtResource("216_h01xy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("217_t3ufr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("218_1xhqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("219_eumij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("220_3112t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("221_xyos7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("222_fqcp8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("223_l5qhj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("224_p3kcg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("225_ajtxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("226_pwlkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("227_ic44t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("228_0ubrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("229_vlhja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("230_mahc7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("231_se4ku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("232_8im80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("233_ii34x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("234_cdelq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("235_e42ci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("236_kdre6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("237_y17pt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("238_vebil")
+}, {
+"duration": 1.0,
+"texture": ExtResource("239_uim8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("240_ypa66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("241_ualg1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("242_s14u4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("243_as4dp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("244_xt1bn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("245_yheun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("246_mo74o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("247_r8y3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("248_tyv41")
+}],
+"loop": false,
+"name": &"teleport",
+"speed": 30.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_307yl"]
+radius = 73.9444
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1g1io"]
+radius = 73.9444
+
+[node name="Fuchen" instance=ExtResource("1_6ohj6")]
+script = ExtResource("2_lpagh")
+heal_speeds = Array[int]([15, 16, 17, 18, 19, 20, 21, 22, 23, 24])
+teleport_limit_length = 280.0
+hero_property_block = ExtResource("2_vmfd8")
+skill2_exp_get = Array[int]([15, 30, 45])
+skill3_exp_get = Array[int]([100, 200, 300])
+skill4_exp_get = Array[int]([10, 20, 30])
+ally_id = 1
+ally_name = "法辰"
+ally_texture = ExtResource("4_45pkp")
+ally_group = 2
+far_attack_bullet_scene = ExtResource("4_xexlq")
+intercepting_range = 150
+rebirth_time = 21
+
+[node name="FuchenMagicHeart" type="Sprite2D" parent="UnitBody" index="0" node_paths=PackedStringArray("fuchen", "trace_area")]
+y_sort_enabled = true
+position = Vector2(-80, -55)
+scale = Vector2(0.662555, 0.662555)
+texture = ExtResource("5_41p50")
+region_enabled = true
+region_rect = Rect2(377, 116, 116, 113)
+script = ExtResource("250_wthqo")
+fuchen = NodePath("../..")
+trace_area = NodePath("../Skill3TraceArea")
+
+[node name="RotationPlayer" type="AnimationPlayer" parent="UnitBody/FuchenMagicHeart" index="0"]
+libraries = {
+"": SubResource("AnimationLibrary_7lkih")
+}
+autoplay = "rotation"
+
+[node name="MovePlayer" type="AnimationPlayer" parent="UnitBody/FuchenMagicHeart" index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_k7yit")
+}
+autoplay = "move_loop"
+
+[node name="PathNavigationAgent" type="NavigationAgent2D" parent="UnitBody/FuchenMagicHeart" index="2"]
+navigation_layers = 2
+
+[node name="Skill3Audio" type="AudioStreamPlayer" parent="UnitBody/FuchenMagicHeart" index="3"]
+stream = ExtResource("8_mkxfg")
+bus = &"Sound"
+
+[node name="RayAudio" type="AudioStreamPlayer" parent="UnitBody/FuchenMagicHeart" index="4"]
+stream = ExtResource("6_bn04r")
+volume_db = 8.0
+pitch_scale = 0.8
+bus = &"Sound"
+
+[node name="ElecAudio" type="AudioStreamPlayer" parent="UnitBody/FuchenMagicHeart" index="5"]
+stream = ExtResource("7_vlkcg")
+volume_db = 8.0
+bus = &"Sound"
+
+[node name="AllySprite" parent="UnitBody" index="1"]
+position = Vector2(15, -120)
+sprite_frames = SubResource("SpriteFrames_gcqhy")
+animation = &"skill4_loop"
+
+[node name="AllyButton" parent="UnitBody" index="5"]
+offset_left = -53.0
+offset_top = -215.0
+offset_right = 55.0
+
+[node name="Sheild" type="Sprite2D" parent="UnitBody" index="6"]
+position = Vector2(0, -135)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("251_2cgs8")
+
+[node name="HealthBar" parent="UnitBody" index="7"]
+offset_top = -250.0
+offset_bottom = -241.0
+
+[node name="Skill4ConditionArea" type="Area2D" parent="UnitBody" index="10"]
+scale = Vector2(3.6, 3.6)
+collision_layer = 0
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/Skill4ConditionArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_307yl")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="Skill3ConditionArea" type="Area2D" parent="UnitBody" index="11"]
+scale = Vector2(5, 5)
+collision_layer = 0
+collision_mask = 96
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/Skill3ConditionArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_1g1io")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="Skill3TraceArea" type="Area2D" parent="UnitBody" index="12"]
+scale = Vector2(15, 15)
+collision_layer = 0
+collision_mask = 96
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/Skill3TraceArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_1g1io")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="HeroUnitButton" parent="HeroUI" index="0"]
+offset_top = -189.0
+offset_bottom = 42.0
+
+[node name="HeroTexture" parent="HeroUI/HeroUnitButton" index="1"]
+texture = ExtResource("2_7r13c")
+
+[node name="NormalAttackAudio" type="AudioStreamPlayer" parent="." index="8"]
+stream = ExtResource("252_x3ul6")
+volume_db = -8.0
+bus = &"Sound"
+
+[node name="TeleportAudio" type="AudioStreamPlayer" parent="." index="9"]
+stream = ExtResource("253_kgf8d")
+bus = &"Sound"
+
+[node name="TeleportAudio2" type="AudioStreamPlayer" parent="." index="10"]
+stream = ExtResource("254_kd8mn")
+bus = &"Sound"
+
+[node name="Skill2Timer" type="Timer" parent="." index="11"]
+wait_time = 24.0
+one_shot = true
+
+[node name="Skill2DuringTimer" type="Timer" parent="." index="12"]
+one_shot = true
+
+[node name="Skill2Audio" type="AudioStreamPlayer" parent="." index="13"]
+stream = ExtResource("256_uq2fj")
+volume_db = -4.0
+bus = &"Sound"
+
+[node name="Skill3Timer" type="Timer" parent="." index="14"]
+wait_time = 26.0
+one_shot = true
+
+[node name="Skill4Timer" type="Timer" parent="." index="15"]
+wait_time = 18.0
+one_shot = true
+
+[node name="Skill4DurationTimer" type="Timer" parent="." index="16"]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="get_skill_4_linked_enemy" from="." to="UnitBody/FuchenMagicHeart" method="_on_fuchen_get_skill_4_linked_enemy"]
+[connection signal="timeout" from="Skill4DurationTimer" to="UnitBody/FuchenMagicHeart" method="_on_skill_4_duration_timer_timeout"]

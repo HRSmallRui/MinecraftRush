@@ -1,0 +1,62 @@
+[gd_scene load_steps=13 format=3 uid="uid://cy6hgwu0x5u44"]
+
+[ext_resource type="Script" path="res://Scripts/Effects/effect.gd" id="1_5b4nj"]
+[ext_resource type="Texture2D" uid="uid://bqjmend6u36s5" path="res://Assets/Images/Effects/MovePoint/1.png" id="1_7kn7f"]
+[ext_resource type="Texture2D" uid="uid://cx8dnahteong4" path="res://Assets/Images/Effects/MovePoint/2.png" id="2_4f6rs"]
+[ext_resource type="Texture2D" uid="uid://bgp65y5wi026" path="res://Assets/Images/Effects/MovePoint/3.png" id="3_tkpy1"]
+[ext_resource type="Texture2D" uid="uid://chgt4ta7k1cxi" path="res://Assets/Images/Effects/MovePoint/4.png" id="4_few7n"]
+[ext_resource type="Texture2D" uid="uid://bxbc42vyxurbi" path="res://Assets/Images/Effects/MovePoint/5.png" id="5_t15pa"]
+[ext_resource type="Texture2D" uid="uid://cb6ef2fi3vaif" path="res://Assets/Images/Effects/MovePoint/6.png" id="6_60f1o"]
+[ext_resource type="Texture2D" uid="uid://dg2eqpw4a5m3e" path="res://Assets/Images/Effects/MovePoint/7.png" id="7_lxegr"]
+[ext_resource type="Texture2D" uid="uid://c71xsosfanvcf" path="res://Assets/Images/Effects/MovePoint/8.png" id="8_4eso1"]
+[ext_resource type="Texture2D" uid="uid://cn6tsegd7ygvb" path="res://Assets/Images/Effects/MovePoint/9.png" id="9_mxuqv"]
+[ext_resource type="Texture2D" uid="uid://dpst170eauk4n" path="res://Assets/Images/Effects/MovePoint/10.png" id="10_p60ct"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wh000"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7kn7f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4f6rs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tkpy1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_few7n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_t15pa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_60f1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lxegr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4eso1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_mxuqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_p60ct")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 24.0
+}]
+
+[node name="MovePoint" type="AnimatedSprite2D"]
+z_index = -1
+y_sort_enabled = true
+sprite_frames = SubResource("SpriteFrames_wh000")
+autoplay = "default"
+offset = Vector2(-5, -20)
+script = ExtResource("1_5b4nj")

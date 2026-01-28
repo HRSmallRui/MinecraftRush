@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=3 uid="uid://bxytlli6omnry"]
+
+[ext_resource type="Texture2D" uid="uid://8pa4vfp77xjc" path="res://Assets/Images/UI/long_button.png" id="1_0ca71"]
+[ext_resource type="Script" uid="uid://cttksqcda0hce" path="res://Scripts/UI-Components/long_button.gd" id="1_fjw5m"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="3_0town"]
+[ext_resource type="AudioStream" uid="uid://i0to3f5pe1rc" path="res://Assets/Sounds/FXs/UIs/MC_Click.mp3" id="4_ghr2p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pevtr"]
+atlas = ExtResource("1_0ca71")
+region = Rect2(15, 24, 482, 71)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dspry"]
+atlas = ExtResource("1_0ca71")
+region = Rect2(15, 24, 482, 71)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnhlm"]
+atlas = ExtResource("1_0ca71")
+region = Rect2(561, 80, 492, 81)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibjh6"]
+atlas = ExtResource("1_0ca71")
+region = Rect2(15, 154, 482, 71)
+
+[node name="LongButton" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+focus_mode = 0
+mouse_filter = 2
+texture_normal = SubResource("AtlasTexture_pevtr")
+texture_pressed = SubResource("AtlasTexture_dspry")
+texture_hover = SubResource("AtlasTexture_bnhlm")
+texture_disabled = SubResource("AtlasTexture_ibjh6")
+stretch_mode = 3
+script = ExtResource("1_fjw5m")
+
+[node name="ButtonTitle" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1204.0
+offset_bottom = 175.0
+scale = Vector2(0.400207, 0.400207)
+theme_override_fonts/font = ExtResource("3_0town")
+theme_override_font_sizes/font_size = 72
+text = "开始游戏"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClickAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ghr2p")
+volume_db = 2.0
+bus = &"Sound"
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

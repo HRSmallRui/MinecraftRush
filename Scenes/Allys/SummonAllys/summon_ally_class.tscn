@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdp6vlymmmpu3"]
+
+[ext_resource type="PackedScene" uid="uid://7cx0j7xjwcwi" path="res://Scenes/Classes/ally_class.tscn" id="1_5r703"]
+[ext_resource type="Script" path="res://Scripts/Allys/SummonAllys/summon_ally_class.gd" id="2_o4kpa"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="3_cbt0h"]
+
+[node name="SummonAllyClass" instance=ExtResource("1_5r703")]
+script = ExtResource("2_o4kpa")
+unit_list = Array[ExtResource("3_cbt0h")]([])
+heal_speed_list = Array[ExtResource("3_cbt0h")]([])
+ally_type = 1
+rebirth_time = 18
+
+[node name="CollisionShape2D" parent="UnitBody" index="1"]
+position = Vector2(0, -55)
+scale = Vector2(1, 1)
+
+[node name="HurtBox" parent="UnitBody" index="2"]
+position = Vector2(0, -85)
+scale = Vector2(6.189, 6.189)

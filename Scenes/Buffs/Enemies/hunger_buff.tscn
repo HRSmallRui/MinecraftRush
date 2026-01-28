@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://r7rld0urohcu"]
+
+[ext_resource type="PackedScene" uid="uid://bwifge7de0uys" path="res://Scenes/Buffs/dot_buff.tscn" id="1_ar85h"]
+[ext_resource type="Script" path="res://Scripts/Classes/potion_particle_leader.gd" id="2_vc7qv"]
+
+[node name="HungerBuff" instance=ExtResource("1_ar85h")]
+dot_damage = Array[int]([0])
+duration = 10.0
+buff_tag = "Hunger"
+immune_groups = Array[String](["boss", "god", "no_live", "super_unit"])
+
+[node name="DotTimer" parent="." index="0"]
+wait_time = 0.2
+
+[node name="PotionParticleLeader" type="Node2D" parent="." index="1" node_paths=PackedStringArray("buff_vehicle")]
+script = ExtResource("2_vc7qv")
+potion_color = Color(0.521291, 0.323012, 0.0855834, 1)
+buff_vehicle = NodePath("..")

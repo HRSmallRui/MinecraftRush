@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cno42d0ueuoso"]
+
+[ext_resource type="PackedScene" uid="uid://bmr7x0vo1n3ky" path="res://Scenes/Buffs/heal_buff.tscn" id="1_oogf4"]
+[ext_resource type="Script" path="res://Scripts/Classes/potion_particle_leader.gd" id="2_ixgpo"]
+[ext_resource type="Script" path="res://Scripts/Buffs/medical_heal_buff.gd" id="2_oknc0"]
+[ext_resource type="Texture2D" uid="uid://bavhey6wumglg" path="res://Assets/Images/Effects/heal_particle.png" id="3_6a10o"]
+
+[node name="MedicalHealBuff" instance=ExtResource("1_oogf4")]
+script = ExtResource("2_oknc0")
+heal_datas = Array[int]([0])
+duration = 0.5
+can_be_overlay = true
+buff_tag = "MedicalHeal"
+
+[node name="Timer" parent="." index="0"]
+wait_time = 0.4
+
+[node name="PotionParticleLeader" type="Node2D" parent="." index="1" node_paths=PackedStringArray("buff_vehicle")]
+script = ExtResource("2_ixgpo")
+potion_texture = ExtResource("3_6a10o")
+buff_vehicle = NodePath("..")
+particle_size_rate = 0.4
+min_interval_time = 0.5
+max_interval_time = 0.8

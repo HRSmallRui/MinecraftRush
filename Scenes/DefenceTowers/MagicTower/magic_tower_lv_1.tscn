@@ -1,0 +1,546 @@
+[gd_scene load_steps=108 format=3 uid="uid://151tinwk4q18"]
+
+[ext_resource type="PackedScene" uid="uid://cw6pat17gtbr3" path="res://Scenes/DefenceTowers/MagicTower/magic_tower.tscn" id="1_niodg"]
+[ext_resource type="Script" path="res://Scripts/Datas/TowerData.gd" id="2_jo42p"]
+[ext_resource type="PackedScene" uid="uid://drjvqvw33m3ab" path="res://Scenes/DefenceTowers/tower_button.tscn" id="2_u1rpx"]
+[ext_resource type="Texture2D" uid="uid://bv6bjcluksi5e" path="res://Assets/Images/DefenceTowers/Magics/Towers/LV1/MagicTowerLV1-Attack_00.png" id="4_x68yf"]
+[ext_resource type="Texture2D" uid="uid://dojb68bbvi2tu" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_00.png" id="50_7tllt"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/MagicTowers/magician.gd" id="51_cmphh"]
+[ext_resource type="Texture2D" uid="uid://d3rg7p1fhfijb" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_00.png" id="51_ivkdu"]
+[ext_resource type="Texture2D" uid="uid://ds42j8nsrj04j" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_01.png" id="52_vx7hh"]
+[ext_resource type="Texture2D" uid="uid://mqibdpts7687" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_02.png" id="53_rcds0"]
+[ext_resource type="Texture2D" uid="uid://b1j836ggd221b" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_03.png" id="54_1bcb6"]
+[ext_resource type="Texture2D" uid="uid://dcawgqe4g87j6" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_04.png" id="55_yi0b3"]
+[ext_resource type="Texture2D" uid="uid://b2685d6xo01op" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_05.png" id="56_d4sto"]
+[ext_resource type="Texture2D" uid="uid://jqnkn52i72km" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_06.png" id="57_cfxkj"]
+[ext_resource type="Texture2D" uid="uid://brtbky6ev70f5" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_07.png" id="58_rpoab"]
+[ext_resource type="Texture2D" uid="uid://dj7fksgao4wjs" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_08.png" id="59_n7dfy"]
+[ext_resource type="Texture2D" uid="uid://bei0u4p082pld" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_09.png" id="60_8cndy"]
+[ext_resource type="Texture2D" uid="uid://c4i1f1sdr7h2t" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_10.png" id="61_n7gml"]
+[ext_resource type="Texture2D" uid="uid://dcjejg2ccrahe" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_11.png" id="62_eey1l"]
+[ext_resource type="Texture2D" uid="uid://dxy60i32ne5t0" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_12.png" id="63_i33j6"]
+[ext_resource type="Texture2D" uid="uid://wfvo034k8n1a" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_13.png" id="64_c2o86"]
+[ext_resource type="Texture2D" uid="uid://bhc1ymwyp7e18" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_14.png" id="65_pj1je"]
+[ext_resource type="Texture2D" uid="uid://cmk3vy3fru8pf" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_15.png" id="66_dmywe"]
+[ext_resource type="Texture2D" uid="uid://tq18w2afifqg" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_16.png" id="67_x0ri5"]
+[ext_resource type="Texture2D" uid="uid://by5qu8m0gauns" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_17.png" id="68_c4k0h"]
+[ext_resource type="Texture2D" uid="uid://cjajyvia0yri1" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_18.png" id="69_qc4td"]
+[ext_resource type="Texture2D" uid="uid://c7v65jska1tjk" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_19.png" id="70_fafc3"]
+[ext_resource type="Texture2D" uid="uid://c0ras63v2a1vf" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_20.png" id="71_v2nvn"]
+[ext_resource type="Texture2D" uid="uid://b2bm44fy14p5g" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_21.png" id="72_aljyd"]
+[ext_resource type="Texture2D" uid="uid://b1skg1isvv7nb" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_22.png" id="73_eo7aq"]
+[ext_resource type="Texture2D" uid="uid://d0nhrii0isxmd" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_23.png" id="74_ciqbw"]
+[ext_resource type="Texture2D" uid="uid://di5kqkg4j5nc2" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_24.png" id="75_cparw"]
+[ext_resource type="Texture2D" uid="uid://d4l3kubi82ko5" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_25.png" id="76_bu54v"]
+[ext_resource type="Texture2D" uid="uid://ckrghqmlu3jol" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_26.png" id="77_oxrrt"]
+[ext_resource type="Texture2D" uid="uid://cstafj7t7spey" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_27.png" id="78_0p7bi"]
+[ext_resource type="Texture2D" uid="uid://botr0u745oemu" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_28.png" id="79_3qxfu"]
+[ext_resource type="Texture2D" uid="uid://bh0ylfycl2kww" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_29.png" id="80_j5bqd"]
+[ext_resource type="Texture2D" uid="uid://bqu1a5t11aj1t" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_30.png" id="81_n2u41"]
+[ext_resource type="Texture2D" uid="uid://12mo27p8qhmb" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_31.png" id="82_cq4rv"]
+[ext_resource type="Texture2D" uid="uid://tgnrei58puco" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_32.png" id="83_k37a2"]
+[ext_resource type="Texture2D" uid="uid://bs8c6a1p6a4ad" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_33.png" id="84_pklk5"]
+[ext_resource type="Texture2D" uid="uid://bs8h5yqmehxbt" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_34.png" id="85_ko2dv"]
+[ext_resource type="Texture2D" uid="uid://saj45urrho5n" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_35.png" id="86_qr2nk"]
+[ext_resource type="Texture2D" uid="uid://c2r3m3mteiyr2" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_36.png" id="87_dvew7"]
+[ext_resource type="Texture2D" uid="uid://c7uvs2tdvljlx" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_37.png" id="88_6mueq"]
+[ext_resource type="Texture2D" uid="uid://bb8ltqb4but0x" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_38.png" id="89_p7syq"]
+[ext_resource type="Texture2D" uid="uid://3cprrgynym3w" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_39.png" id="90_acglu"]
+[ext_resource type="Texture2D" uid="uid://5tw571p8se6n" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_40.png" id="91_6tdj6"]
+[ext_resource type="Texture2D" uid="uid://bur088lbm8bhf" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_41.png" id="92_emtkm"]
+[ext_resource type="Texture2D" uid="uid://bkh7jnoifoyig" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_42.png" id="93_jiu6d"]
+[ext_resource type="Texture2D" uid="uid://d2hcm04hs0sjj" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_43.png" id="94_8ot4u"]
+[ext_resource type="Texture2D" uid="uid://d21pc4r4y4xbb" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_44.png" id="95_k6k81"]
+[ext_resource type="Texture2D" uid="uid://bfe4nrhio85if" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-back-Attack_45.png" id="96_h6afu"]
+[ext_resource type="Texture2D" uid="uid://cph30ut64uf57" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_01.png" id="97_uxcsc"]
+[ext_resource type="Texture2D" uid="uid://kvk812toiatc" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_02.png" id="98_g2dqh"]
+[ext_resource type="Texture2D" uid="uid://j8188lerp7l1" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_03.png" id="99_xvfgb"]
+[ext_resource type="Texture2D" uid="uid://c1dgewm32r5tg" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_04.png" id="100_drgc1"]
+[ext_resource type="Texture2D" uid="uid://b2dcv1h41m8m2" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_05.png" id="101_4s6wq"]
+[ext_resource type="Texture2D" uid="uid://syp8b8bqolcv" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_06.png" id="102_wsmpr"]
+[ext_resource type="Texture2D" uid="uid://b0evaemabj7ih" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_07.png" id="103_ayhel"]
+[ext_resource type="Texture2D" uid="uid://dsjdacj4uq1ve" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_08.png" id="104_ntp26"]
+[ext_resource type="Texture2D" uid="uid://bf3praj0unaxt" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_09.png" id="105_n6u6f"]
+[ext_resource type="Texture2D" uid="uid://bgcs5ybc2hnbm" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_10.png" id="106_wsoj5"]
+[ext_resource type="Texture2D" uid="uid://jwpxljxgno7x" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_11.png" id="107_7nsuj"]
+[ext_resource type="Texture2D" uid="uid://x0r2kh5emcvx" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_12.png" id="108_312fv"]
+[ext_resource type="Texture2D" uid="uid://boes3gvbjw4a2" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_13.png" id="109_78av8"]
+[ext_resource type="Texture2D" uid="uid://c0p6884fql11e" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_14.png" id="110_dhpx2"]
+[ext_resource type="Texture2D" uid="uid://dhnmys4orgfw7" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_15.png" id="111_1evu3"]
+[ext_resource type="Texture2D" uid="uid://by0rx1vvbo78" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_16.png" id="112_1780q"]
+[ext_resource type="Texture2D" uid="uid://d2q72ve7vjen4" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_17.png" id="113_bwaxx"]
+[ext_resource type="Texture2D" uid="uid://oglv0j4w31y0" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_18.png" id="114_e1vco"]
+[ext_resource type="Texture2D" uid="uid://5di5jf68fu1b" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_19.png" id="115_dk0ab"]
+[ext_resource type="Texture2D" uid="uid://b3kjnptbh2vch" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_20.png" id="116_lf4x8"]
+[ext_resource type="Texture2D" uid="uid://c6grtviqsu1mc" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_21.png" id="117_n6o8i"]
+[ext_resource type="Texture2D" uid="uid://djx5533d2b6l7" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_22.png" id="118_yrwcy"]
+[ext_resource type="Texture2D" uid="uid://ckqdr4ulvn3m1" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_23.png" id="119_j6w44"]
+[ext_resource type="Texture2D" uid="uid://btut87goo7m8j" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_24.png" id="120_cwlh7"]
+[ext_resource type="Texture2D" uid="uid://d0vj03vevniqd" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_25.png" id="121_hcxwr"]
+[ext_resource type="Texture2D" uid="uid://7khr8ddm0w2e" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_26.png" id="122_flkkv"]
+[ext_resource type="Texture2D" uid="uid://bjwtxms0jql0y" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_27.png" id="123_kwtb2"]
+[ext_resource type="Texture2D" uid="uid://dyvikc8wi7ucx" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_28.png" id="124_0tyeo"]
+[ext_resource type="Texture2D" uid="uid://dxy21x140xofi" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_29.png" id="125_555yq"]
+[ext_resource type="Texture2D" uid="uid://d0m7lj5b4hnal" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_30.png" id="126_w442g"]
+[ext_resource type="Texture2D" uid="uid://cymuv3pur527f" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_31.png" id="127_b1j81"]
+[ext_resource type="Texture2D" uid="uid://b287mvh0ol3h5" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_32.png" id="128_gfflj"]
+[ext_resource type="Texture2D" uid="uid://d4e2e57prdeqi" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_33.png" id="129_6iw57"]
+[ext_resource type="Texture2D" uid="uid://cxuulvu7oxu4u" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_34.png" id="130_yhw4m"]
+[ext_resource type="Texture2D" uid="uid://dwarmyg8wv24b" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_35.png" id="131_bfv3s"]
+[ext_resource type="Texture2D" uid="uid://b1utsn65js40q" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_36.png" id="132_8cgr0"]
+[ext_resource type="Texture2D" uid="uid://cba2espxr3vbh" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_37.png" id="133_s3rlw"]
+[ext_resource type="Texture2D" uid="uid://dkpj4ywtlt5h0" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_38.png" id="134_l5r3o"]
+[ext_resource type="Texture2D" uid="uid://ck5luabtp3xsb" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_39.png" id="135_gu43d"]
+[ext_resource type="Texture2D" uid="uid://clvuvrosflgss" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_40.png" id="136_hhksw"]
+[ext_resource type="Texture2D" uid="uid://dgpi4qqn7twc1" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_41.png" id="137_w50lf"]
+[ext_resource type="Texture2D" uid="uid://m75mqsjf3hgf" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_42.png" id="138_mbivo"]
+[ext_resource type="Texture2D" uid="uid://dik2x5gllbd3k" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_43.png" id="139_k8fru"]
+[ext_resource type="Texture2D" uid="uid://bwgsom8nx43rm" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_44.png" id="140_p8jdt"]
+[ext_resource type="Texture2D" uid="uid://da3li3ookqqjj" path="res://Assets/Animations/Magicians/LV1-3/MagicianLV1-3-front-Attack_45.png" id="141_o6x0n"]
+[ext_resource type="Texture2D" uid="uid://cv5y36lh1i7p6" path="res://Assets/Images/DefenceTowers/Magics/Towers/heart-close.png" id="143_454sq"]
+
+[sub_resource type="Resource" id="Resource_6l1lu"]
+script = ExtResource("2_jo42p")
+damage_low = 9
+damage_high = 17
+attack_speed = 1.5
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fu6ir"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_x68yf")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 45.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s0t01"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("50_7tllt")
+}],
+"loop": false,
+"name": &"idle_front",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("51_ivkdu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_vx7hh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_rcds0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_1bcb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_yi0b3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_d4sto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_cfxkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_rpoab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_n7dfy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_8cndy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_n7gml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_eey1l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_i33j6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_c2o86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_pj1je")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_dmywe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_x0ri5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_c4k0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_qc4td")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_fafc3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_v2nvn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_aljyd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_eo7aq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_ciqbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_cparw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_bu54v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_oxrrt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_0p7bi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_3qxfu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_j5bqd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_n2u41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_cq4rv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_k37a2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_pklk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_ko2dv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_qr2nk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_dvew7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_6mueq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_p7syq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_acglu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_6tdj6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_emtkm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_jiu6d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_8ot4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_k6k81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_h6afu")
+}],
+"loop": false,
+"name": &"shoot_back",
+"speed": 45.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("50_7tllt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_uxcsc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_g2dqh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_xvfgb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_drgc1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_4s6wq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_wsmpr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_ayhel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_ntp26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_n6u6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_wsoj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_7nsuj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_312fv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_78av8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_dhpx2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_1evu3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_1780q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_bwaxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_e1vco")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_dk0ab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_lf4x8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_n6o8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_yrwcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_j6w44")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_cwlh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_hcxwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_flkkv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_kwtb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_0tyeo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_555yq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_w442g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_b1j81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_gfflj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_6iw57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_yhw4m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_bfv3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_8cgr0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_s3rlw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_l5r3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_gu43d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_hhksw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_w50lf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_mbivo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_k8fru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_p8jdt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_o6x0n")
+}],
+"loop": false,
+"name": &"shoot_front",
+"speed": 45.0
+}]
+
+[sub_resource type="Animation" id="Animation_l8ytr"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MagicHeart:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_q7tsy"]
+resource_name = "Rotate"
+loop_mode = 1
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MagicHeart:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(1, 1),
+"points": PackedFloat32Array(0, 0, 0, 0, 0, 6.28319, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i3pef"]
+_data = {
+"RESET": SubResource("Animation_l8ytr"),
+"Rotate": SubResource("Animation_q7tsy")
+}
+
+[sub_resource type="Animation" id="Animation_w714g"]
+resource_name = "Magic"
+loop_mode = 1
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-23, -0.25, 0, 0.25, 0, -39, -0.25, 0, 0.25, 0, -23, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+
+[sub_resource type="Animation" id="Animation_umvui"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-75, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_d40ft"]
+_data = {
+"Magic": SubResource("Animation_w714g"),
+"RESET": SubResource("Animation_umvui")
+}
+
+[node name="MagicTowerLV1" node_paths=PackedStringArray("magician") instance=ExtResource("1_niodg")]
+y_sort_enabled = false
+start_data = SubResource("Resource_6l1lu")
+magician = NodePath("Magician")
+tower_name = "法师塔"
+tower_level = 1
+tower_value = 100
+start_tower_range = 280
+
+[node name="TowerButton" parent="." index="2"]
+offset_top = -52.0
+
+[node name="Circle" parent="TowerUI" index="4"]
+position = Vector2(0, -33)
+
+[node name="TowerButton" parent="TowerUI/Circle" index="1" node_paths=PackedStringArray("tower") instance=ExtResource("2_u1rpx")]
+offset_left = -31.0006
+offset_top = -132.0
+offset_right = 30.9994
+offset_bottom = -70.9999
+tower = NodePath("../../..")
+tower_type = 2
+id = 2
+price = 160
+unlocked_level = 2
+
+[node name="TowerSprite" parent="." index="7"]
+position = Vector2(0, -22)
+sprite_frames = SubResource("SpriteFrames_fu6ir")
+animation = &"attack"
+
+[node name="Magician" type="AnimatedSprite2D" parent="." index="8" node_paths=PackedStringArray("tower")]
+position = Vector2(-4, -58)
+sprite_frames = SubResource("SpriteFrames_s0t01")
+animation = &"idle_front"
+autoplay = "idle_front"
+script = ExtResource("51_cmphh")
+tower = NodePath("..")
+summon_frame = 31
+
+[node name="MagicAnimationPlayer" type="AnimationPlayer" parent="Magician" index="0"]
+libraries = {
+"": SubResource("AnimationLibrary_i3pef")
+}
+autoplay = "Rotate"
+
+[node name="MagicHeart" type="Sprite2D" parent="Magician" index="1"]
+position = Vector2(4, -75)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("143_454sq")
+region_enabled = true
+region_rect = Rect2(377, 116, 116, 113)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Magician/MagicHeart" index="0"]
+libraries = {
+"": SubResource("AnimationLibrary_d40ft")
+}
+autoplay = "Magic"
+speed_scale = 0.8

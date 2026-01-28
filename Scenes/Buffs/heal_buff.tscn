@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmr7x0vo1n3ky"]
+
+[ext_resource type="PackedScene" uid="uid://c3gyjosb382do" path="res://Scenes/Classes/buff_class.tscn" id="1_45mff"]
+[ext_resource type="Script" path="res://Scripts/Buffs/heal_buff.gd" id="2_amacs"]
+
+[node name="HealBuff" instance=ExtResource("1_45mff")]
+script = ExtResource("2_amacs")
+heal_datas = Array[int]([])
+
+[node name="Timer" type="Timer" parent="." index="0"]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

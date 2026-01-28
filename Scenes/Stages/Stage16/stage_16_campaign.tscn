@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqlocojgd1hai"]
+
+[ext_resource type="PackedScene" uid="uid://05u6aueicvo4" path="res://Scenes/Classes/stage_class.tscn" id="1_sgk6s"]
+[ext_resource type="AudioStream" uid="uid://kg6vl4on6ab7" path="res://Assets/Sounds/Music/高山-准备1.mp3" id="2_gvsg2"]
+[ext_resource type="AudioStream" uid="uid://ceki3psans6yy" path="res://Assets/Sounds/Music/高山-战斗1.mp3" id="3_dnncf"]
+
+[node name="Stage16Campaign" instance=ExtResource("1_sgk6s")]
+
+[node name="PreparationMusic" parent="Musics" index="0"]
+stream = ExtResource("2_gvsg2")
+
+[node name="BattleMusic" parent="Musics" index="1"]
+stream = ExtResource("3_dnncf")

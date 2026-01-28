@@ -1,0 +1,146 @@
+[gd_scene load_steps=17 format=3 uid="uid://cxlmw4wnnnka7"]
+
+[ext_resource type="Shader" path="res://Assets/Shaders/MagicianRayShader.gdshader" id="1_yn8da"]
+[ext_resource type="Texture2D" uid="uid://bfypq5d241fn8" path="res://Assets/Images/DefenceTowers/Magics/Towers/LV4-1/LV4-1-RAY.png" id="2_stfyr"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/MagicTowers/protector_church_ray.gd" id="3_1pfao"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u6xfe"]
+shader = ExtResource("1_yn8da")
+shader_parameter/speed = 1.0
+
+[sub_resource type="Animation" id="Animation_wec4c"]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/speed")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_wh863"]
+resource_name = "2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/speed")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_1lgos"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/speed")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f72na"]
+_data = {
+"1": SubResource("Animation_wec4c"),
+"2": SubResource("Animation_wh863"),
+"RESET": SubResource("Animation_1lgos")
+}
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_bcvf7"]
+particle_flag_disable_z = true
+angle_min = -17.8
+angle_max = 78.6
+radial_velocity_min = 22.31
+radial_velocity_max = 185.87
+gravity = Vector3(0, 0, 0)
+radial_accel_min = 42.38
+radial_accel_max = 75.83
+scale_min = 0.4
+scale_max = 0.6
+
+[sub_resource type="Gradient" id="Gradient_6bg12"]
+offsets = PackedFloat32Array(0, 0.303636)
+colors = PackedColorArray(1, 1, 1, 1, 0.552941, 0, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7500e"]
+gradient = SubResource("Gradient_6bg12")
+fill = 1
+fill_from = Vector2(0.495726, 0.512821)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qtwag"]
+particle_flag_disable_z = true
+radial_velocity_min = 178.45
+radial_velocity_max = 178.45
+gravity = Vector3(0, 0, 0)
+radial_accel_min = 42.38
+radial_accel_max = 75.83
+scale_min = 0.4
+scale_max = 0.6
+
+[sub_resource type="Gradient" id="Gradient_lndoo"]
+offsets = PackedFloat32Array(0, 0.303636)
+colors = PackedColorArray(1, 1, 1, 1, 0.552941, 0, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mbf1w"]
+gradient = SubResource("Gradient_lndoo")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.495726, 0.512821)
+fill_to = Vector2(0.82906, 0.260684)
+
+[sub_resource type="Gradient" id="Gradient_3atkt"]
+offsets = PackedFloat32Array(0.298182, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.568627, 0, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7lryk"]
+gradient = SubResource("Gradient_3atkt")
+fill = 1
+fill_from = Vector2(0.487179, 0.512821)
+fill_to = Vector2(0.782051, 0.222222)
+
+[node name="ProtectorChurchRay" type="Line2D"]
+process_mode = 3
+material = SubResource("ShaderMaterial_u6xfe")
+width = 30.0
+texture = ExtResource("2_stfyr")
+texture_mode = 1
+script = ExtResource("3_1pfao")
+level_width = Array[float]([4.0, 8.0, 10.0, 15.0, 20.0, 30.0])
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_f72na")
+}
+
+[node name="StartPointParticle" type="GPUParticles2D" parent="."]
+amount = 12
+process_material = SubResource("ParticleProcessMaterial_bcvf7")
+texture = SubResource("GradientTexture2D_7500e")
+lifetime = 0.2
+
+[node name="EndPointParticle" type="GPUParticles2D" parent="."]
+z_index = 1
+process_material = SubResource("ParticleProcessMaterial_qtwag")
+texture = SubResource("GradientTexture2D_mbf1w")
+lifetime = 0.2
+
+[node name="Sprite2D" type="Sprite2D" parent="EndPointParticle"]
+scale = Vector2(0.312077, 0.312077)
+texture = SubResource("GradientTexture2D_7lryk")

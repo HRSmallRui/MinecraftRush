@@ -1,0 +1,482 @@
+[gd_scene load_steps=105 format=3 uid="uid://dk81pa88qj7rh"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_68ule"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_30.gd" id="2_es50b"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="3_gewbh"]
+[ext_resource type="Texture2D" uid="uid://bh46akq8ho5ky" path="res://Assets/Images/UI/InformationBar/EnemyChapter4/厌国精英.png" id="3_j7ugu"]
+[ext_resource type="Texture2D" uid="uid://d2dfbnpn74sp0" path="res://Assets/Animations/Enemies/30厌国精英/attack_00.png" id="5_41gg7"]
+[ext_resource type="Texture2D" uid="uid://cgvoscn6l1yd4" path="res://Assets/Animations/Enemies/30厌国精英/attack_01.png" id="6_hknxw"]
+[ext_resource type="Texture2D" uid="uid://c08pnyhiyccj6" path="res://Assets/Animations/Enemies/30厌国精英/attack_02.png" id="7_f5n7e"]
+[ext_resource type="Texture2D" uid="uid://cikmffh6s0pgc" path="res://Assets/Animations/Enemies/30厌国精英/attack_03.png" id="8_nry5l"]
+[ext_resource type="Texture2D" uid="uid://34s88v8qcqoq" path="res://Assets/Animations/Enemies/30厌国精英/attack_04.png" id="9_upq3t"]
+[ext_resource type="Texture2D" uid="uid://do3na2cybx786" path="res://Assets/Animations/Enemies/30厌国精英/attack_05.png" id="10_aoe5d"]
+[ext_resource type="Texture2D" uid="uid://o1qhu1oh56fa" path="res://Assets/Animations/Enemies/30厌国精英/attack_06.png" id="11_fjhcf"]
+[ext_resource type="Texture2D" uid="uid://dsdropdaycvkh" path="res://Assets/Animations/Enemies/30厌国精英/attack_07.png" id="12_m00v2"]
+[ext_resource type="Texture2D" uid="uid://drmvqyj5xnqyu" path="res://Assets/Animations/Enemies/30厌国精英/attack_08.png" id="13_amk12"]
+[ext_resource type="Texture2D" uid="uid://cvfmaqgtlws01" path="res://Assets/Animations/Enemies/30厌国精英/attack_09.png" id="14_1nipy"]
+[ext_resource type="Texture2D" uid="uid://cti77wgvgeg2p" path="res://Assets/Animations/Enemies/30厌国精英/attack_10.png" id="15_ob07y"]
+[ext_resource type="Texture2D" uid="uid://dfb1oodi2di58" path="res://Assets/Animations/Enemies/30厌国精英/attack_11.png" id="16_lmx3t"]
+[ext_resource type="Texture2D" uid="uid://binrkd0rgiukk" path="res://Assets/Animations/Enemies/30厌国精英/attack_12.png" id="17_rkxwq"]
+[ext_resource type="Texture2D" uid="uid://xubkenhje3rj" path="res://Assets/Animations/Enemies/30厌国精英/attack_13.png" id="18_dvvdq"]
+[ext_resource type="Texture2D" uid="uid://bcddvbrqcar1l" path="res://Assets/Animations/Enemies/30厌国精英/attack_14.png" id="19_lavmy"]
+[ext_resource type="Texture2D" uid="uid://b2tw2nk6ci3by" path="res://Assets/Animations/Enemies/30厌国精英/attack_15.png" id="20_3sxhr"]
+[ext_resource type="Texture2D" uid="uid://b2tec40foemba" path="res://Assets/Animations/Enemies/30厌国精英/attack_16.png" id="21_gl7an"]
+[ext_resource type="Texture2D" uid="uid://dsbqg78cbbkf2" path="res://Assets/Animations/Enemies/30厌国精英/attack_17.png" id="22_3a40f"]
+[ext_resource type="Texture2D" uid="uid://d2ihmbhuonqsy" path="res://Assets/Animations/Enemies/30厌国精英/attack_18.png" id="23_q482t"]
+[ext_resource type="Texture2D" uid="uid://d13vn1e2jh3fn" path="res://Assets/Animations/Enemies/30厌国精英/attack_19.png" id="24_vvaab"]
+[ext_resource type="Texture2D" uid="uid://cq8qc553b8ngg" path="res://Assets/Animations/Enemies/30厌国精英/attack_20.png" id="25_tfpr4"]
+[ext_resource type="Texture2D" uid="uid://d368wcnex82f4" path="res://Assets/Animations/Enemies/30厌国精英/attack_21.png" id="26_awj0a"]
+[ext_resource type="Texture2D" uid="uid://2irac6rwnwuw" path="res://Assets/Animations/Enemies/30厌国精英/attack_22.png" id="27_sg5sa"]
+[ext_resource type="Texture2D" uid="uid://cvbqdrbdfp8xk" path="res://Assets/Animations/Enemies/30厌国精英/attack_23.png" id="28_g0xvx"]
+[ext_resource type="Texture2D" uid="uid://dxgbh32pjjb1m" path="res://Assets/Animations/Enemies/30厌国精英/attack_24.png" id="29_b45d5"]
+[ext_resource type="Texture2D" uid="uid://2lhqr6lxqlga" path="res://Assets/Animations/Enemies/30厌国精英/move_back_00.png" id="30_x0rli"]
+[ext_resource type="Texture2D" uid="uid://gpeu8gukgnnc" path="res://Assets/Animations/Enemies/30厌国精英/move_back_01.png" id="31_2ose7"]
+[ext_resource type="Texture2D" uid="uid://cduiy4wpj1fi6" path="res://Assets/Animations/Enemies/30厌国精英/move_back_02.png" id="32_hiew5"]
+[ext_resource type="Texture2D" uid="uid://dpqen4jp6anbr" path="res://Assets/Animations/Enemies/30厌国精英/move_back_03.png" id="33_k4sbc"]
+[ext_resource type="Texture2D" uid="uid://dw2vmb706xl4q" path="res://Assets/Animations/Enemies/30厌国精英/move_back_04.png" id="34_jbx5t"]
+[ext_resource type="Texture2D" uid="uid://bbtgjbejawvvr" path="res://Assets/Animations/Enemies/30厌国精英/move_back_05.png" id="35_u0egx"]
+[ext_resource type="Texture2D" uid="uid://cmuklre3haxmh" path="res://Assets/Animations/Enemies/30厌国精英/move_back_06.png" id="36_mco1f"]
+[ext_resource type="Texture2D" uid="uid://dfwiclqnpyidd" path="res://Assets/Animations/Enemies/30厌国精英/move_back_07.png" id="37_4qi4n"]
+[ext_resource type="Texture2D" uid="uid://d1lbb17l5nl3e" path="res://Assets/Animations/Enemies/30厌国精英/move_back_08.png" id="38_l26gg"]
+[ext_resource type="Texture2D" uid="uid://cnfkqdgvkjv50" path="res://Assets/Animations/Enemies/30厌国精英/move_back_09.png" id="39_lgogy"]
+[ext_resource type="Texture2D" uid="uid://ddbemx5t6y1i" path="res://Assets/Animations/Enemies/30厌国精英/move_back_10.png" id="40_nyoi6"]
+[ext_resource type="Texture2D" uid="uid://b7m5nc1i5difv" path="res://Assets/Animations/Enemies/30厌国精英/move_back_11.png" id="41_lsmn0"]
+[ext_resource type="Texture2D" uid="uid://dvyf3ltbjsvu7" path="res://Assets/Animations/Enemies/30厌国精英/move_back_12.png" id="42_xsjdy"]
+[ext_resource type="Texture2D" uid="uid://cah63yv1y1w1p" path="res://Assets/Animations/Enemies/30厌国精英/move_back_13.png" id="43_jjdur"]
+[ext_resource type="Texture2D" uid="uid://drw0mhftqf8jj" path="res://Assets/Animations/Enemies/30厌国精英/move_back_14.png" id="44_n1rf2"]
+[ext_resource type="Texture2D" uid="uid://jcrrlswsgnpg" path="res://Assets/Animations/Enemies/30厌国精英/move_back_15.png" id="45_q666g"]
+[ext_resource type="Texture2D" uid="uid://csow2nlg52s73" path="res://Assets/Animations/Enemies/30厌国精英/move_back_16.png" id="46_li5ky"]
+[ext_resource type="Texture2D" uid="uid://d2puh1l4i5igq" path="res://Assets/Animations/Enemies/30厌国精英/move_back_17.png" id="47_myyqr"]
+[ext_resource type="Texture2D" uid="uid://fqckdsu85kts" path="res://Assets/Animations/Enemies/30厌国精英/move_back_18.png" id="48_f73fb"]
+[ext_resource type="Texture2D" uid="uid://doyr75li284dt" path="res://Assets/Animations/Enemies/30厌国精英/move_back_19.png" id="49_j0ple"]
+[ext_resource type="Texture2D" uid="uid://demsxx3nqbkmx" path="res://Assets/Animations/Enemies/30厌国精英/move_back_20.png" id="50_vmnrw"]
+[ext_resource type="Texture2D" uid="uid://6q383x41fkpf" path="res://Assets/Animations/Enemies/30厌国精英/move_back_21.png" id="51_m0thk"]
+[ext_resource type="Texture2D" uid="uid://qlggcbfnw163" path="res://Assets/Animations/Enemies/30厌国精英/move_back_22.png" id="52_visnq"]
+[ext_resource type="Texture2D" uid="uid://bovjywaef7p6a" path="res://Assets/Animations/Enemies/30厌国精英/move_back_23.png" id="53_164eu"]
+[ext_resource type="Texture2D" uid="uid://ukklp2h3kl81" path="res://Assets/Animations/Enemies/30厌国精英/move_front_00.png" id="54_c6r45"]
+[ext_resource type="Texture2D" uid="uid://dsj8vvcx3ewdr" path="res://Assets/Animations/Enemies/30厌国精英/move_front_01.png" id="55_etocm"]
+[ext_resource type="Texture2D" uid="uid://b6em308rahbhw" path="res://Assets/Animations/Enemies/30厌国精英/move_front_02.png" id="56_tbxse"]
+[ext_resource type="Texture2D" uid="uid://cyh1kt7hmh4p" path="res://Assets/Animations/Enemies/30厌国精英/move_front_03.png" id="57_31vws"]
+[ext_resource type="Texture2D" uid="uid://bvsp4tkysq8ut" path="res://Assets/Animations/Enemies/30厌国精英/move_front_04.png" id="58_c12fg"]
+[ext_resource type="Texture2D" uid="uid://b254iyq7pj5j5" path="res://Assets/Animations/Enemies/30厌国精英/move_front_05.png" id="59_vc7kt"]
+[ext_resource type="Texture2D" uid="uid://bvonqx78035ot" path="res://Assets/Animations/Enemies/30厌国精英/move_front_06.png" id="60_6p3dg"]
+[ext_resource type="Texture2D" uid="uid://gpq80j2muguj" path="res://Assets/Animations/Enemies/30厌国精英/move_front_07.png" id="61_86l0x"]
+[ext_resource type="Texture2D" uid="uid://dbhmabhmvj568" path="res://Assets/Animations/Enemies/30厌国精英/move_front_08.png" id="62_0lbp2"]
+[ext_resource type="Texture2D" uid="uid://cugotfaqxiqji" path="res://Assets/Animations/Enemies/30厌国精英/move_front_09.png" id="63_2ho73"]
+[ext_resource type="Texture2D" uid="uid://40ndljcfhbbj" path="res://Assets/Animations/Enemies/30厌国精英/move_front_10.png" id="64_tk744"]
+[ext_resource type="Texture2D" uid="uid://38fpuyigxt68" path="res://Assets/Animations/Enemies/30厌国精英/move_front_11.png" id="65_fytvu"]
+[ext_resource type="Texture2D" uid="uid://dmvoyp32m1sx6" path="res://Assets/Animations/Enemies/30厌国精英/move_front_12.png" id="66_804sd"]
+[ext_resource type="Texture2D" uid="uid://bilf75pmxmpwd" path="res://Assets/Animations/Enemies/30厌国精英/move_front_13.png" id="67_r5t8v"]
+[ext_resource type="Texture2D" uid="uid://b6v16knyx4a2j" path="res://Assets/Animations/Enemies/30厌国精英/move_front_14.png" id="68_casdk"]
+[ext_resource type="Texture2D" uid="uid://c6f3bys7fsftk" path="res://Assets/Animations/Enemies/30厌国精英/move_front_15.png" id="69_03vqj"]
+[ext_resource type="Texture2D" uid="uid://cig0836xymlcp" path="res://Assets/Animations/Enemies/30厌国精英/move_front_16.png" id="70_cdht2"]
+[ext_resource type="Texture2D" uid="uid://bycmcdk1op1t2" path="res://Assets/Animations/Enemies/30厌国精英/move_front_17.png" id="71_drlu5"]
+[ext_resource type="Texture2D" uid="uid://rj31s5u4ld43" path="res://Assets/Animations/Enemies/30厌国精英/move_front_18.png" id="72_5bq2s"]
+[ext_resource type="Texture2D" uid="uid://meoj6v0bebu5" path="res://Assets/Animations/Enemies/30厌国精英/move_front_19.png" id="73_v0bh0"]
+[ext_resource type="Texture2D" uid="uid://b0uwhhnbr2dup" path="res://Assets/Animations/Enemies/30厌国精英/move_front_20.png" id="74_b7urw"]
+[ext_resource type="Texture2D" uid="uid://cuh4c575xho2a" path="res://Assets/Animations/Enemies/30厌国精英/move_front_21.png" id="75_2yc8m"]
+[ext_resource type="Texture2D" uid="uid://b8ii5ijjlbhvn" path="res://Assets/Animations/Enemies/30厌国精英/move_front_22.png" id="76_2la4c"]
+[ext_resource type="Texture2D" uid="uid://pulstxvfgrbs" path="res://Assets/Animations/Enemies/30厌国精英/move_front_23.png" id="77_47me5"]
+[ext_resource type="Texture2D" uid="uid://d35hw2hftsv3n" path="res://Assets/Animations/Enemies/30厌国精英/move_normal_00.png" id="78_hoyof"]
+[ext_resource type="Texture2D" uid="uid://dlpkuvtpj2rav" path="res://Assets/Animations/Enemies/30厌国精英/move_normal_01.png" id="79_fyov1"]
+[ext_resource type="Texture2D" uid="uid://cvlra8rgidq65" path="res://Assets/Animations/Enemies/30厌国精英/move_normal_02.png" id="80_3w1rj"]
+[ext_resource type="Texture2D" uid="uid://dsuu7yxxgrsa2" path="res://Assets/Animations/Enemies/30厌国精英/move_normal_03.png" id="81_x1fg5"]
+[ext_resource type="Texture2D" uid="uid://dlww1n75tedet" path="res://Assets/Animations/Enemies/30厌国精英/move_normal_04.png" id="82_4j6wa"]
+[ext_resource type="Texture2D" uid="uid://buklp043sjucs" path="res://Assets/Animations/Enemies/30厌国精英/move_normal_05.png" id="83_gur2x"]
+[ext_resource type="Texture2D" uid="uid://coyndvre8vig5" path="res://Assets/Animations/Enemies/30厌国精英/move_normal_06.png" id="84_bx458"]
+[ext_resource type="Texture2D" uid="uid://d11pcni1tfvmr" path="res://Assets/Animations/Enemies/30厌国精英/move_normal_07.png" id="85_utjkk"]
+[ext_resource type="Texture2D" uid="uid://deutrlrtyndre" path="res://Assets/Animations/Enemies/30厌国精英/move_normal_08.png" id="86_xnw1f"]
+[ext_resource type="Texture2D" uid="uid://dii4b8v5k33oh" path="res://Assets/Animations/Enemies/30厌国精英/move_normal_09.png" id="87_x8si3"]
+[ext_resource type="Texture2D" uid="uid://dn612h82dn030" path="res://Assets/Animations/Enemies/30厌国精英/move_normal_10.png" id="88_huv5g"]
+[ext_resource type="Texture2D" uid="uid://coi1e7bvssb00" path="res://Assets/Animations/Enemies/30厌国精英/move_normal_11.png" id="89_ay6nt"]
+[ext_resource type="Texture2D" uid="uid://ckx4tmtnu3atf" path="res://Assets/Animations/Enemies/30厌国精英/move_normal_12.png" id="90_nwvym"]
+[ext_resource type="Texture2D" uid="uid://d1di3xa0kti65" path="res://Assets/Animations/Enemies/30厌国精英/move_normal_13.png" id="91_0lnn4"]
+[ext_resource type="Texture2D" uid="uid://dffxbaywk0kgg" path="res://Assets/Animations/Enemies/30厌国精英/move_normal_14.png" id="92_8rt3q"]
+[ext_resource type="Texture2D" uid="uid://c062xy4xh4372" path="res://Assets/Animations/Enemies/30厌国精英/move_normal_15.png" id="93_86c88"]
+[ext_resource type="Texture2D" uid="uid://weia1p4tquf6" path="res://Assets/Animations/Enemies/30厌国精英/move_normal_16.png" id="94_matrn"]
+[ext_resource type="Texture2D" uid="uid://5ac1xw4v5h0m" path="res://Assets/Animations/Enemies/30厌国精英/move_normal_17.png" id="95_qeyg1"]
+[ext_resource type="Texture2D" uid="uid://bhhhgxttyoksd" path="res://Assets/Animations/Enemies/30厌国精英/move_normal_18.png" id="96_h3xae"]
+[ext_resource type="Texture2D" uid="uid://juqy1v2qxwhk" path="res://Assets/Animations/Enemies/30厌国精英/move_normal_19.png" id="97_cytjo"]
+[ext_resource type="Texture2D" uid="uid://rgsk0rtmwx0r" path="res://Assets/Animations/Enemies/30厌国精英/move_normal_20.png" id="98_by8c2"]
+[ext_resource type="Texture2D" uid="uid://csi7ggkde5hfe" path="res://Assets/Animations/Enemies/30厌国精英/move_normal_21.png" id="99_02ukh"]
+[ext_resource type="Texture2D" uid="uid://dygixtph4xh78" path="res://Assets/Animations/Enemies/30厌国精英/move_normal_22.png" id="100_xt5iy"]
+[ext_resource type="Texture2D" uid="uid://chyrjdwhqyi4c" path="res://Assets/Animations/Enemies/30厌国精英/move_normal_23.png" id="101_hk1lm"]
+
+[sub_resource type="Resource" id="Resource_pjdg7"]
+script = ExtResource("3_gewbh")
+health = 640
+dodge_rate = 0.0
+near_damage_low = 21
+near_damage_high = 36
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.7
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 0.9
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xkvso"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_41gg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hknxw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_f5n7e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nry5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_upq3t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_aoe5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_fjhcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_m00v2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_amk12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_1nipy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ob07y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_lmx3t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_rkxwq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_dvvdq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_lavmy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_3sxhr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_gl7an")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_3a40f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_q482t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_vvaab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_tfpr4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_awj0a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_sg5sa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_g0xvx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_b45d5")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_41gg7")
+}],
+"loop": false,
+"name": &"die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_41gg7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_x0rli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_2ose7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_hiew5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_k4sbc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_jbx5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_u0egx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_mco1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_4qi4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_l26gg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_lgogy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_nyoi6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_lsmn0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_xsjdy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_jjdur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_n1rf2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_q666g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_li5ky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_myyqr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_f73fb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_j0ple")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_vmnrw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_m0thk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_visnq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_164eu")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("54_c6r45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_etocm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_tbxse")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_31vws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_c12fg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_vc7kt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_6p3dg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_86l0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_0lbp2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_2ho73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_tk744")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_fytvu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_804sd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_r5t8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_casdk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_03vqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_cdht2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_drlu5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_5bq2s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_v0bh0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_b7urw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_2yc8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_2la4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_47me5")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("78_hoyof")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_fyov1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_3w1rj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_x1fg5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_4j6wa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_gur2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_bx458")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_utjkk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_xnw1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_x8si3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_huv5g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_ay6nt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_nwvym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_0lnn4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_8rt3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_86c88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_matrn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_qeyg1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_h3xae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_cytjo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_by8c2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_02ukh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_xt5iy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_hk1lm")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 24.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dy30c"]
+radius = 73.9444
+
+[node name="Enemy30" groups=["creeper"] instance=ExtResource("1_68ule")]
+script = ExtResource("2_es50b")
+enemy_name = "厌国精英"
+enemy_id = 30
+enemy_texture = ExtResource("3_j7ugu")
+enemy_type = 1
+start_data = SubResource("Resource_pjdg7")
+bounty = 40
+die_audio_stream_list = Array[AudioStream]([])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(15, -95)
+sprite_frames = SubResource("SpriteFrames_xkvso")
+animation = &"attack"
+autoplay = "idle"
+
+[node name="ExplosionArea" type="Area2D" parent="UnitBody" index="11"]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/ExplosionArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_dy30c")
+debug_color = Color(1, 1, 1, 0)

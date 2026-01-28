@@ -1,0 +1,149 @@
+[gd_scene load_steps=17 format=3 uid="uid://cmtuo1odey0r2"]
+
+[ext_resource type="Script" path="res://Scripts/Skills/fuchen_destroy_rat_area.gd" id="1_4x78l"]
+[ext_resource type="Shader" path="res://Assets/Shaders/MagicianRayShader.gdshader" id="2_bj8h3"]
+[ext_resource type="Texture2D" uid="uid://bfypq5d241fn8" path="res://Assets/Images/DefenceTowers/Magics/Towers/LV4-1/LV4-1-RAY.png" id="2_gpfy8"]
+[ext_resource type="AudioStream" uid="uid://5vm66inghgpc" path="res://Assets/Sounds/FXs/Heroes/Fuchen/末日.wav" id="4_rk8xf"]
+[ext_resource type="Script" path="res://Scripts/Skills/matertial_speed_control.gd" id="5_yqqn3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fapfm"]
+radius = 22.063
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_unle6"]
+shader = ExtResource("2_bj8h3")
+shader_parameter/speed = 2.0
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_a76wq"]
+particle_flag_disable_z = true
+radial_velocity_min = 178.45
+radial_velocity_max = 178.45
+gravity = Vector3(0, 0, 0)
+radial_accel_min = 42.38
+radial_accel_max = 75.83
+scale_min = 0.4
+scale_max = 0.6
+
+[sub_resource type="Gradient" id="Gradient_6bg12"]
+offsets = PackedFloat32Array(0, 0.303636)
+colors = PackedColorArray(1, 1, 1, 1, 0.552941, 0, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_388m2"]
+gradient = SubResource("Gradient_6bg12")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.495726, 0.512821)
+fill_to = Vector2(0.82906, 0.260684)
+
+[sub_resource type="Gradient" id="Gradient_grknk"]
+offsets = PackedFloat32Array(0.298182, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.568627, 0, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qblck"]
+gradient = SubResource("Gradient_grknk")
+fill = 1
+fill_from = Vector2(0.487179, 0.512821)
+fill_to = Vector2(0.782051, 0.222222)
+
+[sub_resource type="Animation" id="Animation_axi82"]
+resource_name = "1"
+length = 0.01
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ray:material:shader_parameter/speed")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(2, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_wh27s"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ray:material:shader_parameter/speed")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(2, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_tbkee"]
+resource_name = "0"
+length = 0.01
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ray:material:shader_parameter/speed")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ahadb"]
+_data = {
+"0": SubResource("Animation_tbkee"),
+"1": SubResource("Animation_axi82"),
+"RESET": SubResource("Animation_wh27s")
+}
+
+[node name="FuchenDestroyRayArea" type="Area2D"]
+collision_layer = 0
+collision_mask = 96
+script = ExtResource("1_4x78l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 0.6)
+shape = SubResource("CircleShape2D_fapfm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, -41)
+scale = Vector2(1, 0.6)
+shape = SubResource("CircleShape2D_fapfm")
+
+[node name="Ray" type="Line2D" parent="."]
+material = SubResource("ShaderMaterial_unle6")
+points = PackedVector2Array(0, -3000, 0, 0)
+width = 40.0
+texture = ExtResource("2_gpfy8")
+texture_mode = 1
+
+[node name="EndPointParticle" type="GPUParticles2D" parent="Ray"]
+z_index = 1
+process_material = SubResource("ParticleProcessMaterial_a76wq")
+texture = SubResource("GradientTexture2D_388m2")
+lifetime = 0.2
+
+[node name="Sprite2D" type="Sprite2D" parent="Ray/EndPointParticle"]
+scale = Vector2(0.870514, 0.870514)
+texture = SubResource("GradientTexture2D_qblck")
+
+[node name="Skill3Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_rk8xf")
+volume_db = -2.0
+autoplay = true
+bus = &"Sound"
+
+[node name="DamageTimer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+autostart = true
+
+[node name="MatertialSpeedControl" type="Node2D" parent="."]
+script = ExtResource("5_yqqn3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MatertialSpeedControl"]
+process_mode = 3
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_ahadb")
+}

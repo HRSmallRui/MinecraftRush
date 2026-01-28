@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://djx4mfq8eu1bv"]
+
+[ext_resource type="Texture2D" uid="uid://cbcql7n04o2pk" path="res://Assets/Images/Effects/firerock.png" id="1_2wda8"]
+[ext_resource type="Script" path="res://Scripts/Skills/fire_hurt_area.gd" id="1_crqwy"]
+[ext_resource type="PackedScene" uid="uid://32u5i6wwhrqy" path="res://Scenes/Effects/lingering_potion_shooter.tscn" id="3_cu1hx"]
+[ext_resource type="Texture2D" uid="uid://oov3qeqnyjho" path="res://Assets/Images/Effects/smoke_particle.png" id="4_eb42c"]
+[ext_resource type="Texture2D" uid="uid://djqnwtl1embrg" path="res://Assets/Animations/Enemies/Shadow.png" id="5_xv6l0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2gcvk"]
+radius = 49.3518
+
+[node name="FireHurtArea" type="Area2D" node_paths=PackedStringArray("smoke_particle_shooters")]
+z_index = -1
+y_sort_enabled = true
+collision_layer = 0
+collision_mask = 32
+script = ExtResource("1_crqwy")
+smoke_particle_shooters = [NodePath("LingeringPotionShooter"), NodePath("LingeringPotionShooter2"), NodePath("LingeringPotionShooter3"), NodePath("LingeringPotionShooter4"), NodePath("LingeringPotionShooter5")]
+
+[node name="Texture" type="Sprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_2wda8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 0.479999)
+shape = SubResource("CircleShape2D_2gcvk")
+
+[node name="ExistTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="DamageTimer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[node name="LingeringPotionShooter" parent="." instance=ExtResource("3_cu1hx")]
+potion_texture = ExtResource("4_eb42c")
+move_length = 240.0
+interval_time = 0.6
+
+[node name="LingeringPotionShooter2" parent="." instance=ExtResource("3_cu1hx")]
+position = Vector2(-19, -11)
+potion_texture = ExtResource("4_eb42c")
+interval_time = 0.5
+
+[node name="LingeringPotionShooter3" parent="." instance=ExtResource("3_cu1hx")]
+position = Vector2(18, -9)
+potion_texture = ExtResource("4_eb42c")
+interval_time = 0.8
+
+[node name="LingeringPotionShooter4" parent="." instance=ExtResource("3_cu1hx")]
+position = Vector2(-19, 10)
+potion_texture = ExtResource("4_eb42c")
+interval_time = 1.0
+
+[node name="LingeringPotionShooter5" parent="." instance=ExtResource("3_cu1hx")]
+position = Vector2(23, 12)
+potion_texture = ExtResource("4_eb42c")
+interval_time = 0.9
+
+[node name="Shadow" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.470588)
+scale = Vector2(0.571725, 0.811726)
+texture = ExtResource("5_xv6l0")
+region_enabled = true
+region_rect = Rect2(194, 273, 174, 61)
+
+[connection signal="timeout" from="DamageTimer" to="." method="_on_damage_timer_timeout"]

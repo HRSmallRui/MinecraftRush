@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpiy7unlhfqic"]
+
+[ext_resource type="Script" path="res://Scripts/Effects/text_effect.gd" id="1_my4xk"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="1_vkwnq"]
+
+[node name="TextEffect" type="Node2D"]
+z_index = 98
+position = Vector2(85, 52)
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_my4xk")
+show_text = "秒杀"
+text_effect_type = 4
+text_effect_color_list = Array[Color]([Color(0.641314, 0.902923, 0.683655, 1), Color(0.93845, 0.93845, 0.93845, 1), Color(0.69682, 1, 0.995453, 1), Color(1, 1, 0.231373, 1), Color(1, 0.21268, 0.159696, 1)])
+text_effect_under_color_list = Array[Color]([Color(3.54964e-07, 0.355938, 4.33177e-07, 1), Color(0.295867, 0.295866, 0.295866, 1), Color(0.13675, 0.659405, 0.738502, 1), Color(0.746346, 0.329328, 0, 1), Color(0.352941, 0, 0, 1)])
+
+[node name="UnderLabel" type="Label" parent="."]
+modulate = Color(0.352941, 0, 0, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -32.0
+offset_right = 64.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("1_vkwnq")
+theme_override_font_sizes/font_size = 64
+text = "嗖！"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextLabel" type="Label" parent="."]
+modulate = Color(1, 0.21268, 0.159696, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_vkwnq")
+theme_override_font_sizes/font_size = 64
+text = "嗖！"
+horizontal_alignment = 1
+vertical_alignment = 1

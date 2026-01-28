@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfrjj32f28fst"]
+
+[ext_resource type="PackedScene" uid="uid://dakq012d6gh6m" path="res://Scenes/UI-Components/Stages/skill_button.tscn" id="1_g03t0"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Stages/SkillButtons/salem_skill_button.gd" id="2_7wkyr"]
+[ext_resource type="Texture2D" uid="uid://dkt34c521uym3" path="res://Assets/Images/UI/SkillButton/Heroskill/Salem/salem_skill.png" id="3_0ve2g"]
+[ext_resource type="Texture2D" uid="uid://oe6xqf3r6urf" path="res://Assets/Images/UI/SkillButton/Heroskill/Salem/salem_skill_using.png" id="4_m3i2x"]
+
+[node name="SalemSkillButton" instance=ExtResource("1_g03t0")]
+script = ExtResource("2_7wkyr")
+skill_type = 2
+texture_normal = ExtResource("3_0ve2g")
+texture_select = ExtResource("4_m3i2x")
+skill_name = "不死骑士"
+skill_intro = "在战场上召唤不死骑士前来支援战场"
+cooling_time = 36.0

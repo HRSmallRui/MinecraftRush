@@ -1,0 +1,362 @@
+[gd_scene load_steps=79 format=3 uid="uid://21joql2txk3j"]
+
+[ext_resource type="PackedScene" uid="uid://7fj20d0o1hcc" path="res://Scenes/Allys/BuyingSoldiers/buying_soldier.tscn" id="1_5645t"]
+[ext_resource type="Script" path="res://Scripts/Allys/BuyingSoldiers/desert_soldier_1.gd" id="2_lqsrh"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="2_xhq2e"]
+[ext_resource type="Texture2D" uid="uid://bmohkxjh0csbp" path="res://Assets/Images/UI/InformationBar/沙漠雇佣兵（我方）.png" id="3_nirxo"]
+[ext_resource type="Texture2D" uid="uid://cyugo5m3l861k" path="res://Assets/Animations/Soldiers/Desert1/attack_00.png" id="5_w80uf"]
+[ext_resource type="Texture2D" uid="uid://dvrywkfsonpao" path="res://Assets/Animations/Soldiers/Desert1/attack_01.png" id="6_6romv"]
+[ext_resource type="Texture2D" uid="uid://21hgpi5yqiek" path="res://Assets/Animations/Soldiers/Desert1/attack_02.png" id="7_sypm1"]
+[ext_resource type="Texture2D" uid="uid://0w60f7mcsgaf" path="res://Assets/Animations/Soldiers/Desert1/attack_03.png" id="8_sx81p"]
+[ext_resource type="Texture2D" uid="uid://bsfap3j62mp67" path="res://Assets/Animations/Soldiers/Desert1/attack_04.png" id="9_w5nmt"]
+[ext_resource type="Texture2D" uid="uid://bqw1pq0v4n3oq" path="res://Assets/Animations/Soldiers/Desert1/attack_05.png" id="10_f0kra"]
+[ext_resource type="Texture2D" uid="uid://gcxrtr6rmgk1" path="res://Assets/Animations/Soldiers/Desert1/attack_06.png" id="11_p0883"]
+[ext_resource type="Texture2D" uid="uid://q6xb5srteer0" path="res://Assets/Animations/Soldiers/Desert1/attack_07.png" id="12_swvj5"]
+[ext_resource type="Texture2D" uid="uid://b3jvtr2cj5yxy" path="res://Assets/Animations/Soldiers/Desert1/attack_08.png" id="13_eixnw"]
+[ext_resource type="Texture2D" uid="uid://dhwtbe2n4v5t6" path="res://Assets/Animations/Soldiers/Desert1/attack_09.png" id="14_b5s0i"]
+[ext_resource type="Texture2D" uid="uid://c0ugev73wplyv" path="res://Assets/Animations/Soldiers/Desert1/attack_10.png" id="15_i3ipd"]
+[ext_resource type="Texture2D" uid="uid://ca3n8x856v5cs" path="res://Assets/Animations/Soldiers/Desert1/attack_11.png" id="16_7dxcy"]
+[ext_resource type="Texture2D" uid="uid://63yb6i8et14v" path="res://Assets/Animations/Soldiers/Desert1/attack_12.png" id="17_ao7gk"]
+[ext_resource type="Texture2D" uid="uid://c0fsot0njbta" path="res://Assets/Animations/Soldiers/Desert1/attack_13.png" id="18_4w6uo"]
+[ext_resource type="Texture2D" uid="uid://dit7nnris5j1" path="res://Assets/Animations/Soldiers/Desert1/attack_14.png" id="19_npjce"]
+[ext_resource type="Texture2D" uid="uid://o3a3s8hbsfgy" path="res://Assets/Animations/Soldiers/Desert1/attack_15.png" id="20_t5537"]
+[ext_resource type="Texture2D" uid="uid://dqlqrmm6wgf6m" path="res://Assets/Animations/Soldiers/Desert1/attack_16.png" id="21_6sk17"]
+[ext_resource type="Texture2D" uid="uid://brhosttkth0sg" path="res://Assets/Animations/Soldiers/Desert1/attack_17.png" id="22_dvrjh"]
+[ext_resource type="Texture2D" uid="uid://cwhkakdlr1idq" path="res://Assets/Animations/Soldiers/Desert1/attack_18.png" id="23_okghc"]
+[ext_resource type="Texture2D" uid="uid://yh345c4fcssy" path="res://Assets/Animations/Soldiers/Desert1/attack_19.png" id="24_v3qpf"]
+[ext_resource type="Texture2D" uid="uid://blodetvk8a0xh" path="res://Assets/Animations/Soldiers/Desert1/attack_20.png" id="25_yxjll"]
+[ext_resource type="Texture2D" uid="uid://cfirrsyrk1rh0" path="res://Assets/Animations/Soldiers/Desert1/die_00.png" id="26_5pt42"]
+[ext_resource type="Texture2D" uid="uid://tjsi77rjmrj6" path="res://Assets/Animations/Soldiers/Desert1/die_01.png" id="27_g7nks"]
+[ext_resource type="Texture2D" uid="uid://b5324u5w1egtj" path="res://Assets/Animations/Soldiers/Desert1/die_02.png" id="28_envow"]
+[ext_resource type="Texture2D" uid="uid://beu6qjd48lt4b" path="res://Assets/Animations/Soldiers/Desert1/die_03.png" id="29_q6qbk"]
+[ext_resource type="Texture2D" uid="uid://2gyuslr0cubw" path="res://Assets/Animations/Soldiers/Desert1/die_04.png" id="30_aysty"]
+[ext_resource type="Texture2D" uid="uid://cbg8l2oeqtk63" path="res://Assets/Animations/Soldiers/Desert1/die_05.png" id="31_alup2"]
+[ext_resource type="Texture2D" uid="uid://dn4joy4ovj3b2" path="res://Assets/Animations/Soldiers/Desert1/die_06.png" id="32_kmtpy"]
+[ext_resource type="Texture2D" uid="uid://np4ob0wtyyrk" path="res://Assets/Animations/Soldiers/Desert1/die_07.png" id="33_k3xfv"]
+[ext_resource type="Texture2D" uid="uid://cx3o0c71v4tsj" path="res://Assets/Animations/Soldiers/Desert1/die_08.png" id="34_anb7v"]
+[ext_resource type="Texture2D" uid="uid://bl3drlwa0jvig" path="res://Assets/Animations/Soldiers/Desert1/die_09.png" id="35_sa462"]
+[ext_resource type="Texture2D" uid="uid://b61kb6hdctew1" path="res://Assets/Animations/Soldiers/Desert1/die_10.png" id="36_kv0or"]
+[ext_resource type="Texture2D" uid="uid://ryi7kp7fu0n" path="res://Assets/Animations/Soldiers/Desert1/dodge_00.png" id="37_0amlw"]
+[ext_resource type="Texture2D" uid="uid://85ftwuwywjxo" path="res://Assets/Animations/Soldiers/Desert1/dodge_01.png" id="38_1fl56"]
+[ext_resource type="Texture2D" uid="uid://b6qubip0v7mws" path="res://Assets/Animations/Soldiers/Desert1/dodge_02.png" id="39_kke3n"]
+[ext_resource type="Texture2D" uid="uid://nj2dlfpnflnx" path="res://Assets/Animations/Soldiers/Desert1/dodge_03.png" id="40_so8vh"]
+[ext_resource type="Texture2D" uid="uid://bermtng7lgsi6" path="res://Assets/Animations/Soldiers/Desert1/dodge_04.png" id="41_nfkw4"]
+[ext_resource type="Texture2D" uid="uid://dgyvn801pe3v8" path="res://Assets/Animations/Soldiers/Desert1/dodge_05.png" id="42_7e1jn"]
+[ext_resource type="Texture2D" uid="uid://ti1ikxhqwlqi" path="res://Assets/Animations/Soldiers/Desert1/dodge_06.png" id="43_5x676"]
+[ext_resource type="Texture2D" uid="uid://b7pmm2vuw7ysb" path="res://Assets/Animations/Soldiers/Desert1/dodge_07.png" id="44_r436h"]
+[ext_resource type="Texture2D" uid="uid://bybv4ds03xvto" path="res://Assets/Animations/Soldiers/Desert1/dodge_08.png" id="45_xara8"]
+[ext_resource type="Texture2D" uid="uid://dbs1l6awvmgqq" path="res://Assets/Animations/Soldiers/Desert1/dodge_09.png" id="46_e0alp"]
+[ext_resource type="Texture2D" uid="uid://cy7tbcocc4nsf" path="res://Assets/Animations/Soldiers/Desert1/dodge_10.png" id="47_adwth"]
+[ext_resource type="Texture2D" uid="uid://drch1s2ki7lj0" path="res://Assets/Animations/Soldiers/Desert1/dodge_11.png" id="48_srjd1"]
+[ext_resource type="Texture2D" uid="uid://bibn3slrjy787" path="res://Assets/Animations/Soldiers/Desert1/dodge_12.png" id="49_xnd14"]
+[ext_resource type="Texture2D" uid="uid://ctk2s1ao2r7uv" path="res://Assets/Animations/Soldiers/Desert1/dodge_13.png" id="50_j27wq"]
+[ext_resource type="Texture2D" uid="uid://fd7770hnt664" path="res://Assets/Animations/Soldiers/Desert1/dodge_14.png" id="51_jwcb1"]
+[ext_resource type="Texture2D" uid="uid://cuwur450jrayd" path="res://Assets/Animations/Soldiers/Desert1/dodge_15.png" id="52_87avu"]
+[ext_resource type="Texture2D" uid="uid://bg4x3b7s3a1eb" path="res://Assets/Animations/Soldiers/Desert1/dodge_16.png" id="53_eigto"]
+[ext_resource type="Texture2D" uid="uid://drsaids5nnrga" path="res://Assets/Animations/Soldiers/Desert1/dodge_17.png" id="54_e4tkf"]
+[ext_resource type="Texture2D" uid="uid://sgoii4t0so0y" path="res://Assets/Animations/Soldiers/Desert1/dodge_18.png" id="55_imdyc"]
+[ext_resource type="Texture2D" uid="uid://mges3voea2hg" path="res://Assets/Animations/Soldiers/Desert1/dodge_19.png" id="56_881ut"]
+[ext_resource type="Texture2D" uid="uid://dsecs346iemht" path="res://Assets/Animations/Soldiers/Desert1/dodge_20.png" id="57_1uy3a"]
+[ext_resource type="Texture2D" uid="uid://bfhftj6km4bn7" path="res://Assets/Animations/Soldiers/Desert1/dodge_21.png" id="58_uvnnn"]
+[ext_resource type="Texture2D" uid="uid://28q3rd2l1iuc" path="res://Assets/Animations/Soldiers/Desert1/dodge_22.png" id="59_au2qe"]
+[ext_resource type="Texture2D" uid="uid://n1m728w5rmql" path="res://Assets/Animations/Soldiers/Desert1/dodge_23.png" id="60_j72mq"]
+[ext_resource type="Texture2D" uid="uid://b4cg1n8nss3q1" path="res://Assets/Animations/Soldiers/Desert1/dodge_24.png" id="61_s0e5c"]
+[ext_resource type="Texture2D" uid="uid://bkoxxn8qqbtrt" path="res://Assets/Animations/Soldiers/Desert1/dodge_25.png" id="62_2rp6f"]
+[ext_resource type="Texture2D" uid="uid://l7g820p0hv53" path="res://Assets/Animations/Soldiers/Desert1/dodge_26.png" id="63_24u36"]
+[ext_resource type="Texture2D" uid="uid://rindse6vcs58" path="res://Assets/Animations/Soldiers/Desert1/dodge_27.png" id="64_jcu0e"]
+[ext_resource type="Texture2D" uid="uid://e45k4iynwx7k" path="res://Assets/Animations/Soldiers/Desert1/move_01.png" id="66_dgduo"]
+[ext_resource type="Texture2D" uid="uid://rvcqrtdhfsak" path="res://Assets/Animations/Soldiers/Desert1/move_03.png" id="68_dffqw"]
+[ext_resource type="Texture2D" uid="uid://daiw23b24dhki" path="res://Assets/Animations/Soldiers/Desert1/move_05.png" id="70_rckmm"]
+[ext_resource type="Texture2D" uid="uid://ds0i8qvyelbwp" path="res://Assets/Animations/Soldiers/Desert1/move_07.png" id="72_hidb3"]
+[ext_resource type="Texture2D" uid="uid://cv77trht7fwsc" path="res://Assets/Animations/Soldiers/Desert1/move_09.png" id="74_t8jmq"]
+[ext_resource type="Texture2D" uid="uid://bfjhavvbx0rus" path="res://Assets/Animations/Soldiers/Desert1/move_11.png" id="76_75nm6"]
+[ext_resource type="Texture2D" uid="uid://e7y16itcp6e3" path="res://Assets/Animations/Soldiers/Desert1/move_13.png" id="78_5cym0"]
+[ext_resource type="Texture2D" uid="uid://lgfrbdxthxon" path="res://Assets/Animations/Soldiers/Desert1/move_15.png" id="80_mbvd4"]
+[ext_resource type="Texture2D" uid="uid://16dl0ev0sxqk" path="res://Assets/Animations/Soldiers/Desert1/move_17.png" id="82_7ib3t"]
+[ext_resource type="Texture2D" uid="uid://1yjm6semow8" path="res://Assets/Animations/Soldiers/Desert1/move_19.png" id="84_3nktw"]
+[ext_resource type="Texture2D" uid="uid://cteqy1kbesg27" path="res://Assets/Animations/Soldiers/Desert1/move_21.png" id="86_e6heg"]
+[ext_resource type="Texture2D" uid="uid://clnnpp3qdje1q" path="res://Assets/Animations/Soldiers/Desert1/move_23.png" id="88_yq1gw"]
+
+[sub_resource type="Resource" id="Resource_fro54"]
+script = ExtResource("2_xhq2e")
+health = 160
+dodge_rate = 0.3
+near_damage_low = 10
+near_damage_high = 15
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.0
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 2.5
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qsbvf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_w80uf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6romv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_sypm1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_sx81p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_w5nmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_f0kra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_p0883")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_swvj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_eixnw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_b5s0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_i3ipd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_7dxcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ao7gk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_4w6uo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_npjce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_t5537")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_6sk17")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_dvrjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_okghc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_v3qpf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_yxjll")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_5pt42")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_g7nks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_envow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_q6qbk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_aysty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_alup2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_kmtpy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_k3xfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_anb7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_sa462")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_kv0or")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_0amlw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_1fl56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_kke3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_so8vh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_nfkw4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_7e1jn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_5x676")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_r436h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_xara8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_e0alp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_adwth")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_srjd1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_xnd14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_j27wq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_jwcb1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_87avu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_eigto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_e4tkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_imdyc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_881ut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_1uy3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_uvnnn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_au2qe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_j72mq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_s0e5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_2rp6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_24u36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_jcu0e")
+}],
+"loop": false,
+"name": &"dodge",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_w80uf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("66_dgduo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_dffqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_rckmm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_hidb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_t8jmq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_75nm6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_5cym0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_mbvd4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_7ib3t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_3nktw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_e6heg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_yq1gw")
+}],
+"loop": true,
+"name": &"move",
+"speed": 24.0
+}]
+
+[node name="DesertSoldier1" groups=["desert"] instance=ExtResource("1_5645t")]
+script = ExtResource("2_lqsrh")
+name_list = PackedStringArray("阿卜杜", "穆罕默德", "卡里姆", "哈立德", "法鲁克", "阿明", "赛义夫", "塔里克", "塔尔辛", "扎伊德", "马吉德")
+ally_texture = ExtResource("3_nirxo")
+start_data = SubResource("Resource_fro54")
+intercepting_range = 160
+heal_speed = 16
+
+[node name="AllySprite" parent="UnitBody" index="0"]
+position = Vector2(15, -90)
+sprite_frames = SubResource("SpriteFrames_qsbvf")
+animation = &"attack"
+autoplay = "idle"
+frame = 20
+frame_progress = 1.0

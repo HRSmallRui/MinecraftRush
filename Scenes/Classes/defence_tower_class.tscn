@@ -1,0 +1,709 @@
+[gd_scene load_steps=32 format=3 uid="uid://b1245qux56fh4"]
+
+[ext_resource type="Script" path="res://Scripts/Classes/defence_tower_class.gd" id="1_txjj0"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/based.gd" id="2_5cxto"]
+[ext_resource type="Texture2D" uid="uid://cmuydi6smp844" path="res://Assets/Images/DefenceTowers/Based/royal-tower.png" id="3_k35m3"]
+[ext_resource type="Texture2D" uid="uid://d18k206pndekm" path="res://Assets/Images/DefenceTowers/Based/royal-tower-select.png" id="4_42aym"]
+[ext_resource type="Texture2D" uid="uid://csaxsmpnbhtfg" path="res://Assets/Images/DefenceTowers/UI/UI-based.png" id="5_7lk4b"]
+[ext_resource type="Texture2D" uid="uid://cx7pbvojh7rji" path="res://Assets/Images/DefenceTowers/UI/sell.png" id="6_mxmxr"]
+[ext_resource type="Texture2D" uid="uid://bgmihuf3286ec" path="res://Assets/Images/DefenceTowers/UI/sell-select.png" id="7_gp8xc"]
+[ext_resource type="FontFile" uid="uid://drfv8ak22g1rm" path="res://Assets/Fonts/simhei.ttf" id="8_72b50"]
+[ext_resource type="AudioStream" uid="uid://i0to3f5pe1rc" path="res://Assets/Sounds/FXs/UIs/MC_Click.mp3" id="8_o0gl5"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/tower_panel_ui.gd" id="8_y8ei8"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="9_8877k"]
+[ext_resource type="Texture2D" uid="uid://dw2g3yb708dk7" path="res://Assets/Images/UI/DataUIs/damage_physics.res" id="11_deu52"]
+[ext_resource type="Texture2D" uid="uid://bhe2i0ciou46g" path="res://Assets/Images/UI/DataUIs/timer.res" id="12_b3bt2"]
+[ext_resource type="Texture2D" uid="uid://cmcwqpp82dvp0" path="res://Assets/Images/UI/DataUIs/health.res" id="13_1yg00"]
+[ext_resource type="Texture2D" uid="uid://0ei3o4fr7bgx" path="res://Assets/Images/UI/DataUIs/damage_magic.res" id="13_k0q81"]
+[ext_resource type="AudioStream" uid="uid://qjdlkswxr431" path="res://Assets/Sounds/FXs/Sound_GUIOpenTowerMenu.ogg" id="14_4n55g"]
+[ext_resource type="Texture2D" uid="uid://6ufqcro4277b" path="res://Assets/Images/UI/DataUIs/damage_bombard.res" id="14_bdymt"]
+[ext_resource type="Texture2D" uid="uid://c388b88iloc1r" path="res://Assets/Images/UI/DataUIs/damage_physics_hero.res" id="14_yjlxh"]
+[ext_resource type="Texture2D" uid="uid://c8vp5eiamfg0f" path="res://Assets/Images/UI/DataUIs/armor.res" id="15_7jh4m"]
+[ext_resource type="Texture2D" uid="uid://b7tpmru2mx1hr" path="res://Assets/Images/DefenceTowers/UI/射程范围.png" id="18_d30w0"]
+
+[sub_resource type="Animation" id="Animation_yqjuf"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1e-05, -0.1, 0, 0.1, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1e-05, -0.1, 0, 0.1, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_d1ke5"]
+resource_name = "hide_ui"
+length = 0.2
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.1, 0, 0.1, 0, 1e-05, -0.1, 0, 0.1, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.1, 0, 0.1, 0, 1e-05, -0.1, 0, 0.1, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+
+[sub_resource type="Animation" id="Animation_ll0t8"]
+resource_name = "show_ui"
+length = 0.2
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1e-05, -0.1, 0, 0.1, 0, 1, -0.1, 0, 0.1, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1e-05, -0.1, 0, 0.1, 0, 1, -0.1, 0, 0.1, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_otj4n"]
+_data = {
+"RESET": SubResource("Animation_yqjuf"),
+"hide_ui": SubResource("Animation_d1ke5"),
+"show_ui": SubResource("Animation_ll0t8")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4fk7d"]
+bg_color = Color(0, 0, 0, 0.772549)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_color = Color(0, 0, 0, 0.376471)
+shadow_size = 17
+
+[sub_resource type="Animation" id="Animation_b1mda"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1e-05, -0.0005, 0, 0.0005, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1e-05, -0.0005, 0, 0.0005, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate:r")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:modulate:g")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:modulate:b")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:modulate:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_8k76h"]
+resource_name = "hide_panel"
+length = 0.4
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.4, -0.2, 0, 0.2, 0, 1e-05, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.4, -0.2, 0, 0.2, 0, 1e-05, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate:r")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0, 1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:modulate:g")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0, 1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:modulate:b")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0, 1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:modulate:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0, 0, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+
+[sub_resource type="Animation" id="Animation_a0ev2"]
+resource_name = "show_panel"
+length = 0.4
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1e-05, -0.2, 0, 0.2, 0, 0.4, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1e-05, -0.2, 0, 0.2, 0, 0.4, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate:r")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0, 1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:modulate:g")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0, 1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:modulate:b")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0, 1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:modulate:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.2, 0, 0.2, 0, 1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_37dl2"]
+_data = {
+"RESET": SubResource("Animation_b1mda"),
+"hide_panel": SubResource("Animation_8k76h"),
+"show_panel": SubResource("Animation_a0ev2")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oni0c"]
+atlas = ExtResource("6_mxmxr")
+region = Rect2(17, 18, 62, 61)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n3ykp"]
+radius = 73.9444
+
+[node name="DefenceTowerClass" type="Node2D" node_paths=PackedStringArray("linked_areas")]
+y_sort_enabled = true
+script = ExtResource("1_txjj0")
+tower_type = 4
+linked_areas = [NodePath("TowerArea")]
+
+[node name="Based" type="Node2D" parent="." node_paths=PackedStringArray("tower")]
+script = ExtResource("2_5cxto")
+tower = NodePath("..")
+
+[node name="BasedSprite" type="Sprite2D" parent="Based"]
+z_index = -1
+texture = ExtResource("3_k35m3")
+
+[node name="BasedSpriteSelect" type="Sprite2D" parent="Based"]
+visible = false
+z_index = -1
+texture = ExtResource("4_42aym")
+
+[node name="TowerPart" type="Node2D" parent="."]
+
+[node name="TowerButton" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = -61.0
+offset_top = -31.0
+offset_right = 58.0
+offset_bottom = 26.0
+focus_mode = 0
+
+[node name="TowerUI" type="Node2D" parent="."]
+z_index = 100
+scale = Vector2(1e-05, 1e-05)
+
+[node name="UIAnimationPlayer" type="AnimationPlayer" parent="TowerUI"]
+libraries = {
+"": SubResource("AnimationLibrary_otj4n")
+}
+
+[node name="TowerRange" type="Node2D" parent="TowerUI"]
+scale = Vector2(2.8, 2.8)
+
+[node name="Sprite2D" type="Sprite2D" parent="TowerUI/TowerRange"]
+scale = Vector2(0.4, 0.28)
+texture = ExtResource("18_d30w0")
+
+[node name="UpgradeRange" type="Node2D" parent="TowerUI"]
+visible = false
+scale = Vector2(2.8, 2.8)
+
+[node name="RangeSprite" type="Sprite2D" parent="TowerUI/UpgradeRange"]
+scale = Vector2(0.4, 0.28)
+texture = ExtResource("18_d30w0")
+
+[node name="TowerPanelUI" type="Control" parent="TowerUI"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_left = -290.0
+offset_right = -290.0
+scale = Vector2(1e-05, 1e-05)
+script = ExtResource("8_y8ei8")
+
+[node name="PanelContainer" type="PanelContainer" parent="TowerUI/TowerPanelUI"]
+layout_mode = 0
+offset_left = -414.0
+offset_top = -256.0
+offset_right = 407.0
+offset_bottom = 106.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4fk7d")
+
+[node name="MarginContainer" type="MarginContainer" parent="TowerUI/TowerPanelUI/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = -10
+theme_override_constants/margin_bottom = 125
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 45
+
+[node name="NameLabel" type="Label" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer/VBoxContainer"]
+modulate = Color(0, 1, 0, 1)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("8_72b50")
+theme_override_font_sizes/font_size = 64
+text = "大刀教会"
+
+[node name="IntroLabel" type="Label" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("9_8877k")
+theme_override_font_sizes/font_size = 48
+autowrap_mode = 3
+
+[node name="Slots" type="Control" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ArcherSlot" type="HBoxContainer" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer/VBoxContainer/Slots"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 330
+
+[node name="Damage" type="TextureRect" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer/VBoxContainer/Slots/ArcherSlot"]
+layout_mode = 2
+texture = ExtResource("11_deu52")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer/VBoxContainer/Slots/ArcherSlot/Damage"]
+layout_mode = 0
+offset_left = 71.2539
+offset_top = 20.4891
+offset_right = 247.254
+offset_bottom = 84.4891
+scale = Vector2(0.566249, 0.566249)
+theme_override_fonts/font = ExtResource("9_8877k")
+theme_override_font_sizes/font_size = 64
+text = "4 - 6"
+vertical_alignment = 1
+
+[node name="CD" type="TextureRect" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer/VBoxContainer/Slots/ArcherSlot"]
+layout_mode = 2
+texture = ExtResource("12_b3bt2")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer/VBoxContainer/Slots/ArcherSlot/CD"]
+layout_mode = 0
+offset_left = 97.8967
+offset_top = 20.4891
+offset_right = 273.897
+offset_bottom = 84.4891
+scale = Vector2(0.566249, 0.566249)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("9_8877k")
+theme_override_font_sizes/font_size = 64
+text = "4 - 6"
+vertical_alignment = 1
+
+[node name="BarrackSlot" type="HBoxContainer" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer/VBoxContainer/Slots"]
+visible = false
+layout_mode = 0
+offset_right = 469.0
+offset_bottom = 90.0
+theme_override_constants/separation = 220
+
+[node name="Health" type="TextureRect" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer/VBoxContainer/Slots/BarrackSlot"]
+layout_mode = 2
+texture = ExtResource("13_1yg00")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer/VBoxContainer/Slots/BarrackSlot/Health"]
+layout_mode = 0
+offset_left = 91.5
+offset_top = 31.0
+offset_right = 267.5
+offset_bottom = 95.0
+scale = Vector2(0.566249, 0.566249)
+theme_override_fonts/font = ExtResource("9_8877k")
+theme_override_font_sizes/font_size = 64
+text = "4 - 6"
+vertical_alignment = 1
+
+[node name="Damage" type="TextureRect" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer/VBoxContainer/Slots/BarrackSlot"]
+layout_mode = 2
+texture = ExtResource("14_yjlxh")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer/VBoxContainer/Slots/BarrackSlot/Damage"]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 31.0
+offset_right = 261.0
+offset_bottom = 95.0
+scale = Vector2(0.566249, 0.566249)
+theme_override_fonts/font = ExtResource("9_8877k")
+theme_override_font_sizes/font_size = 64
+text = "4 - 6"
+vertical_alignment = 1
+
+[node name="Armor" type="TextureRect" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer/VBoxContainer/Slots/BarrackSlot"]
+layout_mode = 2
+texture = ExtResource("15_7jh4m")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer/VBoxContainer/Slots/BarrackSlot/Armor"]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 24.0
+offset_right = 265.0
+offset_bottom = 117.0
+scale = Vector2(0.566249, 0.566249)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("9_8877k")
+theme_override_font_sizes/font_size = 64
+text = "慢"
+vertical_alignment = 1
+
+[node name="MagicSlot" type="HBoxContainer" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer/VBoxContainer/Slots"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 330
+
+[node name="Damage" type="TextureRect" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer/VBoxContainer/Slots/MagicSlot"]
+layout_mode = 2
+texture = ExtResource("13_k0q81")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer/VBoxContainer/Slots/MagicSlot/Damage"]
+layout_mode = 0
+offset_left = 86.5
+offset_top = 31.0
+offset_right = 262.5
+offset_bottom = 95.0
+scale = Vector2(0.566249, 0.566249)
+theme_override_fonts/font = ExtResource("9_8877k")
+theme_override_font_sizes/font_size = 64
+text = "4 - 6"
+vertical_alignment = 1
+
+[node name="CD" type="TextureRect" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer/VBoxContainer/Slots/MagicSlot"]
+layout_mode = 2
+texture = ExtResource("12_b3bt2")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer/VBoxContainer/Slots/MagicSlot/CD"]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 24.0
+offset_right = 275.0
+offset_bottom = 117.0
+scale = Vector2(0.566249, 0.566249)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("9_8877k")
+theme_override_font_sizes/font_size = 64
+text = "慢"
+vertical_alignment = 1
+
+[node name="BombardSlot" type="HBoxContainer" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer/VBoxContainer/Slots"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 330
+
+[node name="Damage" type="TextureRect" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer/VBoxContainer/Slots/BombardSlot"]
+layout_mode = 2
+texture = ExtResource("14_bdymt")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer/VBoxContainer/Slots/BombardSlot/Damage"]
+layout_mode = 0
+offset_left = 101.5
+offset_top = 31.0
+offset_right = 277.5
+offset_bottom = 95.0
+scale = Vector2(0.566249, 0.566249)
+theme_override_fonts/font = ExtResource("9_8877k")
+theme_override_font_sizes/font_size = 64
+text = "4 - 6"
+vertical_alignment = 1
+
+[node name="CD" type="TextureRect" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer/VBoxContainer/Slots/BombardSlot"]
+layout_mode = 2
+texture = ExtResource("12_b3bt2")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer/VBoxContainer/Slots/BombardSlot/CD"]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 24.0
+offset_right = 275.0
+offset_bottom = 117.0
+scale = Vector2(0.566249, 0.566249)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("9_8877k")
+theme_override_font_sizes/font_size = 64
+text = "慢"
+vertical_alignment = 1
+
+[node name="SkillWords" type="Label" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer/VBoxContainer/Slots"]
+modulate = Color(0.481789, 0.481789, 0.481789, 1)
+layout_mode = 0
+offset_left = 8.99999
+offset_top = 54.0
+offset_right = 185.0
+offset_bottom = 147.0
+scale = Vector2(0.566249, 0.566249)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("9_8877k")
+theme_override_font_sizes/font_size = 64
+text = "午时已到！"
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TowerUI/TowerPanelUI"]
+libraries = {
+"": SubResource("AnimationLibrary_37dl2")
+}
+
+[node name="Circle" type="Sprite2D" parent="TowerUI"]
+self_modulate = Color(1, 1, 1, 0.356863)
+rotation = 6.28319
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_7lk4b")
+
+[node name="SellButton" type="TextureButton" parent="TowerUI/Circle"]
+offset_left = -31.0
+offset_top = 66.0
+offset_right = 31.0
+offset_bottom = 127.0
+texture_normal = SubResource("AtlasTexture_oni0c")
+texture_pressed = SubResource("AtlasTexture_oni0c")
+texture_hover = ExtResource("7_gp8xc")
+stretch_mode = 3
+
+[node name="ClickAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_o0gl5")
+volume_db = 10.0
+max_polyphony = 10
+bus = &"Sound"
+
+[node name="MouseOverAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_4n55g")
+max_polyphony = 10
+bus = &"Sound"
+
+[node name="TowerArea" type="Area2D" parent="."]
+z_index = 100
+scale = Vector2(2.8, 2.8)
+collision_layer = 0
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TowerArea"]
+scale = Vector2(1, 0.7)
+shape = SubResource("CircleShape2D_n3ykp")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="TowerSelfArea" type="Area2D" parent="."]
+z_index = 100
+collision_layer = 1024
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TowerSelfArea"]
+scale = Vector2(1, 0.7)
+shape = SubResource("CircleShape2D_n3ykp")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="TowerBuffs" type="Node2D" parent="."]
+
+[connection signal="mouse_entered" from="TowerButton" to="." method="_on_tower_button_mouse_entered"]
+[connection signal="mouse_exited" from="TowerButton" to="." method="_on_tower_button_mouse_exited"]
+[connection signal="pressed" from="TowerButton" to="." method="_on_tower_button_pressed"]
+[connection signal="mouse_entered" from="TowerUI/Circle/SellButton" to="." method="_on_sell_button_mouse_entered"]
+[connection signal="mouse_exited" from="TowerUI/Circle/SellButton" to="." method="_on_sell_button_mouse_exited"]
+[connection signal="pressed" from="TowerUI/Circle/SellButton" to="." method="_on_sell_button_pressed"]

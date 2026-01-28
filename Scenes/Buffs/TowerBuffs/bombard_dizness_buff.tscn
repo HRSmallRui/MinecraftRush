@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://dj1xl0dfejp7t"]
+
+[ext_resource type="PackedScene" uid="uid://bjfa3t67tpsbr" path="res://Scenes/Buffs/property_buff.tscn" id="1_0ynly"]
+[ext_resource type="Script" path="res://Scripts/Buffs/property_buff_block.gd" id="2_h527s"]
+[ext_resource type="Script" path="res://Scripts/Buffs/bombard_dizness_buff.gd" id="2_rcuxx"]
+
+[sub_resource type="Resource" id="Resource_dc4h8"]
+script = ExtResource("2_h527s")
+property_type = 9
+operation_type = 1
+operation_data = 0.0
+
+[node name="BombardDiznessBuff" instance=ExtResource("1_0ynly")]
+script = ExtResource("2_rcuxx")
+buff_blocks = Array[ExtResource("2_h527s")]([SubResource("Resource_dc4h8")])
+buff_type = 1
+duration = 1.0
+buff_tag = "bombard_dizness"
+immune_groups = Array[String](["super_unit", "boss", "god"])

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://f1vaqnehc211"]
+
+[ext_resource type="PackedScene" uid="uid://7cx0j7xjwcwi" path="res://Scenes/Classes/ally_class.tscn" id="1_1xxwl"]
+[ext_resource type="Script" path="res://Scripts/Allys/Reinfrocements/reinforcement_class.gd" id="2_farij"]
+
+[node name="ReinforcementClass" node_paths=PackedStringArray("reinforce_partners") instance=ExtResource("1_1xxwl")]
+script = ExtResource("2_farij")
+reinforce_partners = []
+reinforce_level = 0
+reinforce_animation_list = []
+reinforce_headtex_list = []
+reinforce_name_list = []
+ally_texture = null
+intercepting_range = 150

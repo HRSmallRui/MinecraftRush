@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://1x74x2fajlf4"]
+
+[ext_resource type="PackedScene" uid="uid://bu12mu4ubv04k" path="res://Scenes/Classes/tower_buff.tscn" id="1_xnm88"]
+[ext_resource type="Script" path="res://Scripts/TowerBuffs/tower_property_buff_block.gd" id="2_amhgw"]
+[ext_resource type="Texture2D" uid="uid://ccglhhifm554s" path="res://Assets/Images/Effects/鼓舞光环.png" id="3_1rbgd"]
+
+[sub_resource type="Resource" id="Resource_vmh5b"]
+script = ExtResource("2_amhgw")
+tower_property_type = 0
+operation_type = 1
+operation_data = 1.5
+
+[node name="JohnnyTowerBuff" instance=ExtResource("1_xnm88")]
+buff_blocks = Array[ExtResource("2_amhgw")]([SubResource("Resource_vmh5b")])
+duration = 1.0
+buff_tag = "JohnnyTowerBuff"
+
+[node name="EncourageEffect" type="Sprite2D" parent="." index="1"]
+z_index = -1
+position = Vector2(0, -1.19209e-07)
+scale = Vector2(2.2, 2.2)
+texture = ExtResource("3_1rbgd")
+offset = Vector2(0, -5)

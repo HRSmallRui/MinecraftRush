@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="HeroPropertyBlock" load_steps=16 format=3 uid="uid://ykevb7jm4rih"]
+
+[ext_resource type="Script" path="res://Library/Heroes/damage_block.gd" id="1_c8ssc"]
+[ext_resource type="Script" path="res://Library/Heroes/hero_property_block.gd" id="2_7an4j"]
+[ext_resource type="Texture2D" uid="uid://c3dd07kp6vhuh" path="res://Assets/Images/UI/HeroHall/HeroTextures/鲁伯特.png" id="2_vt1jl"]
+
+[sub_resource type="Resource" id="Resource_4ankd"]
+script = ExtResource("1_c8ssc")
+damage_low = 24
+damage_high = 30
+
+[sub_resource type="Resource" id="Resource_hbufx"]
+script = ExtResource("1_c8ssc")
+damage_low = 28
+damage_high = 36
+
+[sub_resource type="Resource" id="Resource_qcj3e"]
+script = ExtResource("1_c8ssc")
+damage_low = 34
+damage_high = 42
+
+[sub_resource type="Resource" id="Resource_lyg4w"]
+script = ExtResource("1_c8ssc")
+damage_low = 40
+damage_high = 48
+
+[sub_resource type="Resource" id="Resource_8ff6g"]
+script = ExtResource("1_c8ssc")
+damage_low = 46
+damage_high = 54
+
+[sub_resource type="Resource" id="Resource_h3xo5"]
+script = ExtResource("1_c8ssc")
+damage_low = 50
+damage_high = 72
+
+[sub_resource type="Resource" id="Resource_j48mk"]
+script = ExtResource("1_c8ssc")
+damage_low = 8
+damage_high = 10
+
+[sub_resource type="Resource" id="Resource_m1221"]
+script = ExtResource("1_c8ssc")
+damage_low = 10
+damage_high = 12
+
+[sub_resource type="Resource" id="Resource_ljpoi"]
+script = ExtResource("1_c8ssc")
+damage_low = 12
+damage_high = 14
+
+[sub_resource type="Resource" id="Resource_51p1f"]
+script = ExtResource("1_c8ssc")
+damage_low = 14
+damage_high = 16
+
+[sub_resource type="Resource" id="Resource_5e1jg"]
+script = ExtResource("1_c8ssc")
+damage_low = 16
+damage_high = 18
+
+[sub_resource type="Resource" id="Resource_4xtca"]
+script = ExtResource("1_c8ssc")
+damage_low = 18
+damage_high = 24
+
+[resource]
+script = ExtResource("2_7an4j")
+hero_name = "鲁伯特"
+hero_subname = "自然巫师"
+hero_intro = "没人见到过他的真面目，只知道他是受到大自然的召唤为我们提供协助，呼风唤雨、来去无踪。他手握一根不被任何世俗接受的奇怪魔杖，却能够呼风唤雨，引雷轰鸣，让大地为之哀嚎怒吼。当有人想一窥他那厚重法师袍下的真面目时，却只能在被遮盖严实的黑暗中瞥见一缕幽蓝的光芒……"
+hero_type = 2
+max_healths = Array[int]([240, 260, 280, 300, 320, 340, 360, 380, 400, 420])
+damage_nears = Array[ExtResource("1_c8ssc")]([SubResource("Resource_j48mk"), SubResource("Resource_j48mk"), SubResource("Resource_j48mk"), SubResource("Resource_j48mk"), SubResource("Resource_j48mk"), SubResource("Resource_m1221"), SubResource("Resource_ljpoi"), SubResource("Resource_51p1f"), SubResource("Resource_5e1jg"), SubResource("Resource_4xtca")])
+damage_near_speed = 1.5
+damage_fars = Array[ExtResource("1_c8ssc")]([SubResource("Resource_4ankd"), SubResource("Resource_4ankd"), SubResource("Resource_4ankd"), SubResource("Resource_4ankd"), SubResource("Resource_4ankd"), SubResource("Resource_hbufx"), SubResource("Resource_qcj3e"), SubResource("Resource_lyg4w"), SubResource("Resource_8ff6g"), SubResource("Resource_h3xo5")])
+damage_far_speed = 2.5
+damage_far_range = 340
+armors = Array[float]([0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.35, 0.35, 0.35, 0.4])
+magic_defences = Array[float]([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+xp_speed_rate = 2.2
+move_speed = 1.4
+hero_poster = ExtResource("2_vt1jl")

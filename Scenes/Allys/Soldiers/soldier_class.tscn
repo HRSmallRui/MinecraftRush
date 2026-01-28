@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgi3ibffayb11"]
+
+[ext_resource type="PackedScene" uid="uid://7cx0j7xjwcwi" path="res://Scenes/Classes/ally_class.tscn" id="1_d8ris"]
+[ext_resource type="Script" path="res://Scripts/Allys/Soldiers/soldier_class.gd" id="2_ce3hl"]
+
+[node name="SoldierClass" instance=ExtResource("1_d8ris")]
+script = ExtResource("2_ce3hl")
+soldier_name_list = Array[String]([])
+soldier_skill_levels = Array[int]([0, 0, 0])
+intercepting_range = 120
+
+[node name="TechHealTimer" type="Timer" parent="." index="6"]
+
+[connection signal="timeout" from="TechHealTimer" to="." method="_on_tech_heal_timer_timeout"]

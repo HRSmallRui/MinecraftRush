@@ -1,0 +1,645 @@
+[gd_scene load_steps=135 format=3 uid="uid://r43w2gwj4g1v"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_5y2vy"]
+[ext_resource type="AudioStream" uid="uid://bbsw81a7ow1s6" path="res://Assets/Sounds/FXs/Enemies/蠹虫/蠹虫死亡1.wav" id="2_armsx"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="2_c8d6b"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_22.gd" id="2_npygt"]
+[ext_resource type="Texture2D" uid="uid://dhama1l5n37ql" path="res://Assets/Images/UI/InformationBar/蠹虫.png" id="3_j1iud"]
+[ext_resource type="AudioStream" uid="uid://c8pry1eu6mfpt" path="res://Assets/Sounds/FXs/Enemies/蠹虫/蠹虫死亡2.wav" id="3_jdavo"]
+[ext_resource type="PackedScene" uid="uid://dcjuved17hj6j" path="res://Scenes/Enemies/EnemyComponents/appear_audio_component.tscn" id="6_jojed"]
+[ext_resource type="Texture2D" uid="uid://blpe66e7ovov6" path="res://Assets/Animations/Enemies/22蠹虫/appear_01.png" id="7_htdav"]
+[ext_resource type="Texture2D" uid="uid://cigvso5psy04n" path="res://Assets/Animations/Enemies/22蠹虫/attack_00.png" id="7_tiihj"]
+[ext_resource type="AudioStream" uid="uid://50av5vlhqeof" path="res://Assets/Sounds/FXs/Enemies/蠹虫/蠹虫出现1.wav" id="7_wo156"]
+[ext_resource type="Texture2D" uid="uid://bv4p6x7k4q0a3" path="res://Assets/Animations/Enemies/22蠹虫/attack_01.png" id="8_0tu4a"]
+[ext_resource type="Texture2D" uid="uid://c8msbbifyfopp" path="res://Assets/Animations/Enemies/22蠹虫/appear_02.png" id="8_6walb"]
+[ext_resource type="AudioStream" uid="uid://dbxdnqk5i38jk" path="res://Assets/Sounds/FXs/Enemies/蠹虫/蠹虫出现2.wav" id="8_jnuq3"]
+[ext_resource type="AudioStream" uid="uid://k0f0ppwfji4v" path="res://Assets/Sounds/FXs/Enemies/蠹虫/蠹虫出现3.wav" id="9_4kxk4"]
+[ext_resource type="Texture2D" uid="uid://jqfge61go3a2" path="res://Assets/Animations/Enemies/22蠹虫/appear_03.png" id="9_h5m1d"]
+[ext_resource type="Texture2D" uid="uid://c17euan27r5hv" path="res://Assets/Animations/Enemies/22蠹虫/attack_02.png" id="9_k5xxe"]
+[ext_resource type="AudioStream" uid="uid://b3lmgs6dot4l4" path="res://Assets/Sounds/FXs/Enemies/蠹虫/蠹虫出现4.wav" id="10_cd4m5"]
+[ext_resource type="Texture2D" uid="uid://d3dxm8jcovttv" path="res://Assets/Animations/Enemies/22蠹虫/appear_04.png" id="10_gr00t"]
+[ext_resource type="Texture2D" uid="uid://bn8iehfq7s4qd" path="res://Assets/Animations/Enemies/22蠹虫/attack_03.png" id="10_odkgy"]
+[ext_resource type="Texture2D" uid="uid://cnpsn7ca6oqtr" path="res://Assets/Animations/Enemies/22蠹虫/attack_04.png" id="11_dbrrf"]
+[ext_resource type="Texture2D" uid="uid://ppy1kpk8civf" path="res://Assets/Animations/Enemies/22蠹虫/appear_05.png" id="11_geymf"]
+[ext_resource type="Texture2D" uid="uid://vr821l8pkjho" path="res://Assets/Animations/Enemies/22蠹虫/appear_06.png" id="12_ab1xi"]
+[ext_resource type="Texture2D" uid="uid://bncb4cyhwjrmf" path="res://Assets/Animations/Enemies/22蠹虫/attack_05.png" id="12_g68y8"]
+[ext_resource type="Texture2D" uid="uid://cd3uavx4qhevr" path="res://Assets/Animations/Enemies/22蠹虫/attack_06.png" id="13_boju2"]
+[ext_resource type="Texture2D" uid="uid://yd4di600a5g1" path="res://Assets/Animations/Enemies/22蠹虫/appear_07.png" id="13_nou3t"]
+[ext_resource type="Texture2D" uid="uid://b4uybmju2hsy7" path="res://Assets/Animations/Enemies/22蠹虫/attack_07.png" id="14_12h1p"]
+[ext_resource type="Texture2D" uid="uid://b6j3guvmsuk6w" path="res://Assets/Animations/Enemies/22蠹虫/appear_08.png" id="14_tuajr"]
+[ext_resource type="Texture2D" uid="uid://d04c3oqsadip0" path="res://Assets/Animations/Enemies/22蠹虫/attack_08.png" id="15_3q18h"]
+[ext_resource type="Texture2D" uid="uid://cbncmy4x2lx1q" path="res://Assets/Animations/Enemies/22蠹虫/appear_09.png" id="15_5uhxh"]
+[ext_resource type="Texture2D" uid="uid://c3x7hn7ib2b17" path="res://Assets/Animations/Enemies/22蠹虫/appear_10.png" id="16_cl71k"]
+[ext_resource type="Texture2D" uid="uid://d1e3ohpadaanw" path="res://Assets/Animations/Enemies/22蠹虫/attack_09.png" id="16_n7i5d"]
+[ext_resource type="Texture2D" uid="uid://cxu1ury1si4km" path="res://Assets/Animations/Enemies/22蠹虫/appear_11.png" id="17_yrq3d"]
+[ext_resource type="Texture2D" uid="uid://c8pwc11bea1lj" path="res://Assets/Animations/Enemies/22蠹虫/attack_10.png" id="17_yxfhu"]
+[ext_resource type="Texture2D" uid="uid://d00pu7xdsuav7" path="res://Assets/Animations/Enemies/22蠹虫/appear_12.png" id="18_5eicy"]
+[ext_resource type="Texture2D" uid="uid://htgh1tvhpvl8" path="res://Assets/Animations/Enemies/22蠹虫/attack_11.png" id="18_l23s1"]
+[ext_resource type="Texture2D" uid="uid://bq3lfl48amosp" path="res://Assets/Animations/Enemies/22蠹虫/appear_13.png" id="19_4av8k"]
+[ext_resource type="Texture2D" uid="uid://cumvykbgikfaf" path="res://Assets/Animations/Enemies/22蠹虫/attack_12.png" id="19_mpohc"]
+[ext_resource type="Texture2D" uid="uid://y2rxj7abe624" path="res://Assets/Animations/Enemies/22蠹虫/attack_13.png" id="20_5s58a"]
+[ext_resource type="Texture2D" uid="uid://byphk5jwkdjwc" path="res://Assets/Animations/Enemies/22蠹虫/appear_14.png" id="20_2602b"]
+[ext_resource type="Texture2D" uid="uid://cx71atynshxcu" path="res://Assets/Animations/Enemies/22蠹虫/attack_14.png" id="21_fggvj"]
+[ext_resource type="Texture2D" uid="uid://jtxjbc08yeea" path="res://Assets/Animations/Enemies/22蠹虫/appear_15.png" id="21_k37sm"]
+[ext_resource type="Texture2D" uid="uid://bntufqvhp7ubt" path="res://Assets/Animations/Enemies/22蠹虫/attack_15.png" id="22_6v3eg"]
+[ext_resource type="Texture2D" uid="uid://gx7mqwx4m3qp" path="res://Assets/Animations/Enemies/22蠹虫/appear_16.png" id="22_meiud"]
+[ext_resource type="Texture2D" uid="uid://bujfry2vbhqo0" path="res://Assets/Animations/Enemies/22蠹虫/call_00.png" id="23_actoj"]
+[ext_resource type="Texture2D" uid="uid://cy76def2ypf5o" path="res://Assets/Animations/Enemies/22蠹虫/appear_17.png" id="23_yi5r6"]
+[ext_resource type="Texture2D" uid="uid://pjqa61w04ijv" path="res://Assets/Animations/Enemies/22蠹虫/call_01.png" id="24_sqtam"]
+[ext_resource type="Texture2D" uid="uid://tcc7p4g7fujj" path="res://Assets/Animations/Enemies/22蠹虫/call_02.png" id="25_0rehb"]
+[ext_resource type="Texture2D" uid="uid://ctk3xlohsfgsq" path="res://Assets/Animations/Enemies/22蠹虫/call_03.png" id="26_cxp3b"]
+[ext_resource type="Texture2D" uid="uid://t10o7iqdytgy" path="res://Assets/Animations/Enemies/22蠹虫/call_04.png" id="27_sx3sp"]
+[ext_resource type="Texture2D" uid="uid://6um1lwbqd8ud" path="res://Assets/Animations/Enemies/22蠹虫/call_05.png" id="28_tbc18"]
+[ext_resource type="Texture2D" uid="uid://ifiadk11b7fn" path="res://Assets/Animations/Enemies/22蠹虫/call_06.png" id="29_jicoi"]
+[ext_resource type="Texture2D" uid="uid://dfjdr1qgn6w54" path="res://Assets/Animations/Enemies/22蠹虫/call_07.png" id="30_1jms7"]
+[ext_resource type="Texture2D" uid="uid://x23pbkkuujvg" path="res://Assets/Animations/Enemies/22蠹虫/call_08.png" id="31_t4vkg"]
+[ext_resource type="Texture2D" uid="uid://c6v68vxj2go85" path="res://Assets/Animations/Enemies/22蠹虫/call_09.png" id="32_ltfhq"]
+[ext_resource type="Texture2D" uid="uid://exg1do5lk538" path="res://Assets/Animations/Enemies/22蠹虫/call_10.png" id="33_7bde2"]
+[ext_resource type="Texture2D" uid="uid://b7bte7wgnvafb" path="res://Assets/Animations/Enemies/22蠹虫/call_11.png" id="34_bi2n6"]
+[ext_resource type="Texture2D" uid="uid://fta7foxlqj70" path="res://Assets/Animations/Enemies/22蠹虫/call_12.png" id="35_fgdcb"]
+[ext_resource type="Texture2D" uid="uid://coblhn6si6v8r" path="res://Assets/Animations/Enemies/22蠹虫/call_13.png" id="36_gkhdo"]
+[ext_resource type="Texture2D" uid="uid://d5bjgm0pkoaq" path="res://Assets/Animations/Enemies/22蠹虫/call_14.png" id="37_lbrep"]
+[ext_resource type="Texture2D" uid="uid://62vt3h5ifg78" path="res://Assets/Animations/Enemies/22蠹虫/call_15.png" id="38_g5h8j"]
+[ext_resource type="Texture2D" uid="uid://de0iwsb68lf4r" path="res://Assets/Animations/Enemies/22蠹虫/call_16.png" id="39_2kbno"]
+[ext_resource type="Texture2D" uid="uid://cmdiqfuomj7xr" path="res://Assets/Animations/Enemies/22蠹虫/call_17.png" id="40_xi0he"]
+[ext_resource type="Texture2D" uid="uid://plbaau7bk0je" path="res://Assets/Animations/Enemies/22蠹虫/call_18.png" id="41_4v4nw"]
+[ext_resource type="Texture2D" uid="uid://cf80qrnngvilh" path="res://Assets/Animations/Enemies/22蠹虫/call_19.png" id="42_vyarx"]
+[ext_resource type="Texture2D" uid="uid://dcto2puk0okiq" path="res://Assets/Animations/Enemies/22蠹虫/call_20.png" id="43_hbvfd"]
+[ext_resource type="Texture2D" uid="uid://cyg6wri0jll3s" path="res://Assets/Animations/Enemies/22蠹虫/call_21.png" id="44_t75fj"]
+[ext_resource type="Texture2D" uid="uid://dksp8o3cpo5ik" path="res://Assets/Animations/Enemies/22蠹虫/call_22.png" id="45_ptkja"]
+[ext_resource type="Texture2D" uid="uid://cj2q8x57sc3dc" path="res://Assets/Animations/Enemies/22蠹虫/call_23.png" id="46_n34n4"]
+[ext_resource type="Texture2D" uid="uid://bds2xq03pk1as" path="res://Assets/Animations/Enemies/22蠹虫/call_24.png" id="47_p3r86"]
+[ext_resource type="Texture2D" uid="uid://bj3bcxnkdpj6x" path="res://Assets/Animations/Enemies/22蠹虫/call_25.png" id="48_475p7"]
+[ext_resource type="Texture2D" uid="uid://bhrjkahtyeyjb" path="res://Assets/Animations/Enemies/22蠹虫/call_26.png" id="49_ed74a"]
+[ext_resource type="Texture2D" uid="uid://d4deubxjj5tus" path="res://Assets/Animations/Enemies/22蠹虫/call_27.png" id="50_38luv"]
+[ext_resource type="Texture2D" uid="uid://dl8mogb5xiyak" path="res://Assets/Animations/Enemies/22蠹虫/call_28.png" id="51_hxmss"]
+[ext_resource type="Texture2D" uid="uid://drtfif6va1x6f" path="res://Assets/Animations/Enemies/22蠹虫/call_29.png" id="52_yoppv"]
+[ext_resource type="Texture2D" uid="uid://c8td5kaj4ql8u" path="res://Assets/Animations/Enemies/22蠹虫/call_30.png" id="53_gosjk"]
+[ext_resource type="Texture2D" uid="uid://dhfwovqhh3a45" path="res://Assets/Animations/Enemies/22蠹虫/call_31.png" id="54_854wk"]
+[ext_resource type="Texture2D" uid="uid://bbrd4v1lfbdp" path="res://Assets/Animations/Enemies/22蠹虫/call_32.png" id="55_r2kyx"]
+[ext_resource type="Texture2D" uid="uid://cw1u8omvmu6kg" path="res://Assets/Animations/Enemies/22蠹虫/call_33.png" id="56_a65c3"]
+[ext_resource type="Texture2D" uid="uid://uksuuw3q1tpx" path="res://Assets/Animations/Enemies/22蠹虫/die_00.png" id="57_vpve5"]
+[ext_resource type="Texture2D" uid="uid://71ckwf408gkx" path="res://Assets/Animations/Enemies/22蠹虫/die_01.png" id="58_16cai"]
+[ext_resource type="Texture2D" uid="uid://dpnhpktvv3e1u" path="res://Assets/Animations/Enemies/22蠹虫/die_02.png" id="59_wdp8k"]
+[ext_resource type="Texture2D" uid="uid://cqulwo4c8x4qn" path="res://Assets/Animations/Enemies/22蠹虫/die_03.png" id="60_l1une"]
+[ext_resource type="Texture2D" uid="uid://cm1kpm123m8rw" path="res://Assets/Animations/Enemies/22蠹虫/die_04.png" id="61_7t0x3"]
+[ext_resource type="Texture2D" uid="uid://c80i0b6dh8dwb" path="res://Assets/Animations/Enemies/22蠹虫/die_05.png" id="62_ocona"]
+[ext_resource type="Texture2D" uid="uid://cbkif75one5uc" path="res://Assets/Animations/Enemies/22蠹虫/die_06.png" id="63_j7tb1"]
+[ext_resource type="Texture2D" uid="uid://1qjd5tgargp1" path="res://Assets/Animations/Enemies/22蠹虫/die_07.png" id="64_uwhf1"]
+[ext_resource type="Texture2D" uid="uid://dshn5ybx1ksnx" path="res://Assets/Animations/Enemies/22蠹虫/die_08.png" id="65_1left"]
+[ext_resource type="Texture2D" uid="uid://cuwxi36g76sxg" path="res://Assets/Animations/Enemies/22蠹虫/die_09.png" id="66_a2jsl"]
+[ext_resource type="Texture2D" uid="uid://dmpl4gvwobql7" path="res://Assets/Animations/Enemies/22蠹虫/die_10.png" id="67_n5f7m"]
+[ext_resource type="Texture2D" uid="uid://5xpysp2h70ig" path="res://Assets/Animations/Enemies/22蠹虫/die_11.png" id="68_1gi7u"]
+[ext_resource type="Texture2D" uid="uid://dpv00ueb37e66" path="res://Assets/Animations/Enemies/22蠹虫/die_12.png" id="69_f1nqx"]
+[ext_resource type="Texture2D" uid="uid://cwo7wrfjvvcud" path="res://Assets/Animations/Enemies/22蠹虫/die_13.png" id="70_0lnda"]
+[ext_resource type="Texture2D" uid="uid://cx8b8mqvrwt7n" path="res://Assets/Animations/Enemies/22蠹虫/die_14.png" id="71_u4fua"]
+[ext_resource type="Texture2D" uid="uid://co8kv722pk45m" path="res://Assets/Animations/Enemies/22蠹虫/die_15.png" id="72_1x64y"]
+[ext_resource type="Texture2D" uid="uid://bbx6ltqpgrojr" path="res://Assets/Animations/Enemies/22蠹虫/move_back_00.png" id="73_fudb5"]
+[ext_resource type="Texture2D" uid="uid://dfj468rlga7pk" path="res://Assets/Animations/Enemies/22蠹虫/move_back_01.png" id="74_3xttm"]
+[ext_resource type="Texture2D" uid="uid://chftthluj2iq0" path="res://Assets/Animations/Enemies/22蠹虫/move_back_02.png" id="75_mx7rp"]
+[ext_resource type="Texture2D" uid="uid://bo0x4oevodkir" path="res://Assets/Animations/Enemies/22蠹虫/move_back_03.png" id="76_5inx0"]
+[ext_resource type="Texture2D" uid="uid://dq055aqqkjm4p" path="res://Assets/Animations/Enemies/22蠹虫/move_back_04.png" id="77_5dmrf"]
+[ext_resource type="Texture2D" uid="uid://bs5pyur25u176" path="res://Assets/Animations/Enemies/22蠹虫/move_back_05.png" id="78_mrq06"]
+[ext_resource type="Texture2D" uid="uid://dodjcvhhg4q28" path="res://Assets/Animations/Enemies/22蠹虫/move_back_06.png" id="79_qqq4j"]
+[ext_resource type="Texture2D" uid="uid://cc834qxscd0vp" path="res://Assets/Animations/Enemies/22蠹虫/move_back_07.png" id="80_peshw"]
+[ext_resource type="Texture2D" uid="uid://dgj6wue7chu61" path="res://Assets/Animations/Enemies/22蠹虫/move_back_08.png" id="81_nimeh"]
+[ext_resource type="Texture2D" uid="uid://bhvuc576beigq" path="res://Assets/Animations/Enemies/22蠹虫/move_back_09.png" id="82_6jjk6"]
+[ext_resource type="Texture2D" uid="uid://yg847150ys11" path="res://Assets/Animations/Enemies/22蠹虫/move_back_10.png" id="83_60s03"]
+[ext_resource type="Texture2D" uid="uid://b1a5mjx01n7u" path="res://Assets/Animations/Enemies/22蠹虫/move_back_11.png" id="84_o663e"]
+[ext_resource type="Texture2D" uid="uid://qmhqslom0ue2" path="res://Assets/Animations/Enemies/22蠹虫/move_front_00.png" id="85_pcgt8"]
+[ext_resource type="Texture2D" uid="uid://dv0bhdq121hh3" path="res://Assets/Animations/Enemies/22蠹虫/move_front_01.png" id="86_id73u"]
+[ext_resource type="Texture2D" uid="uid://du215qybvysjk" path="res://Assets/Animations/Enemies/22蠹虫/move_front_02.png" id="87_tkk6e"]
+[ext_resource type="Texture2D" uid="uid://yjatsaxut2rw" path="res://Assets/Animations/Enemies/22蠹虫/move_front_03.png" id="88_bss7k"]
+[ext_resource type="Texture2D" uid="uid://dwuuvwl8tgkab" path="res://Assets/Animations/Enemies/22蠹虫/move_front_04.png" id="89_kxxhg"]
+[ext_resource type="Texture2D" uid="uid://dlpxl84y0jho" path="res://Assets/Animations/Enemies/22蠹虫/move_front_05.png" id="90_eedm8"]
+[ext_resource type="Texture2D" uid="uid://ctrba0q20c3qq" path="res://Assets/Animations/Enemies/22蠹虫/move_front_06.png" id="91_tju85"]
+[ext_resource type="Texture2D" uid="uid://duq4k3l4568pd" path="res://Assets/Animations/Enemies/22蠹虫/move_front_07.png" id="92_m0ttf"]
+[ext_resource type="Texture2D" uid="uid://cbdnj14ocoiv2" path="res://Assets/Animations/Enemies/22蠹虫/move_front_08.png" id="93_0vx6f"]
+[ext_resource type="Texture2D" uid="uid://1nkg4osswr4i" path="res://Assets/Animations/Enemies/22蠹虫/move_front_09.png" id="94_8qntm"]
+[ext_resource type="Texture2D" uid="uid://dnqolc4jfql3q" path="res://Assets/Animations/Enemies/22蠹虫/move_front_10.png" id="95_ygfyh"]
+[ext_resource type="Texture2D" uid="uid://dpdh8gnb3v6qu" path="res://Assets/Animations/Enemies/22蠹虫/move_front_11.png" id="96_n648d"]
+[ext_resource type="Texture2D" uid="uid://b7ou5in2t1p5f" path="res://Assets/Animations/Enemies/22蠹虫/move_normal_00.png" id="97_8g4od"]
+[ext_resource type="Texture2D" uid="uid://cqhdu7ko0ffv" path="res://Assets/Animations/Enemies/22蠹虫/move_normal_01.png" id="98_4jup6"]
+[ext_resource type="Texture2D" uid="uid://dljfukfjt53j4" path="res://Assets/Animations/Enemies/22蠹虫/move_normal_02.png" id="99_4iq8u"]
+[ext_resource type="Texture2D" uid="uid://mr8f3ptuyk3g" path="res://Assets/Animations/Enemies/22蠹虫/move_normal_03.png" id="100_phooj"]
+[ext_resource type="Texture2D" uid="uid://murltkyx7r1t" path="res://Assets/Animations/Enemies/22蠹虫/move_normal_04.png" id="101_b66mc"]
+[ext_resource type="Texture2D" uid="uid://by1m1dsskqdvw" path="res://Assets/Animations/Enemies/22蠹虫/move_normal_05.png" id="102_f25l8"]
+[ext_resource type="Texture2D" uid="uid://blg17ilwvqe2a" path="res://Assets/Animations/Enemies/22蠹虫/move_normal_06.png" id="103_y31cx"]
+[ext_resource type="Texture2D" uid="uid://tbv454esc7mf" path="res://Assets/Animations/Enemies/22蠹虫/move_normal_07.png" id="104_woyi6"]
+[ext_resource type="Texture2D" uid="uid://h5qhxd0rwlbi" path="res://Assets/Animations/Enemies/22蠹虫/move_normal_08.png" id="105_6uicv"]
+[ext_resource type="Texture2D" uid="uid://d3fa1yhnpebcf" path="res://Assets/Animations/Enemies/22蠹虫/move_normal_09.png" id="106_8esmk"]
+[ext_resource type="Texture2D" uid="uid://dj4g7mh7wlyxv" path="res://Assets/Animations/Enemies/22蠹虫/move_normal_10.png" id="107_8twpn"]
+[ext_resource type="Texture2D" uid="uid://b754axa6d5vo1" path="res://Assets/Animations/Enemies/22蠹虫/move_normal_11.png" id="108_n24uo"]
+
+[sub_resource type="Resource" id="Resource_qpndm"]
+script = ExtResource("2_c8d6b")
+health = 50
+dodge_rate = 0.0
+near_damage_low = 6
+near_damage_high = 10
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.0
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 1.2
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s7h3f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_htdav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6walb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_h5m1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_gr00t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_geymf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ab1xi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_nou3t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_tuajr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_5uhxh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_cl71k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_yrq3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_5eicy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_4av8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_2602b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_k37sm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_meiud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_yi5r6")
+}],
+"loop": false,
+"name": &"appear",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_tiihj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0tu4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_k5xxe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_odkgy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_dbrrf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_g68y8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_boju2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_12h1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_3q18h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_n7i5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_yxfhu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_l23s1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_mpohc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_5s58a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_fggvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_6v3eg")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_actoj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_sqtam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_0rehb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_cxp3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_sx3sp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_tbc18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_jicoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_1jms7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_t4vkg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_ltfhq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_7bde2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_bi2n6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_fgdcb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_gkhdo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_lbrep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_g5h8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_2kbno")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_xi0he")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_4v4nw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_vyarx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_hbvfd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_t75fj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_ptkja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_n34n4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_p3r86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_475p7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_ed74a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_38luv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_hxmss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_yoppv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_gosjk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_854wk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_r2kyx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_a65c3")
+}],
+"loop": false,
+"name": &"call",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("57_vpve5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_16cai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_wdp8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_l1une")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_7t0x3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_ocona")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_j7tb1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_uwhf1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_1left")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_a2jsl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_n5f7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_1gi7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_f1nqx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_0lnda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_u4fua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_1x64y")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_tiihj")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("73_fudb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_3xttm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_mx7rp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_5inx0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_5dmrf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_mrq06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_qqq4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_peshw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_nimeh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_6jjk6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_60s03")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_o663e")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("85_pcgt8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_id73u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_tkk6e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_bss7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_kxxhg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_eedm8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_tju85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_m0ttf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_0vx6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_8qntm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_ygfyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_n648d")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("97_8g4od")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_4jup6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_4iq8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_phooj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_b66mc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_f25l8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_y31cx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_woyi6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_6uicv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_8esmk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_8twpn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_n24uo")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 24.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n7agh"]
+size = Vector2(130, 47.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5wurl"]
+radius = 5.0
+
+[node name="Enemy22" groups=["desert"] instance=ExtResource("1_5y2vy")]
+script = ExtResource("2_npygt")
+enemy_name = "蠹虫"
+enemy_id = 22
+enemy_texture = ExtResource("3_j1iud")
+start_data = SubResource("Resource_qpndm")
+bounty = 6
+die_audio_stream_list = Array[AudioStream]([ExtResource("2_armsx"), ExtResource("3_jdavo")])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(0, -30)
+scale = Vector2(-5, 5)
+sprite_frames = SubResource("SpriteFrames_s7h3f")
+animation = &"appear"
+autoplay = "idle"
+
+[node name="BodyCollision" parent="UnitBody" index="1"]
+position = Vector2(0, -21.25)
+shape = SubResource("RectangleShape2D_n7agh")
+
+[node name="HurtBox" parent="UnitBody" index="2"]
+position = Vector2(0, -35)
+scale = Vector2(4.95309, 4.95309)
+
+[node name="SelectSprite" parent="UnitBody" index="3"]
+position = Vector2(0, 5)
+scale = Vector2(6.48977, 6.48977)
+
+[node name="EnemyButton" parent="UnitBody" index="4"]
+offset_left = -78.0
+offset_top = -65.0
+offset_right = 80.0
+
+[node name="HealthBar" parent="UnitBody" index="5"]
+offset_left = -90.0
+offset_top = -95.0
+offset_right = 210.0
+offset_bottom = -86.0
+scale = Vector2(0.6, 1.881)
+
+[node name="AppearAudioComponent" parent="." index="5" instance=ExtResource("6_jojed")]
+appear_audio_list = Array[AudioStream]([ExtResource("7_wo156"), ExtResource("8_jnuq3"), ExtResource("9_4kxk4"), ExtResource("10_cd4m5")])
+
+[node name="SummonArea1" type="Area2D" parent="." index="6"]
+position = Vector2(-50, 0)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SummonArea1" index="0"]
+shape = SubResource("CircleShape2D_5wurl")
+
+[node name="SummonArea2" type="Area2D" parent="." index="7"]
+position = Vector2(0, -24)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SummonArea2" index="0"]
+shape = SubResource("CircleShape2D_5wurl")
+
+[node name="SummonArea3" type="Area2D" parent="." index="8"]
+position = Vector2(0, 24)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SummonArea3" index="0"]
+shape = SubResource("CircleShape2D_5wurl")
+
+[node name="CallAudio" type="AudioStreamPlayer" parent="." index="9"]
+stream = ExtResource("8_jnuq3")
+volume_db = 6.0
+bus = &"Sound"
+
+[node name="CallTimer" type="Timer" parent="." index="10"]
+wait_time = 12.0
+one_shot = true
+
+[node name="BattleTimer" type="Timer" parent="." index="11"]
+wait_time = 2.0
+one_shot = true
+
+[node name="DirtTimer" type="Timer" parent="." index="12"]
+wait_time = 0.4
+autostart = true
+
+[connection signal="timeout" from="DirtTimer" to="." method="_on_dirt_timer_timeout"]

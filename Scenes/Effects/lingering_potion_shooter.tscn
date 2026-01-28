@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://32u5i6wwhrqy"]
+
+[ext_resource type="Script" path="res://Scripts/Effects/lingering_potion_shooter.gd" id="1_sle41"]
+
+[node name="LingeringPotionShooter" type="Node2D"]
+script = ExtResource("1_sle41")
+
+[node name="DuringTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="ShootingTimer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[connection signal="timeout" from="DuringTimer" to="." method="_on_during_timer_timeout"]
+[connection signal="timeout" from="ShootingTimer" to="." method="_on_shooting_timer_timeout"]

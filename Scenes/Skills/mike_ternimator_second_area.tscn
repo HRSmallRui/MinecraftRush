@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://56txiathmqbt"]
+
+[ext_resource type="Script" path="res://Scripts/Skills/mike_ternimator_second_area.gd" id="1_v2vlw"]
+[ext_resource type="Texture2D" uid="uid://fdl34csjxid" path="res://Assets/Images/Effects/skeleton_seckill_effect.png" id="2_0yo7e"]
+[ext_resource type="AudioStream" uid="uid://fbwpwvsu6gr3" path="res://Assets/Sounds/FXs/Heroes/Mike/二段爆炸预备.wav" id="3_0fsoy"]
+[ext_resource type="Texture2D" uid="uid://bd674kbilvbyt" path="res://Assets/Images/Effects/bomb.png" id="4_gntbf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g1u3p"]
+radius = 73.9444
+
+[node name="MikeTernimatorSecondArea" type="Area2D"]
+collision_layer = 0
+collision_mask = 96
+script = ExtResource("1_v2vlw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2.8, 1.96)
+shape = SubResource("CircleShape2D_g1u3p")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="PrepareEffect" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_0yo7e")
+offset = Vector2(-3, -2)
+region_rect = Rect2(10, 7, 143, 143)
+
+[node name="二段爆炸预备" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_0fsoy")
+autoplay = true
+bus = &"Sound"
+
+[node name="Bomb" type="Sprite2D" parent="."]
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_gntbf")
+offset = Vector2(0, -120)

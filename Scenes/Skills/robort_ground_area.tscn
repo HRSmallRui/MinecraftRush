@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://o3wi2fhxerj2"]
+
+[ext_resource type="Script" path="res://Scripts/Skills/robort_ground_area.gd" id="1_rfqs6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sv3hw"]
+radius = 73.9444
+
+[node name="RobortGroundArea" type="Area2D"]
+collision_layer = 0
+collision_mask = 32
+script = ExtResource("1_rfqs6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.4, 0.28)
+shape = SubResource("CircleShape2D_sv3hw")
+debug_color = Color(1, 1, 0, 0.0901961)

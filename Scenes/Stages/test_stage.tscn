@@ -1,0 +1,111 @@
+[gd_scene load_steps=28 format=3 uid="uid://da4lytboufd7w"]
+
+[ext_resource type="PackedScene" uid="uid://05u6aueicvo4" path="res://Scenes/Classes/stage_class.tscn" id="1_u8pld"]
+[ext_resource type="PackedScene" uid="uid://d0sta1lv6shgl" path="res://Scenes/DefenceTowers/defence_tower_based.tscn" id="2_vnq7o"]
+[ext_resource type="PackedScene" uid="uid://cihuaqvavsqr6" path="res://Scenes/DefenceTowers/ArcherTowers/archer_tower_lv_1.tscn" id="3_0ca04"]
+[ext_resource type="PackedScene" uid="uid://bkpfd76t0e12h" path="res://Scenes/DefenceTowers/ArcherTowers/archer_tower_lv_2.tscn" id="4_ttr54"]
+[ext_resource type="PackedScene" uid="uid://ckalmxt0a3psf" path="res://Scenes/DefenceTowers/ArcherTowers/archer_tower_lv_3.tscn" id="5_ekoy8"]
+[ext_resource type="PackedScene" uid="uid://bkn4qk42x6rv7" path="res://Scenes/DefenceTowers/ArcherTowers/stone_tower.tscn" id="6_jec6l"]
+[ext_resource type="PackedScene" uid="uid://ckt7p5ymm5l6q" path="res://Scenes/DefenceTowers/ArcherTowers/desert_sentry_tower.tscn" id="7_8kqto"]
+[ext_resource type="PackedScene" uid="uid://dprxgaxbaogqs" path="res://Scenes/DefenceTowers/ArcherTowers/sentry_tower.tscn" id="8_v2yuo"]
+[ext_resource type="PackedScene" uid="uid://cec6w6q8hbqn" path="res://Scenes/DefenceTowers/BarrackTowers/barrack_tower_lv_1.tscn" id="9_5wm1b"]
+[ext_resource type="PackedScene" uid="uid://dio78a5bk6bew" path="res://Scenes/DefenceTowers/BarrackTowers/barrack_tower_lv_2.tscn" id="10_qx7y0"]
+[ext_resource type="PackedScene" uid="uid://1pnh7kfn41ap" path="res://Scenes/DefenceTowers/BarrackTowers/barrack_tower_lv_3.tscn" id="11_dk4kh"]
+[ext_resource type="PackedScene" uid="uid://crg611gp4jrmu" path="res://Scenes/DefenceTowers/BarrackTowers/royal_guard_palace.tscn" id="12_omohh"]
+[ext_resource type="PackedScene" uid="uid://c7i3opa0qaht" path="res://Scenes/DefenceTowers/BarrackTowers/epee_church.tscn" id="13_n461x"]
+[ext_resource type="PackedScene" uid="uid://dfdhxd82psfih" path="res://Scenes/DefenceTowers/BarrackTowers/medical_guard_camp.tscn" id="14_mng83"]
+[ext_resource type="PackedScene" uid="uid://151tinwk4q18" path="res://Scenes/DefenceTowers/MagicTower/magic_tower_lv_1.tscn" id="15_68fj4"]
+[ext_resource type="PackedScene" uid="uid://cic45tgv6fcu5" path="res://Scenes/DefenceTowers/MagicTower/magic_tower_lv_2.tscn" id="16_mromt"]
+[ext_resource type="PackedScene" uid="uid://sch1554hjo2k" path="res://Scenes/DefenceTowers/MagicTower/magic_tower_lv_3.tscn" id="17_vif1p"]
+[ext_resource type="PackedScene" uid="uid://ldkqtfh72mey" path="res://Scenes/DefenceTowers/MagicTower/alchemist_tower.tscn" id="18_hkhrx"]
+[ext_resource type="PackedScene" uid="uid://b80evc1oc2kvb" path="res://Scenes/DefenceTowers/MagicTower/protector_church.tscn" id="19_qfqan"]
+[ext_resource type="PackedScene" uid="uid://b11hmbmp1qw1e" path="res://Scenes/DefenceTowers/MagicTower/witch_tower.tscn" id="20_7vl6i"]
+[ext_resource type="PackedScene" uid="uid://d2sc2xs8byd27" path="res://Scenes/DefenceTowers/BombardTowers/bombard_tower_lv_1.tscn" id="21_dsh8m"]
+[ext_resource type="PackedScene" uid="uid://68jse87rauc4" path="res://Scenes/DefenceTowers/BombardTowers/bombard_tower_lv_2.tscn" id="22_2gugp"]
+[ext_resource type="PackedScene" uid="uid://c33dgnqhjm0sl" path="res://Scenes/DefenceTowers/BombardTowers/bombard_tower_lv_3.tscn" id="23_y2h5q"]
+[ext_resource type="PackedScene" uid="uid://b8eus3obad3v1" path="res://Scenes/DefenceTowers/BombardTowers/operator_turret.tscn" id="24_uk2f8"]
+[ext_resource type="PackedScene" uid="uid://qc61padocjhr" path="res://Scenes/DefenceTowers/BombardTowers/nuclear_turret.tscn" id="25_cj2es"]
+[ext_resource type="PackedScene" uid="uid://b6semrq10485e" path="res://Scenes/DefenceTowers/BombardTowers/stone_machine.tscn" id="26_ivlwx"]
+[ext_resource type="PackedScene" uid="uid://ss3u6uxsf6j0" path="res://Scenes/DefenceTowers/defence_tower_lv_0.tscn" id="27_sppdt"]
+
+[node name="TestStage" instance=ExtResource("1_u8pld")]
+stage_count = 20
+current_money = 1000
+
+[node name="DefenceTowerBased" parent="Towers" index="0" instance=ExtResource("2_vnq7o")]
+position = Vector2(1747, 141)
+
+[node name="ArcherTowerLV1" parent="Towers" index="1" instance=ExtResource("3_0ca04")]
+position = Vector2(163, 195)
+
+[node name="ArcherTowerLV2" parent="Towers" index="2" instance=ExtResource("4_ttr54")]
+position = Vector2(168, 307)
+
+[node name="ArcherTowerLV3" parent="Towers" index="3" instance=ExtResource("5_ekoy8")]
+position = Vector2(168, 409)
+
+[node name="StoneTower" parent="Towers" index="4" instance=ExtResource("6_jec6l")]
+position = Vector2(166, 527)
+
+[node name="DesertSentryTower" parent="Towers" index="5" instance=ExtResource("7_8kqto")]
+position = Vector2(166, 628)
+
+[node name="SentryTower" parent="Towers" index="6" instance=ExtResource("8_v2yuo")]
+position = Vector2(166, 748)
+
+[node name="BarrackTowerLV1" parent="Towers" index="7" instance=ExtResource("9_5wm1b")]
+position = Vector2(492, 194)
+
+[node name="BarrackTowerLV2" parent="Towers" index="8" instance=ExtResource("10_qx7y0")]
+position = Vector2(485, 308)
+
+[node name="BarrackTowerLV3" parent="Towers" index="9" instance=ExtResource("11_dk4kh")]
+position = Vector2(479, 428)
+
+[node name="RoyalGuardPalace" parent="Towers" index="10" instance=ExtResource("12_omohh")]
+position = Vector2(486, 547)
+
+[node name="EpeeChurch" parent="Towers" index="11" instance=ExtResource("13_n461x")]
+position = Vector2(495, 665)
+
+[node name="MedicalGuardCamp" parent="Towers" index="12" instance=ExtResource("14_mng83")]
+position = Vector2(488, 763)
+
+[node name="MagicTowerLV1" parent="Towers" index="13" instance=ExtResource("15_68fj4")]
+position = Vector2(877, 171)
+
+[node name="MagicTowerLV2" parent="Towers" index="14" instance=ExtResource("16_mromt")]
+position = Vector2(877, 290)
+
+[node name="MagicTowerLV3" parent="Towers" index="15" instance=ExtResource("17_vif1p")]
+position = Vector2(877, 420)
+
+[node name="AlchemistTower" parent="Towers" index="16" instance=ExtResource("18_hkhrx")]
+position = Vector2(877, 792)
+
+[node name="ProtectorChurch" parent="Towers" index="17" instance=ExtResource("19_qfqan")]
+position = Vector2(877, 543)
+
+[node name="WitchTower" parent="Towers" index="18" instance=ExtResource("20_7vl6i")]
+position = Vector2(877, 673)
+
+[node name="BombardTowerLV1" parent="Towers" index="19" instance=ExtResource("21_dsh8m")]
+position = Vector2(1310, 166)
+
+[node name="BombardTowerLV2" parent="Towers" index="20" instance=ExtResource("22_2gugp")]
+position = Vector2(1310, 293)
+
+[node name="BombardTowerLV3" parent="Towers" index="21" instance=ExtResource("23_y2h5q")]
+position = Vector2(1310, 432)
+
+[node name="OperatorTurret" parent="Towers" index="22" instance=ExtResource("24_uk2f8")]
+position = Vector2(1310, 580)
+
+[node name="NuclearTurret" parent="Towers" index="23" instance=ExtResource("25_cj2es")]
+position = Vector2(1310, 703)
+
+[node name="StoneMachine" parent="Towers" index="24" instance=ExtResource("26_ivlwx")]
+position = Vector2(1310, 819)
+
+[node name="DefenceTowerLV0" parent="Towers" index="25" instance=ExtResource("27_sppdt")]
+position = Vector2(1725, 323)

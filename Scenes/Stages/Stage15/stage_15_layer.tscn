@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhp8o34tjylg6"]
+
+[ext_resource type="PackedScene" uid="uid://i2ikd0xvj08u" path="res://Scenes/StageComponents/rain_layer.tscn" id="1_o54am"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8xiua"]
+size = Vector2(2169, 1376)
+
+[node name="Stage15Layer" instance=ExtResource("1_o54am")]
+
+[node name="RainLayer" parent="." index="0"]
+start_rain_step = 4
+
+[node name="CollisionShape2D" parent="HitArea" index="0"]
+shape = SubResource("RectangleShape2D_8xiua")

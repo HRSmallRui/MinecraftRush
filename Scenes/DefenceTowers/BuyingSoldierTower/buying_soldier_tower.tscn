@@ -1,0 +1,109 @@
+[gd_scene load_steps=9 format=3 uid="uid://bt1fb5p0tpyur"]
+
+[ext_resource type="PackedScene" uid="uid://b1245qux56fh4" path="res://Scenes/Classes/defence_tower_class.tscn" id="1_qi5cs"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/BuyingSoldierTower/buying_soldier_tower.gd" id="2_ns53p"]
+[ext_resource type="Texture2D" uid="uid://di244pjtyyl2a" path="res://Assets/Images/DefenceTowers/UI/flag_button.png" id="3_53fm1"]
+[ext_resource type="Texture2D" uid="uid://bo4q5wo18lqp1" path="res://Assets/Images/DefenceTowers/Based/royal-build.png" id="3_re1oa"]
+[ext_resource type="Texture2D" uid="uid://7xl2wnc5nk41" path="res://Assets/Images/DefenceTowers/UI/flag_button_select.png" id="4_aafc6"]
+[ext_resource type="Texture2D" uid="uid://c5ux4kta4lhxy" path="res://Assets/Images/DefenceTowers/Based/royal-build-select.png" id="4_pvbuw"]
+[ext_resource type="Texture2D" uid="uid://fg1y0i3ubnh4" path="res://Assets/Images/DefenceTowers/UI/集结范围.png" id="5_x7y8c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73y5n"]
+atlas = ExtResource("3_53fm1")
+region = Rect2(17, 18, 62, 61)
+
+[node name="BuyingSoldierTower" node_paths=PackedStringArray("buying_soldier_list") instance=ExtResource("1_qi5cs")]
+script = ExtResource("2_ns53p")
+tower_intro = ""
+soldier_count_limit = 0
+buying_soldier_list = []
+tower_type = 1
+start_tower_range = 300
+
+[node name="BasedSprite" parent="Based" index="0"]
+texture = ExtResource("3_re1oa")
+
+[node name="BasedSpriteSelect" parent="Based" index="1"]
+texture = ExtResource("4_pvbuw")
+
+[node name="Sprite2D" parent="TowerUI/TowerRange" index="0"]
+visible = false
+
+[node name="RangeSprite" parent="TowerUI/UpgradeRange" index="0"]
+visible = false
+
+[node name="SellButton" parent="TowerUI/Circle" index="0"]
+visible = false
+
+[node name="FlagButton" type="TextureButton" parent="TowerUI/Circle" index="1"]
+offset_left = 68.7501
+offset_top = 14.9997
+offset_right = 130.75
+offset_bottom = 75.9997
+focus_mode = 0
+texture_normal = SubResource("AtlasTexture_73y5n")
+texture_pressed = SubResource("AtlasTexture_73y5n")
+texture_hover = ExtResource("4_aafc6")
+stretch_mode = 3
+
+[node name="TowerArea" parent="." index="6"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="TowerArea" index="1"]
+scale = Vector2(0.383358, 0.268351)
+texture = ExtResource("5_x7y8c")
+
+[node name="FirstMoveRays" type="Node2D" parent="." index="7"]
+scale = Vector2(2.8, 2.8)
+
+[node name="RayCast2D" type="RayCast2D" parent="FirstMoveRays" index="0"]
+process_mode = 3
+target_position = Vector2(0, 52)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D2" type="RayCast2D" parent="FirstMoveRays" index="1"]
+process_mode = 3
+target_position = Vector2(54, 35)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D3" type="RayCast2D" parent="FirstMoveRays" index="2"]
+process_mode = 3
+target_position = Vector2(75, 0)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D4" type="RayCast2D" parent="FirstMoveRays" index="3"]
+process_mode = 3
+target_position = Vector2(54, -35)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D5" type="RayCast2D" parent="FirstMoveRays" index="4"]
+process_mode = 3
+target_position = Vector2(0, -52)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D6" type="RayCast2D" parent="FirstMoveRays" index="5"]
+process_mode = 3
+target_position = Vector2(-54, -35)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D7" type="RayCast2D" parent="FirstMoveRays" index="6"]
+process_mode = 3
+target_position = Vector2(-75, 0)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D8" type="RayCast2D" parent="FirstMoveRays" index="7"]
+process_mode = 3
+target_position = Vector2(-54, 35)
+collide_with_areas = true
+collide_with_bodies = false
+
+[connection signal="pressed" from="TowerUI/Circle/FlagButton" to="." method="_on_flag_button_pressed"]
+[connection signal="input_event" from="TowerArea" to="." method="_on_tower_area_input_event"]

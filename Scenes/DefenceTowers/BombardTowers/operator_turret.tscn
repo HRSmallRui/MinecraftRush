@@ -1,0 +1,543 @@
+[gd_scene load_steps=75 format=3 uid="uid://b8eus3obad3v1"]
+
+[ext_resource type="PackedScene" uid="uid://bbhe3d6c7dhtc" path="res://Scenes/DefenceTowers/BombardTowers/bombard_tower.tscn" id="1_gf2gn"]
+[ext_resource type="Texture2D" uid="uid://b5f55cp3lgk6x" path="res://Assets/Images/UI/InformationBar/bombard-id-4.png" id="2_nv6wh"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/BombardTowers/operator_turret.gd" id="2_o82kb"]
+[ext_resource type="Script" path="res://Scripts/Datas/TowerData.gd" id="2_r4xg1"]
+[ext_resource type="PackedScene" uid="uid://cjpn07gcbekr1" path="res://Scenes/DefenceTowers/tower_skill_button.tscn" id="4_inv6x"]
+[ext_resource type="Texture2D" uid="uid://hh3pyt0mh3kr" path="res://Assets/Images/DefenceTowers/Bombards/UI/天谴.png" id="5_1cq53"]
+[ext_resource type="Texture2D" uid="uid://b6vtceomhv5i4" path="res://Assets/Images/DefenceTowers/Bombards/Towers/LV4-1/based.png" id="5_j0j0w"]
+[ext_resource type="Texture2D" uid="uid://8mu3j1yahpb8" path="res://Assets/Images/DefenceTowers/Bombards/UI/天谴select.png" id="6_bem7w"]
+[ext_resource type="Texture2D" uid="uid://bpmg4tj8rpevk" path="res://Assets/Images/DefenceTowers/Bombards/Towers/LV4-1/front_mask.png" id="6_v1dmq"]
+[ext_resource type="Texture2D" uid="uid://2580hgpf7gxn" path="res://Assets/Images/DefenceTowers/Bombards/UI/天谴no.png" id="7_naij4"]
+[ext_resource type="Texture2D" uid="uid://cgltmjpt2toaj" path="res://Assets/Images/DefenceTowers/Bombards/Towers/LV4-1/mask.png" id="7_sroxh"]
+[ext_resource type="Texture2D" uid="uid://dy7vdykbfx458" path="res://Assets/Images/DefenceTowers/Bombards/UI/演算者机甲.png" id="8_ypuig"]
+[ext_resource type="Texture2D" uid="uid://cc7ivoo8ciooc" path="res://Assets/Images/DefenceTowers/Bombards/UI/演算者机甲select.png" id="9_2u26f"]
+[ext_resource type="Texture2D" uid="uid://fpb0x3ynhrrc" path="res://Assets/Images/DefenceTowers/Bombards/UI/演算者机甲no.png" id="10_mxxoq"]
+[ext_resource type="Texture2D" uid="uid://di244pjtyyl2a" path="res://Assets/Images/DefenceTowers/UI/flag_button.png" id="11_axgy2"]
+[ext_resource type="Texture2D" uid="uid://7xl2wnc5nk41" path="res://Assets/Images/DefenceTowers/UI/flag_button_select.png" id="12_3h3ne"]
+[ext_resource type="Texture2D" uid="uid://dh00obtr35ppy" path="res://Assets/Animations/Bombards/LV4-1/Attacker/attackground0001.png" id="15_rox0q"]
+[ext_resource type="Texture2D" uid="uid://fg1y0i3ubnh4" path="res://Assets/Images/DefenceTowers/UI/集结范围.png" id="16_im4ea"]
+[ext_resource type="Texture2D" uid="uid://cvv0uetg5uuwx" path="res://Assets/Animations/Bombards/LV4-1/Attacker/attackground-back0001.png" id="16_serso"]
+[ext_resource type="Texture2D" uid="uid://bfqb6qewtttnh" path="res://Assets/Animations/Bombards/LV4-1/Attacker/attackground-back0002.png" id="17_4cqhl"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/BombardTowers/attacker.gd" id="17_nd0g7"]
+[ext_resource type="Texture2D" uid="uid://ciqq6m2hkwu3m" path="res://Assets/Animations/Bombards/LV4-1/Attacker/attackground-back0003.png" id="18_6yx3k"]
+[ext_resource type="Texture2D" uid="uid://cp7r015qhs3kv" path="res://Assets/Animations/Bombards/LV4-1/Attacker/attackground-back0004.png" id="19_q7ssp"]
+[ext_resource type="Texture2D" uid="uid://o4fb0s204da4" path="res://Assets/Animations/Bombards/LV4-1/Attacker/attackground-back0005.png" id="20_5f8wd"]
+[ext_resource type="Texture2D" uid="uid://btj7itm1547ks" path="res://Assets/Animations/Bombards/LV4-1/Attacker/attackground-back0006.png" id="21_ck1qq"]
+[ext_resource type="Texture2D" uid="uid://do7jrh2qj5dqo" path="res://Assets/Animations/Bombards/LV4-1/Attacker/attackground-back0007.png" id="22_eakhf"]
+[ext_resource type="Texture2D" uid="uid://ctihr75krv1dt" path="res://Assets/Animations/Bombards/LV4-1/Attacker/attackground-back0008.png" id="23_8p5kl"]
+[ext_resource type="Texture2D" uid="uid://dqxl1im0e1qhk" path="res://Assets/Animations/Bombards/LV4-1/Attacker/attackground-back0009.png" id="24_u48a5"]
+[ext_resource type="Texture2D" uid="uid://ceice48pqlh54" path="res://Assets/Animations/Bombards/LV4-1/Attacker/attackground-back0010.png" id="25_ae7p5"]
+[ext_resource type="Texture2D" uid="uid://472owbvtx567" path="res://Assets/Animations/Bombards/LV4-1/Attacker/attackground-back0011.png" id="26_swomd"]
+[ext_resource type="Texture2D" uid="uid://e3melxhf7dxy" path="res://Assets/Animations/Bombards/LV4-1/Attacker/attackground-back0012.png" id="27_bytx6"]
+[ext_resource type="Texture2D" uid="uid://orm53v4jhsun" path="res://Assets/Animations/Bombards/LV4-1/Attacker/attackground0002.png" id="28_f78b7"]
+[ext_resource type="Texture2D" uid="uid://bl5g8vd5ta70v" path="res://Assets/Animations/Bombards/LV4-1/Attacker/attackground0003.png" id="29_or248"]
+[ext_resource type="Texture2D" uid="uid://ckbm4htm70530" path="res://Assets/Animations/Bombards/LV4-1/Attacker/attackground0004.png" id="30_mthn6"]
+[ext_resource type="Texture2D" uid="uid://b4jqsk10eqh2l" path="res://Assets/Animations/Bombards/LV4-1/Attacker/attackground0005.png" id="31_ethcl"]
+[ext_resource type="Texture2D" uid="uid://dumkchb5w2tja" path="res://Assets/Animations/Bombards/LV4-1/Attacker/attackground0006.png" id="32_4p8tx"]
+[ext_resource type="Texture2D" uid="uid://cnkkg1athv1u1" path="res://Assets/Animations/Bombards/LV4-1/Attacker/attackground0007.png" id="33_h0qe6"]
+[ext_resource type="Texture2D" uid="uid://d14cy7x67cbic" path="res://Assets/Animations/Bombards/LV4-1/Attacker/attackground0008.png" id="34_8yod7"]
+[ext_resource type="Texture2D" uid="uid://cg2cwii0155jn" path="res://Assets/Animations/Bombards/LV4-1/Attacker/attackground0009.png" id="35_jf1y8"]
+[ext_resource type="Texture2D" uid="uid://daqslo6d5lxyy" path="res://Assets/Animations/Bombards/LV4-1/Attacker/attackground0010.png" id="36_v55ho"]
+[ext_resource type="Texture2D" uid="uid://b6keji8fytjr8" path="res://Assets/Animations/Bombards/LV4-1/Attacker/attackground0011.png" id="37_k0gdg"]
+[ext_resource type="Texture2D" uid="uid://b6mx64feibdlu" path="res://Assets/Animations/Bombards/LV4-1/Attacker/attackground0012.png" id="38_x1ijl"]
+[ext_resource type="Texture2D" uid="uid://ddqo038y6p00h" path="res://Assets/Animations/Bombards/LV4-1/Watcher/idle.png" id="40_indnr"]
+[ext_resource type="PackedScene" uid="uid://d2yx55dgabof" path="res://Scenes/Bullets/energy_ball.tscn" id="40_mp75p"]
+[ext_resource type="Texture2D" uid="uid://qk71f1ewfhdh" path="res://Assets/Animations/Bombards/LV4-1/Watcher/lightning0001.png" id="41_7hrc0"]
+[ext_resource type="AudioStream" uid="uid://cdwi7aoe3lqdb" path="res://Assets/Sounds/FXs/DefenceTowers/OperatorTurret/演算者发射.mp3" id="41_cwmeg"]
+[ext_resource type="Texture2D" uid="uid://cwxbu7jhuxuu2" path="res://Assets/Animations/Bombards/LV4-1/Watcher/lightning0002.png" id="42_yl866"]
+[ext_resource type="Texture2D" uid="uid://bbhmt46hc6g0q" path="res://Assets/Animations/Bombards/LV4-1/Watcher/lightning0003.png" id="43_c7j7f"]
+[ext_resource type="Texture2D" uid="uid://7j6aqm1popam" path="res://Assets/Animations/Bombards/LV4-1/Watcher/lightning0004.png" id="44_bmke2"]
+[ext_resource type="Texture2D" uid="uid://b4jgmbnir7j2v" path="res://Assets/Animations/Bombards/LV4-1/Watcher/lightning0005.png" id="45_dc152"]
+[ext_resource type="Texture2D" uid="uid://b0p7psssgjm3p" path="res://Assets/Animations/Bombards/LV4-1/Watcher/lightning0006.png" id="46_endfo"]
+[ext_resource type="Texture2D" uid="uid://dlcm7ki4lu3uw" path="res://Assets/Animations/Bombards/LV4-1/Watcher/lightning0007.png" id="47_ifm71"]
+[ext_resource type="Texture2D" uid="uid://d3hhvyu1byr1b" path="res://Assets/Animations/Bombards/LV4-1/Watcher/lightning0008.png" id="48_jtbcl"]
+[ext_resource type="Texture2D" uid="uid://byct28b2am1no" path="res://Assets/Animations/Bombards/LV4-1/Watcher/lightning0009.png" id="49_0stbg"]
+[ext_resource type="Texture2D" uid="uid://cqdjfet7dw1tb" path="res://Assets/Animations/Bombards/LV4-1/Watcher/lightning0010.png" id="50_cxfo0"]
+[ext_resource type="Texture2D" uid="uid://kh67qa8j4670" path="res://Assets/Animations/Bombards/LV4-1/Watcher/lightning0011.png" id="51_nebrp"]
+[ext_resource type="Texture2D" uid="uid://cbht83nn2xrn4" path="res://Assets/Animations/Bombards/LV4-1/Watcher/lightning0012.png" id="52_egwsc"]
+[ext_resource type="Texture2D" uid="uid://c4chq6fksm2hb" path="res://Assets/Animations/Bombards/LV4-1/Watcher/lightning0013.png" id="53_x5a4m"]
+[ext_resource type="Texture2D" uid="uid://ce4xc8kqqc4bd" path="res://Assets/Animations/Bombards/LV4-1/Watcher/lightning0014.png" id="54_4d7p6"]
+[ext_resource type="Texture2D" uid="uid://dmcnr0b5msbu4" path="res://Assets/Animations/Bombards/LV4-1/Watcher/lightning0015.png" id="55_61nfu"]
+[ext_resource type="AudioStream" uid="uid://cktfio3jxgf45" path="res://Assets/Sounds/FXs/DefenceTowers/OperatorTurret/观察者.wav" id="58_a83rf"]
+[ext_resource type="Texture2D" uid="uid://dfpfiw6k8ojg5" path="res://Assets/Images/DefenceTowers/Bombards/Towers/LV4-1/lightning.png" id="58_irpjf"]
+
+[sub_resource type="Resource" id="Resource_e2pca"]
+script = ExtResource("2_r4xg1")
+damage_low = 25
+damage_high = 36
+attack_speed = 1.5
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mg31k"]
+atlas = ExtResource("5_1cq53")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20cnl"]
+atlas = ExtResource("7_naij4")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ooj4t"]
+atlas = ExtResource("8_ypuig")
+region = Rect2(6, 5, 85, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4prab"]
+atlas = ExtResource("10_mxxoq")
+region = Rect2(6, 5, 85, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufo3d"]
+atlas = ExtResource("11_axgy2")
+region = Rect2(17, 18, 62, 61)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0oi8l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_rox0q")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_serso")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_4cqhl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_6yx3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_q7ssp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_5f8wd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ck1qq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_eakhf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_8p5kl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_u48a5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ae7p5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_swomd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_bytx6")
+}],
+"loop": false,
+"name": &"shoot_back",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_rox0q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_f78b7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_or248")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_mthn6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_ethcl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_4p8tx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_h0qe6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_8yod7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_jf1y8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_v55ho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_k0gdg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_x1ijl")
+}],
+"loop": false,
+"name": &"shoot_front",
+"speed": 20.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jwibr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("40_indnr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_7hrc0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_yl866")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_c7j7f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_bmke2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_dc152")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_endfo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_ifm71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_jtbcl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_0stbg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_cxfo0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_nebrp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_egwsc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_x5a4m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_4d7p6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_61nfu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_indnr")
+}],
+"loop": false,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="Animation" id="Animation_p8i15"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ShiningMask:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ShiningMask:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ShiningMask:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ShiningMask:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_acojj"]
+resource_name = "shine"
+length = 0.8
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ShiningMask:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4, 0.8)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ShiningMask:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4, 0.8)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ShiningMask:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4, 0.8)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ShiningMask:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4, 0.8)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a8x6m"]
+_data = {
+"RESET": SubResource("Animation_p8i15"),
+"shine": SubResource("Animation_acojj")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_el2k8"]
+radius = 73.9444
+
+[node name="OperatorTurret" node_paths=PackedStringArray("bombard_tower_sprite") instance=ExtResource("1_gf2gn")]
+script = ExtResource("2_o82kb")
+start_data = SubResource("Resource_e2pca")
+bombard_tower_sprite = NodePath("TowerSprite/Attacker")
+tower_name = "演算者炮塔"
+tower_texture = ExtResource("2_nv6wh")
+tower_id = 4
+tower_level = 4
+tower_value = 1040
+start_tower_range = 320
+tower_skill_levels = Array[int]([0, 0])
+
+[node name="TowerButton" parent="." index="2"]
+offset_top = -67.0
+
+[node name="Circle" parent="TowerUI" index="4"]
+position = Vector2(0, -24)
+
+[node name="TowerSkillButton" parent="TowerUI/Circle" index="1" node_paths=PackedStringArray("linked_tower") instance=ExtResource("4_inv6x")]
+offset_left = -140.001
+offset_top = -139.999
+offset_right = -55.001
+offset_bottom = -54.9993
+texture_normal = SubResource("AtlasTexture_mg31k")
+texture_pressed = SubResource("AtlasTexture_mg31k")
+texture_hover = ExtResource("6_bem7w")
+texture_disabled = SubResource("AtlasTexture_20cnl")
+linked_tower = NodePath("../../..")
+skill_name = "天谴"
+skill_prices = Array[int]([200, 150, 150])
+skill_intro = PackedStringArray("召唤闪电攻击，对小范围内所有敌人造成75点真实伤害，并眩晕敌人1秒。", "召唤闪电攻击，对小范围内所有敌人造成90点真实伤害，并眩晕敌人1.5秒。", "召唤闪电攻击，对小范围内所有敌人造成125点真实伤害，并眩晕敌人2秒。")
+skill_words = "一切皆是天意"
+
+[node name="TowerSkillButton2" parent="TowerUI/Circle" index="2" node_paths=PackedStringArray("linked_tower") instance=ExtResource("4_inv6x")]
+offset_left = 53.7494
+offset_top = -140.0
+offset_right = 138.749
+offset_bottom = -55.0002
+texture_normal = SubResource("AtlasTexture_ooj4t")
+texture_pressed = SubResource("AtlasTexture_ooj4t")
+texture_hover = ExtResource("9_2u26f")
+texture_disabled = SubResource("AtlasTexture_4prab")
+linked_tower = NodePath("../../..")
+skill_name = "演算者机甲"
+skill_id = 1
+skill_prices = Array[int]([250, 200, 200])
+skill_intro = PackedStringArray("召唤一台演算者机甲，拦截并伤害敌人。", "提高演算者机甲的最大生命，攻击力与护甲。", "进一步提高演算者机甲的最大生命，攻击力与护甲。")
+skill_words = "很快你就会变得有用"
+
+[node name="FlagButton" type="TextureButton" parent="TowerUI/Circle" index="3"]
+offset_left = 68.7501
+offset_top = 14.9997
+offset_right = 130.75
+offset_bottom = 75.9997
+focus_mode = 0
+texture_normal = SubResource("AtlasTexture_ufo3d")
+texture_pressed = SubResource("AtlasTexture_ufo3d")
+texture_hover = ExtResource("12_3h3ne")
+stretch_mode = 3
+
+[node name="TowerArea" parent="." index="6"]
+collision_mask = 96
+
+[node name="TowerSprite" type="Sprite2D" parent="." index="8"]
+position = Vector2(0, 11)
+texture = ExtResource("5_j0j0w")
+offset = Vector2(0, -60)
+
+[node name="Attacker" type="AnimatedSprite2D" parent="TowerSprite" index="0" node_paths=PackedStringArray("shining_animation_player", "watcher", "watcher_audio", "tower")]
+position = Vector2(-18, -71)
+sprite_frames = SubResource("SpriteFrames_0oi8l")
+animation = &"idle"
+autoplay = "idle"
+flip_h = true
+script = ExtResource("17_nd0g7")
+shining_animation_player = NodePath("../ShiningAnimationPlayer")
+watcher = NodePath("../Watcher")
+watcher_audio = NodePath("../Watcher/WatcherAudio")
+summon_frame = 4
+tower = NodePath("../..")
+shell_scene = ExtResource("40_mp75p")
+
+[node name="SummonMarker" type="Marker2D" parent="TowerSprite/Attacker" index="0"]
+visible = false
+position = Vector2(-0.926442, -29.6461)
+
+[node name="FrontNoFlip" type="Marker2D" parent="TowerSprite/Attacker" index="1"]
+position = Vector2(6, 2)
+
+[node name="FrontFlip" type="Marker2D" parent="TowerSprite/Attacker" index="2"]
+position = Vector2(-6, 2)
+
+[node name="BackFlip" type="Marker2D" parent="TowerSprite/Attacker" index="3"]
+position = Vector2(-6, -2.778)
+
+[node name="BackNoFlip" type="Marker2D" parent="TowerSprite/Attacker" index="4"]
+position = Vector2(6, -2.778)
+
+[node name="ShootAudio" type="AudioStreamPlayer" parent="TowerSprite/Attacker" index="5"]
+stream = ExtResource("41_cwmeg")
+volume_db = -2.0
+bus = &"Sound"
+
+[node name="Watcher" type="AnimatedSprite2D" parent="TowerSprite" index="1"]
+position = Vector2(16, -71)
+sprite_frames = SubResource("SpriteFrames_jwibr")
+
+[node name="WatcherAudio" type="AudioStreamPlayer" parent="TowerSprite/Watcher" index="0"]
+stream = ExtResource("58_a83rf")
+volume_db = -8.0
+bus = &"Sound"
+
+[node name="FrontSprite" type="Sprite2D" parent="TowerSprite" index="2"]
+position = Vector2(0, -60)
+texture = ExtResource("6_v1dmq")
+
+[node name="ShiningMask" type="Sprite2D" parent="TowerSprite" index="3"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -60)
+texture = ExtResource("7_sroxh")
+
+[node name="ShiningAnimationPlayer" type="AnimationPlayer" parent="TowerSprite" index="4"]
+libraries = {
+"": SubResource("AnimationLibrary_a8x6m")
+}
+
+[node name="LightningSprite" type="Sprite2D" parent="TowerSprite" index="5"]
+visible = false
+position = Vector2(0, -62)
+texture = ExtResource("58_irpjf")
+
+[node name="UnitMoveArea" type="Area2D" parent="." index="9"]
+z_index = 100
+scale = Vector2(3.6, 3.6)
+collision_layer = 2
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitMoveArea" index="0"]
+scale = Vector2(1, 0.7)
+shape = SubResource("CircleShape2D_el2k8")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="UnitMoveArea" index="1"]
+scale = Vector2(0.386533, 0.270573)
+texture = ExtResource("16_im4ea")
+
+[node name="FirstMoveRays" type="Node2D" parent="." index="10"]
+scale = Vector2(3.6, 3.6)
+
+[node name="RayCast2D" type="RayCast2D" parent="FirstMoveRays" index="0"]
+target_position = Vector2(0, 52)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D2" type="RayCast2D" parent="FirstMoveRays" index="1"]
+target_position = Vector2(54, 35)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D3" type="RayCast2D" parent="FirstMoveRays" index="2"]
+target_position = Vector2(75, 0)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D4" type="RayCast2D" parent="FirstMoveRays" index="3"]
+target_position = Vector2(54, -35)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D5" type="RayCast2D" parent="FirstMoveRays" index="4"]
+target_position = Vector2(0, -52)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D6" type="RayCast2D" parent="FirstMoveRays" index="5"]
+target_position = Vector2(-54, -35)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D7" type="RayCast2D" parent="FirstMoveRays" index="6"]
+target_position = Vector2(-75, 0)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D8" type="RayCast2D" parent="FirstMoveRays" index="7"]
+target_position = Vector2(-54, 35)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="Skill1Timer" type="Timer" parent="." index="11"]
+wait_time = 10.0
+one_shot = true
+
+[connection signal="animation_finished" from="TowerSprite/Attacker" to="TowerSprite/Attacker" method="_on_animation_finished"]
+[connection signal="input_event" from="UnitMoveArea" to="." method="_on_unit_move_area_input_event"]

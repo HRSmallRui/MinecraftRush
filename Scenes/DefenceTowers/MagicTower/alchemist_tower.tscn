@@ -1,0 +1,751 @@
+[gd_scene load_steps=55 format=3 uid="uid://ldkqtfh72mey"]
+
+[ext_resource type="PackedScene" uid="uid://cw6pat17gtbr3" path="res://Scenes/DefenceTowers/MagicTower/magic_tower.tscn" id="1_rayo3"]
+[ext_resource type="Script" path="res://Scripts/Datas/TowerData.gd" id="2_61efh"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/MagicTowers/alchemist_tower.gd" id="2_acey3"]
+[ext_resource type="Texture2D" uid="uid://cylocvvujfjke" path="res://Assets/Images/UI/InformationBar/magic-id-6.png" id="2_s1s7q"]
+[ext_resource type="PackedScene" uid="uid://cjpn07gcbekr1" path="res://Scenes/DefenceTowers/tower_skill_button.tscn" id="4_h0tgt"]
+[ext_resource type="Texture2D" uid="uid://bk0puxs31qyj2" path="res://Assets/Images/DefenceTowers/Magics/Towers/LV4-3/LV4-3-tower.png" id="5_8eqgd"]
+[ext_resource type="Texture2D" uid="uid://kpwo2cowmbg7" path="res://Assets/Images/DefenceTowers/Magics/UI/点金术.png" id="6_0rn2g"]
+[ext_resource type="Texture2D" uid="uid://brdiodh510ud0" path="res://Assets/Animations/Magicians/LV4-3/shoot_front_00.png" id="6_avwcj"]
+[ext_resource type="Texture2D" uid="uid://saisc3av1b7h" path="res://Assets/Animations/Magicians/LV4-3/shoot_back_00.png" id="7_bjwmi"]
+[ext_resource type="Texture2D" uid="uid://dno04hh1qevu7" path="res://Assets/Images/DefenceTowers/Magics/UI/点金术select.png" id="7_y8ia4"]
+[ext_resource type="Texture2D" uid="uid://bk70wcxo3ian0" path="res://Assets/Animations/Magicians/LV4-3/shoot_back_01.png" id="8_k1xov"]
+[ext_resource type="Texture2D" uid="uid://fmy382ar6l4e" path="res://Assets/Images/DefenceTowers/Magics/UI/点金术no.png" id="8_ofx63"]
+[ext_resource type="Texture2D" uid="uid://2qnqh7mbqx6c" path="res://Assets/Images/DefenceTowers/Magics/UI/兴奋剂.png" id="9_sc3ae"]
+[ext_resource type="Texture2D" uid="uid://dgj6vp5g4200" path="res://Assets/Animations/Magicians/LV4-3/shoot_back_02.png" id="9_sevnd"]
+[ext_resource type="Texture2D" uid="uid://djt1mlgmikk14" path="res://Assets/Animations/Magicians/LV4-3/shoot_back_03.png" id="10_anmsq"]
+[ext_resource type="Texture2D" uid="uid://dnefixnxxr7xu" path="res://Assets/Images/DefenceTowers/Magics/UI/兴奋剂select.png" id="10_jrudb"]
+[ext_resource type="Texture2D" uid="uid://b7hxsj3l7ou6c" path="res://Assets/Animations/Magicians/LV4-3/shoot_back_04.png" id="11_vpgxs"]
+[ext_resource type="Texture2D" uid="uid://b1ixtbb0mynr6" path="res://Assets/Images/DefenceTowers/Magics/UI/兴奋剂no.png" id="11_wrj10"]
+[ext_resource type="Texture2D" uid="uid://ekep4uoqd4hl" path="res://Assets/Animations/Magicians/LV4-3/shoot_back_05.png" id="12_alaux"]
+[ext_resource type="Texture2D" uid="uid://b2ibk04cv31v0" path="res://Assets/Animations/Magicians/LV4-3/shoot_back_06.png" id="13_vff1s"]
+[ext_resource type="Texture2D" uid="uid://bm3bxwb5osmln" path="res://Assets/Animations/Magicians/LV4-3/shoot_back_07.png" id="14_sckeh"]
+[ext_resource type="Texture2D" uid="uid://dt4qshto13w11" path="res://Assets/Animations/Magicians/LV4-3/shoot_back_08.png" id="15_1a3u0"]
+[ext_resource type="Texture2D" uid="uid://bflj1d8vl5sr5" path="res://Assets/Animations/Magicians/LV4-3/shoot_back_09.png" id="16_p04be"]
+[ext_resource type="Texture2D" uid="uid://dy0ls182l3t04" path="res://Assets/Animations/Magicians/LV4-3/shoot_back_10.png" id="17_e8ile"]
+[ext_resource type="Texture2D" uid="uid://b6oexygd4l6dd" path="res://Assets/Animations/Magicians/LV4-3/shoot_back_11.png" id="18_vpy52"]
+[ext_resource type="Texture2D" uid="uid://w3waxvkch08t" path="res://Assets/Animations/Magicians/LV4-3/shoot_back_12.png" id="19_x88kk"]
+[ext_resource type="Texture2D" uid="uid://dp8xgy5vycwul" path="res://Assets/Animations/Magicians/LV4-3/shoot_front_01.png" id="20_8mjo5"]
+[ext_resource type="Texture2D" uid="uid://dh4wlxlln3m4p" path="res://Assets/Animations/Magicians/LV4-3/shoot_front_02.png" id="21_gjgun"]
+[ext_resource type="Texture2D" uid="uid://08jwfx2pngnp" path="res://Assets/Animations/Magicians/LV4-3/shoot_front_03.png" id="22_sf1hu"]
+[ext_resource type="Texture2D" uid="uid://tm4405k882l8" path="res://Assets/Animations/Magicians/LV4-3/shoot_front_04.png" id="23_pkjxl"]
+[ext_resource type="Texture2D" uid="uid://dpyi3hadganvw" path="res://Assets/Animations/Magicians/LV4-3/shoot_front_05.png" id="24_audkh"]
+[ext_resource type="Texture2D" uid="uid://but8hngkcsj2b" path="res://Assets/Animations/Magicians/LV4-3/shoot_front_06.png" id="25_kh5x5"]
+[ext_resource type="Texture2D" uid="uid://cnvhs1lqsnhss" path="res://Assets/Animations/Magicians/LV4-3/shoot_front_07.png" id="26_shchp"]
+[ext_resource type="Texture2D" uid="uid://1v102b3wfyxo" path="res://Assets/Animations/Magicians/LV4-3/shoot_front_08.png" id="27_8r5v1"]
+[ext_resource type="Texture2D" uid="uid://dvbs83vmay642" path="res://Assets/Animations/Magicians/LV4-3/shoot_front_09.png" id="28_h4n1f"]
+[ext_resource type="Texture2D" uid="uid://dupcyrd7kjija" path="res://Assets/Animations/Magicians/LV4-3/shoot_front_10.png" id="29_81nx5"]
+[ext_resource type="Texture2D" uid="uid://bufsmexsox7to" path="res://Assets/Animations/Magicians/LV4-3/shoot_front_11.png" id="30_7pll1"]
+[ext_resource type="Texture2D" uid="uid://conka4vs8vpxs" path="res://Assets/Animations/Magicians/LV4-3/shoot_front_12.png" id="31_4uhmy"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/MagicTowers/alchemist.gd" id="84_mtpi7"]
+[ext_resource type="Texture2D" uid="uid://c03vs0vnys2bt" path="res://Assets/Images/DefenceTowers/Magics/Towers/LV4-2/heart-green.png" id="85_7fn2c"]
+
+[sub_resource type="Resource" id="Resource_ic8tq"]
+script = ExtResource("2_61efh")
+damage_low = 45
+damage_high = 80
+attack_speed = 1.5
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38s0d"]
+atlas = ExtResource("6_0rn2g")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cs18l"]
+atlas = ExtResource("8_ofx63")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eu6qe"]
+atlas = ExtResource("9_sc3ae")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_buanl"]
+atlas = ExtResource("11_wrj10")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n3ykp"]
+radius = 73.9444
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ect83"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_8eqgd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jhpnn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_avwcj")
+}],
+"loop": false,
+"name": &"idle_front",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_bjwmi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_k1xov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_sevnd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_anmsq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vpgxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_alaux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vff1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_sckeh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1a3u0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_p04be")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_e8ile")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_vpy52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_x88kk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_vpy52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_e8ile")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_p04be")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1a3u0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_sckeh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vff1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_alaux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vpgxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_anmsq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_sevnd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_k1xov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bjwmi")
+}],
+"loop": false,
+"name": &"shoot_back",
+"speed": 45.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_avwcj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_8mjo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_gjgun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_sf1hu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_pkjxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_audkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_kh5x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_shchp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_8r5v1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_h4n1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_81nx5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_7pll1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_4uhmy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_7pll1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_81nx5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_h4n1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_8r5v1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_shchp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_kh5x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_audkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_pkjxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_sf1hu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_gjgun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_8mjo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_avwcj")
+}],
+"loop": false,
+"name": &"shoot_front",
+"speed": 45.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_bjwmi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_k1xov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_sevnd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_anmsq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vpgxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_alaux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vff1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_sckeh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1a3u0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_p04be")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_e8ile")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_vpy52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_x88kk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_vpy52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_e8ile")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_p04be")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1a3u0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_sckeh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vff1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_alaux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vpgxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_anmsq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_sevnd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_k1xov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bjwmi")
+}],
+"loop": false,
+"name": &"skill1_back",
+"speed": 45.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_avwcj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_8mjo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_gjgun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_sf1hu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_pkjxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_audkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_kh5x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_shchp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_8r5v1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_h4n1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_81nx5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_7pll1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_4uhmy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_7pll1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_81nx5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_h4n1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_8r5v1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_shchp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_kh5x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_audkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_pkjxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_sf1hu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_gjgun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_8mjo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_avwcj")
+}],
+"loop": false,
+"name": &"skill1_front",
+"speed": 45.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_bjwmi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_k1xov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_sevnd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_anmsq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vpgxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_alaux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vff1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_sckeh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1a3u0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_p04be")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_e8ile")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_vpy52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_x88kk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_vpy52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_e8ile")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_p04be")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1a3u0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_sckeh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vff1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_alaux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vpgxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_anmsq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_sevnd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_k1xov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bjwmi")
+}],
+"loop": false,
+"name": &"skill2_back",
+"speed": 45.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_avwcj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_8mjo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_gjgun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_sf1hu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_pkjxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_audkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_kh5x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_shchp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_8r5v1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_h4n1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_81nx5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_7pll1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_4uhmy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_7pll1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_81nx5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_h4n1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_8r5v1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_shchp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_kh5x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_audkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_pkjxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_sf1hu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_gjgun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_8mjo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_avwcj")
+}],
+"loop": false,
+"name": &"skill2_front",
+"speed": 45.0
+}]
+
+[sub_resource type="Animation" id="Animation_l8ytr"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MagicHeart:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_q7tsy"]
+resource_name = "Rotate"
+loop_mode = 1
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MagicHeart:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(1, 1),
+"points": PackedFloat32Array(0, 0, 0, 0, 0, 6.28319, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i3pef"]
+_data = {
+"RESET": SubResource("Animation_l8ytr"),
+"Rotate": SubResource("Animation_q7tsy")
+}
+
+[sub_resource type="Animation" id="Animation_28yx1"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-190, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_qevuo"]
+resource_name = "move"
+loop_mode = 1
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-190, 0, 0, 0, 0, -250, 0, 0, 0, 0, -190, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yn1yf"]
+_data = {
+"RESET": SubResource("Animation_28yx1"),
+"move": SubResource("Animation_qevuo")
+}
+
+[node name="AlchemistTower" node_paths=PackedStringArray("magician", "linked_areas") instance=ExtResource("1_rayo3")]
+script = ExtResource("2_acey3")
+start_data = SubResource("Resource_ic8tq")
+magician = NodePath("TowerSprite/Alchemist")
+tower_name = "炼金术士"
+tower_texture = ExtResource("2_s1s7q")
+tower_id = 6
+tower_level = 4
+tower_value = 800
+start_tower_range = 380
+tower_skill_levels = Array[int]([0, 0])
+linked_areas = [NodePath("TowerArea"), NodePath("Skill2ConditionArea")]
+
+[node name="TowerButton" parent="." index="2"]
+offset_left = -53.0
+offset_top = -115.0
+offset_right = 56.0
+
+[node name="Circle" parent="TowerUI" index="4"]
+position = Vector2(0, -50)
+
+[node name="TowerSkillButton" parent="TowerUI/Circle" index="1" node_paths=PackedStringArray("linked_tower") instance=ExtResource("4_h0tgt")]
+offset_left = -140.001
+offset_top = -139.999
+offset_right = -55.001
+offset_bottom = -54.9993
+texture_normal = SubResource("AtlasTexture_38s0d")
+texture_pressed = SubResource("AtlasTexture_38s0d")
+texture_hover = ExtResource("7_y8ia4")
+texture_disabled = SubResource("AtlasTexture_cs18l")
+linked_tower = NodePath("../../..")
+skill_name = "点金术"
+skill_prices = Array[int]([300, 150, 150])
+skill_intro = PackedStringArray("将一个敌人变成不会动的金像，持续4秒，变成金像期间生命值变为原先的50%，失去攻击力，若在变为金像期间敌人被击败，则获得原先150%的赏金。", "将一个敌人变成不会动的金像，持续7秒，变成金像期间生命值变为原先的50%，失去攻击力，若在变为金像期间敌人被击败，则获得原先175%的赏金。", "将一个敌人变成不会动的金像，持续10秒，变成金像期间生命值变为原先的50%，失去攻击力，若在变为金像期间敌人被击败，则获得原先200%的赏金。")
+skill_words = "我赚钱了赚钱了，我都不知道怎么花~"
+
+[node name="TowerSkillButton2" parent="TowerUI/Circle" index="2" node_paths=PackedStringArray("linked_tower") instance=ExtResource("4_h0tgt")]
+offset_left = 53.7494
+offset_top = -140.0
+offset_right = 138.749
+offset_bottom = -55.0002
+texture_normal = SubResource("AtlasTexture_eu6qe")
+texture_pressed = SubResource("AtlasTexture_eu6qe")
+texture_hover = ExtResource("10_jrudb")
+texture_disabled = SubResource("AtlasTexture_buanl")
+linked_tower = NodePath("../../..")
+skill_name = "兴奋剂"
+skill_id = 1
+skill_prices = Array[int]([200, 160, 160])
+skill_intro = PackedStringArray("提高射程范围内所有我方单位15%攻击力，移动速度增加60%，攻击间隔减少20%，每秒恢复自身5点生命，持续10秒。", "提高射程范围内所有我方单位20%攻击力，移动速度增加60%，攻击间隔减少20%，每秒恢复自身10点生命，持续10秒。", "提高射程范围内所有我方单位25%攻击力，移动速度增加60%，攻击间隔减少20%，每秒恢复自身15点生命，持续10秒。")
+skill_words = "诸君，我好兴奋口牙！"
+
+[node name="Skill2ConditionArea" type="Area2D" parent="." index="7"]
+z_index = 100
+scale = Vector2(2.8, 2.8)
+collision_layer = 0
+collision_mask = 24
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skill2ConditionArea" index="0"]
+scale = Vector2(1, 0.7)
+shape = SubResource("CircleShape2D_n3ykp")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="TowerSprite" parent="." index="8"]
+position = Vector2(0, 21)
+sprite_frames = SubResource("SpriteFrames_ect83")
+offset = Vector2(-5, -91)
+
+[node name="Alchemist" type="AnimatedSprite2D" parent="TowerSprite" index="0" node_paths=PackedStringArray("alchemist_tower", "tower")]
+position = Vector2(1, -133)
+sprite_frames = SubResource("SpriteFrames_jhpnn")
+animation = &"idle_front"
+autoplay = "idle_front"
+script = ExtResource("84_mtpi7")
+alchemist_tower = NodePath("../..")
+tower = NodePath("../..")
+summon_frame = 12
+
+[node name="MagicAnimationPlayer" type="AnimationPlayer" parent="TowerSprite/Alchemist" index="0"]
+libraries = {
+"": SubResource("AnimationLibrary_i3pef")
+}
+autoplay = "RESET"
+
+[node name="MagicHeart" type="Sprite2D" parent="TowerSprite/Alchemist" index="1"]
+visible = false
+z_index = 1
+position = Vector2(78.0173, -190)
+scale = Vector2(0.772867, 0.772867)
+texture = ExtResource("85_7fn2c")
+region_enabled = true
+region_rect = Rect2(43, 44, 116, 113)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TowerSprite/Alchemist/MagicHeart" index="0"]
+libraries = {
+"": SubResource("AnimationLibrary_yn1yf")
+}
+
+[node name="SummonMarker" type="Marker2D" parent="TowerSprite/Alchemist" index="2"]
+position = Vector2(15, 6)
+
+[node name="Skill1Timer" type="Timer" parent="." index="10"]
+wait_time = 21.0
+one_shot = true
+
+[node name="Skill2DotTimer" type="Timer" parent="." index="11"]
+wait_time = 0.1
+
+[connection signal="timeout" from="Skill2DotTimer" to="." method="_on_skill_2_dot_timer_timeout"]

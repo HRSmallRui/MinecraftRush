@@ -1,0 +1,125 @@
+[gd_scene load_steps=26 format=3 uid="uid://dty3c22jvjcnc"]
+
+[ext_resource type="PackedScene" uid="uid://i17sy4bx2dfh" path="res://Scenes/DefenceTowers/BarrackTowers/barrack_tower.tscn" id="1_xub4h"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/BarrackTowers/barrack_tower_zombie.gd" id="2_g5m3j"]
+[ext_resource type="Texture2D" uid="uid://bkwn6b3dxpg0y" path="res://Assets/Images/UI/InformationBar/barrack-zombie.png" id="3_jwgbe"]
+[ext_resource type="Script" path="res://Scripts/Datas/BarrackData.gd" id="3_ub5vv"]
+[ext_resource type="PackedScene" uid="uid://do2edynt8v2l7" path="res://Scenes/Allys/Soldiers/zombie_soldier.tscn" id="4_wsvie"]
+[ext_resource type="PackedScene" uid="uid://cjpn07gcbekr1" path="res://Scenes/DefenceTowers/tower_skill_button.tscn" id="6_1jsyx"]
+[ext_resource type="Texture2D" uid="uid://301jpa585c4t" path="res://Assets/Images/DefenceTowers/Based/jungle-build.png" id="6_7bn4a"]
+[ext_resource type="Texture2D" uid="uid://cq170vrxrrjqv" path="res://Assets/Images/DefenceTowers/Based/jungle-build-select.png" id="7_ntfc5"]
+[ext_resource type="Texture2D" uid="uid://dk7l3x3eird31" path="res://Assets/Images/DefenceTowers/Barracks/UI/嗜血.png" id="9_s5wmu"]
+[ext_resource type="Texture2D" uid="uid://spu3br38baw2" path="res://Assets/Images/DefenceTowers/Barracks/UI/嗜血select.png" id="10_sma7h"]
+[ext_resource type="Texture2D" uid="uid://boledbqlokvbr" path="res://Assets/Images/DefenceTowers/Barracks/UI/嗜血disabled.png" id="11_mv1wm"]
+[ext_resource type="Texture2D" uid="uid://dxnb3bebbypn5" path="res://Assets/Images/DefenceTowers/Barracks/UI/冶炼工艺.png" id="12_eb5yn"]
+[ext_resource type="Texture2D" uid="uid://dx1a0qb5rprq7" path="res://Assets/Images/DefenceTowers/Barracks/UI/冶炼工艺select.png" id="13_fdw2u"]
+[ext_resource type="Texture2D" uid="uid://bsmr8es0jm3k4" path="res://Assets/Images/DefenceTowers/Barracks/UI/冶炼工艺disabled.png" id="14_6tmet"]
+[ext_resource type="Texture2D" uid="uid://dndhjehnkkvy8" path="res://Assets/Images/DefenceTowers/Barracks/UI/玉碎.png" id="15_adex0"]
+[ext_resource type="Texture2D" uid="uid://binkgo4mda3dh" path="res://Assets/Images/DefenceTowers/Barracks/UI/玉碎select.png" id="16_3roc2"]
+[ext_resource type="Texture2D" uid="uid://b8b1lsg2hqdb5" path="res://Assets/Images/DefenceTowers/Barracks/Towers/ZombieBarrack.png" id="16_d5euw"]
+[ext_resource type="Texture2D" uid="uid://thhy1400pgd1" path="res://Assets/Images/DefenceTowers/Barracks/UI/玉碎disabled.png" id="17_e4c85"]
+
+[sub_resource type="Resource" id="Resource_7wwmj"]
+script = ExtResource("3_ub5vv")
+soldier_health = 150
+damage_low = 8
+damage_high = 16
+armor = 0.4
+rebirth_time = 10
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0g2oc"]
+atlas = ExtResource("9_s5wmu")
+region = Rect2(6, 5, 85, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_msijb"]
+atlas = ExtResource("11_mv1wm")
+region = Rect2(6, 5, 85, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hf28"]
+atlas = ExtResource("12_eb5yn")
+region = Rect2(6, 5, 85, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pk3ul"]
+atlas = ExtResource("14_6tmet")
+region = Rect2(6, 5, 85, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlf2o"]
+atlas = ExtResource("15_adex0")
+region = Rect2(6, 5, 85, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xg5p"]
+atlas = ExtResource("17_e4c85")
+region = Rect2(6, 5, 85, 86)
+
+[node name="BarrackTowerZombie" instance=ExtResource("1_xub4h")]
+script = ExtResource("2_g5m3j")
+barrack_data = SubResource("Resource_7wwmj")
+soldier_scene = ExtResource("4_wsvie")
+tower_name = "尸国正规军兵营"
+tower_texture = ExtResource("3_jwgbe")
+tower_level = 4
+based_skin = 1
+
+[node name="BasedSprite" parent="Based" index="0"]
+texture = ExtResource("6_7bn4a")
+
+[node name="BasedSpriteSelect" parent="Based" index="1"]
+texture = ExtResource("7_ntfc5")
+
+[node name="TowerButton" parent="." index="2"]
+offset_top = -73.0
+
+[node name="Circle" parent="TowerUI" index="4"]
+position = Vector2(0, -33)
+
+[node name="SellButton" parent="TowerUI/Circle" index="0"]
+visible = false
+
+[node name="TowerSkillButton" parent="TowerUI/Circle" index="2" node_paths=PackedStringArray("linked_tower") instance=ExtResource("6_1jsyx")]
+offset_top = -98.7494
+offset_bottom = -13.7493
+texture_normal = SubResource("AtlasTexture_0g2oc")
+texture_pressed = SubResource("AtlasTexture_0g2oc")
+texture_hover = ExtResource("10_sma7h")
+texture_disabled = SubResource("AtlasTexture_msijb")
+linked_tower = NodePath("../../..")
+skill_name = "嗜血"
+skill_prices = Array[int]([250, 200, 200])
+skill_intro = PackedStringArray("尸国正规军每次攻击都会恢复自身5点生命。", "尸国正规军每次攻击都会恢复自身10点生命。", "尸国正规军每次攻击都会恢复自身15点生命。")
+skill_words = "我在喝兔子血还是在吃山羊肉？"
+
+[node name="TowerSkillButton2" parent="TowerUI/Circle" index="3" node_paths=PackedStringArray("linked_tower") instance=ExtResource("6_1jsyx")]
+offset_left = -42.5007
+offset_top = -147.5
+offset_right = 42.4989
+offset_bottom = -62.4998
+texture_normal = SubResource("AtlasTexture_6hf28")
+texture_pressed = SubResource("AtlasTexture_6hf28")
+texture_hover = ExtResource("13_fdw2u")
+texture_disabled = SubResource("AtlasTexture_pk3ul")
+linked_tower = NodePath("../../..")
+skill_name = "冶炼工艺"
+skill_id = 1
+skill_prices = Array[int]([150, 150])
+skill_intro = PackedStringArray("用上更好的装备，尸国正规军的伤害提高至9-18，并提高些许护甲。", "用上更好的装备，尸国正规军的伤害提高至10-20，并提高些许护甲。")
+skill_words = "这是村里最好的铁匠打造的。"
+
+[node name="TowerSkillButton3" parent="TowerUI/Circle" index="4" node_paths=PackedStringArray("linked_tower") instance=ExtResource("6_1jsyx")]
+offset_left = 57.4995
+offset_top = -98.7503
+offset_right = 142.499
+offset_bottom = -13.7502
+texture_normal = SubResource("AtlasTexture_qlf2o")
+texture_pressed = SubResource("AtlasTexture_qlf2o")
+texture_hover = ExtResource("16_3roc2")
+texture_disabled = SubResource("AtlasTexture_2xg5p")
+linked_tower = NodePath("../../..")
+skill_name = "玉碎"
+skill_id = 2
+skill_prices = Array[int]([250, 250, 250])
+skill_intro = PackedStringArray("尸国正规军死亡时鼓舞周围的友军4秒，提高他们100%近战伤害，每0.2秒恢复5点生命。", "尸国正规军死亡时鼓舞周围的友军6秒，提高他们100%近战伤害，每0.2秒恢复5点生命。", "尸国正规军死亡时鼓舞周围的友军8秒，提高他们100%近战伤害，每0.2秒恢复5点生命。")
+skill_words = "我滴任务完成辣！"
+
+[node name="ZombieBarrack" type="Sprite2D" parent="." index="8"]
+position = Vector2(-2, -36)
+texture = ExtResource("16_d5euw")

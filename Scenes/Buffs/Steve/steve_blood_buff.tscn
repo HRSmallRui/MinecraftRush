@@ -1,0 +1,94 @@
+[gd_scene load_steps=16 format=3 uid="uid://cahoe6qmx7pc5"]
+
+[ext_resource type="PackedScene" uid="uid://c3gyjosb382do" path="res://Scenes/Classes/buff_class.tscn" id="1_r4rbu"]
+[ext_resource type="Script" path="res://Scripts/Buffs/steve_blood_buff.gd" id="2_nvvlo"]
+[ext_resource type="Texture2D" uid="uid://bf26mndb3xwlw" path="res://Assets/Images/Effects/BloodBuff/0001.png" id="3_x8ix1"]
+[ext_resource type="Texture2D" uid="uid://511ukiv1ttbk" path="res://Assets/Images/Effects/BloodBuff/0002.png" id="4_mm33o"]
+[ext_resource type="Texture2D" uid="uid://btj632r5nv5ho" path="res://Assets/Images/Effects/BloodBuff/0003.png" id="5_g3prr"]
+[ext_resource type="Texture2D" uid="uid://dy3b33r2v1tmp" path="res://Assets/Images/Effects/BloodBuff/0004.png" id="6_502ps"]
+[ext_resource type="Texture2D" uid="uid://cj3ifyudjcjim" path="res://Assets/Images/Effects/BloodBuff/0005.png" id="7_shwd2"]
+[ext_resource type="Texture2D" uid="uid://3ox8o77rci0q" path="res://Assets/Images/Effects/BloodBuff/0006.png" id="8_30me4"]
+[ext_resource type="Texture2D" uid="uid://c35m3emevjdj4" path="res://Assets/Images/Effects/BloodBuff/0007.png" id="9_r1u1o"]
+[ext_resource type="Texture2D" uid="uid://dtu5ixhir3bun" path="res://Assets/Images/Effects/BloodBuff/0008.png" id="10_f6xxu"]
+[ext_resource type="Texture2D" uid="uid://kupx6y4ia8lw" path="res://Assets/Images/Effects/BloodBuff/0009.png" id="11_1oudh"]
+[ext_resource type="Texture2D" uid="uid://chkbfnoksug0q" path="res://Assets/Images/Effects/BloodBuff/0010.png" id="12_n4gms"]
+[ext_resource type="Texture2D" uid="uid://866qa1dgqjhk" path="res://Assets/Images/Effects/BloodBuff/0011.png" id="13_48wco"]
+[ext_resource type="Texture2D" uid="uid://1vsa2x5anv01" path="res://Assets/Images/Effects/BloodBuff/0012.png" id="14_l6hwo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cdt2e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_x8ix1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mm33o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_g3prr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_502ps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_shwd2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_30me4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_r1u1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_f6xxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1oudh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_n4gms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_48wco")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_l6hwo")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
+[node name="SteveBloodBuff" instance=ExtResource("1_r4rbu")]
+script = ExtResource("2_nvvlo")
+buff_type = 1
+duration = 16.0
+buff_tag = "SteveBlood"
+immune_groups = Array[String](["god", "super_unit", "no_live"])
+
+[node name="BloodTimer" type="Timer" parent="." index="0"]
+wait_time = 0.1
+autostart = true
+
+[node name="BloodBuffAnim" type="AnimatedSprite2D" parent="." index="1"]
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_cdt2e")
+autoplay = "default"
+frame_progress = 0.899062
+
+[connection signal="timeout" from="BloodTimer" to="." method="_on_blood_timer_timeout"]

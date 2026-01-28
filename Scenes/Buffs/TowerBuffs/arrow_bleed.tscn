@@ -1,0 +1,77 @@
+[gd_scene load_steps=16 format=3 uid="uid://by7kybwd7vaxo"]
+
+[ext_resource type="PackedScene" uid="uid://bwifge7de0uys" path="res://Scenes/Buffs/dot_buff.tscn" id="1_sa2e0"]
+[ext_resource type="Script" path="res://Scripts/Buffs/arrow_bleed.gd" id="2_afn4n"]
+[ext_resource type="Texture2D" uid="uid://bf26mndb3xwlw" path="res://Assets/Images/Effects/BloodBuff/0001.png" id="2_t1e1v"]
+[ext_resource type="Texture2D" uid="uid://511ukiv1ttbk" path="res://Assets/Images/Effects/BloodBuff/0002.png" id="3_e0cuq"]
+[ext_resource type="Texture2D" uid="uid://btj632r5nv5ho" path="res://Assets/Images/Effects/BloodBuff/0003.png" id="4_b6ipj"]
+[ext_resource type="Texture2D" uid="uid://dy3b33r2v1tmp" path="res://Assets/Images/Effects/BloodBuff/0004.png" id="5_71g4v"]
+[ext_resource type="Texture2D" uid="uid://cj3ifyudjcjim" path="res://Assets/Images/Effects/BloodBuff/0005.png" id="6_bp1hs"]
+[ext_resource type="Texture2D" uid="uid://3ox8o77rci0q" path="res://Assets/Images/Effects/BloodBuff/0006.png" id="7_x2sxu"]
+[ext_resource type="Texture2D" uid="uid://c35m3emevjdj4" path="res://Assets/Images/Effects/BloodBuff/0007.png" id="8_qnrn2"]
+[ext_resource type="Texture2D" uid="uid://dtu5ixhir3bun" path="res://Assets/Images/Effects/BloodBuff/0008.png" id="9_djefn"]
+[ext_resource type="Texture2D" uid="uid://kupx6y4ia8lw" path="res://Assets/Images/Effects/BloodBuff/0009.png" id="10_al2yv"]
+[ext_resource type="Texture2D" uid="uid://chkbfnoksug0q" path="res://Assets/Images/Effects/BloodBuff/0010.png" id="11_iade5"]
+[ext_resource type="Texture2D" uid="uid://866qa1dgqjhk" path="res://Assets/Images/Effects/BloodBuff/0011.png" id="12_mc7ft"]
+[ext_resource type="Texture2D" uid="uid://1vsa2x5anv01" path="res://Assets/Images/Effects/BloodBuff/0012.png" id="13_yl7qy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dmo2e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_t1e1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_e0cuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_b6ipj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_71g4v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bp1hs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_x2sxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qnrn2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_djefn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_al2yv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_iade5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_mc7ft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_yl7qy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
+[node name="ArrowBleed" instance=ExtResource("1_sa2e0")]
+script = ExtResource("2_afn4n")
+dot_damage = Array[int]([0])
+duration = 4.0
+can_be_overlay = true
+buff_tag = "arrow_bleed"
+immune_groups = Array[String](["super_unit", "god", "no_live"])
+
+[node name="DotTimer" parent="." index="0"]
+wait_time = 0.5
+
+[node name="BloodFrame" type="AnimatedSprite2D" parent="." index="1"]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_dmo2e")
+autoplay = "default"
+frame_progress = 0.273127

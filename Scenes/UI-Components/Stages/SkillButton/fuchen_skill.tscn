@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://c72xetyccdi4q"]
+
+[ext_resource type="PackedScene" uid="uid://dakq012d6gh6m" path="res://Scenes/UI-Components/Stages/skill_button.tscn" id="1_i3mwc"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Stages/SkillButtons/fuchen_skill.gd" id="2_0nkd3"]
+[ext_resource type="Texture2D" uid="uid://6i50vij6jgsl" path="res://Assets/Images/UI/SkillButton/Heroskill/Fuchen/fuchen_skill.png" id="2_gc481"]
+[ext_resource type="Texture2D" uid="uid://4ah0gtywd4b3" path="res://Assets/Images/UI/SkillButton/Heroskill/Fuchen/fuchen_skill_using.png" id="3_giucm"]
+
+[node name="FuchenSkill" instance=ExtResource("1_i3mwc")]
+script = ExtResource("2_0nkd3")
+skill_type = 2
+texture_normal = ExtResource("2_gc481")
+texture_select = ExtResource("3_giucm")
+skill_name = "奥术冲击"
+skill_intro = "发射数道奥术射线，轰炸目标区域"
+cooling_time = 45.0

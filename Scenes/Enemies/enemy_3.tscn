@@ -1,0 +1,279 @@
+[gd_scene load_steps=58 format=3 uid="uid://ctqg01hruyfxe"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_g1wju"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_3.gd" id="2_lvuyr"]
+[ext_resource type="Texture2D" uid="uid://comwl0ri8gw60" path="res://Assets/Images/UI/InformationBar/鸡骑士.png" id="2_w0q86"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="3_rn0uq"]
+[ext_resource type="AudioStream" uid="uid://iq0pyheftlvh" path="res://Assets/Sounds/FXs/Enemies/鸡骑士/鸡死亡2.wav" id="5_56vhu"]
+[ext_resource type="Texture2D" uid="uid://ddv0fe3ql1v4r" path="res://Assets/Animations/Enemies/3鸡骑士/idle_0.png" id="5_fiw8j"]
+[ext_resource type="AudioStream" uid="uid://b0dugsbdyyox" path="res://Assets/Sounds/FXs/Enemies/鸡骑士/鸡死亡.wav" id="6_1w8ol"]
+[ext_resource type="Texture2D" uid="uid://bfacwxrkrb1fj" path="res://Assets/Animations/Enemies/3鸡骑士/move-back_00.png" id="6_3fg8x"]
+[ext_resource type="Texture2D" uid="uid://cs3obblvqecgg" path="res://Assets/Animations/Enemies/3鸡骑士/move-back_01.png" id="7_p702s"]
+[ext_resource type="Texture2D" uid="uid://cst406h8mgi1x" path="res://Assets/Animations/Enemies/3鸡骑士/move-back_02.png" id="8_ng2mg"]
+[ext_resource type="Texture2D" uid="uid://b5qp0kh5hbico" path="res://Assets/Animations/Enemies/3鸡骑士/move-back_03.png" id="9_h668q"]
+[ext_resource type="Texture2D" uid="uid://dsw53jqxqmrb2" path="res://Assets/Animations/Enemies/3鸡骑士/move-back_04.png" id="10_sy8cl"]
+[ext_resource type="Texture2D" uid="uid://bpfgt5yfeb4eo" path="res://Assets/Animations/Enemies/3鸡骑士/move-back_05.png" id="11_1qeim"]
+[ext_resource type="Texture2D" uid="uid://pgcx2n2rog6p" path="res://Assets/Animations/Enemies/3鸡骑士/move-back_06.png" id="12_ppex8"]
+[ext_resource type="Texture2D" uid="uid://bldb4rm4q1stj" path="res://Assets/Animations/Enemies/3鸡骑士/move-back_07.png" id="13_w2ui8"]
+[ext_resource type="Texture2D" uid="uid://b7cqmebpq12wk" path="res://Assets/Animations/Enemies/3鸡骑士/move-back_08.png" id="14_3qsmx"]
+[ext_resource type="Texture2D" uid="uid://cshdhnldpn8hl" path="res://Assets/Animations/Enemies/3鸡骑士/move-back_09.png" id="15_prd6e"]
+[ext_resource type="Texture2D" uid="uid://cr1qfmr56bm0h" path="res://Assets/Animations/Enemies/3鸡骑士/move-back_10.png" id="16_s7uo4"]
+[ext_resource type="Texture2D" uid="uid://dkijlq80tx4b7" path="res://Assets/Animations/Enemies/3鸡骑士/move-back_11.png" id="17_2lvki"]
+[ext_resource type="Texture2D" uid="uid://cl0ekhin3k876" path="res://Assets/Animations/Enemies/3鸡骑士/move-back_12.png" id="18_122g6"]
+[ext_resource type="Texture2D" uid="uid://o66fj4uapg1v" path="res://Assets/Animations/Enemies/3鸡骑士/move-back_13.png" id="19_kijuw"]
+[ext_resource type="Texture2D" uid="uid://bcgf7gyxa5xug" path="res://Assets/Animations/Enemies/3鸡骑士/move-back_14.png" id="20_i8vei"]
+[ext_resource type="Texture2D" uid="uid://dsyshrn5yn4pe" path="res://Assets/Animations/Enemies/3鸡骑士/move-back_15.png" id="21_6ur1w"]
+[ext_resource type="Texture2D" uid="uid://7omsguonb1ym" path="res://Assets/Animations/Enemies/3鸡骑士/move-front_00.png" id="22_cmgv2"]
+[ext_resource type="Texture2D" uid="uid://csjwxyu6i4jmq" path="res://Assets/Animations/Enemies/3鸡骑士/move-front_01.png" id="23_v2ycn"]
+[ext_resource type="Texture2D" uid="uid://7e227tfmnmg4" path="res://Assets/Animations/Enemies/3鸡骑士/move-front_02.png" id="24_su3i1"]
+[ext_resource type="Texture2D" uid="uid://biwbwhb08vyaw" path="res://Assets/Animations/Enemies/3鸡骑士/move-front_03.png" id="25_wnnun"]
+[ext_resource type="Texture2D" uid="uid://d0lc1aqvilb8o" path="res://Assets/Animations/Enemies/3鸡骑士/move-front_04.png" id="26_r8gyg"]
+[ext_resource type="Texture2D" uid="uid://ng35xhbcwu2s" path="res://Assets/Animations/Enemies/3鸡骑士/move-front_05.png" id="27_trro8"]
+[ext_resource type="Texture2D" uid="uid://ohj6wt3da45a" path="res://Assets/Animations/Enemies/3鸡骑士/move-front_06.png" id="28_1jvpn"]
+[ext_resource type="Texture2D" uid="uid://cbwaf2psolynr" path="res://Assets/Animations/Enemies/3鸡骑士/move-front_07.png" id="29_36rq5"]
+[ext_resource type="Texture2D" uid="uid://bvkxtvlyw1uhg" path="res://Assets/Animations/Enemies/3鸡骑士/move-front_08.png" id="30_d5rpn"]
+[ext_resource type="Texture2D" uid="uid://3sg2km5jaaud" path="res://Assets/Animations/Enemies/3鸡骑士/move-front_09.png" id="31_syjo3"]
+[ext_resource type="Texture2D" uid="uid://c4nrqpce7cmj0" path="res://Assets/Animations/Enemies/3鸡骑士/move-front_10.png" id="32_xyaci"]
+[ext_resource type="Texture2D" uid="uid://oc1m3sf0unp2" path="res://Assets/Animations/Enemies/3鸡骑士/move-front_11.png" id="33_1pn4o"]
+[ext_resource type="Texture2D" uid="uid://dsfe0brnwxlpb" path="res://Assets/Animations/Enemies/3鸡骑士/move-front_12.png" id="34_qldtk"]
+[ext_resource type="Texture2D" uid="uid://bsnmt4rg7hpox" path="res://Assets/Animations/Enemies/3鸡骑士/move-front_13.png" id="35_v2hgg"]
+[ext_resource type="Texture2D" uid="uid://dpd4s25rwr1j0" path="res://Assets/Animations/Enemies/3鸡骑士/move-front_14.png" id="36_f8t3s"]
+[ext_resource type="Texture2D" uid="uid://d0y6lda83e21l" path="res://Assets/Animations/Enemies/3鸡骑士/move-front_15.png" id="37_kea8x"]
+[ext_resource type="Texture2D" uid="uid://djfcelu2sxgpy" path="res://Assets/Animations/Enemies/3鸡骑士/move-normal_00.png" id="38_lh40h"]
+[ext_resource type="Texture2D" uid="uid://dcd4isevnj45s" path="res://Assets/Animations/Enemies/3鸡骑士/move-normal_01.png" id="39_s1db0"]
+[ext_resource type="Texture2D" uid="uid://v28sk8ae2ndy" path="res://Assets/Animations/Enemies/3鸡骑士/move-normal_02.png" id="40_k6vdn"]
+[ext_resource type="Texture2D" uid="uid://b1etogrq0o4ff" path="res://Assets/Animations/Enemies/3鸡骑士/move-normal_03.png" id="41_urbca"]
+[ext_resource type="Texture2D" uid="uid://bsrr2ssyo4xjk" path="res://Assets/Animations/Enemies/3鸡骑士/move-normal_04.png" id="42_3s3dp"]
+[ext_resource type="Texture2D" uid="uid://bth62u3bof10s" path="res://Assets/Animations/Enemies/3鸡骑士/move-normal_05.png" id="43_adq6h"]
+[ext_resource type="Texture2D" uid="uid://bdrrubfmyp2bl" path="res://Assets/Animations/Enemies/3鸡骑士/move-normal_06.png" id="44_dobii"]
+[ext_resource type="Texture2D" uid="uid://cflmf7okp5ndb" path="res://Assets/Animations/Enemies/3鸡骑士/move-normal_07.png" id="45_0alqb"]
+[ext_resource type="Texture2D" uid="uid://dpag5uxmyxb02" path="res://Assets/Animations/Enemies/3鸡骑士/move-normal_08.png" id="46_y5gdd"]
+[ext_resource type="Texture2D" uid="uid://divk102qpscap" path="res://Assets/Animations/Enemies/3鸡骑士/move-normal_09.png" id="47_20ulg"]
+[ext_resource type="Texture2D" uid="uid://b6qdrsqhg38dk" path="res://Assets/Animations/Enemies/3鸡骑士/move-normal_10.png" id="48_upat1"]
+[ext_resource type="Texture2D" uid="uid://cwetbacigkud3" path="res://Assets/Animations/Enemies/3鸡骑士/move-normal_11.png" id="49_t58ku"]
+[ext_resource type="Texture2D" uid="uid://bacdsyi2up7yq" path="res://Assets/Animations/Enemies/3鸡骑士/move-normal_12.png" id="50_hykem"]
+[ext_resource type="Texture2D" uid="uid://bgfwlg2kb4yq7" path="res://Assets/Animations/Enemies/3鸡骑士/move-normal_13.png" id="51_1v3v3"]
+[ext_resource type="Texture2D" uid="uid://cl35i4fva4q5w" path="res://Assets/Animations/Enemies/3鸡骑士/move-normal_14.png" id="52_53t7k"]
+[ext_resource type="Texture2D" uid="uid://c5rk6vqwlvbrg" path="res://Assets/Animations/Enemies/3鸡骑士/move-normal_15.png" id="53_m0rea"]
+
+[sub_resource type="Resource" id="Resource_105n5"]
+script = ExtResource("3_rn0uq")
+health = 10
+dodge_rate = 0.0
+near_damage_low = 0
+near_damage_high = 0
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.0
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 2.4
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_etnp4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_fiw8j")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_3fg8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_p702s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ng2mg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_h668q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_sy8cl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1qeim")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ppex8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_w2ui8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_3qsmx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_prd6e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_s7uo4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_2lvki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_122g6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_kijuw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_i8vei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_6ur1w")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 36.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_cmgv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_v2ycn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_su3i1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_wnnun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_r8gyg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_trro8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_1jvpn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_36rq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_d5rpn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_syjo3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_xyaci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_1pn4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_qldtk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_v2hgg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_f8t3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_kea8x")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 36.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("38_lh40h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_s1db0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_k6vdn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_urbca")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_3s3dp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_adq6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_dobii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_0alqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_y5gdd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_20ulg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_upat1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_t58ku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_hykem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_1v3v3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_53t7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_m0rea")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 36.0
+}]
+
+[node name="Enemy3" instance=ExtResource("1_g1wju")]
+script = ExtResource("2_lvuyr")
+enemy_name = "鸡骑士"
+enemy_id = 3
+enemy_texture = ExtResource("2_w0q86")
+start_data = SubResource("Resource_105n5")
+interceptable = false
+bounty = 2
+die_audio_stream_list = Array[AudioStream]([ExtResource("5_56vhu"), ExtResource("6_1w8ol")])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(5, -100)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_etnp4")
+animation = &"move_normal"
+
+[node name="HurtBox" parent="UnitBody" index="2"]
+position = Vector2(0, -80)
+scale = Vector2(5.98961, 5.98961)
+
+[node name="EnemyButton" parent="UnitBody" index="4"]
+offset_left = -58.0
+offset_right = 60.0
+
+[node name="HealthBar" parent="UnitBody" index="5"]
+offset_left = -70.0
+offset_right = 230.0
+
+[node name="AppearAudio" type="AudioStreamPlayer" parent="." index="5"]
+bus = &"Sound"

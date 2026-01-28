@@ -1,0 +1,242 @@
+[gd_scene load_steps=50 format=3 uid="uid://d0686pxtld1mq"]
+
+[ext_resource type="PackedScene" uid="uid://bgi3ibffayb11" path="res://Scenes/Allys/Soldiers/soldier_class.tscn" id="1_8xel8"]
+[ext_resource type="Script" path="res://Scripts/Allys/Soldiers/soldier_lv_2.gd" id="2_4bgk5"]
+[ext_resource type="Texture2D" uid="uid://duaxd401xtu07" path="res://Assets/Images/UI/InformationBar/SoldierLV2.png" id="2_lxogv"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="3_8y74v"]
+[ext_resource type="Texture2D" uid="uid://r4sgg28pov62" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-attack_00.png" id="5_awhcw"]
+[ext_resource type="Texture2D" uid="uid://b4vw5rosh11r7" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-attack_01.png" id="6_04vms"]
+[ext_resource type="Texture2D" uid="uid://bnrhtfafqrsq3" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-attack_02.png" id="7_h8cvb"]
+[ext_resource type="Texture2D" uid="uid://b2skrhi6s5bhr" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-attack_03.png" id="8_ygghp"]
+[ext_resource type="Texture2D" uid="uid://c45j0isbkby4t" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-attack_04.png" id="9_wtwhf"]
+[ext_resource type="Texture2D" uid="uid://c80eqq27ueut" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-attack_05.png" id="10_du37w"]
+[ext_resource type="Texture2D" uid="uid://b4sy6co7yet2t" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-attack_06.png" id="11_ru26t"]
+[ext_resource type="Texture2D" uid="uid://cjag8vkw0fjfc" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-attack_07.png" id="12_gdagl"]
+[ext_resource type="Texture2D" uid="uid://cve06by1v31if" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-attack_08.png" id="13_uhmun"]
+[ext_resource type="Texture2D" uid="uid://eitcpikl5ctd" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-attack_09.png" id="14_wsgn6"]
+[ext_resource type="Texture2D" uid="uid://ctq7wutyw6i3e" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-attack_10.png" id="15_8b624"]
+[ext_resource type="Texture2D" uid="uid://lik3oto12nft" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-attack_11.png" id="16_vjv8v"]
+[ext_resource type="Texture2D" uid="uid://ciugsiixffo6t" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-attack_12.png" id="17_qeocs"]
+[ext_resource type="Texture2D" uid="uid://dsij50uqrjcnc" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-attack_13.png" id="18_geoip"]
+[ext_resource type="Texture2D" uid="uid://dvmf82jo467uo" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-attack_14.png" id="19_eoqgl"]
+[ext_resource type="Texture2D" uid="uid://nwdnsf64cv5k" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-attack_15.png" id="20_5jvly"]
+[ext_resource type="Texture2D" uid="uid://ixag1ut2lr8c" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-attack_16.png" id="21_h87gw"]
+[ext_resource type="Texture2D" uid="uid://oxyy1qiiggry" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-attack_17.png" id="22_k3fmf"]
+[ext_resource type="Texture2D" uid="uid://d3ftuq7b0y8er" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-attack_18.png" id="23_yd4b0"]
+[ext_resource type="Texture2D" uid="uid://dudmhofwrrchr" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-attack_19.png" id="24_k3ca5"]
+[ext_resource type="Texture2D" uid="uid://xyn0y0ylxrnx" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-attack_20.png" id="25_bs8fr"]
+[ext_resource type="Texture2D" uid="uid://xmwkejg21spb" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-die_00.png" id="26_u3l0e"]
+[ext_resource type="Texture2D" uid="uid://c0bf0nm5boui" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-die_01.png" id="27_akn27"]
+[ext_resource type="Texture2D" uid="uid://dp2ij30v0nq4f" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-die_02.png" id="28_es5cq"]
+[ext_resource type="Texture2D" uid="uid://nhr4bwktb27y" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-die_03.png" id="29_o3cex"]
+[ext_resource type="Texture2D" uid="uid://bpq64oqi7bt50" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-die_04.png" id="30_poo6r"]
+[ext_resource type="Texture2D" uid="uid://bkpbg4xdmf4mp" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-die_05.png" id="31_8r8hq"]
+[ext_resource type="Texture2D" uid="uid://bnqujmqdy752o" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-die_06.png" id="32_panv4"]
+[ext_resource type="Texture2D" uid="uid://by1ng56yn4a8l" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-die_07.png" id="33_yld2a"]
+[ext_resource type="Texture2D" uid="uid://b0whkgulata5w" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-die_08.png" id="34_6w1qx"]
+[ext_resource type="Texture2D" uid="uid://ccp7nbhe2kxqr" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-die_09.png" id="35_5m27g"]
+[ext_resource type="Texture2D" uid="uid://ddu8qoehksm86" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-die_10.png" id="36_p5uwc"]
+[ext_resource type="Texture2D" uid="uid://gmdfsj20xr32" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-move_01.png" id="38_dg0nr"]
+[ext_resource type="Texture2D" uid="uid://dymaqk2p3q2my" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-move_03.png" id="40_k1wgh"]
+[ext_resource type="Texture2D" uid="uid://b32pgwy7t1gtu" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-move_05.png" id="42_hp3c1"]
+[ext_resource type="Texture2D" uid="uid://ykfvsnompxvm" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-move_07.png" id="44_tiw4r"]
+[ext_resource type="Texture2D" uid="uid://ifc8xvht0g4q" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-move_09.png" id="46_co76y"]
+[ext_resource type="Texture2D" uid="uid://cyufci3ce6tr7" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-move_11.png" id="48_73tst"]
+[ext_resource type="Texture2D" uid="uid://c7hen7vgujn27" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-move_13.png" id="50_pghu4"]
+[ext_resource type="Texture2D" uid="uid://y4c2p455fs24" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-move_15.png" id="52_whl3v"]
+[ext_resource type="Texture2D" uid="uid://bur2blceriqav" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-move_17.png" id="54_5ao8h"]
+[ext_resource type="Texture2D" uid="uid://b0mqie447e47b" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-move_19.png" id="56_lw4un"]
+[ext_resource type="Texture2D" uid="uid://b7bnhbx6lkmka" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-move_21.png" id="58_qw4kx"]
+
+[sub_resource type="Resource" id="Resource_lis3c"]
+script = ExtResource("3_8y74v")
+health = 100
+dodge_rate = 0.0
+near_damage_low = 3
+near_damage_high = 5
+near_attack_speed = 1.3
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.1
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 2.5
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6yn4n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_awhcw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_04vms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_h8cvb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ygghp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wtwhf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_du37w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ru26t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_gdagl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_uhmun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_wsgn6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_8b624")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_vjv8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_qeocs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_geoip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_eoqgl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_5jvly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_h87gw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_k3fmf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_yd4b0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_k3ca5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_bs8fr")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_u3l0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_akn27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_es5cq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_o3cex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_poo6r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_8r8hq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_panv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_yld2a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_6w1qx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_5m27g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_p5uwc")
+}],
+"loop": false,
+"name": &"die",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_awhcw")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("38_dg0nr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_k1wgh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_hp3c1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_tiw4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_co76y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_73tst")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_pghu4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_whl3v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_5ao8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_lw4un")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_qw4kx")
+}],
+"loop": true,
+"name": &"move",
+"speed": 24.0
+}]
+
+[node name="SoldierLV2" instance=ExtResource("1_8xel8")]
+script = ExtResource("2_4bgk5")
+soldier_name_list = Array[String](["李刀卫", "赵剑卒", "李刚", "赵勇", "张武", "孙锐", "周劲", "钱冲", "钱斧兵", "黄翎卫", "林卫", "杨坚"])
+ally_id = 1
+ally_name = "步兵"
+ally_level = 2
+ally_texture = ExtResource("2_lxogv")
+start_data = SubResource("Resource_lis3c")
+heal_speed = 9
+rebirth_time = 10
+
+[node name="AllySprite" parent="UnitBody" index="0"]
+position = Vector2(-70, -100)
+sprite_frames = SubResource("SpriteFrames_6yn4n")
+animation = &"move"
+frame_progress = 0.101866

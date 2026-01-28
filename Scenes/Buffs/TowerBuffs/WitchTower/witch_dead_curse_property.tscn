@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://c8wrjt7byyw7c"]
+
+[ext_resource type="PackedScene" uid="uid://bjfa3t67tpsbr" path="res://Scenes/Buffs/property_buff.tscn" id="1_woxwb"]
+[ext_resource type="Script" path="res://Scripts/Buffs/witch_dead_curse_property.gd" id="2_784d6"]
+[ext_resource type="Script" path="res://Scripts/Buffs/property_buff_block.gd" id="2_xtvdw"]
+
+[sub_resource type="Resource" id="Resource_yffo0"]
+script = ExtResource("2_xtvdw")
+property_type = 10
+operation_type = 0
+operation_data = -0.3
+
+[sub_resource type="Resource" id="Resource_l0tgg"]
+script = ExtResource("2_xtvdw")
+property_type = 11
+operation_type = 0
+operation_data = 1.0
+
+[node name="WitchDeadCursePropertyLV1" instance=ExtResource("1_woxwb")]
+script = ExtResource("2_784d6")
+buff_blocks = Array[ExtResource("2_xtvdw")]([SubResource("Resource_yffo0"), SubResource("Resource_l0tgg")])
+duration = 5.0
+buff_tag = "WitchDeadCurseProperty"
+immune_groups = Array[String](["super_unit", "boss", "god"])

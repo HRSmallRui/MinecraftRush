@@ -1,0 +1,501 @@
+[gd_scene load_steps=113 format=3 uid="uid://chwj011y6s28h"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_6325b"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_1.gd" id="2_jctoq"]
+[ext_resource type="Texture2D" uid="uid://b43sahh5rpj31" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵attack_00.png" id="2_kypa5"]
+[ext_resource type="Texture2D" uid="uid://cxhdvqrktfg5l" path="res://Assets/Images/UI/InformationBar/尸国皮甲兵.png" id="3_jw517"]
+[ext_resource type="Texture2D" uid="uid://dbgsu0dqpaci" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_back_00.png" id="3_r8eah"]
+[ext_resource type="Texture2D" uid="uid://cgmkr87dv1jws" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵attack_01.png" id="3_yoqdg"]
+[ext_resource type="Texture2D" uid="uid://co08oo3exfqp1" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_back_01.png" id="4_7hgpt"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="4_fq5as"]
+[ext_resource type="Texture2D" uid="uid://b54gb2wi2fi4y" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵attack_02.png" id="4_s0xk5"]
+[ext_resource type="Texture2D" uid="uid://dfp01jb56w63d" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_back_02.png" id="5_06yfa"]
+[ext_resource type="Texture2D" uid="uid://btjbmj1v6t48i" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵attack_03.png" id="5_l288f"]
+[ext_resource type="Texture2D" uid="uid://c4s3eos83otvn" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵attack_04.png" id="6_6ylwr"]
+[ext_resource type="Texture2D" uid="uid://c1l2rojltik35" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_back_03.png" id="6_ldh3j"]
+[ext_resource type="Texture2D" uid="uid://5chbrkxi30tg" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵attack_05.png" id="7_pd0r3"]
+[ext_resource type="Texture2D" uid="uid://chw1e2w25evbm" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_back_04.png" id="7_tu5wj"]
+[ext_resource type="Texture2D" uid="uid://bdhxtul771r7w" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_back_05.png" id="8_3016y"]
+[ext_resource type="Texture2D" uid="uid://b2bhamm1rcrds" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵attack_06.png" id="8_tb7q1"]
+[ext_resource type="Texture2D" uid="uid://en1drgsnceqg" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_back_06.png" id="9_cxwig"]
+[ext_resource type="Texture2D" uid="uid://m17levmoum3" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵attack_07.png" id="9_qd6od"]
+[ext_resource type="Texture2D" uid="uid://dgejypqjucob7" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵attack_08.png" id="10_8kgry"]
+[ext_resource type="Texture2D" uid="uid://tvep0i2w2pwy" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_back_07.png" id="10_xbesj"]
+[ext_resource type="Texture2D" uid="uid://dw3oebkjmtuv8" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵attack_09.png" id="11_2xdbm"]
+[ext_resource type="Texture2D" uid="uid://bix8hnr5nld3f" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_back_08.png" id="11_26pl6"]
+[ext_resource type="Texture2D" uid="uid://d3ur038nttbgv" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_back_09.png" id="12_gi5aw"]
+[ext_resource type="Texture2D" uid="uid://t3lm7m5kkp4m" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵attack_10.png" id="12_xxch6"]
+[ext_resource type="Texture2D" uid="uid://mwru6t1jggj4" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_back_10.png" id="13_kxhws"]
+[ext_resource type="Texture2D" uid="uid://c45icxir2hkj2" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵attack_11.png" id="13_xy08c"]
+[ext_resource type="Texture2D" uid="uid://dbtnyj2eyio44" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_back_11.png" id="14_7wx67"]
+[ext_resource type="Texture2D" uid="uid://buffhvvul4paf" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵attack_12.png" id="14_o6xvn"]
+[ext_resource type="Texture2D" uid="uid://dyn65q342nwap" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_back_12.png" id="15_m8dfk"]
+[ext_resource type="Texture2D" uid="uid://bfvfo3fvrwqmj" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵attack_13.png" id="15_yqgib"]
+[ext_resource type="Texture2D" uid="uid://dxvpobep16qjf" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵attack_14.png" id="16_gvxde"]
+[ext_resource type="Texture2D" uid="uid://cxycf74htb14e" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_back_13.png" id="16_of7gd"]
+[ext_resource type="Texture2D" uid="uid://diml8ak4uohf5" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_back_14.png" id="17_mmc5w"]
+[ext_resource type="Texture2D" uid="uid://8brg4f3y4hqm" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵attack_15.png" id="17_vadq5"]
+[ext_resource type="Texture2D" uid="uid://kot08k02isop" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_back_15.png" id="18_dvpra"]
+[ext_resource type="Texture2D" uid="uid://yhlux4mbs5fs" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵attack_16.png" id="18_hbxew"]
+[ext_resource type="Texture2D" uid="uid://bk0hcrsau5jak" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_back_16.png" id="19_jtd2p"]
+[ext_resource type="Texture2D" uid="uid://dvrhiic84lxlh" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵attack_17.png" id="19_rpjjl"]
+[ext_resource type="Texture2D" uid="uid://copqc26lq7x6e" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_back_17.png" id="20_1pgkv"]
+[ext_resource type="Texture2D" uid="uid://dfypysm8w4ydv" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵attack_18.png" id="20_af6jm"]
+[ext_resource type="Texture2D" uid="uid://bwbns5j3k7fqj" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_back_18.png" id="21_067oq"]
+[ext_resource type="Texture2D" uid="uid://dj73ek21sv1ea" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵attack_19.png" id="21_glqek"]
+[ext_resource type="Texture2D" uid="uid://di3nup7eg2dxj" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵attack_20.png" id="22_m73qm"]
+[ext_resource type="Texture2D" uid="uid://drc4mkpbsbv1h" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_back_19.png" id="22_mp075"]
+[ext_resource type="Texture2D" uid="uid://bkyng7vhfuxkq" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_back_20.png" id="23_aoc0y"]
+[ext_resource type="Texture2D" uid="uid://b6mgp5ifw3hc7" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵die_00.png" id="23_n10tj"]
+[ext_resource type="Texture2D" uid="uid://drudxtrik3dfk" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵die_01.png" id="24_1xc4n"]
+[ext_resource type="Texture2D" uid="uid://dm0ra4sx3auhq" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_back_21.png" id="24_awqx4"]
+[ext_resource type="Texture2D" uid="uid://dwfgwbotn7b7d" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵die_02.png" id="25_055ya"]
+[ext_resource type="Texture2D" uid="uid://d31bm8kfvs6v" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_back_22.png" id="25_q1tcm"]
+[ext_resource type="Texture2D" uid="uid://5ofe1xevjodx" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_back_23.png" id="26_2hwa2"]
+[ext_resource type="Texture2D" uid="uid://dcb06xohtb6m5" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵die_03.png" id="26_067aa"]
+[ext_resource type="Texture2D" uid="uid://8lg822k2hvfp" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵die_04.png" id="27_2glh0"]
+[ext_resource type="Texture2D" uid="uid://bqjyk6niu4kye" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_front_00.png" id="27_4l1ux"]
+[ext_resource type="Texture2D" uid="uid://xmsoptrod4l4" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵die_05.png" id="28_6ynqi"]
+[ext_resource type="Texture2D" uid="uid://qi11t3anvw6o" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_front_01.png" id="28_52fmh"]
+[ext_resource type="Texture2D" uid="uid://d4adsfruy653p" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_front_02.png" id="29_npli2"]
+[ext_resource type="Texture2D" uid="uid://v5bi1p7hsco6" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵die_06.png" id="29_y5kcc"]
+[ext_resource type="Texture2D" uid="uid://c48m47g27xnw7" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_front_03.png" id="30_pxtvs"]
+[ext_resource type="Texture2D" uid="uid://cwttf58rtqno3" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵die_07.png" id="30_rvoxx"]
+[ext_resource type="Texture2D" uid="uid://dk665ei4k1ycg" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_front_04.png" id="31_8rivy"]
+[ext_resource type="Texture2D" uid="uid://ipif6mtyjibu" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵die_08.png" id="31_eoqfc"]
+[ext_resource type="Texture2D" uid="uid://bju0d2tgi78vv" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_front_05.png" id="32_nli4h"]
+[ext_resource type="Texture2D" uid="uid://ctjg2opd7il4" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵die_09.png" id="32_vbp4n"]
+[ext_resource type="Texture2D" uid="uid://cdqbl5u5aqg5c" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵die_10.png" id="33_ilpb2"]
+[ext_resource type="Texture2D" uid="uid://ca3w2p3x4ferb" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_front_06.png" id="33_uwk3t"]
+[ext_resource type="Texture2D" uid="uid://caamlviyxjetc" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵die_11.png" id="34_wu12y"]
+[ext_resource type="Texture2D" uid="uid://dpxaclgqcbf1d" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_front_07.png" id="34_ywr65"]
+[ext_resource type="Texture2D" uid="uid://p7ykn0trvl8u" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_front_08.png" id="35_7whbv"]
+[ext_resource type="Texture2D" uid="uid://bov1o3bf4s6l6" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵die_12.png" id="35_gpl2v"]
+[ext_resource type="Texture2D" uid="uid://bvndfq26ne0r8" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_front_09.png" id="36_ev0e1"]
+[ext_resource type="Texture2D" uid="uid://bllasl4d1ivij" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_front_10.png" id="37_5nd28"]
+[ext_resource type="Texture2D" uid="uid://ctj2tkemxj80g" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_front_11.png" id="38_isvrf"]
+[ext_resource type="Texture2D" uid="uid://bbjf1i288jqqr" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_front_12.png" id="39_5gmf2"]
+[ext_resource type="Texture2D" uid="uid://dol0pcxroygoo" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_front_13.png" id="40_q8opd"]
+[ext_resource type="Texture2D" uid="uid://dtjrnbbv3ghxy" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_front_14.png" id="41_vuok6"]
+[ext_resource type="Texture2D" uid="uid://bgqrqy6l74sk8" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_front_15.png" id="42_a5q86"]
+[ext_resource type="Texture2D" uid="uid://bj4rbg1rj00to" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_front_16.png" id="43_7xg6f"]
+[ext_resource type="Texture2D" uid="uid://cfrmoihlmyvd1" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_front_17.png" id="44_0r6be"]
+[ext_resource type="Texture2D" uid="uid://wtfro63o8xg1" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_front_18.png" id="45_kmqlu"]
+[ext_resource type="Texture2D" uid="uid://cy0lc7dsvcnkj" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_front_19.png" id="46_npq4s"]
+[ext_resource type="Texture2D" uid="uid://b8ujkj2k6hb18" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_front_20.png" id="47_6c85t"]
+[ext_resource type="Texture2D" uid="uid://bxfo513qa880w" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_front_21.png" id="48_voixt"]
+[ext_resource type="Texture2D" uid="uid://clrme8jtoqo0f" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_front_22.png" id="49_7gm5l"]
+[ext_resource type="Texture2D" uid="uid://beblho54e26kp" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_front_23.png" id="50_u6ppn"]
+[ext_resource type="Texture2D" uid="uid://47ti1fg5gad4" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_normal_00.png" id="51_o1urw"]
+[ext_resource type="Texture2D" uid="uid://djtvtwttakrb5" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_normal_01.png" id="52_vj8vv"]
+[ext_resource type="Texture2D" uid="uid://cn415o4grkuvm" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_normal_02.png" id="53_eb3st"]
+[ext_resource type="Texture2D" uid="uid://c7fy2ounfk5er" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_normal_03.png" id="54_xi0vo"]
+[ext_resource type="Texture2D" uid="uid://ctmvg4pbb1x6d" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_normal_04.png" id="55_4fpsx"]
+[ext_resource type="Texture2D" uid="uid://bmyvhchv7f44f" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_normal_05.png" id="56_ohhig"]
+[ext_resource type="Texture2D" uid="uid://dqx1gmllmel8" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_normal_06.png" id="57_i4c0v"]
+[ext_resource type="Texture2D" uid="uid://wwwu3irkdp8j" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_normal_07.png" id="58_pl2rc"]
+[ext_resource type="Texture2D" uid="uid://7losedewot2x" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_normal_08.png" id="59_vn07x"]
+[ext_resource type="Texture2D" uid="uid://ey72k4cxke1" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_normal_09.png" id="60_syjg1"]
+[ext_resource type="Texture2D" uid="uid://cb85rwh0t1svu" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_normal_10.png" id="61_iswb2"]
+[ext_resource type="Texture2D" uid="uid://8bqxoc64dpq4" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_normal_11.png" id="62_o2m04"]
+[ext_resource type="Texture2D" uid="uid://bxbjfk3oau70w" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_normal_12.png" id="63_u7tsc"]
+[ext_resource type="Texture2D" uid="uid://l8bxorp7dwn4" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_normal_13.png" id="64_xry5f"]
+[ext_resource type="Texture2D" uid="uid://c61jai6hvswsm" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_normal_14.png" id="65_dp5vc"]
+[ext_resource type="Texture2D" uid="uid://c3g5pdfaimqg3" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_normal_15.png" id="66_x3nmx"]
+[ext_resource type="Texture2D" uid="uid://c4ydnvvipf6lv" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_normal_16.png" id="67_11cy4"]
+[ext_resource type="Texture2D" uid="uid://c17c2nvsmqxco" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_normal_17.png" id="68_iwh4s"]
+[ext_resource type="Texture2D" uid="uid://b6kajjy4akket" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_normal_18.png" id="69_gv4va"]
+[ext_resource type="Texture2D" uid="uid://bk4jtt5jdx2rf" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_normal_19.png" id="70_lwrpm"]
+[ext_resource type="Texture2D" uid="uid://c6liyif0emb00" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_normal_20.png" id="71_nbf2q"]
+[ext_resource type="Texture2D" uid="uid://h8yrg0buohm8" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_normal_21.png" id="72_k8msx"]
+[ext_resource type="Texture2D" uid="uid://blvtlwk6jtqan" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_normal_22.png" id="73_8sc35"]
+[ext_resource type="Texture2D" uid="uid://dlejkgaidarjr" path="res://Assets/Animations/Enemies/1尸国皮甲兵/尸国皮甲兵move_normal_23.png" id="74_rd7ve"]
+
+[sub_resource type="Resource" id="Resource_xgw4m"]
+script = ExtResource("4_fq5as")
+health = 80
+dodge_rate = 0.0
+near_damage_low = 5
+near_damage_high = 10
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.2
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 1.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8trp4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kypa5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_yoqdg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_s0xk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_l288f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6ylwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pd0r3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_tb7q1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qd6od")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_8kgry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_2xdbm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xxch6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xy08c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_o6xvn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_yqgib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_gvxde")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_vadq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_hbxew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_rpjjl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_af6jm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_glqek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_m73qm")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_n10tj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_1xc4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_055ya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_067aa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_2glh0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_6ynqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_y5kcc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_rvoxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_eoqfc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_vbp4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_ilpb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_wu12y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_gpl2v")
+}],
+"loop": false,
+"name": &"die",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kypa5")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_r8eah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7hgpt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_06yfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ldh3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_tu5wj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_3016y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cxwig")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xbesj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_26pl6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_gi5aw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_kxhws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_7wx67")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_m8dfk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_of7gd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_mmc5w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_dvpra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_jtd2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_1pgkv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_067oq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_mp075")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_aoc0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_awqx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_q1tcm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_2hwa2")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_4l1ux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_52fmh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_npli2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_pxtvs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_8rivy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_nli4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_uwk3t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_ywr65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_7whbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_ev0e1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_5nd28")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_isvrf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_5gmf2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_q8opd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_vuok6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_a5q86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_7xg6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_0r6be")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_kmqlu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_npq4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_6c85t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_voixt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_7gm5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_u6ppn")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("51_o1urw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_vj8vv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_eb3st")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_xi0vo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_4fpsx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_ohhig")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_i4c0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_pl2rc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_vn07x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_syjg1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_iswb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_o2m04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_u7tsc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_xry5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_dp5vc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_x3nmx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_11cy4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_iwh4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_gv4va")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_lwrpm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_nbf2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_k8msx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_8sc35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_rd7ve")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 24.0
+}]
+
+[node name="Enemy1" instance=ExtResource("1_6325b")]
+script = ExtResource("2_jctoq")
+enemy_name = "尸国皮甲兵"
+enemy_id = 1
+enemy_texture = ExtResource("3_jw517")
+start_data = SubResource("Resource_xgw4m")
+bounty = 6
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(-85, -100)
+sprite_frames = SubResource("SpriteFrames_8trp4")
+animation = &"attack"
+autoplay = "idle"

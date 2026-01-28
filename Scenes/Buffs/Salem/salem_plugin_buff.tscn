@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://ccydxmm5h8la0"]
+
+[ext_resource type="PackedScene" uid="uid://bwifge7de0uys" path="res://Scenes/Buffs/dot_buff.tscn" id="1_hqaut"]
+[ext_resource type="Script" path="res://Scripts/Buffs/salem_plugin_buff.gd" id="2_5wk68"]
+[ext_resource type="Script" path="res://Scripts/Classes/potion_particle_leader.gd" id="3_dcrtq"]
+[ext_resource type="Texture2D" uid="uid://oov3qeqnyjho" path="res://Assets/Images/Effects/smoke_particle.png" id="4_ulq4m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bbxfg"]
+radius = 73.9444
+
+[node name="SalemPluginBuff" instance=ExtResource("1_hqaut")]
+script = ExtResource("2_5wk68")
+lower_damage_list = Array[int]([1, 2, 3, 4, 5, 6, 7, 8, 9])
+higher_damage_list = Array[int]([2, 4, 6, 8, 10, 12, 14, 16, 18])
+duration = 3.0
+buff_tag = "SalemPluginBuff"
+immune_groups = Array[String](["god", "super_unit", "no_live"])
+
+[node name="DotTimer" parent="." index="0"]
+wait_time = 0.2
+
+[node name="PotionParticleLeader" type="Node2D" parent="." index="1" node_paths=PackedStringArray("buff_vehicle")]
+script = ExtResource("3_dcrtq")
+potion_color = Color(0, 0.419608, 0, 1)
+potion_texture = ExtResource("4_ulq4m")
+buff_vehicle = NodePath("..")
+particle_size_rate = 0.5
+particle_z_index = 1
+
+[node name="ExplosionArea" type="Area2D" parent="." index="2"]
+scale = Vector2(0.5, 0.5)
+collision_layer = 0
+collision_mask = 96
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExplosionArea" index="0"]
+scale = Vector2(1, 0.7)
+shape = SubResource("CircleShape2D_bbxfg")
+debug_color = Color(1, 1, 1, 0)

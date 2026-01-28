@@ -1,0 +1,95 @@
+[gd_scene load_steps=19 format=3 uid="uid://fh8k2bwo55h4"]
+
+[ext_resource type="Script" path="res://Scripts/StageComponents/sand_human.gd" id="1_tcpbv"]
+[ext_resource type="Texture2D" uid="uid://c82gi4wabcqt8" path="res://Assets/Images/Stages/Stage9/SandHuman/idle_0.png" id="2_nexkt"]
+[ext_resource type="Texture2D" uid="uid://b2xfkvb8ko8dh" path="res://Assets/Images/Stages/Stage9/SandHuman/Disappear_00.png" id="3_g1on4"]
+[ext_resource type="Texture2D" uid="uid://bjtaccv6rjhhe" path="res://Assets/Images/Stages/Stage9/SandHuman/Disappear_01.png" id="4_1h070"]
+[ext_resource type="Texture2D" uid="uid://b3ng1qmd12wlc" path="res://Assets/Images/Stages/Stage9/SandHuman/Disappear_02.png" id="5_irchb"]
+[ext_resource type="Texture2D" uid="uid://bvr5o3wivr172" path="res://Assets/Images/Stages/Stage9/SandHuman/Disappear_03.png" id="6_dm2pl"]
+[ext_resource type="Texture2D" uid="uid://i3giwn71ni8a" path="res://Assets/Images/Stages/Stage9/SandHuman/Disappear_04.png" id="7_f2e5h"]
+[ext_resource type="Texture2D" uid="uid://bhj77ywv6ui1e" path="res://Assets/Images/Stages/Stage9/SandHuman/Disappear_05.png" id="8_xi46m"]
+[ext_resource type="Texture2D" uid="uid://fks4adc1flxp" path="res://Assets/Images/Stages/Stage9/SandHuman/Disappear_06.png" id="9_1vdpj"]
+[ext_resource type="Texture2D" uid="uid://daj46o73re45a" path="res://Assets/Images/Stages/Stage9/SandHuman/Disappear_07.png" id="10_e2hts"]
+[ext_resource type="Texture2D" uid="uid://ml1igxoip5lj" path="res://Assets/Images/Stages/Stage9/SandHuman/Disappear_08.png" id="11_onrfq"]
+[ext_resource type="Texture2D" uid="uid://d1l74hmrw5dov" path="res://Assets/Images/Stages/Stage9/SandHuman/Disappear_09.png" id="12_s7ps1"]
+[ext_resource type="Texture2D" uid="uid://d3its0dopbtwe" path="res://Assets/Images/Stages/Stage9/SandHuman/Disappear_10.png" id="13_u5tkn"]
+[ext_resource type="Texture2D" uid="uid://08ivnp7avnsj" path="res://Assets/Images/Stages/Stage9/SandHuman/Disappear_11.png" id="14_4ww38"]
+[ext_resource type="Texture2D" uid="uid://bj4pr81npr1p" path="res://Assets/Images/Stages/Stage9/SandHuman/Disappear_12.png" id="15_m2kwl"]
+[ext_resource type="Texture2D" uid="uid://bgdsmlt2epu13" path="res://Assets/Images/Stages/Stage9/SandHuman/Disappear_13.png" id="16_bq0ye"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_avgvq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_g1on4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1h070")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_irchb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dm2pl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_f2e5h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xi46m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1vdpj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_e2hts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_onrfq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_s7ps1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_u5tkn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4ww38")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_m2kwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_bq0ye")
+}],
+"loop": false,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ic7hh"]
+size = Vector2(20, 37)
+
+[node name="SandHuman" type="Node2D"]
+script = ExtResource("1_tcpbv")
+
+[node name="Idle" type="Sprite2D" parent="."]
+position = Vector2(-1, -15)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_nexkt")
+
+[node name="Disappear" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(-4, -15)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_avgvq")
+
+[node name="ClickArea" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
+position = Vector2(0, -16.5)
+shape = SubResource("RectangleShape2D_ic7hh")
+
+[connection signal="input_event" from="ClickArea" to="." method="_on_click_area_input_event"]

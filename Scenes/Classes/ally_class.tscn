@@ -1,0 +1,140 @@
+[gd_scene load_steps=14 format=3 uid="uid://7cx0j7xjwcwi"]
+
+[ext_resource type="Script" path="res://Scripts/Classes/ally_class.gd" id="1_xtelr"]
+[ext_resource type="Script" path="res://Scripts/Classes/unit_body.gd" id="2_4eodk"]
+[ext_resource type="Texture2D" uid="uid://cxi20b6gstaqs" path="res://Assets/Images/UI/InformationBar/民兵.png" id="2_14ben"]
+[ext_resource type="Texture2D" uid="uid://dm5n18x7pdoay" path="res://Assets/Animations/Soldiers/LV1/SoldierLV1-attack_00.png" id="3_wq2ro"]
+[ext_resource type="Script" path="res://Scripts/Classes/hurt_box.gd" id="4_qb3s8"]
+[ext_resource type="Texture2D" uid="uid://13pxqroo72xu" path="res://Assets/Images/UI/unit-select.png" id="5_ab36q"]
+[ext_resource type="Texture2D" uid="uid://dpixs5csmnirl" path="res://Assets/Images/UI/血条.png" id="7_cxany"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e2xyr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_wq2ro")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3o7c3"]
+size = Vector2(80, 65)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g77ds"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ju24o"]
+atlas = ExtResource("7_cxany")
+region = Rect2(0, 27, 300, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3a76"]
+atlas = ExtResource("7_cxany")
+region = Rect2(0, 89, 300, 9)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_307yl"]
+radius = 73.9444
+
+[node name="AllyClass" type="Node2D"]
+process_mode = 1
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_xtelr")
+ally_name = "友军类"
+ally_texture = ExtResource("2_14ben")
+
+[node name="UnitBody" type="CharacterBody2D" parent="." node_paths=PackedStringArray("unit")]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("2_4eodk")
+unit = NodePath("..")
+
+[node name="AllySprite" type="AnimatedSprite2D" parent="UnitBody"]
+position = Vector2(-1, -99)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_e2xyr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody"]
+position = Vector2(0, -22.5)
+shape = SubResource("RectangleShape2D_3o7c3")
+
+[node name="HurtBox" type="Area2D" parent="UnitBody" node_paths=PackedStringArray("Unit")]
+position = Vector2(0, -79)
+scale = Vector2(4.91992, 4.91992)
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("4_qb3s8")
+Unit = NodePath("../..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/HurtBox"]
+shape = SubResource("RectangleShape2D_g77ds")
+debug_color = Color(0.7878, 0.100293, 1, 0.42)
+
+[node name="SelectSprite" type="Sprite2D" parent="UnitBody"]
+position = Vector2(-2, 0)
+scale = Vector2(3.7077, 3.7077)
+texture = ExtResource("5_ab36q")
+region_enabled = true
+region_rect = Rect2(47, 65, 34, 11)
+
+[node name="AllyButton" type="Button" parent="UnitBody"]
+offset_left = -40.0
+offset_top = -180.0
+offset_right = 42.0
+offset_bottom = 3.0
+focus_mode = 0
+
+[node name="HealthBar" type="TextureProgressBar" parent="UnitBody"]
+offset_left = -75.0
+offset_top = -210.0
+offset_right = 225.0
+offset_bottom = -201.0
+scale = Vector2(0.482894, 1.88085)
+max_value = 1.0
+step = 0.0
+texture_under = SubResource("AtlasTexture_ju24o")
+texture_progress = SubResource("AtlasTexture_m3a76")
+
+[node name="InterceptingArea" type="Area2D" parent="UnitBody"]
+top_level = true
+collision_layer = 0
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/InterceptingArea"]
+scale = Vector2(1, 0.699999)
+shape = SubResource("CircleShape2D_307yl")
+debug_color = Color(1, 1, 1, 0.121569)
+
+[node name="FarAttackArea" type="Area2D" parent="UnitBody"]
+collision_layer = 0
+collision_mask = 96
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/FarAttackArea"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_307yl")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="FarAttackMarker" type="Marker2D" parent="UnitBody"]
+
+[node name="FarAttackMarkerFlip" type="Marker2D" parent="UnitBody"]
+
+[node name="Buffs" type="Node2D" parent="UnitBody"]
+
+[node name="HealTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="RebirthTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="NormalAttackTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="DirectionChangeTimer" type="Timer" parent="."]
+wait_time = 8.0
+one_shot = true
+autostart = true
+
+[node name="FarAttackTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="pressed" from="UnitBody/AllyButton" to="." method="_on_ally_button_pressed"]
+[connection signal="timeout" from="HealTimer" to="." method="_on_heal_timer_timeout"]

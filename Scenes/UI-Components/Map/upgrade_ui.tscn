@@ -1,0 +1,1750 @@
+[gd_scene load_steps=142 format=3 uid="uid://bxua04prd4v4w"]
+
+[ext_resource type="Script" path="res://Scripts/UI-Components/Map/upgrade_ui.gd" id="1_okm43"]
+[ext_resource type="Texture2D" uid="uid://bcglomkfwq15i" path="res://Assets/Images/UI/Upgrade/Archer.png" id="2_33sfc"]
+[ext_resource type="Texture2D" uid="uid://1gt3uw1ogmkw" path="res://Assets/Images/UI/Upgrade/Barrack.png" id="3_wtb2l"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Map/level_progress_bar.gd" id="4_68g57"]
+[ext_resource type="Texture2D" uid="uid://lurtbin8e3pm" path="res://Assets/Images/UI/Upgrade/Magic.png" id="4_ygntk"]
+[ext_resource type="Texture2D" uid="uid://dwv4y4trbacj8" path="res://Assets/Images/UI/Upgrade/bombard.png" id="5_0st4w"]
+[ext_resource type="Texture2D" uid="uid://cv2y7jv8s2tj" path="res://Assets/Images/UI/Upgrade/Firerain.png" id="6_aa6dn"]
+[ext_resource type="Texture2D" uid="uid://dqrq6oovwd4k" path="res://Assets/Images/UI/Upgrade/Reinforce.png" id="7_unqp6"]
+[ext_resource type="PackedScene" uid="uid://5wpq8h2i2s8m" path="res://Scenes/UI-Components/normal_button.tscn" id="8_4o30h"]
+[ext_resource type="Texture2D" uid="uid://mexi6bfj3rg4" path="res://Assets/Images/UI/show_star_bar.png" id="9_ft0kk"]
+[ext_resource type="Texture2D" uid="uid://d1sjkrxoq5ldk" path="res://Assets/Images/UI/star.png" id="10_qmcei"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="11_uxwq0"]
+[ext_resource type="PackedScene" uid="uid://d1y1nllu68fr7" path="res://Scenes/UI-Components/Map/skill_button.tscn" id="12_4eplv"]
+[ext_resource type="Texture2D" uid="uid://hhfvmdmrypkx" path="res://Assets/Images/UI/Upgrade/Archers/充足木料.png" id="13_xe2r2"]
+[ext_resource type="Texture2D" uid="uid://dewhe88v5ccfr" path="res://Assets/Images/UI/Upgrade/Archers/充足木料no.png" id="14_iu6ls"]
+[ext_resource type="Texture2D" uid="uid://bt1m8banu7n2a" path="res://Assets/Images/UI/Upgrade/Archers/穿甲箭.png" id="15_qrkhn"]
+[ext_resource type="Texture2D" uid="uid://43u8sfrj7wde" path="res://Assets/Images/UI/Upgrade/Archers/穿甲箭no.png" id="16_3hdrr"]
+[ext_resource type="Texture2D" uid="uid://iiya7ds1klf2" path="res://Assets/Images/UI/Upgrade/Archers/苍龙之箭.png" id="17_7k0mr"]
+[ext_resource type="Texture2D" uid="uid://dffuuvgccbp40" path="res://Assets/Images/UI/Upgrade/Archers/苍龙之箭no.png" id="18_5oe0n"]
+[ext_resource type="Texture2D" uid="uid://bq6hehxg8d60p" path="res://Assets/Images/UI/Upgrade/Archers/黑曜石箭头.png" id="19_3iw5c"]
+[ext_resource type="Texture2D" uid="uid://dkn4mg5vv062t" path="res://Assets/Images/UI/Upgrade/Archers/黑曜石箭头no.png" id="20_mg4o8"]
+[ext_resource type="Texture2D" uid="uid://dwwxyxfq5tvg6" path="res://Assets/Images/UI/Upgrade/Barracks/远程指挥.png" id="21_wrvdl"]
+[ext_resource type="Texture2D" uid="uid://dpjjom0w83itd" path="res://Assets/Images/UI/Upgrade/Barracks/远程指挥no.png" id="22_vuxbi"]
+[ext_resource type="Texture2D" uid="uid://2k6eya5miu4n" path="res://Assets/Images/UI/Upgrade/Barracks/强健体魄.png" id="23_4secx"]
+[ext_resource type="Texture2D" uid="uid://hvmvajbjpxuj" path="res://Assets/Images/UI/Upgrade/Barracks/强健体魄no.png" id="24_whup3"]
+[ext_resource type="Texture2D" uid="uid://b4i2raq3o1bml" path="res://Assets/Images/UI/Upgrade/Barracks/精良装备.png" id="25_cc7s6"]
+[ext_resource type="Texture2D" uid="uid://nlvwny80kqu1" path="res://Assets/Images/UI/Upgrade/Barracks/精良装备no.png" id="26_6f7w7"]
+[ext_resource type="Texture2D" uid="uid://ba5fm85ssld1o" path="res://Assets/Images/UI/Upgrade/Barracks/高效训练.png" id="27_hqi7v"]
+[ext_resource type="Texture2D" uid="uid://dm7acur2jywut" path="res://Assets/Images/UI/Upgrade/Barracks/高效训练no.png" id="28_oj1cq"]
+[ext_resource type="Texture2D" uid="uid://ctwlqybkv5plj" path="res://Assets/Images/UI/Upgrade/Barracks/宁死不屈.png" id="29_xryye"]
+[ext_resource type="Texture2D" uid="uid://dubkkdnb8dvhf" path="res://Assets/Images/UI/Upgrade/Barracks/升级模板no.png" id="30_ea1rc"]
+[ext_resource type="Texture2D" uid="uid://cknncj8qxiruf" path="res://Assets/Images/UI/Upgrade/Magics/法力延伸.png" id="31_50hwd"]
+[ext_resource type="Texture2D" uid="uid://16kiklmtlmuh" path="res://Assets/Images/UI/Upgrade/Magics/法力延伸no.png" id="32_vqw2k"]
+[ext_resource type="Texture2D" uid="uid://ywrbfi8cqwxd" path="res://Assets/Images/UI/Upgrade/Magics/唯心攻击.png" id="33_wboo4"]
+[ext_resource type="Texture2D" uid="uid://ds6wmyfqcbv2j" path="res://Assets/Images/UI/Upgrade/Magics/唯心攻击no.png" id="34_twiu3"]
+[ext_resource type="Texture2D" uid="uid://bituvgr1ogdrh" path="res://Assets/Images/UI/Upgrade/Magics/魔法腐蚀.png" id="35_s4isj"]
+[ext_resource type="Texture2D" uid="uid://be3bo6mbpdtlw" path="res://Assets/Images/UI/Upgrade/Magics/魔法腐蚀no.png" id="36_65poj"]
+[ext_resource type="Texture2D" uid="uid://c4f5k1wbg5rli" path="res://Assets/Images/UI/Upgrade/Magics/致命巫术.png" id="37_3jghh"]
+[ext_resource type="Texture2D" uid="uid://c0310buehq5x7" path="res://Assets/Images/UI/Upgrade/Magics/致命巫术no.png" id="38_uimun"]
+[ext_resource type="Texture2D" uid="uid://xlrhit6631s7" path="res://Assets/Images/UI/Upgrade/Magics/闪耀魔法水晶.png" id="39_obmo5"]
+[ext_resource type="Texture2D" uid="uid://25wppogknjia" path="res://Assets/Images/UI/Upgrade/Magics/闪耀魔法水晶no.png" id="40_y0670"]
+[ext_resource type="Texture2D" uid="uid://v35ycakcbya5" path="res://Assets/Images/UI/Upgrade/Bombard/高级望远镜.png" id="41_e4dng"]
+[ext_resource type="Texture2D" uid="uid://ck2g82qwdy1mf" path="res://Assets/Images/UI/Upgrade/Bombard/高级望远镜no.png" id="42_kuwsu"]
+[ext_resource type="Texture2D" uid="uid://d1xiy3jsedesb" path="res://Assets/Images/UI/Upgrade/Bombard/成熟产业链.png" id="43_ko0h1"]
+[ext_resource type="Texture2D" uid="uid://d1ukxsl0fv1fv" path="res://Assets/Images/UI/Upgrade/Bombard/成熟产业链no.png" id="44_hb3vd"]
+[ext_resource type="Texture2D" uid="uid://bs1dlwakk7f55" path="res://Assets/Images/UI/Upgrade/Bombard/秘制炸药.png" id="45_iyvxi"]
+[ext_resource type="Texture2D" uid="uid://txgod7l5srwq" path="res://Assets/Images/UI/Upgrade/Bombard/秘制炸药no.png" id="46_l0ec7"]
+[ext_resource type="Texture2D" uid="uid://dg0qe18ts2wro" path="res://Assets/Images/UI/Upgrade/Bombard/精炼火药.png" id="47_lcy8b"]
+[ext_resource type="Texture2D" uid="uid://c1liimc1pn6h6" path="res://Assets/Images/UI/Upgrade/Bombard/精炼火药no.png" id="48_7xc0s"]
+[ext_resource type="Texture2D" uid="uid://c8xaqhyh3mjm7" path="res://Assets/Images/UI/Upgrade/Bombard/共振.png" id="49_fwdjs"]
+[ext_resource type="Texture2D" uid="uid://b1wxtvepj0y5h" path="res://Assets/Images/UI/Upgrade/Bombard/共振no.png" id="50_fahjt"]
+[ext_resource type="Texture2D" uid="uid://d18cxs245neo4" path="res://Assets/Images/UI/Upgrade/Firerain/天火.png" id="51_be3lq"]
+[ext_resource type="Texture2D" uid="uid://dowkuw7ii5ipq" path="res://Assets/Images/UI/Upgrade/Firerain/天火no.png" id="52_jjue3"]
+[ext_resource type="Texture2D" uid="uid://nqk1ifxwg51x" path="res://Assets/Images/UI/Upgrade/Firerain/焦土作战.png" id="53_3hwc8"]
+[ext_resource type="Texture2D" uid="uid://yv857kyi7ome" path="res://Assets/Images/UI/Upgrade/Firerain/焦土作战no.png" id="54_ooarm"]
+[ext_resource type="Texture2D" uid="uid://b8gpvjq5wvl8f" path="res://Assets/Images/UI/Upgrade/Firerain/超级天灾.png" id="55_ug3k0"]
+[ext_resource type="Texture2D" uid="uid://cpwyyjgg6qih8" path="res://Assets/Images/UI/Upgrade/Firerain/超级天灾no.png" id="56_jebpm"]
+[ext_resource type="Texture2D" uid="uid://cjj5x4hg6i1eg" path="res://Assets/Images/UI/Upgrade/Firerain/人间炼狱.png" id="57_rqrje"]
+[ext_resource type="Texture2D" uid="uid://37mt6qrrfxu3" path="res://Assets/Images/UI/Upgrade/Firerain/人间炼狱no.png" id="58_54fvk"]
+[ext_resource type="Texture2D" uid="uid://ch32wxgscx4ou" path="res://Assets/Images/UI/Upgrade/Firerain/壮丽陨石雨.png" id="59_oln76"]
+[ext_resource type="Texture2D" uid="uid://cjgc0mq6m14c3" path="res://Assets/Images/UI/Upgrade/Firerain/壮丽陨石雨no.png" id="60_cy831"]
+[ext_resource type="Texture2D" uid="uid://cja73oiaecayx" path="res://Assets/Images/UI/Upgrade/Reinforce/后备补给.png" id="61_766vv"]
+[ext_resource type="Texture2D" uid="uid://dskyk2o6vrcli" path="res://Assets/Images/UI/Upgrade/Reinforce/后备补给no.png" id="62_1lw0k"]
+[ext_resource type="Texture2D" uid="uid://dnbkrjetwnrak" path="res://Assets/Images/UI/Upgrade/Reinforce/武士装备.png" id="63_n838o"]
+[ext_resource type="Texture2D" uid="uid://ct03feyroouwj" path="res://Assets/Images/UI/Upgrade/Reinforce/武士装备no.png" id="64_jwpuk"]
+[ext_resource type="Texture2D" uid="uid://n8i36yjxjxx5" path="res://Assets/Images/UI/Upgrade/Reinforce/侦察兵装备.png" id="65_6sx0f"]
+[ext_resource type="Texture2D" uid="uid://bj6i00m4vs21h" path="res://Assets/Images/UI/Upgrade/Reinforce/侦察兵装备no.png" id="66_fuynu"]
+[ext_resource type="Texture2D" uid="uid://r3f7tcwjb0du" path="res://Assets/Images/UI/Upgrade/Reinforce/骑士装备.png" id="67_2y018"]
+[ext_resource type="Texture2D" uid="uid://dhahd4q7fde2" path="res://Assets/Images/UI/Upgrade/Reinforce/骑士装备no.png" id="68_17y11"]
+[ext_resource type="Texture2D" uid="uid://ct1vgxrsdouqj" path="res://Assets/Images/UI/Upgrade/Reinforce/破灭者.png" id="69_f4kua"]
+[ext_resource type="Texture2D" uid="uid://cfix8eerppu3u" path="res://Assets/Images/UI/Upgrade/Reinforce/破灭者no.png" id="70_xjg6i"]
+[ext_resource type="Texture2D" uid="uid://2ippkryrikd5" path="res://Assets/Images/UI/Upgrade/progress_under.png" id="72_3men1"]
+[ext_resource type="Texture2D" uid="uid://cogrjc1b145pd" path="res://Assets/Images/UI/Upgrade/progress_on.png" id="73_26bdm"]
+[ext_resource type="AudioStream" uid="uid://duvqp5eu8d8c3" path="res://Assets/Sounds/FXs/UIs/mcexp.wav" id="75_fmn8k"]
+[ext_resource type="Script" path="res://Scripts/StageComponents/mobile_middle_node.gd" id="76_t4mmv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15l3g"]
+atlas = ExtResource("72_3men1")
+region = Rect2(45, 6, 38, 517)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wtju"]
+atlas = ExtResource("73_26bdm")
+region = Rect2(43, 2, 41, 523)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y8gqm"]
+bg_color = Color(0, 0, 0, 0.886275)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Animation" id="Animation_3ba0i"]
+resource_name = "Entry"
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Under/Reinforcement/Reinforcement:position:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.4)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Under/Reinforcement/Reinforcement:position:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(147.235, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Under/Reinforcement/Reinforcement:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.4)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Under/Firerain/Firerain:position:x")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(-5.96046e-08, 1.4)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Under/Firerain/Firerain:position:y")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(147.235, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(-5.96046e-08, 0.8)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Under/Firerain/Firerain:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(-5.96046e-08, 1.4)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Under/Bombard/Bombard:position:x")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(-5.96046e-08, 1.4)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Under/Bombard/Bombard:position:y")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(147.235, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(-5.96046e-08, 0.7)
+}
+tracks/12/type = "bezier"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Under/Bombard/Bombard:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(-5.96046e-08, 1.4)
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Under/Magic/Magic:position:x")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(-5.96046e-08, 1.4)
+}
+tracks/14/type = "bezier"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Under/Magic/Magic:position:y")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(147.235, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+tracks/15/type = "bezier"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Under/Magic/Magic:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.4)
+}
+tracks/16/type = "bezier"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Under/Barrack/Barrack:position:x")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.4)
+}
+tracks/17/type = "bezier"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Under/Barrack/Barrack:position:y")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(147.235, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/18/type = "bezier"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Under/Barrack/Barrack:rotation")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.4)
+}
+tracks/19/type = "bezier"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Under/Archer/Archer:position:x")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.4)
+}
+tracks/20/type = "bezier"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Under/Archer/Archer:position:y")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(147.235, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/21/type = "bezier"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Under/Archer/Archer:rotation")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.4)
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Panel:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_ey6mg"]
+resource_name = "Exit"
+length = 1.2
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Under/Archer/Archer:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Under/Archer/Archer:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 157.121, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Under/Archer/Archer:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Under/Barrack/Barrack:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Under/Barrack/Barrack:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 157.121, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Under/Barrack/Barrack:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Under/Bombard/Bombard:position:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Under/Bombard/Bombard:position:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 157.121, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Under/Bombard/Bombard:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Under/Magic/Magic:position:x")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Under/Magic/Magic:position:y")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 157.121, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Under/Magic/Magic:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9)
+}
+tracks/12/type = "bezier"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Under/Firerain/Firerain:position:x")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9)
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Under/Firerain/Firerain:position:y")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 157.121, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.8)
+}
+tracks/14/type = "bezier"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Under/Firerain/Firerain:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9)
+}
+tracks/15/type = "bezier"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Under/Reinforcement/Reinforcement:position:x")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9)
+}
+tracks/16/type = "bezier"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Under/Reinforcement/Reinforcement:position:y")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 157.121, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9)
+}
+tracks/17/type = "bezier"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Under/Reinforcement/Reinforcement:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9)
+}
+tracks/18/type = "bezier"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath(".:modulate:r")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.5)
+}
+tracks/19/type = "bezier"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath(".:modulate:g")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.5)
+}
+tracks/20/type = "bezier"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath(".:modulate:b")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.5)
+}
+tracks/21/type = "bezier"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath(".:modulate:a")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2)
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Panel:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_dmwyh"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Under/Reinforcement/Reinforcement:position:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Under/Reinforcement/Reinforcement:position:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Under/Reinforcement/Reinforcement:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Under/Firerain/Firerain:position:x")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Under/Firerain/Firerain:position:y")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Under/Firerain/Firerain:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Under/Bombard/Bombard:position:x")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Under/Bombard/Bombard:position:y")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/12/type = "bezier"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Under/Bombard/Bombard:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Under/Magic/Magic:position:x")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/14/type = "bezier"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Under/Magic/Magic:position:y")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/15/type = "bezier"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Under/Magic/Magic:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/16/type = "bezier"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Under/Barrack/Barrack:position:x")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/17/type = "bezier"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Under/Barrack/Barrack:position:y")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/18/type = "bezier"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Under/Barrack/Barrack:rotation")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/19/type = "bezier"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Under/Archer/Archer:position:x")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/20/type = "bezier"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Under/Archer/Archer:position:y")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/21/type = "bezier"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Under/Archer/Archer:rotation")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Panel:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1xt38"]
+_data = {
+"Entry": SubResource("Animation_3ba0i"),
+"Exit": SubResource("Animation_ey6mg"),
+"RESET": SubResource("Animation_dmwyh")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4ain"]
+atlas = ExtResource("13_xe2r2")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70gb7"]
+atlas = ExtResource("14_iu6ls")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ropfl"]
+atlas = ExtResource("15_qrkhn")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wve1d"]
+atlas = ExtResource("16_3hdrr")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ke68v"]
+atlas = ExtResource("17_7k0mr")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3ehy"]
+atlas = ExtResource("18_5oe0n")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vm7gn"]
+atlas = ExtResource("19_3iw5c")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_scmbx"]
+atlas = ExtResource("20_mg4o8")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68baq"]
+atlas = ExtResource("21_wrvdl")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqr0j"]
+atlas = ExtResource("22_vuxbi")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0k3yb"]
+atlas = ExtResource("23_4secx")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r066i"]
+atlas = ExtResource("24_whup3")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aoqos"]
+atlas = ExtResource("25_cc7s6")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2e1cp"]
+atlas = ExtResource("26_6f7w7")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_quxf3"]
+atlas = ExtResource("27_hqi7v")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ctjvi"]
+atlas = ExtResource("28_oj1cq")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4hsl"]
+atlas = ExtResource("29_xryye")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uktve"]
+atlas = ExtResource("30_ea1rc")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bshl8"]
+atlas = ExtResource("31_50hwd")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xx4hm"]
+atlas = ExtResource("32_vqw2k")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_47xc6"]
+atlas = ExtResource("33_wboo4")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_67b5c"]
+atlas = ExtResource("34_twiu3")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xc0v1"]
+atlas = ExtResource("35_s4isj")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_caktk"]
+atlas = ExtResource("36_65poj")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uj55v"]
+atlas = ExtResource("37_3jghh")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dng0n"]
+atlas = ExtResource("38_uimun")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wuwdy"]
+atlas = ExtResource("39_obmo5")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rwear"]
+atlas = ExtResource("40_y0670")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8jt4"]
+atlas = ExtResource("41_e4dng")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b5wj1"]
+atlas = ExtResource("42_kuwsu")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwryb"]
+atlas = ExtResource("47_lcy8b")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vnew"]
+atlas = ExtResource("48_7xc0s")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hoahi"]
+atlas = ExtResource("43_ko0h1")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2ll6"]
+atlas = ExtResource("44_hb3vd")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1t1nk"]
+atlas = ExtResource("45_iyvxi")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ka2r"]
+atlas = ExtResource("46_l0ec7")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7254"]
+atlas = ExtResource("49_fwdjs")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbyve"]
+atlas = ExtResource("50_fahjt")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gefqa"]
+atlas = ExtResource("51_be3lq")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n6sst"]
+atlas = ExtResource("52_jjue3")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_et8pr"]
+atlas = ExtResource("53_3hwc8")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnmn0"]
+atlas = ExtResource("54_ooarm")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpgsv"]
+atlas = ExtResource("55_ug3k0")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_budye"]
+atlas = ExtResource("56_jebpm")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pfpwf"]
+atlas = ExtResource("57_rqrje")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gpdki"]
+atlas = ExtResource("58_54fvk")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8y2v"]
+atlas = ExtResource("59_oln76")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpapk"]
+atlas = ExtResource("60_cy831")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3tjjf"]
+atlas = ExtResource("61_766vv")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kuodc"]
+atlas = ExtResource("62_1lw0k")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ojkar"]
+atlas = ExtResource("63_n838o")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wvcq6"]
+atlas = ExtResource("64_jwpuk")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wdkjw"]
+atlas = ExtResource("65_6sx0f")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3wad"]
+atlas = ExtResource("66_fuynu")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gf3uy"]
+atlas = ExtResource("67_2y018")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ol4du"]
+atlas = ExtResource("68_17y11")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gukig"]
+atlas = ExtResource("69_f4kua")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xk2e"]
+atlas = ExtResource("70_xjg6i")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_be7rw"]
+bg_color = Color(0, 0, 0, 0.498039)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="UpgradeUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_okm43")
+metadata/_edit_vertical_guides_ = [960.0]
+
+[node name="BasePanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -36.0
+offset_top = -36.0
+offset_right = 36.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBars" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 365.0
+offset_top = 130.0
+offset_right = 2863.0
+offset_bottom = 647.0
+scale = Vector2(0.47315, 1.47031)
+theme_override_constants/separation = 454
+
+[node name="LevelProgressBar" type="TextureProgressBar" parent="ProgressBars"]
+layout_mode = 2
+max_value = 5.0
+step = 0.0
+fill_mode = 3
+texture_under = SubResource("AtlasTexture_15l3g")
+texture_progress = SubResource("AtlasTexture_3wtju")
+script = ExtResource("4_68g57")
+
+[node name="LevelProgressBar2" type="TextureProgressBar" parent="ProgressBars"]
+layout_mode = 2
+max_value = 5.0
+step = 0.0
+fill_mode = 3
+texture_under = SubResource("AtlasTexture_15l3g")
+texture_progress = SubResource("AtlasTexture_3wtju")
+script = ExtResource("4_68g57")
+skill_type = 1
+
+[node name="LevelProgressBar3" type="TextureProgressBar" parent="ProgressBars"]
+layout_mode = 2
+max_value = 5.0
+step = 0.0
+fill_mode = 3
+texture_under = SubResource("AtlasTexture_15l3g")
+texture_progress = SubResource("AtlasTexture_3wtju")
+script = ExtResource("4_68g57")
+skill_type = 2
+
+[node name="LevelProgressBar4" type="TextureProgressBar" parent="ProgressBars"]
+layout_mode = 2
+max_value = 5.0
+step = 0.0
+fill_mode = 3
+texture_under = SubResource("AtlasTexture_15l3g")
+texture_progress = SubResource("AtlasTexture_3wtju")
+script = ExtResource("4_68g57")
+skill_type = 3
+
+[node name="LevelProgressBar5" type="TextureProgressBar" parent="ProgressBars"]
+layout_mode = 2
+max_value = 5.0
+step = 0.0
+fill_mode = 3
+texture_under = SubResource("AtlasTexture_15l3g")
+texture_progress = SubResource("AtlasTexture_3wtju")
+script = ExtResource("4_68g57")
+skill_type = 4
+
+[node name="LevelProgressBar6" type="TextureProgressBar" parent="ProgressBars"]
+layout_mode = 2
+max_value = 5.0
+step = 0.0
+fill_mode = 3
+texture_under = SubResource("AtlasTexture_15l3g")
+texture_progress = SubResource("AtlasTexture_3wtju")
+script = ExtResource("4_68g57")
+skill_type = 5
+
+[node name="Under" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.704
+anchor_top = 1.003
+anchor_right = 0.704
+anchor_bottom = 1.003
+offset_left = -1039.68
+offset_top = -251.24
+offset_right = -366.68
+offset_bottom = -183.24
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.92209, 1.92209)
+theme_override_constants/separation = 120
+
+[node name="Archer" type="Control" parent="Under"]
+layout_mode = 2
+
+[node name="Archer" type="PanelContainer" parent="Under/Archer"]
+layout_mode = 2
+offset_right = 68.0
+offset_bottom = 68.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_y8gqm")
+
+[node name="MarginContainer" type="MarginContainer" parent="Under/Archer/Archer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="Under/Archer/Archer/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_33sfc")
+
+[node name="Barrack" type="Control" parent="Under"]
+layout_mode = 2
+
+[node name="Barrack" type="PanelContainer" parent="Under/Barrack"]
+layout_mode = 2
+offset_right = 68.0
+offset_bottom = 68.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_y8gqm")
+
+[node name="MarginContainer" type="MarginContainer" parent="Under/Barrack/Barrack"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="Under/Barrack/Barrack/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("3_wtb2l")
+
+[node name="Magic" type="Control" parent="Under"]
+layout_mode = 2
+
+[node name="Magic" type="PanelContainer" parent="Under/Magic"]
+layout_mode = 2
+offset_right = 68.0
+offset_bottom = 68.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_y8gqm")
+
+[node name="MarginContainer" type="MarginContainer" parent="Under/Magic/Magic"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="Under/Magic/Magic/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("4_ygntk")
+
+[node name="Bombard" type="Control" parent="Under"]
+layout_mode = 2
+
+[node name="Bombard" type="PanelContainer" parent="Under/Bombard"]
+layout_mode = 2
+offset_right = 68.0
+offset_bottom = 68.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_y8gqm")
+
+[node name="MarginContainer" type="MarginContainer" parent="Under/Bombard/Bombard"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="Under/Bombard/Bombard/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("5_0st4w")
+
+[node name="Firerain" type="Control" parent="Under"]
+layout_mode = 2
+
+[node name="Firerain" type="PanelContainer" parent="Under/Firerain"]
+layout_mode = 2
+offset_right = 68.0
+offset_bottom = 68.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_y8gqm")
+
+[node name="MarginContainer" type="MarginContainer" parent="Under/Firerain/Firerain"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="Under/Firerain/Firerain/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("6_aa6dn")
+
+[node name="Reinforcement" type="Control" parent="Under"]
+layout_mode = 2
+
+[node name="Reinforcement" type="PanelContainer" parent="Under/Reinforcement"]
+layout_mode = 2
+offset_right = 68.0
+offset_bottom = 68.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_y8gqm")
+
+[node name="MarginContainer" type="MarginContainer" parent="Under/Reinforcement/Reinforcement"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="Under/Reinforcement/Reinforcement/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("7_unqp6")
+
+[node name="FinishButton" parent="." instance=ExtResource("8_4o30h")]
+layout_mode = 0
+offset_left = 1731.0
+offset_top = 1003.0
+offset_right = 2062.0
+offset_bottom = 1146.0
+scale = Vector2(0.447244, 0.447244)
+button_title = "完成"
+
+[node name="CancelButton" parent="." instance=ExtResource("8_4o30h")]
+layout_mode = 0
+offset_left = 1509.0
+offset_top = 1003.0
+offset_right = 1840.0
+offset_bottom = 1146.0
+scale = Vector2(0.447244, 0.447244)
+button_title = "取消"
+
+[node name="ResetButton" parent="." instance=ExtResource("8_4o30h")]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 1003.0
+offset_right = 699.0
+offset_bottom = 1146.0
+scale = Vector2(0.447244, 0.447244)
+button_title = "重设"
+
+[node name="ShowStarBar" type="Sprite2D" parent="."]
+position = Vector2(191, 1028)
+scale = Vector2(0.58928, 0.58928)
+texture = ExtResource("9_ft0kk")
+region_enabled = true
+region_rect = Rect2(19, 179, 487, 125)
+
+[node name="Star" type="Sprite2D" parent="ShowStarBar"]
+position = Vector2(-144.244, 0)
+scale = Vector2(0.962045, 0.962045)
+texture = ExtResource("10_qmcei")
+
+[node name="Label" type="Label" parent="ShowStarBar"]
+offset_left = -64.0
+offset_top = -34.0
+offset_right = 208.0
+offset_bottom = 42.0
+theme_override_fonts/font = ExtResource("11_uxwq0")
+theme_override_font_sizes/font_size = 64
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_1xt38")
+}
+autoplay = "Entry"
+
+[node name="Skills" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 729.0
+offset_right = 1375.0
+offset_bottom = 808.0
+scale = Vector2(1.17871, 1.17871)
+theme_override_constants/separation = 127
+
+[node name="Archer" type="VBoxContainer" parent="Skills"]
+layout_mode = 2
+theme_override_constants/separation = -205
+
+[node name="SkillButton1" parent="Skills/Archer" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+
+[node name="SkillButton2" parent="Skills/Archer" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_b4ain")
+texture_pressed = SubResource("AtlasTexture_b4ain")
+texture_hover = SubResource("AtlasTexture_b4ain")
+texture_disabled = SubResource("AtlasTexture_70gb7")
+skill_level = 2
+
+[node name="SkillButton3" parent="Skills/Archer" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_ropfl")
+texture_pressed = SubResource("AtlasTexture_ropfl")
+texture_hover = SubResource("AtlasTexture_ropfl")
+texture_disabled = SubResource("AtlasTexture_wve1d")
+skill_level = 3
+
+[node name="SkillButton4" parent="Skills/Archer" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_ke68v")
+texture_pressed = SubResource("AtlasTexture_ke68v")
+texture_hover = SubResource("AtlasTexture_ke68v")
+texture_disabled = SubResource("AtlasTexture_c3ehy")
+skill_level = 4
+
+[node name="SkillButton5" parent="Skills/Archer" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_vm7gn")
+texture_pressed = SubResource("AtlasTexture_vm7gn")
+texture_hover = SubResource("AtlasTexture_vm7gn")
+texture_disabled = SubResource("AtlasTexture_scmbx")
+skill_level = 5
+
+[node name="Barrack" type="VBoxContainer" parent="Skills"]
+layout_mode = 2
+theme_override_constants/separation = -205
+
+[node name="SkillButton1" parent="Skills/Barrack" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_68baq")
+texture_pressed = SubResource("AtlasTexture_68baq")
+texture_hover = SubResource("AtlasTexture_68baq")
+texture_disabled = SubResource("AtlasTexture_hqr0j")
+skill_type = 1
+
+[node name="SkillButton2" parent="Skills/Barrack" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_0k3yb")
+texture_pressed = SubResource("AtlasTexture_0k3yb")
+texture_hover = SubResource("AtlasTexture_0k3yb")
+texture_disabled = SubResource("AtlasTexture_r066i")
+skill_type = 1
+skill_level = 2
+
+[node name="SkillButton3" parent="Skills/Barrack" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_aoqos")
+texture_pressed = SubResource("AtlasTexture_aoqos")
+texture_hover = SubResource("AtlasTexture_aoqos")
+texture_disabled = SubResource("AtlasTexture_2e1cp")
+skill_type = 1
+skill_level = 3
+
+[node name="SkillButton4" parent="Skills/Barrack" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_quxf3")
+texture_pressed = SubResource("AtlasTexture_quxf3")
+texture_hover = SubResource("AtlasTexture_quxf3")
+texture_disabled = SubResource("AtlasTexture_ctjvi")
+skill_type = 1
+skill_level = 4
+
+[node name="SkillButton5" parent="Skills/Barrack" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_k4hsl")
+texture_pressed = SubResource("AtlasTexture_k4hsl")
+texture_hover = SubResource("AtlasTexture_k4hsl")
+texture_disabled = SubResource("AtlasTexture_uktve")
+skill_type = 1
+skill_level = 5
+
+[node name="Magic" type="VBoxContainer" parent="Skills"]
+layout_mode = 2
+theme_override_constants/separation = -205
+
+[node name="SkillButton1" parent="Skills/Magic" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_bshl8")
+texture_pressed = SubResource("AtlasTexture_bshl8")
+texture_hover = SubResource("AtlasTexture_bshl8")
+texture_disabled = SubResource("AtlasTexture_xx4hm")
+skill_type = 2
+
+[node name="SkillButton2" parent="Skills/Magic" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_47xc6")
+texture_pressed = SubResource("AtlasTexture_47xc6")
+texture_hover = SubResource("AtlasTexture_47xc6")
+texture_disabled = SubResource("AtlasTexture_67b5c")
+skill_type = 2
+skill_level = 2
+
+[node name="SkillButton3" parent="Skills/Magic" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_xc0v1")
+texture_pressed = SubResource("AtlasTexture_xc0v1")
+texture_hover = SubResource("AtlasTexture_xc0v1")
+texture_disabled = SubResource("AtlasTexture_caktk")
+skill_type = 2
+skill_level = 3
+
+[node name="SkillButton4" parent="Skills/Magic" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_uj55v")
+texture_pressed = SubResource("AtlasTexture_uj55v")
+texture_hover = SubResource("AtlasTexture_uj55v")
+texture_disabled = SubResource("AtlasTexture_dng0n")
+skill_type = 2
+skill_level = 4
+
+[node name="SkillButton5" parent="Skills/Magic" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_wuwdy")
+texture_pressed = SubResource("AtlasTexture_wuwdy")
+texture_hover = SubResource("AtlasTexture_wuwdy")
+texture_disabled = SubResource("AtlasTexture_rwear")
+skill_type = 2
+skill_level = 5
+
+[node name="Bombard" type="VBoxContainer" parent="Skills"]
+layout_mode = 2
+theme_override_constants/separation = -205
+
+[node name="SkillButton1" parent="Skills/Bombard" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_a8jt4")
+texture_pressed = SubResource("AtlasTexture_a8jt4")
+texture_hover = SubResource("AtlasTexture_a8jt4")
+texture_disabled = SubResource("AtlasTexture_b5wj1")
+skill_type = 3
+
+[node name="SkillButton4" parent="Skills/Bombard" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_qwryb")
+texture_pressed = SubResource("AtlasTexture_qwryb")
+texture_hover = SubResource("AtlasTexture_qwryb")
+texture_disabled = SubResource("AtlasTexture_1vnew")
+skill_type = 3
+skill_level = 2
+
+[node name="SkillButton2" parent="Skills/Bombard" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_hoahi")
+texture_pressed = SubResource("AtlasTexture_hoahi")
+texture_hover = SubResource("AtlasTexture_hoahi")
+texture_disabled = SubResource("AtlasTexture_s2ll6")
+skill_type = 3
+skill_level = 3
+
+[node name="SkillButton3" parent="Skills/Bombard" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_1t1nk")
+texture_pressed = SubResource("AtlasTexture_1t1nk")
+texture_hover = SubResource("AtlasTexture_1t1nk")
+texture_disabled = SubResource("AtlasTexture_2ka2r")
+skill_type = 3
+skill_level = 4
+
+[node name="SkillButton5" parent="Skills/Bombard" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_a7254")
+texture_pressed = SubResource("AtlasTexture_a7254")
+texture_hover = SubResource("AtlasTexture_a7254")
+texture_disabled = SubResource("AtlasTexture_jbyve")
+skill_type = 3
+skill_level = 5
+
+[node name="Firerain" type="VBoxContainer" parent="Skills"]
+layout_mode = 2
+theme_override_constants/separation = -205
+
+[node name="SkillButton1" parent="Skills/Firerain" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gefqa")
+texture_pressed = SubResource("AtlasTexture_gefqa")
+texture_hover = SubResource("AtlasTexture_gefqa")
+texture_disabled = SubResource("AtlasTexture_n6sst")
+skill_type = 4
+
+[node name="SkillButton2" parent="Skills/Firerain" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_et8pr")
+texture_pressed = SubResource("AtlasTexture_et8pr")
+texture_hover = SubResource("AtlasTexture_et8pr")
+texture_disabled = SubResource("AtlasTexture_qnmn0")
+skill_type = 4
+skill_level = 2
+
+[node name="SkillButton3" parent="Skills/Firerain" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_mpgsv")
+texture_pressed = SubResource("AtlasTexture_mpgsv")
+texture_hover = SubResource("AtlasTexture_mpgsv")
+texture_disabled = SubResource("AtlasTexture_budye")
+skill_type = 4
+skill_level = 3
+
+[node name="SkillButton4" parent="Skills/Firerain" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_pfpwf")
+texture_pressed = SubResource("AtlasTexture_pfpwf")
+texture_hover = SubResource("AtlasTexture_pfpwf")
+texture_disabled = SubResource("AtlasTexture_gpdki")
+skill_type = 4
+skill_level = 4
+
+[node name="SkillButton5" parent="Skills/Firerain" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_y8y2v")
+texture_pressed = SubResource("AtlasTexture_y8y2v")
+texture_hover = SubResource("AtlasTexture_y8y2v")
+texture_disabled = SubResource("AtlasTexture_wpapk")
+skill_type = 4
+skill_level = 5
+
+[node name="Reinforce" type="VBoxContainer" parent="Skills"]
+layout_mode = 2
+theme_override_constants/separation = -205
+
+[node name="SkillButton1" parent="Skills/Reinforce" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_3tjjf")
+texture_pressed = SubResource("AtlasTexture_3tjjf")
+texture_hover = SubResource("AtlasTexture_3tjjf")
+texture_disabled = SubResource("AtlasTexture_kuodc")
+skill_type = 5
+
+[node name="SkillButton2" parent="Skills/Reinforce" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_ojkar")
+texture_pressed = SubResource("AtlasTexture_ojkar")
+texture_hover = SubResource("AtlasTexture_ojkar")
+texture_disabled = SubResource("AtlasTexture_wvcq6")
+skill_type = 5
+skill_level = 2
+
+[node name="SkillButton3" parent="Skills/Reinforce" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_wdkjw")
+texture_pressed = SubResource("AtlasTexture_wdkjw")
+texture_hover = SubResource("AtlasTexture_wdkjw")
+texture_disabled = SubResource("AtlasTexture_b3wad")
+skill_type = 5
+skill_level = 3
+
+[node name="SkillButton4" parent="Skills/Reinforce" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gf3uy")
+texture_pressed = SubResource("AtlasTexture_gf3uy")
+texture_hover = SubResource("AtlasTexture_gf3uy")
+texture_disabled = SubResource("AtlasTexture_ol4du")
+skill_type = 5
+skill_level = 4
+
+[node name="SkillButton5" parent="Skills/Reinforce" instance=ExtResource("12_4eplv")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gukig")
+texture_pressed = SubResource("AtlasTexture_gukig")
+texture_hover = SubResource("AtlasTexture_gukig")
+texture_disabled = SubResource("AtlasTexture_1xk2e")
+skill_type = 5
+skill_level = 5
+
+[node name="SkillIntroPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1607.0
+offset_top = 389.0
+offset_right = 1911.0
+offset_bottom = 572.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_be7rw")
+
+[node name="NameLabel" type="Label" parent="SkillIntroPanel"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 13.0
+offset_right = 670.0
+offset_bottom = 126.0
+scale = Vector2(0.427429, 0.427429)
+theme_override_colors/font_color = Color(1, 0.545098, 0, 1)
+theme_override_fonts/font = ExtResource("11_uxwq0")
+theme_override_font_sizes/font_size = 72
+text = "青龙之眼"
+vertical_alignment = 1
+
+[node name="IntroLabel" type="Label" parent="SkillIntroPanel"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 71.0
+offset_right = 694.0
+offset_bottom = 308.0
+scale = Vector2(0.404785, 0.404785)
+theme_override_fonts/font = ExtResource("11_uxwq0")
+theme_override_font_sizes/font_size = 48
+text = "弓箭手的视力得到强化，提高箭塔的攻击范围。"
+autowrap_mode = 3
+
+[node name="Star" type="Sprite2D" parent="SkillIntroPanel"]
+position = Vector2(231, 39)
+scale = Vector2(0.325718, 0.325718)
+texture = ExtResource("10_qmcei")
+
+[node name="PriceLabel" type="Label" parent="SkillIntroPanel"]
+layout_mode = 0
+offset_left = 252.0
+offset_top = 24.0
+offset_right = 321.0
+offset_bottom = 72.0
+scale = Vector2(0.625452, 0.625452)
+theme_override_fonts/font = ExtResource("11_uxwq0")
+theme_override_font_sizes/font_size = 48
+text = "1"
+
+[node name="LevelUpAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("75_fmn8k")
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MobileMiddleProcess" type="Node" parent="."]
+script = ExtResource("76_t4mmv")
+
+[connection signal="pressed" from="FinishButton" to="." method="_on_finish_button_pressed"]
+[connection signal="pressed" from="CancelButton" to="." method="_on_cancel_button_pressed"]
+[connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]

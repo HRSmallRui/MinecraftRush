@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://de67d6qs1ggfr"]
+
+[ext_resource type="Texture2D" uid="uid://dq8mty37pvehc" path="res://Assets/Images/Effects/lightning.png" id="1_c5eem"]
+[ext_resource type="Script" path="res://Scripts/Effects/lightning.gd" id="2_o8lwa"]
+[ext_resource type="AudioStream" uid="uid://c7oo7o6gvndmj" path="res://Assets/Sounds/FXs/Heroes/Alex/打雷.wav" id="2_w8hm6"]
+
+[sub_resource type="Animation" id="Animation_t0ftd"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_51j3h"]
+resource_name = "shining"
+length = 1.8
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.5, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3y046"]
+_data = {
+"RESET": SubResource("Animation_t0ftd"),
+"shining": SubResource("Animation_51j3h")
+}
+
+[node name="Lightning" type="Line2D"]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+points = PackedVector2Array(0, 0, 0, -13, 105, -207, -62, -505, 51, -843, -49, -1237, 72, -1631, -45, -2205, 85, -2967, -229, -3811, 188, -4426)
+width = 80.0
+texture = ExtResource("1_c5eem")
+texture_mode = 1
+script = ExtResource("2_o8lwa")
+point_array = PackedVector2Array(0, 0, 0, -13, 105, -207, -62, -505, 51, -843, -49, -1237, 72, -1631, -45, -2205, 85, -2967, -229, -3811, 188, -4426)
+
+[node name="LightningAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_w8hm6")
+autoplay = true
+bus = &"Sound"
+
+[node name="DelayTimer" type="Timer" parent="."]
+wait_time = 0.02
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3y046")
+}
+autoplay = "shining"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

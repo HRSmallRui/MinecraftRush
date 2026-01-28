@@ -1,0 +1,107 @@
+[gd_scene load_steps=25 format=3 uid="uid://s1ufugpd4ypu"]
+
+[ext_resource type="Texture2D" uid="uid://cty088kwcyv6x" path="res://Assets/Images/Effects/PotionSlash/0001.png" id="1_pmoeb"]
+[ext_resource type="Texture2D" uid="uid://dkywpk2cg3qwu" path="res://Assets/Images/Effects/PotionSlash/0002.png" id="2_jmi7g"]
+[ext_resource type="Texture2D" uid="uid://dllb86jj3c8ev" path="res://Assets/Images/Effects/PotionSlash/0003.png" id="3_8woia"]
+[ext_resource type="Texture2D" uid="uid://y80ogy1nv1oo" path="res://Assets/Images/Effects/PotionSlash/0004.png" id="4_oqb4u"]
+[ext_resource type="Texture2D" uid="uid://c6qddacf4gvyl" path="res://Assets/Images/Effects/PotionSlash/0005.png" id="5_26dg6"]
+[ext_resource type="Texture2D" uid="uid://ut7t602rd0xn" path="res://Assets/Images/Effects/PotionSlash/0006.png" id="6_oss0e"]
+[ext_resource type="Texture2D" uid="uid://d1bq2pd7dmqhg" path="res://Assets/Images/Effects/PotionSlash/0007.png" id="7_gq5br"]
+[ext_resource type="Texture2D" uid="uid://bclrcglwiyuqm" path="res://Assets/Images/Effects/PotionSlash/0008.png" id="8_hrbre"]
+[ext_resource type="Texture2D" uid="uid://jw3stb5xjdjw" path="res://Assets/Images/Effects/PotionSlash/0009.png" id="9_mcbmy"]
+[ext_resource type="Texture2D" uid="uid://wia4c47ar648" path="res://Assets/Images/Effects/PotionSlash/0010.png" id="10_rwv8c"]
+[ext_resource type="Texture2D" uid="uid://3y6kpn1b1tqy" path="res://Assets/Images/Effects/PotionSlash/0011.png" id="11_f6svs"]
+[ext_resource type="Texture2D" uid="uid://ccnsq3mmxg6tc" path="res://Assets/Images/Effects/PotionSlash/0012.png" id="12_udkn2"]
+[ext_resource type="Texture2D" uid="uid://3yudksy1af1c" path="res://Assets/Images/Effects/PotionSlash/0013.png" id="13_ok8xb"]
+[ext_resource type="Texture2D" uid="uid://ck1lcrsy166s7" path="res://Assets/Images/Effects/PotionSlash/0014.png" id="14_pvif6"]
+[ext_resource type="Texture2D" uid="uid://7m4s56wtpyb8" path="res://Assets/Images/Effects/PotionSlash/0015.png" id="15_guc5b"]
+[ext_resource type="Texture2D" uid="uid://ivwr8x0806vj" path="res://Assets/Images/Effects/PotionSlash/0016.png" id="16_ccsit"]
+[ext_resource type="Texture2D" uid="uid://coign4jnyyee7" path="res://Assets/Images/Effects/PotionSlash/0017.png" id="17_7qhmm"]
+[ext_resource type="Texture2D" uid="uid://lbr2usj86q86" path="res://Assets/Images/Effects/PotionSlash/0018.png" id="18_kpe46"]
+[ext_resource type="Texture2D" uid="uid://co0n4eo0nbxg0" path="res://Assets/Images/Effects/PotionSlash/0019.png" id="19_ybwok"]
+[ext_resource type="Texture2D" uid="uid://ce4wg8uplktrg" path="res://Assets/Images/Effects/PotionSlash/0020.png" id="20_j186v"]
+[ext_resource type="Texture2D" uid="uid://osos0chkhb2w" path="res://Assets/Images/Effects/PotionSlash/0021.png" id="21_c4q41"]
+[ext_resource type="Texture2D" uid="uid://cis8vwht24bv6" path="res://Assets/Images/Effects/PotionSlash/0022.png" id="22_yuxse"]
+[ext_resource type="Script" path="res://Scripts/Effects/normal_effect.gd" id="23_pnv5o"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cgl32"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pmoeb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jmi7g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8woia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_oqb4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_26dg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_oss0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gq5br")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hrbre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_mcbmy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_rwv8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_f6svs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_udkn2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ok8xb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_pvif6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_guc5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ccsit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_7qhmm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_kpe46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ybwok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_j186v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_c4q41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_yuxse")
+}],
+"loop": false,
+"name": &"default",
+"speed": 48.0
+}]
+
+[node name="PotionSlashEffect" type="AnimatedSprite2D"]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_cgl32")
+autoplay = "default"
+frame = 4
+offset = Vector2(0, -50)
+script = ExtResource("23_pnv5o")

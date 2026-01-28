@@ -1,0 +1,110 @@
+[gd_scene load_steps=8 format=3 uid="uid://7mgppbsebrtc"]
+
+[ext_resource type="Script" path="res://Scripts/UI-Components/Map/mode_button.gd" id="1_21vx4"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="2_d8ufp"]
+[ext_resource type="Texture2D" uid="uid://bipo1pvognp56" path="res://Assets/Images/UI/battle_mode.png" id="3_750cr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tgbuj"]
+bg_color = Color(0, 0, 0, 0.556863)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dj5ie"]
+bg_color = Color(0.147672, 0.147672, 0.147672, 0.72549)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xk20c"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7csot"]
+bg_color = Color(0, 0, 0, 0.662745)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[node name="ModeButton" type="Button"]
+offset_right = 313.0
+offset_bottom = 122.0
+focus_mode = 1
+theme_override_styles/disabled = SubResource("StyleBoxFlat_tgbuj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dj5ie")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tgbuj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tgbuj")
+script = ExtResource("1_21vx4")
+
+[node name="ModeLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 1.0
+offset_right = 300.0
+offset_bottom = 123.0
+theme_override_fonts/font = ExtResource("2_d8ufp")
+theme_override_font_sizes/font_size = 48
+text = "战役模式"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 22.0
+offset_right = 90.0
+offset_bottom = 99.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xk20c")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 22.0
+offset_right = 142.0
+offset_bottom = 150.0
+scale = Vector2(0.592325, 0.592325)
+texture = ExtResource("3_750cr")
+
+[node name="IntroPPanel" type="Panel" parent="."]
+visible = false
+z_index = 20
+layout_mode = 0
+offset_left = 370.0
+offset_top = 42.0
+offset_right = 758.0
+offset_bottom = 266.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7csot")
+
+[node name="PaneModeLabel" type="Label" parent="IntroPPanel"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 22.0
+offset_right = 275.0
+offset_bottom = 86.0
+scale = Vector2(0.4418, 0.4418)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_d8ufp")
+theme_override_font_sizes/font_size = 64
+text = "钻石挑战"
+vertical_alignment = 1
+
+[node name="ModeIntroPanel" type="Label" parent="IntroPPanel"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 67.0
+offset_right = 807.0
+offset_bottom = 327.0
+scale = Vector2(0.4418, 0.4418)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 35
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_d8ufp")
+theme_override_font_sizes/font_size = 36
+text = "基岩挑战是为终极防御者提供的考验，在限制防御塔种类，只有一点生命的前提下应对一波敌人超精英部队的总攻，是对领导者战术技巧的终极考验，它将会把你的战术技巧提升至极限。（战役模式三星评价通关解锁）"
+autowrap_mode = 3
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

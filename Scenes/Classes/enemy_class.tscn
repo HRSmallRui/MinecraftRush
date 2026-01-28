@@ -1,0 +1,139 @@
+[gd_scene load_steps=19 format=3 uid="uid://c3a06iwf4hcp1"]
+
+[ext_resource type="Script" path="res://Scripts/Classes/enemy_class.gd" id="1_paaco"]
+[ext_resource type="Texture2D" uid="uid://cs0pc8baxwnxu" path="res://Assets/Images/UI/InformationBar/尸国杂兵.png" id="2_6cwv2"]
+[ext_resource type="Script" path="res://Scripts/Classes/unit_body.gd" id="2_tllji"]
+[ext_resource type="AudioStream" uid="uid://bsweeej3wxikm" path="res://Assets/Sounds/FXs/Enemies/Sound_HumanDead1.wav" id="3_bcsrv"]
+[ext_resource type="Texture2D" uid="uid://bvgmbhga1m1me" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵attack_00.png" id="3_l0n2n"]
+[ext_resource type="Script" path="res://Scripts/Classes/hurt_box.gd" id="4_6amjf"]
+[ext_resource type="AudioStream" uid="uid://dr0f10rntenjx" path="res://Assets/Sounds/FXs/Enemies/Sound_HumanDead2.wav" id="4_qheye"]
+[ext_resource type="Texture2D" uid="uid://13pxqroo72xu" path="res://Assets/Images/UI/unit-select.png" id="5_5x8th"]
+[ext_resource type="AudioStream" uid="uid://bbjx2rh2rc525" path="res://Assets/Sounds/FXs/Enemies/Sound_HumanDead3.wav" id="5_ll7ae"]
+[ext_resource type="AudioStream" uid="uid://0h275ggnhryt" path="res://Assets/Sounds/FXs/Enemies/Sound_HumanDead4.wav" id="6_x6g2n"]
+[ext_resource type="Texture2D" uid="uid://6mjftwxikkug" path="res://icon.svg" id="7_cg515"]
+[ext_resource type="Texture2D" uid="uid://dpixs5csmnirl" path="res://Assets/Images/UI/血条.png" id="7_o72lm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2xwko"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_l0n2n")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qncia"]
+size = Vector2(80, 97.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kmvcm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_krwqg"]
+atlas = ExtResource("7_o72lm")
+region = Rect2(0, 27, 300, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6sri"]
+atlas = ExtResource("7_o72lm")
+region = Rect2(0, 89, 300, 9)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7mxxu"]
+radius = 73.9444
+
+[node name="EnemyClass" type="PathFollow2D"]
+process_mode = 1
+loop = false
+script = ExtResource("1_paaco")
+enemy_name = "敌人类"
+enemy_texture = ExtResource("2_6cwv2")
+die_audio_stream_list = Array[AudioStream]([ExtResource("3_bcsrv"), ExtResource("4_qheye"), ExtResource("5_ll7ae"), ExtResource("6_x6g2n")])
+
+[node name="UnitBody" type="CharacterBody2D" parent="." node_paths=PackedStringArray("unit")]
+scale = Vector2(0.2, 0.2)
+collision_layer = 32
+collision_mask = 0
+script = ExtResource("2_tllji")
+unit = NodePath("..")
+
+[node name="EnemySprite" type="AnimatedSprite2D" parent="UnitBody"]
+position = Vector2(0, -90)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_2xwko")
+animation = &"idle"
+
+[node name="BodyCollision" type="CollisionShape2D" parent="UnitBody"]
+position = Vector2(0, -46.25)
+shape = SubResource("RectangleShape2D_qncia")
+
+[node name="HurtBox" type="Area2D" parent="UnitBody" node_paths=PackedStringArray("Unit")]
+position = Vector2(0, -79)
+scale = Vector2(4.91992, 4.91992)
+collision_layer = 32
+collision_mask = 0
+monitoring = false
+script = ExtResource("4_6amjf")
+Unit = NodePath("../..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/HurtBox"]
+shape = SubResource("RectangleShape2D_kmvcm")
+debug_color = Color(0.7878, 0.100293, 1, 0.42)
+
+[node name="SelectSprite" type="Sprite2D" parent="UnitBody"]
+scale = Vector2(3.7077, 3.7077)
+texture = ExtResource("5_5x8th")
+region_enabled = true
+region_rect = Rect2(47, 32, 34, 11)
+
+[node name="EnemyButton" type="Button" parent="UnitBody"]
+offset_left = -40.0
+offset_top = -180.0
+offset_right = 42.0
+offset_bottom = 3.0
+focus_mode = 0
+
+[node name="HealthBar" type="TextureProgressBar" parent="UnitBody"]
+offset_left = -75.0
+offset_top = -210.0
+offset_right = 225.0
+offset_bottom = -201.0
+scale = Vector2(0.482894, 1.88085)
+max_value = 1.0
+step = 0.0
+texture_under = SubResource("AtlasTexture_krwqg")
+texture_progress = SubResource("AtlasTexture_m6sri")
+
+[node name="InterceptingMarker" type="Marker2D" parent="UnitBody"]
+position = Vector2(150, 0)
+
+[node name="FarAttackArea" type="Area2D" parent="UnitBody"]
+collision_layer = 0
+collision_mask = 24
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/FarAttackArea"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_7mxxu")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="FarAttackMarker" type="Marker2D" parent="UnitBody"]
+
+[node name="FarAttackMarkerFlip" type="Marker2D" parent="UnitBody"]
+
+[node name="Buffs" type="Node2D" parent="UnitBody"]
+scale = Vector2(5, 5)
+
+[node name="DirectionSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(10, 0)
+scale = Vector2(0.0581174, 0.0581174)
+texture = ExtResource("7_cg515")
+
+[node name="NormalAttackTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="DieAudio" type="AudioStreamPlayer" parent="."]
+bus = &"Sound"
+
+[node name="FarAttackTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="pressed" from="UnitBody/EnemyButton" to="." method="_on_enemy_button_pressed"]

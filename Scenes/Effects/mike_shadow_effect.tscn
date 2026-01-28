@@ -1,0 +1,91 @@
+[gd_scene load_steps=7 format=3 uid="uid://dhltw5fhv5kal"]
+
+[ext_resource type="SpriteFrames" uid="uid://dadvopch7rgfa" path="res://Assets/Animations/Heroes/Mike/mike_smith.tres" id="1_aqxgq"]
+[ext_resource type="Script" path="res://Scripts/Effects/mike_shadow_effect.gd" id="2_6lfh3"]
+[ext_resource type="Texture2D" uid="uid://dgyxudvs7ewlh" path="res://Assets/Images/Effects/神环.png" id="3_kso35"]
+
+[sub_resource type="Animation" id="Animation_4kqb0"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TotalControlRing/Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TotalControlRing/Sprite2D2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_v5ff1"]
+resource_name = "rotate"
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TotalControlRing/Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(1, 1),
+"points": PackedFloat32Array(0, 0, 0, 0, 0, 6.28319, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TotalControlRing/Sprite2D2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(1, 1),
+"points": PackedFloat32Array(0, 0, 0, 0, 0, -6.28319, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xkvyj"]
+_data = {
+"RESET": SubResource("Animation_4kqb0"),
+"rotate": SubResource("Animation_v5ff1")
+}
+
+[node name="MikeShadowEffect" type="AnimatedSprite2D"]
+modulate = Color(0, 1, 1, 1)
+sprite_frames = ExtResource("1_aqxgq")
+animation = &"move"
+offset = Vector2(-1, -21)
+script = ExtResource("2_6lfh3")
+
+[node name="GodRing" type="Node2D" parent="."]
+show_behind_parent = true
+position = Vector2(-4, -34)
+scale = Vector2(0.2, 0.2)
+
+[node name="TotalControlRing" type="Node2D" parent="GodRing"]
+position = Vector2(5, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="GodRing/TotalControlRing"]
+scale = Vector2(0.661998, 0.661998)
+texture = ExtResource("3_kso35")
+
+[node name="Sprite2D2" type="Sprite2D" parent="GodRing/TotalControlRing"]
+scale = Vector2(1.60288, 1.60288)
+texture = ExtResource("3_kso35")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GodRing"]
+libraries = {
+"": SubResource("AnimationLibrary_xkvyj")
+}
+autoplay = "rotate"

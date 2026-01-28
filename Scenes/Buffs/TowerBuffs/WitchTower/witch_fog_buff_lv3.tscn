@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://4nth0rrrsb20"]
+
+[ext_resource type="PackedScene" uid="uid://bjfa3t67tpsbr" path="res://Scenes/Buffs/property_buff.tscn" id="1_wlrbu"]
+[ext_resource type="Script" path="res://Scripts/Buffs/property_buff_block.gd" id="2_ms1lo"]
+[ext_resource type="Script" path="res://Scripts/Classes/potion_particle_leader.gd" id="3_3duwu"]
+
+[sub_resource type="Resource" id="Resource_ax61k"]
+script = ExtResource("2_ms1lo")
+property_type = 9
+operation_type = 1
+operation_data = 0.6
+
+[sub_resource type="Resource" id="Resource_qhorx"]
+script = ExtResource("2_ms1lo")
+property_type = 1
+operation_type = 1
+operation_data = 0.6
+
+[sub_resource type="Resource" id="Resource_pvmn1"]
+script = ExtResource("2_ms1lo")
+property_type = 2
+operation_type = 1
+operation_data = 0.6
+
+[node name="WitchFogBuff" instance=ExtResource("1_wlrbu")]
+buff_blocks = Array[ExtResource("2_ms1lo")]([SubResource("Resource_ax61k"), SubResource("Resource_qhorx"), SubResource("Resource_pvmn1")])
+duration = 1.0
+buff_level = 3
+buff_tag = "WitchFogPoison"
+immune_groups = Array[String](["super_unit", "god"])
+
+[node name="PotionParticleLeader" type="Node2D" parent="." index="0" node_paths=PackedStringArray("buff_vehicle")]
+script = ExtResource("3_3duwu")
+potion_color = Color(0, 0.262745, 0, 1)
+buff_vehicle = NodePath("..")

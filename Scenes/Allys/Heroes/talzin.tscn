@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://pfi6c0kuocyc"]
+
+[ext_resource type="PackedScene" uid="uid://58cc8ohjp6pd" path="res://Scenes/Allys/Heroes/hero_class.tscn" id="1_bgytc"]
+[ext_resource type="Script" path="res://Scripts/Allys/Heroes/talzin.gd" id="2_rsot2"]
+[ext_resource type="Resource" uid="uid://c0swkperp7xfh" path="res://Library/Heroes/HeroPropertyBlocks/Talzin.tres" id="3_l3wqq"]
+[ext_resource type="SpriteFrames" uid="uid://cod3kd5lyyeil" path="res://Assets/Animations/Heroes/Talzin/talzin_near.res" id="4_51pfk"]
+[ext_resource type="Texture2D" uid="uid://dw2xf678wc5tg" path="res://Assets/Images/UI/InformationBar/Talzin.png" id="4_a862s"]
+[ext_resource type="Texture2D" uid="uid://lml6a7lv7geb" path="res://Assets/Images/UI/HeroHall/HeadTexs/塔尔辛.png" id="5_l8spk"]
+[ext_resource type="PackedScene" uid="uid://ct2bmkj3j8o6h" path="res://Scenes/Bullets/talzin_arrow.tscn" id="5_vk5lu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_307yl"]
+radius = 73.9444
+
+[node name="Talzin" groups=["desert"] instance=ExtResource("1_bgytc")]
+script = ExtResource("2_rsot2")
+heal_speeds = Array[int]([22, 23, 24, 25, 26, 27, 28, 29, 30, 32])
+hero_property_block = ExtResource("3_l3wqq")
+skill1_exp_get = Array[int]([100, 200, 300])
+skill2_exp_get = Array[int]([50, 55, 60])
+ally_id = 3
+ally_name = "塔尔辛"
+ally_texture = ExtResource("4_a862s")
+ally_group = 1
+far_attack_bullet_scene = ExtResource("5_vk5lu")
+intercepting_range = 140
+rebirth_time = 20
+
+[node name="AllySprite" parent="UnitBody" index="0"]
+position = Vector2(-20, -95)
+sprite_frames = ExtResource("4_51pfk")
+animation = &"move"
+autoplay = "idle"
+frame_progress = 0.730723
+
+[node name="Skill1Area" type="Area2D" parent="UnitBody" index="8"]
+scale = Vector2(6, 6)
+collision_layer = 0
+collision_mask = 96
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/Skill1Area" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_307yl")
+debug_color = Color(1, 0, 0, 0)
+
+[node name="FarAttackMarker" parent="UnitBody" index="9"]
+position = Vector2(20, -95)
+
+[node name="FarAttackMarkerFlip" parent="UnitBody" index="10"]
+position = Vector2(-20, -95)
+
+[node name="HeroUnitButton" parent="HeroUI" index="0"]
+offset_top = -189.0
+offset_bottom = 42.0
+
+[node name="HeroTexture" parent="HeroUI/HeroUnitButton" index="1"]
+texture = ExtResource("5_l8spk")
+
+[node name="Skill1Timer" type="Timer" parent="." index="8"]
+wait_time = 30.0
+one_shot = true
+
+[node name="Skill2Timer" type="Timer" parent="." index="9"]
+wait_time = 30.0
+one_shot = true

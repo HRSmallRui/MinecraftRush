@@ -1,0 +1,613 @@
+[gd_scene load_steps=25 format=3 uid="uid://i2ikd0xvj08u"]
+
+[ext_resource type="Shader" path="res://Assets/Shaders/rain_shader.gdshader" id="1_aptuu"]
+[ext_resource type="Texture2D" uid="uid://b2dexm1rfeitu" path="res://Assets/Images/Stages/Stage6/Rain.png" id="1_sdh74"]
+[ext_resource type="Script" path="res://Scripts/StageComponents/rain_layer.gd" id="1_tova6"]
+[ext_resource type="AudioStream" uid="uid://0i7b5rn6cyiv" path="res://Assets/Sounds/FXs/Stages/Rains/小中雨2.mp3" id="4_ubct3"]
+[ext_resource type="AudioStream" uid="uid://dw0tyhm4yqule" path="res://Assets/Sounds/FXs/Stages/Rains/大雨2.mp3" id="5_r1aen"]
+[ext_resource type="AudioStream" uid="uid://ii3cyt1ie7ls" path="res://Assets/Sounds/FXs/Stages/Rains/暴雨2.mp3" id="6_mvudd"]
+[ext_resource type="AudioStream" uid="uid://deyebvih2dwo7" path="res://Assets/Sounds/FXs/Stages/Rains/打雷1.wav" id="7_agssf"]
+[ext_resource type="AudioStream" uid="uid://d2q30tstybaf7" path="res://Assets/Sounds/FXs/Stages/Rains/打雷2.wav" id="8_uqpdo"]
+[ext_resource type="AudioStream" uid="uid://cwao36hr5l73h" path="res://Assets/Sounds/FXs/Stages/Rains/打雷3.wav" id="9_8m3j2"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="10_vmw1s"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ab4dr"]
+shader = ExtResource("1_aptuu")
+shader_parameter/speed = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3qvhq"]
+shader = ExtResource("1_aptuu")
+shader_parameter/speed = 1.2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_guahr"]
+shader = ExtResource("1_aptuu")
+shader_parameter/speed = 1.5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ekm6a"]
+shader = ExtResource("1_aptuu")
+shader_parameter/speed = 1.5
+
+[sub_resource type="Animation" id="Animation_xj8sf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RainSmall:material:shader_parameter/speed")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RainMedium:material:shader_parameter/speed")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RainBig:material:shader_parameter/speed")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("RainSuper:material:shader_parameter/speed")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5]
+}
+
+[sub_resource type="Animation" id="Animation_in0y7"]
+resource_name = "no_pause"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RainSmall:material:shader_parameter/speed")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RainMedium:material:shader_parameter/speed")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RainBig:material:shader_parameter/speed")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("RainSuper:material:shader_parameter/speed")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.8]
+}
+
+[sub_resource type="Animation" id="Animation_6j6m1"]
+resource_name = "pause"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RainMedium:material:shader_parameter/speed")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RainBig:material:shader_parameter/speed")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RainSmall:material:shader_parameter/speed")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("RainSuper:material:shader_parameter/speed")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eqv3m"]
+_data = {
+"RESET": SubResource("Animation_xj8sf"),
+"no_pause": SubResource("Animation_in0y7"),
+"pause": SubResource("Animation_6j6m1")
+}
+
+[sub_resource type="Animation" id="Animation_8e0ol"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LightningMask:color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LightningMask:color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LightningMask:color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LightningMask:color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_g68xr"]
+resource_name = "lightning1"
+length = 3.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LightningAudio1:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LightningMask:color:r")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.5, 1.4)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LightningMask:color:g")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.5, 1.4)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LightningMask:color:b")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.5, 1.4)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("LightningMask:color:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.478431, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.5, 1.4)
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"add_lightning_buff"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_efrre"]
+resource_name = "lightning2"
+length = 4.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LightningAudio2:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LightningMask:color:r")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6, 1, 2.9)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LightningMask:color:g")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6, 1, 2.9)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LightningMask:color:b")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6, 1, 2.9)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("LightningMask:color:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0.666667, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6, 1, 2.9)
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"add_lightning_buff"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_j0q4n"]
+resource_name = "lightning3"
+length = 4.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LightningAudio3:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LightningMask:color:r")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4, 0.6, 0.8, 1.1, 1.5, 3.4)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LightningMask:color:g")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4, 0.6, 0.8, 1.1, 1.5, 3.4)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LightningMask:color:b")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4, 0.6, 0.8, 1.1, 1.5, 3.4)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("LightningMask:color:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.364706, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0.415686, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0.352941, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4, 0.6, 0.8, 1.1, 1.5, 3.4)
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"add_lightning_buff"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mwtdw"]
+_data = {
+"RESET": SubResource("Animation_8e0ol"),
+"lightning1": SubResource("Animation_g68xr"),
+"lightning2": SubResource("Animation_efrre"),
+"lightning3": SubResource("Animation_j0q4n")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xj1vk"]
+size = Vector2(1968, 1135)
+
+[node name="RainLayer" type="Node2D"]
+
+[node name="RainLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+script = ExtResource("1_tova6")
+step_color_list = Array[Color]([Color(0, 0, 0, 0), Color(0, 0, 0, 0.27451), Color(0, 0, 0, 0.431373), Color(0, 0, 0, 0.478431), Color(0, 0, 0, 0.592157)])
+
+[node name="BlackMask" type="ColorRect" parent="RainLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="LightningMask" type="ColorRect" parent="RainLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="RainSmall" type="Sprite2D" parent="RainLayer"]
+material = SubResource("ShaderMaterial_ab4dr")
+position = Vector2(887, 538)
+rotation = -0.0406255
+texture = ExtResource("1_sdh74")
+
+[node name="RainMedium" type="Sprite2D" parent="RainLayer"]
+material = SubResource("ShaderMaterial_3qvhq")
+position = Vector2(1059, 300)
+rotation = -0.0406255
+texture = ExtResource("1_sdh74")
+
+[node name="RainBig" type="Sprite2D" parent="RainLayer"]
+material = SubResource("ShaderMaterial_guahr")
+position = Vector2(889, 556)
+rotation = -0.0406255
+texture = ExtResource("1_sdh74")
+
+[node name="RainSuper" type="Sprite2D" parent="RainLayer"]
+material = SubResource("ShaderMaterial_ekm6a")
+position = Vector2(1041, 528)
+rotation = -0.0406255
+texture = ExtResource("1_sdh74")
+
+[node name="RainAnimationPlayer" type="AnimationPlayer" parent="RainLayer"]
+libraries = {
+"": SubResource("AnimationLibrary_eqv3m")
+}
+autoplay = "no_pause"
+
+[node name="LightningAnimationPlayer" type="AnimationPlayer" parent="RainLayer"]
+process_mode = 1
+libraries = {
+"": SubResource("AnimationLibrary_mwtdw")
+}
+
+[node name="LightningTimer" type="Timer" parent="RainLayer"]
+process_mode = 1
+wait_time = 8.0
+one_shot = true
+
+[node name="RainAudioSmall" type="AudioStreamPlayer" parent="RainLayer"]
+process_mode = 1
+stream = ExtResource("4_ubct3")
+volume_db = -4.0
+bus = &"Sound"
+
+[node name="RainAudioMedium" type="AudioStreamPlayer" parent="RainLayer"]
+process_mode = 1
+stream = ExtResource("4_ubct3")
+volume_db = 2.0
+bus = &"Sound"
+
+[node name="RainAudioBig" type="AudioStreamPlayer" parent="RainLayer"]
+process_mode = 1
+stream = ExtResource("5_r1aen")
+volume_db = -6.0
+bus = &"Sound"
+
+[node name="RainAudioSuper" type="AudioStreamPlayer" parent="RainLayer"]
+process_mode = 1
+stream = ExtResource("6_mvudd")
+volume_db = -2.0
+bus = &"Sound"
+
+[node name="LightningAudio1" type="AudioStreamPlayer" parent="RainLayer"]
+process_mode = 1
+stream = ExtResource("7_agssf")
+bus = &"Sound"
+
+[node name="LightningAudio2" type="AudioStreamPlayer" parent="RainLayer"]
+process_mode = 1
+stream = ExtResource("8_uqpdo")
+bus = &"Sound"
+
+[node name="LightningAudio3" type="AudioStreamPlayer" parent="RainLayer"]
+process_mode = 1
+stream = ExtResource("9_8m3j2")
+bus = &"Sound"
+
+[node name="Timer" type="Timer" parent="RainLayer"]
+process_mode = 1
+wait_time = 0.1
+autostart = true
+
+[node name="RainStepLabel" type="Label" parent="RainLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -262.0
+offset_top = 136.0
+offset_right = -70.0
+offset_bottom = 200.0
+grow_horizontal = 0
+scale = Vector2(1.20387, 1.20387)
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("10_vmw1s")
+theme_override_font_sizes/font_size = 64
+text = "雷暴雨"
+horizontal_alignment = 2
+
+[node name="HitArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 96
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea"]
+position = Vector2(974, 557.5)
+shape = SubResource("RectangleShape2D_xj1vk")
+debug_color = Color(0.185407, 0.383927, 1, 0)
+
+[connection signal="timeout" from="RainLayer/LightningTimer" to="RainLayer" method="_on_lightning_timer_timeout"]
+[connection signal="timeout" from="RainLayer/Timer" to="RainLayer" method="_on_timer_timeout"]

@@ -1,0 +1,725 @@
+[gd_scene load_steps=65 format=3 uid="uid://bsrfqwky7na58"]
+
+[ext_resource type="PackedScene" uid="uid://58cc8ohjp6pd" path="res://Scenes/Allys/Heroes/hero_class.tscn" id="1_474hd"]
+[ext_resource type="Script" path="res://Scripts/Allys/Heroes/mike_smith.gd" id="2_0u3xe"]
+[ext_resource type="Resource" uid="uid://b4sh8nyqw2hrp" path="res://Library/Heroes/HeroPropertyBlocks/MikeSmith.tres" id="3_yruri"]
+[ext_resource type="Texture2D" uid="uid://dacm8l0x22p6q" path="res://Assets/Images/UI/HeroHall/HeadTexs/Mike.png" id="4_s3p6x"]
+[ext_resource type="Texture2D" uid="uid://bpvsbo132o8lh" path="res://Assets/Images/UI/InformationBar/Mike.png" id="4_x8kuo"]
+[ext_resource type="Texture2D" uid="uid://cdsje18xm8t37" path="res://Assets/Images/Effects/光矛.png" id="5_5fk4w"]
+[ext_resource type="SpriteFrames" uid="uid://dadvopch7rgfa" path="res://Assets/Animations/Heroes/Mike/mike_smith.tres" id="6_718qx"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/skill_particle_shooter.gd" id="6_ewnhw"]
+[ext_resource type="Shader" path="res://Assets/Shaders/hue_color.gdshader" id="7_d5cub"]
+[ext_resource type="Texture2D" uid="uid://ccglhhifm554s" path="res://Assets/Images/Effects/鼓舞光环.png" id="7_gcf1j"]
+[ext_resource type="Script" path="res://Scripts/Allys/Heroes/magic_book.gd" id="7_opsq8"]
+[ext_resource type="Texture2D" uid="uid://dvdqag74fo3gj" path="res://Assets/Animations/Heroes/Mike/MagicBook/0001.png" id="7_uejab"]
+[ext_resource type="PackedScene" uid="uid://e2sxqdv2uwcp" path="res://Scenes/Bullets/god_magic_ball.tscn" id="8_876o2"]
+[ext_resource type="Texture2D" uid="uid://csxs3w7oxle4f" path="res://Assets/Animations/Heroes/Mike/MagicBook/0002.png" id="8_ld8xe"]
+[ext_resource type="Texture2D" uid="uid://byh87lk5btcil" path="res://Assets/Animations/Heroes/Mike/MagicBook/0003.png" id="9_4i680"]
+[ext_resource type="Texture2D" uid="uid://bu3g3jhkcy7nt" path="res://Assets/Images/Effects/神环2.png" id="9_prl1t"]
+[ext_resource type="Texture2D" uid="uid://6phtbvo5qnuu" path="res://Assets/Animations/Heroes/Mike/MagicBook/0004.png" id="10_30wh2"]
+[ext_resource type="Texture2D" uid="uid://dl8rn7oqb0qnl" path="res://Assets/Animations/Heroes/Mike/MagicBook/0005.png" id="11_rrv6d"]
+[ext_resource type="Texture2D" uid="uid://b5vluaki8763m" path="res://Assets/Animations/Heroes/Mike/MagicBook/0006.png" id="12_hh4gs"]
+[ext_resource type="Texture2D" uid="uid://dxockcy4qxvgm" path="res://Assets/Animations/Heroes/Mike/MagicBook/0007.png" id="13_3rkgx"]
+[ext_resource type="Texture2D" uid="uid://dy3c2gq7jwis" path="res://Assets/Animations/Heroes/Mike/MagicBook/0008.png" id="14_ot4uk"]
+[ext_resource type="Texture2D" uid="uid://cts72rlpe1bpm" path="res://Assets/Animations/Heroes/Mike/MagicBook/0009.png" id="15_dt3p4"]
+[ext_resource type="Texture2D" uid="uid://41r5a84oiked" path="res://Assets/Animations/Heroes/Mike/MagicBook/0010.png" id="16_ojb1l"]
+[ext_resource type="Texture2D" uid="uid://bknmlvf8pvwtm" path="res://Assets/Animations/Heroes/Mike/MagicBook/0011.png" id="17_0028u"]
+[ext_resource type="Texture2D" uid="uid://cypmey20xjsng" path="res://Assets/Animations/Heroes/Mike/MagicBook/0012.png" id="18_vcqps"]
+[ext_resource type="Texture2D" uid="uid://bwdod4y83xjb5" path="res://Assets/Animations/Heroes/Mike/MagicBook/0013.png" id="19_qpdcf"]
+[ext_resource type="Texture2D" uid="uid://ck4jo0c533iwi" path="res://Assets/Images/Effects/YellowEnergyExplosion.png" id="24_auf22"]
+[ext_resource type="Shader" path="res://Assets/Shaders/change_color.gdshader" id="28_1jxhc"]
+[ext_resource type="Shader" path="res://Assets/Shaders/change_color_radius.gdshader" id="28_bvvbp"]
+[ext_resource type="AudioStream" uid="uid://5vm66inghgpc" path="res://Assets/Sounds/FXs/Heroes/Fuchen/末日.wav" id="28_fkhpp"]
+[ext_resource type="Shader" path="res://Assets/Shaders/guardian_roar_shader.gdshader" id="28_hm4wj"]
+[ext_resource type="AudioStream" uid="uid://b20i7jhpcq6o4" path="res://Assets/Sounds/FXs/Heroes/Mike/skill3_prepare.mp3" id="31_aw55p"]
+[ext_resource type="AudioStream" uid="uid://cdn55y835kw2c" path="res://Assets/Sounds/FXs/Heroes/Mike/flame.wav" id="33_2sxih"]
+[ext_resource type="AudioStream" uid="uid://ckey5gj3vauup" path="res://Assets/Sounds/FXs/Heroes/Mike/clock.mp3" id="35_flvfc"]
+[ext_resource type="AudioStream" uid="uid://l05ate4l1pem" path="res://Assets/Sounds/FXs/Heroes/Mike/时停.wav" id="36_dtol2"]
+[ext_resource type="AudioStream" uid="uid://cvr85147a6civ" path="res://Assets/Sounds/FXs/Enemies/瞬移1.wav" id="356_5lu1q"]
+[ext_resource type="AudioStream" uid="uid://c7r7ydgqlmmlf" path="res://Assets/Sounds/FXs/Enemies/瞬移2.wav" id="357_k61l5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m0ovs"]
+shader = ExtResource("7_d5cub")
+shader_parameter/hue_shift = 0.0
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rt56r"]
+particle_flag_disable_z = true
+angle_min = -290.4
+angle_max = 325.9
+gravity = Vector3(0, 0, 0)
+scale_min = 12.0
+scale_max = 16.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n558w"]
+shader = ExtResource("28_1jxhc")
+shader_parameter/hue_shift = 0.5
+shader_parameter/twist_strength = 0.0
+shader_parameter/twist_frequency = 1.0
+shader_parameter/dispersion_strength = 0.0
+shader_parameter/radial_twist = false
+shader_parameter/master = 0.0
+
+[sub_resource type="Animation" id="Animation_rkste"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/master")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../AllySprite:material:shader_parameter/hue_shift")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../GodRing/TotalControlRing:material:shader_parameter/hue_shift")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_tb32b"]
+resource_name = "show"
+length = 0.8
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/master")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.8)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../AllySprite:material:shader_parameter/hue_shift")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.5, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.8)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../GodRing/TotalControlRing:material:shader_parameter/hue_shift")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.5, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.8)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mve4o"]
+_data = {
+"RESET": SubResource("Animation_rkste"),
+"show": SubResource("Animation_tb32b")
+}
+
+[sub_resource type="Animation" id="Animation_4kqb0"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TotalControlRing/Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TotalControlRing/Sprite2D2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_v5ff1"]
+resource_name = "rotate"
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TotalControlRing/Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(1, 1),
+"points": PackedFloat32Array(0, 0, 0, 0, 0, 6.28319, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TotalControlRing/Sprite2D2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(1, 1),
+"points": PackedFloat32Array(0, 0, 0, 0, 0, -6.28319, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xkvyj"]
+_data = {
+"RESET": SubResource("Animation_4kqb0"),
+"rotate": SubResource("Animation_v5ff1")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_njof6"]
+shader = ExtResource("7_d5cub")
+shader_parameter/hue_shift = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rwdcv"]
+shader = ExtResource("7_d5cub")
+shader_parameter/hue_shift = 0.35
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1kadr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_uejab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ld8xe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4i680")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_30wh2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_rrv6d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_hh4gs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_3rkgx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ot4uk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_dt3p4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ojb1l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_0028u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_vcqps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_qpdcf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="Animation" id="Animation_lncqj"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BookSprite:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_rixla"]
+resource_name = "fly"
+loop_mode = 2
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BookSprite:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(35, -0.25, 0, 0.25, 0, -15, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f0jln"]
+_data = {
+"RESET": SubResource("Animation_lncqj"),
+"fly": SubResource("Animation_rixla")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_307yl"]
+radius = 73.9444
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xhryc"]
+radius = 73.9444
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_43prx"]
+shader = ExtResource("28_bvvbp")
+shader_parameter/hue_shift = 0.5
+shader_parameter/twist_strength = 0.02
+shader_parameter/twist_frequency = 5.0
+shader_parameter/dispersion_strength = 0.002
+shader_parameter/radial_twist = false
+shader_parameter/mask_radius = 0.4
+shader_parameter/mask_feather = 0.05
+shader_parameter/TEXTURE_SIZE = Vector2(1080, 1080)
+
+[sub_resource type="Gradient" id="Gradient_amlgt"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qmhca"]
+gradient = SubResource("Gradient_amlgt")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8oyua"]
+shader = ExtResource("28_hm4wj")
+shader_parameter/effect_master = 0.0
+shader_parameter/dispersion_strength = 0.01
+shader_parameter/blur_strength = 0.002
+shader_parameter/dispersion_dir = Vector2(1, 0)
+
+[sub_resource type="Animation" id="Animation_ngkxb"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skill3Layer:material:shader_parameter/effect_master")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_57nw1"]
+resource_name = "release"
+length = 0.3
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skill3Layer:material:shader_parameter/effect_master")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qof5i"]
+_data = {
+"RESET": SubResource("Animation_ngkxb"),
+"release": SubResource("Animation_57nw1")
+}
+
+[sub_resource type="Animation" id="Animation_h7rkb"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../UnitBody/Skill4Layer:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../UnitBody/Skill4Layer:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_kpgxf"]
+resource_name = "StopTimer"
+length = 0.8
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../UnitBody/Skill4Layer:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 1000, -0.25, 0, 0.25, 0, 1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4, 0.8)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../UnitBody/Skill4Layer:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 1000, -0.25, 0, 0.25, 0, 1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4, 0.8)
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"on_stop_time"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1ujjs"]
+_data = {
+"RESET": SubResource("Animation_h7rkb"),
+"stop_time": SubResource("Animation_kpgxf")
+}
+
+[node name="MikeSmith" groups=["god"] instance=ExtResource("1_474hd")]
+script = ExtResource("2_0u3xe")
+element_hue_list = Array[float]([0.0, 0.6, 0.15, 0.35])
+heal_speeds = Array[int]([20, 40, 60, 80, 100, 120, 140, 160, 180, 192])
+teleport_limit_length = 300.0
+hero_property_block = ExtResource("3_yruri")
+skill1_exp_get = Array[int]([800, 1000, 1200])
+skill2_exp_get = Array[int]([800, 1000, 1200])
+skill3_exp_get = Array[int]([800, 1000, 1200])
+skill4_exp_get = Array[int]([800, 1000, 1200])
+ally_id = 9
+ally_name = "迈克 史密斯"
+ally_texture = ExtResource("4_x8kuo")
+rebirth_time = 32
+
+[node name="Skill3Particle" type="GPUParticles2D" parent="UnitBody" index="0"]
+process_mode = 3
+visible = false
+material = SubResource("ShaderMaterial_m0ovs")
+position = Vector2(0, -175)
+scale = Vector2(10, 10)
+amount = 120
+process_material = SubResource("ParticleProcessMaterial_rt56r")
+texture = ExtResource("5_5fk4w")
+lifetime = 0.02
+visibility_rect = Rect2(-1000, -1000, 2000, 2000)
+script = ExtResource("6_ewnhw")
+
+[node name="StopTimeLayer" type="ColorRect" parent="UnitBody" index="1"]
+z_index = 2
+material = SubResource("ShaderMaterial_n558w")
+offset_left = -156375.0
+offset_top = -111235.0
+offset_right = 156365.0
+offset_bottom = 111075.0
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="StopTimeLayerPlayer" type="AnimationPlayer" parent="UnitBody/StopTimeLayer" index="0"]
+libraries = {
+"": SubResource("AnimationLibrary_mve4o")
+}
+
+[node name="GodRing" type="Node2D" parent="UnitBody" index="2"]
+position = Vector2(0, -175)
+
+[node name="TotalControlRing" type="Node2D" parent="UnitBody/GodRing" index="0"]
+material = SubResource("ShaderMaterial_m0ovs")
+position = Vector2(5, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="UnitBody/GodRing/TotalControlRing" index="0"]
+use_parent_material = true
+scale = Vector2(3.31, 3.31)
+texture = ExtResource("9_prl1t")
+
+[node name="Sprite2D2" type="Sprite2D" parent="UnitBody/GodRing/TotalControlRing" index="1"]
+use_parent_material = true
+scale = Vector2(8.015, 8.015)
+texture = ExtResource("9_prl1t")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UnitBody/GodRing" index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_xkvyj")
+}
+autoplay = "rotate"
+
+[node name="AllySprite" parent="UnitBody" index="3"]
+material = SubResource("ShaderMaterial_njof6")
+position = Vector2(-5, -110)
+sprite_frames = ExtResource("6_718qx")
+animation = &"skill4"
+autoplay = "idle"
+frame = 17
+frame_progress = 0.364842
+flip_h = true
+
+[node name="PowerLight" type="Sprite2D" parent="UnitBody" index="4"]
+z_index = -1
+material = SubResource("ShaderMaterial_rwdcv")
+position = Vector2(0, -10)
+scale = Vector2(1.63554, 1.63554)
+texture = ExtResource("7_gcf1j")
+region_rect = Rect2(20, 24, 110, 63)
+
+[node name="MagicBook" type="Node2D" parent="UnitBody" index="5" node_paths=PackedStringArray("mike", "far_attack_area")]
+position = Vector2(-95, -160)
+script = ExtResource("7_opsq8")
+mike = NodePath("../..")
+far_attack_area = NodePath("../MagicBookArea")
+magic_ball_scene = ExtResource("8_876o2")
+
+[node name="BookSprite" type="AnimatedSprite2D" parent="UnitBody/MagicBook" index="0"]
+material = SubResource("ShaderMaterial_m0ovs")
+scale = Vector2(7.5, 7.5)
+sprite_frames = SubResource("SpriteFrames_1kadr")
+autoplay = "default"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UnitBody/MagicBook" index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_f0jln")
+}
+autoplay = "fly"
+
+[node name="AttackTimer" type="Timer" parent="UnitBody/MagicBook" index="2"]
+one_shot = true
+
+[node name="AllyButton" parent="UnitBody" index="9"]
+offset_left = -48.0
+offset_top = -195.0
+offset_right = 50.0
+
+[node name="HealthBar" parent="UnitBody" index="10"]
+material = SubResource("ShaderMaterial_m0ovs")
+offset_top = -235.0
+offset_bottom = -226.0
+
+[node name="FarAttackArea" parent="UnitBody" index="12"]
+collision_mask = 32
+
+[node name="MagicBookArea" type="Area2D" parent="UnitBody" index="13"]
+scale = Vector2(4, 4)
+collision_layer = 0
+collision_mask = 96
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/MagicBookArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_307yl")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="Skill2Area" type="Area2D" parent="UnitBody" index="14"]
+scale = Vector2(12, 12)
+collision_layer = 0
+collision_mask = 96
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/Skill2Area" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_xhryc")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="Skill1TraceArea" type="Area2D" parent="UnitBody" index="15"]
+scale = Vector2(60, 60)
+collision_layer = 0
+collision_mask = 96
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/Skill1TraceArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_xhryc")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="Skill3Area" type="Area2D" parent="UnitBody" index="16"]
+scale = Vector2(80, 80)
+collision_layer = 0
+collision_mask = 96
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/Skill3Area" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_xhryc")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="SouldMarker" type="Marker2D" parent="UnitBody" index="20"]
+position = Vector2(0, -225)
+
+[node name="EnergyExplosion" type="Sprite2D" parent="UnitBody" index="21"]
+visible = false
+position = Vector2(-1.90735e-06, -9.53674e-07)
+scale = Vector2(43.364, 43.364)
+texture = ExtResource("24_auf22")
+offset = Vector2(2.98023e-08, -30.5032)
+region_enabled = true
+region_rect = Rect2(112, 112, 207, 164)
+
+[node name="Skill4Layer" type="Sprite2D" parent="UnitBody" index="22"]
+z_index = 6
+material = SubResource("ShaderMaterial_43prx")
+position = Vector2(0, -130)
+scale = Vector2(1e-05, 1e-05)
+texture = SubResource("GradientTexture2D_qmhca")
+
+[node name="EffectLayer" type="CanvasLayer" parent="." index="1"]
+
+[node name="Skill3Layer" type="ColorRect" parent="EffectLayer" index="0"]
+visible = false
+material = SubResource("ShaderMaterial_8oyua")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -51.0
+offset_top = -51.0
+offset_right = 51.0
+offset_bottom = 51.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Skill4AnimationPlayer" type="AnimationPlayer" parent="EffectLayer" index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_qof5i")
+}
+
+[node name="StopTimerPlayer" type="AnimationPlayer" parent="EffectLayer" index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_1ujjs")
+}
+
+[node name="HeroUnitButton" parent="HeroUI" index="0"]
+offset_top = -189.0
+offset_bottom = 42.0
+
+[node name="HeroTexture" parent="HeroUI/HeroUnitButton" index="1"]
+texture = ExtResource("4_s3p6x")
+
+[node name="TeleportAudio" type="AudioStreamPlayer" parent="." index="9"]
+stream = ExtResource("356_5lu1q")
+bus = &"Sound"
+
+[node name="TeleportAudio2" type="AudioStreamPlayer" parent="." index="10"]
+stream = ExtResource("357_k61l5")
+bus = &"Sound"
+
+[node name="ShadowTimer" type="Timer" parent="." index="11"]
+wait_time = 0.005
+
+[node name="Skill1Timer" type="Timer" parent="." index="12"]
+one_shot = true
+
+[node name="Skill2Timer" type="Timer" parent="." index="13"]
+one_shot = true
+
+[node name="Skill3Timer" type="Timer" parent="." index="14"]
+one_shot = true
+
+[node name="Skill4Timer" type="Timer" parent="." index="15"]
+one_shot = true
+
+[node name="PowerTimer" type="Timer" parent="." index="16"]
+wait_time = 12.0
+one_shot = true
+
+[node name="PathNavigationAgent" type="NavigationAgent2D" parent="." index="17"]
+navigation_layers = 2
+
+[node name="Skill2Audio" type="AudioStreamPlayer" parent="." index="18"]
+stream = ExtResource("28_fkhpp")
+bus = &"Sound"
+
+[node name="Skill3DotTimer" type="Timer" parent="." index="19"]
+wait_time = 0.2
+one_shot = true
+
+[node name="Skill3PrepareAudio" type="AudioStreamPlayer" parent="." index="20"]
+stream = ExtResource("31_aw55p")
+bus = &"Sound"
+
+[node name="Skill3ReleaseAudio" type="AudioStreamPlayer" parent="." index="21"]
+stream = ExtResource("33_2sxih")
+volume_db = 4.0
+bus = &"Sound"
+
+[node name="Skill4DurationTimer" type="Timer" parent="." index="22"]
+one_shot = true
+
+[node name="ClockAudio" type="AudioStreamPlayer" parent="." index="23"]
+stream = ExtResource("35_flvfc")
+volume_db = 4.0
+max_polyphony = 10
+bus = &"Sound"
+
+[node name="StopTimeAudio" type="AudioStreamPlayer" parent="." index="24"]
+stream = ExtResource("36_dtol2")
+bus = &"Sound"
+
+[connection signal="timeout" from="ShadowTimer" to="." method="_on_shadow_timer_timeout"]
+[connection signal="timeout" from="PowerTimer" to="." method="_on_power_timer_timeout"]
+[connection signal="timeout" from="Skill3DotTimer" to="." method="_on_skill_3_dot_timer_timeout"]
+[connection signal="timeout" from="Skill4DurationTimer" to="." method="_on_skill_4_duration_timer_timeout"]

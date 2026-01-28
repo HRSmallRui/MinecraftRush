@@ -1,0 +1,3631 @@
+[gd_scene load_steps=56 format=3 uid="uid://uhm8meaesci4"]
+
+[ext_resource type="Script" path="res://Scripts/GameBased/main_map.gd" id="1_ga3pc"]
+[ext_resource type="Texture2D" uid="uid://dyv6e38dhtlqh" path="res://Assets/Images/Map/map2.png" id="1_x6d7x"]
+[ext_resource type="Script" path="res://Scripts/drage_area.gd" id="2_dw8cc"]
+[ext_resource type="AudioStream" uid="uid://fdslhd74xekr" path="res://Assets/Sounds/Music/MapMusic.ogg" id="2_rsnhv"]
+[ext_resource type="Script" path="res://Scripts/GameBased/Map/map_area.gd" id="3_qeu4h"]
+[ext_resource type="Script" path="res://Scripts/GameBased/Map/background_music.gd" id="3_vfag4"]
+[ext_resource type="Script" path="res://Scripts/GameBased/Map/level_panel.gd" id="4_qsg6w"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="5_pl70x"]
+[ext_resource type="Texture2D" uid="uid://bfhemf61b7be1" path="res://Assets/Images/UI/setting.png" id="8_q3hst"]
+[ext_resource type="Texture2D" uid="uid://b4nq3e3tdlej4" path="res://Assets/Images/UI/setting-select.png" id="9_r3j0i"]
+[ext_resource type="PackedScene" uid="uid://5wpq8h2i2s8m" path="res://Scenes/UI-Components/normal_button.tscn" id="10_e3r7j"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Map/option_panel.gd" id="10_hf44j"]
+[ext_resource type="Texture2D" uid="uid://dkcf7gw74qave" path="res://Assets/Images/UI/slide.png" id="11_mjan7"]
+[ext_resource type="Texture2D" uid="uid://b5f26m46ncg1l" path="res://Assets/Images/UI/Maps/herohall.png" id="11_vyg4y"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/audio_mute_condition.gd" id="12_13y10"]
+[ext_resource type="Texture2D" uid="uid://cvok3mdp4hr26" path="res://Assets/Images/UI/Maps/herohall-select.png" id="12_a0eo3"]
+[ext_resource type="Texture2D" uid="uid://cvc5pqffrv7f" path="res://Assets/Images/UI/HeroHall/HeadTexs/Steve.png" id="13_5f68u"]
+[ext_resource type="Texture2D" uid="uid://c2dvgp40v1dcx" path="res://Assets/Images/UI/Maps/hero-under.png" id="14_ha8lx"]
+[ext_resource type="Texture2D" uid="uid://w6voiv18a3cl" path="res://Assets/Images/UI/Maps/附魔台.png" id="15_1blhr"]
+[ext_resource type="Texture2D" uid="uid://b4668k64emrcb" path="res://Assets/Images/UI/Maps/附魔台(选择).png" id="16_b8ehx"]
+[ext_resource type="Texture2D" uid="uid://d3witkn2wkl1a" path="res://Assets/Images/UI/Maps/closebook.png" id="18_12dhn"]
+[ext_resource type="Texture2D" uid="uid://ojwbeiddrigt" path="res://Assets/Images/UI/Maps/closebook选择.png" id="19_yncx5"]
+[ext_resource type="Texture2D" uid="uid://dhptphkshfwby" path="res://Assets/Images/UI/铁镐.png" id="20_u6wdi"]
+[ext_resource type="Texture2D" uid="uid://ddeyxbmdfbs1" path="res://Assets/Images/UI/铁镐hover.png" id="21_uuknu"]
+[ext_resource type="PackedScene" uid="uid://bxnvsktxw8nid" path="res://Scenes/UI-Components/Map/level_flag.tscn" id="25_5blhy"]
+[ext_resource type="Texture2D" uid="uid://d1sjkrxoq5ldk" path="res://Assets/Images/UI/star.png" id="25_pof2k"]
+[ext_resource type="Script" path="res://Scripts/Classes/map_path.gd" id="26_gtiyn"]
+[ext_resource type="Texture2D" uid="uid://tg7ejbqyeqcv" path="res://Assets/Images/UI/Maps/map_path.png" id="27_bjcvd"]
+[ext_resource type="AudioStream" uid="uid://duvqp5eu8d8c3" path="res://Assets/Sounds/FXs/UIs/mcexp.wav" id="28_4awfl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ghyds"]
+size = Vector2(1953, 894)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wtsj5"]
+size = Vector2(1045, 196)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qytlt"]
+bg_color = Color(0, 0, 0, 0.580392)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4x1pv"]
+bg_color = Color(0, 0, 0, 0.560784)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrwnx"]
+atlas = ExtResource("8_q3hst")
+region = Rect2(48, 48, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u24d2"]
+atlas = ExtResource("8_q3hst")
+region = Rect2(48, 48, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nc85e"]
+atlas = ExtResource("9_r3j0i")
+region = Rect2(18, 17, 221, 221)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onhhs"]
+atlas = ExtResource("11_vyg4y")
+region = Rect2(65, 77, 126, 134)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w1j81"]
+atlas = ExtResource("11_vyg4y")
+region = Rect2(65, 77, 126, 134)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_742rq"]
+atlas = ExtResource("12_a0eo3")
+region = Rect2(21, 33, 214, 222)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3a3j"]
+atlas = ExtResource("15_1blhr")
+region = Rect2(173, 199, 181, 217)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdwda"]
+atlas = ExtResource("16_b8ehx")
+region = Rect2(135, 168, 256, 282)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28rxw"]
+atlas = ExtResource("18_12dhn")
+region = Rect2(57, 83, 412, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8n25"]
+atlas = ExtResource("19_yncx5")
+region = Rect2(19, 44, 488, 438)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2vvc"]
+atlas = ExtResource("20_u6wdi")
+region = Rect2(169, 173, 209, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1m4n"]
+atlas = ExtResource("21_uuknu")
+region = Rect2(138, 141, 272, 272)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3qdws"]
+atlas = ExtResource("11_mjan7")
+region = Rect2(189, 42, 31, 51)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qly3j"]
+atlas = ExtResource("11_mjan7")
+region = Rect2(189, 42, 31, 51)
+
+[sub_resource type="Theme" id="Theme_ilpjr"]
+HSlider/icons/grabber = SubResource("AtlasTexture_3qdws")
+HSlider/icons/grabber_highlight = SubResource("AtlasTexture_qly3j")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8lxlt"]
+bg_color = Color(0.0383972, 0.0383972, 0.0383971, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nerbj"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_78j80"]
+bg_color = Color(0, 0, 0, 0.466667)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="Animation" id="Animation_mgo0h"]
+resource_name = "OptionEnter"
+length = 1.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MapUI/OptionPanel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MapUI/OptionPanel:modulate:r")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MapUI/OptionPanel:modulate:g")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MapUI/OptionPanel:modulate:b")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MapUI/OptionPanel:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MapUI/OptionPanel/Control/ResetButton:position:x")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-1337, -0.25, 0, 0.25, 0, -62, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.2, 1.2)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("MapUI/OptionPanel/Control/ResetButton:position:y")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(477, -0.25, 0, 0.25, 0, 477, -0.25, 0, 0.25, 0, 477, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2, 1.6)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("MapUI/OptionPanel/Control/ResetButton:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2, 1.6)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("MapUI/OptionPanel/Control/FinishButton:position:x")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-919, -0.25, 0, 0.25, 0, 525, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("MapUI/OptionPanel/Control/FinishButton:position:y")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(477, -0.25, 0, 0.25, 0, 477, -0.25, 0, 0.25, 0, 477, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 1.6)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("MapUI/OptionPanel/Control/FinishButton:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 1.6)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("MapUI/OptionPanel/Control/MusicSlider:position:x")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-1350, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/12/type = "bezier"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("MapUI/OptionPanel/Control/MusicSlider:position:y")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.6)
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("MapUI/OptionPanel/Control/MusicSlider:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.6)
+}
+tracks/14/type = "bezier"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("MapUI/OptionPanel/Control/MusicLabel:position:x")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-1350, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/15/type = "bezier"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("MapUI/OptionPanel/Control/MusicLabel:position:y")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-52, -0.25, 0, 0.25, 0, -52, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.6)
+}
+tracks/16/type = "bezier"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("MapUI/OptionPanel/Control/MusicLabel:rotation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.6)
+}
+tracks/17/type = "bezier"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("MapUI/OptionPanel/Control/SoundSlider:position:x")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-1350, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+tracks/18/type = "bezier"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("MapUI/OptionPanel/Control/SoundSlider:position:y")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(202, -0.25, 0, 0.25, 0, 202, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.6)
+}
+tracks/19/type = "bezier"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("MapUI/OptionPanel/Control/SoundSlider:rotation")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.6)
+}
+tracks/20/type = "bezier"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("MapUI/OptionPanel/Control/MusicLabel2:position:x")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-1350, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+tracks/21/type = "bezier"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("MapUI/OptionPanel/Control/MusicLabel2:position:y")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(150, -0.25, 0, 0.25, 0, 150, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.6)
+}
+tracks/22/type = "bezier"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("MapUI/OptionPanel/Control/MusicLabel2:rotation")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.6)
+}
+tracks/23/type = "bezier"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("MapUI/OptionPanel/Control/DifficultyButton:position:x")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-1126, -0.25, 0, 0.25, 0, 224, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.8)
+}
+tracks/24/type = "bezier"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("MapUI/OptionPanel/Control/DifficultyButton:position:y")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(362, -0.25, 0, 0.25, 0, 362, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.6)
+}
+tracks/25/type = "bezier"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("MapUI/OptionPanel/Control/DifficultyButton:rotation")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.6)
+}
+tracks/26/type = "bezier"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("MapUI/OptionButton:rotation")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, 0, 0, 0, 0, 6.28319, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("MapUI/OptionPanel/Control/MusicSlider:mouse_filter")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [2, 0]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("MapUI/OptionPanel/Control/SoundSlider:mouse_filter")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [2, 0]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("MapUI/OptionPanel/Control/DifficultyButton:mouse_filter")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [2, 0]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("MapUI/OptionPanel/Control/ResetButton:mouse_filter")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(1.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("MapUI/OptionPanel/Control/FinishButton:mouse_filter")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [2, 0]
+}
+tracks/32/type = "bezier"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("MapUI/OptionPanel/Control/ExitButton:position:x")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-1024, -0.25, 0, 0.25, 0, -1024, -0.25, 0, 0.25, 0, 224, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 1.1)
+}
+tracks/33/type = "bezier"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("MapUI/OptionPanel/Control/ExitButton:position:y")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(477, -0.25, 0, 0.25, 0, 477, -0.25, 0, 0.25, 0, 477, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 1.1)
+}
+tracks/34/type = "bezier"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("MapUI/OptionPanel/Control/ExitButton:rotation")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 1.1)
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("MapUI/OptionPanel/Control/ExitButton:mouse_filter")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [2, 0]
+}
+tracks/36/type = "method"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("MapUI/OptionPanel")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"update_difficulty"
+}]
+}
+tracks/37/type = "method"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath(".")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"hide_panel"
+}]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath(".:can_control")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("MapUI/OptionPanel:can_control")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/40/type = "bezier"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("MapUI/OptionPanel/Control/CheatEnterButton:position:x")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-906, -0.25, 0, 0.25, 0, 224, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.4, 1.2)
+}
+tracks/41/type = "bezier"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("MapUI/OptionPanel/Control/CheatEnterButton:position:y")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(627, -0.25, 0, 0.25, 0, 627, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.4, 1.2)
+}
+
+[sub_resource type="Animation" id="Animation_4d6cb"]
+resource_name = "OptionExit"
+length = 1.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MapUI/OptionPanel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MapUI/OptionPanel:modulate:r")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MapUI/OptionPanel:modulate:g")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MapUI/OptionPanel:modulate:b")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MapUI/OptionPanel:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MapUI/OptionButton:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(6.28319, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("MapUI/OptionPanel/Control/MusicSlider:mouse_filter")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("MapUI/OptionPanel/Control/SoundSlider:mouse_filter")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("MapUI/OptionPanel/Control/DifficultyButton:mouse_filter")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("MapUI/OptionPanel/Control/ResetButton:mouse_filter")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("MapUI/OptionPanel/Control/ExitButton:mouse_filter")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("MapUI/OptionPanel/Control/FinishButton:mouse_filter")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/12/type = "bezier"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("MapUI/OptionPanel/Control/ResetButton:position:x")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-62, -0.25, 0, 0.25, 0, -1494, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9)
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("MapUI/OptionPanel/Control/ResetButton:position:y")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(477, -0.25, 0, 0.25, 0, 477, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2)
+}
+tracks/14/type = "bezier"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("MapUI/OptionPanel/Control/ResetButton:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2)
+}
+tracks/15/type = "bezier"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("MapUI/OptionPanel/Control/FinishButton:position:x")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(525, -0.25, 0, 0.25, 0, -907, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.2, 1.1)
+}
+tracks/16/type = "bezier"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("MapUI/OptionPanel/Control/FinishButton:position:y")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(477, -0.25, 0, 0.25, 0, 477, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2)
+}
+tracks/17/type = "bezier"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("MapUI/OptionPanel/Control/FinishButton:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2)
+}
+tracks/18/type = "bezier"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("MapUI/OptionPanel/Control/ExitButton:position:x")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(224, -0.25, 0, 0.25, 0, -1208, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/19/type = "bezier"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("MapUI/OptionPanel/Control/ExitButton:position:y")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(477, -0.25, 0, 0.25, 0, 477, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2)
+}
+tracks/20/type = "bezier"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("MapUI/OptionPanel/Control/ExitButton:rotation")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2)
+}
+tracks/21/type = "bezier"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("MapUI/OptionPanel/Control/MusicSlider:position:x")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -1432, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/22/type = "bezier"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("MapUI/OptionPanel/Control/MusicSlider:position:y")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2)
+}
+tracks/23/type = "bezier"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("MapUI/OptionPanel/Control/MusicSlider:rotation")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2)
+}
+tracks/24/type = "bezier"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("MapUI/OptionPanel/Control/MusicLabel:position:x")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -1432, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/25/type = "bezier"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("MapUI/OptionPanel/Control/MusicLabel:position:y")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-52, -0.25, 0, 0.25, 0, -52, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2)
+}
+tracks/26/type = "bezier"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("MapUI/OptionPanel/Control/MusicLabel:rotation")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2)
+}
+tracks/27/type = "bezier"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("MapUI/OptionPanel/Control/SoundSlider:position:x")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -1432, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+tracks/28/type = "bezier"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("MapUI/OptionPanel/Control/SoundSlider:position:y")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(202, -0.25, 0, 0.25, 0, 202, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2)
+}
+tracks/29/type = "bezier"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("MapUI/OptionPanel/Control/SoundSlider:rotation")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2)
+}
+tracks/30/type = "bezier"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("MapUI/OptionPanel/Control/MusicLabel2:position:x")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -1432, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+tracks/31/type = "bezier"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("MapUI/OptionPanel/Control/MusicLabel2:position:y")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(150, -0.25, 0, 0.25, 0, 150, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2)
+}
+tracks/32/type = "bezier"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("MapUI/OptionPanel/Control/MusicLabel2:rotation")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2)
+}
+tracks/33/type = "bezier"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("MapUI/OptionPanel/Control/DifficultyButton:position:x")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(224, -0.25, 0, 0.25, 0, -1208, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.8)
+}
+tracks/34/type = "bezier"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("MapUI/OptionPanel/Control/DifficultyButton:position:y")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(362, -0.25, 0, 0.25, 0, 362, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2)
+}
+tracks/35/type = "bezier"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("MapUI/OptionPanel/Control/DifficultyButton:rotation")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.2)
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath(".:can_control")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("MapUI/OptionPanel:can_control")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/38/type = "bezier"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("MapUI/OptionPanel/Control/CheatEnterButton:position:x")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(224, -0.25, 0, 0.25, 0, -1155, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9)
+}
+tracks/39/type = "bezier"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("MapUI/OptionPanel/Control/CheatEnterButton:position:y")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(627, -0.25, 0, 0.25, 0, 627, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9)
+}
+
+[sub_resource type="Animation" id="Animation_etsh3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MapUI/OptionPanel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MapUI/OptionPanel:modulate:r")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MapUI/OptionPanel:modulate:g")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MapUI/OptionPanel:modulate:b")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MapUI/OptionPanel:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MapUI/OptionPanel/Control/ResetButton:position:x")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(13, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("MapUI/OptionPanel/Control/ResetButton:position:y")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(477, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("MapUI/OptionPanel/Control/ResetButton:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("MapUI/OptionPanel/Control/FinishButton:position:x")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(431, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("MapUI/OptionPanel/Control/FinishButton:position:y")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(477, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("MapUI/OptionPanel/Control/FinishButton:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("MapUI/OptionPanel/Control/MusicSlider:position:x")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/12/type = "bezier"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("MapUI/OptionPanel/Control/MusicSlider:position:y")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("MapUI/OptionPanel/Control/MusicSlider:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/14/type = "bezier"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("MapUI/OptionPanel/Control/MusicLabel:position:x")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/15/type = "bezier"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("MapUI/OptionPanel/Control/MusicLabel:position:y")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-52, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/16/type = "bezier"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("MapUI/OptionPanel/Control/MusicLabel:rotation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/17/type = "bezier"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("MapUI/OptionPanel/Control/SoundSlider:position:x")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/18/type = "bezier"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("MapUI/OptionPanel/Control/SoundSlider:position:y")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(202, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/19/type = "bezier"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("MapUI/OptionPanel/Control/SoundSlider:rotation")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/20/type = "bezier"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("MapUI/OptionPanel/Control/MusicLabel2:position:x")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/21/type = "bezier"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("MapUI/OptionPanel/Control/MusicLabel2:position:y")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(150, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/22/type = "bezier"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("MapUI/OptionPanel/Control/MusicLabel2:rotation")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/23/type = "bezier"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("MapUI/OptionPanel/Control/DifficultyButton:position:x")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(224, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/24/type = "bezier"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("MapUI/OptionPanel/Control/DifficultyButton:position:y")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(362, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/25/type = "bezier"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("MapUI/OptionPanel/Control/DifficultyButton:rotation")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/26/type = "bezier"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("MapUI/OptionButton:rotation")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("MapUI/OptionPanel/Control/MusicSlider:mouse_filter")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("MapUI/OptionPanel/Control/SoundSlider:mouse_filter")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("MapUI/OptionPanel/Control/DifficultyButton:mouse_filter")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("MapUI/OptionPanel/Control/ResetButton:mouse_filter")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("MapUI/OptionPanel/Control/FinishButton:mouse_filter")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/32/type = "bezier"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("MapUI/OptionPanel/Control/ExitButton:position:x")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(224, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/33/type = "bezier"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("MapUI/OptionPanel/Control/ExitButton:position:y")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(477, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/34/type = "bezier"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("MapUI/OptionPanel/Control/ExitButton:rotation")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath(".:can_control")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("MapUI/OptionPanel/Control/ExitButton:mouse_filter")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("MapUI/OptionPanel:can_control")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/38/type = "bezier"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("MapUI/OptionPanel/Control/CheatEnterButton:position:x")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(224, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/39/type = "bezier"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("MapUI/OptionPanel/Control/CheatEnterButton:position:y")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(627, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_46vkd"]
+_data = {
+"OptionEnter": SubResource("Animation_mgo0h"),
+"OptionExit": SubResource("Animation_4d6cb"),
+"RESET": SubResource("Animation_etsh3")
+}
+
+[node name="MainMap" type="Node2D"]
+script = ExtResource("1_ga3pc")
+can_control = true
+
+[node name="Map" type="Sprite2D" parent="."]
+texture = ExtResource("1_x6d7x")
+
+[node name="MapAreas" type="Node2D" parent="Map"]
+
+[node name="HumanArea" type="Area2D" parent="Map/MapAreas"]
+position = Vector2(143, -544)
+script = ExtResource("3_qeu4h")
+area_text_color = Color(0, 0.211765, 1, 1)
+unlocked_level = 1
+area_name = "人族帝国"
+area_intro = "以人类为主要居住生物，地形多为平原地带，是吾等安身立命之地。"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/MapAreas/HumanArea"]
+polygon = PackedVector2Array(-270, -294, -222, -284, -190, -305, -190, -279, -165, -285, -140, -281, -90, -359, -74, -329, -41, -346, -2, -331, 50, -352, 51, -296, 110, -321, 121, -303, 146, -296, 177, -308, 200, -344, 217, -345, 212, -313, 220, -274, 165, -237, 168, -215, 206, -217, 240, -241, 286, -234, 312, -213, 332, -215, 346, -170, 367, -169, 427, -210, 447, -209, 449, -198, 501, -203, 527, -160, 525, -144, 483, -174, 477, -142, 452, -138, 450, -114, 483, -107, 474, -75, 438, -72, 428, -46, 395, -58, 374, -51, 313, -79, 294, -36, 246, -38, 210, 1, 225, 10, 208, 21, 251, 56, 250, 99, 211, 121, 200, 157, 236, 209, 274, 227, 254, 276, 248, 316, 175, 346, 181, 280, 179, 243, 145, 227, 122, 240, 124, 271, 137, 293, 97, 304, 84, 320, 57, 303, 27, 327, -148, 323, -162, 307, -238, 327, -238, 303, -266, 276, -253, 243, -262, 222, -348, 232, -335, 187, -370, 165, -390, 129, -382, 104, -413, 68, -392, 64, -381, 80, -334, 45, -333, 9, -372, -31, -381, -72, -346, -80, -295, -46, -260, -143, -292, -189, -252, -233, -274, -282)
+
+[node name="JungleArea" type="Area2D" parent="Map/MapAreas"]
+position = Vector2(15, -65)
+script = ExtResource("3_qeu4h")
+area_text_color = Color(0, 0.509804, 0, 1)
+unlocked_level = 5
+area_name = "野区雨林"
+area_intro = "临近帝国的一片蛮荒之地，多为不死的野区亡灵生物，渺无人烟。"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/MapAreas/JungleArea"]
+polygon = PackedVector2Array(-25, -148, 160, -144, 183, -129, 189, -106, 150, -100, 146, -73, 124, -63, 136, -34, 187, -26, 169, -15, 87, 2, 75, 41, 104, 61, 92, 93, 119, 129, 108, 162, 44, 194, 5, 196, -37, 215, -81, 203, -26, 150, -36, 130, -87, 150, -67, 116, -83, 51, -115, 65, -170, 59, -191, -24, -126, -49, -48, -123)
+
+[node name="DesertArea" type="Area2D" parent="Map/MapAreas"]
+position = Vector2(-338, 408)
+script = ExtResource("3_qeu4h")
+area_text_color = Color(1, 0.533333, 0, 1)
+unlocked_level = 8
+area_name = "沙漠地区"
+area_intro = "干燥，炎热之地，生机之地尚少，多为沙漠地带，自百年之前我们就失去了对这片大陆的讯息。"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/MapAreas/DesertArea"]
+polygon = PackedVector2Array(-137, -406, -46, -374, 26, -410, 62, -401, 60, -323, 112, -321, 102, -233, 61, -196, 61, -160, 197, -105, 175, -55, 155, -37, 167, -7, 132, 4, 106, 55, 83, 74, 87, 93, 159, 74, 214, 81, 271, 88, 230, 113, 189, 110, 150, 135, 136, 195, 154, 233, 134, 256, 160, 273, 157, 295, 106, 300, 92, 342, 150, 375, 148, 402, 127, 423, 131, 444, 123, 456, 67, 413, 29, 416, 9, 432, -35, 407, -33, 379, -9, 380, -34, 314, -68, 306, -84, 332, -98, 203, -184, 166, -147, 137, -121, 85, -61, 82, -47, -8, -87, -11, -104, 28, -128, 4, -136, 59, -198, 34, -210, -18, -177, -41, -315, -83, -172, -151, -182, -200, -221, -205, -225, -254, -143, -297, -148, -348, -167, -355)
+
+[node name="HateArea" type="Area2D" parent="Map/MapAreas"]
+script = ExtResource("3_qeu4h")
+area_text_color = Color(0, 1, 0.509804, 1)
+unlocked_level = 12
+area_name = "厌国"
+area_intro = "以苦力怕一族为主导，多生物共存的国度，拥有闻所未闻的技术。"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/MapAreas/HateArea"]
+polygon = PackedVector2Array(305, 198, 413, 190, 580, 183, 768, 287, 715, 421, 641, 644, 493, 702, 326, 732, 114, 618, 48, 556, 118, 361, 212, 349, 273, 278)
+
+[node name="HIMArea" type="Area2D" parent="Map/MapAreas"]
+script = ExtResource("3_qeu4h")
+area_text_color = Color(0.497474, 0.497474, 0.497474, 1)
+unlocked_level = 100
+area_name = "失落帝国"
+area_intro = "数百年前因为未知灾难灭亡的帝国，现如今这片失落的国度每日重复着昔日的辉煌，被一个孤独的帝王统治。"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/MapAreas/HIMArea"]
+polygon = PackedVector2Array(946, -795, 974, -794, 1017, -838, 1036, -835, 1051, -782, 1064, -767, 1101, -796, 1176, -779, 1152, -756, 1103, -755, 1101, -732, 1111, -710, 1153, -705, 1209, -732, 1222, -726, 1209, -715, 1211, -692, 1253, -671, 1270, -639, 1254, -587, 1263, -568, 1317, -560, 1337, -510, 1359, -514, 1370, -527, 1387, -515, 1400, -479, 1393, -449, 1385, -409, 1428, -390, 1444, -392, 1443, -367, 1388, -356, 1366, -386, 1351, -431, 1319, -393, 1287, -376, 1335, -333, 1381, -293, 1402, -306, 1427, -303, 1422, -249, 1372, -257, 1379, -220, 1449, -133, 1454, -114, 1436, -64, 1410, -122, 1371, -119, 1314, -62, 1307, 19, 1276, -7, 1262, -1, 1203, -36, 1195, -70, 1231, -81, 1190, -120, 1185, -179, 1134, -204, 1095, -196, 1078, -156, 1127, -96, 1105, -64, 1096, -34, 1114, -2, 1073, 69, 1041, 31, 1003, 17, 992, 136, 967, 146, 922, 200, 838, 223, 899, 158, 912, 68, 952, 86, 960, 15, 950, -5, 956, -18, 976, -14, 969, -61, 935, -100, 935, -147, 977, -177, 964, -254, 924, -244, 890, -263, 913, -282, 905, -343, 845, -329, 851, -353, 898, -368, 908, -438, 894, -457, 917, -471, 902, -504, 866, -529, 883, -556, 919, -559, 929, -644, 914, -631, 900, -655, 878, -667, 887, -716, 927, -744, 918, -786)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(289, -468)
+position_smoothing_enabled = true
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_rsnhv")
+bus = &"Music"
+script = ExtResource("3_vfag4")
+
+[node name="MapUI" type="CanvasLayer" parent="."]
+
+[node name="DrageArea" type="Area2D" parent="MapUI" node_paths=PackedStringArray("camera")]
+script = ExtResource("2_dw8cc")
+camera = NodePath("../../Camera2D")
+min_position = Vector2(-960, -540)
+max_position = Vector2(960, 540)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapUI/DrageArea"]
+position = Vector2(966.5, 437)
+shape = SubResource("RectangleShape2D_ghyds")
+debug_color = Color(0, 0, 0, 0)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="MapUI/DrageArea"]
+position = Vector2(512.5, 981)
+shape = SubResource("RectangleShape2D_wtsj5")
+debug_color = Color(0, 0, 0, 0)
+
+[node name="LevelPanel" type="Panel" parent="MapUI"]
+offset_left = 189.0
+offset_top = 144.0
+offset_right = 462.0
+offset_bottom = 301.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qytlt")
+script = ExtResource("4_qsg6w")
+
+[node name="Label" type="Label" parent="MapUI/LevelPanel"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 22.0
+offset_right = 407.0
+offset_bottom = 101.0
+scale = Vector2(0.407324, 0.407324)
+theme_override_fonts/font = ExtResource("5_pl70x")
+theme_override_font_sizes/font_size = 64
+text = "未知区域"
+vertical_alignment = 1
+
+[node name="Intro" type="Label" parent="MapUI/LevelPanel"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 63.0
+offset_right = 887.0
+offset_bottom = 254.0
+scale = Vector2(0.273488, 0.273488)
+theme_override_fonts/font = ExtResource("5_pl70x")
+theme_override_font_sizes/font_size = 64
+text = "??????"
+autowrap_mode = 3
+
+[node name="StarPanel" type="Panel" parent="MapUI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -333.0
+offset_top = 33.0
+offset_right = -18.0
+offset_bottom = 102.0
+grow_horizontal = 0
+pivot_offset = Vector2(315, -1)
+theme_override_styles/panel = SubResource("StyleBoxFlat_4x1pv")
+
+[node name="Star" type="Sprite2D" parent="MapUI/StarPanel"]
+position = Vector2(73, 36)
+scale = Vector2(0.449699, 0.449699)
+texture = ExtResource("25_pof2k")
+
+[node name="StarLabel" type="Label" parent="MapUI/StarPanel"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 82.0
+offset_top = -16.5
+offset_right = -12.0
+offset_bottom = 18.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_pl70x")
+text = "0 / 100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OptionButton" type="TextureButton" parent="MapUI"]
+offset_left = 19.0
+offset_top = 19.0
+offset_right = 179.0
+offset_bottom = 179.0
+scale = Vector2(0.76009, 0.76009)
+pivot_offset = Vector2(78.938, 78.938)
+texture_normal = SubResource("AtlasTexture_rrwnx")
+texture_pressed = SubResource("AtlasTexture_u24d2")
+texture_hover = SubResource("AtlasTexture_nc85e")
+stretch_mode = 3
+
+[node name="ButtonGroups" type="Control" parent="MapUI"]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="HeroHallButton" type="TextureButton" parent="MapUI/ButtonGroups"]
+layout_mode = 0
+offset_left = -819.0
+offset_top = -189.0
+offset_right = -693.0
+offset_bottom = -55.0
+texture_normal = SubResource("AtlasTexture_onhhs")
+texture_pressed = SubResource("AtlasTexture_w1j81")
+texture_hover = SubResource("AtlasTexture_742rq")
+stretch_mode = 3
+
+[node name="HeadTex" type="Sprite2D" parent="MapUI/ButtonGroups/HeroHallButton"]
+position = Vector2(64, 63)
+scale = Vector2(0.21, 0.21)
+texture = ExtResource("13_5f68u")
+region_rect = Rect2(0, 0, 526, 526)
+
+[node name="Hero-under" type="Sprite2D" parent="MapUI/ButtonGroups/HeroHallButton"]
+position = Vector2(64, 51)
+texture = ExtResource("14_ha8lx")
+
+[node name="NormalButton" parent="MapUI/ButtonGroups/HeroHallButton" instance=ExtResource("10_e3r7j")]
+layout_mode = 0
+offset_left = -0.999998
+offset_top = 125.0
+offset_right = 330.0
+offset_bottom = 268.0
+scale = Vector2(0.397973, 0.397973)
+disabled = true
+button_title = "英雄殿堂"
+
+[node name="UpgradeButton" type="TextureButton" parent="MapUI/ButtonGroups"]
+layout_mode = 0
+offset_left = -619.0
+offset_top = -200.0
+offset_right = -438.0
+offset_bottom = 17.0
+scale = Vector2(0.734446, 0.734446)
+texture_normal = SubResource("AtlasTexture_p3a3j")
+texture_pressed = SubResource("AtlasTexture_p3a3j")
+texture_hover = SubResource("AtlasTexture_fdwda")
+stretch_mode = 3
+
+[node name="NormalButton" parent="MapUI/ButtonGroups/UpgradeButton" instance=ExtResource("10_e3r7j")]
+layout_mode = 0
+offset_left = -0.999998
+offset_top = 182.45
+offset_right = 330.0
+offset_bottom = 325.45
+scale = Vector2(0.587261, 0.587261)
+disabled = true
+button_title = "升级"
+
+[node name="SeenBookButton" type="TextureButton" parent="MapUI/ButtonGroups"]
+layout_mode = 0
+offset_left = -422.0
+offset_top = -156.0
+offset_right = -10.0
+offset_bottom = 204.0
+scale = Vector2(0.35621, 0.35621)
+texture_normal = SubResource("AtlasTexture_28rxw")
+texture_pressed = SubResource("AtlasTexture_28rxw")
+texture_hover = SubResource("AtlasTexture_a8n25")
+stretch_mode = 3
+
+[node name="NormalButton" parent="MapUI/ButtonGroups/SeenBookButton" instance=ExtResource("10_e3r7j")]
+layout_mode = 0
+offset_left = 22.4586
+offset_top = 238.623
+offset_right = 353.459
+offset_bottom = 381.623
+scale = Vector2(1.24755, 1.24755)
+disabled = true
+button_title = "百科全书"
+
+[node name="AchievementButton" type="TextureButton" parent="MapUI/ButtonGroups"]
+layout_mode = 0
+offset_left = -245.0
+offset_top = -198.0
+offset_right = 167.0
+offset_bottom = 162.0
+scale = Vector2(0.505184, 0.505184)
+texture_normal = SubResource("AtlasTexture_i2vvc")
+texture_pressed = SubResource("AtlasTexture_i2vvc")
+texture_hover = SubResource("AtlasTexture_e1m4n")
+stretch_mode = 3
+
+[node name="NormalButton" parent="MapUI/ButtonGroups/AchievementButton" instance=ExtResource("10_e3r7j")]
+layout_mode = 0
+offset_left = 29.6924
+offset_top = 251.394
+offset_right = 360.693
+offset_bottom = 394.394
+scale = Vector2(0.885727, 0.885727)
+disabled = true
+button_title = "进度"
+
+[node name="OptionPanel" type="Control" parent="MapUI"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("10_hf44j")
+
+[node name="Panel" type="Panel" parent="MapUI/OptionPanel"]
+layout_mode = 0
+offset_left = -38.0
+offset_top = -21.0
+offset_right = 1928.0
+offset_bottom = 1093.0
+
+[node name="Control" type="Control" parent="MapUI/OptionPanel"]
+anchors_preset = 0
+offset_left = 639.0
+offset_top = 249.0
+offset_right = 1308.0
+offset_bottom = 732.0
+
+[node name="ResetButton" parent="MapUI/OptionPanel/Control" instance=ExtResource("10_e3r7j")]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 477.0
+offset_right = 344.0
+offset_bottom = 620.0
+scale = Vector2(0.674422, 0.674422)
+mouse_filter = 2
+button_title = "重设"
+
+[node name="FinishButton" parent="MapUI/OptionPanel/Control" instance=ExtResource("10_e3r7j")]
+layout_mode = 0
+offset_left = 431.0
+offset_top = 477.0
+offset_right = 762.0
+offset_bottom = 620.0
+scale = Vector2(0.674422, 0.674422)
+mouse_filter = 2
+button_title = "完成"
+
+[node name="ExitButton" parent="MapUI/OptionPanel/Control" instance=ExtResource("10_e3r7j")]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 477.0
+offset_right = 555.0
+offset_bottom = 620.0
+scale = Vector2(0.674422, 0.674422)
+button_title = "退出"
+
+[node name="CheatEnterButton" parent="MapUI/OptionPanel/Control" instance=ExtResource("10_e3r7j")]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 627.0
+offset_right = 555.0
+offset_bottom = 770.0
+scale = Vector2(0.674422, 0.674422)
+button_title = "作弊码"
+
+[node name="MusicSlider" type="HSlider" parent="MapUI/OptionPanel/Control"]
+layout_mode = 0
+offset_right = 950.0
+offset_bottom = 173.0
+scale = Vector2(0.690631, 0.690631)
+focus_mode = 0
+mouse_filter = 2
+theme = SubResource("Theme_ilpjr")
+theme_override_styles/slider = SubResource("StyleBoxFlat_8lxlt")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_nerbj")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_nerbj")
+min_value = -30.0
+max_value = 20.0
+step = 0.1
+
+[node name="MusicLabel" type="Label" parent="MapUI/OptionPanel/Control"]
+layout_mode = 0
+offset_top = -52.0
+offset_right = 651.0
+offset_bottom = 12.0
+theme_override_fonts/font = ExtResource("5_pl70x")
+theme_override_font_sizes/font_size = 64
+text = "音乐"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SoundSlider" type="HSlider" parent="MapUI/OptionPanel/Control"]
+layout_mode = 0
+offset_top = 202.0
+offset_right = 950.0
+offset_bottom = 375.0
+scale = Vector2(0.690631, 0.690631)
+focus_mode = 0
+mouse_filter = 2
+theme = SubResource("Theme_ilpjr")
+theme_override_styles/slider = SubResource("StyleBoxFlat_8lxlt")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_nerbj")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_nerbj")
+min_value = -10.0
+max_value = 20.0
+step = 0.1
+
+[node name="MusicLabel2" type="Label" parent="MapUI/OptionPanel/Control"]
+layout_mode = 0
+offset_top = 150.0
+offset_right = 651.0
+offset_bottom = 214.0
+theme_override_fonts/font = ExtResource("5_pl70x")
+theme_override_font_sizes/font_size = 64
+text = "音效"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DifficultyButton" type="Button" parent="MapUI/OptionPanel/Control"]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 362.0
+offset_right = 768.0
+offset_bottom = 565.0
+scale = Vector2(0.41381, 0.41381)
+focus_mode = 0
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("5_pl70x")
+theme_override_font_sizes/font_size = 72
+theme_override_styles/normal = SubResource("StyleBoxFlat_78j80")
+text = "难度选择"
+
+[node name="AudioMuteCondition" type="Node" parent="MapUI/OptionPanel"]
+script = ExtResource("12_13y10")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_46vkd")
+}
+
+[node name="Flags" type="Node2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+
+[node name="LevelFlag" parent="Flags" instance=ExtResource("25_5blhy")]
+y_sort_enabled = true
+position = Vector2(302, -506)
+scale = Vector2(0.2, 0.2)
+flag_level = 1
+
+[node name="LevelFlag2" parent="Flags" instance=ExtResource("25_5blhy")]
+y_sort_enabled = true
+position = Vector2(-78, -466)
+scale = Vector2(0.2, 0.2)
+last_level = 1
+flag_level = 2
+
+[node name="LevelFlag3" parent="Flags" instance=ExtResource("25_5blhy")]
+y_sort_enabled = true
+position = Vector2(113, -353)
+scale = Vector2(0.2, 0.2)
+last_level = 2
+flag_level = 3
+
+[node name="LevelFlag4" parent="Flags" instance=ExtResource("25_5blhy")]
+y_sort_enabled = true
+position = Vector2(212, -261)
+scale = Vector2(0.2, 0.2)
+last_level = 3
+flag_level = 4
+
+[node name="LevelFlag5" parent="Flags" instance=ExtResource("25_5blhy")]
+y_sort_enabled = true
+position = Vector2(26, -182)
+scale = Vector2(0.2, 0.2)
+last_level = 4
+flag_level = 5
+
+[node name="LevelFlag6" parent="Flags" instance=ExtResource("25_5blhy")]
+y_sort_enabled = true
+position = Vector2(1.90735e-06, -55)
+scale = Vector2(0.2, 0.2)
+last_level = 5
+flag_level = 6
+
+[node name="LevelFlag7" parent="Flags" instance=ExtResource("25_5blhy")]
+y_sort_enabled = true
+position = Vector2(-135, -21)
+scale = Vector2(0.2, 0.2)
+last_level = 6
+flag_level = 7
+
+[node name="LevelFlag8" parent="Flags" instance=ExtResource("25_5blhy")]
+y_sort_enabled = true
+position = Vector2(-408, 155)
+scale = Vector2(0.2, 0.2)
+last_level = 7
+flag_level = 8
+
+[node name="LevelFlag9" parent="Flags" instance=ExtResource("25_5blhy")]
+y_sort_enabled = true
+position = Vector2(-349, 360)
+scale = Vector2(0.2, 0.2)
+last_level = 8
+flag_level = 9
+
+[node name="LevelFlag10" parent="Flags" instance=ExtResource("25_5blhy")]
+y_sort_enabled = true
+position = Vector2(-346, 576)
+scale = Vector2(0.2, 0.2)
+last_level = 9
+flag_level = 10
+
+[node name="LevelFlag11" parent="Flags" instance=ExtResource("25_5blhy")]
+y_sort_enabled = true
+position = Vector2(-122, 529)
+scale = Vector2(0.2, 0.2)
+last_level = 10
+flag_level = 11
+
+[node name="LevelFlag12" parent="Flags" instance=ExtResource("25_5blhy")]
+y_sort_enabled = true
+position = Vector2(176, 446)
+scale = Vector2(0.2, 0.2)
+last_level = 11
+flag_level = 12
+
+[node name="LevelFlag13" parent="Flags" instance=ExtResource("25_5blhy")]
+y_sort_enabled = true
+position = Vector2(348, 406)
+scale = Vector2(0.2, 0.2)
+last_level = 12
+flag_level = 13
+
+[node name="LevelFlag14" parent="Flags" instance=ExtResource("25_5blhy")]
+y_sort_enabled = true
+position = Vector2(414, 307)
+scale = Vector2(0.2, 0.2)
+last_level = 13
+flag_level = 14
+
+[node name="LevelFlag15" parent="Flags" instance=ExtResource("25_5blhy")]
+y_sort_enabled = true
+position = Vector2(739, 289)
+scale = Vector2(0.2, 0.2)
+last_level = 14
+flag_level = 15
+
+[node name="LevelFlag16" parent="Flags" instance=ExtResource("25_5blhy")]
+y_sort_enabled = true
+position = Vector2(1010, -93)
+scale = Vector2(0.2, 0.2)
+last_level = 16
+flag_level = 16
+
+[node name="LevelFlag17" parent="Flags" instance=ExtResource("25_5blhy")]
+y_sort_enabled = true
+position = Vector2(985, -449)
+scale = Vector2(0.2, 0.2)
+last_level = 16
+flag_level = 17
+
+[node name="LevelFlag18" parent="Flags" instance=ExtResource("25_5blhy")]
+y_sort_enabled = true
+position = Vector2(484, -650)
+scale = Vector2(0.2, 0.2)
+last_level = 17
+flag_level = 18
+
+[node name="LevelFlag19" parent="Flags" instance=ExtResource("25_5blhy")]
+y_sort_enabled = true
+position = Vector2(212, -617)
+scale = Vector2(0.2, 0.2)
+last_level = 18
+flag_level = 19
+
+[node name="LevelFlag20" parent="Flags" instance=ExtResource("25_5blhy")]
+y_sort_enabled = true
+position = Vector2(243, -548)
+scale = Vector2(0.2, 0.2)
+last_level = 19
+flag_level = 20
+
+[node name="Paths" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="MapPath" type="Node2D" parent="Paths"]
+y_sort_enabled = true
+script = ExtResource("26_gtiyn")
+end_level = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Paths/MapPath"]
+position = Vector2(277, -499)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Paths/MapPath"]
+position = Vector2(244, -492)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Paths/MapPath"]
+position = Vector2(209, -489)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Paths/MapPath"]
+position = Vector2(176, -487)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Paths/MapPath"]
+position = Vector2(141, -480)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Paths/MapPath"]
+position = Vector2(105, -477)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Paths/MapPath"]
+position = Vector2(70, -477)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D8" type="Sprite2D" parent="Paths/MapPath"]
+position = Vector2(27, -472)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D9" type="Sprite2D" parent="Paths/MapPath"]
+position = Vector2(-9, -467)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D10" type="Sprite2D" parent="Paths/MapPath"]
+position = Vector2(-46, -464)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="MapPath2" type="Node2D" parent="Paths"]
+y_sort_enabled = true
+script = ExtResource("26_gtiyn")
+end_level = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Paths/MapPath2"]
+position = Vector2(-92, -444)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Paths/MapPath2"]
+position = Vector2(-81, -412)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Paths/MapPath2"]
+position = Vector2(-49, -401)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Paths/MapPath2"]
+position = Vector2(-12, -403)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Paths/MapPath2"]
+position = Vector2(21, -389)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Paths/MapPath2"]
+position = Vector2(44, -366)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Paths/MapPath2"]
+position = Vector2(72, -354)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D8" type="Sprite2D" parent="Paths/MapPath2"]
+position = Vector2(99, -350)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="MapPath3" type="Node2D" parent="Paths"]
+y_sort_enabled = true
+script = ExtResource("26_gtiyn")
+end_level = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Paths/MapPath3"]
+position = Vector2(131, -347)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Paths/MapPath3"]
+position = Vector2(166, -326)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Paths/MapPath3"]
+position = Vector2(182, -287)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Paths/MapPath3"]
+position = Vector2(197, -267)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="MapPath4" type="Node2D" parent="Paths"]
+y_sort_enabled = true
+script = ExtResource("26_gtiyn")
+end_level = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="Paths/MapPath4"]
+position = Vector2(196, -247)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Paths/MapPath4"]
+position = Vector2(162, -236)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Paths/MapPath4"]
+position = Vector2(137, -210)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Paths/MapPath4"]
+position = Vector2(101, -213)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D9" type="Sprite2D" parent="Paths/MapPath4"]
+position = Vector2(70, -194)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D11" type="Sprite2D" parent="Paths/MapPath4"]
+position = Vector2(36, -183)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="MapPath5" type="Node2D" parent="Paths"]
+y_sort_enabled = true
+script = ExtResource("26_gtiyn")
+end_level = 6
+
+[node name="Sprite2D2" type="Sprite2D" parent="Paths/MapPath5"]
+position = Vector2(20, -152)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Paths/MapPath5"]
+position = Vector2(25, -124)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Paths/MapPath5"]
+position = Vector2(21, -94)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D8" type="Sprite2D" parent="Paths/MapPath5"]
+position = Vector2(15, -68)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="MapPath6" type="Node2D" parent="Paths"]
+y_sort_enabled = true
+script = ExtResource("26_gtiyn")
+end_level = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="Paths/MapPath6"]
+position = Vector2(-13, -50)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Paths/MapPath6"]
+position = Vector2(-40, -42)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Paths/MapPath6"]
+position = Vector2(-70, -37)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Paths/MapPath6"]
+position = Vector2(-102, -28)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D9" type="Sprite2D" parent="Paths/MapPath6"]
+position = Vector2(-130, -20)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="MapPath7" type="Node2D" parent="Paths"]
+y_sort_enabled = true
+script = ExtResource("26_gtiyn")
+end_level = 8
+
+[node name="Sprite2D" type="Sprite2D" parent="Paths/MapPath7"]
+position = Vector2(-148, -15)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Paths/MapPath7"]
+position = Vector2(-167, -9)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Paths/MapPath7"]
+position = Vector2(-178, 3)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Paths/MapPath7"]
+position = Vector2(-200, 23)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D8" type="Sprite2D" parent="Paths/MapPath7"]
+position = Vector2(-228, 30)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D10" type="Sprite2D" parent="Paths/MapPath7"]
+position = Vector2(-252, 46)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D12" type="Sprite2D" parent="Paths/MapPath7"]
+position = Vector2(-270, 66)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D14" type="Sprite2D" parent="Paths/MapPath7"]
+position = Vector2(-281, 91)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D16" type="Sprite2D" parent="Paths/MapPath7"]
+position = Vector2(-307, 100)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D18" type="Sprite2D" parent="Paths/MapPath7"]
+position = Vector2(-326, 113)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D20" type="Sprite2D" parent="Paths/MapPath7"]
+position = Vector2(-348, 130)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D22" type="Sprite2D" parent="Paths/MapPath7"]
+position = Vector2(-375, 137)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D24" type="Sprite2D" parent="Paths/MapPath7"]
+position = Vector2(-400, 153)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="MapPath8" type="Node2D" parent="Paths"]
+y_sort_enabled = true
+script = ExtResource("26_gtiyn")
+end_level = 9
+
+[node name="Sprite2D" type="Sprite2D" parent="Paths/MapPath8"]
+position = Vector2(-417, 170)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Paths/MapPath8"]
+position = Vector2(-431, 194)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Paths/MapPath8"]
+position = Vector2(-420, 219)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Paths/MapPath8"]
+position = Vector2(-394, 233)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Paths/MapPath8"]
+position = Vector2(-373, 243)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Paths/MapPath8"]
+position = Vector2(-348, 259)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Paths/MapPath8"]
+position = Vector2(-335, 280)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D8" type="Sprite2D" parent="Paths/MapPath8"]
+position = Vector2(-349, 306)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D9" type="Sprite2D" parent="Paths/MapPath8"]
+position = Vector2(-368, 321)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D10" type="Sprite2D" parent="Paths/MapPath8"]
+position = Vector2(-372, 345)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D11" type="Sprite2D" parent="Paths/MapPath8"]
+position = Vector2(-355, 361)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="MapPath9" type="Node2D" parent="Paths"]
+y_sort_enabled = true
+script = ExtResource("26_gtiyn")
+end_level = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="Paths/MapPath9"]
+position = Vector2(-332, 372)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Paths/MapPath9"]
+position = Vector2(-327, 393)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Paths/MapPath9"]
+position = Vector2(-329, 420)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Paths/MapPath9"]
+position = Vector2(-337, 447)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Paths/MapPath9"]
+position = Vector2(-357, 468)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Paths/MapPath9"]
+position = Vector2(-372, 487)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Paths/MapPath9"]
+position = Vector2(-394, 500)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D8" type="Sprite2D" parent="Paths/MapPath9"]
+position = Vector2(-404, 520)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D9" type="Sprite2D" parent="Paths/MapPath9"]
+position = Vector2(-403, 544)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D10" type="Sprite2D" parent="Paths/MapPath9"]
+position = Vector2(-392, 562)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D11" type="Sprite2D" parent="Paths/MapPath9"]
+position = Vector2(-374, 577)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D12" type="Sprite2D" parent="Paths/MapPath9"]
+position = Vector2(-351, 577)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="MapPath10" type="Node2D" parent="Paths"]
+y_sort_enabled = true
+script = ExtResource("26_gtiyn")
+end_level = 11
+
+[node name="Sprite2D" type="Sprite2D" parent="Paths/MapPath10"]
+position = Vector2(-333, 564)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Paths/MapPath10"]
+position = Vector2(-325, 548)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Paths/MapPath10"]
+position = Vector2(-313, 533)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Paths/MapPath10"]
+position = Vector2(-293, 530)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Paths/MapPath10"]
+position = Vector2(-270, 537)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Paths/MapPath10"]
+position = Vector2(-242, 541)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Paths/MapPath10"]
+position = Vector2(-218, 527)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D8" type="Sprite2D" parent="Paths/MapPath10"]
+position = Vector2(-197, 512)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D9" type="Sprite2D" parent="Paths/MapPath10"]
+position = Vector2(-173, 504)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D10" type="Sprite2D" parent="Paths/MapPath10"]
+position = Vector2(-146, 503)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D11" type="Sprite2D" parent="Paths/MapPath10"]
+position = Vector2(-125, 519)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="MapPath11" type="Node2D" parent="Paths"]
+y_sort_enabled = true
+script = ExtResource("26_gtiyn")
+end_level = 12
+
+[node name="Sprite2D" type="Sprite2D" parent="Paths/MapPath11"]
+position = Vector2(-100, 533)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Paths/MapPath11"]
+position = Vector2(-71, 536)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Paths/MapPath11"]
+position = Vector2(-45, 524)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Paths/MapPath11"]
+position = Vector2(-24, 497)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Paths/MapPath11"]
+position = Vector2(-18, 469)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Paths/MapPath11"]
+position = Vector2(-8, 442)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Paths/MapPath11"]
+position = Vector2(7, 424)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D8" type="Sprite2D" parent="Paths/MapPath11"]
+position = Vector2(37, 430)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D9" type="Sprite2D" parent="Paths/MapPath11"]
+position = Vector2(60, 447)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D10" type="Sprite2D" parent="Paths/MapPath11"]
+position = Vector2(85, 464)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D11" type="Sprite2D" parent="Paths/MapPath11"]
+position = Vector2(96, 491)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D12" type="Sprite2D" parent="Paths/MapPath11"]
+position = Vector2(80, 516)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D13" type="Sprite2D" parent="Paths/MapPath11"]
+position = Vector2(84, 537)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D14" type="Sprite2D" parent="Paths/MapPath11"]
+position = Vector2(116, 541)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D15" type="Sprite2D" parent="Paths/MapPath11"]
+position = Vector2(140, 525)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D16" type="Sprite2D" parent="Paths/MapPath11"]
+position = Vector2(157, 507)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D17" type="Sprite2D" parent="Paths/MapPath11"]
+position = Vector2(155, 476)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D18" type="Sprite2D" parent="Paths/MapPath11"]
+position = Vector2(168, 457)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D19" type="Sprite2D" parent="Paths/MapPath11"]
+position = Vector2(175, 446)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="MapPath12" type="Node2D" parent="Paths"]
+y_sort_enabled = true
+script = ExtResource("26_gtiyn")
+end_level = 13
+
+[node name="Sprite2D" type="Sprite2D" parent="Paths/MapPath12"]
+position = Vector2(193, 439)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Paths/MapPath12"]
+position = Vector2(213, 430)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Paths/MapPath12"]
+position = Vector2(231, 438)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Paths/MapPath12"]
+position = Vector2(259, 427)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Paths/MapPath12"]
+position = Vector2(275, 411)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Paths/MapPath12"]
+position = Vector2(291, 400)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Paths/MapPath12"]
+position = Vector2(315, 406)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D8" type="Sprite2D" parent="Paths/MapPath12"]
+position = Vector2(343, 405)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="MapPath13" type="Node2D" parent="Paths"]
+y_sort_enabled = true
+script = ExtResource("26_gtiyn")
+end_level = 14
+
+[node name="Sprite2D" type="Sprite2D" parent="Paths/MapPath13"]
+position = Vector2(362, 394)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Paths/MapPath13"]
+position = Vector2(372, 378)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Paths/MapPath13"]
+position = Vector2(380, 361)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Paths/MapPath13"]
+position = Vector2(386, 342)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Paths/MapPath13"]
+position = Vector2(390, 325)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Paths/MapPath13"]
+position = Vector2(402, 314)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Paths/MapPath13"]
+position = Vector2(413, 306)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="MapPath14" type="Node2D" parent="Paths"]
+y_sort_enabled = true
+script = ExtResource("26_gtiyn")
+end_level = 15
+
+[node name="Sprite2D" type="Sprite2D" parent="Paths/MapPath14"]
+position = Vector2(443, 312)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Paths/MapPath14"]
+position = Vector2(464, 322)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Paths/MapPath14"]
+position = Vector2(482, 338)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Paths/MapPath14"]
+position = Vector2(504, 331)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Paths/MapPath14"]
+position = Vector2(525, 322)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Paths/MapPath14"]
+position = Vector2(538, 304)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Paths/MapPath14"]
+position = Vector2(544, 286)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D8" type="Sprite2D" parent="Paths/MapPath14"]
+position = Vector2(556, 275)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D9" type="Sprite2D" parent="Paths/MapPath14"]
+position = Vector2(576, 267)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D10" type="Sprite2D" parent="Paths/MapPath14"]
+position = Vector2(598, 270)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D11" type="Sprite2D" parent="Paths/MapPath14"]
+position = Vector2(619, 278)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D12" type="Sprite2D" parent="Paths/MapPath14"]
+position = Vector2(645, 279)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D13" type="Sprite2D" parent="Paths/MapPath14"]
+position = Vector2(670, 276)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D14" type="Sprite2D" parent="Paths/MapPath14"]
+position = Vector2(691, 287)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D15" type="Sprite2D" parent="Paths/MapPath14"]
+position = Vector2(713, 285)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D16" type="Sprite2D" parent="Paths/MapPath14"]
+position = Vector2(734, 290)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="MapPath15" type="Node2D" parent="Paths"]
+y_sort_enabled = true
+script = ExtResource("26_gtiyn")
+end_level = 16
+
+[node name="Sprite2D" type="Sprite2D" parent="Paths/MapPath15"]
+position = Vector2(775, 287)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Paths/MapPath15"]
+position = Vector2(805, 287)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Paths/MapPath15"]
+position = Vector2(830, 281)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Paths/MapPath15"]
+position = Vector2(858, 268)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Paths/MapPath15"]
+position = Vector2(890, 268)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Paths/MapPath15"]
+position = Vector2(915, 265)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Paths/MapPath15"]
+position = Vector2(943, 252)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D8" type="Sprite2D" parent="Paths/MapPath15"]
+position = Vector2(961, 232)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D9" type="Sprite2D" parent="Paths/MapPath15"]
+position = Vector2(985, 214)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D10" type="Sprite2D" parent="Paths/MapPath15"]
+position = Vector2(1009, 200)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D11" type="Sprite2D" parent="Paths/MapPath15"]
+position = Vector2(1006, 172)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D12" type="Sprite2D" parent="Paths/MapPath15"]
+position = Vector2(1011, 143)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D13" type="Sprite2D" parent="Paths/MapPath15"]
+position = Vector2(1021, 122)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D14" type="Sprite2D" parent="Paths/MapPath15"]
+position = Vector2(1014, 100)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D15" type="Sprite2D" parent="Paths/MapPath15"]
+position = Vector2(1024, 76)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D16" type="Sprite2D" parent="Paths/MapPath15"]
+position = Vector2(1038, 68)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D17" type="Sprite2D" parent="Paths/MapPath15"]
+position = Vector2(1035, 38)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D18" type="Sprite2D" parent="Paths/MapPath15"]
+position = Vector2(1032, 13)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D19" type="Sprite2D" parent="Paths/MapPath15"]
+position = Vector2(1029, -4)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D20" type="Sprite2D" parent="Paths/MapPath15"]
+position = Vector2(1014, -16)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D21" type="Sprite2D" parent="Paths/MapPath15"]
+position = Vector2(1005, -30)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D22" type="Sprite2D" parent="Paths/MapPath15"]
+position = Vector2(1009, -46)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D23" type="Sprite2D" parent="Paths/MapPath15"]
+position = Vector2(1018, -59)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D24" type="Sprite2D" parent="Paths/MapPath15"]
+position = Vector2(1024, -74)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D25" type="Sprite2D" parent="Paths/MapPath15"]
+position = Vector2(1019, -89)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="MapPath16" type="Node2D" parent="Paths"]
+y_sort_enabled = true
+script = ExtResource("26_gtiyn")
+end_level = 17
+
+[node name="Sprite2D" type="Sprite2D" parent="Paths/MapPath16"]
+position = Vector2(996, -126)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Paths/MapPath16"]
+position = Vector2(996, -161)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Paths/MapPath16"]
+position = Vector2(995, -191)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Paths/MapPath16"]
+position = Vector2(1003, -224)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Paths/MapPath16"]
+position = Vector2(1013, -256)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Paths/MapPath16"]
+position = Vector2(1003, -288)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Paths/MapPath16"]
+position = Vector2(986, -308)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D8" type="Sprite2D" parent="Paths/MapPath16"]
+position = Vector2(984, -333)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D9" type="Sprite2D" parent="Paths/MapPath16"]
+position = Vector2(994, -356)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D10" type="Sprite2D" parent="Paths/MapPath16"]
+position = Vector2(996, -376)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D11" type="Sprite2D" parent="Paths/MapPath16"]
+position = Vector2(978, -391)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D12" type="Sprite2D" parent="Paths/MapPath16"]
+position = Vector2(966, -413)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D13" type="Sprite2D" parent="Paths/MapPath16"]
+position = Vector2(977, -429)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D14" type="Sprite2D" parent="Paths/MapPath16"]
+position = Vector2(992, -441)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="MapPath17" type="Node2D" parent="Paths"]
+y_sort_enabled = true
+script = ExtResource("26_gtiyn")
+end_level = 18
+
+[node name="Sprite2D" type="Sprite2D" parent="Paths/MapPath17"]
+position = Vector2(975, -462)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Paths/MapPath17"]
+position = Vector2(942, -477)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Paths/MapPath17"]
+position = Vector2(920, -491)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Paths/MapPath17"]
+position = Vector2(890, -505)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Paths/MapPath17"]
+position = Vector2(868, -520)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Paths/MapPath17"]
+position = Vector2(829, -536)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Paths/MapPath17"]
+position = Vector2(792, -552)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D8" type="Sprite2D" parent="Paths/MapPath17"]
+position = Vector2(755, -568)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D9" type="Sprite2D" parent="Paths/MapPath17"]
+position = Vector2(722, -583)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D10" type="Sprite2D" parent="Paths/MapPath17"]
+position = Vector2(685, -598)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D11" type="Sprite2D" parent="Paths/MapPath17"]
+position = Vector2(657, -612)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D12" type="Sprite2D" parent="Paths/MapPath17"]
+position = Vector2(618, -625)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D13" type="Sprite2D" parent="Paths/MapPath17"]
+position = Vector2(594, -633)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D14" type="Sprite2D" parent="Paths/MapPath17"]
+position = Vector2(569, -637)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D15" type="Sprite2D" parent="Paths/MapPath17"]
+position = Vector2(544, -642)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D16" type="Sprite2D" parent="Paths/MapPath17"]
+position = Vector2(515, -644)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D17" type="Sprite2D" parent="Paths/MapPath17"]
+position = Vector2(490, -648)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="MapPath18" type="Node2D" parent="Paths"]
+y_sort_enabled = true
+script = ExtResource("26_gtiyn")
+end_level = 19
+
+[node name="Sprite2D" type="Sprite2D" parent="Paths/MapPath18"]
+position = Vector2(458, -655)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Paths/MapPath18"]
+position = Vector2(436, -667)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Paths/MapPath18"]
+position = Vector2(414, -672)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Paths/MapPath18"]
+position = Vector2(389, -664)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Paths/MapPath18"]
+position = Vector2(364, -655)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Paths/MapPath18"]
+position = Vector2(349, -640)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Paths/MapPath18"]
+position = Vector2(320, -639)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D8" type="Sprite2D" parent="Paths/MapPath18"]
+position = Vector2(294, -644)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D9" type="Sprite2D" parent="Paths/MapPath18"]
+position = Vector2(269, -642)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D10" type="Sprite2D" parent="Paths/MapPath18"]
+position = Vector2(243, -634)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D11" type="Sprite2D" parent="Paths/MapPath18"]
+position = Vector2(223, -625)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="MapPath19" type="Node2D" parent="Paths"]
+y_sort_enabled = true
+script = ExtResource("26_gtiyn")
+end_level = 20
+
+[node name="Sprite2D" type="Sprite2D" parent="Paths/MapPath19"]
+position = Vector2(204, -603)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Paths/MapPath19"]
+position = Vector2(198, -579)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Paths/MapPath19"]
+position = Vector2(217, -558)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("27_bjcvd")
+region_enabled = true
+region_rect = Rect2(7, 7, 50, 50)
+
+[node name="PathAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("28_4awfl")
+volume_db = 5.0
+pitch_scale = 2.0
+max_polyphony = 10
+bus = &"Sound"
+
+[connection signal="mouse_entered" from="MapUI/DrageArea" to="MapUI/DrageArea" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MapUI/DrageArea" to="MapUI/DrageArea" method="_on_mouse_exited"]
+[connection signal="pressed" from="MapUI/OptionButton" to="." method="_on_option_button_pressed"]
+[connection signal="pressed" from="MapUI/ButtonGroups/HeroHallButton" to="." method="_on_hero_hall_button_pressed"]
+[connection signal="pressed" from="MapUI/ButtonGroups/UpgradeButton" to="." method="_on_upgrade_button_pressed"]
+[connection signal="pressed" from="MapUI/ButtonGroups/SeenBookButton" to="." method="_on_seen_book_button_pressed"]
+[connection signal="pressed" from="MapUI/ButtonGroups/AchievementButton" to="." method="_on_achievement_button_pressed"]
+[connection signal="pressed" from="MapUI/OptionPanel/Control/ResetButton" to="MapUI/OptionPanel" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="MapUI/OptionPanel/Control/FinishButton" to="." method="_on_finish_button_pressed"]
+[connection signal="pressed" from="MapUI/OptionPanel/Control/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="MapUI/OptionPanel/Control/CheatEnterButton" to="MapUI/OptionPanel" method="_on_cheat_enter_button_pressed"]
+[connection signal="value_changed" from="MapUI/OptionPanel/Control/MusicSlider" to="MapUI/OptionPanel" method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="MapUI/OptionPanel/Control/SoundSlider" to="MapUI/OptionPanel" method="_on_sound_slider_value_changed"]
+[connection signal="pressed" from="MapUI/OptionPanel/Control/DifficultyButton" to="." method="_on_difficulty_button_pressed"]

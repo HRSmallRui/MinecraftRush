@@ -1,0 +1,1311 @@
+[gd_scene load_steps=229 format=3 uid="uid://d2c404kk7xb4d"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_qor8l"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_37.gd" id="2_h2mpj"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="3_2l2yt"]
+[ext_resource type="Texture2D" uid="uid://do6v8kmpo75uy" path="res://Assets/Animations/Enemies/37女巫/attack_00.png" id="3_8bjq8"]
+[ext_resource type="PackedScene" uid="uid://b4kquni5ohfhd" path="res://Scenes/Bullets/witch_poison_potion.tscn" id="3_mot75"]
+[ext_resource type="Texture2D" uid="uid://bmtqr37kr6b3i" path="res://Assets/Images/UI/InformationBar/EnemyChapter4/女巫.png" id="3_vdnu1"]
+[ext_resource type="PackedScene" uid="uid://b3hes2kgsqbns" path="res://Scenes/Bullets/witch_heal_potion.tscn" id="3_xan7j"]
+[ext_resource type="AudioStream" uid="uid://bou0qebwuq23h" path="res://Assets/Sounds/FXs/Enemies/女巫/女巫死亡1.wav" id="4_5fb4c"]
+[ext_resource type="PackedScene" uid="uid://royv16lrg8s0" path="res://Scenes/Bullets/witch_regon_potion.tscn" id="4_l1i40"]
+[ext_resource type="PackedScene" uid="uid://jcpgvxa05p8x" path="res://Scenes/Bullets/witch_weakness_potion.tscn" id="4_vldvi"]
+[ext_resource type="Texture2D" uid="uid://b3xuqu5haic8v" path="res://Assets/Animations/Enemies/37女巫/attack_01.png" id="4_w5sc2"]
+[ext_resource type="PackedScene" uid="uid://86sqpe08x8fs" path="res://Scenes/Bullets/witch_damage_potion.tscn" id="5_f0ix4"]
+[ext_resource type="Texture2D" uid="uid://lcgb2sxphqjx" path="res://Assets/Animations/Enemies/37女巫/attack_02.png" id="5_gkcpf"]
+[ext_resource type="AudioStream" uid="uid://ddr66gpd4h3vi" path="res://Assets/Sounds/FXs/Enemies/女巫/女巫死亡2.wav" id="5_yfeis"]
+[ext_resource type="Texture2D" uid="uid://bhnhgaj61oelb" path="res://Assets/Animations/Enemies/37女巫/attack_03.png" id="6_6j8j4"]
+[ext_resource type="AudioStream" uid="uid://bvpyhxvbece02" path="res://Assets/Sounds/FXs/Enemies/女巫/女巫死亡3.wav" id="6_wxafw"]
+[ext_resource type="Texture2D" uid="uid://genx8l8hdrfn" path="res://Assets/Animations/Enemies/37女巫/attack_04.png" id="7_20ge4"]
+[ext_resource type="AudioStream" uid="uid://6y23pelwttx8" path="res://Assets/Sounds/FXs/Enemies/女巫/女巫死亡4.wav" id="7_iv61j"]
+[ext_resource type="Texture2D" uid="uid://bbwddm5hxgbnc" path="res://Assets/Animations/Enemies/37女巫/attack_05.png" id="8_m7v10"]
+[ext_resource type="Texture2D" uid="uid://mcv8gb25pimp" path="res://Assets/Animations/Enemies/37女巫/attack_06.png" id="9_seolg"]
+[ext_resource type="Texture2D" uid="uid://cfg4nju287bxg" path="res://Assets/Animations/Enemies/37女巫/attack_07.png" id="10_u16ya"]
+[ext_resource type="Texture2D" uid="uid://bvayqnaqc45dr" path="res://Assets/Animations/Enemies/37女巫/attack_08.png" id="11_hyhnd"]
+[ext_resource type="Texture2D" uid="uid://nnsc3d4brtid" path="res://Assets/Animations/Enemies/37女巫/attack_09.png" id="12_nvfyg"]
+[ext_resource type="Texture2D" uid="uid://dl58wbkpdf6tj" path="res://Assets/Animations/Enemies/37女巫/attack_10.png" id="13_rmroh"]
+[ext_resource type="Texture2D" uid="uid://butylj2hq0wwt" path="res://Assets/Animations/Enemies/37女巫/attack_11.png" id="14_q243u"]
+[ext_resource type="Texture2D" uid="uid://ckt3ouhn65xdg" path="res://Assets/Animations/Enemies/37女巫/attack_12.png" id="15_uoq2m"]
+[ext_resource type="Texture2D" uid="uid://c2wwk2c3t1te3" path="res://Assets/Animations/Enemies/37女巫/attack_13.png" id="16_2bl1j"]
+[ext_resource type="Texture2D" uid="uid://1b8ulq35odl4" path="res://Assets/Animations/Enemies/37女巫/attack_14.png" id="17_p3qnf"]
+[ext_resource type="Texture2D" uid="uid://ba2miyk8btjgc" path="res://Assets/Animations/Enemies/37女巫/attack_15.png" id="18_3soqx"]
+[ext_resource type="Texture2D" uid="uid://gice2lochrph" path="res://Assets/Animations/Enemies/37女巫/attack_16.png" id="19_fnn7y"]
+[ext_resource type="Texture2D" uid="uid://ca0yfc33xsli" path="res://Assets/Animations/Enemies/37女巫/attack_17.png" id="20_jln2h"]
+[ext_resource type="Texture2D" uid="uid://buqlaejb484xc" path="res://Assets/Animations/Enemies/37女巫/attack_18.png" id="21_s6eqq"]
+[ext_resource type="Texture2D" uid="uid://yehjn633yqy5" path="res://Assets/Animations/Enemies/37女巫/attack_19.png" id="22_anabt"]
+[ext_resource type="Texture2D" uid="uid://dk3qqacvmbaa8" path="res://Assets/Animations/Enemies/37女巫/attack_20.png" id="23_r5bv8"]
+[ext_resource type="Texture2D" uid="uid://clf37c8jks7dw" path="res://Assets/Animations/Enemies/37女巫/die_00.png" id="24_618gm"]
+[ext_resource type="Texture2D" uid="uid://df7kgt2485bn7" path="res://Assets/Animations/Enemies/37女巫/die_01.png" id="25_44kwj"]
+[ext_resource type="Texture2D" uid="uid://b18flbkkjb23i" path="res://Assets/Animations/Enemies/37女巫/die_02.png" id="26_sc437"]
+[ext_resource type="Texture2D" uid="uid://cqu6voxlk04pw" path="res://Assets/Animations/Enemies/37女巫/die_03.png" id="27_28g0f"]
+[ext_resource type="Texture2D" uid="uid://bsd8bk1le2xtq" path="res://Assets/Animations/Enemies/37女巫/die_04.png" id="28_2hyd2"]
+[ext_resource type="Texture2D" uid="uid://dvsrwy2s4kj8v" path="res://Assets/Animations/Enemies/37女巫/die_05.png" id="29_bbg27"]
+[ext_resource type="Texture2D" uid="uid://bq3so1exl6stp" path="res://Assets/Animations/Enemies/37女巫/die_06.png" id="30_mpe8m"]
+[ext_resource type="Texture2D" uid="uid://c8y6h60yyg1f4" path="res://Assets/Animations/Enemies/37女巫/die_07.png" id="31_dw2c5"]
+[ext_resource type="Texture2D" uid="uid://dddd1co5mc6qw" path="res://Assets/Animations/Enemies/37女巫/die_08.png" id="32_7ya6e"]
+[ext_resource type="Texture2D" uid="uid://bsw37jde3m7oh" path="res://Assets/Animations/Enemies/37女巫/die_09.png" id="33_cwm3n"]
+[ext_resource type="Texture2D" uid="uid://cpi1lmjkmf2ks" path="res://Assets/Animations/Enemies/37女巫/die_10.png" id="34_7fuu4"]
+[ext_resource type="Texture2D" uid="uid://cul0kjgdsdry6" path="res://Assets/Animations/Enemies/37女巫/die_11.png" id="35_ka36f"]
+[ext_resource type="Texture2D" uid="uid://c22mmdkwixpdf" path="res://Assets/Animations/Enemies/37女巫/die_12.png" id="36_3dum0"]
+[ext_resource type="Texture2D" uid="uid://napjbv4t2awn" path="res://Assets/Animations/Enemies/37女巫/heal_self_00.png" id="37_4ydao"]
+[ext_resource type="Texture2D" uid="uid://mqfreqwfppa8" path="res://Assets/Animations/Enemies/37女巫/far_attack_00.png" id="37_6i3by"]
+[ext_resource type="Texture2D" uid="uid://ciw4rw2nrystw" path="res://Assets/Animations/Enemies/37女巫/heal_self_01.png" id="38_0leir"]
+[ext_resource type="Texture2D" uid="uid://bqt03cdm88y68" path="res://Assets/Animations/Enemies/37女巫/far_attack_01.png" id="38_yfb2v"]
+[ext_resource type="Texture2D" uid="uid://e5qwmx00xqbf" path="res://Assets/Animations/Enemies/37女巫/heal_self_02.png" id="39_07tk0"]
+[ext_resource type="Texture2D" uid="uid://b3oldmnetxkip" path="res://Assets/Animations/Enemies/37女巫/far_attack_02.png" id="39_osxhl"]
+[ext_resource type="Texture2D" uid="uid://bd3uthwlca5rg" path="res://Assets/Animations/Enemies/37女巫/heal_self_03.png" id="40_fu8cf"]
+[ext_resource type="Texture2D" uid="uid://cm5fn2ykeqoge" path="res://Assets/Animations/Enemies/37女巫/far_attack_03.png" id="40_mcit0"]
+[ext_resource type="Texture2D" uid="uid://dbh5axmrqo8r5" path="res://Assets/Animations/Enemies/37女巫/heal_self_04.png" id="41_cavxa"]
+[ext_resource type="Texture2D" uid="uid://dgybk3rfusnak" path="res://Assets/Animations/Enemies/37女巫/far_attack_04.png" id="41_nyaj8"]
+[ext_resource type="Texture2D" uid="uid://bkybo5unno0vh" path="res://Assets/Animations/Enemies/37女巫/heal_self_05.png" id="42_onm3k"]
+[ext_resource type="Texture2D" uid="uid://djl7sx6glryvp" path="res://Assets/Animations/Enemies/37女巫/far_attack_05.png" id="42_u2nbo"]
+[ext_resource type="Texture2D" uid="uid://cfaomsjo5r7tj" path="res://Assets/Animations/Enemies/37女巫/heal_self_06.png" id="43_1muc5"]
+[ext_resource type="Texture2D" uid="uid://dlttj8yworvha" path="res://Assets/Animations/Enemies/37女巫/far_attack_06.png" id="43_umifu"]
+[ext_resource type="Texture2D" uid="uid://b3x6cxut0v8ek" path="res://Assets/Animations/Enemies/37女巫/far_attack_07.png" id="44_11hfb"]
+[ext_resource type="Texture2D" uid="uid://dw5p7lg76cmx7" path="res://Assets/Animations/Enemies/37女巫/heal_self_07.png" id="44_log2t"]
+[ext_resource type="Texture2D" uid="uid://yebt2f38ppyx" path="res://Assets/Animations/Enemies/37女巫/far_attack_08.png" id="45_3n3po"]
+[ext_resource type="Texture2D" uid="uid://lcal12qwl7b3" path="res://Assets/Animations/Enemies/37女巫/heal_self_08.png" id="45_o38gx"]
+[ext_resource type="Texture2D" uid="uid://chnqftny0gsd5" path="res://Assets/Animations/Enemies/37女巫/far_attack_09.png" id="46_7ctdf"]
+[ext_resource type="Texture2D" uid="uid://ftg7nnik6mjx" path="res://Assets/Animations/Enemies/37女巫/heal_self_09.png" id="46_v4yxh"]
+[ext_resource type="Texture2D" uid="uid://p1f0kv2rvo1m" path="res://Assets/Animations/Enemies/37女巫/far_attack_10.png" id="47_7qppu"]
+[ext_resource type="Texture2D" uid="uid://d1jwa0byusuta" path="res://Assets/Animations/Enemies/37女巫/heal_self_10.png" id="47_sb4i2"]
+[ext_resource type="Texture2D" uid="uid://cr2lyu1v0bej1" path="res://Assets/Animations/Enemies/37女巫/heal_self_11.png" id="48_fs0ti"]
+[ext_resource type="Texture2D" uid="uid://bsdxe60c7ke3r" path="res://Assets/Animations/Enemies/37女巫/far_attack_11.png" id="48_gs62v"]
+[ext_resource type="Texture2D" uid="uid://1nm7ig2w1o3l" path="res://Assets/Animations/Enemies/37女巫/heal_self_12.png" id="49_7gguj"]
+[ext_resource type="Texture2D" uid="uid://ccf1ukmxgcte3" path="res://Assets/Animations/Enemies/37女巫/far_attack_12.png" id="49_rdmq3"]
+[ext_resource type="Texture2D" uid="uid://cjai5af6bjr6b" path="res://Assets/Animations/Enemies/37女巫/heal_self_13.png" id="50_5vkbj"]
+[ext_resource type="Texture2D" uid="uid://bhe1a7tmr48wq" path="res://Assets/Animations/Enemies/37女巫/far_attack_13.png" id="50_ncrf0"]
+[ext_resource type="Texture2D" uid="uid://c4tw5bh6xj8om" path="res://Assets/Animations/Enemies/37女巫/heal_self_14.png" id="51_j4c5b"]
+[ext_resource type="Texture2D" uid="uid://tth5ca26jt2s" path="res://Assets/Animations/Enemies/37女巫/far_attack_14.png" id="51_yhpjh"]
+[ext_resource type="Texture2D" uid="uid://ber536pwcm7jq" path="res://Assets/Animations/Enemies/37女巫/heal_self_15.png" id="52_06tl3"]
+[ext_resource type="Texture2D" uid="uid://cugnibrik5ef5" path="res://Assets/Animations/Enemies/37女巫/far_attack_15.png" id="52_8k8jj"]
+[ext_resource type="Texture2D" uid="uid://2d64njd1v36h" path="res://Assets/Animations/Enemies/37女巫/far_attack_16.png" id="53_83rar"]
+[ext_resource type="Texture2D" uid="uid://dmnwcds0k2hdy" path="res://Assets/Animations/Enemies/37女巫/heal_self_16.png" id="53_qveap"]
+[ext_resource type="Texture2D" uid="uid://bvsn75p04ucfb" path="res://Assets/Animations/Enemies/37女巫/far_attack_17.png" id="54_2elbq"]
+[ext_resource type="Texture2D" uid="uid://bs05b4g8m0mxr" path="res://Assets/Animations/Enemies/37女巫/heal_self_17.png" id="54_e4c31"]
+[ext_resource type="Texture2D" uid="uid://cnpcbfd4opk1a" path="res://Assets/Animations/Enemies/37女巫/heal_self_18.png" id="55_qf6ml"]
+[ext_resource type="Texture2D" uid="uid://clpnsnuvaf6tt" path="res://Assets/Animations/Enemies/37女巫/far_attack_18.png" id="55_xvwmj"]
+[ext_resource type="Texture2D" uid="uid://clsghs5c7nnk" path="res://Assets/Animations/Enemies/37女巫/far_attack_19.png" id="56_2mw4o"]
+[ext_resource type="Texture2D" uid="uid://q2lbsagssn4a" path="res://Assets/Animations/Enemies/37女巫/heal_self_19.png" id="56_st6yj"]
+[ext_resource type="Texture2D" uid="uid://c0k0y8abdjk26" path="res://Assets/Animations/Enemies/37女巫/heal_self_20.png" id="57_3g8s6"]
+[ext_resource type="Texture2D" uid="uid://cfywrcuuajk1v" path="res://Assets/Animations/Enemies/37女巫/far_attack_20.png" id="57_pqfkf"]
+[ext_resource type="Texture2D" uid="uid://bfnexw8cga2hi" path="res://Assets/Animations/Enemies/37女巫/heal_self_21.png" id="58_lcbje"]
+[ext_resource type="Texture2D" uid="uid://ctvsglyawo754" path="res://Assets/Animations/Enemies/37女巫/far_attack_21.png" id="58_whv7y"]
+[ext_resource type="Texture2D" uid="uid://d1c4dq3cna586" path="res://Assets/Animations/Enemies/37女巫/heal_self_22.png" id="59_cg4fh"]
+[ext_resource type="Texture2D" uid="uid://ckwle6wp5tlkm" path="res://Assets/Animations/Enemies/37女巫/far_attack_22.png" id="59_d44a2"]
+[ext_resource type="Texture2D" uid="uid://clqecki73mcoy" path="res://Assets/Animations/Enemies/37女巫/heal_self_23.png" id="60_g6k4r"]
+[ext_resource type="Texture2D" uid="uid://bmbshtsah2vce" path="res://Assets/Animations/Enemies/37女巫/far_attack_23.png" id="60_oy37f"]
+[ext_resource type="Texture2D" uid="uid://cfrtf57ee8lek" path="res://Assets/Animations/Enemies/37女巫/far_attack_24.png" id="61_71gk2"]
+[ext_resource type="Texture2D" uid="uid://dvim4ybemipdq" path="res://Assets/Animations/Enemies/37女巫/heal_self_24.png" id="61_xu7n1"]
+[ext_resource type="Texture2D" uid="uid://dsnnadw5okl3a" path="res://Assets/Animations/Enemies/37女巫/heal_self_25.png" id="62_lgpfk"]
+[ext_resource type="Texture2D" uid="uid://ci3hkmiy0j4ja" path="res://Assets/Animations/Enemies/37女巫/move_back_00.png" id="88_0s6s4"]
+[ext_resource type="Texture2D" uid="uid://basprae4wkys6" path="res://Assets/Animations/Enemies/37女巫/move_back_01.png" id="89_i0c5k"]
+[ext_resource type="Texture2D" uid="uid://ct55cmx0xqm2u" path="res://Assets/Animations/Enemies/37女巫/move_back_02.png" id="90_050e8"]
+[ext_resource type="Texture2D" uid="uid://cg7a4877r5eif" path="res://Assets/Animations/Enemies/37女巫/move_back_03.png" id="91_5rxe2"]
+[ext_resource type="Texture2D" uid="uid://cey48ep5wb22g" path="res://Assets/Animations/Enemies/37女巫/move_back_04.png" id="92_67fo8"]
+[ext_resource type="Texture2D" uid="uid://db01ih0ajqlk7" path="res://Assets/Animations/Enemies/37女巫/move_back_05.png" id="93_gdhbj"]
+[ext_resource type="Texture2D" uid="uid://hapgp86xc68w" path="res://Assets/Animations/Enemies/37女巫/move_back_06.png" id="94_osfi0"]
+[ext_resource type="Texture2D" uid="uid://b6itkm8kedgvu" path="res://Assets/Animations/Enemies/37女巫/move_back_07.png" id="95_pby0c"]
+[ext_resource type="Texture2D" uid="uid://ctonxy3vgqage" path="res://Assets/Animations/Enemies/37女巫/move_back_08.png" id="96_7fp2m"]
+[ext_resource type="Texture2D" uid="uid://caov3yl6sak2a" path="res://Assets/Animations/Enemies/37女巫/move_back_09.png" id="97_ojcx2"]
+[ext_resource type="Texture2D" uid="uid://1wxtpkiwwo50" path="res://Assets/Animations/Enemies/37女巫/move_back_10.png" id="98_mig72"]
+[ext_resource type="Texture2D" uid="uid://iu8trl7x15wm" path="res://Assets/Animations/Enemies/37女巫/move_back_11.png" id="99_6ygi4"]
+[ext_resource type="Texture2D" uid="uid://ck221wldx1swk" path="res://Assets/Animations/Enemies/37女巫/move_back_12.png" id="100_lodtl"]
+[ext_resource type="Texture2D" uid="uid://dhnej3wkpwuau" path="res://Assets/Animations/Enemies/37女巫/move_back_13.png" id="101_l4gxf"]
+[ext_resource type="Texture2D" uid="uid://d2kqonpaoc1bu" path="res://Assets/Animations/Enemies/37女巫/move_back_14.png" id="102_w0pek"]
+[ext_resource type="Texture2D" uid="uid://73ho4d08yrrs" path="res://Assets/Animations/Enemies/37女巫/move_back_15.png" id="103_ba36j"]
+[ext_resource type="Texture2D" uid="uid://dte3sxnmwahu3" path="res://Assets/Animations/Enemies/37女巫/move_back_16.png" id="104_ai1fx"]
+[ext_resource type="Texture2D" uid="uid://c3s74nqpd8sll" path="res://Assets/Animations/Enemies/37女巫/move_back_17.png" id="105_p2nk2"]
+[ext_resource type="Texture2D" uid="uid://1oikvybbwect" path="res://Assets/Animations/Enemies/37女巫/move_back_18.png" id="106_3rjpi"]
+[ext_resource type="Texture2D" uid="uid://ch535xy1k4j44" path="res://Assets/Animations/Enemies/37女巫/move_back_19.png" id="107_8hkus"]
+[ext_resource type="Texture2D" uid="uid://cugfojs0up4bs" path="res://Assets/Animations/Enemies/37女巫/move_back_20.png" id="108_u5kpx"]
+[ext_resource type="Texture2D" uid="uid://vyyx8amwf2av" path="res://Assets/Animations/Enemies/37女巫/move_back_21.png" id="109_fbhlj"]
+[ext_resource type="Texture2D" uid="uid://k833rf5dek4i" path="res://Assets/Animations/Enemies/37女巫/move_back_22.png" id="110_28pks"]
+[ext_resource type="Texture2D" uid="uid://bk886e2vcxt08" path="res://Assets/Animations/Enemies/37女巫/move_back_23.png" id="111_63uay"]
+[ext_resource type="Texture2D" uid="uid://b7iebywph7s2d" path="res://Assets/Animations/Enemies/37女巫/move_back_24.png" id="112_sy77m"]
+[ext_resource type="Texture2D" uid="uid://bckjj2hwccgsp" path="res://Assets/Animations/Enemies/37女巫/move_back_25.png" id="113_vflau"]
+[ext_resource type="Texture2D" uid="uid://dlixquiiioq04" path="res://Assets/Animations/Enemies/37女巫/move_back_26.png" id="114_ub3aw"]
+[ext_resource type="Texture2D" uid="uid://dodemfh16hyq6" path="res://Assets/Animations/Enemies/37女巫/move_back_27.png" id="115_uvw73"]
+[ext_resource type="Texture2D" uid="uid://bk0fxtdr3qm8q" path="res://Assets/Animations/Enemies/37女巫/move_back_28.png" id="116_mvxn2"]
+[ext_resource type="Texture2D" uid="uid://b07vtvlygrsm8" path="res://Assets/Animations/Enemies/37女巫/move_back_29.png" id="117_xuehw"]
+[ext_resource type="Texture2D" uid="uid://dl6o4o1d0mhye" path="res://Assets/Animations/Enemies/37女巫/move_back_30.png" id="118_207t2"]
+[ext_resource type="Texture2D" uid="uid://bcnp31kww2chj" path="res://Assets/Animations/Enemies/37女巫/move_back_31.png" id="119_gap8p"]
+[ext_resource type="Texture2D" uid="uid://draahp5dplbh1" path="res://Assets/Animations/Enemies/37女巫/move_back_32.png" id="120_miih0"]
+[ext_resource type="Texture2D" uid="uid://cgka7rnihxyas" path="res://Assets/Animations/Enemies/37女巫/move_back_33.png" id="121_7hhte"]
+[ext_resource type="Texture2D" uid="uid://bcxenlpudi87d" path="res://Assets/Animations/Enemies/37女巫/move_back_34.png" id="122_l1i6k"]
+[ext_resource type="Texture2D" uid="uid://87e1o8tdm63t" path="res://Assets/Animations/Enemies/37女巫/move_back_35.png" id="123_f63ut"]
+[ext_resource type="Texture2D" uid="uid://bfchr8oey8yj4" path="res://Assets/Animations/Enemies/37女巫/move_back_36.png" id="124_eo38u"]
+[ext_resource type="Texture2D" uid="uid://1t6n2oisc0an" path="res://Assets/Animations/Enemies/37女巫/move_back_37.png" id="125_msmb0"]
+[ext_resource type="Texture2D" uid="uid://byoms4q72pts1" path="res://Assets/Animations/Enemies/37女巫/move_back_38.png" id="126_y0fki"]
+[ext_resource type="Texture2D" uid="uid://b44chx1dxyeh5" path="res://Assets/Animations/Enemies/37女巫/move_back_39.png" id="127_tkvdh"]
+[ext_resource type="Texture2D" uid="uid://c3g1ig1i6ktei" path="res://Assets/Animations/Enemies/37女巫/move_front_00.png" id="128_n2icf"]
+[ext_resource type="Texture2D" uid="uid://butrrwjghmhys" path="res://Assets/Animations/Enemies/37女巫/move_front_01.png" id="129_tb3ee"]
+[ext_resource type="Texture2D" uid="uid://blwx4yuxyfoq0" path="res://Assets/Animations/Enemies/37女巫/move_front_02.png" id="130_78eu1"]
+[ext_resource type="Texture2D" uid="uid://dpbd4y64c32td" path="res://Assets/Animations/Enemies/37女巫/move_front_03.png" id="131_4poau"]
+[ext_resource type="Texture2D" uid="uid://do4r782mt8h4c" path="res://Assets/Animations/Enemies/37女巫/move_front_04.png" id="132_0w0lg"]
+[ext_resource type="Texture2D" uid="uid://bhgq1g56tevff" path="res://Assets/Animations/Enemies/37女巫/move_front_05.png" id="133_cqwpc"]
+[ext_resource type="Texture2D" uid="uid://djxycwxkaw2kv" path="res://Assets/Animations/Enemies/37女巫/move_front_06.png" id="134_jw5yx"]
+[ext_resource type="Texture2D" uid="uid://bam3uh36i8eoh" path="res://Assets/Animations/Enemies/37女巫/move_front_07.png" id="135_e0rjw"]
+[ext_resource type="Texture2D" uid="uid://brxxvs3hh0hd2" path="res://Assets/Animations/Enemies/37女巫/move_front_08.png" id="136_mt8eh"]
+[ext_resource type="Texture2D" uid="uid://cfmi61w6yjqb1" path="res://Assets/Animations/Enemies/37女巫/move_front_09.png" id="137_dg6h3"]
+[ext_resource type="Texture2D" uid="uid://8fmov77dc28j" path="res://Assets/Animations/Enemies/37女巫/move_front_10.png" id="138_0b582"]
+[ext_resource type="Texture2D" uid="uid://brrju1d7mqgd5" path="res://Assets/Animations/Enemies/37女巫/move_front_11.png" id="139_p383w"]
+[ext_resource type="Texture2D" uid="uid://dochbklvninus" path="res://Assets/Animations/Enemies/37女巫/move_front_12.png" id="140_yu06a"]
+[ext_resource type="Texture2D" uid="uid://crc5j3xasod1f" path="res://Assets/Animations/Enemies/37女巫/move_front_13.png" id="141_uyiwj"]
+[ext_resource type="Texture2D" uid="uid://b4elmfkl03or2" path="res://Assets/Animations/Enemies/37女巫/move_front_14.png" id="142_kllxq"]
+[ext_resource type="Texture2D" uid="uid://drpkok3h30jei" path="res://Assets/Animations/Enemies/37女巫/move_front_15.png" id="143_v42ks"]
+[ext_resource type="Texture2D" uid="uid://ci5xrau5l2sai" path="res://Assets/Animations/Enemies/37女巫/move_front_16.png" id="144_87dbj"]
+[ext_resource type="Texture2D" uid="uid://hj8spg70gfke" path="res://Assets/Animations/Enemies/37女巫/move_front_17.png" id="145_fwhgf"]
+[ext_resource type="Texture2D" uid="uid://bvb8snlrmjamn" path="res://Assets/Animations/Enemies/37女巫/move_front_18.png" id="146_ber2m"]
+[ext_resource type="Texture2D" uid="uid://cenpcu34j4v8w" path="res://Assets/Animations/Enemies/37女巫/move_front_19.png" id="147_p0x4o"]
+[ext_resource type="Texture2D" uid="uid://w01wpempi7q5" path="res://Assets/Animations/Enemies/37女巫/move_front_20.png" id="148_pkb3s"]
+[ext_resource type="Texture2D" uid="uid://dtehnis0w0t56" path="res://Assets/Animations/Enemies/37女巫/move_front_21.png" id="149_6ir80"]
+[ext_resource type="Texture2D" uid="uid://b4n2dvenj2fhv" path="res://Assets/Animations/Enemies/37女巫/move_front_22.png" id="150_w1mmy"]
+[ext_resource type="Texture2D" uid="uid://0y2pgpit8qog" path="res://Assets/Animations/Enemies/37女巫/move_front_23.png" id="151_b33yj"]
+[ext_resource type="Texture2D" uid="uid://34gqoc2tiwi0" path="res://Assets/Animations/Enemies/37女巫/move_front_24.png" id="152_ttet2"]
+[ext_resource type="Texture2D" uid="uid://pv5ollttv2uc" path="res://Assets/Animations/Enemies/37女巫/move_front_25.png" id="153_yrtfb"]
+[ext_resource type="Texture2D" uid="uid://djw32jcdy5fb8" path="res://Assets/Animations/Enemies/37女巫/move_front_26.png" id="154_v3ylh"]
+[ext_resource type="Texture2D" uid="uid://dbikyx5p0hjaj" path="res://Assets/Animations/Enemies/37女巫/move_front_27.png" id="155_asn80"]
+[ext_resource type="Texture2D" uid="uid://lv8p4andbba4" path="res://Assets/Animations/Enemies/37女巫/move_front_28.png" id="156_josib"]
+[ext_resource type="Texture2D" uid="uid://rypked5fjqyq" path="res://Assets/Animations/Enemies/37女巫/move_front_29.png" id="157_lw18s"]
+[ext_resource type="Texture2D" uid="uid://3p6hr0os6qif" path="res://Assets/Animations/Enemies/37女巫/move_front_30.png" id="158_rpjne"]
+[ext_resource type="Texture2D" uid="uid://pmajdt8jqrdh" path="res://Assets/Animations/Enemies/37女巫/move_front_31.png" id="159_e1ucn"]
+[ext_resource type="Texture2D" uid="uid://bc5ehgby0qdaj" path="res://Assets/Animations/Enemies/37女巫/move_front_32.png" id="160_0ns3k"]
+[ext_resource type="Texture2D" uid="uid://bk0fja6exvsk" path="res://Assets/Animations/Enemies/37女巫/move_front_33.png" id="161_at8u4"]
+[ext_resource type="Texture2D" uid="uid://ccd1xg6xi5hf7" path="res://Assets/Animations/Enemies/37女巫/move_front_34.png" id="162_x2743"]
+[ext_resource type="Texture2D" uid="uid://bkgghsgn25tal" path="res://Assets/Animations/Enemies/37女巫/move_front_35.png" id="163_sonwl"]
+[ext_resource type="Texture2D" uid="uid://bpfiuxhyw5eav" path="res://Assets/Animations/Enemies/37女巫/move_front_36.png" id="164_m5kvs"]
+[ext_resource type="Texture2D" uid="uid://jdc12mbl7q4f" path="res://Assets/Animations/Enemies/37女巫/move_front_37.png" id="165_6ifwg"]
+[ext_resource type="Texture2D" uid="uid://wa14ih6iij7l" path="res://Assets/Animations/Enemies/37女巫/move_front_38.png" id="166_o4wr4"]
+[ext_resource type="Texture2D" uid="uid://c7dhgnxt6fq3g" path="res://Assets/Animations/Enemies/37女巫/move_front_39.png" id="167_h3bfo"]
+[ext_resource type="Texture2D" uid="uid://dp0m454tcwy3e" path="res://Assets/Animations/Enemies/37女巫/move_normal_00.png" id="168_it4pp"]
+[ext_resource type="Texture2D" uid="uid://cfeoi4oi1l4f8" path="res://Assets/Animations/Enemies/37女巫/move_normal_01.png" id="169_qmi4p"]
+[ext_resource type="Texture2D" uid="uid://dvchcitlal6ih" path="res://Assets/Animations/Enemies/37女巫/move_normal_02.png" id="170_olrfy"]
+[ext_resource type="Texture2D" uid="uid://da3a8ne3kmgel" path="res://Assets/Animations/Enemies/37女巫/move_normal_03.png" id="171_b25un"]
+[ext_resource type="Texture2D" uid="uid://cxab53myt6bnw" path="res://Assets/Animations/Enemies/37女巫/move_normal_04.png" id="172_eboot"]
+[ext_resource type="Texture2D" uid="uid://dgjtohbiqnk3i" path="res://Assets/Animations/Enemies/37女巫/move_normal_05.png" id="173_r33i6"]
+[ext_resource type="Texture2D" uid="uid://mgc7681psk0c" path="res://Assets/Animations/Enemies/37女巫/move_normal_06.png" id="174_kxkah"]
+[ext_resource type="Texture2D" uid="uid://c157a0egp17fq" path="res://Assets/Animations/Enemies/37女巫/move_normal_07.png" id="175_2j5g7"]
+[ext_resource type="Texture2D" uid="uid://qgx6w7o53ms7" path="res://Assets/Animations/Enemies/37女巫/move_normal_08.png" id="176_0x0o5"]
+[ext_resource type="Texture2D" uid="uid://b2e3v2g6tcty8" path="res://Assets/Animations/Enemies/37女巫/move_normal_09.png" id="177_h54fx"]
+[ext_resource type="Texture2D" uid="uid://cslgnvst70d8p" path="res://Assets/Animations/Enemies/37女巫/move_normal_10.png" id="178_rq6ft"]
+[ext_resource type="Texture2D" uid="uid://dnwkv2kasiqb8" path="res://Assets/Animations/Enemies/37女巫/move_normal_11.png" id="179_6fefy"]
+[ext_resource type="Texture2D" uid="uid://dlykjafxyaps1" path="res://Assets/Animations/Enemies/37女巫/move_normal_12.png" id="180_4kqdt"]
+[ext_resource type="Texture2D" uid="uid://d1ysnir6opvww" path="res://Assets/Animations/Enemies/37女巫/move_normal_13.png" id="181_b00uk"]
+[ext_resource type="Texture2D" uid="uid://dxj6p3xeoprad" path="res://Assets/Animations/Enemies/37女巫/move_normal_14.png" id="182_0cs1j"]
+[ext_resource type="Texture2D" uid="uid://bdslxsgev5way" path="res://Assets/Animations/Enemies/37女巫/move_normal_15.png" id="183_km4nx"]
+[ext_resource type="Texture2D" uid="uid://cthrb6amddp0t" path="res://Assets/Animations/Enemies/37女巫/move_normal_16.png" id="184_dbaj1"]
+[ext_resource type="Texture2D" uid="uid://dicphluh6eqcy" path="res://Assets/Animations/Enemies/37女巫/move_normal_17.png" id="185_vpv7m"]
+[ext_resource type="Texture2D" uid="uid://dqjcnynbx02tc" path="res://Assets/Animations/Enemies/37女巫/move_normal_18.png" id="186_0lot4"]
+[ext_resource type="Texture2D" uid="uid://hn1imq6ivc4e" path="res://Assets/Animations/Enemies/37女巫/move_normal_19.png" id="187_udr88"]
+[ext_resource type="Texture2D" uid="uid://5vem5e2lbtkh" path="res://Assets/Animations/Enemies/37女巫/move_normal_20.png" id="188_t4uut"]
+[ext_resource type="Texture2D" uid="uid://blsyiicrwq3ji" path="res://Assets/Animations/Enemies/37女巫/move_normal_21.png" id="189_tqpon"]
+[ext_resource type="Texture2D" uid="uid://dcuspuy25igfu" path="res://Assets/Animations/Enemies/37女巫/move_normal_22.png" id="190_lnuoe"]
+[ext_resource type="Texture2D" uid="uid://dpnoay0pdrmb4" path="res://Assets/Animations/Enemies/37女巫/move_normal_23.png" id="191_wqovp"]
+[ext_resource type="Texture2D" uid="uid://dp34xih52a1uh" path="res://Assets/Animations/Enemies/37女巫/move_normal_24.png" id="192_j23g4"]
+[ext_resource type="Texture2D" uid="uid://y7bnvhbqw87o" path="res://Assets/Animations/Enemies/37女巫/move_normal_25.png" id="193_rh45g"]
+[ext_resource type="Texture2D" uid="uid://bmfg4t3pcg876" path="res://Assets/Animations/Enemies/37女巫/move_normal_26.png" id="194_4l175"]
+[ext_resource type="Texture2D" uid="uid://c2gr6kr4iv07b" path="res://Assets/Animations/Enemies/37女巫/move_normal_27.png" id="195_7dqet"]
+[ext_resource type="Texture2D" uid="uid://bwklru7770kbs" path="res://Assets/Animations/Enemies/37女巫/move_normal_28.png" id="196_h557m"]
+[ext_resource type="Texture2D" uid="uid://bwuqgfck6aivu" path="res://Assets/Animations/Enemies/37女巫/move_normal_29.png" id="197_1vs52"]
+[ext_resource type="Texture2D" uid="uid://cm7613mhn7ix0" path="res://Assets/Animations/Enemies/37女巫/move_normal_30.png" id="198_cyoso"]
+[ext_resource type="Texture2D" uid="uid://c3iy7pl8niu5t" path="res://Assets/Animations/Enemies/37女巫/move_normal_31.png" id="199_g7xpf"]
+[ext_resource type="Texture2D" uid="uid://brv378hg1b2qb" path="res://Assets/Animations/Enemies/37女巫/move_normal_32.png" id="200_7appx"]
+[ext_resource type="Texture2D" uid="uid://6hy8qptjg5nc" path="res://Assets/Animations/Enemies/37女巫/move_normal_33.png" id="201_6usui"]
+[ext_resource type="Texture2D" uid="uid://cquow5br4tpvs" path="res://Assets/Animations/Enemies/37女巫/move_normal_34.png" id="202_8w06h"]
+[ext_resource type="Texture2D" uid="uid://dppxn8xipw6yn" path="res://Assets/Animations/Enemies/37女巫/move_normal_35.png" id="203_qh3fq"]
+[ext_resource type="Texture2D" uid="uid://cudsnyc1pcrqy" path="res://Assets/Animations/Enemies/37女巫/move_normal_36.png" id="204_vu5ni"]
+[ext_resource type="Texture2D" uid="uid://dcpcia8dnlpid" path="res://Assets/Animations/Enemies/37女巫/move_normal_37.png" id="205_q5qu0"]
+[ext_resource type="Texture2D" uid="uid://r2wd401x12yt" path="res://Assets/Animations/Enemies/37女巫/move_normal_38.png" id="206_ihsb5"]
+[ext_resource type="Texture2D" uid="uid://buqsr6wctxe1m" path="res://Assets/Animations/Enemies/37女巫/move_normal_39.png" id="207_v6khm"]
+[ext_resource type="PackedScene" uid="uid://dcjuved17hj6j" path="res://Scenes/Enemies/EnemyComponents/appear_audio_component.tscn" id="213_c56cm"]
+[ext_resource type="AudioStream" uid="uid://5fqtparlu4vf" path="res://Assets/Sounds/FXs/Enemies/女巫/女巫出现1.wav" id="214_6mno7"]
+[ext_resource type="AudioStream" uid="uid://3d6n3quif1xp" path="res://Assets/Sounds/FXs/Enemies/女巫/女巫出现2.wav" id="215_d5pp1"]
+[ext_resource type="AudioStream" uid="uid://bf6if61h0m0mu" path="res://Assets/Sounds/FXs/Enemies/女巫/女巫出现3.wav" id="216_3uwn6"]
+[ext_resource type="AudioStream" uid="uid://hyu1mnddysg" path="res://Assets/Sounds/FXs/Enemies/女巫/女巫出现4.wav" id="217_hdnvp"]
+[ext_resource type="AudioStream" uid="uid://ouxktehu2k2" path="res://Assets/Sounds/FXs/Enemies/女巫/女巫投掷.wav" id="219_s6mg5"]
+[ext_resource type="AudioStream" uid="uid://bbjwnnt0afjje" path="res://Assets/Sounds/FXs/Enemies/女巫/女巫饮用药水.wav" id="220_etoun"]
+
+[sub_resource type="Resource" id="Resource_il8av"]
+script = ExtResource("3_2l2yt")
+health = 600
+dodge_rate = 0.0
+near_damage_low = 10
+near_damage_high = 16
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 40
+far_damage_high = 80
+far_attack_speed = 4.0
+far_damage_range = 320
+armor = 0.0
+physic_immune = false
+magic_defence = 0.9
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 0.5
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x146f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8bjq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_w5sc2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gkcpf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6j8j4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_20ge4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_m7v10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_seolg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_u16ya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_hyhnd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nvfyg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_rmroh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_q243u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_uoq2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_2bl1j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_p3qnf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_3soqx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_fnn7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_jln2h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_s6eqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_anabt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_r5bv8")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_618gm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_44kwj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_sc437")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_28g0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_2hyd2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_bbg27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_mpe8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_dw2c5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_7ya6e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_cwm3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_7fuu4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ka36f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_3dum0")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_4ydao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_0leir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_07tk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_fu8cf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_cavxa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_onm3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_1muc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_log2t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_o38gx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_v4yxh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_sb4i2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_fs0ti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_7gguj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_5vkbj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_j4c5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_06tl3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_qveap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_e4c31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_qf6ml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_st6yj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_3g8s6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_lcbje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_cg4fh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_g6k4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_xu7n1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_lgpfk")
+}],
+"loop": false,
+"name": &"drink",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_6i3by")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_yfb2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_osxhl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_mcit0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_nyaj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_u2nbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_umifu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_11hfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_3n3po")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_7ctdf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_7qppu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_gs62v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_rdmq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_ncrf0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_yhpjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_8k8jj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_83rar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_2elbq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_xvwmj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_2mw4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_pqfkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_whv7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_d44a2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_oy37f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_71gk2")
+}],
+"loop": false,
+"name": &"far_attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_6i3by")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_yfb2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_osxhl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_mcit0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_nyaj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_u2nbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_umifu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_11hfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_3n3po")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_7ctdf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_7qppu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_gs62v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_rdmq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_ncrf0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_yhpjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_8k8jj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_83rar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_2elbq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_xvwmj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_2mw4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_pqfkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_whv7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_d44a2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_oy37f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_71gk2")
+}],
+"loop": false,
+"name": &"heal_potion",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8bjq8")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("88_0s6s4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_i0c5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_050e8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_5rxe2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_67fo8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_gdhbj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_osfi0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_pby0c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_7fp2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_ojcx2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_mig72")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_6ygi4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_lodtl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_l4gxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_w0pek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_ba36j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_ai1fx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_p2nk2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_3rjpi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_8hkus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_u5kpx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_fbhlj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_28pks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_63uay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_sy77m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_vflau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_ub3aw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_uvw73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_mvxn2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_xuehw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_207t2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_gap8p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_miih0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_7hhte")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_l1i6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_f63ut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_eo38u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_msmb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_y0fki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_tkvdh")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("128_n2icf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_tb3ee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_78eu1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_4poau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_0w0lg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_cqwpc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_jw5yx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_e0rjw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_mt8eh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_dg6h3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_0b582")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_p383w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_yu06a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_uyiwj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_kllxq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_v42ks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_87dbj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_fwhgf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_ber2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_p0x4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_pkb3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_6ir80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_w1mmy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_b33yj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_ttet2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_yrtfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_v3ylh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_asn80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_josib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_lw18s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("158_rpjne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_e1ucn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_0ns3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_at8u4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_x2743")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_sonwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_m5kvs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_6ifwg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("166_o4wr4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("167_h3bfo")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("168_it4pp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("169_qmi4p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("170_olrfy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("171_b25un")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_eboot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("173_r33i6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_kxkah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("175_2j5g7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("176_0x0o5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("177_h54fx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("178_rq6ft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("179_6fefy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("180_4kqdt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("181_b00uk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("182_0cs1j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("183_km4nx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("184_dbaj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("185_vpv7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("186_0lot4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("187_udr88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("188_t4uut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("189_tqpon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("190_lnuoe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("191_wqovp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("192_j23g4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("193_rh45g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("194_4l175")
+}, {
+"duration": 1.0,
+"texture": ExtResource("195_7dqet")
+}, {
+"duration": 1.0,
+"texture": ExtResource("196_h557m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("197_1vs52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("198_cyoso")
+}, {
+"duration": 1.0,
+"texture": ExtResource("199_g7xpf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("200_7appx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("201_6usui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("202_8w06h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("203_qh3fq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("204_vu5ni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("205_q5qu0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("206_ihsb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("207_v6khm")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_6i3by")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_yfb2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_osxhl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_mcit0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_nyaj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_u2nbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_umifu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_11hfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_3n3po")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_7ctdf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_7qppu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_gs62v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_rdmq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_ncrf0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_yhpjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_8k8jj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_83rar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_2elbq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_xvwmj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_2mw4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_pqfkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_whv7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_d44a2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_oy37f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_71gk2")
+}],
+"loop": false,
+"name": &"poison",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_6i3by")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_yfb2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_osxhl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_mcit0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_nyaj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_u2nbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_umifu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_11hfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_3n3po")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_7ctdf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_7qppu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_gs62v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_rdmq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_ncrf0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_yhpjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_8k8jj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_83rar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_2elbq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_xvwmj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_2mw4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_pqfkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_whv7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_d44a2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_oy37f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_71gk2")
+}],
+"loop": false,
+"name": &"regon_potion",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_6i3by")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_yfb2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_osxhl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_mcit0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_nyaj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_u2nbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_umifu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_11hfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_3n3po")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_7ctdf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_7qppu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_gs62v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_rdmq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_ncrf0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_yhpjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_8k8jj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_83rar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_2elbq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_xvwmj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_2mw4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_pqfkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_whv7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_d44a2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_oy37f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_71gk2")
+}],
+"loop": false,
+"name": &"weakness",
+"speed": 30.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7mxxu"]
+radius = 73.9444
+
+[node name="Enemy37" groups=["illager"] instance=ExtResource("1_qor8l")]
+script = ExtResource("2_h2mpj")
+potion_animation_list = PackedStringArray("far_attack", "heal_potion", "regon_potion", "poison", "weakness")
+potion_summon_frame_count = 14
+heal_potion_scene = ExtResource("3_xan7j")
+regon_potion_scene = ExtResource("4_l1i40")
+poison_potion_scene = ExtResource("3_mot75")
+weakness_potion_scene = ExtResource("4_vldvi")
+enemy_name = "女巫"
+enemy_id = 37
+enemy_texture = ExtResource("3_vdnu1")
+start_data = SubResource("Resource_il8av")
+far_attack_bullet_scene = ExtResource("5_f0ix4")
+bounty = 40
+die_audio_stream_list = Array[AudioStream]([ExtResource("4_5fb4c"), ExtResource("5_yfeis"), ExtResource("6_wxafw"), ExtResource("7_iv61j")])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(2.84217e-14, -115)
+sprite_frames = SubResource("SpriteFrames_x146f")
+animation = &"drink"
+autoplay = "idle"
+
+[node name="HurtBox" parent="UnitBody" index="2"]
+position = Vector2(0, -100)
+scale = Vector2(5.22139, 5.22139)
+
+[node name="EnemyButton" parent="UnitBody" index="4"]
+offset_left = -48.0
+offset_top = -240.0
+offset_right = 50.0
+
+[node name="HealthBar" parent="UnitBody" index="5"]
+offset_top = -260.0
+offset_bottom = -251.0
+
+[node name="SupporArea" type="Area2D" parent="UnitBody" index="8"]
+scale = Vector2(3.2, 3.2)
+collision_layer = 0
+collision_mask = 96
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/SupporArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_7mxxu")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="FarAttackMarker" parent="UnitBody" index="9"]
+position = Vector2(40, -190)
+
+[node name="FarAttackMarkerFlip" parent="UnitBody" index="10"]
+position = Vector2(-40, -190)
+
+[node name="AppearAudioComponent" parent="." index="5" instance=ExtResource("213_c56cm")]
+appear_audio_list = Array[AudioStream]([ExtResource("214_6mno7"), ExtResource("215_d5pp1"), ExtResource("216_3uwn6"), ExtResource("217_hdnvp")])
+
+[node name="ThrowAudio" type="AudioStreamPlayer" parent="." index="6"]
+stream = ExtResource("219_s6mg5")
+bus = &"Sound"
+
+[node name="DrinkAudio" type="AudioStreamPlayer" parent="." index="7"]
+stream = ExtResource("220_etoun")
+bus = &"Sound"
+
+[node name="HealSelfTimer" type="Timer" parent="." index="8"]
+wait_time = 22.0
+one_shot = true
+
+[node name="ReleaseDebuffTimer" type="Timer" parent="." index="9"]
+wait_time = 10.0
+one_shot = true
+
+[node name="RegonTimer" type="Timer" parent="." index="10"]
+wait_time = 14.0
+one_shot = true
+autostart = true
+
+[node name="HealTimer" type="Timer" parent="." index="11"]
+wait_time = 10.0
+one_shot = true

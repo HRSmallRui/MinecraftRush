@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://53k7dcpmtv4y"]
+
+[ext_resource type="PackedScene" uid="uid://caufauw6v502y" path="res://Scenes/Classes/bullet_class.tscn" id="1_omncy"]
+[ext_resource type="Script" path="res://Scripts/Bullets/salem_magic_ball.gd" id="2_8lkpo"]
+[ext_resource type="Texture2D" uid="uid://bbt0wqkma2bgq" path="res://Assets/Images/Bullets/magic_bullet3.png" id="3_6khxe"]
+[ext_resource type="PackedScene" uid="uid://cdmjm26n35ui2" path="res://Scenes/Effects/green_magic_ball_hit.tscn" id="3_cg26u"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o5n3q"]
+radius = 11.0
+
+[sub_resource type="Curve" id="Curve_3es4e"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 2.99159, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_mnl6y"]
+colors = PackedColorArray(0, 0.572549, 0, 0.717647, 0, 0.572549, 0, 0)
+
+[node name="SalemBall" instance=ExtResource("1_omncy")]
+script = ExtResource("2_8lkpo")
+hit_effect_scene = ExtResource("3_cg26u")
+tail_max_length = 30
+damage_type = 1
+move_type = 1
+bullet_speed = 1000.0
+
+[node name="BulletSprite" parent="." index="0"]
+scale = Vector2(0.580604, 0.580604)
+texture = ExtResource("3_6khxe")
+
+[node name="HitBox" parent="." index="1"]
+scale = Vector2(1.54155, 1.54155)
+collision_mask = 96
+monitorable = false
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+shape = SubResource("CircleShape2D_o5n3q")
+
+[node name="PluginArea" type="Area2D" parent="." index="2"]
+scale = Vector2(3.75379, 3.75379)
+collision_layer = 0
+collision_mask = 96
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PluginArea" index="0"]
+shape = SubResource("CircleShape2D_o5n3q")
+
+[node name="FreeTimer" parent="." index="3"]
+wait_time = 4.0
+
+[node name="Tail" type="Line2D" parent="." index="4"]
+top_level = true
+width_curve = SubResource("Curve_3es4e")
+gradient = SubResource("Gradient_mnl6y")
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 16
+
+[node name="TailTimer" type="Timer" parent="Tail" index="0"]
+wait_time = 0.05
+autostart = true

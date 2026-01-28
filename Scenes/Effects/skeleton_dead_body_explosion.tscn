@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://b8jjkpa7fqai6"]
+
+[ext_resource type="Script" path="res://Scripts/Effects/effect.gd" id="1_icffw"]
+[ext_resource type="Texture2D" uid="uid://dnsnblce534jw" path="res://Assets/Images/Effects/SkeletonExplosionDeadBody/1.png" id="1_s11d1"]
+[ext_resource type="Texture2D" uid="uid://ct8xrvrdbtmr0" path="res://Assets/Images/Effects/SkeletonExplosionDeadBody/2.png" id="2_y52n2"]
+[ext_resource type="Texture2D" uid="uid://dlk4rv0t4pt08" path="res://Assets/Images/Effects/SkeletonExplosionDeadBody/3.png" id="3_4kc1r"]
+[ext_resource type="Texture2D" uid="uid://dqggron0i0igp" path="res://Assets/Images/Effects/SkeletonExplosionDeadBody/4.png" id="4_t3aka"]
+[ext_resource type="Texture2D" uid="uid://bkv2lv2ak8xoj" path="res://Assets/Images/Effects/SkeletonExplosionDeadBody/5.png" id="5_41r5j"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sysv8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_s11d1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_y52n2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4kc1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_t3aka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_41r5j")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 18.0
+}]
+
+[node name="SkeletonDeadBodyExplosion" type="AnimatedSprite2D"]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_sysv8")
+autoplay = "default"
+offset = Vector2(0, -100)
+script = ExtResource("1_icffw")

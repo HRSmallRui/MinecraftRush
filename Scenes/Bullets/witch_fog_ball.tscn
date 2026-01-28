@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://d3865ubg6i7iq"]
+
+[ext_resource type="PackedScene" uid="uid://caufauw6v502y" path="res://Scenes/Classes/bullet_class.tscn" id="1_03t5g"]
+[ext_resource type="Script" path="res://Scripts/Bullets/witch_fog_ball.gd" id="2_1iflk"]
+[ext_resource type="PackedScene" uid="uid://dfmme5qjv5bc1" path="res://Scenes/Effects/green_magic_ball_tail.tscn" id="3_ndoln"]
+[ext_resource type="Texture2D" uid="uid://bbt0wqkma2bgq" path="res://Assets/Images/Bullets/magic_bullet3.png" id="5_arii7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ho0p0"]
+radius = 14.0357
+
+[node name="WitchFogBall" instance=ExtResource("1_03t5g")]
+z_index = 2
+script = ExtResource("2_1iflk")
+magic_ball_tail_scene = ExtResource("3_ndoln")
+hit_effect_scene = null
+damage_type = 1
+move_type = 1
+bullet_speed = 750.0
+damage_source = "MagicBall"
+
+[node name="BulletSprite" parent="." index="0"]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_arii7")
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+shape = SubResource("CircleShape2D_ho0p0")

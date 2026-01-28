@@ -1,0 +1,429 @@
+[gd_scene load_steps=91 format=3 uid="uid://bjaqbbyu6ihm7"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_htuft"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_2.gd" id="2_8760k"]
+[ext_resource type="Texture2D" uid="uid://b4p5shu1hxykb" path="res://Assets/Images/UI/InformationBar/尸国小鬼.png" id="3_wi6l8"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="4_vk401"]
+[ext_resource type="Texture2D" uid="uid://lxikl03dnfhc" path="res://Assets/Animations/Enemies/2尸国小鬼/attack_00.png" id="5_fpovd"]
+[ext_resource type="Texture2D" uid="uid://du72kigp6w0er" path="res://Assets/Animations/Enemies/2尸国小鬼/attack_01.png" id="6_fm1jk"]
+[ext_resource type="Texture2D" uid="uid://citngkmfkt788" path="res://Assets/Animations/Enemies/2尸国小鬼/attack_02.png" id="7_ujg37"]
+[ext_resource type="Texture2D" uid="uid://c167rgtp4bxyf" path="res://Assets/Animations/Enemies/2尸国小鬼/attack_03.png" id="8_djq5h"]
+[ext_resource type="Texture2D" uid="uid://cco3wlkjr0ale" path="res://Assets/Animations/Enemies/2尸国小鬼/attack_04.png" id="9_btxy8"]
+[ext_resource type="Texture2D" uid="uid://b6ih2bg80gla6" path="res://Assets/Animations/Enemies/2尸国小鬼/attack_05.png" id="10_0olmw"]
+[ext_resource type="Texture2D" uid="uid://bhp3hkylplbss" path="res://Assets/Animations/Enemies/2尸国小鬼/attack_06.png" id="11_oxlnw"]
+[ext_resource type="Texture2D" uid="uid://d015vlo1jb15p" path="res://Assets/Animations/Enemies/2尸国小鬼/attack_07.png" id="12_lvebe"]
+[ext_resource type="Texture2D" uid="uid://co2aevsuwqncw" path="res://Assets/Animations/Enemies/2尸国小鬼/attack_08.png" id="13_esh4m"]
+[ext_resource type="Texture2D" uid="uid://ckh342tuj0ywj" path="res://Assets/Animations/Enemies/2尸国小鬼/attack_09.png" id="14_gm8je"]
+[ext_resource type="Texture2D" uid="uid://dclm2lwnwca5g" path="res://Assets/Animations/Enemies/2尸国小鬼/attack_10.png" id="15_274e0"]
+[ext_resource type="Texture2D" uid="uid://ccxcpwehbjs7f" path="res://Assets/Animations/Enemies/2尸国小鬼/attack_11.png" id="16_gy3up"]
+[ext_resource type="Texture2D" uid="uid://d3yg3lqb5w0ex" path="res://Assets/Animations/Enemies/2尸国小鬼/attack_12.png" id="17_4nsqn"]
+[ext_resource type="Texture2D" uid="uid://cjdq6t0euftfu" path="res://Assets/Animations/Enemies/2尸国小鬼/attack_13.png" id="18_78pgy"]
+[ext_resource type="Texture2D" uid="uid://caaj5d41y2pp3" path="res://Assets/Animations/Enemies/2尸国小鬼/attack_14.png" id="19_fwrfs"]
+[ext_resource type="Texture2D" uid="uid://dhkd51jy8inw8" path="res://Assets/Animations/Enemies/2尸国小鬼/attack_15.png" id="20_86pch"]
+[ext_resource type="Texture2D" uid="uid://d4lgb4k5nl33o" path="res://Assets/Animations/Enemies/2尸国小鬼/attack_16.png" id="21_gp4mb"]
+[ext_resource type="Texture2D" uid="uid://w30a77xoii1o" path="res://Assets/Animations/Enemies/2尸国小鬼/attack_17.png" id="22_jtiyo"]
+[ext_resource type="Texture2D" uid="uid://ginwww53gq2d" path="res://Assets/Animations/Enemies/2尸国小鬼/attack_18.png" id="23_5d2vl"]
+[ext_resource type="Texture2D" uid="uid://blypyx6xvv6sv" path="res://Assets/Animations/Enemies/2尸国小鬼/attack_19.png" id="24_v68nr"]
+[ext_resource type="Texture2D" uid="uid://cb8fqv32lyiu2" path="res://Assets/Animations/Enemies/2尸国小鬼/attack_20.png" id="25_0tl2w"]
+[ext_resource type="Texture2D" uid="uid://dteknh65v8rw8" path="res://Assets/Animations/Enemies/2尸国小鬼/move-back_00.png" id="26_iv26l"]
+[ext_resource type="Texture2D" uid="uid://bhouydtjwflg6" path="res://Assets/Animations/Enemies/2尸国小鬼/die_00.png" id="26_yttll"]
+[ext_resource type="Texture2D" uid="uid://di8eegy2fjnuv" path="res://Assets/Animations/Enemies/2尸国小鬼/move-back_01.png" id="27_3pi6b"]
+[ext_resource type="Texture2D" uid="uid://cmb01mo8n4xpq" path="res://Assets/Animations/Enemies/2尸国小鬼/die_01.png" id="27_6d6w0"]
+[ext_resource type="Texture2D" uid="uid://bft17uwilxja8" path="res://Assets/Animations/Enemies/2尸国小鬼/die_02.png" id="28_152ql"]
+[ext_resource type="Texture2D" uid="uid://b4pdd6mdscdt" path="res://Assets/Animations/Enemies/2尸国小鬼/move-back_02.png" id="28_lonk3"]
+[ext_resource type="Texture2D" uid="uid://dhv6wjat2vj7r" path="res://Assets/Animations/Enemies/2尸国小鬼/move-back_03.png" id="29_myo65"]
+[ext_resource type="Texture2D" uid="uid://vqm8vvo7rhr4" path="res://Assets/Animations/Enemies/2尸国小鬼/die_03.png" id="29_n5178"]
+[ext_resource type="Texture2D" uid="uid://fq0riko1i18g" path="res://Assets/Animations/Enemies/2尸国小鬼/die_04.png" id="30_tgoog"]
+[ext_resource type="Texture2D" uid="uid://cjexxdetw0k5s" path="res://Assets/Animations/Enemies/2尸国小鬼/move-back_04.png" id="30_xj50o"]
+[ext_resource type="Texture2D" uid="uid://7xgtvfqbfmpr" path="res://Assets/Animations/Enemies/2尸国小鬼/move-back_05.png" id="31_h85v1"]
+[ext_resource type="Texture2D" uid="uid://bekctp3xhc80i" path="res://Assets/Animations/Enemies/2尸国小鬼/die_05.png" id="31_tfavd"]
+[ext_resource type="Texture2D" uid="uid://c5seilwceiubr" path="res://Assets/Animations/Enemies/2尸国小鬼/die_06.png" id="32_a0ujm"]
+[ext_resource type="Texture2D" uid="uid://b8d461njad0de" path="res://Assets/Animations/Enemies/2尸国小鬼/move-back_06.png" id="32_rlbps"]
+[ext_resource type="Texture2D" uid="uid://bu4xdyjtt1oe1" path="res://Assets/Animations/Enemies/2尸国小鬼/move-back_07.png" id="33_5hf1l"]
+[ext_resource type="Texture2D" uid="uid://dpnudxdtplqbf" path="res://Assets/Animations/Enemies/2尸国小鬼/die_07.png" id="33_8scak"]
+[ext_resource type="Texture2D" uid="uid://e4thftmb6men" path="res://Assets/Animations/Enemies/2尸国小鬼/move-back_08.png" id="34_aroge"]
+[ext_resource type="Texture2D" uid="uid://dkjq18ov3djy1" path="res://Assets/Animations/Enemies/2尸国小鬼/die_08.png" id="34_kb2e2"]
+[ext_resource type="Texture2D" uid="uid://cnbborh8aqox1" path="res://Assets/Animations/Enemies/2尸国小鬼/die_09.png" id="35_drobx"]
+[ext_resource type="Texture2D" uid="uid://l31jqm33ny2l" path="res://Assets/Animations/Enemies/2尸国小鬼/move-back_09.png" id="35_gwb6r"]
+[ext_resource type="Texture2D" uid="uid://dsy643xihqbmy" path="res://Assets/Animations/Enemies/2尸国小鬼/move-back_10.png" id="36_lwb5x"]
+[ext_resource type="Texture2D" uid="uid://1j85cg880mdc" path="res://Assets/Animations/Enemies/2尸国小鬼/die_10.png" id="36_uhnh4"]
+[ext_resource type="Texture2D" uid="uid://c1kui7nbtbvhr" path="res://Assets/Animations/Enemies/2尸国小鬼/die_11.png" id="37_gsjqd"]
+[ext_resource type="Texture2D" uid="uid://d0w88j6a5qeoj" path="res://Assets/Animations/Enemies/2尸国小鬼/move-back_11.png" id="37_hvnsg"]
+[ext_resource type="Texture2D" uid="uid://bj8i283tg8auk" path="res://Assets/Animations/Enemies/2尸国小鬼/die_12.png" id="38_ffc5b"]
+[ext_resource type="Texture2D" uid="uid://b5d4mnw38g7ab" path="res://Assets/Animations/Enemies/2尸国小鬼/move-back_12.png" id="38_oy1k3"]
+[ext_resource type="Texture2D" uid="uid://c45saqauskcen" path="res://Assets/Animations/Enemies/2尸国小鬼/move-back_13.png" id="39_6cvn0"]
+[ext_resource type="Texture2D" uid="uid://bcornagha8wmb" path="res://Assets/Animations/Enemies/2尸国小鬼/move-back_14.png" id="40_0jyjj"]
+[ext_resource type="Texture2D" uid="uid://gcjrtak51o8h" path="res://Assets/Animations/Enemies/2尸国小鬼/move-back_15.png" id="41_4ock1"]
+[ext_resource type="Texture2D" uid="uid://doi6t1ra4vr4d" path="res://Assets/Animations/Enemies/2尸国小鬼/move-back_16.png" id="42_e0xrr"]
+[ext_resource type="Texture2D" uid="uid://de5tgmje736yi" path="res://Assets/Animations/Enemies/2尸国小鬼/move-front_00.png" id="43_qcdd6"]
+[ext_resource type="Texture2D" uid="uid://bstmo1xw3mfvw" path="res://Assets/Animations/Enemies/2尸国小鬼/move-front_01.png" id="44_kvhxf"]
+[ext_resource type="Texture2D" uid="uid://io60j5vk6vhy" path="res://Assets/Animations/Enemies/2尸国小鬼/move-front_02.png" id="45_pykcm"]
+[ext_resource type="Texture2D" uid="uid://diyylw7hkodcg" path="res://Assets/Animations/Enemies/2尸国小鬼/move-front_03.png" id="46_sxril"]
+[ext_resource type="Texture2D" uid="uid://cdi4hmphbeawb" path="res://Assets/Animations/Enemies/2尸国小鬼/move-front_04.png" id="47_e60tl"]
+[ext_resource type="Texture2D" uid="uid://dxqmlpe05gxi1" path="res://Assets/Animations/Enemies/2尸国小鬼/move-front_05.png" id="48_5i5lo"]
+[ext_resource type="Texture2D" uid="uid://wkjw1mx33jk6" path="res://Assets/Animations/Enemies/2尸国小鬼/move-front_06.png" id="49_qghuw"]
+[ext_resource type="Texture2D" uid="uid://b81sgh372qwmy" path="res://Assets/Animations/Enemies/2尸国小鬼/move-front_07.png" id="50_7ngwl"]
+[ext_resource type="Texture2D" uid="uid://betsmjqs88se3" path="res://Assets/Animations/Enemies/2尸国小鬼/move-front_08.png" id="51_kfytc"]
+[ext_resource type="Texture2D" uid="uid://dq4oxeowc2gjs" path="res://Assets/Animations/Enemies/2尸国小鬼/move-front_09.png" id="52_j1d5t"]
+[ext_resource type="Texture2D" uid="uid://0ew7bofp7lgp" path="res://Assets/Animations/Enemies/2尸国小鬼/move-front_10.png" id="53_fuo3n"]
+[ext_resource type="Texture2D" uid="uid://dhv72g6pyy072" path="res://Assets/Animations/Enemies/2尸国小鬼/move-front_11.png" id="54_j5r2n"]
+[ext_resource type="Texture2D" uid="uid://c78sessmb6ko6" path="res://Assets/Animations/Enemies/2尸国小鬼/move-front_12.png" id="55_bry78"]
+[ext_resource type="Texture2D" uid="uid://b7olhv8m3a8mv" path="res://Assets/Animations/Enemies/2尸国小鬼/move-front_13.png" id="56_swrnc"]
+[ext_resource type="Texture2D" uid="uid://b6q4pr7c1iofh" path="res://Assets/Animations/Enemies/2尸国小鬼/move-front_14.png" id="57_mv7tf"]
+[ext_resource type="Texture2D" uid="uid://bouokkxduwkix" path="res://Assets/Animations/Enemies/2尸国小鬼/move-front_15.png" id="58_6d4w8"]
+[ext_resource type="Texture2D" uid="uid://fln343nboof4" path="res://Assets/Animations/Enemies/2尸国小鬼/move-normal_00.png" id="59_d8cq4"]
+[ext_resource type="Texture2D" uid="uid://lu3l3di0fp7y" path="res://Assets/Animations/Enemies/2尸国小鬼/move-normal_01.png" id="60_gcds7"]
+[ext_resource type="Texture2D" uid="uid://brpyi4fklu3x0" path="res://Assets/Animations/Enemies/2尸国小鬼/move-normal_02.png" id="61_acan5"]
+[ext_resource type="Texture2D" uid="uid://dynwaksdd6oeo" path="res://Assets/Animations/Enemies/2尸国小鬼/move-normal_03.png" id="62_dujl6"]
+[ext_resource type="Texture2D" uid="uid://cpjmuhrt5aerg" path="res://Assets/Animations/Enemies/2尸国小鬼/move-normal_04.png" id="63_0xto2"]
+[ext_resource type="Texture2D" uid="uid://b832s4mye3nfl" path="res://Assets/Animations/Enemies/2尸国小鬼/move-normal_05.png" id="64_3tksj"]
+[ext_resource type="Texture2D" uid="uid://dd0j1eafcgwgm" path="res://Assets/Animations/Enemies/2尸国小鬼/move-normal_06.png" id="65_jayfn"]
+[ext_resource type="Texture2D" uid="uid://csaveantwu2vh" path="res://Assets/Animations/Enemies/2尸国小鬼/move-normal_07.png" id="66_ebfb8"]
+[ext_resource type="Texture2D" uid="uid://cjwkkqoyp54xs" path="res://Assets/Animations/Enemies/2尸国小鬼/move-normal_08.png" id="67_b6hmf"]
+[ext_resource type="Texture2D" uid="uid://c4tfwujxlkgvg" path="res://Assets/Animations/Enemies/2尸国小鬼/move-normal_09.png" id="68_axekp"]
+[ext_resource type="Texture2D" uid="uid://bfypk6rtajugi" path="res://Assets/Animations/Enemies/2尸国小鬼/move-normal_10.png" id="69_sjukn"]
+[ext_resource type="Texture2D" uid="uid://dip8w40uaqby5" path="res://Assets/Animations/Enemies/2尸国小鬼/move-normal_11.png" id="70_2tanx"]
+[ext_resource type="Texture2D" uid="uid://blwll503w3m2l" path="res://Assets/Animations/Enemies/2尸国小鬼/move-normal_12.png" id="71_bykvd"]
+[ext_resource type="Texture2D" uid="uid://dkdm6gachkfn5" path="res://Assets/Animations/Enemies/2尸国小鬼/move-normal_13.png" id="72_ru035"]
+[ext_resource type="Texture2D" uid="uid://dv52baqbdrf4s" path="res://Assets/Animations/Enemies/2尸国小鬼/move-normal_14.png" id="73_xurgo"]
+[ext_resource type="Texture2D" uid="uid://cxlt51jhbbx8o" path="res://Assets/Animations/Enemies/2尸国小鬼/move-normal_15.png" id="74_8sekt"]
+[ext_resource type="AudioStream" uid="uid://0h275ggnhryt" path="res://Assets/Sounds/FXs/Enemies/Sound_HumanDead4.wav" id="75_gv2cd"]
+
+[sub_resource type="Resource" id="Resource_xl1y5"]
+script = ExtResource("4_vk401")
+health = 20
+dodge_rate = 0.0
+near_damage_low = 1
+near_damage_high = 2
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.0
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 1.8
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1of3u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_fpovd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fm1jk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ujg37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_djq5h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_btxy8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0olmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_oxlnw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_lvebe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_esh4m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_gm8je")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_274e0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_gy3up")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_4nsqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_78pgy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_fwrfs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_86pch")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_gp4mb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_jtiyo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_5d2vl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_v68nr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_0tl2w")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 26.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_yttll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_6d6w0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_152ql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_n5178")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_tgoog")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_tfavd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_a0ujm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_8scak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_kb2e2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_drobx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_uhnh4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_gsjqd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_ffc5b")
+}],
+"loop": false,
+"name": &"die",
+"speed": 36.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_fpovd")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_iv26l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_3pi6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_lonk3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_myo65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_xj50o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_h85v1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_rlbps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_5hf1l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_aroge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_gwb6r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_lwb5x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_hvnsg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_oy1k3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_6cvn0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_0jyjj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_4ock1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_e0xrr")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 36.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("43_qcdd6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_kvhxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_pykcm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_sxril")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_e60tl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_5i5lo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_qghuw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_7ngwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_kfytc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_j1d5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_fuo3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_j5r2n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_bry78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_swrnc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_mv7tf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_6d4w8")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 36.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("59_d8cq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_gcds7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_acan5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_dujl6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_0xto2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_3tksj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_jayfn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_ebfb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_b6hmf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_axekp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_sjukn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_2tanx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_bykvd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_ru035")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_xurgo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_8sekt")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 36.0
+}]
+
+[node name="Enemy2" instance=ExtResource("1_htuft")]
+script = ExtResource("2_8760k")
+enemy_name = "尸国小鬼"
+enemy_id = 2
+enemy_texture = ExtResource("3_wi6l8")
+start_data = SubResource("Resource_xl1y5")
+bounty = 3
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(5, -60)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_1of3u")
+animation = &"attack"
+autoplay = "idle"
+
+[node name="HurtBox" parent="UnitBody" index="2"]
+position = Vector2(0, -65)
+scale = Vector2(3.26911, 3.26911)
+
+[node name="EnemyButton" parent="UnitBody" index="4"]
+offset_top = -125.0
+
+[node name="HealthBar" parent="UnitBody" index="5"]
+offset_left = -45.0
+offset_top = -150.0
+offset_right = 255.0
+offset_bottom = -141.0
+scale = Vector2(0.2829, 1.88085)
+
+[node name="DieAudio" parent="." index="3"]
+stream = ExtResource("75_gv2cd")
+pitch_scale = 1.5

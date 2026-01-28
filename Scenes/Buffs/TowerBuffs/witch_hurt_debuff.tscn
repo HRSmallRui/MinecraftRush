@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://bh3jxpnqpqddp"]
+
+[ext_resource type="PackedScene" uid="uid://bjfa3t67tpsbr" path="res://Scenes/Buffs/property_buff.tscn" id="1_u1a2b"]
+[ext_resource type="Script" path="res://Scripts/Buffs/property_buff_block.gd" id="2_dd78u"]
+[ext_resource type="Script" path="res://Scripts/Buffs/witch_hurt_debuff.gd" id="2_utvhk"]
+[ext_resource type="Script" path="res://Scripts/Classes/potion_particle_leader.gd" id="3_db3xs"]
+
+[sub_resource type="Resource" id="Resource_4bpmy"]
+script = ExtResource("2_dd78u")
+property_type = 11
+operation_type = 0
+operation_data = 0.5
+
+[node name="WitchHurtDebuff" instance=ExtResource("1_u1a2b")]
+script = ExtResource("2_utvhk")
+buff_blocks = Array[ExtResource("2_dd78u")]([SubResource("Resource_4bpmy")])
+duration = 6.0
+immune_groups = Array[String](["super_unit", "god"])
+
+[node name="PotionParticleLeader" type="Node2D" parent="." index="0" node_paths=PackedStringArray("buff_vehicle")]
+script = ExtResource("3_db3xs")
+potion_color = Color(3.73013e-07, 0.256169, 3.36915e-07, 1)
+buff_vehicle = NodePath("..")

@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://58wvbpt3jvtd"]
+
+[ext_resource type="Script" path="res://Scripts/Skills/alchemist_liquid.gd" id="1_audfn"]
+[ext_resource type="Texture2D" uid="uid://hj4liqyndlgs" path="res://Assets/Images/DefenceTowers/Magics/Towers/LV4-3/Alchemist_quid.png" id="1_kjiy0"]
+[ext_resource type="AudioStream" uid="uid://bsn52x18c1tkf" path="res://Assets/Sounds/FXs/Enemies/史莱姆/史莱姆攻击1.wav" id="2_ntpde"]
+[ext_resource type="AudioStream" uid="uid://sehnxvlavjwu" path="res://Assets/Sounds/FXs/Enemies/史莱姆/大型史莱姆1.wav" id="3_upmdf"]
+[ext_resource type="AudioStream" uid="uid://d8sn0pw5ay13" path="res://Assets/Sounds/FXs/Enemies/史莱姆/大型史莱姆4.wav" id="4_alus2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uxqxs"]
+radius = 73.9444
+
+[node name="AlchemistLiquid" type="Area2D"]
+scale = Vector2(0.6, 0.6)
+collision_layer = 0
+collision_mask = 32
+script = ExtResource("1_audfn")
+appear_audio_list = Array[AudioStream]([ExtResource("2_ntpde"), ExtResource("3_upmdf"), ExtResource("4_alus2")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 0.7)
+shape = SubResource("CircleShape2D_uxqxs")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="AlchemistLiquid" type="Sprite2D" parent="."]
+z_index = -1
+scale = Vector2(0.850945, 0.850945)
+texture = ExtResource("1_kjiy0")
+offset = Vector2(1.66667, -23.3333)
+
+[node name="FreeTimer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[node name="ShotTimer" type="Timer" parent="."]
+wait_time = 0.2
+
+[node name="AppearAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ntpde")
+volume_db = -4.0
+bus = &"Sound"
+
+[connection signal="timeout" from="FreeTimer" to="." method="_on_free_timer_timeout"]
+[connection signal="timeout" from="ShotTimer" to="." method="_on_shot_timer_timeout"]

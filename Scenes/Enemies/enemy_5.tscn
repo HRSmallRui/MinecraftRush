@@ -1,0 +1,1008 @@
+[gd_scene load_steps=234 format=3 uid="uid://nymsao7yy471"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_iuwbf"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="2_iuxtt"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_5.gd" id="2_ypfx3"]
+[ext_resource type="Texture2D" uid="uid://dd4riy3p6twdn" path="res://Assets/Images/UI/InformationBar/尸国壮汉.png" id="3_dn35p"]
+[ext_resource type="AudioStream" uid="uid://bbhsuop1io62f" path="res://Assets/Sounds/FXs/Enemies/Sound_EnemyBigDead.wav" id="5_aga8j"]
+[ext_resource type="Texture2D" uid="uid://cedvw0003w6wq" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_00.png" id="6_jtwhb"]
+[ext_resource type="Texture2D" uid="uid://crc3a8qb023tm" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_00.png" id="7_0jjux"]
+[ext_resource type="Texture2D" uid="uid://ctbviormefo05" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_01.png" id="7_ckpho"]
+[ext_resource type="Texture2D" uid="uid://bq8um2oet6t1h" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_02.png" id="8_hsyb7"]
+[ext_resource type="Texture2D" uid="uid://buo8a7p6prsmr" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_01.png" id="8_nd0vc"]
+[ext_resource type="Texture2D" uid="uid://x5g5do7q2yoy" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_02.png" id="9_lljjb"]
+[ext_resource type="Texture2D" uid="uid://dg6k3ytpf07l6" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_03.png" id="9_n33ab"]
+[ext_resource type="Texture2D" uid="uid://b7taytpfkn3m7" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_04.png" id="10_35wwl"]
+[ext_resource type="Texture2D" uid="uid://3qj78s6xjv0c" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_03.png" id="10_nqnpc"]
+[ext_resource type="Texture2D" uid="uid://c47sfedvjke88" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_04.png" id="11_dnv4g"]
+[ext_resource type="Texture2D" uid="uid://ldqpm4h1j22r" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_05.png" id="11_rdjtt"]
+[ext_resource type="Texture2D" uid="uid://bt2n4dfoeret5" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_05.png" id="12_ev2o0"]
+[ext_resource type="Texture2D" uid="uid://bm08xbhm6apwy" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_06.png" id="12_tt1q8"]
+[ext_resource type="Texture2D" uid="uid://ds6gsmi4dodox" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_06.png" id="13_14qkp"]
+[ext_resource type="Texture2D" uid="uid://cv3tffhow0p21" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_07.png" id="13_s1hmf"]
+[ext_resource type="Texture2D" uid="uid://70k35bevlhbg" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_07.png" id="14_3dnm8"]
+[ext_resource type="Texture2D" uid="uid://6lwesr43vgwp" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_08.png" id="14_d11nc"]
+[ext_resource type="Texture2D" uid="uid://d0uel5kr41oq7" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_09.png" id="15_kmy0r"]
+[ext_resource type="Texture2D" uid="uid://clw1p07qwo7w2" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_08.png" id="15_mhm8i"]
+[ext_resource type="Texture2D" uid="uid://c8dvwtlk322u" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_09.png" id="16_5c5tg"]
+[ext_resource type="Texture2D" uid="uid://7o1rbye2bfsy" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_10.png" id="16_8h3a4"]
+[ext_resource type="Texture2D" uid="uid://c31lohaofytbd" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_10.png" id="17_gnfrl"]
+[ext_resource type="Texture2D" uid="uid://cviqs4g2xr7py" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_11.png" id="17_o6d6o"]
+[ext_resource type="Texture2D" uid="uid://c2umdo3rf4pby" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_12.png" id="18_5u204"]
+[ext_resource type="Texture2D" uid="uid://p3plglfylk42" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_11.png" id="18_qs3d3"]
+[ext_resource type="Texture2D" uid="uid://cr4uqq0p8psv7" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_12.png" id="19_cu3yo"]
+[ext_resource type="Texture2D" uid="uid://cc6npitopm2do" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_13.png" id="19_jhowg"]
+[ext_resource type="Texture2D" uid="uid://3agwntvfrfu4" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_13.png" id="20_nkfjt"]
+[ext_resource type="Texture2D" uid="uid://buhaovg204qsi" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_14.png" id="20_oxvqn"]
+[ext_resource type="Texture2D" uid="uid://m4v34qb7fath" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_14.png" id="21_jrpqw"]
+[ext_resource type="Texture2D" uid="uid://prtgqiy4qqxo" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_15.png" id="21_yuve4"]
+[ext_resource type="Texture2D" uid="uid://diyghhlln66ge" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_16.png" id="22_dksg8"]
+[ext_resource type="Texture2D" uid="uid://ce7d8bdho2lwo" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_15.png" id="22_mycfc"]
+[ext_resource type="Texture2D" uid="uid://crlk2qurqxcux" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_17.png" id="23_5uka5"]
+[ext_resource type="Texture2D" uid="uid://c65t2vq5ndsq5" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_16.png" id="23_w60ef"]
+[ext_resource type="Texture2D" uid="uid://cyg8t0562lsn" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_17.png" id="24_n4ia3"]
+[ext_resource type="Texture2D" uid="uid://dhd1tv2sue6rd" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_18.png" id="24_pybqx"]
+[ext_resource type="Texture2D" uid="uid://db7aexfcrbgyp" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_18.png" id="25_25xdx"]
+[ext_resource type="Texture2D" uid="uid://cdcgsevaqior" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_19.png" id="25_iio8x"]
+[ext_resource type="Texture2D" uid="uid://bsimryyr6pck2" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_19.png" id="26_7ss2q"]
+[ext_resource type="Texture2D" uid="uid://cxgx2yaivub1o" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_20.png" id="26_tveai"]
+[ext_resource type="Texture2D" uid="uid://d1tp0uu8tn53p" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_21.png" id="27_2d3g3"]
+[ext_resource type="Texture2D" uid="uid://bbm07d32srjwu" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_20.png" id="27_r2351"]
+[ext_resource type="Texture2D" uid="uid://d3etdvghm2d3w" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_22.png" id="28_rdiv0"]
+[ext_resource type="Texture2D" uid="uid://cnoev0onmufol" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_21.png" id="28_w1v04"]
+[ext_resource type="Texture2D" uid="uid://dftwua2j8tmy7" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_23.png" id="29_gb1g8"]
+[ext_resource type="Texture2D" uid="uid://bn2cfn3cev180" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_22.png" id="29_sdgt2"]
+[ext_resource type="Texture2D" uid="uid://du37cmikl8642" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_23.png" id="30_1dles"]
+[ext_resource type="Texture2D" uid="uid://c35jk7yru2pnr" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_24.png" id="30_sex0w"]
+[ext_resource type="Texture2D" uid="uid://df14wd4jsmokr" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_24.png" id="31_jr8nu"]
+[ext_resource type="Texture2D" uid="uid://dxqcqc5jg812a" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_25.png" id="31_yotxi"]
+[ext_resource type="Texture2D" uid="uid://clluysmuarrjk" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_25.png" id="32_2e3eh"]
+[ext_resource type="Texture2D" uid="uid://11wl3sc4hg8r" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_26.png" id="32_qdwys"]
+[ext_resource type="Texture2D" uid="uid://b6grml8q5og1d" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_27.png" id="33_2ounm"]
+[ext_resource type="Texture2D" uid="uid://chiq1yf4jwnt6" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_26.png" id="33_vx4wr"]
+[ext_resource type="Texture2D" uid="uid://cmoji3l56wqff" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_27.png" id="34_ee6ri"]
+[ext_resource type="Texture2D" uid="uid://dmtkkt26rmktk" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_28.png" id="34_eipx4"]
+[ext_resource type="Texture2D" uid="uid://xqkchoyp5r1d" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_28.png" id="35_4rwdh"]
+[ext_resource type="Texture2D" uid="uid://becdvtjl7x1e6" path="res://Assets/Animations/Enemies/5尸国壮汉/attack_29.png" id="35_lud6l"]
+[ext_resource type="Texture2D" uid="uid://6p8810qnc0my" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_29.png" id="36_8h7m4"]
+[ext_resource type="Texture2D" uid="uid://dn4fgfgb43rh4" path="res://Assets/Animations/Enemies/5尸国壮汉/die_00.png" id="36_kkioe"]
+[ext_resource type="Texture2D" uid="uid://dk6c520h0r1i8" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_30.png" id="37_aefwm"]
+[ext_resource type="Texture2D" uid="uid://dx0732xxqq14" path="res://Assets/Animations/Enemies/5尸国壮汉/die_02.png" id="38_0qivy"]
+[ext_resource type="Texture2D" uid="uid://cdb8q3ve4rp8i" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_31.png" id="38_2vknu"]
+[ext_resource type="Texture2D" uid="uid://dylqjl7g2yvip" path="res://Assets/Animations/Enemies/5尸国壮汉/die_03.png" id="39_c6rw7"]
+[ext_resource type="Texture2D" uid="uid://ql71eqj05adq" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_32.png" id="39_cos00"]
+[ext_resource type="Texture2D" uid="uid://cocwd1e8wng16" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_33.png" id="40_icvvj"]
+[ext_resource type="Texture2D" uid="uid://dumk40kwm67kr" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_34.png" id="41_nspkb"]
+[ext_resource type="Texture2D" uid="uid://c8q5llm6lljtg" path="res://Assets/Animations/Enemies/5尸国壮汉/die_05.png" id="41_v53u4"]
+[ext_resource type="Texture2D" uid="uid://b6q6o048n6480" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_35.png" id="42_j2h1v"]
+[ext_resource type="Texture2D" uid="uid://bs8kwiy76iy2g" path="res://Assets/Animations/Enemies/5尸国壮汉/die_06.png" id="42_l6ir1"]
+[ext_resource type="Texture2D" uid="uid://bnvlgchifmynr" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_36.png" id="43_m1tm4"]
+[ext_resource type="Texture2D" uid="uid://p73bs0tmsf04" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_37.png" id="44_0mx7g"]
+[ext_resource type="Texture2D" uid="uid://c1t7oty8jpsje" path="res://Assets/Animations/Enemies/5尸国壮汉/die_08.png" id="44_g7ru0"]
+[ext_resource type="Texture2D" uid="uid://bi45cgh37jpxm" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_38.png" id="45_7ss4n"]
+[ext_resource type="Texture2D" uid="uid://iv1t4gt65io6" path="res://Assets/Animations/Enemies/5尸国壮汉/die_09.png" id="45_oritx"]
+[ext_resource type="Texture2D" uid="uid://don1ly2bwufi3" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_39.png" id="46_jac0h"]
+[ext_resource type="Texture2D" uid="uid://5g47xib7asd0" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_40.png" id="47_ghmg8"]
+[ext_resource type="Texture2D" uid="uid://cie2qj06sqdfw" path="res://Assets/Animations/Enemies/5尸国壮汉/die_11.png" id="47_qlqc4"]
+[ext_resource type="Texture2D" uid="uid://c73lu888ug32m" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_41.png" id="48_23ggo"]
+[ext_resource type="Texture2D" uid="uid://c0gtk0y8dcd4" path="res://Assets/Animations/Enemies/5尸国壮汉/die_12.png" id="48_q4nce"]
+[ext_resource type="Texture2D" uid="uid://bclucl0yieexc" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_42.png" id="49_3pe1i"]
+[ext_resource type="Texture2D" uid="uid://dxs65a0h37efl" path="res://Assets/Animations/Enemies/5尸国壮汉/die_14.png" id="50_dds37"]
+[ext_resource type="Texture2D" uid="uid://cwraoe0vrl5wt" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_43.png" id="50_j6iyu"]
+[ext_resource type="Texture2D" uid="uid://badck2ibacv53" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_44.png" id="51_j4js8"]
+[ext_resource type="Texture2D" uid="uid://cp3rmfogev6ik" path="res://Assets/Animations/Enemies/5尸国壮汉/die_15.png" id="51_vhdj6"]
+[ext_resource type="Texture2D" uid="uid://dbphitbe2cme4" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_45.png" id="52_gbt2j"]
+[ext_resource type="Texture2D" uid="uid://d1v3hpsposmx8" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_46.png" id="53_q5i52"]
+[ext_resource type="Texture2D" uid="uid://cmo6a6ush54ky" path="res://Assets/Animations/Enemies/5尸国壮汉/die_17.png" id="53_so75u"]
+[ext_resource type="Texture2D" uid="uid://cv24paikne28k" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_47.png" id="54_d2o6i"]
+[ext_resource type="Texture2D" uid="uid://ostg5caqaclp" path="res://Assets/Animations/Enemies/5尸国壮汉/die_18.png" id="54_redem"]
+[ext_resource type="Texture2D" uid="uid://b3g680m74evkd" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_48.png" id="55_xi06c"]
+[ext_resource type="Texture2D" uid="uid://dudevctfdmeie" path="res://Assets/Animations/Enemies/5尸国壮汉/die_20.png" id="56_irh6q"]
+[ext_resource type="Texture2D" uid="uid://bpqmij5adqw12" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_49.png" id="56_rydh2"]
+[ext_resource type="Texture2D" uid="uid://u05oojw8u048" path="res://Assets/Animations/Enemies/5尸国壮汉/die_21.png" id="57_216ws"]
+[ext_resource type="Texture2D" uid="uid://e47qa0vut12a" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_50.png" id="57_qeauf"]
+[ext_resource type="Texture2D" uid="uid://cl01cdbm1c72f" path="res://Assets/Animations/Enemies/5尸国壮汉/die_22.png" id="58_8avl2"]
+[ext_resource type="Texture2D" uid="uid://d1byglk0o4f4p" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_51.png" id="58_qms2e"]
+[ext_resource type="Texture2D" uid="uid://b4ll6v2daskt0" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_00.png" id="59_4frxl"]
+[ext_resource type="Texture2D" uid="uid://vxjtgxuafggh" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_52.png" id="59_8520d"]
+[ext_resource type="Texture2D" uid="uid://b1v6v38l0novg" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_53.png" id="60_ffwsv"]
+[ext_resource type="Texture2D" uid="uid://by5qhb4e3ttc0" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_01.png" id="60_taw04"]
+[ext_resource type="Texture2D" uid="uid://beajpqu6sysoc" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_02.png" id="61_6yj5t"]
+[ext_resource type="Texture2D" uid="uid://cxj07yh0t12rs" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_54.png" id="61_ik7dd"]
+[ext_resource type="Texture2D" uid="uid://brv2cs7688elt" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_03.png" id="62_la6f8"]
+[ext_resource type="Texture2D" uid="uid://boil8t05a14bu" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_55.png" id="62_utl2x"]
+[ext_resource type="Texture2D" uid="uid://de3fudtobicay" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_04.png" id="63_c6apw"]
+[ext_resource type="Texture2D" uid="uid://cj4pub30gpb5t" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_56.png" id="63_ypkrq"]
+[ext_resource type="Texture2D" uid="uid://bvdth670afolx" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_05.png" id="64_3anu8"]
+[ext_resource type="Texture2D" uid="uid://csgigj4rkrums" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_57.png" id="64_wphd5"]
+[ext_resource type="Texture2D" uid="uid://dg88scn4dl5r4" path="res://Assets/Animations/Enemies/5尸国壮汉/move_normal_58.png" id="65_oc0uw"]
+[ext_resource type="Texture2D" uid="uid://cg1r6urfcv1yw" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_06.png" id="65_owwmq"]
+[ext_resource type="Texture2D" uid="uid://crykkum2mued5" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_07.png" id="66_apgtn"]
+[ext_resource type="Texture2D" uid="uid://cmitwmvhhx32f" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_08.png" id="67_tjclo"]
+[ext_resource type="Texture2D" uid="uid://fb4kfq4r88qj" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_09.png" id="68_dqoql"]
+[ext_resource type="Texture2D" uid="uid://ijq1wkgeo8py" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_10.png" id="69_hmpri"]
+[ext_resource type="Texture2D" uid="uid://b1j6gdwpvpyrh" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_11.png" id="70_rj647"]
+[ext_resource type="Texture2D" uid="uid://s3dan0t8bbxc" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_12.png" id="71_yketv"]
+[ext_resource type="Texture2D" uid="uid://c54qlava5bmnm" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_13.png" id="72_a2jru"]
+[ext_resource type="Texture2D" uid="uid://bh1vkerb8j6xg" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_14.png" id="73_cqerl"]
+[ext_resource type="Texture2D" uid="uid://dqro3xww4hcq6" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_15.png" id="74_eop8g"]
+[ext_resource type="Texture2D" uid="uid://bbv7lcls1pe3c" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_16.png" id="75_6u23g"]
+[ext_resource type="Texture2D" uid="uid://bl5t7tdoovbll" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_17.png" id="76_1d4bq"]
+[ext_resource type="Texture2D" uid="uid://b52ae1pvmxvy5" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_18.png" id="77_mu2kg"]
+[ext_resource type="Texture2D" uid="uid://ycc8ee5frwvs" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_19.png" id="78_ok5qo"]
+[ext_resource type="Texture2D" uid="uid://rog1kojfgiy4" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_20.png" id="79_dac2f"]
+[ext_resource type="Texture2D" uid="uid://b4e0b5l1yhg43" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_21.png" id="80_2w67r"]
+[ext_resource type="Texture2D" uid="uid://b7ylh72gpdspx" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_22.png" id="81_4ohhg"]
+[ext_resource type="Texture2D" uid="uid://bd8e8g5umaru7" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_23.png" id="82_vmcgh"]
+[ext_resource type="Texture2D" uid="uid://c5tj7krshq55d" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_24.png" id="83_abtqe"]
+[ext_resource type="Texture2D" uid="uid://saq1qqdqjnmf" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_25.png" id="84_4tjpc"]
+[ext_resource type="Texture2D" uid="uid://crqek6cbf0k80" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_26.png" id="85_15jip"]
+[ext_resource type="Texture2D" uid="uid://b40memy5j6fu4" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_27.png" id="86_u0q7b"]
+[ext_resource type="Texture2D" uid="uid://cjq81wgm5kkwi" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_28.png" id="87_iywqt"]
+[ext_resource type="Texture2D" uid="uid://dynalafg0dluy" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_29.png" id="88_ihis8"]
+[ext_resource type="Texture2D" uid="uid://cwcagq8iu5cpl" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_30.png" id="89_nx8u2"]
+[ext_resource type="Texture2D" uid="uid://1ir4p62iwqiu" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_31.png" id="90_pkhop"]
+[ext_resource type="Texture2D" uid="uid://bumryadvy3voc" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_32.png" id="91_cxijd"]
+[ext_resource type="Texture2D" uid="uid://cectcqd5rgmbm" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_33.png" id="92_4y1rg"]
+[ext_resource type="Texture2D" uid="uid://dcs7qudlb3wac" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_34.png" id="93_uc0gm"]
+[ext_resource type="Texture2D" uid="uid://b7gcxbuc2c8my" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_35.png" id="94_pngsu"]
+[ext_resource type="Texture2D" uid="uid://boeymcffn1jva" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_36.png" id="95_htui7"]
+[ext_resource type="Texture2D" uid="uid://trkkmpye7vnw" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_37.png" id="96_7jdrp"]
+[ext_resource type="Texture2D" uid="uid://cbd4lq5vn7j1g" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_38.png" id="97_3whjy"]
+[ext_resource type="Texture2D" uid="uid://dtdvy4ng0i5sv" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_39.png" id="98_2hdma"]
+[ext_resource type="Texture2D" uid="uid://f6s0ss6ywbhw" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_40.png" id="99_h1d7a"]
+[ext_resource type="Texture2D" uid="uid://denhib6atbitd" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_41.png" id="100_6p0pj"]
+[ext_resource type="Texture2D" uid="uid://cqo40fxqmrsb8" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_42.png" id="101_k7k5s"]
+[ext_resource type="Texture2D" uid="uid://wodqhb1w0mm2" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_43.png" id="102_syj7v"]
+[ext_resource type="Texture2D" uid="uid://d1wmrne2jifro" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_44.png" id="103_ersus"]
+[ext_resource type="Texture2D" uid="uid://buk3s5kg7vfqg" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_45.png" id="104_cmyyf"]
+[ext_resource type="Texture2D" uid="uid://bs61lrlh6bfgr" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_46.png" id="105_vysyg"]
+[ext_resource type="Texture2D" uid="uid://d1u0vr16f31ib" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_47.png" id="106_8oade"]
+[ext_resource type="Texture2D" uid="uid://2agvhn5iod0v" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_48.png" id="107_q7w5u"]
+[ext_resource type="Texture2D" uid="uid://4lyriql4qabo" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_49.png" id="108_xtshk"]
+[ext_resource type="Texture2D" uid="uid://cp7smff3xjmsr" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_50.png" id="109_7d5qv"]
+[ext_resource type="Texture2D" uid="uid://caanyb1hfkox2" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_51.png" id="110_2gel8"]
+[ext_resource type="Texture2D" uid="uid://b2vw5ng7x76e0" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_52.png" id="111_i1shh"]
+[ext_resource type="Texture2D" uid="uid://bgt5tpx1ilmxp" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_53.png" id="112_nvkhq"]
+[ext_resource type="Texture2D" uid="uid://cnrkoao38s2x7" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_54.png" id="113_ugo4f"]
+[ext_resource type="Texture2D" uid="uid://bekg2tppe2tw1" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_55.png" id="114_arymc"]
+[ext_resource type="Texture2D" uid="uid://dlguie0vu15x" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_56.png" id="115_plx4r"]
+[ext_resource type="Texture2D" uid="uid://cpt7d8bmewjhh" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_57.png" id="116_0n1gg"]
+[ext_resource type="Texture2D" uid="uid://dnl2aouvh136w" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_58.png" id="117_qkh70"]
+[ext_resource type="Texture2D" uid="uid://b56bftjbibfs4" path="res://Assets/Animations/Enemies/5尸国壮汉/move_back_59.png" id="118_ns647"]
+[ext_resource type="Texture2D" uid="uid://b2fvpvfyonh3j" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_00.png" id="119_agyja"]
+[ext_resource type="Texture2D" uid="uid://bb0w0m1tm7dff" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_01.png" id="120_anm0k"]
+[ext_resource type="Texture2D" uid="uid://cfjucfapqxxq3" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_02.png" id="121_pign8"]
+[ext_resource type="Texture2D" uid="uid://s3ujl5khvix5" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_03.png" id="122_sgks7"]
+[ext_resource type="Texture2D" uid="uid://cqmefm1yoh0gk" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_04.png" id="123_yabs4"]
+[ext_resource type="Texture2D" uid="uid://d3jybtsoyvymx" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_05.png" id="124_v1qka"]
+[ext_resource type="Texture2D" uid="uid://w3u3771rbuuj" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_06.png" id="125_yjd5f"]
+[ext_resource type="Texture2D" uid="uid://ciye8y0hqn5f3" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_07.png" id="126_jb1lb"]
+[ext_resource type="Texture2D" uid="uid://v22clv1jmxim" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_08.png" id="127_i1ldj"]
+[ext_resource type="Texture2D" uid="uid://wtsa2ywyhmh3" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_09.png" id="128_5bhad"]
+[ext_resource type="Texture2D" uid="uid://uc266g1838bv" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_10.png" id="129_yfq7a"]
+[ext_resource type="Texture2D" uid="uid://c8eimyqq6inya" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_11.png" id="130_ty5qk"]
+[ext_resource type="Texture2D" uid="uid://cq7juetggoalo" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_12.png" id="131_ctk4s"]
+[ext_resource type="Texture2D" uid="uid://dqjqycqw62gjp" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_13.png" id="132_a8ote"]
+[ext_resource type="Texture2D" uid="uid://trd10eixbao4" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_14.png" id="133_5ungu"]
+[ext_resource type="Texture2D" uid="uid://dip7wknqjeqpj" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_15.png" id="134_f3n8b"]
+[ext_resource type="Texture2D" uid="uid://bc1ly6wbm0cc3" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_16.png" id="135_xhk37"]
+[ext_resource type="Texture2D" uid="uid://c1uugpfkitq5i" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_17.png" id="136_wh3bs"]
+[ext_resource type="Texture2D" uid="uid://cfup8j3rh6po1" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_18.png" id="137_8gift"]
+[ext_resource type="Texture2D" uid="uid://cgc27j0vi82ty" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_19.png" id="138_ailmx"]
+[ext_resource type="Texture2D" uid="uid://d07ihlsaayb1m" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_20.png" id="139_wmm80"]
+[ext_resource type="Texture2D" uid="uid://ba48xqfuiwxto" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_21.png" id="140_4m2gv"]
+[ext_resource type="Texture2D" uid="uid://cpvfii26a6coa" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_22.png" id="141_no4wm"]
+[ext_resource type="Texture2D" uid="uid://5dxw8gg5ih25" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_23.png" id="142_7xk2u"]
+[ext_resource type="Texture2D" uid="uid://1bkfv7vskscl" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_24.png" id="143_n4jp6"]
+[ext_resource type="Texture2D" uid="uid://bwht3nyoitcst" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_25.png" id="144_3gyop"]
+[ext_resource type="Texture2D" uid="uid://clphh0iemne1s" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_26.png" id="145_af551"]
+[ext_resource type="Texture2D" uid="uid://dmhm5b4pn3qp4" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_27.png" id="146_1usw1"]
+[ext_resource type="Texture2D" uid="uid://cy1e223yvogkb" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_28.png" id="147_xc0vw"]
+[ext_resource type="Texture2D" uid="uid://bqb0oyuswsbxs" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_29.png" id="148_xff4y"]
+[ext_resource type="Texture2D" uid="uid://dbtjisgt42ym8" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_30.png" id="149_ua1go"]
+[ext_resource type="Texture2D" uid="uid://qclafie10al8" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_31.png" id="150_v81fe"]
+[ext_resource type="Texture2D" uid="uid://cf5hlctuawwf3" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_32.png" id="151_uptl2"]
+[ext_resource type="Texture2D" uid="uid://c8f3xs7gphilp" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_33.png" id="152_7f1u2"]
+[ext_resource type="Texture2D" uid="uid://cijrtnuqadhc0" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_34.png" id="153_2xx0i"]
+[ext_resource type="Texture2D" uid="uid://dh3itsvyhd7qn" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_35.png" id="154_66idp"]
+[ext_resource type="Texture2D" uid="uid://bv6du0q8lg7ne" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_36.png" id="155_41kro"]
+[ext_resource type="Texture2D" uid="uid://dp23ji3fnta5r" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_37.png" id="156_fdpvu"]
+[ext_resource type="Texture2D" uid="uid://d1kxmehlbmxn0" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_38.png" id="157_mrwds"]
+[ext_resource type="Texture2D" uid="uid://pm8rfg6373in" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_39.png" id="158_vj4kv"]
+[ext_resource type="Texture2D" uid="uid://c7ajnwlpxj4ow" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_40.png" id="159_kdxkr"]
+[ext_resource type="Texture2D" uid="uid://dekwpje1hnops" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_41.png" id="160_csi0s"]
+[ext_resource type="Texture2D" uid="uid://l52knmb7mhk4" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_42.png" id="161_ogkeq"]
+[ext_resource type="Texture2D" uid="uid://b5mkp4l0hwsa3" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_43.png" id="162_w0hij"]
+[ext_resource type="Texture2D" uid="uid://cwjr3sheuq3xs" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_44.png" id="163_mmdp0"]
+[ext_resource type="Texture2D" uid="uid://djxyblr7hoss5" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_45.png" id="164_4cdga"]
+[ext_resource type="Texture2D" uid="uid://cvoj71qd25wia" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_46.png" id="165_cmrke"]
+[ext_resource type="Texture2D" uid="uid://b1xn85rrame00" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_47.png" id="166_4s3j4"]
+[ext_resource type="Texture2D" uid="uid://ck5lbn0aknirf" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_48.png" id="167_j5ba7"]
+[ext_resource type="Texture2D" uid="uid://cgur2cgkeae5y" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_49.png" id="168_7kyhd"]
+[ext_resource type="Texture2D" uid="uid://iw5wymypu5ic" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_50.png" id="169_msxpt"]
+[ext_resource type="Texture2D" uid="uid://pumnbllsarku" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_51.png" id="170_7hibl"]
+[ext_resource type="Texture2D" uid="uid://cvjwhh3ic4mxj" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_52.png" id="171_we208"]
+[ext_resource type="Texture2D" uid="uid://b3pfrgfhpf2nn" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_53.png" id="172_8duqn"]
+[ext_resource type="Texture2D" uid="uid://d2w7ia3vjpj3m" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_54.png" id="173_8w41w"]
+[ext_resource type="Texture2D" uid="uid://c6fxhbevj6q7s" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_55.png" id="174_i1shj"]
+[ext_resource type="Texture2D" uid="uid://ccov0p8y4n8yo" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_56.png" id="175_gyn0f"]
+[ext_resource type="Texture2D" uid="uid://ik58ey707rw8" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_57.png" id="176_56nkp"]
+[ext_resource type="Texture2D" uid="uid://ukn5s5qt1v3h" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_58.png" id="177_pnsyo"]
+[ext_resource type="Texture2D" uid="uid://6clii2ifqhge" path="res://Assets/Animations/Enemies/5尸国壮汉/move_front_59.png" id="178_fgidd"]
+
+[sub_resource type="Resource" id="Resource_ty8dx"]
+script = ExtResource("2_iuxtt")
+health = 860
+dodge_rate = 0.0
+near_damage_low = 30
+near_damage_high = 50
+near_attack_speed = 1.2
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.0
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 0.6
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hltxv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_jtwhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ckpho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hsyb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_n33ab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_35wwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_rdjtt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_tt1q8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_s1hmf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_d11nc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_kmy0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_8h3a4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_o6d6o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_5u204")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_jhowg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_oxvqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_yuve4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_dksg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_5uka5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_pybqx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_iio8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_tveai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_2d3g3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_rdiv0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_gb1g8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_sex0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_yotxi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_qdwys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_2ounm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_eipx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_lud6l")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_kkioe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_0qivy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_c6rw7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_v53u4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_l6ir1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_g7ru0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_oritx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_qlqc4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_q4nce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_dds37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_vhdj6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_so75u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_redem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_irh6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_216ws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_8avl2")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_jtwhb")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("59_4frxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_taw04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_6yj5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_la6f8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_c6apw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_3anu8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_owwmq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_apgtn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_tjclo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_dqoql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_hmpri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_rj647")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_yketv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_a2jru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_cqerl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_eop8g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_6u23g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_1d4bq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_mu2kg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_ok5qo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_dac2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_2w67r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_4ohhg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_vmcgh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_abtqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_4tjpc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_15jip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_u0q7b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_iywqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_ihis8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_nx8u2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_pkhop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_cxijd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_4y1rg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_uc0gm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_pngsu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_htui7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_7jdrp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_3whjy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_2hdma")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_h1d7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_6p0pj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_k7k5s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_syj7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_ersus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_cmyyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_vysyg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_8oade")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_q7w5u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_xtshk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_7d5qv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_2gel8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_i1shh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_nvkhq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_ugo4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_arymc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_plx4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_0n1gg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_qkh70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_ns647")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("119_agyja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_anm0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_pign8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_sgks7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_yabs4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_v1qka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_yjd5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_jb1lb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_i1ldj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_5bhad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_yfq7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_ty5qk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_ctk4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_a8ote")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_5ungu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_f3n8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_xhk37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_wh3bs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_8gift")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_ailmx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_wmm80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_4m2gv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_no4wm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_7xk2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_n4jp6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_3gyop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_af551")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_1usw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_xc0vw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_xff4y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_ua1go")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_v81fe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_uptl2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_7f1u2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_2xx0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_66idp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_41kro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_fdpvu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_mrwds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("158_vj4kv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_kdxkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_csi0s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_ogkeq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_w0hij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_mmdp0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_4cdga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_cmrke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("166_4s3j4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("167_j5ba7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("168_7kyhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("169_msxpt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("170_7hibl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("171_we208")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_8duqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("173_8w41w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_i1shj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("175_gyn0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("176_56nkp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("177_pnsyo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("178_fgidd")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_0jjux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nd0vc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_lljjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_nqnpc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_dnv4g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ev2o0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_14qkp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_3dnm8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_mhm8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_5c5tg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_gnfrl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_qs3d3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_cu3yo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_nkfjt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_jrpqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_mycfc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_w60ef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_n4ia3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_25xdx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_7ss2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_r2351")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_w1v04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_sdgt2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_1dles")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_jr8nu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_2e3eh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_vx4wr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_ee6ri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_4rwdh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_8h7m4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_aefwm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_2vknu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_cos00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_icvvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_nspkb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_j2h1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_m1tm4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_0mx7g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_7ss4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_jac0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_ghmg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_23ggo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_3pe1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_j6iyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_j4js8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_gbt2j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_q5i52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_d2o6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_xi06c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_rydh2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_qeauf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_qms2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_8520d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_ffwsv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_ik7dd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_utl2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_ypkrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_wphd5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_oc0uw")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 30.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pgf8y"]
+size = Vector2(110, 100)
+
+[node name="Enemy5" instance=ExtResource("1_iuwbf")]
+script = ExtResource("2_ypfx3")
+enemy_name = "尸国壮汉"
+enemy_id = 5
+enemy_texture = ExtResource("3_dn35p")
+enemy_type = 1
+start_data = SubResource("Resource_ty8dx")
+lives_taken = 3
+bounty = 35
+die_audio_stream_list = Array[AudioStream]([ExtResource("5_aga8j")])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(-4.76837e-07, -115)
+sprite_frames = SubResource("SpriteFrames_hltxv")
+animation = &"die"
+frame = 15
+frame_progress = 1.0
+
+[node name="BodyCollision" parent="UnitBody" index="1"]
+position = Vector2(0, -50)
+shape = SubResource("RectangleShape2D_pgf8y")
+
+[node name="HurtBox" parent="UnitBody" index="2"]
+position = Vector2(0, -125)
+scale = Vector2(10.566, 10.566)
+
+[node name="SelectSprite" parent="UnitBody" index="3"]
+scale = Vector2(6.37672, 6.37672)
+
+[node name="EnemyButton" parent="UnitBody" index="4"]
+offset_left = -78.0
+offset_top = -240.0
+offset_right = 80.0
+
+[node name="HealthBar" parent="UnitBody" index="5"]
+offset_left = -85.0
+offset_top = -270.0
+offset_right = 215.0
+offset_bottom = -261.0
+scale = Vector2(0.559766, 1.9743)

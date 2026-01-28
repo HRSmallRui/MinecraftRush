@@ -1,0 +1,846 @@
+[gd_scene load_steps=200 format=3 uid="uid://bq7p36ak2tune"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_clghq"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_21.gd" id="2_sw6sb"]
+[ext_resource type="Texture2D" uid="uid://exq6s0y8wkp3" path="res://Assets/Images/UI/InformationBar/沙漠狙击手.png" id="3_1pigm"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="4_jo2t1"]
+[ext_resource type="PackedScene" uid="uid://dgreu184bd5ej" path="res://Scenes/Bullets/enemy_straight_arrow.tscn" id="5_04s24"]
+[ext_resource type="AudioStream" uid="uid://d33lf2vjj8qu1" path="res://Assets/Sounds/FXs/Enemies/骷髅/骷髅死亡1.wav" id="5_wwlov"]
+[ext_resource type="AudioStream" uid="uid://cgjtted5wnywq" path="res://Assets/Sounds/FXs/Enemies/骷髅/骷髅死亡2.wav" id="6_hia6u"]
+[ext_resource type="AudioStream" uid="uid://pon8dxb853a" path="res://Assets/Sounds/FXs/Enemies/骷髅/骷髅死亡3.wav" id="7_bd6n0"]
+[ext_resource type="PackedScene" uid="uid://dcjuved17hj6j" path="res://Scenes/Enemies/EnemyComponents/appear_audio_component.tscn" id="8_1m5ft"]
+[ext_resource type="Texture2D" uid="uid://du83gkrl4sg0t" path="res://Assets/Animations/Enemies/21沙漠狙击手/attack_00.png" id="8_t40tg"]
+[ext_resource type="AudioStream" uid="uid://bd1p3gw40cb1x" path="res://Assets/Sounds/FXs/Enemies/骷髅/骷髅出现1.wav" id="9_g16jx"]
+[ext_resource type="Texture2D" uid="uid://ceofgs16q8q4j" path="res://Assets/Animations/Enemies/21沙漠狙击手/attack_01.png" id="9_sexkf"]
+[ext_resource type="Texture2D" uid="uid://btivx68v5r2x0" path="res://Assets/Animations/Enemies/21沙漠狙击手/attack_02.png" id="10_3o6o1"]
+[ext_resource type="AudioStream" uid="uid://dd0exeyo6cc7y" path="res://Assets/Sounds/FXs/Enemies/骷髅/骷髅出现2.wav" id="10_kst5b"]
+[ext_resource type="Texture2D" uid="uid://bwuxtohlxou5e" path="res://Assets/Animations/Enemies/21沙漠狙击手/attack_03.png" id="11_7cq1t"]
+[ext_resource type="AudioStream" uid="uid://dhl51e3w1n0md" path="res://Assets/Sounds/FXs/Enemies/骷髅/骷髅出现3.wav" id="11_kdcq5"]
+[ext_resource type="Texture2D" uid="uid://dp8uto27y71id" path="res://Assets/Animations/Enemies/21沙漠狙击手/attack_04.png" id="12_wfwmv"]
+[ext_resource type="Texture2D" uid="uid://caxl3lmqndkvs" path="res://Assets/Animations/Enemies/21沙漠狙击手/attack_05.png" id="13_kxits"]
+[ext_resource type="Texture2D" uid="uid://dcbde3sx5ds62" path="res://Assets/Animations/Enemies/21沙漠狙击手/attack_06.png" id="14_ekbkf"]
+[ext_resource type="Texture2D" uid="uid://c5sxfy5rr7vs4" path="res://Assets/Animations/Enemies/21沙漠狙击手/attack_07.png" id="15_jn2nx"]
+[ext_resource type="Texture2D" uid="uid://bafb74k7ocyhg" path="res://Assets/Animations/Enemies/21沙漠狙击手/attack_08.png" id="16_gd64n"]
+[ext_resource type="Texture2D" uid="uid://duqvt0h4gc63g" path="res://Assets/Animations/Enemies/21沙漠狙击手/attack_09.png" id="17_2opka"]
+[ext_resource type="Texture2D" uid="uid://dm6kdy3y0yo2b" path="res://Assets/Animations/Enemies/21沙漠狙击手/attack_10.png" id="18_evv8u"]
+[ext_resource type="Texture2D" uid="uid://bxqpe60ed6ht4" path="res://Assets/Animations/Enemies/21沙漠狙击手/attack_11.png" id="19_ddxic"]
+[ext_resource type="Texture2D" uid="uid://dm5egp3dmaa40" path="res://Assets/Animations/Enemies/21沙漠狙击手/attack_12.png" id="20_35ek5"]
+[ext_resource type="Texture2D" uid="uid://dq0jd2tdq6vk2" path="res://Assets/Animations/Enemies/21沙漠狙击手/attack_13.png" id="21_27hwc"]
+[ext_resource type="Texture2D" uid="uid://mfusijkh4ldw" path="res://Assets/Animations/Enemies/21沙漠狙击手/attack_14.png" id="22_wvyus"]
+[ext_resource type="Texture2D" uid="uid://bsqab4pnctn25" path="res://Assets/Animations/Enemies/21沙漠狙击手/attack_15.png" id="23_t3fnc"]
+[ext_resource type="Texture2D" uid="uid://dkj2husg4teoa" path="res://Assets/Animations/Enemies/21沙漠狙击手/attack_16.png" id="24_g5hy8"]
+[ext_resource type="Texture2D" uid="uid://boy6xx4c1rxej" path="res://Assets/Animations/Enemies/21沙漠狙击手/attack_17.png" id="25_njjnq"]
+[ext_resource type="Texture2D" uid="uid://m05d3281yo7e" path="res://Assets/Animations/Enemies/21沙漠狙击手/die_00.png" id="26_lvadb"]
+[ext_resource type="Texture2D" uid="uid://bdu7yr0p8cc1l" path="res://Assets/Animations/Enemies/21沙漠狙击手/die_01.png" id="27_3spll"]
+[ext_resource type="Texture2D" uid="uid://cfd4217m83oik" path="res://Assets/Animations/Enemies/21沙漠狙击手/die_02.png" id="28_qr1w1"]
+[ext_resource type="Texture2D" uid="uid://bgsr0pv27hi8h" path="res://Assets/Animations/Enemies/21沙漠狙击手/die_03.png" id="29_1qm5a"]
+[ext_resource type="Texture2D" uid="uid://c407spi5j687h" path="res://Assets/Animations/Enemies/21沙漠狙击手/die_04.png" id="30_3tc2q"]
+[ext_resource type="Texture2D" uid="uid://85y7uphy2a1w" path="res://Assets/Animations/Enemies/21沙漠狙击手/die_05.png" id="31_lchyr"]
+[ext_resource type="Texture2D" uid="uid://bwokxj46qw0xh" path="res://Assets/Animations/Enemies/21沙漠狙击手/die_06.png" id="32_fxw3l"]
+[ext_resource type="Texture2D" uid="uid://tnb4x8paak4i" path="res://Assets/Animations/Enemies/21沙漠狙击手/die_07.png" id="33_hqsee"]
+[ext_resource type="Texture2D" uid="uid://s6yfuasfg88m" path="res://Assets/Animations/Enemies/21沙漠狙击手/die_08.png" id="34_xhcax"]
+[ext_resource type="Texture2D" uid="uid://yd3wh4lejk6w" path="res://Assets/Animations/Enemies/21沙漠狙击手/die_09.png" id="35_r3jkv"]
+[ext_resource type="Texture2D" uid="uid://baxe8uhf4hwcd" path="res://Assets/Animations/Enemies/21沙漠狙击手/die_10.png" id="36_b0q2h"]
+[ext_resource type="Texture2D" uid="uid://cvxcchh5dou5y" path="res://Assets/Animations/Enemies/21沙漠狙击手/die_11.png" id="37_u56ym"]
+[ext_resource type="Texture2D" uid="uid://ck4yq7eefjqbs" path="res://Assets/Animations/Enemies/21沙漠狙击手/die_12.png" id="38_vgaqh"]
+[ext_resource type="Texture2D" uid="uid://b8n13nom3wm3n" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_00.png" id="39_pae7h"]
+[ext_resource type="Texture2D" uid="uid://cjduav4bclqow" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_01.png" id="40_2khmo"]
+[ext_resource type="Texture2D" uid="uid://crbgsq3jo57or" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_02.png" id="41_65b1d"]
+[ext_resource type="Texture2D" uid="uid://bp33yqi6e7qfc" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_03.png" id="42_tcyiv"]
+[ext_resource type="Texture2D" uid="uid://c32hs2e45fhii" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_04.png" id="43_ksase"]
+[ext_resource type="Texture2D" uid="uid://cervaapgpixog" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_05.png" id="44_i1c33"]
+[ext_resource type="Texture2D" uid="uid://c4223rucyyocd" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_06.png" id="45_ygx0y"]
+[ext_resource type="Texture2D" uid="uid://csiajenltnkqv" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_07.png" id="46_keypb"]
+[ext_resource type="Texture2D" uid="uid://dud3tff20fja" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_08.png" id="47_127o7"]
+[ext_resource type="Texture2D" uid="uid://btalhwej0dan3" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_09.png" id="48_liqes"]
+[ext_resource type="Texture2D" uid="uid://ctoefjtnci55b" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_10.png" id="49_ijwkb"]
+[ext_resource type="Texture2D" uid="uid://cq6emublffrd0" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_11.png" id="50_xmwhx"]
+[ext_resource type="Texture2D" uid="uid://dolwyotg4i1pr" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_12.png" id="51_83yjq"]
+[ext_resource type="Texture2D" uid="uid://sbl6yytifqyq" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_13.png" id="52_iqw85"]
+[ext_resource type="Texture2D" uid="uid://csnxqjy74ip8h" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_14.png" id="53_5muwv"]
+[ext_resource type="Texture2D" uid="uid://bt4jrcup78kk8" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_15.png" id="54_yy8qv"]
+[ext_resource type="Texture2D" uid="uid://byn4wokqt3b2k" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_16.png" id="55_1ic37"]
+[ext_resource type="Texture2D" uid="uid://dyvhvua2va6l5" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_17.png" id="56_m3swf"]
+[ext_resource type="Texture2D" uid="uid://ch1tf7b2k8am7" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_18.png" id="57_j305j"]
+[ext_resource type="Texture2D" uid="uid://d1tiftefhquu1" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_19.png" id="58_kqpmm"]
+[ext_resource type="Texture2D" uid="uid://dx5s7j0v30jh7" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_20.png" id="59_pmv6s"]
+[ext_resource type="Texture2D" uid="uid://b33f6pfsjfvvr" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_21.png" id="60_65uk0"]
+[ext_resource type="Texture2D" uid="uid://bob70rks5lx0a" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_22.png" id="61_e7tsl"]
+[ext_resource type="Texture2D" uid="uid://b3x5rfsit7h80" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_23.png" id="62_2aw7q"]
+[ext_resource type="Texture2D" uid="uid://bnxqsafbb17tc" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_24.png" id="63_4hhu0"]
+[ext_resource type="Texture2D" uid="uid://g0x4jc0skyf" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_25.png" id="64_mklkv"]
+[ext_resource type="Texture2D" uid="uid://ciswxdujk25a1" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_26.png" id="65_napru"]
+[ext_resource type="Texture2D" uid="uid://c724aq4d038b8" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_27.png" id="66_7jatv"]
+[ext_resource type="Texture2D" uid="uid://bvsd2vhwdrk4t" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_28.png" id="67_ken1m"]
+[ext_resource type="Texture2D" uid="uid://cyshwy7di56r6" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_29.png" id="68_hlsre"]
+[ext_resource type="Texture2D" uid="uid://p5rl32yh78fd" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_30.png" id="69_dpfxf"]
+[ext_resource type="Texture2D" uid="uid://dietp2v8rjkts" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_31.png" id="70_dqove"]
+[ext_resource type="Texture2D" uid="uid://cs4x465bukiiv" path="res://Assets/Animations/Enemies/21沙漠狙击手/far_attack_32.png" id="71_27nup"]
+[ext_resource type="Texture2D" uid="uid://dppg6sv7uoii0" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_00.png" id="72_j4rgk"]
+[ext_resource type="Texture2D" uid="uid://b6lthjspfq4pb" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_01.png" id="73_hg1vn"]
+[ext_resource type="Texture2D" uid="uid://cs1nyc7xpouhi" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_02.png" id="74_v7s4j"]
+[ext_resource type="Texture2D" uid="uid://byglygkijrsk1" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_03.png" id="75_dlqx3"]
+[ext_resource type="Texture2D" uid="uid://l0n0nta8uhoh" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_04.png" id="76_eos61"]
+[ext_resource type="Texture2D" uid="uid://cp4ufnhlun6it" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_05.png" id="77_wjlvj"]
+[ext_resource type="Texture2D" uid="uid://dkqnow12x0fuu" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_06.png" id="78_nstdq"]
+[ext_resource type="Texture2D" uid="uid://dxqtvgpggg3wq" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_07.png" id="79_8qm7i"]
+[ext_resource type="Texture2D" uid="uid://ctbu0ibtsec1r" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_08.png" id="80_7vwi2"]
+[ext_resource type="Texture2D" uid="uid://bffpsse7p2rt1" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_09.png" id="81_b83rr"]
+[ext_resource type="Texture2D" uid="uid://68fqs5knle2e" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_10.png" id="82_hvhxw"]
+[ext_resource type="Texture2D" uid="uid://d3l631qhx8ge0" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_11.png" id="83_l7kxf"]
+[ext_resource type="Texture2D" uid="uid://btqqvr3ppnncl" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_12.png" id="84_q6ujd"]
+[ext_resource type="Texture2D" uid="uid://r0w2hosqxj6v" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_13.png" id="85_kabct"]
+[ext_resource type="Texture2D" uid="uid://cvw6c1wv5cjvc" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_14.png" id="86_oub1v"]
+[ext_resource type="Texture2D" uid="uid://ibr36qnb4wtg" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_15.png" id="87_yk0ky"]
+[ext_resource type="Texture2D" uid="uid://bubnme62gf0xk" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_16.png" id="88_skdv2"]
+[ext_resource type="Texture2D" uid="uid://d1qxwmqfx06l3" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_17.png" id="89_hpo5q"]
+[ext_resource type="Texture2D" uid="uid://cxc4vngjfdqmc" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_18.png" id="90_tobt6"]
+[ext_resource type="Texture2D" uid="uid://bhxntmjtf8ehy" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_19.png" id="91_etkr3"]
+[ext_resource type="Texture2D" uid="uid://cx4fl7c3cnje2" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_20.png" id="92_fwrom"]
+[ext_resource type="Texture2D" uid="uid://ckgneksmmag8l" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_21.png" id="93_arulr"]
+[ext_resource type="Texture2D" uid="uid://ciwxqnqpqyfmh" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_22.png" id="94_obo3n"]
+[ext_resource type="Texture2D" uid="uid://c81tq4ih6txbd" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_23.png" id="95_owwxj"]
+[ext_resource type="Texture2D" uid="uid://cosbvs0kx7ykh" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_24.png" id="96_8wvwr"]
+[ext_resource type="Texture2D" uid="uid://bsnrj2guyq8nu" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_25.png" id="97_bkdj1"]
+[ext_resource type="Texture2D" uid="uid://bxivuwspstxtq" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_26.png" id="98_fwy6n"]
+[ext_resource type="Texture2D" uid="uid://dik7wlg3x8m1w" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_27.png" id="99_5l7wq"]
+[ext_resource type="Texture2D" uid="uid://cbov8o75f06eg" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_28.png" id="100_xl5oe"]
+[ext_resource type="Texture2D" uid="uid://r66epna2v70j" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_29.png" id="101_bakki"]
+[ext_resource type="Texture2D" uid="uid://cgt612q53pryc" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_30.png" id="102_s7bqs"]
+[ext_resource type="Texture2D" uid="uid://cgt5glkuqi0hk" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_31.png" id="103_xerix"]
+[ext_resource type="Texture2D" uid="uid://foadjeav4s0a" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_32.png" id="104_fau7o"]
+[ext_resource type="Texture2D" uid="uid://dlkv7ulaht7ix" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_33.png" id="105_rflge"]
+[ext_resource type="Texture2D" uid="uid://diwjtv3npc87b" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_34.png" id="106_t4wcy"]
+[ext_resource type="Texture2D" uid="uid://df6f6gcedwsbv" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_35.png" id="107_jdpll"]
+[ext_resource type="Texture2D" uid="uid://upqblc3r2dvg" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_36.png" id="108_nr0f7"]
+[ext_resource type="Texture2D" uid="uid://b6wnup6xx4n3x" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_37.png" id="109_l8nmq"]
+[ext_resource type="Texture2D" uid="uid://84kjv4ylxbqx" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_38.png" id="110_da63g"]
+[ext_resource type="Texture2D" uid="uid://c48a3cgxo70i0" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_back_39.png" id="111_44g7n"]
+[ext_resource type="Texture2D" uid="uid://bd5fgqf61512c" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_00.png" id="112_cvk20"]
+[ext_resource type="Texture2D" uid="uid://dj5cqde1hjbb5" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_01.png" id="113_2wn82"]
+[ext_resource type="Texture2D" uid="uid://cyknyqatmpamh" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_02.png" id="114_l6530"]
+[ext_resource type="Texture2D" uid="uid://cmq00r3vqk860" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_03.png" id="115_jbv4m"]
+[ext_resource type="Texture2D" uid="uid://bgacmo8pm0w4p" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_04.png" id="116_toe8h"]
+[ext_resource type="Texture2D" uid="uid://bnt7yp0djy1ev" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_05.png" id="117_0rv80"]
+[ext_resource type="Texture2D" uid="uid://bgjfv14va4oxd" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_06.png" id="118_f6lf4"]
+[ext_resource type="Texture2D" uid="uid://bsly1hxf0ky03" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_07.png" id="119_ameod"]
+[ext_resource type="Texture2D" uid="uid://e5t64pcqbnj" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_08.png" id="120_quy0h"]
+[ext_resource type="Texture2D" uid="uid://k1uthca2a30k" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_09.png" id="121_pegnp"]
+[ext_resource type="Texture2D" uid="uid://v5glhgiaeyeb" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_10.png" id="122_l68fi"]
+[ext_resource type="Texture2D" uid="uid://bwn0po4rfv7ri" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_11.png" id="123_vhrac"]
+[ext_resource type="Texture2D" uid="uid://cagxmpk58xx6n" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_12.png" id="124_lavju"]
+[ext_resource type="Texture2D" uid="uid://b4b1xwmf8imyw" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_13.png" id="125_2yy37"]
+[ext_resource type="Texture2D" uid="uid://7qrhbg84e4e0" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_14.png" id="126_fqu1a"]
+[ext_resource type="Texture2D" uid="uid://d35md40p4htnj" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_15.png" id="127_v7cjd"]
+[ext_resource type="Texture2D" uid="uid://uju54mtflurg" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_16.png" id="128_hv4tr"]
+[ext_resource type="Texture2D" uid="uid://b3bidrief0hge" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_17.png" id="129_o8pwg"]
+[ext_resource type="Texture2D" uid="uid://dx81duxei0heu" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_18.png" id="130_w74ai"]
+[ext_resource type="Texture2D" uid="uid://dr7e6ps7kkpt4" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_19.png" id="131_iusc0"]
+[ext_resource type="Texture2D" uid="uid://50quvbe7c2fr" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_20.png" id="132_3wy1j"]
+[ext_resource type="Texture2D" uid="uid://bs8abepvx6yeb" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_21.png" id="133_qrh1d"]
+[ext_resource type="Texture2D" uid="uid://d28115rn1hihx" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_22.png" id="134_54m0o"]
+[ext_resource type="Texture2D" uid="uid://b2bw6jrkowdbn" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_23.png" id="135_uq8fk"]
+[ext_resource type="Texture2D" uid="uid://b500vucujyou7" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_24.png" id="136_mro2r"]
+[ext_resource type="Texture2D" uid="uid://ble8bdcsj11br" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_25.png" id="137_4l3u7"]
+[ext_resource type="Texture2D" uid="uid://dwkunjfqoga8w" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_26.png" id="138_07x5u"]
+[ext_resource type="Texture2D" uid="uid://dwni2se7dnwdy" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_27.png" id="139_oii1w"]
+[ext_resource type="Texture2D" uid="uid://ch46dwv0of238" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_28.png" id="140_5q2wa"]
+[ext_resource type="Texture2D" uid="uid://yraecqewyqfe" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_29.png" id="141_eu4yo"]
+[ext_resource type="Texture2D" uid="uid://chjhkyn7vt5pj" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_30.png" id="142_3tpk7"]
+[ext_resource type="Texture2D" uid="uid://d2yst8yo1fsjd" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_31.png" id="143_gvcse"]
+[ext_resource type="Texture2D" uid="uid://c0bjilqb3v0i1" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_32.png" id="144_leg4r"]
+[ext_resource type="Texture2D" uid="uid://cfxhd6jxmeqr5" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_33.png" id="145_6gf27"]
+[ext_resource type="Texture2D" uid="uid://ccplv7qphxadq" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_34.png" id="146_tdfkd"]
+[ext_resource type="Texture2D" uid="uid://dmihut80db6en" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_35.png" id="147_xyht8"]
+[ext_resource type="Texture2D" uid="uid://c6p6o3k8cci8s" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_36.png" id="148_xyn01"]
+[ext_resource type="Texture2D" uid="uid://cwcusk4ajrp0k" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_37.png" id="149_4erwk"]
+[ext_resource type="Texture2D" uid="uid://d0q3hu8is4p0r" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_38.png" id="150_vcwjm"]
+[ext_resource type="Texture2D" uid="uid://b0tsal73orla0" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_front_39.png" id="151_xyi8t"]
+[ext_resource type="Texture2D" uid="uid://b0pq1b58ojt7p" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_00.png" id="152_gv1pj"]
+[ext_resource type="Texture2D" uid="uid://bgpcq5grrs1y1" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_01.png" id="153_5xmtm"]
+[ext_resource type="Texture2D" uid="uid://csbej88exns4u" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_02.png" id="154_65and"]
+[ext_resource type="Texture2D" uid="uid://cq3armlu5tmc5" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_03.png" id="155_w6m8n"]
+[ext_resource type="Texture2D" uid="uid://ybi53ku0fq3n" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_04.png" id="156_up0ka"]
+[ext_resource type="Texture2D" uid="uid://c2oghqm7ltxej" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_05.png" id="157_rq4tv"]
+[ext_resource type="Texture2D" uid="uid://gfjjfmf6hodl" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_06.png" id="158_1ycul"]
+[ext_resource type="Texture2D" uid="uid://bidbngewe1lbp" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_07.png" id="159_7g8pe"]
+[ext_resource type="Texture2D" uid="uid://b7eava0i44wjj" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_08.png" id="160_43oia"]
+[ext_resource type="Texture2D" uid="uid://ds2m77xs61hpw" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_09.png" id="161_y2qw5"]
+[ext_resource type="Texture2D" uid="uid://bbbunbu3oycgd" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_10.png" id="162_ht47r"]
+[ext_resource type="Texture2D" uid="uid://cqfakrhs61x0n" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_11.png" id="163_patw8"]
+[ext_resource type="Texture2D" uid="uid://dh4f0mxq3fwjs" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_12.png" id="164_t7yrf"]
+[ext_resource type="Texture2D" uid="uid://ch7xktbdriruh" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_13.png" id="165_ltg55"]
+[ext_resource type="Texture2D" uid="uid://8fs8awk2py08" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_14.png" id="166_nmxbm"]
+[ext_resource type="Texture2D" uid="uid://ccn45cjvl8826" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_15.png" id="167_146at"]
+[ext_resource type="Texture2D" uid="uid://cjsv7darq2cta" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_16.png" id="168_y2xk3"]
+[ext_resource type="Texture2D" uid="uid://cdfjlcc0dqst6" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_17.png" id="169_lwu18"]
+[ext_resource type="Texture2D" uid="uid://d0cp7ll36y5to" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_18.png" id="170_ec6cx"]
+[ext_resource type="Texture2D" uid="uid://djsbhss51b7ks" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_19.png" id="171_dbfg1"]
+[ext_resource type="Texture2D" uid="uid://bx5rb4me7ua6e" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_20.png" id="172_b6ryu"]
+[ext_resource type="Texture2D" uid="uid://bbu5eubbrjkde" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_21.png" id="173_xyync"]
+[ext_resource type="Texture2D" uid="uid://caq5sr66aktf2" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_22.png" id="174_63pw8"]
+[ext_resource type="Texture2D" uid="uid://wnweh2g17ey7" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_23.png" id="175_6f33l"]
+[ext_resource type="Texture2D" uid="uid://6qmi7i13m30r" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_24.png" id="176_xilxu"]
+[ext_resource type="Texture2D" uid="uid://djyqmsxqtfq2d" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_25.png" id="177_ri3uc"]
+[ext_resource type="Texture2D" uid="uid://befr34os205l2" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_26.png" id="178_vya8b"]
+[ext_resource type="Texture2D" uid="uid://cgxipdorkh3gq" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_27.png" id="179_ns41s"]
+[ext_resource type="Texture2D" uid="uid://dfo2wocw3al1h" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_28.png" id="180_5q0i2"]
+[ext_resource type="Texture2D" uid="uid://xptfldbmlrvn" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_29.png" id="181_1ms0l"]
+[ext_resource type="Texture2D" uid="uid://b302oxlqxbb2w" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_30.png" id="182_y280e"]
+[ext_resource type="Texture2D" uid="uid://cptcboca15ogf" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_31.png" id="183_rdlcb"]
+[ext_resource type="Texture2D" uid="uid://cnftuaju3bmaj" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_32.png" id="184_pj81b"]
+[ext_resource type="Texture2D" uid="uid://d1qg6s6rs7a78" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_33.png" id="185_yaato"]
+[ext_resource type="Texture2D" uid="uid://c07npjn55inol" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_34.png" id="186_jcipc"]
+[ext_resource type="Texture2D" uid="uid://0doudbw3hsns" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_35.png" id="187_wmsbq"]
+[ext_resource type="Texture2D" uid="uid://bcw26y6ulu5sp" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_36.png" id="188_0n1vd"]
+[ext_resource type="Texture2D" uid="uid://b4wv7orsvmevt" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_37.png" id="189_psy3t"]
+[ext_resource type="Texture2D" uid="uid://d2242kyrxlf0f" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_38.png" id="190_r22rs"]
+[ext_resource type="Texture2D" uid="uid://br7powj7tg3si" path="res://Assets/Animations/Enemies/21沙漠狙击手/move_normal_39.png" id="191_cea5e"]
+[ext_resource type="AudioStream" uid="uid://cy21paby5onde" path="res://Assets/Sounds/FXs/Enemies/骷髅死亡.wav" id="197_4da77"]
+
+[sub_resource type="Resource" id="Resource_gpt5d"]
+script = ExtResource("4_jo2t1")
+health = 150
+dodge_rate = 0.0
+near_damage_low = 8
+near_damage_high = 12
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 80
+far_damage_high = 120
+far_attack_speed = 2.0
+far_damage_range = 680
+armor = 0.0
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 0.6
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iqrvj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_t40tg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_sexkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_3o6o1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7cq1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_wfwmv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_kxits")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ekbkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_jn2nx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_gd64n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_2opka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_evv8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ddxic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_35ek5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_27hwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_wvyus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_t3fnc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_g5hy8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_njjnq")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_lvadb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_3spll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_qr1w1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_1qm5a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_3tc2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_lchyr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_fxw3l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_hqsee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_xhcax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_r3jkv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_b0q2h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_u56ym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_vgaqh")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("39_pae7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_2khmo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_65b1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_tcyiv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_ksase")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_i1c33")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_ygx0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_keypb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_127o7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_liqes")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_ijwkb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_xmwhx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_83yjq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_iqw85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_5muwv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_yy8qv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_1ic37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_m3swf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_j305j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_kqpmm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_pmv6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_65uk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_e7tsl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_2aw7q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_4hhu0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_mklkv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_napru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_7jatv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_ken1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_hlsre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_dpfxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_dqove")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_27nup")
+}],
+"loop": false,
+"name": &"far_attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_t40tg")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("72_j4rgk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_hg1vn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_v7s4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_dlqx3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_eos61")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_wjlvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_nstdq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_8qm7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_7vwi2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_b83rr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_hvhxw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_l7kxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_q6ujd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_kabct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_oub1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_yk0ky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_skdv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_hpo5q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_tobt6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_etkr3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_fwrom")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_arulr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_obo3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_owwxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_8wvwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_bkdj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_fwy6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_5l7wq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_xl5oe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_bakki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_s7bqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_xerix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_fau7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_rflge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_t4wcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_jdpll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_nr0f7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_l8nmq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_da63g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_44g7n")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("112_cvk20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_2wn82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_l6530")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_jbv4m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_toe8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_0rv80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_f6lf4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_ameod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_quy0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_pegnp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_l68fi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_vhrac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_lavju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_2yy37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_fqu1a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_v7cjd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_hv4tr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_o8pwg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_w74ai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_iusc0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_3wy1j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_qrh1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_54m0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_uq8fk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_mro2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_4l3u7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_07x5u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_oii1w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_5q2wa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_eu4yo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_3tpk7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_gvcse")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_leg4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_6gf27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_tdfkd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_xyht8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_xyn01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_4erwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_vcwjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_xyi8t")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("152_gv1pj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_5xmtm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_65and")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_w6m8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_up0ka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_rq4tv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("158_1ycul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_7g8pe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_43oia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_y2qw5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_ht47r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_patw8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_t7yrf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_ltg55")
+}, {
+"duration": 1.0,
+"texture": ExtResource("166_nmxbm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("167_146at")
+}, {
+"duration": 1.0,
+"texture": ExtResource("168_y2xk3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("169_lwu18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("170_ec6cx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("171_dbfg1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_b6ryu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("173_xyync")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_63pw8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("175_6f33l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("176_xilxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("177_ri3uc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("178_vya8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("179_ns41s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("180_5q0i2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("181_1ms0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("182_y280e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("183_rdlcb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("184_pj81b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("185_yaato")
+}, {
+"duration": 1.0,
+"texture": ExtResource("186_jcipc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("187_wmsbq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("188_0n1vd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("189_psy3t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("190_r22rs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("191_cea5e")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 30.0
+}]
+
+[node name="Enemy21" groups=["desert", "undead"] instance=ExtResource("1_clghq")]
+script = ExtResource("2_sw6sb")
+enemy_name = "沙漠狙击手"
+enemy_id = 21
+enemy_texture = ExtResource("3_1pigm")
+start_data = SubResource("Resource_gpt5d")
+far_attack_bullet_scene = ExtResource("5_04s24")
+bounty = 8
+die_audio_stream_list = Array[AudioStream]([ExtResource("5_wwlov"), ExtResource("6_hia6u"), ExtResource("7_bd6n0")])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(-25, -100)
+sprite_frames = SubResource("SpriteFrames_iqrvj")
+animation = &"far_attack"
+frame = 16
+
+[node name="FarAttackMarker" parent="UnitBody" index="8"]
+position = Vector2(45, -145)
+
+[node name="FarAttackMarkerFlip" parent="UnitBody" index="9"]
+position = Vector2(-45, -145)
+
+[node name="DieAudio" parent="." index="3"]
+volume_db = -5.0
+
+[node name="AppearAudioComponent" parent="." index="5" instance=ExtResource("8_1m5ft")]
+appear_audio_list = Array[AudioStream]([ExtResource("9_g16jx"), ExtResource("10_kst5b"), ExtResource("11_kdcq5")])
+
+[node name="SkeletonExplosionAudio" type="AudioStreamPlayer" parent="." index="6"]
+stream = ExtResource("197_4da77")
+volume_db = -8.0
+bus = &"Sound"

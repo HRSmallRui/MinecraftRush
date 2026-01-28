@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dedxksecpul4j"]
+
+[ext_resource type="PackedScene" uid="uid://c1rmis5jlhvqk" path="res://Scenes/Bullets/physics_arrow.tscn" id="1_abct0"]
+[ext_resource type="Script" path="res://Scripts/Bullets/medical_potion.gd" id="2_6pkf4"]
+[ext_resource type="Texture2D" uid="uid://crox7xicdqisx" path="res://Assets/Images/Bullets/Potion.png" id="2_b8u2k"]
+
+[node name="MedicalPotion" instance=ExtResource("1_abct0")]
+script = ExtResource("2_6pkf4")
+
+[node name="BulletSprite" parent="." index="0"]
+rotation = 0.00202706
+scale = Vector2(0.182623, 0.182623)
+texture = ExtResource("2_b8u2k")
+
+[node name="FreeTimer" parent="." index="2"]
+wait_time = 0.45

@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://cn46nfs7rgj5j"]
+
+[ext_resource type="Script" path="res://Scripts/Skills/mike_terminator_area.gd" id="1_vehkr"]
+[ext_resource type="Texture2D" uid="uid://bjqd4l7lvkdk3" path="res://Assets/Images/Skills/Firerain/fire1.png" id="2_nubwx"]
+[ext_resource type="Texture2D" uid="uid://dryb5uixkktvo" path="res://Assets/Images/Skills/Firerain/fire2.png" id="3_dxscw"]
+[ext_resource type="Texture2D" uid="uid://bgnmllpvmj6s8" path="res://Assets/Images/Skills/Firerain/fire3.png" id="4_m0si3"]
+[ext_resource type="Texture2D" uid="uid://bp4mm2qr04sfd" path="res://Assets/Images/Skills/Firerain/shadow.png" id="5_0bpnp"]
+[ext_resource type="Texture2D" uid="uid://bd674kbilvbyt" path="res://Assets/Images/Effects/bomb.png" id="6_ifsfj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rqkyc"]
+radius = 73.9444
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1hdbp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nubwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dxscw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_m0si3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 18.0
+}]
+
+[sub_resource type="Curve" id="Curve_gdehf"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_varwx"]
+colors = PackedColorArray(1, 0, 0, 0.678431, 1, 0, 0, 0.0235294)
+
+[node name="MikeTerminatorArea" type="Area2D"]
+collision_layer = 0
+collision_mask = 96
+script = ExtResource("1_vehkr")
+max_point_limit = 40
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2.8, 1.96)
+shape = SubResource("CircleShape2D_rqkyc")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="FireSprite" type="AnimatedSprite2D" parent="."]
+rotation = -2.42444
+sprite_frames = SubResource("SpriteFrames_1hdbp")
+autoplay = "default"
+frame_progress = 0.644242
+
+[node name="TailLine" type="Line2D" parent="."]
+top_level = true
+points = PackedVector2Array(-117, -118, 2, 2)
+width_curve = SubResource("Curve_gdehf")
+gradient = SubResource("Gradient_varwx")
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Shadow" type="Sprite2D" parent="."]
+z_index = -1
+texture = ExtResource("5_0bpnp")
+
+[node name="TailTimer" type="Timer" parent="."]
+wait_time = 0.01
+autostart = true
+
+[node name="Bomb" type="Sprite2D" parent="."]
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_ifsfj")
+offset = Vector2(0, -120)
+
+[connection signal="timeout" from="TailTimer" to="." method="_on_tail_timer_timeout"]

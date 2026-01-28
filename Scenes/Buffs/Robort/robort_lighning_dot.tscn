@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwrsmkjmmfsxc"]
+
+[ext_resource type="PackedScene" uid="uid://bwifge7de0uys" path="res://Scenes/Buffs/dot_buff.tscn" id="1_1ovyl"]
+
+[node name="RobortLighningDot" instance=ExtResource("1_1ovyl")]
+dot_damage = Array[int]([1])
+duration = 0.01
+buff_tag = "RobortLighningDot"
+
+[node name="DotTimer" parent="." index="0"]
+process_callback = 0
+wait_time = 0.01

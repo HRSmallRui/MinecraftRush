@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://crwgtgcc2ihhf"]
+
+[ext_resource type="Texture2D" uid="uid://b6bfhala2m77f" path="res://Assets/Images/Effects/MagicBallHit/1.png" id="1_bf6ss"]
+[ext_resource type="Script" path="res://Scripts/Effects/effect.gd" id="1_xjog4"]
+[ext_resource type="Texture2D" uid="uid://b721yvnyytw7i" path="res://Assets/Images/Effects/MagicBallHit/2.png" id="2_4jh3h"]
+[ext_resource type="Texture2D" uid="uid://qqfab7lgfcde" path="res://Assets/Images/Effects/MagicBallHit/3.png" id="3_blnme"]
+[ext_resource type="Texture2D" uid="uid://dsqhx2gryjxop" path="res://Assets/Images/Effects/MagicBallHit/4.png" id="4_0d75j"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sl3dq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bf6ss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4jh3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_blnme")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0d75j")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 16.0
+}]
+
+[node name="MagicBallHit" type="AnimatedSprite2D"]
+z_index = 10
+sprite_frames = SubResource("SpriteFrames_sl3dq")
+autoplay = "default"
+frame = 4
+frame_progress = 1.0
+script = ExtResource("1_xjog4")

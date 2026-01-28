@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://diqhwcqew3fpg"]
+
+[ext_resource type="Texture2D" uid="uid://b3b32svcu5tk7" path="res://Assets/Images/DefenceTowers/Barracks/UI/皇家审判.png" id="1_nup5p"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="2_hjijc"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Map/skill_check.gd" id="2_jqoxo"]
+
+[node name="SkillCheck" type="TextureRect"]
+texture = ExtResource("1_nup5p")
+script = ExtResource("2_jqoxo")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = -58.0
+offset_top = 93.0
+offset_right = 697.0
+offset_bottom = 157.0
+scale = Vector2(0.286824, 0.286824)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_hjijc")
+theme_override_font_sizes/font_size = 64
+text = "皇家审判"
+horizontal_alignment = 1
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

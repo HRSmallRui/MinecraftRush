@@ -1,0 +1,24 @@
+[gd_scene load_steps=8 format=3 uid="uid://d11w8wb6ou4nk"]
+
+[ext_resource type="PackedScene" uid="uid://cqyt0huygl0sb" path="res://Scenes/UI-Components/enemy_tip_button.tscn" id="1_0skrk"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/tip_button.gd" id="2_6ux8i"]
+[ext_resource type="PackedScene" uid="uid://bena6jiot33sj" path="res://Scenes/TipUI/armor_tip.tscn" id="3_wubey"]
+[ext_resource type="Texture2D" uid="uid://b5h7yari5uxl5" path="res://Assets/Images/UI/TipIcons/armor_tip.png" id="4_n3a31"]
+[ext_resource type="Texture2D" uid="uid://djstfoj22jrug" path="res://Assets/Images/UI/TipIcons/armor_tip-hover.png" id="5_qurj3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jcte4"]
+atlas = ExtResource("4_n3a31")
+region = Rect2(10, 9, 106, 108)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_545c4"]
+atlas = ExtResource("5_qurj3")
+region = Rect2(4, 4, 118, 118)
+
+[node name="EnemyTipButton" instance=ExtResource("1_0skrk")]
+script = ExtResource("2_6ux8i")
+open_tip_scene = ExtResource("3_wubey")
+
+[node name="TextureButton" parent="Button" index="0"]
+texture_normal = SubResource("AtlasTexture_jcte4")
+texture_pressed = SubResource("AtlasTexture_jcte4")
+texture_hover = SubResource("AtlasTexture_545c4")

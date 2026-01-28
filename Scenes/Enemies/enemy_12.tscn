@@ -1,0 +1,791 @@
+[gd_scene load_steps=180 format=3 uid="uid://dflclh8ifqjuo"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_5aqcp"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_12.gd" id="2_5hldt"]
+[ext_resource type="Texture2D" uid="uid://46noteflay35" path="res://Assets/Images/UI/InformationBar/溺尸斗士.png" id="3_dju2h"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="4_fp01c"]
+[ext_resource type="PackedScene" uid="uid://b77un4rims3nj" path="res://Scenes/Bullets/enemy_fork_bullet.tscn" id="5_ha4bl"]
+[ext_resource type="AudioStream" uid="uid://bm1pxd00helgs" path="res://Assets/Sounds/FXs/Enemies/溺尸/溺尸死亡1.wav" id="5_qldo4"]
+[ext_resource type="AudioStream" uid="uid://c63k3rjc2ip51" path="res://Assets/Sounds/FXs/Enemies/溺尸/溺尸死亡2.wav" id="6_l58qw"]
+[ext_resource type="PackedScene" uid="uid://dcjuved17hj6j" path="res://Scenes/Enemies/EnemyComponents/appear_audio_component.tscn" id="7_dv5bj"]
+[ext_resource type="Texture2D" uid="uid://d1koqka00q4yp" path="res://Assets/Animations/Enemies/12溺尸斗士/attack_00.png" id="7_uk20p"]
+[ext_resource type="AudioStream" uid="uid://b2bggnevscj3b" path="res://Assets/Sounds/FXs/Enemies/溺尸/溺尸1.wav" id="8_3tsda"]
+[ext_resource type="Texture2D" uid="uid://o88de8aim4ud" path="res://Assets/Animations/Enemies/12溺尸斗士/attack_01.png" id="8_hovie"]
+[ext_resource type="Texture2D" uid="uid://c22a2ggc6ttvf" path="res://Assets/Animations/Enemies/12溺尸斗士/attack_02.png" id="9_o61yg"]
+[ext_resource type="AudioStream" uid="uid://dswge2rm6fegy" path="res://Assets/Sounds/FXs/Enemies/溺尸/溺尸2.wav" id="9_ydx1x"]
+[ext_resource type="AudioStream" uid="uid://0c6x6im4p72r" path="res://Assets/Sounds/FXs/Enemies/溺尸/溺尸3.wav" id="10_ikpgl"]
+[ext_resource type="Texture2D" uid="uid://clktgwwharqjo" path="res://Assets/Animations/Enemies/12溺尸斗士/attack_03.png" id="10_mv42n"]
+[ext_resource type="AudioStream" uid="uid://c4hrg7gy7qx03" path="res://Assets/Sounds/FXs/Enemies/溺尸/溺尸4.wav" id="11_k8a7o"]
+[ext_resource type="Texture2D" uid="uid://xixlc2ys8456" path="res://Assets/Animations/Enemies/12溺尸斗士/attack_04.png" id="11_ui5pa"]
+[ext_resource type="AudioStream" uid="uid://cpstxxy6oxqqg" path="res://Assets/Sounds/FXs/Enemies/溺尸/溺尸5.wav" id="12_6egmn"]
+[ext_resource type="Texture2D" uid="uid://vhrvxxlwooiq" path="res://Assets/Animations/Enemies/12溺尸斗士/attack_05.png" id="12_adoyi"]
+[ext_resource type="Texture2D" uid="uid://cy1yk0y653bpj" path="res://Assets/Animations/Enemies/12溺尸斗士/attack_06.png" id="13_r4i05"]
+[ext_resource type="Texture2D" uid="uid://b71getu8majcw" path="res://Assets/Animations/Enemies/12溺尸斗士/attack_07.png" id="14_s2cv0"]
+[ext_resource type="Texture2D" uid="uid://cr4ctavigl6a1" path="res://Assets/Animations/Enemies/12溺尸斗士/attack_08.png" id="15_k5n1o"]
+[ext_resource type="Texture2D" uid="uid://n6t7ho6dmskw" path="res://Assets/Animations/Enemies/12溺尸斗士/attack_09.png" id="16_2cow1"]
+[ext_resource type="Texture2D" uid="uid://js6feld06ma6" path="res://Assets/Animations/Enemies/12溺尸斗士/attack_10.png" id="17_j7w2k"]
+[ext_resource type="Texture2D" uid="uid://b0utr24uqgseo" path="res://Assets/Animations/Enemies/12溺尸斗士/attack_11.png" id="18_ccxmk"]
+[ext_resource type="Texture2D" uid="uid://c5wwvqkwfjank" path="res://Assets/Animations/Enemies/12溺尸斗士/attack_12.png" id="19_jcwb2"]
+[ext_resource type="Texture2D" uid="uid://dx3scg0da27la" path="res://Assets/Animations/Enemies/12溺尸斗士/attack_13.png" id="20_7y5fi"]
+[ext_resource type="Texture2D" uid="uid://b5fm0ksmvytld" path="res://Assets/Animations/Enemies/12溺尸斗士/attack_14.png" id="21_qtvyg"]
+[ext_resource type="Texture2D" uid="uid://ddj5ev3y118f0" path="res://Assets/Animations/Enemies/12溺尸斗士/attack_15.png" id="22_r0wr8"]
+[ext_resource type="Texture2D" uid="uid://ynhpekesvxgi" path="res://Assets/Animations/Enemies/12溺尸斗士/attack_16.png" id="23_qcyb6"]
+[ext_resource type="Texture2D" uid="uid://rgeo00gjk2e7" path="res://Assets/Animations/Enemies/12溺尸斗士/attack_17.png" id="24_pcdef"]
+[ext_resource type="Texture2D" uid="uid://e1bvoyoq5r3f" path="res://Assets/Animations/Enemies/12溺尸斗士/attack_18.png" id="25_o40ge"]
+[ext_resource type="Texture2D" uid="uid://bk6d0ktmsk66h" path="res://Assets/Animations/Enemies/12溺尸斗士/attack_19.png" id="26_0mi0l"]
+[ext_resource type="Texture2D" uid="uid://eo0jxonmusqx" path="res://Assets/Animations/Enemies/12溺尸斗士/attack_20.png" id="27_63by6"]
+[ext_resource type="Texture2D" uid="uid://8mpovxg8hvd7" path="res://Assets/Animations/Enemies/12溺尸斗士/attack_21.png" id="28_q1d11"]
+[ext_resource type="Texture2D" uid="uid://b215odtbf41fs" path="res://Assets/Animations/Enemies/12溺尸斗士/attack_22.png" id="29_hvp68"]
+[ext_resource type="Texture2D" uid="uid://damxd8cb4nard" path="res://Assets/Animations/Enemies/12溺尸斗士/attack_23.png" id="30_bykqs"]
+[ext_resource type="Texture2D" uid="uid://cwk0vw8c1h5qu" path="res://Assets/Animations/Enemies/12溺尸斗士/attack_24.png" id="31_w6ltq"]
+[ext_resource type="Texture2D" uid="uid://cwlh1y6acqrtb" path="res://Assets/Animations/Enemies/12溺尸斗士/die_00.png" id="32_fa3mn"]
+[ext_resource type="Texture2D" uid="uid://dxp2ehvc18txc" path="res://Assets/Animations/Enemies/12溺尸斗士/die_01.png" id="33_a3cym"]
+[ext_resource type="Texture2D" uid="uid://cmex3dj5xumbb" path="res://Assets/Animations/Enemies/12溺尸斗士/die_02.png" id="34_2gujg"]
+[ext_resource type="Texture2D" uid="uid://cy1mb5x6rjiau" path="res://Assets/Animations/Enemies/12溺尸斗士/die_03.png" id="35_tka6k"]
+[ext_resource type="Texture2D" uid="uid://c2aram5g3fyvy" path="res://Assets/Animations/Enemies/12溺尸斗士/die_04.png" id="36_4jw2k"]
+[ext_resource type="Texture2D" uid="uid://dlv2y377uco8e" path="res://Assets/Animations/Enemies/12溺尸斗士/die_05.png" id="37_gsbvy"]
+[ext_resource type="Texture2D" uid="uid://yqfm22rihogj" path="res://Assets/Animations/Enemies/12溺尸斗士/die_06.png" id="38_e8qwt"]
+[ext_resource type="Texture2D" uid="uid://btsxymr1f4wqd" path="res://Assets/Animations/Enemies/12溺尸斗士/die_07.png" id="39_sj7a4"]
+[ext_resource type="Texture2D" uid="uid://b1dpnbgq2xnh4" path="res://Assets/Animations/Enemies/12溺尸斗士/die_08.png" id="40_0ncda"]
+[ext_resource type="Texture2D" uid="uid://cdjacrl1athud" path="res://Assets/Animations/Enemies/12溺尸斗士/die_09.png" id="41_rhw63"]
+[ext_resource type="Texture2D" uid="uid://qja5kuljrwb5" path="res://Assets/Animations/Enemies/12溺尸斗士/die_10.png" id="42_q6nc8"]
+[ext_resource type="Texture2D" uid="uid://dthw5y1wwpkl8" path="res://Assets/Animations/Enemies/12溺尸斗士/die_11.png" id="43_sbq0m"]
+[ext_resource type="Texture2D" uid="uid://bjxrqt1fp070n" path="res://Assets/Animations/Enemies/12溺尸斗士/die_12.png" id="44_y503s"]
+[ext_resource type="Texture2D" uid="uid://qyaih8lxx0er" path="res://Assets/Animations/Enemies/12溺尸斗士/die_13.png" id="45_65fud"]
+[ext_resource type="Texture2D" uid="uid://jtvb8w41i33b" path="res://Assets/Animations/Enemies/12溺尸斗士/die_14.png" id="46_nualt"]
+[ext_resource type="Texture2D" uid="uid://dx6f67a63kqe2" path="res://Assets/Animations/Enemies/12溺尸斗士/die_15.png" id="47_nhell"]
+[ext_resource type="Texture2D" uid="uid://c2wd4u7jl3uly" path="res://Assets/Animations/Enemies/12溺尸斗士/die_16.png" id="48_pddms"]
+[ext_resource type="Texture2D" uid="uid://4wrhab87d00v" path="res://Assets/Animations/Enemies/12溺尸斗士/die_17.png" id="49_yuuq7"]
+[ext_resource type="Texture2D" uid="uid://chmb7uo32cojc" path="res://Assets/Animations/Enemies/12溺尸斗士/die_18.png" id="50_t0a12"]
+[ext_resource type="Texture2D" uid="uid://du74kpxbblp2m" path="res://Assets/Animations/Enemies/12溺尸斗士/die_19.png" id="51_athkr"]
+[ext_resource type="Texture2D" uid="uid://jue1ua1jovwo" path="res://Assets/Animations/Enemies/12溺尸斗士/die_20.png" id="52_oiy2e"]
+[ext_resource type="Texture2D" uid="uid://d0l2w3yh2p7xu" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_00.png" id="53_5njx4"]
+[ext_resource type="Texture2D" uid="uid://dsesgy0q5r0yt" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_01.png" id="54_wixoh"]
+[ext_resource type="Texture2D" uid="uid://c0la7018tvhdd" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_02.png" id="55_eyvpq"]
+[ext_resource type="Texture2D" uid="uid://cntsmwr1765se" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_03.png" id="56_ad7no"]
+[ext_resource type="Texture2D" uid="uid://d06me81l8581n" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_04.png" id="57_qyg7u"]
+[ext_resource type="Texture2D" uid="uid://dw2jh8sqa4vyb" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_05.png" id="58_5bapr"]
+[ext_resource type="Texture2D" uid="uid://4kbwfn2jukae" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_06.png" id="59_lylpk"]
+[ext_resource type="Texture2D" uid="uid://bfchj01y2bf00" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_07.png" id="60_8v01i"]
+[ext_resource type="Texture2D" uid="uid://bhmmx447kskid" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_08.png" id="61_clsvp"]
+[ext_resource type="Texture2D" uid="uid://xmrryk0gi35r" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_09.png" id="62_kvvli"]
+[ext_resource type="Texture2D" uid="uid://cd6jouhdnpbmv" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_10.png" id="63_5ov7q"]
+[ext_resource type="Texture2D" uid="uid://uh1lvejfscdk" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_11.png" id="64_hucmu"]
+[ext_resource type="Texture2D" uid="uid://df8owo24f00pi" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_12.png" id="65_qn1o0"]
+[ext_resource type="Texture2D" uid="uid://tnx1mqp2eg14" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_13.png" id="66_cftdf"]
+[ext_resource type="Texture2D" uid="uid://cwpq3ubnchha0" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_14.png" id="67_hp67i"]
+[ext_resource type="Texture2D" uid="uid://bdeld8f4hcqiw" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_15.png" id="68_80hah"]
+[ext_resource type="Texture2D" uid="uid://c4onua1rangvv" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_16.png" id="69_r10oy"]
+[ext_resource type="Texture2D" uid="uid://dx674xlr8vp2e" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_17.png" id="70_nxpc1"]
+[ext_resource type="Texture2D" uid="uid://c1m02kqokyg7k" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_18.png" id="71_l8n3e"]
+[ext_resource type="Texture2D" uid="uid://bbq78j2g6a7jt" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_19.png" id="72_tb7or"]
+[ext_resource type="Texture2D" uid="uid://dxd7iqmrsckm2" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_20.png" id="73_vo8vy"]
+[ext_resource type="Texture2D" uid="uid://bwnoa0cm38qgs" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_21.png" id="74_f1pq7"]
+[ext_resource type="Texture2D" uid="uid://bl4gc2rgvv6dt" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_22.png" id="75_drpxx"]
+[ext_resource type="Texture2D" uid="uid://bmkrce6t34tf7" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_23.png" id="76_uigix"]
+[ext_resource type="Texture2D" uid="uid://deilee1ykmlnp" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_24.png" id="77_ymo11"]
+[ext_resource type="Texture2D" uid="uid://onc8ogtbsjny" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_25.png" id="78_b75p7"]
+[ext_resource type="Texture2D" uid="uid://3pm7ctx0ho4" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_26.png" id="79_t8dy1"]
+[ext_resource type="Texture2D" uid="uid://bltpf84rj4vyn" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_27.png" id="80_j1h24"]
+[ext_resource type="Texture2D" uid="uid://5m1iaiij1m2t" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_28.png" id="81_d7m2p"]
+[ext_resource type="Texture2D" uid="uid://cen6huk0ecvg6" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_29.png" id="82_0wml6"]
+[ext_resource type="Texture2D" uid="uid://cilaydmntfeqe" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_30.png" id="83_osxgj"]
+[ext_resource type="Texture2D" uid="uid://bmxxrrjdnno3q" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_31.png" id="84_b6kr1"]
+[ext_resource type="Texture2D" uid="uid://bljnt86h1rtqu" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_32.png" id="85_i38u8"]
+[ext_resource type="Texture2D" uid="uid://bmbjwlwvjm4l7" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_33.png" id="86_yfnbe"]
+[ext_resource type="Texture2D" uid="uid://dan5x50bvp1aa" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_34.png" id="87_twfok"]
+[ext_resource type="Texture2D" uid="uid://ca5mx8lj8o4kv" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_35.png" id="88_aduul"]
+[ext_resource type="Texture2D" uid="uid://1rtwygr701y8" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_36.png" id="89_fp37d"]
+[ext_resource type="Texture2D" uid="uid://dw1pm414vd0s5" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_37.png" id="90_w0g0q"]
+[ext_resource type="Texture2D" uid="uid://rvf8tw6s2djx" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_38.png" id="91_e3hh7"]
+[ext_resource type="Texture2D" uid="uid://cm7i36rdgtine" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_39.png" id="92_04oi5"]
+[ext_resource type="Texture2D" uid="uid://dpxxvspbndomt" path="res://Assets/Animations/Enemies/12溺尸斗士/far_attack_40.png" id="93_75t3b"]
+[ext_resource type="Texture2D" uid="uid://detg0jkob1el4" path="res://Assets/Animations/Enemies/12溺尸斗士/move_back_00.png" id="94_gsps5"]
+[ext_resource type="Texture2D" uid="uid://bvb0nwbjnyce0" path="res://Assets/Animations/Enemies/12溺尸斗士/move_back_01.png" id="95_4aqx2"]
+[ext_resource type="Texture2D" uid="uid://xavb66o5244f" path="res://Assets/Animations/Enemies/12溺尸斗士/move_back_02.png" id="96_bpq5o"]
+[ext_resource type="Texture2D" uid="uid://luc3srbhkwaw" path="res://Assets/Animations/Enemies/12溺尸斗士/move_back_03.png" id="97_skc3i"]
+[ext_resource type="Texture2D" uid="uid://bugi6c4u4qwb4" path="res://Assets/Animations/Enemies/12溺尸斗士/move_back_04.png" id="98_k5o7a"]
+[ext_resource type="Texture2D" uid="uid://drdo0nxffkhf" path="res://Assets/Animations/Enemies/12溺尸斗士/move_back_05.png" id="99_t2gmj"]
+[ext_resource type="Texture2D" uid="uid://by8da1w613v4f" path="res://Assets/Animations/Enemies/12溺尸斗士/move_back_06.png" id="100_gh7o7"]
+[ext_resource type="Texture2D" uid="uid://bqnhhcoaox2ij" path="res://Assets/Animations/Enemies/12溺尸斗士/move_back_07.png" id="101_tx8km"]
+[ext_resource type="Texture2D" uid="uid://c4v33wtrjpunc" path="res://Assets/Animations/Enemies/12溺尸斗士/move_back_08.png" id="102_0spfx"]
+[ext_resource type="Texture2D" uid="uid://dmmomdoxd811o" path="res://Assets/Animations/Enemies/12溺尸斗士/move_back_09.png" id="103_63usm"]
+[ext_resource type="Texture2D" uid="uid://36y0gsiwbcmi" path="res://Assets/Animations/Enemies/12溺尸斗士/move_back_10.png" id="104_xvo7a"]
+[ext_resource type="Texture2D" uid="uid://bbvmvu04o62xj" path="res://Assets/Animations/Enemies/12溺尸斗士/move_back_11.png" id="105_xv5qv"]
+[ext_resource type="Texture2D" uid="uid://dqadultgx1qqi" path="res://Assets/Animations/Enemies/12溺尸斗士/move_back_12.png" id="106_ivaag"]
+[ext_resource type="Texture2D" uid="uid://bshvmd1f335kt" path="res://Assets/Animations/Enemies/12溺尸斗士/move_back_13.png" id="107_0xkkh"]
+[ext_resource type="Texture2D" uid="uid://wg5n6c1ruuts" path="res://Assets/Animations/Enemies/12溺尸斗士/move_back_14.png" id="108_tje2q"]
+[ext_resource type="Texture2D" uid="uid://c451ltqtmhhss" path="res://Assets/Animations/Enemies/12溺尸斗士/move_back_15.png" id="109_q317u"]
+[ext_resource type="Texture2D" uid="uid://x8oopjtcfgcp" path="res://Assets/Animations/Enemies/12溺尸斗士/move_back_16.png" id="110_kvhvp"]
+[ext_resource type="Texture2D" uid="uid://dmi6ralcgje40" path="res://Assets/Animations/Enemies/12溺尸斗士/move_back_17.png" id="111_v4pux"]
+[ext_resource type="Texture2D" uid="uid://d0qvdhna5cs24" path="res://Assets/Animations/Enemies/12溺尸斗士/move_back_18.png" id="112_246qn"]
+[ext_resource type="Texture2D" uid="uid://cks6bjcvy8ioq" path="res://Assets/Animations/Enemies/12溺尸斗士/move_back_19.png" id="113_y0o3e"]
+[ext_resource type="Texture2D" uid="uid://dkab4jv354y5c" path="res://Assets/Animations/Enemies/12溺尸斗士/move_back_20.png" id="114_q5isv"]
+[ext_resource type="Texture2D" uid="uid://c6agvw88dwsik" path="res://Assets/Animations/Enemies/12溺尸斗士/move_back_21.png" id="115_0b4vd"]
+[ext_resource type="Texture2D" uid="uid://ctuun3gdb885p" path="res://Assets/Animations/Enemies/12溺尸斗士/move_back_22.png" id="116_pyhh2"]
+[ext_resource type="Texture2D" uid="uid://dm7gwgklogyac" path="res://Assets/Animations/Enemies/12溺尸斗士/move_back_23.png" id="117_logdp"]
+[ext_resource type="Texture2D" uid="uid://drlc4xbr14v4l" path="res://Assets/Animations/Enemies/12溺尸斗士/move_front_00.png" id="118_r6bmy"]
+[ext_resource type="Texture2D" uid="uid://deoddob7iosog" path="res://Assets/Animations/Enemies/12溺尸斗士/move_front_01.png" id="119_7pml3"]
+[ext_resource type="Texture2D" uid="uid://duer6kdgah07t" path="res://Assets/Animations/Enemies/12溺尸斗士/move_front_02.png" id="120_mukw6"]
+[ext_resource type="Texture2D" uid="uid://dsfaivjvbu3y5" path="res://Assets/Animations/Enemies/12溺尸斗士/move_front_03.png" id="121_sl6u1"]
+[ext_resource type="Texture2D" uid="uid://j0m3c14o0wfp" path="res://Assets/Animations/Enemies/12溺尸斗士/move_front_04.png" id="122_qtfhf"]
+[ext_resource type="Texture2D" uid="uid://ln08ngisrwyr" path="res://Assets/Animations/Enemies/12溺尸斗士/move_front_05.png" id="123_fft43"]
+[ext_resource type="Texture2D" uid="uid://bro2rasjka6se" path="res://Assets/Animations/Enemies/12溺尸斗士/move_front_06.png" id="124_upu2j"]
+[ext_resource type="Texture2D" uid="uid://dd0ugcdq77yo5" path="res://Assets/Animations/Enemies/12溺尸斗士/move_front_07.png" id="125_8l1pn"]
+[ext_resource type="Texture2D" uid="uid://b6uoher0bcr3b" path="res://Assets/Animations/Enemies/12溺尸斗士/move_front_08.png" id="126_u7nx4"]
+[ext_resource type="Texture2D" uid="uid://evmg06utuq5j" path="res://Assets/Animations/Enemies/12溺尸斗士/move_front_09.png" id="127_fn0l3"]
+[ext_resource type="Texture2D" uid="uid://b0ki8oc3nm7fo" path="res://Assets/Animations/Enemies/12溺尸斗士/move_front_10.png" id="128_3goxo"]
+[ext_resource type="Texture2D" uid="uid://bu413mutcxys6" path="res://Assets/Animations/Enemies/12溺尸斗士/move_front_11.png" id="129_bb7ef"]
+[ext_resource type="Texture2D" uid="uid://bw4js237jo4aq" path="res://Assets/Animations/Enemies/12溺尸斗士/move_front_12.png" id="130_fh6n3"]
+[ext_resource type="Texture2D" uid="uid://b7s8j3orhjq8o" path="res://Assets/Animations/Enemies/12溺尸斗士/move_front_13.png" id="131_kq8kq"]
+[ext_resource type="Texture2D" uid="uid://m5rs56t7xa2p" path="res://Assets/Animations/Enemies/12溺尸斗士/move_front_14.png" id="132_eaade"]
+[ext_resource type="Texture2D" uid="uid://b1emxiwq5ln8k" path="res://Assets/Animations/Enemies/12溺尸斗士/move_front_15.png" id="133_rfgkw"]
+[ext_resource type="Texture2D" uid="uid://dyr338yw3w8cm" path="res://Assets/Animations/Enemies/12溺尸斗士/move_front_16.png" id="134_t4m14"]
+[ext_resource type="Texture2D" uid="uid://decn00opaseah" path="res://Assets/Animations/Enemies/12溺尸斗士/move_front_17.png" id="135_2r4b1"]
+[ext_resource type="Texture2D" uid="uid://dfn7ormmvdoos" path="res://Assets/Animations/Enemies/12溺尸斗士/move_front_18.png" id="136_oqlaj"]
+[ext_resource type="Texture2D" uid="uid://4rkk3el2c33d" path="res://Assets/Animations/Enemies/12溺尸斗士/move_front_19.png" id="137_rvvp8"]
+[ext_resource type="Texture2D" uid="uid://b6howdsca1pqo" path="res://Assets/Animations/Enemies/12溺尸斗士/move_front_20.png" id="138_is4yr"]
+[ext_resource type="Texture2D" uid="uid://d0r68f1wcm4gd" path="res://Assets/Animations/Enemies/12溺尸斗士/move_front_21.png" id="139_73e5f"]
+[ext_resource type="Texture2D" uid="uid://thmfmwcmdkfx" path="res://Assets/Animations/Enemies/12溺尸斗士/move_front_22.png" id="140_mlyrk"]
+[ext_resource type="Texture2D" uid="uid://c4v0qfxithwsk" path="res://Assets/Animations/Enemies/12溺尸斗士/move_front_23.png" id="141_yh6jx"]
+[ext_resource type="Texture2D" uid="uid://2yghnqim50uk" path="res://Assets/Animations/Enemies/12溺尸斗士/move_normal_00.png" id="142_tnpao"]
+[ext_resource type="Texture2D" uid="uid://3s7ei4j7eeh3" path="res://Assets/Animations/Enemies/12溺尸斗士/move_normal_01.png" id="143_75hp5"]
+[ext_resource type="Texture2D" uid="uid://bpetmjl8omuh3" path="res://Assets/Animations/Enemies/12溺尸斗士/move_normal_02.png" id="144_jo42t"]
+[ext_resource type="Texture2D" uid="uid://pcw3oox81kaa" path="res://Assets/Animations/Enemies/12溺尸斗士/move_normal_03.png" id="145_kyqnq"]
+[ext_resource type="Texture2D" uid="uid://ce6axq85r4y66" path="res://Assets/Animations/Enemies/12溺尸斗士/move_normal_04.png" id="146_htqan"]
+[ext_resource type="Texture2D" uid="uid://iepcdfx1cpip" path="res://Assets/Animations/Enemies/12溺尸斗士/move_normal_05.png" id="147_gylb4"]
+[ext_resource type="Texture2D" uid="uid://ouv1k7pnjlxh" path="res://Assets/Animations/Enemies/12溺尸斗士/move_normal_06.png" id="148_xsfx1"]
+[ext_resource type="Texture2D" uid="uid://b7hlhfouo7v73" path="res://Assets/Animations/Enemies/12溺尸斗士/move_normal_07.png" id="149_ohu5k"]
+[ext_resource type="Texture2D" uid="uid://cv5w3j01wtk5v" path="res://Assets/Animations/Enemies/12溺尸斗士/move_normal_08.png" id="150_1d7aa"]
+[ext_resource type="Texture2D" uid="uid://b1ayryiw6haam" path="res://Assets/Animations/Enemies/12溺尸斗士/move_normal_09.png" id="151_kvrwv"]
+[ext_resource type="Texture2D" uid="uid://cyuwxkfslk83w" path="res://Assets/Animations/Enemies/12溺尸斗士/move_normal_10.png" id="152_k0rsv"]
+[ext_resource type="Texture2D" uid="uid://brk7pdnhgfehx" path="res://Assets/Animations/Enemies/12溺尸斗士/move_normal_11.png" id="153_dsv4k"]
+[ext_resource type="Texture2D" uid="uid://b35d8u6jbmixu" path="res://Assets/Animations/Enemies/12溺尸斗士/move_normal_12.png" id="154_fkjpw"]
+[ext_resource type="Texture2D" uid="uid://c4qoocwgky5v8" path="res://Assets/Animations/Enemies/12溺尸斗士/move_normal_13.png" id="155_00a3b"]
+[ext_resource type="Texture2D" uid="uid://djan88t6ogor0" path="res://Assets/Animations/Enemies/12溺尸斗士/move_normal_14.png" id="156_s8iub"]
+[ext_resource type="Texture2D" uid="uid://c8q45n5o4gu7c" path="res://Assets/Animations/Enemies/12溺尸斗士/move_normal_15.png" id="157_17kh8"]
+[ext_resource type="Texture2D" uid="uid://bedac03gqiijo" path="res://Assets/Animations/Enemies/12溺尸斗士/move_normal_16.png" id="158_672b1"]
+[ext_resource type="Texture2D" uid="uid://dd80fjws08f68" path="res://Assets/Animations/Enemies/12溺尸斗士/move_normal_17.png" id="159_otkk7"]
+[ext_resource type="Texture2D" uid="uid://c6qoxhcfukot1" path="res://Assets/Animations/Enemies/12溺尸斗士/move_normal_18.png" id="160_3bc17"]
+[ext_resource type="Texture2D" uid="uid://cnlbf3mebk610" path="res://Assets/Animations/Enemies/12溺尸斗士/move_normal_19.png" id="161_wag4f"]
+[ext_resource type="Texture2D" uid="uid://dyp2iyfl5i3du" path="res://Assets/Animations/Enemies/12溺尸斗士/move_normal_20.png" id="162_mjdxn"]
+[ext_resource type="Texture2D" uid="uid://cx68wn3xnyihx" path="res://Assets/Animations/Enemies/12溺尸斗士/move_normal_21.png" id="163_rvv0t"]
+[ext_resource type="Texture2D" uid="uid://5cqbkbs7sbxg" path="res://Assets/Animations/Enemies/12溺尸斗士/move_normal_22.png" id="164_qjs0v"]
+[ext_resource type="Texture2D" uid="uid://nljbpusijssa" path="res://Assets/Animations/Enemies/12溺尸斗士/move_normal_23.png" id="165_idbav"]
+[ext_resource type="Texture2D" uid="uid://bqu3hx465a4em" path="res://Assets/Animations/Enemies/12溺尸斗士/rain_0.png" id="167_tsoc6"]
+[ext_resource type="Texture2D" uid="uid://dkeiqft3n2f3r" path="res://Assets/Animations/Enemies/12溺尸斗士/rain_1.png" id="168_rx0bs"]
+[ext_resource type="AudioStream" uid="uid://3oq3y5va8jp1" path="res://Assets/Sounds/FXs/Enemies/溺尸/激流.wav" id="175_k0k8t"]
+
+[sub_resource type="Resource" id="Resource_dnt4c"]
+script = ExtResource("4_fp01c")
+health = 350
+dodge_rate = 0.0
+near_damage_low = 15
+near_damage_high = 30
+near_attack_speed = 1.2
+near_hit_rate = 1.0
+far_damage_low = 30
+far_damage_high = 60
+far_attack_speed = 1.8
+far_damage_range = 280
+armor = 0.3
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 1.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2aej2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_uk20p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hovie")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_o61yg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_mv42n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ui5pa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_adoyi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_r4i05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_s2cv0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_k5n1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_2cow1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_j7w2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ccxmk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_jcwb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_7y5fi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_qtvyg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_r0wr8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_qcyb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_pcdef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_o40ge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_0mi0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_63by6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_q1d11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_hvp68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_bykqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_w6ltq")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_fa3mn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_a3cym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_2gujg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_tka6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_4jw2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_gsbvy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_e8qwt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_sj7a4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_0ncda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_rhw63")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_q6nc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_sbq0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_y503s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_65fud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_nualt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_nhell")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_pddms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_yuuq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_t0a12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_athkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_oiy2e")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("53_5njx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_wixoh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_eyvpq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_ad7no")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_qyg7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_5bapr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_lylpk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_8v01i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_clsvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_kvvli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_5ov7q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_hucmu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_qn1o0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_cftdf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_hp67i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_80hah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_r10oy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_nxpc1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_l8n3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_tb7or")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_vo8vy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_f1pq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_drpxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_uigix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_ymo11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_b75p7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_t8dy1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_j1h24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_d7m2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_0wml6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_osxgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_b6kr1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_i38u8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_yfnbe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_twfok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_aduul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_fp37d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_w0g0q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_e3hh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_04oi5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_75t3b")
+}],
+"loop": false,
+"name": &"far_attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_uk20p")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("94_gsps5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_4aqx2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_bpq5o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_skc3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_k5o7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_t2gmj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_gh7o7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_tx8km")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_0spfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_63usm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_xvo7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_xv5qv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_ivaag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_0xkkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_tje2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_q317u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_kvhvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_v4pux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_246qn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_y0o3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_q5isv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_0b4vd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_pyhh2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_logdp")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("118_r6bmy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_7pml3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_mukw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_sl6u1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_qtfhf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_fft43")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_upu2j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_8l1pn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_u7nx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_fn0l3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_3goxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_bb7ef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_fh6n3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_kq8kq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_eaade")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_rfgkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_t4m14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_2r4b1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_oqlaj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_rvvp8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_is4yr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_73e5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_mlyrk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_yh6jx")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("142_tnpao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_75hp5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_jo42t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_kyqnq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_htqan")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_gylb4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_xsfx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_ohu5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_1d7aa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_kvrwv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_k0rsv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_dsv4k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_fkjpw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_00a3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_s8iub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_17kh8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("158_672b1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_otkk7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_3bc17")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_wag4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_mjdxn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_rvv0t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_qjs0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_idbav")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 30.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_de253"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("167_tsoc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("168_rx0bs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qj3o3"]
+radius = 95.1315
+
+[node name="Enemy12" groups=["undead"] instance=ExtResource("1_5aqcp")]
+script = ExtResource("2_5hldt")
+enemy_name = "溺尸斗士"
+enemy_id = 12
+enemy_texture = ExtResource("3_dju2h")
+start_data = SubResource("Resource_dnt4c")
+far_attack_bullet_scene = ExtResource("5_ha4bl")
+bounty = 18
+die_audio_stream_list = Array[AudioStream]([ExtResource("5_qldo4"), ExtResource("6_l58qw")])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(5, -120)
+sprite_frames = SubResource("SpriteFrames_2aej2")
+animation = &"far_attack"
+autoplay = "idle"
+frame = 22
+
+[node name="FarAttackMarker" parent="UnitBody" index="8"]
+position = Vector2(5, -200)
+
+[node name="FarAttackMarkerFlip" parent="UnitBody" index="9"]
+position = Vector2(-5, -200)
+
+[node name="SprintSprite" type="AnimatedSprite2D" parent="UnitBody" index="11"]
+visible = false
+position = Vector2(30, -80)
+sprite_frames = SubResource("SpriteFrames_de253")
+autoplay = "default"
+frame_progress = 0.418075
+
+[node name="SprintHitArea" type="Area2D" parent="UnitBody" index="12"]
+collision_layer = 0
+collision_mask = 8
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/SprintHitArea" index="0"]
+position = Vector2(0, -55)
+shape = SubResource("CircleShape2D_qj3o3")
+
+[node name="AppearAudioComponent" parent="." index="5" instance=ExtResource("7_dv5bj")]
+appear_audio_list = Array[AudioStream]([ExtResource("8_3tsda"), ExtResource("9_ydx1x"), ExtResource("10_ikpgl"), ExtResource("11_k8a7o"), ExtResource("12_6egmn")])
+
+[node name="SprintTimer" type="Timer" parent="." index="6"]
+wait_time = 12.0
+one_shot = true
+
+[node name="SprintContinueTimer" type="Timer" parent="." index="7"]
+wait_time = 1.5
+one_shot = true
+
+[node name="SprintAudio" type="AudioStreamPlayer" parent="." index="8"]
+stream = ExtResource("175_k0k8t")
+volume_db = 4.0
+bus = &"Sound"
+
+[connection signal="area_entered" from="UnitBody/SprintHitArea" to="." method="_on_sprint_hit_area_area_entered"]

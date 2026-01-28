@@ -1,0 +1,304 @@
+[gd_scene load_steps=61 format=3 uid="uid://c7i3opa0qaht"]
+
+[ext_resource type="PackedScene" uid="uid://i17sy4bx2dfh" path="res://Scenes/DefenceTowers/BarrackTowers/barrack_tower.tscn" id="1_2axnk"]
+[ext_resource type="Texture2D" uid="uid://ukd4w8qmf7od" path="res://Assets/Images/UI/InformationBar/barrack-id-5.png" id="2_1ipap"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/BarrackTowers/epee_church.gd" id="2_01nor"]
+[ext_resource type="Script" path="res://Scripts/Datas/BarrackData.gd" id="2_cpxbr"]
+[ext_resource type="Script" path="res://Library/Heroes/damage_block.gd" id="3_spyu5"]
+[ext_resource type="PackedScene" uid="uid://d2bgyaqeok6iu" path="res://Scenes/Allys/Soldiers/epee_soldier.tscn" id="3_vtyqs"]
+[ext_resource type="PackedScene" uid="uid://cjpn07gcbekr1" path="res://Scenes/DefenceTowers/tower_skill_button.tscn" id="4_olr0a"]
+[ext_resource type="Texture2D" uid="uid://b37dcwqrx2mqe" path="res://Assets/Images/DefenceTowers/Barracks/UI/尖刺.png" id="7_b82ny"]
+[ext_resource type="Texture2D" uid="uid://dnjcw4b8id7qf" path="res://Assets/Images/DefenceTowers/Barracks/UI/尖刺select.png" id="8_4b5qf"]
+[ext_resource type="Texture2D" uid="uid://bef37n4qwavel" path="res://Assets/Images/DefenceTowers/Barracks/UI/尖刺disabled.png" id="9_hjwvj"]
+[ext_resource type="Texture2D" uid="uid://brui64sdfauii" path="res://Assets/Images/DefenceTowers/Barracks/UI/大刀斩.png" id="10_i2m5c"]
+[ext_resource type="Texture2D" uid="uid://u5s2iay5kcq0" path="res://Assets/Images/DefenceTowers/Barracks/UI/大刀斩select.png" id="11_jg3xa"]
+[ext_resource type="Texture2D" uid="uid://bhp2rs7inahxu" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV4-2/大刀教会.png" id="12_50ari"]
+[ext_resource type="Texture2D" uid="uid://2jr1n7dxg0wp" path="res://Assets/Images/DefenceTowers/Barracks/UI/大刀斩disabled.png" id="12_wqrvf"]
+[ext_resource type="Texture2D" uid="uid://ck6saapm4e7ex" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV2/Barrack_L2_fire.png" id="13_16ivb"]
+[ext_resource type="Texture2D" uid="uid://bvr8yjtg3pnlw" path="res://Assets/Images/DefenceTowers/Barracks/UI/赐福.png" id="13_abh4g"]
+[ext_resource type="Texture2D" uid="uid://dihfawawg5wsw" path="res://Assets/Images/DefenceTowers/Barracks/UI/赐福select.png" id="14_8w1me"]
+[ext_resource type="Texture2D" uid="uid://bfhvapkruvlxi" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_00.png" id="14_50xmq"]
+[ext_resource type="Texture2D" uid="uid://bhtojqaoy0bfd" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_01.png" id="15_6ht46"]
+[ext_resource type="Texture2D" uid="uid://8x57a7xi34ny" path="res://Assets/Images/DefenceTowers/Barracks/UI/赐福disabled.png" id="15_jpwbk"]
+[ext_resource type="Texture2D" uid="uid://b1bpi8i343gth" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_02.png" id="16_iiowj"]
+[ext_resource type="Texture2D" uid="uid://b737hfn8wyfoi" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_03.png" id="17_7q75s"]
+[ext_resource type="Texture2D" uid="uid://c562s2bwfm6vu" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_04.png" id="18_lvyer"]
+[ext_resource type="Texture2D" uid="uid://cnwtqs1fwsv2n" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_05.png" id="19_lhpoc"]
+[ext_resource type="Texture2D" uid="uid://c3acsnxu7orbg" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_06.png" id="20_vs6ky"]
+[ext_resource type="Texture2D" uid="uid://c3kvja30numo5" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_07.png" id="21_oiw2k"]
+[ext_resource type="Texture2D" uid="uid://c1ugp65ywtj8l" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_08.png" id="22_mkrst"]
+[ext_resource type="Texture2D" uid="uid://bq76dcj682o0g" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_09.png" id="23_hxylq"]
+[ext_resource type="Texture2D" uid="uid://bd0oocvjxmiag" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_10.png" id="24_621mv"]
+[ext_resource type="Texture2D" uid="uid://cvjhbjq4e0fcr" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_11.png" id="25_67osk"]
+[ext_resource type="Texture2D" uid="uid://jl3jy0vdo8o" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_12.png" id="26_lkdlc"]
+[ext_resource type="Texture2D" uid="uid://5vmlmlhedejk" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_13.png" id="27_q4y2v"]
+[ext_resource type="Texture2D" uid="uid://duejxqkwinmuu" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_14.png" id="28_f8qcb"]
+[ext_resource type="Texture2D" uid="uid://cuet0si2kuwd8" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_15.png" id="29_tfp6y"]
+[ext_resource type="Texture2D" uid="uid://bcsnanvrm7c2o" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_16.png" id="30_jvrro"]
+[ext_resource type="Texture2D" uid="uid://bagbqf7couxjs" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_17.png" id="31_i1bl5"]
+[ext_resource type="Texture2D" uid="uid://c0qqg75n0qanf" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_18.png" id="32_5gjoi"]
+[ext_resource type="Texture2D" uid="uid://dtgmv4b2wkuc8" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_19.png" id="33_js7jt"]
+[ext_resource type="Texture2D" uid="uid://dj8pd8kjpa0d3" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_20.png" id="34_dsvr3"]
+[ext_resource type="Texture2D" uid="uid://bu2d2x2pij5pn" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_21.png" id="35_ven6q"]
+[ext_resource type="Texture2D" uid="uid://dldipxgnkyakh" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_22.png" id="36_vhu3i"]
+[ext_resource type="Texture2D" uid="uid://bfx2kt5d0abfj" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_23.png" id="37_cc66l"]
+[ext_resource type="Texture2D" uid="uid://dgyiakm1pm2n3" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_24.png" id="38_36we3"]
+[ext_resource type="Texture2D" uid="uid://ds1fnu7l53it" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_25.png" id="39_4kmse"]
+[ext_resource type="Texture2D" uid="uid://dkkjs06rsi3gv" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_26.png" id="40_dpc4q"]
+[ext_resource type="Texture2D" uid="uid://clo0pgh0x8v4b" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_27.png" id="41_hv486"]
+[ext_resource type="Texture2D" uid="uid://dtunb5swwu455" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_28.png" id="42_au1k1"]
+
+[sub_resource type="Resource" id="Resource_jwmpv"]
+script = ExtResource("3_spyu5")
+damage_low = 25
+damage_high = 40
+
+[sub_resource type="Resource" id="Resource_o3nx3"]
+script = ExtResource("3_spyu5")
+damage_low = 30
+damage_high = 50
+
+[sub_resource type="Resource" id="Resource_itfmw"]
+script = ExtResource("3_spyu5")
+damage_low = 35
+damage_high = 60
+
+[sub_resource type="Resource" id="Resource_l5pog"]
+script = ExtResource("2_cpxbr")
+soldier_health = 300
+damage_low = 20
+damage_high = 30
+armor = 0.0
+rebirth_time = 12
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5427u"]
+atlas = ExtResource("7_b82ny")
+region = Rect2(6, 5, 85, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qaqtm"]
+atlas = ExtResource("9_hjwvj")
+region = Rect2(6, 5, 85, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssky8"]
+atlas = ExtResource("10_i2m5c")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wpw1"]
+atlas = ExtResource("12_wqrvf")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xm5b"]
+atlas = ExtResource("13_abh4g")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74n26"]
+atlas = ExtResource("15_jpwbk")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lgxa4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_50xmq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_6ht46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_iiowj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_7q75s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_lvyer")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_lhpoc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_vs6ky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_oiw2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_mkrst")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_hxylq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_621mv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_67osk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_lkdlc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_q4y2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_f8qcb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_tfp6y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_jvrro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_i1bl5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_5gjoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_js7jt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_dsvr3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ven6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_vhu3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_cc66l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_36we3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_4kmse")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_dpc4q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_hv486")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_au1k1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_b2fvr"]
+offsets = PackedFloat32Array(0, 0.389565)
+colors = PackedColorArray(1, 0.698039, 0.0784314, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5yb2e"]
+gradient = SubResource("Gradient_b2fvr")
+fill = 1
+fill_from = Vector2(0.491453, 0.529915)
+fill_to = Vector2(0.82906, 0.24359)
+
+[node name="EpeeChurch" instance=ExtResource("1_2axnk")]
+y_sort_enabled = true
+script = ExtResource("2_01nor")
+skill1_damage_list = Array[ExtResource("3_spyu5")]([SubResource("Resource_jwmpv"), SubResource("Resource_o3nx3"), SubResource("Resource_itfmw")])
+barrack_data = SubResource("Resource_l5pog")
+soldier_scene = ExtResource("3_vtyqs")
+is_new_tower = false
+tower_name = "大刀教会"
+tower_texture = ExtResource("2_1ipap")
+tower_id = 5
+tower_level = 4
+tower_value = 570
+
+[node name="TowerButton" parent="." index="2"]
+offset_left = -78.0
+offset_top = -76.0
+offset_right = 75.0
+
+[node name="Circle" parent="TowerUI" index="4"]
+position = Vector2(0, -51)
+
+[node name="TowerSkillButton" parent="TowerUI/Circle" index="2" node_paths=PackedStringArray("linked_tower") instance=ExtResource("4_olr0a")]
+offset_top = -98.7494
+offset_bottom = -13.7493
+texture_normal = SubResource("AtlasTexture_5427u")
+texture_pressed = SubResource("AtlasTexture_5427u")
+texture_hover = ExtResource("8_4b5qf")
+texture_disabled = SubResource("AtlasTexture_qaqtm")
+linked_tower = NodePath("../../..")
+skill_name = "尖刺"
+skill_prices = Array[int]([200, 100, 100])
+skill_intro = PackedStringArray("将大刀兵的伤害提高至25-40点。", "将大刀兵的伤害提高至30-50点。", "将大刀兵的伤害提高至35-60点。")
+skill_words = "不会痛太久的……"
+
+[node name="TowerSkillButton2" parent="TowerUI/Circle" index="3" node_paths=PackedStringArray("linked_tower") instance=ExtResource("4_olr0a")]
+offset_left = -42.5007
+offset_top = -147.5
+offset_right = 42.4989
+offset_bottom = -62.4998
+texture_normal = SubResource("AtlasTexture_ssky8")
+texture_pressed = SubResource("AtlasTexture_ssky8")
+texture_hover = ExtResource("11_jg3xa")
+texture_disabled = SubResource("AtlasTexture_0wpw1")
+linked_tower = NodePath("../../..")
+skill_name = "大刀斩"
+skill_id = 1
+skill_prices = Array[int]([250, 200, 200])
+skill_intro = PackedStringArray("大刀兵进行一次强力斩击，对范围内所有地面敌人造成75-150点范围伤害。", "大刀兵进行一次强力斩击，对范围内所有地面敌人造成100-180点范围伤害。", "大刀兵进行一次强力斩击，对范围内所有地面敌人造成130-210点范围伤害。")
+skill_words = "愿在彼岸你能洗刷罪恶"
+
+[node name="TowerSkillButton3" parent="TowerUI/Circle" index="4" node_paths=PackedStringArray("linked_tower") instance=ExtResource("4_olr0a")]
+offset_left = 57.4995
+offset_top = -98.7503
+offset_right = 142.499
+offset_bottom = -13.7502
+texture_normal = SubResource("AtlasTexture_4xm5b")
+texture_pressed = SubResource("AtlasTexture_4xm5b")
+texture_hover = ExtResource("14_8w1me")
+texture_disabled = SubResource("AtlasTexture_74n26")
+linked_tower = NodePath("../../..")
+skill_name = "神赐"
+skill_id = 2
+skill_prices = Array[int]([200, 175, 175])
+skill_intro = PackedStringArray("大刀兵死亡时有60%概率立即复活，并恢复自身40%最大生命值，在4秒内处于无敌状态，若成功复活下次立即复活的概率降低20%。", "大刀兵死亡时有70%概率立即复活，并恢复自身60%最大生命值，在4秒内处于无敌状态，若成功复活下次立即复活的概率降低20%。", "大刀兵死亡时有80%概率立即复活，并恢复自身80%最大生命值，在4秒内处于无敌状态，若成功复活下次立即复活的概率降低20%。")
+skill_words = "死亡，不过是另一种存在形式"
+
+[node name="TowerSprite" type="Sprite2D" parent="." index="8"]
+position = Vector2(-1, 17)
+texture = ExtResource("12_50ari")
+offset = Vector2(0, -76)
+
+[node name="BarrackL2Fire" type="Sprite2D" parent="TowerSprite" index="0"]
+position = Vector2(10, -8.5)
+texture = ExtResource("13_16ivb")
+
+[node name="Fire" type="AnimatedSprite2D" parent="TowerSprite/BarrackL2Fire" index="0"]
+position = Vector2(-47, 5)
+sprite_frames = SubResource("SpriteFrames_lgxa4")
+autoplay = "default"
+
+[node name="LightComponent" type="PointLight2D" parent="TowerSprite/BarrackL2Fire" index="1"]
+position = Vector2(-45, 9)
+scale = Vector2(0.801215, 0.801215)
+energy = 1.5
+texture = SubResource("GradientTexture2D_5yb2e")
+texture_scale = 2.8
+
+[node name="BarrackL2Fire2" type="Sprite2D" parent="TowerSprite" index="1"]
+position = Vector2(81, -9.5)
+texture = ExtResource("13_16ivb")
+
+[node name="Fire" type="AnimatedSprite2D" parent="TowerSprite/BarrackL2Fire2" index="0"]
+position = Vector2(-47, 5)
+sprite_frames = SubResource("SpriteFrames_lgxa4")
+autoplay = "default"
+
+[node name="LightComponent" type="PointLight2D" parent="TowerSprite/BarrackL2Fire2" index="1"]
+position = Vector2(-45, 9)
+scale = Vector2(0.801215, 0.801215)
+energy = 1.5
+texture = SubResource("GradientTexture2D_5yb2e")
+texture_scale = 2.8

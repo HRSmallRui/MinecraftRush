@@ -1,0 +1,130 @@
+[gd_scene load_steps=22 format=3 uid="uid://bfbcx32wca88m"]
+
+[ext_resource type="Texture2D" uid="uid://naipk375eihb" path="res://Assets/Images/Effects/SteveBuffPotion/AllyPotion_00.png" id="1_1j6ii"]
+[ext_resource type="Script" path="res://Scripts/Skills/steve_buff_potion.gd" id="1_vg3mc"]
+[ext_resource type="Texture2D" uid="uid://da5v0ltiicr51" path="res://Assets/Images/Effects/SteveBuffPotion/AllyPotion_01.png" id="2_numg7"]
+[ext_resource type="AudioStream" uid="uid://b3y0u3upgm8w3" path="res://Assets/Sounds/FXs/Skills/potion_throw.wav" id="2_nwo77"]
+[ext_resource type="Texture2D" uid="uid://bwqsq6mbxo0pd" path="res://Assets/Images/Effects/SteveBuffPotion/AllyPotion_02.png" id="3_xl4bh"]
+[ext_resource type="Texture2D" uid="uid://dtjd0a8sfs8af" path="res://Assets/Images/Effects/SteveBuffPotion/AllyPotion_03.png" id="4_xnduc"]
+[ext_resource type="Texture2D" uid="uid://docxr2piuuwr6" path="res://Assets/Images/Effects/SteveBuffPotion/AllyPotion_04.png" id="5_nbpss"]
+[ext_resource type="Texture2D" uid="uid://d3w6bsh8e48p1" path="res://Assets/Images/Effects/SteveBuffPotion/AllyPotion_05.png" id="6_spntw"]
+[ext_resource type="Texture2D" uid="uid://dd3uqy1ycoqwt" path="res://Assets/Images/Effects/SteveBuffPotion/AllyPotion_06.png" id="7_6g2fj"]
+[ext_resource type="Texture2D" uid="uid://b3s582u7bg2y5" path="res://Assets/Images/Effects/SteveBuffPotion/AllyPotion_07.png" id="8_gfnag"]
+[ext_resource type="Texture2D" uid="uid://n5uc6yqoi5ts" path="res://Assets/Images/Effects/SteveBuffPotion/AllyPotion_08.png" id="9_reoyt"]
+[ext_resource type="Texture2D" uid="uid://mhrrmstubcet" path="res://Assets/Images/Effects/SteveBuffPotion/AllyPotion_09.png" id="10_rvr21"]
+[ext_resource type="Texture2D" uid="uid://b1kyn3piwmrij" path="res://Assets/Images/Effects/SteveBuffPotion/AllyPotion_10.png" id="11_4is4l"]
+[ext_resource type="Texture2D" uid="uid://bgwrqtx5wkgpg" path="res://Assets/Images/Effects/SteveBuffPotion/AllyPotion_11.png" id="12_bovtc"]
+[ext_resource type="Texture2D" uid="uid://lg0bbgoivg27" path="res://Assets/Images/Effects/SteveBuffPotion/AllyPotion_12.png" id="13_oke5v"]
+[ext_resource type="Texture2D" uid="uid://daearqlxa4hh0" path="res://Assets/Images/Effects/SteveBuffPotion/AllyPotion_13.png" id="14_nbdgt"]
+[ext_resource type="AudioStream" uid="uid://dv2qekrqjyyjt" path="res://Assets/Sounds/FXs/Skills/splash1.wav" id="17_jqcch"]
+[ext_resource type="AudioStream" uid="uid://28wyvuelh0ah" path="res://Assets/Sounds/FXs/Skills/splash2.wav" id="18_o36h2"]
+[ext_resource type="AudioStream" uid="uid://ex5wm8d4mv2r" path="res://Assets/Sounds/FXs/Skills/splash3.wav" id="19_nhbpx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ll4c3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_1j6ii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_numg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xl4bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xnduc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nbpss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_spntw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6g2fj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_gfnag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_reoyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_rvr21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_4is4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_bovtc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_oke5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_nbdgt")
+}],
+"loop": false,
+"name": &"default",
+"speed": 30.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sm5lm"]
+radius = 22.063
+
+[node name="SteveBuffPotion" type="Area2D"]
+y_sort_enabled = true
+collision_layer = 0
+collision_mask = 24
+script = ExtResource("1_vg3mc")
+potion_color = Color(1, 0, 1, 1)
+
+[node name="PotionThrow" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_nwo77")
+autoplay = true
+bus = &"Sound"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -63)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_ll4c3")
+autoplay = "default"
+frame = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 0.6)
+shape = SubResource("CircleShape2D_sm5lm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, -41)
+scale = Vector2(1, 0.6)
+shape = SubResource("CircleShape2D_sm5lm")
+
+[node name="Splash1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_jqcch")
+bus = &"Sound"
+
+[node name="Splash2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_o36h2")
+bus = &"Sound"
+
+[node name="Splash3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_nhbpx")
+bus = &"Sound"
+
+[node name="DamageArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 96
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea"]
+scale = Vector2(1, 0.6)
+shape = SubResource("CircleShape2D_sm5lm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="DamageArea"]
+position = Vector2(0, -41)
+scale = Vector2(1, 0.6)
+shape = SubResource("CircleShape2D_sm5lm")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]

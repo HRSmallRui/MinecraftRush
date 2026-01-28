@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://otco3sjwkpxq"]
+
+[ext_resource type="Texture2D" uid="uid://bonjt1po10rhp" path="res://Assets/Images/UI/Achievements/card_normal.tres" id="1_fiv56"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Map/achievement_card.gd" id="2_dg7jx"]
+[ext_resource type="Texture2D" uid="uid://dne5vt1ni2ox0" path="res://Assets/Images/UI/Achievements/MR1.png" id="3_k8el7"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="5_r42wd"]
+
+[node name="AchievementCard" type="TextureRect"]
+mouse_filter = 2
+texture = ExtResource("1_fiv56")
+script = ExtResource("2_dg7jx")
+sav_keyword = "MR1"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 17.0
+offset_right = 81.0
+offset_bottom = 81.0
+scale = Vector2(1.13949, 1.13949)
+mouse_filter = 2
+texture = ExtResource("3_k8el7")
+
+[node name="NameLabel" type="Label" parent="."]
+modulate = Color(1, 0.635294, 0, 1)
+layout_mode = 0
+offset_left = 100.0
+offset_top = 10.0
+offset_right = 1057.0
+offset_bottom = 112.0
+scale = Vector2(0.303025, 0.303025)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("5_r42wd")
+theme_override_font_sizes/font_size = 64
+text = "欢迎来到MinecraftRush"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="IntroLabel" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 100.0
+offset_top = 59.0
+offset_right = 1057.0
+offset_bottom = 382.0
+scale = Vector2(0.303025, 0.303025)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 35
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("5_r42wd")
+theme_override_font_sizes/font_size = 64
+text = "进入任意一关进行游玩。
+111"
+autowrap_mode = 3

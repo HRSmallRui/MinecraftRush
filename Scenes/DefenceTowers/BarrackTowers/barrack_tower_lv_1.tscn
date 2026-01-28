@@ -1,0 +1,365 @@
+[gd_scene load_steps=81 format=3 uid="uid://cec6w6q8hbqn"]
+
+[ext_resource type="PackedScene" uid="uid://i17sy4bx2dfh" path="res://Scenes/DefenceTowers/BarrackTowers/barrack_tower.tscn" id="1_d8445"]
+[ext_resource type="PackedScene" uid="uid://drjvqvw33m3ab" path="res://Scenes/DefenceTowers/tower_button.tscn" id="2_6gxax"]
+[ext_resource type="Script" path="res://Scripts/Datas/BarrackData.gd" id="2_rtrad"]
+[ext_resource type="PackedScene" uid="uid://ixuma23kwo13" path="res://Scenes/Allys/Soldiers/soldier_lv_1.tscn" id="3_8ok44"]
+[ext_resource type="Texture2D" uid="uid://dofsufel76s4g" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/Barrack_LV1.png" id="4_abaiu"]
+[ext_resource type="Texture2D" uid="uid://tn6i5tv5qc6w" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_00.png" id="5_3m41i"]
+[ext_resource type="Texture2D" uid="uid://dhd6kwmrjmia7" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_01.png" id="6_hnmpv"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/light_component.gd" id="6_v8ic6"]
+[ext_resource type="Texture2D" uid="uid://hnbl82fpplby" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_02.png" id="7_r20mc"]
+[ext_resource type="Texture2D" uid="uid://d3g4vomgvpvqr" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_03.png" id="8_ymcrk"]
+[ext_resource type="Texture2D" uid="uid://bg3qn8blvynbh" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_04.png" id="9_0g58q"]
+[ext_resource type="Texture2D" uid="uid://minevmq22h16" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_05.png" id="10_vw768"]
+[ext_resource type="Texture2D" uid="uid://0bfset5d0rdy" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_06.png" id="11_kyciq"]
+[ext_resource type="Texture2D" uid="uid://brgxnq6dyealb" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_07.png" id="12_awptk"]
+[ext_resource type="Texture2D" uid="uid://dd4xv8suglm34" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_08.png" id="13_qbqnr"]
+[ext_resource type="Texture2D" uid="uid://dqxkmvhkinjq3" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_09.png" id="14_f6y2h"]
+[ext_resource type="Texture2D" uid="uid://vy78063t562q" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_10.png" id="15_rlrgp"]
+[ext_resource type="Texture2D" uid="uid://bxxghw0c0wth0" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_11.png" id="16_igbx1"]
+[ext_resource type="Texture2D" uid="uid://bl0dlwf4y6773" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_12.png" id="17_cdfwk"]
+[ext_resource type="Texture2D" uid="uid://d1g024avu0juv" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_13.png" id="18_q33cn"]
+[ext_resource type="Texture2D" uid="uid://cssqvr41of0gv" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_14.png" id="19_7ymuc"]
+[ext_resource type="Texture2D" uid="uid://dcdqa7206q3lo" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_15.png" id="20_xvr62"]
+[ext_resource type="Texture2D" uid="uid://chkikgm3qxfku" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_16.png" id="21_k8lkp"]
+[ext_resource type="Texture2D" uid="uid://bxwmy3tw1rob" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_17.png" id="22_0bo2k"]
+[ext_resource type="Texture2D" uid="uid://dol85fn15muym" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_18.png" id="23_hf6p8"]
+[ext_resource type="Texture2D" uid="uid://dobu4shkjnmti" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_19.png" id="24_wq50w"]
+[ext_resource type="Texture2D" uid="uid://cfn1oxbxce56o" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_20.png" id="25_c40gd"]
+[ext_resource type="Texture2D" uid="uid://cxxmobv7crxnq" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_21.png" id="26_we8r2"]
+[ext_resource type="Texture2D" uid="uid://dr3ins3j0yfnp" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_22.png" id="27_1iu7r"]
+[ext_resource type="Texture2D" uid="uid://bmnf7jlgq4phq" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_23.png" id="28_kp8d3"]
+[ext_resource type="Texture2D" uid="uid://q14uq8bg7v42" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_24.png" id="29_wh0at"]
+[ext_resource type="Texture2D" uid="uid://b5ao7yvp4itx4" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_25.png" id="30_q1way"]
+[ext_resource type="Texture2D" uid="uid://crg7hmgp3chpi" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_26.png" id="31_1s0vq"]
+[ext_resource type="Texture2D" uid="uid://bsfogvtwq74eo" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_27.png" id="32_bflju"]
+[ext_resource type="Texture2D" uid="uid://ddjrexn6dl4vx" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_28.png" id="33_544g6"]
+[ext_resource type="Texture2D" uid="uid://beyexevvxfkl5" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_00.png" id="34_t6lml"]
+[ext_resource type="Texture2D" uid="uid://chiqleodjn0cw" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_01.png" id="35_afqjl"]
+[ext_resource type="Texture2D" uid="uid://cb5qkm4viysdq" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_02.png" id="36_ybe65"]
+[ext_resource type="Texture2D" uid="uid://bc5mbn8doawbl" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_03.png" id="37_e3kne"]
+[ext_resource type="Texture2D" uid="uid://cml4psj0x3u04" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_04.png" id="38_113kf"]
+[ext_resource type="Texture2D" uid="uid://bimvob3y6toxf" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_05.png" id="39_xa6oy"]
+[ext_resource type="Texture2D" uid="uid://cm21sqg8hdjuy" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_06.png" id="40_xwjxp"]
+[ext_resource type="Texture2D" uid="uid://1mfe1a4b6760" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_07.png" id="41_jugkr"]
+[ext_resource type="Texture2D" uid="uid://b7blg000vjope" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_08.png" id="42_sv7v8"]
+[ext_resource type="Texture2D" uid="uid://bl0sufj2ncx1u" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_09.png" id="43_gl1by"]
+[ext_resource type="Texture2D" uid="uid://bc4k57v5l8sqj" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_10.png" id="44_iclkl"]
+[ext_resource type="Texture2D" uid="uid://djp17m1m88wop" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_11.png" id="45_mxqtu"]
+[ext_resource type="Texture2D" uid="uid://shhmjhew8phd" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_12.png" id="46_qmncb"]
+[ext_resource type="Texture2D" uid="uid://do0aqu7vsvyqb" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_13.png" id="47_kxoe2"]
+[ext_resource type="Texture2D" uid="uid://co2x6bwaw5f5s" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_14.png" id="48_pmllv"]
+[ext_resource type="Texture2D" uid="uid://clsmql8yoq252" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_15.png" id="49_spg1q"]
+[ext_resource type="Texture2D" uid="uid://bh0vdf68cfdt1" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_16.png" id="50_ym11x"]
+[ext_resource type="Texture2D" uid="uid://8v1afh4whtk0" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_17.png" id="51_4km22"]
+[ext_resource type="Texture2D" uid="uid://bvac615q51bsy" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_18.png" id="52_eb8qc"]
+[ext_resource type="Texture2D" uid="uid://h8vydk4ch8wo" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_19.png" id="53_n2dbv"]
+[ext_resource type="Texture2D" uid="uid://duyo6q603hi1k" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_20.png" id="54_yqi0i"]
+[ext_resource type="Texture2D" uid="uid://bp7238tnhesyn" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_21.png" id="55_k3q8n"]
+[ext_resource type="Texture2D" uid="uid://b7xrufxvgqigm" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_22.png" id="56_wj64a"]
+[ext_resource type="Texture2D" uid="uid://c6o1tita5wln1" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_23.png" id="57_igmfj"]
+[ext_resource type="Texture2D" uid="uid://b6f2tqtr0d41i" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_24.png" id="58_0pfd3"]
+[ext_resource type="Texture2D" uid="uid://upfo8cenr5dv" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_25.png" id="59_q58wt"]
+[ext_resource type="Texture2D" uid="uid://c868e5wm4ueim" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_26.png" id="60_pbcy7"]
+[ext_resource type="Texture2D" uid="uid://orc8jmp7sdyt" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_27.png" id="61_c73gs"]
+[ext_resource type="Texture2D" uid="uid://ckkhscow4osn2" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_28.png" id="62_sm4xx"]
+[ext_resource type="Texture2D" uid="uid://cdw058osu40yi" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_29.png" id="63_c2lw6"]
+[ext_resource type="Texture2D" uid="uid://bi0rqop6w6m50" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_30.png" id="64_eaka6"]
+[ext_resource type="Texture2D" uid="uid://8va7xp2e7l0b" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_31.png" id="65_jf2i2"]
+[ext_resource type="Texture2D" uid="uid://diwuouu2q4jis" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_32.png" id="66_wyt82"]
+[ext_resource type="Texture2D" uid="uid://ddvyxn5f00g02" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_33.png" id="67_b0l3c"]
+[ext_resource type="Texture2D" uid="uid://x6vdc2quwgi6" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_34.png" id="68_0mgpj"]
+[ext_resource type="Texture2D" uid="uid://hy6qfm17v2o7" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_35.png" id="69_ockkh"]
+[ext_resource type="Texture2D" uid="uid://ivchib8rfb0t" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_36.png" id="70_62lm3"]
+[ext_resource type="Texture2D" uid="uid://dm8ag1ftboq5w" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_37.png" id="71_hoa41"]
+[ext_resource type="Texture2D" uid="uid://setv7jlv5mqr" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_38.png" id="72_fg0g5"]
+[ext_resource type="Texture2D" uid="uid://bq4xtgiggs8nv" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_flag_39.png" id="73_5jtxu"]
+
+[sub_resource type="Resource" id="Resource_rj22o"]
+script = ExtResource("2_rtrad")
+soldier_health = 50
+damage_low = 1
+damage_high = 3
+armor = 0.0
+rebirth_time = 10
+
+[sub_resource type="Gradient" id="Gradient_kjuav"]
+colors = PackedColorArray(1, 0.698039, 0.0784314, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_lh7l5"]
+gradient = SubResource("Gradient_kjuav")
+fill = 1
+fill_from = Vector2(0.491453, 0.529915)
+fill_to = Vector2(0.82906, 0.24359)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dvouj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_3m41i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hnmpv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_r20mc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ymcrk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0g58q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_vw768")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_kyciq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_awptk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_qbqnr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_f6y2h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_rlrgp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_igbx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_cdfwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_q33cn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7ymuc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_xvr62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_k8lkp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_0bo2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_hf6p8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_wq50w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_c40gd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_we8r2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_1iu7r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_kp8d3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_wh0at")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_q1way")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_1s0vq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_bflju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_544g6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tekym"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_t6lml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_afqjl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_ybe65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_e3kne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_113kf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_xa6oy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_xwjxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_jugkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_sv7v8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_gl1by")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_iclkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_mxqtu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_qmncb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_kxoe2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_pmllv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_spg1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_ym11x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_4km22")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_eb8qc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_n2dbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_yqi0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_k3q8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_wj64a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_igmfj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_0pfd3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_q58wt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_pbcy7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_c73gs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_sm4xx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_c2lw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_eaka6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_jf2i2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_wyt82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_b0l3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_0mgpj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_ockkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_62lm3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_hoa41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_fg0g5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_5jtxu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[node name="BarrackTowerLV1" instance=ExtResource("1_d8445")]
+barrack_data = SubResource("Resource_rj22o")
+soldier_scene = ExtResource("3_8ok44")
+tower_name = "民兵兵营"
+tower_level = 1
+tower_value = 70
+
+[node name="TowerButton" parent="." index="2"]
+offset_top = -57.0
+
+[node name="Circle" parent="TowerUI" index="4"]
+position = Vector2(0, -21)
+
+[node name="TowerButton" parent="TowerUI/Circle" index="1" node_paths=PackedStringArray("tower") instance=ExtResource("2_6gxax")]
+offset_left = -31.0006
+offset_top = -132.0
+offset_right = 30.9994
+offset_bottom = -70.9999
+tower = NodePath("../../..")
+tower_type = 1
+id = 2
+price = 110
+unlocked_level = 2
+
+[node name="TowerSprite" type="Sprite2D" parent="." index="8"]
+position = Vector2(0, -23)
+scale = Vector2(1.17344, 1.17344)
+texture = ExtResource("4_abaiu")
+
+[node name="LightComponent" type="PointLight2D" parent="TowerSprite" index="0"]
+position = Vector2(-40.0532, 14.4873)
+scale = Vector2(0.801215, 0.801215)
+texture = SubResource("GradientTexture2D_lh7l5")
+texture_scale = 2.48
+script = ExtResource("6_v8ic6")
+
+[node name="Campfire" type="AnimatedSprite2D" parent="." index="9"]
+position = Vector2(-48, -6)
+sprite_frames = SubResource("SpriteFrames_dvouj")
+autoplay = "default"
+frame_progress = 0.31322
+
+[node name="BarrackFlag" type="AnimatedSprite2D" parent="." index="10"]
+position = Vector2(52, -15)
+sprite_frames = SubResource("SpriteFrames_tekym")
+autoplay = "default"
+frame_progress = 0.250517

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bre4knvunbq3e"]
+
+[ext_resource type="PackedScene" uid="uid://bmr7x0vo1n3ky" path="res://Scenes/Buffs/heal_buff.tscn" id="1_7q021"]
+[ext_resource type="Script" path="res://Scripts/Classes/potion_particle_leader.gd" id="2_du815"]
+
+[node name="SteveGolenAppleHealBuff" instance=ExtResource("1_7q021")]
+heal_datas = Array[int]([5])
+buff_tag = "golden_apple_heal"
+immune_groups = Array[String](["undead"])
+
+[node name="Timer" parent="." index="0"]
+wait_time = 0.5
+
+[node name="PotionParticleLeader" type="Node2D" parent="." index="1" node_paths=PackedStringArray("buff_vehicle")]
+script = ExtResource("2_du815")
+potion_color = Color(0.938357, 0.55609, 0.775027, 1)
+buff_vehicle = NodePath("..")

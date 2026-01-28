@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpjbsjlet4ai0"]
+
+[ext_resource type="Script" path="res://Scripts/Skills/mike_earth_area.gd" id="1_3qesa"]
+[ext_resource type="Texture2D" uid="uid://i25c7d1f734h" path="res://Assets/Images/Effects/earth_effect.png" id="2_dwevt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ublnm"]
+radius = 73.9444
+
+[node name="MikeEarthArea" type="Area2D"]
+collision_layer = 0
+collision_mask = 32
+script = ExtResource("1_3qesa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 1.4)
+shape = SubResource("CircleShape2D_ublnm")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="EarthEffect" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(0, -4)
+scale = Vector2(0.69647, 0.496471)
+texture = ExtResource("2_dwevt")

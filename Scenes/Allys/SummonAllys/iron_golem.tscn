@@ -1,0 +1,599 @@
+[gd_scene load_steps=121 format=3 uid="uid://cp3jol5uvy6w"]
+
+[ext_resource type="PackedScene" uid="uid://bdp6vlymmmpu3" path="res://Scenes/Allys/SummonAllys/summon_ally_class.tscn" id="1_x4mcw"]
+[ext_resource type="Script" path="res://Scripts/Allys/SummonAllys/iron_golem.gd" id="2_qmeqn"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="2_yi5p1"]
+[ext_resource type="Texture2D" uid="uid://vmbp0txvvwh7" path="res://Assets/Images/UI/InformationBar/铁傀儡.png" id="3_dy6f2"]
+[ext_resource type="Texture2D" uid="uid://c1lp8t61qtf5y" path="res://Assets/Animations/SummonAllys/IronGolem/attack_00.png" id="4_4kr2d"]
+[ext_resource type="Texture2D" uid="uid://clyyghlds08ec" path="res://Assets/Animations/SummonAllys/IronGolem/attack_01.png" id="5_6nuex"]
+[ext_resource type="Texture2D" uid="uid://cbmib3txhb3n7" path="res://Assets/Animations/SummonAllys/IronGolem/attack_02.png" id="6_83o8v"]
+[ext_resource type="Texture2D" uid="uid://60veo7w5gepn" path="res://Assets/Animations/SummonAllys/IronGolem/attack_03.png" id="7_812ue"]
+[ext_resource type="Texture2D" uid="uid://c804dtysqa2bt" path="res://Assets/Animations/SummonAllys/IronGolem/attack_04.png" id="8_4m5d4"]
+[ext_resource type="Texture2D" uid="uid://d2prspkftmnr0" path="res://Assets/Animations/SummonAllys/IronGolem/attack_05.png" id="9_qce4j"]
+[ext_resource type="Texture2D" uid="uid://louf0voya7ln" path="res://Assets/Animations/SummonAllys/IronGolem/attack_06.png" id="10_5u3yf"]
+[ext_resource type="Texture2D" uid="uid://pqn6wxb18p0y" path="res://Assets/Animations/SummonAllys/IronGolem/attack_07.png" id="11_ai2hi"]
+[ext_resource type="Texture2D" uid="uid://bc3a7c00cohj1" path="res://Assets/Animations/SummonAllys/IronGolem/attack_08.png" id="12_6gbo4"]
+[ext_resource type="Texture2D" uid="uid://dk462fev6gnj7" path="res://Assets/Animations/SummonAllys/IronGolem/attack_09.png" id="13_1dk8p"]
+[ext_resource type="Texture2D" uid="uid://bp4br2mjueb50" path="res://Assets/Animations/SummonAllys/IronGolem/attack_10.png" id="14_kgu8i"]
+[ext_resource type="Texture2D" uid="uid://gpgpkevpkeg" path="res://Assets/Animations/SummonAllys/IronGolem/attack_11.png" id="15_ilqq4"]
+[ext_resource type="Texture2D" uid="uid://bcdeych4hpqsx" path="res://Assets/Animations/SummonAllys/IronGolem/attack_12.png" id="16_nyl7n"]
+[ext_resource type="Texture2D" uid="uid://4a3u1ilrnf35" path="res://Assets/Animations/SummonAllys/IronGolem/attack_13.png" id="17_t8mlr"]
+[ext_resource type="Texture2D" uid="uid://ckt54pqhdwkcl" path="res://Assets/Animations/SummonAllys/IronGolem/attack_14.png" id="18_4bix5"]
+[ext_resource type="Texture2D" uid="uid://bi7kfpxck12xt" path="res://Assets/Animations/SummonAllys/IronGolem/attack_15.png" id="19_das2g"]
+[ext_resource type="Texture2D" uid="uid://bpglr0xef355i" path="res://Assets/Animations/SummonAllys/IronGolem/attack_16.png" id="20_by0sy"]
+[ext_resource type="Texture2D" uid="uid://cy6svx0y4m4r6" path="res://Assets/Animations/SummonAllys/IronGolem/attack_17.png" id="21_xqta3"]
+[ext_resource type="Texture2D" uid="uid://c6ybrf8o4cs1f" path="res://Assets/Animations/SummonAllys/IronGolem/attack_18.png" id="22_qs6x5"]
+[ext_resource type="Texture2D" uid="uid://cxokrq1hsgwgb" path="res://Assets/Animations/SummonAllys/IronGolem/attack_19.png" id="23_bjdg4"]
+[ext_resource type="Texture2D" uid="uid://hs15ofe4fb5i" path="res://Assets/Animations/SummonAllys/IronGolem/attack_20.png" id="24_6mj7v"]
+[ext_resource type="Texture2D" uid="uid://by4gw147l0668" path="res://Assets/Animations/SummonAllys/IronGolem/attack_21.png" id="25_wgaek"]
+[ext_resource type="Texture2D" uid="uid://c2s565eorco73" path="res://Assets/Animations/SummonAllys/IronGolem/attack_22.png" id="26_rsnrt"]
+[ext_resource type="Texture2D" uid="uid://db376v2yyf3mi" path="res://Assets/Animations/SummonAllys/IronGolem/attack_23.png" id="27_l611a"]
+[ext_resource type="Texture2D" uid="uid://dhhdcds13bp27" path="res://Assets/Animations/SummonAllys/IronGolem/attack_24.png" id="28_wdr5m"]
+[ext_resource type="Texture2D" uid="uid://5nme7cevde28" path="res://Assets/Animations/SummonAllys/IronGolem/attack_25.png" id="29_7icss"]
+[ext_resource type="Texture2D" uid="uid://b1j70h0dl7llb" path="res://Assets/Animations/SummonAllys/IronGolem/attack_26.png" id="30_wv4ep"]
+[ext_resource type="Texture2D" uid="uid://b3imwpalbck2n" path="res://Assets/Animations/SummonAllys/IronGolem/attack_27.png" id="31_j5pom"]
+[ext_resource type="Texture2D" uid="uid://dbbg5uy5xcbf6" path="res://Assets/Animations/SummonAllys/IronGolem/attack_28.png" id="32_mnraf"]
+[ext_resource type="Texture2D" uid="uid://djpidisoymqwc" path="res://Assets/Animations/SummonAllys/IronGolem/attack_29.png" id="33_r57tv"]
+[ext_resource type="Texture2D" uid="uid://ykf8354g4tst" path="res://Assets/Animations/SummonAllys/IronGolem/attack_30.png" id="34_caxqj"]
+[ext_resource type="Texture2D" uid="uid://cghu1bax14b0g" path="res://Assets/Animations/SummonAllys/IronGolem/attack_31.png" id="35_uofks"]
+[ext_resource type="Texture2D" uid="uid://bbdy7paa12u5g" path="res://Assets/Animations/SummonAllys/IronGolem/attack_32.png" id="36_5s7nh"]
+[ext_resource type="Texture2D" uid="uid://c4wu1a7jxxiij" path="res://Assets/Animations/SummonAllys/IronGolem/attack_33.png" id="37_86jng"]
+[ext_resource type="Texture2D" uid="uid://bblbqjmrm12fc" path="res://Assets/Animations/SummonAllys/IronGolem/attack_34.png" id="38_ytq0c"]
+[ext_resource type="Texture2D" uid="uid://d0gc758lsicla" path="res://Assets/Animations/SummonAllys/IronGolem/attack_35.png" id="39_2con1"]
+[ext_resource type="Texture2D" uid="uid://qwlqndpo1u1u" path="res://Assets/Animations/SummonAllys/IronGolem/die_00.png" id="40_c7s02"]
+[ext_resource type="Texture2D" uid="uid://bvxgb5q55kkxk" path="res://Assets/Animations/SummonAllys/IronGolem/die_01.png" id="41_thwfo"]
+[ext_resource type="Texture2D" uid="uid://dd0yt68r0w1gf" path="res://Assets/Animations/SummonAllys/IronGolem/die_02.png" id="42_kngk4"]
+[ext_resource type="Texture2D" uid="uid://dnpjppop751lf" path="res://Assets/Animations/SummonAllys/IronGolem/die_03.png" id="43_ot57f"]
+[ext_resource type="Texture2D" uid="uid://cif6ovp04jk27" path="res://Assets/Animations/SummonAllys/IronGolem/die_04.png" id="44_d86gf"]
+[ext_resource type="Texture2D" uid="uid://bwmyftu0x76sq" path="res://Assets/Animations/SummonAllys/IronGolem/die_05.png" id="45_65f2f"]
+[ext_resource type="Texture2D" uid="uid://d4n1e825apiw3" path="res://Assets/Animations/SummonAllys/IronGolem/die_06.png" id="46_pw0ee"]
+[ext_resource type="Texture2D" uid="uid://cpepvi545mcu7" path="res://Assets/Animations/SummonAllys/IronGolem/die_07.png" id="47_vscdg"]
+[ext_resource type="Texture2D" uid="uid://c3pd7ru7duicl" path="res://Assets/Animations/SummonAllys/IronGolem/die_08.png" id="48_1jdtt"]
+[ext_resource type="Texture2D" uid="uid://dx6m4gd7vlcob" path="res://Assets/Animations/SummonAllys/IronGolem/die_09.png" id="49_bcnt1"]
+[ext_resource type="Texture2D" uid="uid://wq8k21ll8atm" path="res://Assets/Animations/SummonAllys/IronGolem/die_10.png" id="50_wksb7"]
+[ext_resource type="Texture2D" uid="uid://dra3tei2o6v45" path="res://Assets/Animations/SummonAllys/IronGolem/move_00.png" id="51_ym518"]
+[ext_resource type="Texture2D" uid="uid://c24nj23arvrd2" path="res://Assets/Animations/SummonAllys/IronGolem/move_01.png" id="52_8jg6k"]
+[ext_resource type="Texture2D" uid="uid://dhy35pr3fon2e" path="res://Assets/Animations/SummonAllys/IronGolem/move_02.png" id="53_ibgig"]
+[ext_resource type="Texture2D" uid="uid://c4wnxdgj3k7e7" path="res://Assets/Animations/SummonAllys/IronGolem/move_03.png" id="54_n21p8"]
+[ext_resource type="Texture2D" uid="uid://cndxtxpo7et3j" path="res://Assets/Animations/SummonAllys/IronGolem/move_04.png" id="55_fd5em"]
+[ext_resource type="Texture2D" uid="uid://dkpflra5jyib4" path="res://Assets/Animations/SummonAllys/IronGolem/move_05.png" id="56_c8xwl"]
+[ext_resource type="Texture2D" uid="uid://dh24uwh2cmup" path="res://Assets/Animations/SummonAllys/IronGolem/move_06.png" id="57_cmgj6"]
+[ext_resource type="Texture2D" uid="uid://spnwea17pc4o" path="res://Assets/Animations/SummonAllys/IronGolem/move_07.png" id="58_y8dao"]
+[ext_resource type="Texture2D" uid="uid://4ytctuyonjma" path="res://Assets/Animations/SummonAllys/IronGolem/move_08.png" id="59_nynks"]
+[ext_resource type="Texture2D" uid="uid://bf2o4tju7smnr" path="res://Assets/Animations/SummonAllys/IronGolem/move_09.png" id="60_b3je3"]
+[ext_resource type="Texture2D" uid="uid://houtddks1wo" path="res://Assets/Animations/SummonAllys/IronGolem/move_10.png" id="61_ly7lk"]
+[ext_resource type="Texture2D" uid="uid://cbopa0364rtyg" path="res://Assets/Animations/SummonAllys/IronGolem/move_11.png" id="62_gb6mw"]
+[ext_resource type="Texture2D" uid="uid://d1p5wophaacw7" path="res://Assets/Animations/SummonAllys/IronGolem/move_12.png" id="63_58wsm"]
+[ext_resource type="Texture2D" uid="uid://uyj61vnvgagc" path="res://Assets/Animations/SummonAllys/IronGolem/move_13.png" id="64_6c0ti"]
+[ext_resource type="Texture2D" uid="uid://juiagbcbke5g" path="res://Assets/Animations/SummonAllys/IronGolem/move_14.png" id="65_ln458"]
+[ext_resource type="Texture2D" uid="uid://bx1pcav86os1b" path="res://Assets/Animations/SummonAllys/IronGolem/move_15.png" id="66_k6jwq"]
+[ext_resource type="Texture2D" uid="uid://cqvbvnxqvsywj" path="res://Assets/Animations/SummonAllys/IronGolem/move_16.png" id="67_h06pl"]
+[ext_resource type="Texture2D" uid="uid://dascegy1rqso4" path="res://Assets/Animations/SummonAllys/IronGolem/move_17.png" id="68_n8bvf"]
+[ext_resource type="Texture2D" uid="uid://73mlepstk4xq" path="res://Assets/Animations/SummonAllys/IronGolem/move_18.png" id="69_ppipo"]
+[ext_resource type="Texture2D" uid="uid://5v46wvht0ye" path="res://Assets/Animations/SummonAllys/IronGolem/move_19.png" id="70_qrb55"]
+[ext_resource type="Texture2D" uid="uid://6w22v4hjg80i" path="res://Assets/Animations/SummonAllys/IronGolem/move_20.png" id="71_icpcb"]
+[ext_resource type="Texture2D" uid="uid://bp84fpg358r73" path="res://Assets/Animations/SummonAllys/IronGolem/move_21.png" id="72_xmb2a"]
+[ext_resource type="Texture2D" uid="uid://dovmy12ea4w3v" path="res://Assets/Animations/SummonAllys/IronGolem/move_22.png" id="73_ktthe"]
+[ext_resource type="Texture2D" uid="uid://bj3frbhlhbdwo" path="res://Assets/Animations/SummonAllys/IronGolem/move_23.png" id="74_f0jss"]
+[ext_resource type="Texture2D" uid="uid://cokx3w7gaprvq" path="res://Assets/Animations/SummonAllys/IronGolem/move_24.png" id="75_jk43a"]
+[ext_resource type="Texture2D" uid="uid://dmgs0msyds7ys" path="res://Assets/Animations/SummonAllys/IronGolem/move_25.png" id="76_2vxme"]
+[ext_resource type="Texture2D" uid="uid://bh5l5yxlc30p6" path="res://Assets/Animations/SummonAllys/IronGolem/move_26.png" id="77_rjj1m"]
+[ext_resource type="Texture2D" uid="uid://degjqin8fanne" path="res://Assets/Animations/SummonAllys/IronGolem/move_27.png" id="78_0884o"]
+[ext_resource type="Texture2D" uid="uid://c0p7t0tmmue0t" path="res://Assets/Animations/SummonAllys/IronGolem/move_28.png" id="79_mi6df"]
+[ext_resource type="Texture2D" uid="uid://bkxa6slc3qbte" path="res://Assets/Animations/SummonAllys/IronGolem/move_29.png" id="80_5xc8d"]
+[ext_resource type="Texture2D" uid="uid://ma755ap6umye" path="res://Assets/Animations/SummonAllys/IronGolem/move_30.png" id="81_k2uu4"]
+[ext_resource type="Texture2D" uid="uid://cvx61b5xmf0qq" path="res://Assets/Animations/SummonAllys/IronGolem/move_31.png" id="82_wy06s"]
+[ext_resource type="Texture2D" uid="uid://cr2ix8cu460f2" path="res://Assets/Animations/SummonAllys/IronGolem/move_32.png" id="83_t0c1b"]
+[ext_resource type="Texture2D" uid="uid://bpulthmu1l20x" path="res://Assets/Animations/SummonAllys/IronGolem/move_33.png" id="84_clhf8"]
+[ext_resource type="Texture2D" uid="uid://bylj80jdakvuy" path="res://Assets/Animations/SummonAllys/IronGolem/move_34.png" id="85_87dvm"]
+[ext_resource type="Texture2D" uid="uid://bltaij7a8ggll" path="res://Assets/Animations/SummonAllys/IronGolem/move_35.png" id="86_3yeow"]
+[ext_resource type="Texture2D" uid="uid://bgq1l4nugo0bl" path="res://Assets/Animations/SummonAllys/IronGolem/move_36.png" id="87_o68yd"]
+[ext_resource type="Texture2D" uid="uid://br0j45wa53tww" path="res://Assets/Animations/SummonAllys/IronGolem/move_37.png" id="88_oftbf"]
+[ext_resource type="Texture2D" uid="uid://bvtuw60sshj58" path="res://Assets/Animations/SummonAllys/IronGolem/move_38.png" id="89_cfv3f"]
+[ext_resource type="Texture2D" uid="uid://4q6x4p37wsoc" path="res://Assets/Animations/SummonAllys/IronGolem/move_39.png" id="90_y3u7v"]
+[ext_resource type="Texture2D" uid="uid://ies1xl6c751s" path="res://Assets/Animations/SummonAllys/IronGolem/move_40.png" id="91_uxw2q"]
+[ext_resource type="Texture2D" uid="uid://dilrw3q5mt8m8" path="res://Assets/Animations/SummonAllys/IronGolem/move_41.png" id="92_rshkq"]
+[ext_resource type="Texture2D" uid="uid://b5ig2ruaglu3e" path="res://Assets/Animations/SummonAllys/IronGolem/move_42.png" id="93_32d5s"]
+[ext_resource type="Texture2D" uid="uid://c0os0wkmm1cpb" path="res://Assets/Animations/SummonAllys/IronGolem/move_43.png" id="94_r23d1"]
+[ext_resource type="Texture2D" uid="uid://bb3vnqw7t1a5v" path="res://Assets/Animations/SummonAllys/IronGolem/move_44.png" id="95_cxowo"]
+[ext_resource type="Texture2D" uid="uid://c1jt4lpvddm1w" path="res://Assets/Animations/SummonAllys/IronGolem/move_45.png" id="96_lxmk2"]
+[ext_resource type="Texture2D" uid="uid://dadu0h3cl6yke" path="res://Assets/Animations/SummonAllys/IronGolem/move_46.png" id="97_vosxu"]
+[ext_resource type="Texture2D" uid="uid://djyw4pw2mr4u8" path="res://Assets/Animations/SummonAllys/IronGolem/move_47.png" id="98_grbms"]
+[ext_resource type="Texture2D" uid="uid://b5quhxi1mgp8t" path="res://Assets/Animations/SummonAllys/IronGolem/rebirth_00.png" id="99_skbpk"]
+[ext_resource type="Texture2D" uid="uid://dlpdoyfb1g2w2" path="res://Assets/Animations/SummonAllys/IronGolem/rebirth_01.png" id="100_nmaqo"]
+[ext_resource type="Texture2D" uid="uid://dlg064sm1jqdj" path="res://Assets/Animations/SummonAllys/IronGolem/rebirth_02.png" id="101_d72wl"]
+[ext_resource type="Texture2D" uid="uid://c3svwx0kkf608" path="res://Assets/Animations/SummonAllys/IronGolem/rebirth_03.png" id="102_m74yi"]
+[ext_resource type="Texture2D" uid="uid://cmkdrd64n2e7p" path="res://Assets/Animations/SummonAllys/IronGolem/rebirth_04.png" id="103_i331x"]
+[ext_resource type="Texture2D" uid="uid://cm08gt2eskt6s" path="res://Assets/Animations/SummonAllys/IronGolem/rebirth_05.png" id="104_aeqcw"]
+[ext_resource type="Texture2D" uid="uid://b4vs23e8os1lq" path="res://Assets/Animations/SummonAllys/IronGolem/rebirth_06.png" id="105_sph01"]
+[ext_resource type="Texture2D" uid="uid://cn85beaijpnn0" path="res://Assets/Animations/SummonAllys/IronGolem/rebirth_07.png" id="106_jgvnj"]
+[ext_resource type="Texture2D" uid="uid://d1uip6xsqxsyo" path="res://Assets/Animations/SummonAllys/IronGolem/rebirth_08.png" id="107_7hy3y"]
+[ext_resource type="Texture2D" uid="uid://cmrwhhi740j7b" path="res://Assets/Animations/SummonAllys/IronGolem/rebirth_09.png" id="108_5yxba"]
+[ext_resource type="Texture2D" uid="uid://buokmnccg7o5x" path="res://Assets/Animations/SummonAllys/IronGolem/rebirth_10.png" id="109_oauxh"]
+[ext_resource type="Texture2D" uid="uid://cpqnmsa41v08q" path="res://Assets/Animations/SummonAllys/IronGolem/rebirth_11.png" id="110_0630u"]
+[ext_resource type="Texture2D" uid="uid://dy0ab66law45v" path="res://Assets/Animations/SummonAllys/IronGolem/rebirth_12.png" id="111_v2u1l"]
+[ext_resource type="AudioStream" uid="uid://dm824q146kchv" path="res://Assets/Sounds/FXs/Allys/铁傀儡/死亡.wav" id="113_31omo"]
+[ext_resource type="AudioStream" uid="uid://drundiaqu0rk2" path="res://Assets/Sounds/FXs/Allys/铁傀儡/生成.wav" id="114_r75a6"]
+[ext_resource type="AudioStream" uid="uid://b1qce1o4ia1m1" path="res://Assets/Sounds/FXs/Battles/aoe_hit.wav" id="115_h6ian"]
+
+[sub_resource type="Resource" id="Resource_2c018"]
+script = ExtResource("2_yi5p1")
+health = 600
+dodge_rate = 0.0
+near_damage_low = 20
+near_damage_high = 40
+near_attack_speed = 2.5
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.2
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 1.0
+
+[sub_resource type="Resource" id="Resource_6afjh"]
+script = ExtResource("2_yi5p1")
+health = 700
+dodge_rate = 0.0
+near_damage_low = 35
+near_damage_high = 70
+near_attack_speed = 2.5
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.3
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 1.0
+
+[sub_resource type="Resource" id="Resource_xhedp"]
+script = ExtResource("2_yi5p1")
+health = 800
+dodge_rate = 0.0
+near_damage_low = 40
+near_damage_high = 80
+near_attack_speed = 2.5
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.4
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 1.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_shkj0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_4kr2d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6nuex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_83o8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_812ue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4m5d4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qce4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5u3yf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ai2hi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6gbo4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_1dk8p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_kgu8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ilqq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_nyl7n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_t8mlr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_4bix5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_das2g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_by0sy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_xqta3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_qs6x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_bjdg4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_6mj7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_wgaek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_rsnrt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_l611a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_wdr5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_7icss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_wv4ep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_j5pom")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_mnraf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_r57tv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_caxqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_uofks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_5s7nh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_86jng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_ytq0c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_2con1")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("40_c7s02")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_thwfo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_kngk4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_ot57f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_d86gf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_65f2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_pw0ee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_vscdg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_1jdtt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_bcnt1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_wksb7")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_4kr2d")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("51_ym518")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_8jg6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_ibgig")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_n21p8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_fd5em")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_c8xwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_cmgj6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_y8dao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_nynks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_b3je3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_ly7lk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_gb6mw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_58wsm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_6c0ti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_ln458")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_k6jwq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_h06pl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_n8bvf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_ppipo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_qrb55")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_icpcb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_xmb2a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_ktthe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_f0jss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_jk43a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_2vxme")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_rjj1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_0884o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_mi6df")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_5xc8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_k2uu4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_wy06s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_t0c1b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_clhf8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_87dvm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_3yeow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_o68yd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_oftbf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_cfv3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_y3u7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_uxw2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_rshkq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_32d5s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_r23d1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_cxowo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_lxmk2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_vosxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_grbms")
+}],
+"loop": true,
+"name": &"move",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("99_skbpk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_nmaqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_d72wl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_m74yi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_i331x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_aeqcw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_sph01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_jgvnj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_7hy3y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_5yxba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_oauxh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_0630u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_v2u1l")
+}],
+"loop": false,
+"name": &"rebirth",
+"speed": 30.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fdet7"]
+radius = 73.9444
+
+[node name="IronGolem" groups=["no_live"] instance=ExtResource("1_x4mcw")]
+script = ExtResource("2_qmeqn")
+unit_list = Array[ExtResource("2_yi5p1")]([SubResource("Resource_2c018"), SubResource("Resource_6afjh"), SubResource("Resource_xhedp")])
+heal_speed_list = Array[int]([28, 32, 36])
+ally_name = "铁傀儡"
+ally_texture = ExtResource("3_dy6f2")
+intercepting_range = 180
+rebirth_time = 14
+
+[node name="AllySprite" parent="UnitBody" index="0"]
+position = Vector2(-25, -140)
+sprite_frames = SubResource("SpriteFrames_shkj0")
+animation = &"attack"
+autoplay = "idle"
+
+[node name="HurtBox" parent="UnitBody" index="2"]
+position = Vector2(0, -100)
+scale = Vector2(8.69959, 8.69959)
+
+[node name="SelectSprite" parent="UnitBody" index="3"]
+scale = Vector2(4.85496, 4.85496)
+
+[node name="AllyButton" parent="UnitBody" index="4"]
+offset_left = -75.0
+offset_top = -215.0
+offset_right = 75.0
+
+[node name="HealthBar" parent="UnitBody" index="5"]
+offset_left = -85.0
+offset_top = -250.0
+offset_right = 215.0
+offset_bottom = -241.0
+scale = Vector2(0.566218, 1.88085)
+
+[node name="AttackArea" type="Area2D" parent="UnitBody" index="7"]
+position = Vector2(175, 0)
+scale = Vector2(0.7, 0.7)
+collision_layer = 0
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/AttackArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_fdet7")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="DieAudio" type="AudioStreamPlayer" parent="." index="6"]
+stream = ExtResource("113_31omo")
+volume_db = -8.0
+bus = &"Sound"
+
+[node name="AppearAudio" type="AudioStreamPlayer" parent="." index="7"]
+stream = ExtResource("114_r75a6")
+volume_db = -6.0
+autoplay = true
+bus = &"Sound"
+
+[node name="AoeHitAudio" type="AudioStreamPlayer" parent="." index="8"]
+stream = ExtResource("115_h6ian")
+volume_db = -2.0
+bus = &"Sound"

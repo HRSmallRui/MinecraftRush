@@ -1,0 +1,65 @@
+[gd_scene load_steps=14 format=3 uid="uid://blf6tdqaj673m"]
+
+[ext_resource type="Script" path="res://Scripts/Effects/normal_effect.gd" id="1_cstqg"]
+[ext_resource type="Texture2D" uid="uid://cjcxgiik5igtv" path="res://Assets/Images/Effects/Explosion/boom_effect0001.png" id="1_yhh66"]
+[ext_resource type="Texture2D" uid="uid://b5j5qbvc0yiic" path="res://Assets/Images/Effects/Explosion/boom_effect0002.png" id="2_rxu1t"]
+[ext_resource type="Texture2D" uid="uid://cv7h4cjd4bhdo" path="res://Assets/Images/Effects/Explosion/boom_effect0003.png" id="3_qv48m"]
+[ext_resource type="Texture2D" uid="uid://c85uavyhvpnpp" path="res://Assets/Images/Effects/Explosion/boom_effect0004.png" id="4_pmn1k"]
+[ext_resource type="Texture2D" uid="uid://cdfhjvd1fd8l6" path="res://Assets/Images/Effects/Explosion/boom_effect0005.png" id="5_qimtk"]
+[ext_resource type="Texture2D" uid="uid://bi5fdbyahtf0n" path="res://Assets/Images/Effects/Explosion/boom_effect0006.png" id="6_p5s1f"]
+[ext_resource type="Texture2D" uid="uid://dpnjw6eeetrd5" path="res://Assets/Images/Effects/Explosion/boom_effect0007.png" id="7_rw07w"]
+[ext_resource type="Texture2D" uid="uid://crdkxrm74xhgj" path="res://Assets/Images/Effects/Explosion/boom_effect0008.png" id="8_cpmee"]
+[ext_resource type="Texture2D" uid="uid://d260mckbuu5l1" path="res://Assets/Images/Effects/Explosion/boom_effect0009.png" id="9_5s7bj"]
+[ext_resource type="Texture2D" uid="uid://cua1mhppp01ig" path="res://Assets/Images/Effects/Explosion/boom_effect0010.png" id="10_rabtx"]
+[ext_resource type="Texture2D" uid="uid://dwqspin3uyfsc" path="res://Assets/Images/Effects/Explosion/boom_effect0011.png" id="11_degea"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yxjbk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_yhh66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_rxu1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qv48m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pmn1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qimtk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_p5s1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rw07w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_cpmee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5s7bj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_rabtx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_degea")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 24.0
+}]
+
+[node name="BulletExplosionEffect" type="AnimatedSprite2D"]
+z_index = 1
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_yxjbk")
+autoplay = "default"
+script = ExtResource("1_cstqg")

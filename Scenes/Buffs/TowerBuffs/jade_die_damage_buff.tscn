@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://btufdvb6y5vx"]
+
+[ext_resource type="PackedScene" uid="uid://bjfa3t67tpsbr" path="res://Scenes/Buffs/property_buff.tscn" id="1_jexkh"]
+[ext_resource type="Script" path="res://Scripts/Buffs/property_buff_block.gd" id="2_qy1lh"]
+[ext_resource type="Script" path="res://Scripts/Classes/potion_particle_leader.gd" id="3_4g682"]
+
+[sub_resource type="Resource" id="Resource_ial27"]
+script = ExtResource("2_qy1lh")
+property_type = 1
+operation_type = 1
+operation_data = 2.0
+
+[node name="JadeDieDamageBuff" instance=ExtResource("1_jexkh")]
+buff_blocks = Array[ExtResource("2_qy1lh")]([SubResource("Resource_ial27")])
+buff_tag = "JadeDieDamage"
+
+[node name="PotionParticleLeader" type="Node2D" parent="." index="0" node_paths=PackedStringArray("buff_vehicle")]
+script = ExtResource("3_4g682")
+potion_color = Color(1, 0, 0, 1)
+buff_vehicle = NodePath("..")

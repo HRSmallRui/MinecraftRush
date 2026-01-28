@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://6s1lahcbtvxc"]
+
+[ext_resource type="PackedScene" uid="uid://bwifge7de0uys" path="res://Scenes/Buffs/dot_buff.tscn" id="1_e78vt"]
+[ext_resource type="Script" path="res://Scripts/Classes/potion_particle_leader.gd" id="2_g5hjm"]
+[ext_resource type="Texture2D" uid="uid://dvi6p1u5k00ax" path="res://Assets/Images/Effects/RobortSkill/Fire/0001.png" id="3_jlme3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tsvyq"]
+atlas = ExtResource("3_jlme3")
+region = Rect2(9, 25, 90, 71)
+
+[node name="MikeHolyFire" instance=ExtResource("1_e78vt")]
+dot_damage = Array[int]([66])
+duration = 4.0
+buff_tag = "MikeHolyFire"
+
+[node name="DotTimer" parent="." index="0"]
+wait_time = 0.4
+
+[node name="PotionParticleLeader2" type="Node2D" parent="." index="1" node_paths=PackedStringArray("buff_vehicle")]
+script = ExtResource("2_g5hjm")
+potion_texture = SubResource("AtlasTexture_tsvyq")
+buff_vehicle = NodePath("..")
+particle_size_rate = 0.4
+particle_z_index = 1

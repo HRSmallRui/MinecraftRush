@@ -1,0 +1,57 @@
+[gd_scene load_steps=11 format=3 uid="uid://cneo3vjaj35a5"]
+
+[ext_resource type="PackedScene" uid="uid://f1vaqnehc211" path="res://Scenes/Allys/Reinforcements/reinforcement_class.tscn" id="1_r2dcj"]
+[ext_resource type="Script" path="res://Scripts/Allys/Reinfrocements/reinforcement_lv_2.gd" id="2_vmrw2"]
+[ext_resource type="Texture2D" uid="uid://p4wf8uoeqkt7" path="res://Assets/Images/UI/InformationBar/2级援军1.png" id="3_b53jp"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="3_nv3dk"]
+[ext_resource type="Texture2D" uid="uid://dsclp13e2dlqx" path="res://Assets/Images/UI/InformationBar/2级援军2.png" id="4_jx1jd"]
+[ext_resource type="Texture2D" uid="uid://bb8wck6pbo8m2" path="res://Assets/Images/UI/InformationBar/2级援军3.png" id="5_k1t5x"]
+[ext_resource type="SpriteFrames" uid="uid://c4ur3c77i33fr" path="res://Assets/Animations/Reinforcer/LV2/reinforcer2.tres" id="7_mnmrd"]
+[ext_resource type="SpriteFrames" uid="uid://mlg3sfql5x68" path="res://Assets/Animations/Reinforcer/LV2/reinforcer3.tres" id="7_r07te"]
+[ext_resource type="SpriteFrames" uid="uid://psgffh8l8egs" path="res://Assets/Animations/Reinforcer/LV2/reinforcer1.tres" id="7_vwchk"]
+
+[sub_resource type="Resource" id="Resource_8qc2y"]
+script = ExtResource("3_nv3dk")
+health = 50
+dodge_rate = 0.0
+near_damage_low = 3
+near_damage_high = 5
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.2
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 2.4
+
+[node name="ReinforcementLV2" instance=ExtResource("1_r2dcj")]
+script = ExtResource("2_vmrw2")
+reinforce_level = 2
+reinforce_animation_list = Array[SpriteFrames]([ExtResource("7_vwchk"), ExtResource("7_mnmrd"), ExtResource("7_r07te")])
+reinforce_headtex_list = Array[Texture]([ExtResource("3_b53jp"), ExtResource("4_jx1jd"), ExtResource("5_k1t5x")])
+reinforce_name_list = Array[PackedStringArray]([PackedStringArray("王田根", "张土娃", "李锄禾", "赵耙子", "郑老栓", "陈荒年", "刘茬子"), PackedStringArray("孙杀猪", "赵屠户", "李一刀", "陈血肠", "刘一刀", "周剁骨", "吴庖丁"), PackedStringArray("赵铁柱", "刘铁锤", "陈铁狗", "张炉灰", "孙铁蛋", "冯铁拐", "王铁锁")])
+ally_name = "援军"
+ally_level = 2
+ally_texture = ExtResource("3_b53jp")
+start_data = SubResource("Resource_8qc2y")
+intercepting_range = 160
+heal_speed = 5
+rebirth_time = 22
+
+[node name="AllySprite" parent="UnitBody" index="0"]
+position = Vector2(15, -195)
+sprite_frames = ExtResource("7_vwchk")
+animation = &"start"
+
+[node name="CollisionShape2D" parent="UnitBody" index="1"]
+position = Vector2(0, -87.5)
+
+[node name="HurtBox" parent="UnitBody" index="2"]
+scale = Vector2(6.5151, 6.5151)

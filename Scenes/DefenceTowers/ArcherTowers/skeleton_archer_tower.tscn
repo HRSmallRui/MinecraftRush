@@ -1,0 +1,628 @@
+[gd_scene load_steps=136 format=3 uid="uid://diml616l40lvc"]
+
+[ext_resource type="PackedScene" uid="uid://dtyu2t5hq40nc" path="res://Scenes/DefenceTowers/ArcherTowers/archer_tower.tscn" id="1_c07ie"]
+[ext_resource type="Script" path="res://Scripts/Datas/TowerData.gd" id="2_f4jaw"]
+[ext_resource type="Texture2D" uid="uid://d2uveucdddrmn" path="res://Assets/Images/UI/InformationBar/arrow-skeleton.png" id="2_xww11"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/ArcherTowers/skeleton_archer_tower.gd" id="2_yid3a"]
+[ext_resource type="PackedScene" uid="uid://cjpn07gcbekr1" path="res://Scenes/DefenceTowers/tower_skill_button.tscn" id="4_3drth"]
+[ext_resource type="Texture2D" uid="uid://301jpa585c4t" path="res://Assets/Images/DefenceTowers/Based/jungle-build.png" id="4_t6n5x"]
+[ext_resource type="Texture2D" uid="uid://bet1ca4qmjjnc" path="res://Assets/Images/DefenceTowers/Archers/UI/猩红狙击箭.png" id="5_0ddxn"]
+[ext_resource type="Texture2D" uid="uid://cq170vrxrrjqv" path="res://Assets/Images/DefenceTowers/Based/jungle-build-select.png" id="5_vbqrf"]
+[ext_resource type="Texture2D" uid="uid://bon334o1y6170" path="res://Assets/Images/DefenceTowers/Archers/UI/猩红狙击箭select.png" id="6_051h2"]
+[ext_resource type="Texture2D" uid="uid://b1u4xphvfduet" path="res://Assets/Images/DefenceTowers/Archers/UI/猩红狙击箭disabled.png" id="7_13l1i"]
+[ext_resource type="Texture2D" uid="uid://dm6nfqmuov6u3" path="res://Assets/Images/DefenceTowers/Archers/UI/穿刺.png" id="8_srhrh"]
+[ext_resource type="Texture2D" uid="uid://bjt50nd6u1hwh" path="res://Assets/Images/DefenceTowers/Archers/UI/穿刺select.png" id="9_dj342"]
+[ext_resource type="Texture2D" uid="uid://thvk3mndql2n" path="res://Assets/Images/DefenceTowers/Archers/UI/穿刺disabled.png" id="10_7ujsb"]
+[ext_resource type="Texture2D" uid="uid://bcnkuho0pyxpp" path="res://Assets/Animations/Archers/Skeleton/shoot_front_00.png" id="12_6s04m"]
+[ext_resource type="Texture2D" uid="uid://bkgy62m8kco4x" path="res://Assets/Animations/Archers/Skeleton/shoot_back_00.png" id="13_so4m4"]
+[ext_resource type="Texture2D" uid="uid://bodxmk1gsgymm" path="res://Assets/Images/DefenceTowers/Archers/Towers/Skeleton.png" id="14_4lu20"]
+[ext_resource type="Texture2D" uid="uid://rf2giigsniii" path="res://Assets/Animations/Archers/Skeleton/shoot_back_01.png" id="14_kw4lp"]
+[ext_resource type="Texture2D" uid="uid://dxis1k6bstg53" path="res://Assets/Animations/Archers/Skeleton/shoot_back_02.png" id="15_kiykf"]
+[ext_resource type="Texture2D" uid="uid://cfqqido71vwov" path="res://Assets/Animations/Archers/Skeleton/shoot_back_03.png" id="16_w4oob"]
+[ext_resource type="Texture2D" uid="uid://cuaiu6qb3c8re" path="res://Assets/Animations/Archers/Skeleton/shoot_back_04.png" id="17_1uymr"]
+[ext_resource type="Texture2D" uid="uid://cqg7alotjd4vv" path="res://Assets/Animations/Archers/Skeleton/shoot_back_05.png" id="18_s13l5"]
+[ext_resource type="Texture2D" uid="uid://boxshmgs747mh" path="res://Assets/Animations/Archers/Skeleton/shoot_back_06.png" id="19_17a1k"]
+[ext_resource type="Texture2D" uid="uid://d245b3o5ni6rd" path="res://Assets/Animations/Archers/Skeleton/shoot_back_07.png" id="20_20omd"]
+[ext_resource type="Texture2D" uid="uid://cpqb5w2fqw7ur" path="res://Assets/Animations/Archers/Skeleton/shoot_back_08.png" id="21_000ge"]
+[ext_resource type="Texture2D" uid="uid://c0kxradjuamdg" path="res://Assets/Animations/Archers/Skeleton/shoot_back_09.png" id="22_a58b1"]
+[ext_resource type="Texture2D" uid="uid://d6750ldygejt" path="res://Assets/Animations/Archers/Skeleton/shoot_back_10.png" id="23_8tpvi"]
+[ext_resource type="Texture2D" uid="uid://basaukpbl5dso" path="res://Assets/Animations/Archers/Skeleton/shoot_back_11.png" id="24_1s1qm"]
+[ext_resource type="Texture2D" uid="uid://bagkkuh8o3ilg" path="res://Assets/Animations/Archers/Skeleton/shoot_back_12.png" id="25_usdoe"]
+[ext_resource type="Texture2D" uid="uid://c6mgn7kmdgt8k" path="res://Assets/Animations/Archers/Skeleton/shoot_back_13.png" id="26_fa4v1"]
+[ext_resource type="Texture2D" uid="uid://btptnk3pnmq75" path="res://Assets/Animations/Archers/Skeleton/shoot_back_14.png" id="27_5y12a"]
+[ext_resource type="Texture2D" uid="uid://bk71h383cxkc0" path="res://Assets/Animations/Archers/Skeleton/shoot_back_15.png" id="28_nkwvt"]
+[ext_resource type="Texture2D" uid="uid://bbrjfy637yahm" path="res://Assets/Animations/Archers/Skeleton/shoot_back_16.png" id="29_hr2j0"]
+[ext_resource type="Texture2D" uid="uid://c3lt00glh7rp5" path="res://Assets/Animations/Archers/Skeleton/shoot_back_17.png" id="30_fhi83"]
+[ext_resource type="Texture2D" uid="uid://c0c0tbao2oc8y" path="res://Assets/Animations/Archers/Skeleton/shoot_back_18.png" id="31_0lmqn"]
+[ext_resource type="Texture2D" uid="uid://bmlo713fohso8" path="res://Assets/Animations/Archers/Skeleton/shoot_back_19.png" id="32_ftfw0"]
+[ext_resource type="Texture2D" uid="uid://d2pvhmkhhy5ta" path="res://Assets/Animations/Archers/Skeleton/shoot_back_20.png" id="33_6827r"]
+[ext_resource type="Texture2D" uid="uid://cv7i0symkkytg" path="res://Assets/Animations/Archers/Skeleton/shoot_back_21.png" id="34_3wxts"]
+[ext_resource type="Texture2D" uid="uid://c4p53lla3ikrv" path="res://Assets/Animations/Archers/Skeleton/shoot_back_22.png" id="35_5hl8a"]
+[ext_resource type="Texture2D" uid="uid://rcaeo6724huf" path="res://Assets/Animations/Archers/Skeleton/shoot_back_23.png" id="36_pxbsr"]
+[ext_resource type="Texture2D" uid="uid://x3xb16q4eblx" path="res://Assets/Animations/Archers/Skeleton/shoot_back_24.png" id="37_10oaq"]
+[ext_resource type="Texture2D" uid="uid://c6dpw52wwef3g" path="res://Assets/Animations/Archers/Skeleton/shoot_back_25.png" id="38_gwnft"]
+[ext_resource type="Texture2D" uid="uid://b30jbqdhb2dnm" path="res://Assets/Animations/Archers/Skeleton/shoot_back_26.png" id="39_ow8vx"]
+[ext_resource type="Texture2D" uid="uid://e22yjbrrmyon" path="res://Assets/Animations/Archers/Skeleton/shoot_back_27.png" id="40_4bn1v"]
+[ext_resource type="Texture2D" uid="uid://ce76sqmm8oaw1" path="res://Assets/Animations/Archers/Skeleton/shoot_back_28.png" id="41_m4txg"]
+[ext_resource type="Texture2D" uid="uid://bagmickwitmjv" path="res://Assets/Animations/Archers/Skeleton/shoot_back_29.png" id="42_jtwwk"]
+[ext_resource type="Texture2D" uid="uid://dx4dhri6khk1j" path="res://Assets/Animations/Archers/Skeleton/shoot_back_30.png" id="43_q1iqm"]
+[ext_resource type="Texture2D" uid="uid://v0ofli5xa2c0" path="res://Assets/Animations/Archers/Skeleton/shoot_back_31.png" id="44_ktsfd"]
+[ext_resource type="Texture2D" uid="uid://bo23sxv03ubke" path="res://Assets/Animations/Archers/Skeleton/shoot_back_32.png" id="45_8uknv"]
+[ext_resource type="Texture2D" uid="uid://duudkp7xllrvn" path="res://Assets/Animations/Archers/Skeleton/shoot_back_33.png" id="46_t1q64"]
+[ext_resource type="Texture2D" uid="uid://i6gnsv8wthj3" path="res://Assets/Animations/Archers/Skeleton/shoot_back_34.png" id="47_q5n40"]
+[ext_resource type="Texture2D" uid="uid://djb68hnku0t18" path="res://Assets/Animations/Archers/Skeleton/shoot_back_35.png" id="48_t4ubh"]
+[ext_resource type="Texture2D" uid="uid://c112afllbrtth" path="res://Assets/Animations/Archers/Skeleton/shoot_back_36.png" id="49_gdsnc"]
+[ext_resource type="Texture2D" uid="uid://cn0r4aiuji1lb" path="res://Assets/Animations/Archers/Skeleton/shoot_back_37.png" id="50_6d0it"]
+[ext_resource type="Texture2D" uid="uid://dst5ty3lxk78n" path="res://Assets/Animations/Archers/Skeleton/shoot_back_38.png" id="51_ih0eg"]
+[ext_resource type="Texture2D" uid="uid://cdqqrbuhos83e" path="res://Assets/Animations/Archers/Skeleton/shoot_back_39.png" id="52_2i57y"]
+[ext_resource type="Texture2D" uid="uid://x03rn85v6v5i" path="res://Assets/Animations/Archers/Skeleton/shoot_back_40.png" id="53_y5wty"]
+[ext_resource type="Texture2D" uid="uid://cyr8r7li7np6q" path="res://Assets/Animations/Archers/Skeleton/shoot_back_41.png" id="54_j21mw"]
+[ext_resource type="Texture2D" uid="uid://m60tutlvsn8l" path="res://Assets/Animations/Archers/Skeleton/shoot_back_42.png" id="55_6mtmn"]
+[ext_resource type="Texture2D" uid="uid://ci3eqs2hrkvts" path="res://Assets/Animations/Archers/Skeleton/shoot_back_43.png" id="56_oblgd"]
+[ext_resource type="Texture2D" uid="uid://bmxi75xqtsmcy" path="res://Assets/Animations/Archers/Skeleton/shoot_back_44.png" id="57_necvs"]
+[ext_resource type="Texture2D" uid="uid://c4140pcdh6mr8" path="res://Assets/Animations/Archers/Skeleton/shoot_back_45.png" id="58_ajquu"]
+[ext_resource type="Texture2D" uid="uid://c66nhk3m03vux" path="res://Assets/Animations/Archers/Skeleton/shoot_back_46.png" id="59_cdk7l"]
+[ext_resource type="Texture2D" uid="uid://vybxh7lbhwj5" path="res://Assets/Animations/Archers/Skeleton/shoot_back_47.png" id="60_24b0h"]
+[ext_resource type="Texture2D" uid="uid://d13ulv825svei" path="res://Assets/Animations/Archers/Skeleton/shoot_back_48.png" id="61_cs1xl"]
+[ext_resource type="Texture2D" uid="uid://rdgg0y3o0n4g" path="res://Assets/Animations/Archers/Skeleton/shoot_back_49.png" id="62_5j3ax"]
+[ext_resource type="Texture2D" uid="uid://cuovf43emcddc" path="res://Assets/Animations/Archers/Skeleton/shoot_back_50.png" id="63_p3x1j"]
+[ext_resource type="Texture2D" uid="uid://bj770la27rxma" path="res://Assets/Animations/Archers/Skeleton/shoot_back_51.png" id="64_k2a5l"]
+[ext_resource type="Texture2D" uid="uid://b4fhd8b1vvt4k" path="res://Assets/Animations/Archers/Skeleton/shoot_back_52.png" id="65_vmv88"]
+[ext_resource type="Texture2D" uid="uid://38bowkp1dpwe" path="res://Assets/Animations/Archers/Skeleton/shoot_back_53.png" id="66_i1dod"]
+[ext_resource type="Texture2D" uid="uid://di7q6aw6a6610" path="res://Assets/Animations/Archers/Skeleton/shoot_back_54.png" id="67_xyugd"]
+[ext_resource type="Texture2D" uid="uid://s7pr8ae8f2hb" path="res://Assets/Animations/Archers/Skeleton/shoot_back_55.png" id="68_mgv0l"]
+[ext_resource type="Texture2D" uid="uid://caw24g2wtwtx1" path="res://Assets/Animations/Archers/Skeleton/shoot_front_01.png" id="69_xx4u0"]
+[ext_resource type="Texture2D" uid="uid://bv0wlrque45ny" path="res://Assets/Animations/Archers/Skeleton/shoot_front_02.png" id="70_aumy2"]
+[ext_resource type="Texture2D" uid="uid://cvldp7ge6ni2b" path="res://Assets/Animations/Archers/Skeleton/shoot_front_03.png" id="71_lgags"]
+[ext_resource type="Texture2D" uid="uid://cbiwxude2nbu2" path="res://Assets/Animations/Archers/Skeleton/shoot_front_04.png" id="72_galbm"]
+[ext_resource type="Texture2D" uid="uid://b8uar7he8fxsr" path="res://Assets/Animations/Archers/Skeleton/shoot_front_05.png" id="73_n3nkp"]
+[ext_resource type="Texture2D" uid="uid://ut5quu5y2xm1" path="res://Assets/Animations/Archers/Skeleton/shoot_front_06.png" id="74_novry"]
+[ext_resource type="Texture2D" uid="uid://bb7k5cngfv8tw" path="res://Assets/Animations/Archers/Skeleton/shoot_front_07.png" id="75_eymb6"]
+[ext_resource type="Texture2D" uid="uid://bdheo42015ggr" path="res://Assets/Animations/Archers/Skeleton/shoot_front_08.png" id="76_v2bcl"]
+[ext_resource type="Texture2D" uid="uid://c552c051rl77d" path="res://Assets/Animations/Archers/Skeleton/shoot_front_09.png" id="77_5kcmc"]
+[ext_resource type="Texture2D" uid="uid://cl0rdoi7nx6ma" path="res://Assets/Animations/Archers/Skeleton/shoot_front_10.png" id="78_4l6g6"]
+[ext_resource type="Texture2D" uid="uid://buh7hcu48i53a" path="res://Assets/Animations/Archers/Skeleton/shoot_front_11.png" id="79_e42e8"]
+[ext_resource type="Texture2D" uid="uid://5vcrucrd34u6" path="res://Assets/Animations/Archers/Skeleton/shoot_front_12.png" id="80_74y8p"]
+[ext_resource type="Texture2D" uid="uid://5hqjkkbd1ps2" path="res://Assets/Animations/Archers/Skeleton/shoot_front_13.png" id="81_qnw4y"]
+[ext_resource type="Texture2D" uid="uid://xfhe87k3qw2e" path="res://Assets/Animations/Archers/Skeleton/shoot_front_14.png" id="82_nk0kp"]
+[ext_resource type="Texture2D" uid="uid://druiu6ij33l0v" path="res://Assets/Animations/Archers/Skeleton/shoot_front_15.png" id="83_n8hqv"]
+[ext_resource type="Texture2D" uid="uid://dxhprpj6l7qbo" path="res://Assets/Animations/Archers/Skeleton/shoot_front_16.png" id="84_3r3pg"]
+[ext_resource type="Texture2D" uid="uid://c8q8rk58jvpr7" path="res://Assets/Animations/Archers/Skeleton/shoot_front_17.png" id="85_rtw3x"]
+[ext_resource type="Texture2D" uid="uid://bdeguosd7qv2r" path="res://Assets/Animations/Archers/Skeleton/shoot_front_18.png" id="86_i1ybp"]
+[ext_resource type="Texture2D" uid="uid://dsr6s0bdke45s" path="res://Assets/Animations/Archers/Skeleton/shoot_front_19.png" id="87_hacrj"]
+[ext_resource type="Texture2D" uid="uid://svaox1ca7rc8" path="res://Assets/Animations/Archers/Skeleton/shoot_front_20.png" id="88_duqop"]
+[ext_resource type="Texture2D" uid="uid://cbhjlgeivahni" path="res://Assets/Animations/Archers/Skeleton/shoot_front_21.png" id="89_2sci8"]
+[ext_resource type="Texture2D" uid="uid://byoxqd6d5d1jj" path="res://Assets/Animations/Archers/Skeleton/shoot_front_22.png" id="90_ucofd"]
+[ext_resource type="Texture2D" uid="uid://cldkchof8a03k" path="res://Assets/Animations/Archers/Skeleton/shoot_front_23.png" id="91_n4vh5"]
+[ext_resource type="Texture2D" uid="uid://obvk8vee1fp4" path="res://Assets/Animations/Archers/Skeleton/shoot_front_24.png" id="92_tyver"]
+[ext_resource type="Texture2D" uid="uid://cw5dy8rwg40w6" path="res://Assets/Animations/Archers/Skeleton/shoot_front_25.png" id="93_x4ixc"]
+[ext_resource type="Texture2D" uid="uid://dm38w87cehjf" path="res://Assets/Animations/Archers/Skeleton/shoot_front_26.png" id="94_hgl70"]
+[ext_resource type="Texture2D" uid="uid://bn54dvjsvs7vg" path="res://Assets/Animations/Archers/Skeleton/shoot_front_27.png" id="95_s3tp4"]
+[ext_resource type="Texture2D" uid="uid://c012dd6pei1kl" path="res://Assets/Animations/Archers/Skeleton/shoot_front_28.png" id="96_g4q8p"]
+[ext_resource type="Texture2D" uid="uid://baeqmvogcdk3q" path="res://Assets/Animations/Archers/Skeleton/shoot_front_29.png" id="97_nkwpk"]
+[ext_resource type="Texture2D" uid="uid://3pv3gm5xhjka" path="res://Assets/Animations/Archers/Skeleton/shoot_front_30.png" id="98_mt87f"]
+[ext_resource type="Texture2D" uid="uid://dngpck8fphhjh" path="res://Assets/Animations/Archers/Skeleton/shoot_front_31.png" id="99_kaq3u"]
+[ext_resource type="Texture2D" uid="uid://dbeuk6pkih4ks" path="res://Assets/Animations/Archers/Skeleton/shoot_front_32.png" id="100_3cou3"]
+[ext_resource type="Texture2D" uid="uid://4quireqbj676" path="res://Assets/Animations/Archers/Skeleton/shoot_front_33.png" id="101_h2o5h"]
+[ext_resource type="Texture2D" uid="uid://byk80f0mx5dbr" path="res://Assets/Animations/Archers/Skeleton/shoot_front_34.png" id="102_oa2gy"]
+[ext_resource type="Texture2D" uid="uid://bjj3ufjflkbrw" path="res://Assets/Animations/Archers/Skeleton/shoot_front_35.png" id="103_cj44v"]
+[ext_resource type="Texture2D" uid="uid://21djur6hu24r" path="res://Assets/Animations/Archers/Skeleton/shoot_front_36.png" id="104_hvvob"]
+[ext_resource type="Texture2D" uid="uid://2kjcjwosgxfv" path="res://Assets/Animations/Archers/Skeleton/shoot_front_37.png" id="105_4uvud"]
+[ext_resource type="Texture2D" uid="uid://qrqs3hgagv1s" path="res://Assets/Animations/Archers/Skeleton/shoot_front_38.png" id="106_61cug"]
+[ext_resource type="Texture2D" uid="uid://dg8y82bek6x6u" path="res://Assets/Animations/Archers/Skeleton/shoot_front_39.png" id="107_nr24i"]
+[ext_resource type="Texture2D" uid="uid://c7i1qiv2ya7fg" path="res://Assets/Animations/Archers/Skeleton/shoot_front_40.png" id="108_03dtm"]
+[ext_resource type="Texture2D" uid="uid://ddmlngnm0kh5h" path="res://Assets/Animations/Archers/Skeleton/shoot_front_41.png" id="109_7fsjy"]
+[ext_resource type="Texture2D" uid="uid://o783ejyxeaj" path="res://Assets/Animations/Archers/Skeleton/shoot_front_42.png" id="110_6oruv"]
+[ext_resource type="Texture2D" uid="uid://btsw2u311abrl" path="res://Assets/Animations/Archers/Skeleton/shoot_front_43.png" id="111_b5ge4"]
+[ext_resource type="Texture2D" uid="uid://csxljsrig7urh" path="res://Assets/Animations/Archers/Skeleton/shoot_front_44.png" id="112_fyncy"]
+[ext_resource type="Texture2D" uid="uid://c66mhteo7lsvr" path="res://Assets/Animations/Archers/Skeleton/shoot_front_45.png" id="113_3r8c3"]
+[ext_resource type="Texture2D" uid="uid://b3nnr06ikykmq" path="res://Assets/Animations/Archers/Skeleton/shoot_front_46.png" id="114_ybofd"]
+[ext_resource type="Texture2D" uid="uid://dglan3cf00l5j" path="res://Assets/Animations/Archers/Skeleton/shoot_front_47.png" id="115_obuy8"]
+[ext_resource type="Texture2D" uid="uid://ctssy580mbxft" path="res://Assets/Animations/Archers/Skeleton/shoot_front_48.png" id="116_bq0vx"]
+[ext_resource type="Texture2D" uid="uid://cjoyofcr60u5m" path="res://Assets/Animations/Archers/Skeleton/shoot_front_49.png" id="117_qx17b"]
+[ext_resource type="Texture2D" uid="uid://2ay7mnelymun" path="res://Assets/Animations/Archers/Skeleton/shoot_front_50.png" id="118_xusnn"]
+[ext_resource type="Texture2D" uid="uid://nlb7pqjyw0v8" path="res://Assets/Animations/Archers/Skeleton/shoot_front_51.png" id="119_ypv5w"]
+[ext_resource type="Texture2D" uid="uid://c4rvdyo1y1y84" path="res://Assets/Animations/Archers/Skeleton/shoot_front_52.png" id="120_y3kei"]
+[ext_resource type="Texture2D" uid="uid://ln1plicvqa4l" path="res://Assets/Animations/Archers/Skeleton/shoot_front_53.png" id="121_c6lxk"]
+[ext_resource type="Texture2D" uid="uid://bih2flg7lhq7s" path="res://Assets/Animations/Archers/Skeleton/shoot_front_54.png" id="122_ecl5d"]
+[ext_resource type="Texture2D" uid="uid://dm2g1bv5wfiui" path="res://Assets/Animations/Archers/Skeleton/shoot_front_55.png" id="123_g3fod"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/ArcherTowers/skeleton_shooter.gd" id="124_nsvow"]
+[ext_resource type="PackedScene" uid="uid://dwaokbtnrpbwn" path="res://Scenes/Bullets/straight_arrow.tscn" id="127_y2cbb"]
+[ext_resource type="Texture2D" uid="uid://ddbk3trym1jmw" path="res://Assets/Images/DefenceTowers/Archers/Towers/Skeleton-Front.png" id="129_40wgt"]
+
+[sub_resource type="Resource" id="Resource_5ynjd"]
+script = ExtResource("2_f4jaw")
+damage_low = 84
+damage_high = 126
+attack_speed = 2.5
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7qrh"]
+atlas = ExtResource("5_0ddxn")
+region = Rect2(6, 5, 85, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oecpb"]
+atlas = ExtResource("7_13l1i")
+region = Rect2(6, 5, 85, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pn3k3"]
+atlas = ExtResource("8_srhrh")
+region = Rect2(6, 5, 85, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b7vbf"]
+atlas = ExtResource("10_7ujsb")
+region = Rect2(6, 5, 85, 86)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5wpek"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_6s04m")
+}],
+"loop": true,
+"name": &"idle_front",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_so4m4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_kw4lp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_kiykf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_w4oob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_1uymr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_s13l5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_17a1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_20omd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_000ge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_a58b1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_8tpvi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_1s1qm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_usdoe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_fa4v1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_5y12a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_nkwvt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_hr2j0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_fhi83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_0lmqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_ftfw0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_6827r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_3wxts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_5hl8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_pxbsr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_10oaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_gwnft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_ow8vx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_4bn1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_m4txg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_jtwwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_q1iqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_ktsfd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_8uknv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_t1q64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_q5n40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_t4ubh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_gdsnc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_6d0it")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_ih0eg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_2i57y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_y5wty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_j21mw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_6mtmn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_oblgd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_necvs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_ajquu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_cdk7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_24b0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_cs1xl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_5j3ax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_p3x1j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_k2a5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_vmv88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_i1dod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_xyugd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_mgv0l")
+}],
+"loop": false,
+"name": &"shoot_back",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_6s04m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_xx4u0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_aumy2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_lgags")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_galbm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_n3nkp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_novry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_eymb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_v2bcl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_5kcmc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_4l6g6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_e42e8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_74y8p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_qnw4y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_nk0kp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_n8hqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_3r3pg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_rtw3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_i1ybp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_hacrj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_duqop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_2sci8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_ucofd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_n4vh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_tyver")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_x4ixc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_hgl70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_s3tp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_g4q8p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_nkwpk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_mt87f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_kaq3u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_3cou3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_h2o5h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_oa2gy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_cj44v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_hvvob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_4uvud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_61cug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_nr24i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_03dtm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_7fsjy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_6oruv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_b5ge4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_fyncy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_3r8c3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_ybofd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_obuy8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_bq0vx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_qx17b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_xusnn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_ypv5w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_y3kei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_c6lxk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_ecl5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_g3fod")
+}],
+"loop": false,
+"name": &"shoot_front",
+"speed": 30.0
+}]
+
+[node name="SkeletonArcherTower" node_paths=PackedStringArray("shooter_list") instance=ExtResource("1_c07ie")]
+y_sort_enabled = false
+script = ExtResource("2_yid3a")
+start_data = SubResource("Resource_5ynjd")
+shooter_list = [NodePath("SkeletonShooter"), NodePath("SkeletonShooter2")]
+tower_name = "骷髅狙击塔"
+tower_texture = ExtResource("2_xww11")
+tower_level = 4
+based_skin = 1
+start_tower_range = 480
+
+[node name="BasedSprite" parent="Based" index="0"]
+texture = ExtResource("4_t6n5x")
+
+[node name="BasedSpriteSelect" parent="Based" index="1"]
+texture = ExtResource("5_vbqrf")
+
+[node name="TowerButton" parent="." index="2"]
+offset_left = -53.0
+offset_top = -123.0
+offset_right = 55.0
+
+[node name="Circle" parent="TowerUI" index="4"]
+position = Vector2(0, -59)
+
+[node name="SellButton" parent="TowerUI/Circle" index="0"]
+visible = false
+
+[node name="TowerSkillButton" parent="TowerUI/Circle" index="1" node_paths=PackedStringArray("linked_tower") instance=ExtResource("4_3drth")]
+offset_left = -140.001
+offset_top = -139.999
+offset_right = -55.001
+offset_bottom = -54.9993
+texture_normal = SubResource("AtlasTexture_a7qrh")
+texture_pressed = SubResource("AtlasTexture_a7qrh")
+texture_hover = ExtResource("6_051h2")
+texture_disabled = SubResource("AtlasTexture_oecpb")
+linked_tower = NodePath("../../..")
+skill_name = "猩红狙击箭"
+skill_prices = Array[int]([250, 250, 250])
+skill_intro = PackedStringArray("每射出19发箭矢，下一次攻击必定秒杀敌人。", "每射出9发箭矢，下一次攻击必定秒杀敌人。", "每射出6发箭矢，下一次攻击必定秒杀敌人。")
+skill_words = "一发入魂！"
+
+[node name="TowerSkillButton2" parent="TowerUI/Circle" index="2" node_paths=PackedStringArray("linked_tower") instance=ExtResource("4_3drth")]
+offset_left = 53.7494
+offset_top = -140.0
+offset_right = 138.749
+offset_bottom = -55.0002
+texture_normal = SubResource("AtlasTexture_pn3k3")
+texture_pressed = SubResource("AtlasTexture_pn3k3")
+texture_hover = ExtResource("9_dj342")
+texture_disabled = SubResource("AtlasTexture_b7vbf")
+linked_tower = NodePath("../../..")
+skill_name = "穿刺"
+skill_id = 1
+skill_prices = Array[int]([300])
+skill_intro = PackedStringArray("箭矢命中敌人后会继续飞行一段距离，对后续命中的敌人造成50%伤害。")
+skill_words = "你再看看你后面呢？"
+
+[node name="TowerSprite" parent="." index="7"]
+position = Vector2(-7, -51)
+texture = ExtResource("14_4lu20")
+region_rect = Rect2(163, 232, 201, 257)
+
+[node name="SkeletonShooter" type="AnimatedSprite2D" parent="." index="9" node_paths=PackedStringArray("skeleton_archer_tower", "tower")]
+position = Vector2(-15, -110)
+sprite_frames = SubResource("SpriteFrames_5wpek")
+animation = &"idle_front"
+autoplay = "idle_front"
+offset = Vector2(-2, 0)
+flip_h = true
+script = ExtResource("124_nsvow")
+skeleton_archer_tower = NodePath("..")
+tower = NodePath("..")
+summon_frame = 35
+arrow_scene = ExtResource("127_y2cbb")
+
+[node name="FrontNoFlip" type="Marker2D" parent="SkeletonShooter" index="0"]
+position = Vector2(-4, 0)
+
+[node name="FrontFlip" type="Marker2D" parent="SkeletonShooter" index="1"]
+position = Vector2(-5, 0)
+
+[node name="BackFlip" type="Marker2D" parent="SkeletonShooter" index="2"]
+position = Vector2(-4, -1)
+
+[node name="BackNoFlip" type="Marker2D" parent="SkeletonShooter" index="3"]
+position = Vector2(5, -1)
+
+[node name="SkeletonShooter2" type="AnimatedSprite2D" parent="." index="10" node_paths=PackedStringArray("skeleton_archer_tower", "tower")]
+position = Vector2(18, -110)
+sprite_frames = SubResource("SpriteFrames_5wpek")
+animation = &"idle_front"
+autoplay = "idle_front"
+offset = Vector2(2, 0)
+script = ExtResource("124_nsvow")
+skeleton_archer_tower = NodePath("..")
+tower = NodePath("..")
+summon_frame = 35
+arrow_scene = ExtResource("127_y2cbb")
+
+[node name="FrontNoFlip" type="Marker2D" parent="SkeletonShooter2" index="0"]
+position = Vector2(-4, 0)
+
+[node name="FrontFlip" type="Marker2D" parent="SkeletonShooter2" index="1"]
+position = Vector2(-5, 0)
+
+[node name="BackFlip" type="Marker2D" parent="SkeletonShooter2" index="2"]
+position = Vector2(-4, -1)
+
+[node name="BackNoFlip" type="Marker2D" parent="SkeletonShooter2" index="3"]
+position = Vector2(5, -1)
+
+[node name="TowerSpriteFront" type="Sprite2D" parent="." index="11"]
+position = Vector2(4, -85)
+texture = ExtResource("129_40wgt")
+region_rect = Rect2(202, 285, 148, 62)

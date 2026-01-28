@@ -1,0 +1,71 @@
+[gd_scene load_steps=16 format=3 uid="uid://dkjb4g44gllfp"]
+
+[ext_resource type="Script" path="res://Scripts/Effects/normal_effect.gd" id="1_dclry"]
+[ext_resource type="Texture2D" uid="uid://bghnm1lxh0su7" path="res://Assets/Images/Effects/StoneTowerSkill2/0001.png" id="1_u37oh"]
+[ext_resource type="Texture2D" uid="uid://dp4m4qxw33ovv" path="res://Assets/Images/Effects/StoneTowerSkill2/0002.png" id="2_lctir"]
+[ext_resource type="Texture2D" uid="uid://cdhtmas2c5v77" path="res://Assets/Images/Effects/StoneTowerSkill2/0003.png" id="3_1xtll"]
+[ext_resource type="Texture2D" uid="uid://by0ghtgwe5713" path="res://Assets/Images/Effects/StoneTowerSkill2/0004.png" id="4_5lhsi"]
+[ext_resource type="Texture2D" uid="uid://ddoh8qdn7nnmk" path="res://Assets/Images/Effects/StoneTowerSkill2/0005.png" id="5_171fa"]
+[ext_resource type="Texture2D" uid="uid://bjuckvnag74mg" path="res://Assets/Images/Effects/StoneTowerSkill2/0006.png" id="6_h1iem"]
+[ext_resource type="Texture2D" uid="uid://cxn3sw0ffsj7p" path="res://Assets/Images/Effects/StoneTowerSkill2/0007.png" id="7_fej5n"]
+[ext_resource type="Texture2D" uid="uid://icvf1ub76u2u" path="res://Assets/Images/Effects/StoneTowerSkill2/0008.png" id="8_x0mu5"]
+[ext_resource type="Texture2D" uid="uid://psx2c0r1u3ir" path="res://Assets/Images/Effects/StoneTowerSkill2/0009.png" id="9_gqlx7"]
+[ext_resource type="Texture2D" uid="uid://c51mfksua1owg" path="res://Assets/Images/Effects/StoneTowerSkill2/0010.png" id="10_4i342"]
+[ext_resource type="Texture2D" uid="uid://draloxnri3yls" path="res://Assets/Images/Effects/StoneTowerSkill2/0011.png" id="11_3od7e"]
+[ext_resource type="Texture2D" uid="uid://ipcah6wm83o8" path="res://Assets/Images/Effects/StoneTowerSkill2/0012.png" id="12_7jdt0"]
+[ext_resource type="Texture2D" uid="uid://cgdqpbxpt60hk" path="res://Assets/Images/Effects/StoneTowerSkill2/0013.png" id="13_7pvxb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f2lym"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_u37oh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_lctir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1xtll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5lhsi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_171fa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_h1iem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fej5n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_x0mu5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_gqlx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4i342")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_3od7e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7jdt0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_7pvxb")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 24.0
+}]
+
+[node name="ExplosionStoneEffect" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_f2lym")
+autoplay = "default"
+script = ExtResource("1_dclry")

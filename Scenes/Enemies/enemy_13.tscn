@@ -1,0 +1,289 @@
+[gd_scene load_steps=62 format=3 uid="uid://j30jxo8yq22y"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_hkymv"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_13.gd" id="2_k8fpu"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="3_4xerg"]
+[ext_resource type="Texture2D" uid="uid://dnfggx7sessku" path="res://Assets/Images/UI/InformationBar/腐化苦力怕.png" id="3_hi7gq"]
+[ext_resource type="Texture2D" uid="uid://du25m0rog668q" path="res://Assets/Animations/Enemies/13野区苦力怕/idle_0.png" id="5_47xwk"]
+[ext_resource type="PackedScene" uid="uid://dcjuved17hj6j" path="res://Scenes/Enemies/EnemyComponents/appear_audio_component.tscn" id="5_d0vj3"]
+[ext_resource type="Texture2D" uid="uid://blpdx4ka0ba3c" path="res://Assets/Animations/Enemies/13野区苦力怕/move_back_00.png" id="6_w3rwj"]
+[ext_resource type="AudioStream" uid="uid://q31nbpg82aaj" path="res://Assets/Sounds/FXs/Enemies/腐化苦力怕/入场1.wav" id="6_x6ftf"]
+[ext_resource type="Texture2D" uid="uid://bgogrnad2x2fw" path="res://Assets/Animations/Enemies/13野区苦力怕/move_back_01.png" id="7_amjxo"]
+[ext_resource type="AudioStream" uid="uid://er7a5g1k3jt8" path="res://Assets/Sounds/FXs/Enemies/腐化苦力怕/入场2.wav" id="7_g3jdl"]
+[ext_resource type="Texture2D" uid="uid://dy4cci8ubbkls" path="res://Assets/Animations/Enemies/13野区苦力怕/move_back_02.png" id="8_p3faj"]
+[ext_resource type="AudioStream" uid="uid://cbaamf5bgxukn" path="res://Assets/Sounds/FXs/Enemies/腐化苦力怕/入场3.wav" id="8_xxtlv"]
+[ext_resource type="Texture2D" uid="uid://diqwqx60t01w0" path="res://Assets/Animations/Enemies/13野区苦力怕/move_back_03.png" id="9_5sj0v"]
+[ext_resource type="AudioStream" uid="uid://dma3eieeqmoxf" path="res://Assets/Sounds/FXs/Enemies/腐化苦力怕/入场4.wav" id="9_vggif"]
+[ext_resource type="Texture2D" uid="uid://b8ao0ex8ldrgh" path="res://Assets/Animations/Enemies/13野区苦力怕/move_back_04.png" id="10_kdlj4"]
+[ext_resource type="Texture2D" uid="uid://s834xwwnq042" path="res://Assets/Animations/Enemies/13野区苦力怕/move_back_05.png" id="11_5fsn7"]
+[ext_resource type="Texture2D" uid="uid://b4w7ge2yunmfj" path="res://Assets/Animations/Enemies/13野区苦力怕/move_back_06.png" id="12_ajest"]
+[ext_resource type="Texture2D" uid="uid://otohcrs6p3a0" path="res://Assets/Animations/Enemies/13野区苦力怕/move_back_07.png" id="13_jhf8g"]
+[ext_resource type="Texture2D" uid="uid://cpkjctxs13qaw" path="res://Assets/Animations/Enemies/13野区苦力怕/move_back_08.png" id="14_04x6k"]
+[ext_resource type="Texture2D" uid="uid://0vam22mh6mal" path="res://Assets/Animations/Enemies/13野区苦力怕/move_back_09.png" id="15_diwdf"]
+[ext_resource type="Texture2D" uid="uid://dox04rlbe2pgd" path="res://Assets/Animations/Enemies/13野区苦力怕/move_back_10.png" id="16_3nwek"]
+[ext_resource type="Texture2D" uid="uid://cni5tdqc8ntqw" path="res://Assets/Animations/Enemies/13野区苦力怕/move_back_11.png" id="17_s7fq7"]
+[ext_resource type="Texture2D" uid="uid://ua2t8pmc15jv" path="res://Assets/Animations/Enemies/13野区苦力怕/move_back_12.png" id="18_3by12"]
+[ext_resource type="Texture2D" uid="uid://cqttwcb1volhy" path="res://Assets/Animations/Enemies/13野区苦力怕/move_back_13.png" id="19_5ofow"]
+[ext_resource type="Texture2D" uid="uid://i8aixbva3qtv" path="res://Assets/Animations/Enemies/13野区苦力怕/move_back_14.png" id="20_vn4ay"]
+[ext_resource type="Texture2D" uid="uid://dojknct2lv0io" path="res://Assets/Animations/Enemies/13野区苦力怕/move_back_15.png" id="21_go2xh"]
+[ext_resource type="Texture2D" uid="uid://dgbd064w7t6vo" path="res://Assets/Animations/Enemies/13野区苦力怕/move_front_00.png" id="22_4574w"]
+[ext_resource type="Texture2D" uid="uid://dvrh3jtlav7wk" path="res://Assets/Animations/Enemies/13野区苦力怕/move_front_01.png" id="23_kmv2y"]
+[ext_resource type="Texture2D" uid="uid://28ip5sx8pp7o" path="res://Assets/Animations/Enemies/13野区苦力怕/move_front_02.png" id="24_kgp1j"]
+[ext_resource type="Texture2D" uid="uid://blcjtyxj4dbkq" path="res://Assets/Animations/Enemies/13野区苦力怕/move_front_03.png" id="25_4km5i"]
+[ext_resource type="Texture2D" uid="uid://bn2goarek05gm" path="res://Assets/Animations/Enemies/13野区苦力怕/move_front_04.png" id="26_86wl0"]
+[ext_resource type="Texture2D" uid="uid://b0n0tfouhq72o" path="res://Assets/Animations/Enemies/13野区苦力怕/move_front_05.png" id="27_1a8ov"]
+[ext_resource type="Texture2D" uid="uid://dg04y0ryojm52" path="res://Assets/Animations/Enemies/13野区苦力怕/move_front_06.png" id="28_ubw5r"]
+[ext_resource type="Texture2D" uid="uid://djqp5ca4bp8vf" path="res://Assets/Animations/Enemies/13野区苦力怕/move_front_07.png" id="29_kk8u1"]
+[ext_resource type="Texture2D" uid="uid://bxx3wnqadis67" path="res://Assets/Animations/Enemies/13野区苦力怕/move_front_08.png" id="30_qel0s"]
+[ext_resource type="Texture2D" uid="uid://cgwwdmqhw4qbv" path="res://Assets/Animations/Enemies/13野区苦力怕/move_front_09.png" id="31_wyiy7"]
+[ext_resource type="Texture2D" uid="uid://bo2dk45b1ihrh" path="res://Assets/Animations/Enemies/13野区苦力怕/move_front_10.png" id="32_sba6j"]
+[ext_resource type="Texture2D" uid="uid://f07awgidywyn" path="res://Assets/Animations/Enemies/13野区苦力怕/move_front_11.png" id="33_b8t5d"]
+[ext_resource type="Texture2D" uid="uid://bcestdplvcm0p" path="res://Assets/Animations/Enemies/13野区苦力怕/move_front_12.png" id="34_t07yh"]
+[ext_resource type="Texture2D" uid="uid://dy7lx1aa0kevq" path="res://Assets/Animations/Enemies/13野区苦力怕/move_front_13.png" id="35_nfaue"]
+[ext_resource type="Texture2D" uid="uid://d3icp2w81yxuo" path="res://Assets/Animations/Enemies/13野区苦力怕/move_front_14.png" id="36_kbw2b"]
+[ext_resource type="Texture2D" uid="uid://dnsbtog6dmly0" path="res://Assets/Animations/Enemies/13野区苦力怕/move_front_15.png" id="37_ckgja"]
+[ext_resource type="Texture2D" uid="uid://ry0ap2fruvwo" path="res://Assets/Animations/Enemies/13野区苦力怕/move_normal_00.png" id="38_fhpeg"]
+[ext_resource type="Texture2D" uid="uid://dnjgkbp5lq71" path="res://Assets/Animations/Enemies/13野区苦力怕/move_normal_01.png" id="39_v86jo"]
+[ext_resource type="Texture2D" uid="uid://ccbvt8eb2al5i" path="res://Assets/Animations/Enemies/13野区苦力怕/move_normal_02.png" id="40_6ferx"]
+[ext_resource type="Texture2D" uid="uid://b0q60ahhcpivr" path="res://Assets/Animations/Enemies/13野区苦力怕/move_normal_03.png" id="41_rwtub"]
+[ext_resource type="Texture2D" uid="uid://d0qwdhyc6bwm" path="res://Assets/Animations/Enemies/13野区苦力怕/move_normal_04.png" id="42_dhbnw"]
+[ext_resource type="Texture2D" uid="uid://dk1mcl7mfm3oe" path="res://Assets/Animations/Enemies/13野区苦力怕/move_normal_05.png" id="43_dgu2q"]
+[ext_resource type="Texture2D" uid="uid://4o000s4wemtp" path="res://Assets/Animations/Enemies/13野区苦力怕/move_normal_06.png" id="44_s1ixl"]
+[ext_resource type="Texture2D" uid="uid://d3vmwdjxonbw3" path="res://Assets/Animations/Enemies/13野区苦力怕/move_normal_07.png" id="45_k5pkg"]
+[ext_resource type="Texture2D" uid="uid://bpcbq8guvm0dh" path="res://Assets/Animations/Enemies/13野区苦力怕/move_normal_08.png" id="46_gd4tq"]
+[ext_resource type="Texture2D" uid="uid://kiv6ypi0ohxt" path="res://Assets/Animations/Enemies/13野区苦力怕/move_normal_09.png" id="47_saqsk"]
+[ext_resource type="Texture2D" uid="uid://bfjf1uodkrwkt" path="res://Assets/Animations/Enemies/13野区苦力怕/move_normal_10.png" id="48_oba5s"]
+[ext_resource type="Texture2D" uid="uid://cr0qbauf1mn1v" path="res://Assets/Animations/Enemies/13野区苦力怕/move_normal_11.png" id="49_kwr6g"]
+[ext_resource type="Texture2D" uid="uid://brlas44o1ao2g" path="res://Assets/Animations/Enemies/13野区苦力怕/move_normal_12.png" id="50_pfvrh"]
+[ext_resource type="Texture2D" uid="uid://qkn38ufiqaiw" path="res://Assets/Animations/Enemies/13野区苦力怕/move_normal_13.png" id="51_3hlyu"]
+[ext_resource type="Texture2D" uid="uid://iha73rh7sb4f" path="res://Assets/Animations/Enemies/13野区苦力怕/move_normal_14.png" id="52_qjgjm"]
+[ext_resource type="Texture2D" uid="uid://c736agh060vs7" path="res://Assets/Animations/Enemies/13野区苦力怕/move_normal_15.png" id="53_2gtn3"]
+
+[sub_resource type="Resource" id="Resource_uk3rk"]
+script = ExtResource("3_4xerg")
+health = 70
+dodge_rate = 0.0
+near_damage_low = 0
+near_damage_high = 0
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.0
+physic_immune = false
+magic_defence = 0.4
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 2.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mdmmd"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_47xwk")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_w3rwj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_amjxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p3faj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5sj0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_kdlj4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5fsn7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ajest")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jhf8g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_04x6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_diwdf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_3nwek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_s7fq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_3by12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_5ofow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_vn4ay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_go2xh")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 48.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_4574w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_kmv2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_kgp1j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_4km5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_86wl0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_1a8ov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_ubw5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_kk8u1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_qel0s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_wyiy7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_sba6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_b8t5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_t07yh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_nfaue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_kbw2b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_ckgja")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 48.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("38_fhpeg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_v86jo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_6ferx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_rwtub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_dhbnw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_dgu2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_s1ixl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_k5pkg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_gd4tq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_saqsk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_oba5s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_kwr6g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_pfvrh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_3hlyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_qjgjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_2gtn3")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 48.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7mxxu"]
+radius = 73.9444
+
+[node name="Enemy13" groups=["creeper", "undead"] instance=ExtResource("1_hkymv")]
+script = ExtResource("2_k8fpu")
+enemy_name = "腐化爬行者"
+enemy_id = 13
+enemy_texture = ExtResource("3_hi7gq")
+start_data = SubResource("Resource_uk3rk")
+bounty = 8
+die_audio_stream_list = Array[AudioStream]([])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(4.76837e-07, -80)
+sprite_frames = SubResource("SpriteFrames_mdmmd")
+
+[node name="EnemyButton" parent="UnitBody" index="4"]
+offset_left = -43.0
+offset_top = -175.0
+offset_right = 45.0
+
+[node name="ExplosionArea" type="Area2D" parent="UnitBody" index="8"]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/ExplosionArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_7mxxu")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="AppearAudioComponent" parent="." index="5" instance=ExtResource("5_d0vj3")]
+appear_audio_list = Array[AudioStream]([ExtResource("6_x6ftf"), ExtResource("7_g3jdl"), ExtResource("8_xxtlv"), ExtResource("9_vggif")])

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://417dk666arw8"]
+
+[ext_resource type="PackedScene" uid="uid://bwifge7de0uys" path="res://Scenes/Buffs/dot_buff.tscn" id="1_p5t6w"]
+[ext_resource type="Script" path="res://Scripts/Classes/potion_particle_leader.gd" id="2_nhkiu"]
+
+[node name="CactusPoisonDebuff" instance=ExtResource("1_p5t6w")]
+dot_damage = Array[int]([4])
+can_be_dead = false
+duration = 10.0
+buff_tag = "CactusPoisonDebuff"
+immune_groups = Array[String](["boss", "god", "no_live", "super_unit", "undead", "skeleton"])
+
+[node name="DotTimer" parent="." index="0"]
+wait_time = 0.5
+
+[node name="PotionParticleLeader" type="Node2D" parent="." index="1" node_paths=PackedStringArray("buff_vehicle")]
+script = ExtResource("2_nhkiu")
+potion_color = Color(0, 0.321569, 0.0862745, 1)
+buff_vehicle = NodePath("..")

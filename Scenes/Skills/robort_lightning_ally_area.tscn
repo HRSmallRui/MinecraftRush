@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1q1lt737sfkv"]
+
+[ext_resource type="Script" path="res://Scripts/Skills/robort_lightning_ally_area.gd" id="1_qqdo6"]
+[ext_resource type="Texture2D" uid="uid://ddabpk6opguk2" path="res://Assets/Images/Effects/RobortSkill/LightningRandom1.png" id="2_ny40l"]
+[ext_resource type="Texture2D" uid="uid://b7opqi6uaik2a" path="res://Assets/Images/Effects/RobortSkill/LightningRandom2.png" id="3_b2huk"]
+[ext_resource type="Texture2D" uid="uid://qvtngcyrqvvp" path="res://Assets/Images/Effects/RobortSkill/LightningRandom3.png" id="4_8gtc6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7wuu7"]
+radius = 85.0368
+
+[node name="RobortLightningHitArea" type="Area2D"]
+collision_layer = 0
+collision_mask = 24
+script = ExtResource("1_qqdo6")
+lightning_random_texture_list = Array[Texture]([ExtResource("2_ny40l"), ExtResource("3_b2huk"), ExtResource("4_8gtc6")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.629378, 0.629378)
+shape = SubResource("CircleShape2D_7wuu7")
+
+[node name="LightningSprite" type="Sprite2D" parent="."]
+visible = false
+z_index = 1
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_ny40l")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

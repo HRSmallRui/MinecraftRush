@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://bck1eh6yn7iii"]
+
+[ext_resource type="Script" path="res://Scripts/UI-Components/Stages/tutorial_warning.gd" id="1_wpsnu"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="2_ucst8"]
+
+[node name="TutorialWarning" type="CanvasLayer"]
+script = ExtResource("1_wpsnu")
+
+[node name="IntroLabel" type="Label" parent="."]
+z_index = 2
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -59.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_ucst8")
+theme_override_font_sizes/font_size = 32
+text = "你的行为已被记录在案"
+horizontal_alignment = 1
+vertical_alignment = 1

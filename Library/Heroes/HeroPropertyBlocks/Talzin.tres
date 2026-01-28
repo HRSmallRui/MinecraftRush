@@ -1,0 +1,123 @@
+[gd_resource type="Resource" script_class="HeroPropertyBlock" load_steps=24 format=3 uid="uid://c0swkperp7xfh"]
+
+[ext_resource type="Script" path="res://Library/Heroes/damage_block.gd" id="1_7t47v"]
+[ext_resource type="Texture2D" uid="uid://5rwwnox1pfuo" path="res://Assets/Images/UI/HeroHall/HeroTextures/塔尔辛.png" id="2_albtl"]
+[ext_resource type="Script" path="res://Library/Heroes/hero_property_block.gd" id="2_dd7rv"]
+
+[sub_resource type="Resource" id="Resource_sg355"]
+script = ExtResource("1_7t47v")
+damage_low = 30
+damage_high = 30
+
+[sub_resource type="Resource" id="Resource_xookl"]
+script = ExtResource("1_7t47v")
+damage_low = 35
+damage_high = 40
+
+[sub_resource type="Resource" id="Resource_be8og"]
+script = ExtResource("1_7t47v")
+damage_low = 40
+damage_high = 50
+
+[sub_resource type="Resource" id="Resource_orq3r"]
+script = ExtResource("1_7t47v")
+damage_low = 45
+damage_high = 60
+
+[sub_resource type="Resource" id="Resource_n2yxs"]
+script = ExtResource("1_7t47v")
+damage_low = 50
+damage_high = 70
+
+[sub_resource type="Resource" id="Resource_lxvw0"]
+script = ExtResource("1_7t47v")
+damage_low = 55
+damage_high = 75
+
+[sub_resource type="Resource" id="Resource_7t3e1"]
+script = ExtResource("1_7t47v")
+damage_low = 60
+damage_high = 80
+
+[sub_resource type="Resource" id="Resource_7sg3c"]
+script = ExtResource("1_7t47v")
+damage_low = 65
+damage_high = 85
+
+[sub_resource type="Resource" id="Resource_r66fj"]
+script = ExtResource("1_7t47v")
+damage_low = 70
+damage_high = 90
+
+[sub_resource type="Resource" id="Resource_cafr6"]
+script = ExtResource("1_7t47v")
+damage_low = 75
+damage_high = 100
+
+[sub_resource type="Resource" id="Resource_cgdbs"]
+script = ExtResource("1_7t47v")
+damage_low = 7
+damage_high = 8
+
+[sub_resource type="Resource" id="Resource_u6fsd"]
+script = ExtResource("1_7t47v")
+damage_low = 8
+damage_high = 10
+
+[sub_resource type="Resource" id="Resource_omadu"]
+script = ExtResource("1_7t47v")
+damage_low = 9
+damage_high = 12
+
+[sub_resource type="Resource" id="Resource_olln2"]
+script = ExtResource("1_7t47v")
+damage_low = 10
+damage_high = 14
+
+[sub_resource type="Resource" id="Resource_2inkw"]
+script = ExtResource("1_7t47v")
+damage_low = 11
+damage_high = 16
+
+[sub_resource type="Resource" id="Resource_nwhhl"]
+script = ExtResource("1_7t47v")
+damage_low = 12
+damage_high = 18
+
+[sub_resource type="Resource" id="Resource_i1jcx"]
+script = ExtResource("1_7t47v")
+damage_low = 13
+damage_high = 20
+
+[sub_resource type="Resource" id="Resource_p3lbr"]
+script = ExtResource("1_7t47v")
+damage_low = 14
+damage_high = 22
+
+[sub_resource type="Resource" id="Resource_1rheb"]
+script = ExtResource("1_7t47v")
+damage_low = 15
+damage_high = 24
+
+[sub_resource type="Resource" id="Resource_t16xj"]
+script = ExtResource("1_7t47v")
+damage_low = 16
+damage_high = 27
+
+[resource]
+script = ExtResource("2_dd7rv")
+hero_name = "塔尔辛"
+hero_subname = "沙漠狙击手"
+hero_intro = "塔尔辛是游荡在死亡沙海深处的“黄泉猎手”，砂砾为他筑起无形高台，风啸替他掩盖杀机，当不死怪物靠近部族迁徙路线，这位裹着破旧缠头布的狙击手会伏在滚烫岩丘上，直到血色残阳与敌人咽喉被同时贯穿。自小受到游牧村民照料他也学会了将陨星割碎的年轮，化作手中除恶的箭矢。"
+hero_type = 1
+max_healths = Array[int]([220, 230, 240, 250, 260, 270, 280, 290, 300, 320])
+damage_nears = Array[ExtResource("1_7t47v")]([SubResource("Resource_cgdbs"), SubResource("Resource_u6fsd"), SubResource("Resource_omadu"), SubResource("Resource_olln2"), SubResource("Resource_2inkw"), SubResource("Resource_nwhhl"), SubResource("Resource_i1jcx"), SubResource("Resource_p3lbr"), SubResource("Resource_1rheb"), SubResource("Resource_t16xj")])
+damage_near_speed = 1.0
+damage_fars = Array[ExtResource("1_7t47v")]([SubResource("Resource_sg355"), SubResource("Resource_xookl"), SubResource("Resource_be8og"), SubResource("Resource_orq3r"), SubResource("Resource_n2yxs"), SubResource("Resource_lxvw0"), SubResource("Resource_7t3e1"), SubResource("Resource_7sg3c"), SubResource("Resource_r66fj"), SubResource("Resource_cafr6")])
+damage_far_speed = 3.0
+damage_far_range = 460
+armors = Array[float]([0.0, 0.0, 0.05, 0.05, 0.1, 0.1, 0.15, 0.15, 0.2, 0.25])
+magic_defences = Array[float]([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+xp_speed_rate = 1.6
+move_speed = 3.0
+hero_poster = ExtResource("2_albtl")

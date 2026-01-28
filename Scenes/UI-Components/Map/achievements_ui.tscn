@@ -1,0 +1,526 @@
+[gd_scene load_steps=9 format=3 uid="uid://ps6dlr3u08l7"]
+
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="1_dwf67"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Map/achievements_ui.gd" id="1_lsmp5"]
+[ext_resource type="PackedScene" uid="uid://otco3sjwkpxq" path="res://Scenes/UI-Components/Map/achievement_card.tscn" id="2_tto8o"]
+[ext_resource type="PackedScene" uid="uid://5wpq8h2i2s8m" path="res://Scenes/UI-Components/normal_button.tscn" id="4_6ijas"]
+
+[sub_resource type="Animation" id="Animation_sa7x5"]
+resource_name = "Entry"
+length = 0.7
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ScrollContainer:scale:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.3, 0.7)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ScrollContainer:scale:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.3, 0.7)
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ScrollContainer:mouse_filter")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [2, 0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ExitButton:mouse_filter")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [2, 0]
+}
+
+[sub_resource type="Animation" id="Animation_ttmhi"]
+resource_name = "Exit"
+length = 0.7
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScrollContainer:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ScrollContainer:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate:r")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.4, 0.7)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:modulate:g")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.4, 0.7)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:modulate:b")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.4, 0.7)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:modulate:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.4, 0.7)
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ScrollContainer:mouse_filter")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ExitButton:mouse_filter")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="Animation" id="Animation_0mn0x"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ScrollContainer:scale:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ScrollContainer:scale:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ScrollContainer:mouse_filter")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ExitButton:mouse_filter")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hqqc6"]
+_data = {
+"Entry": SubResource("Animation_sa7x5"),
+"Exit": SubResource("Animation_ttmhi"),
+"RESET": SubResource("Animation_0mn0x")
+}
+
+[node name="AchievementsUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lsmp5")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_top = -26.0
+offset_right = 48.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 23.0
+offset_bottom = 103.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_dwf67")
+theme_override_font_sizes/font_size = 48
+text = "进度"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 135.0
+offset_right = 1831.0
+offset_bottom = 996.0
+pivot_offset = Vector2(873, 404)
+mouse_filter = 2
+
+[node name="VFlowContainer" type="VFlowContainer" parent="ScrollContainer"]
+custom_minimum_size = Vector2(0, 800)
+layout_mode = 2
+theme_override_constants/h_separation = 40
+theme_override_constants/v_separation = 30
+
+[node name="AchievementCard" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+
+[node name="AchievementCard2" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "FirstBlood"
+
+[node name="AchievementCard3" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "Level1Finished"
+
+[node name="AchievementCard4" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "SearchInformation"
+
+[node name="AchievementCard5" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "TowerLV3"
+
+[node name="AchievementCard6" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "SheepDead"
+
+[node name="AchievementCard7" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "Boss1Dead"
+
+[node name="AchievementCard8" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "RoyalDefender"
+
+[node name="AchievementCard9" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "RoyalGuardSkill1"
+
+[node name="AchievementCard10" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "RoyalGuardSkill2"
+
+[node name="AchievementCard11" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "Stage4"
+
+[node name="AchievementCard12" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "PrayEvil"
+
+[node name="AchievementCard13" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "SuperSkeleton"
+
+[node name="AchievementCard14" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "Freddy"
+
+[node name="AchievementCard15" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "WildRegionCleaner"
+
+[node name="AchievementCard16" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "Bloody"
+
+[node name="AchievementCard17" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "Killer"
+
+[node name="AchievementCard18" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "Boss2Dead"
+
+[node name="AchievementCard19" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "ChurchDust"
+
+[node name="AchievementCard20" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "IronGolem"
+
+[node name="AchievementCard21" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "SandHuman"
+
+[node name="AchievementCard22" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "DancingCat"
+
+[node name="AchievementCard23" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "Remilia"
+
+[node name="AchievementCard24" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "SunAchieve"
+
+[node name="AchievementCard25" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "OperatorLightning"
+
+[node name="AchievementCard26" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "OperatorSeckill"
+
+[node name="AchievementCard27" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "DeSentrySeckill"
+
+[node name="AchievementCard28" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "EpeeRebirth"
+
+[node name="AchievementCard30" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "DeathKill"
+
+[node name="AchievementCard29" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "Boss3Dead"
+
+[node name="AchievementCard31" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "TheForest"
+
+[node name="AchievementCard32" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "CARRION"
+
+[node name="AchievementCard33" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "Primary"
+
+[node name="AchievementCard34" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "INSIDE"
+
+[node name="AchievementCard35" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "GAIA1"
+
+[node name="AchievementCard36" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "Resident"
+
+[node name="AchievementCard38" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "CurseDead"
+
+[node name="AchievementCard39" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "PluginPeople"
+
+[node name="AchievementCard40" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "MagicianGold"
+
+[node name="AchievementCard41" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "Boss4Dead"
+
+[node name="AchievementCard42" parent="ScrollContainer/VFlowContainer" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "Boss4DeadPerfect"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hqqc6")
+}
+autoplay = "Entry"
+
+[node name="ExitButton" parent="." instance=ExtResource("4_6ijas")]
+layout_mode = 0
+offset_left = 1730.0
+offset_top = 996.0
+offset_right = 2061.0
+offset_bottom = 1139.0
+scale = Vector2(0.492117, 0.492117)
+mouse_filter = 2
+button_title = "退出"
+
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

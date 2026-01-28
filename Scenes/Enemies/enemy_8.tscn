@@ -1,0 +1,524 @@
+[gd_scene load_steps=117 format=3 uid="uid://cu5yypfgmssji"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_sghgc"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_8.gd" id="2_74ksw"]
+[ext_resource type="Texture2D" uid="uid://cg38rrf5dasho" path="res://Assets/Images/UI/InformationBar/骨国步兵.png" id="3_gag00"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="4_y4knd"]
+[ext_resource type="Texture2D" uid="uid://bbvbsil74q332" path="res://Assets/Animations/Enemies/8骨国步兵/attack_00.png" id="5_bpmn0"]
+[ext_resource type="Texture2D" uid="uid://bwiqcgio3tbgl" path="res://Assets/Animations/Enemies/8骨国步兵/attack_01.png" id="6_t4jbm"]
+[ext_resource type="Texture2D" uid="uid://dlltnqkd137p6" path="res://Assets/Animations/Enemies/8骨国步兵/attack_02.png" id="7_xftrv"]
+[ext_resource type="Texture2D" uid="uid://hngey8klynmn" path="res://Assets/Animations/Enemies/8骨国步兵/attack_03.png" id="8_vto1a"]
+[ext_resource type="Texture2D" uid="uid://c7s7c8chcoa4l" path="res://Assets/Animations/Enemies/8骨国步兵/attack_04.png" id="9_4cso5"]
+[ext_resource type="Texture2D" uid="uid://2mt4uibd24a2" path="res://Assets/Animations/Enemies/8骨国步兵/attack_05.png" id="10_xduhr"]
+[ext_resource type="Texture2D" uid="uid://duygp6msd8lwp" path="res://Assets/Animations/Enemies/8骨国步兵/attack_06.png" id="11_yrpv8"]
+[ext_resource type="Texture2D" uid="uid://bb2dnbpreej4g" path="res://Assets/Animations/Enemies/8骨国步兵/attack_07.png" id="12_2x415"]
+[ext_resource type="Texture2D" uid="uid://d1dh8xfjc72ii" path="res://Assets/Animations/Enemies/8骨国步兵/attack_08.png" id="13_jxmst"]
+[ext_resource type="Texture2D" uid="uid://ctkjspi6up2b0" path="res://Assets/Animations/Enemies/8骨国步兵/attack_09.png" id="14_6im5h"]
+[ext_resource type="Texture2D" uid="uid://dtg177n2dfx5x" path="res://Assets/Animations/Enemies/8骨国步兵/attack_10.png" id="15_on40i"]
+[ext_resource type="Texture2D" uid="uid://c6eatqlpxj8sw" path="res://Assets/Animations/Enemies/8骨国步兵/attack_11.png" id="16_3cyvv"]
+[ext_resource type="Texture2D" uid="uid://bnfo0pqhcv3lf" path="res://Assets/Animations/Enemies/8骨国步兵/attack_12.png" id="17_fkesi"]
+[ext_resource type="Texture2D" uid="uid://cwoh3h4qxvvjq" path="res://Assets/Animations/Enemies/8骨国步兵/attack_13.png" id="18_xm6o7"]
+[ext_resource type="Texture2D" uid="uid://dmp4x5llixiot" path="res://Assets/Animations/Enemies/8骨国步兵/attack_14.png" id="19_6x5ah"]
+[ext_resource type="Texture2D" uid="uid://c2hg50jc3o14a" path="res://Assets/Animations/Enemies/8骨国步兵/attack_15.png" id="20_3tnaf"]
+[ext_resource type="Texture2D" uid="uid://dve1j0kqxv1o3" path="res://Assets/Animations/Enemies/8骨国步兵/attack_16.png" id="21_c8i2a"]
+[ext_resource type="Texture2D" uid="uid://d3nnyey2bp732" path="res://Assets/Animations/Enemies/8骨国步兵/attack_17.png" id="22_opwy7"]
+[ext_resource type="Texture2D" uid="uid://cgv6so8yriv62" path="res://Assets/Animations/Enemies/8骨国步兵/attack_18.png" id="23_rurje"]
+[ext_resource type="Texture2D" uid="uid://dogjr8m477vjg" path="res://Assets/Animations/Enemies/8骨国步兵/attack_19.png" id="24_rjksa"]
+[ext_resource type="Texture2D" uid="uid://bqqmuqv22wbq6" path="res://Assets/Animations/Enemies/8骨国步兵/attack_20.png" id="25_f4wu8"]
+[ext_resource type="Texture2D" uid="uid://dlf4qry4trhvi" path="res://Assets/Animations/Enemies/8骨国步兵/attack_21.png" id="26_j1i3c"]
+[ext_resource type="Texture2D" uid="uid://ckkcnfl6aaoh1" path="res://Assets/Animations/Enemies/8骨国步兵/attack_22.png" id="27_gkdqu"]
+[ext_resource type="Texture2D" uid="uid://d3d5mj2hihbnu" path="res://Assets/Animations/Enemies/8骨国步兵/attack_23.png" id="28_d2unf"]
+[ext_resource type="Texture2D" uid="uid://id1vpcnv7epc" path="res://Assets/Animations/Enemies/8骨国步兵/attack_24.png" id="29_xtykn"]
+[ext_resource type="Texture2D" uid="uid://d1xm28q1atlq2" path="res://Assets/Animations/Enemies/8骨国步兵/die_00.png" id="30_h17ns"]
+[ext_resource type="Texture2D" uid="uid://c4ogaff30uvrt" path="res://Assets/Animations/Enemies/8骨国步兵/die_01.png" id="31_nrje4"]
+[ext_resource type="Texture2D" uid="uid://befvbpqls2nrp" path="res://Assets/Animations/Enemies/8骨国步兵/die_02.png" id="32_jfv4i"]
+[ext_resource type="Texture2D" uid="uid://yugo54k46kyp" path="res://Assets/Animations/Enemies/8骨国步兵/die_03.png" id="33_cwju3"]
+[ext_resource type="Texture2D" uid="uid://da3wd80sy76xr" path="res://Assets/Animations/Enemies/8骨国步兵/die_04.png" id="34_ekkoq"]
+[ext_resource type="Texture2D" uid="uid://bdiqn5ebnvca2" path="res://Assets/Animations/Enemies/8骨国步兵/die_05.png" id="35_ps4mx"]
+[ext_resource type="Texture2D" uid="uid://ca4cxu8ixfn3p" path="res://Assets/Animations/Enemies/8骨国步兵/die_06.png" id="36_yuu78"]
+[ext_resource type="Texture2D" uid="uid://c68ef2ve32qk5" path="res://Assets/Animations/Enemies/8骨国步兵/die_07.png" id="37_00c0h"]
+[ext_resource type="Texture2D" uid="uid://c1f2sl22i7jkc" path="res://Assets/Animations/Enemies/8骨国步兵/die_08.png" id="38_c4lop"]
+[ext_resource type="Texture2D" uid="uid://cn05hxfghjqhe" path="res://Assets/Animations/Enemies/8骨国步兵/die_09.png" id="39_rju4v"]
+[ext_resource type="Texture2D" uid="uid://t22pli6k8yri" path="res://Assets/Animations/Enemies/8骨国步兵/die_10.png" id="40_hhh3f"]
+[ext_resource type="Texture2D" uid="uid://dceexacyphk76" path="res://Assets/Animations/Enemies/8骨国步兵/die_11.png" id="41_20of2"]
+[ext_resource type="Texture2D" uid="uid://cjs7esbdgaasn" path="res://Assets/Animations/Enemies/8骨国步兵/die_12.png" id="42_hjv0y"]
+[ext_resource type="Texture2D" uid="uid://l8digpid7hsg" path="res://Assets/Animations/Enemies/8骨国步兵/move-back_00.png" id="43_ijq8f"]
+[ext_resource type="AudioStream" uid="uid://bx2lxbf0mlaqx" path="res://Assets/Sounds/FXs/Enemies/骨裂.wav" id="43_xr3vw"]
+[ext_resource type="Texture2D" uid="uid://e8vdott1ymr3" path="res://Assets/Animations/Enemies/8骨国步兵/move-back_01.png" id="44_h7lxp"]
+[ext_resource type="Texture2D" uid="uid://6sfcu8r5nn8b" path="res://Assets/Animations/Enemies/8骨国步兵/move-back_02.png" id="45_b31u7"]
+[ext_resource type="Texture2D" uid="uid://b2tifraemlg3u" path="res://Assets/Animations/Enemies/8骨国步兵/move-back_03.png" id="46_mdyo4"]
+[ext_resource type="Texture2D" uid="uid://b886qsr8x71i3" path="res://Assets/Animations/Enemies/8骨国步兵/move-back_04.png" id="47_4da2r"]
+[ext_resource type="Texture2D" uid="uid://r8v7mcqrv800" path="res://Assets/Animations/Enemies/8骨国步兵/move-back_05.png" id="48_ikcw6"]
+[ext_resource type="Texture2D" uid="uid://cs87nw710w0q2" path="res://Assets/Animations/Enemies/8骨国步兵/move-back_06.png" id="49_r4wyk"]
+[ext_resource type="Texture2D" uid="uid://p4qfggmohp5q" path="res://Assets/Animations/Enemies/8骨国步兵/move-back_07.png" id="50_7a2fp"]
+[ext_resource type="Texture2D" uid="uid://m7posqwqpjrr" path="res://Assets/Animations/Enemies/8骨国步兵/move-back_08.png" id="51_t2elu"]
+[ext_resource type="Texture2D" uid="uid://dg4vm3arfc57j" path="res://Assets/Animations/Enemies/8骨国步兵/move-back_09.png" id="52_rbmlk"]
+[ext_resource type="Texture2D" uid="uid://bs2orij87n63i" path="res://Assets/Animations/Enemies/8骨国步兵/move-back_10.png" id="53_qspwe"]
+[ext_resource type="Texture2D" uid="uid://b6mmvvcof7jyb" path="res://Assets/Animations/Enemies/8骨国步兵/move-back_11.png" id="54_860yi"]
+[ext_resource type="Texture2D" uid="uid://ch0d4ylaatynp" path="res://Assets/Animations/Enemies/8骨国步兵/move-back_12.png" id="55_m0pi1"]
+[ext_resource type="Texture2D" uid="uid://ilyghqkllwcg" path="res://Assets/Animations/Enemies/8骨国步兵/move-back_13.png" id="56_mndva"]
+[ext_resource type="Texture2D" uid="uid://bmn55bdplyd3j" path="res://Assets/Animations/Enemies/8骨国步兵/move-back_14.png" id="57_5ln7b"]
+[ext_resource type="Texture2D" uid="uid://du6pguyw2xw01" path="res://Assets/Animations/Enemies/8骨国步兵/move-back_15.png" id="58_yihqd"]
+[ext_resource type="Texture2D" uid="uid://bkogb6npa8cg0" path="res://Assets/Animations/Enemies/8骨国步兵/move-back_16.png" id="59_r7jgy"]
+[ext_resource type="Texture2D" uid="uid://b5hc3hm7e6bui" path="res://Assets/Animations/Enemies/8骨国步兵/move-back_17.png" id="60_7yc1j"]
+[ext_resource type="Texture2D" uid="uid://dstiwwept0yww" path="res://Assets/Animations/Enemies/8骨国步兵/move-back_18.png" id="61_dqgdh"]
+[ext_resource type="Texture2D" uid="uid://cbybgpm2vuiwk" path="res://Assets/Animations/Enemies/8骨国步兵/move-back_19.png" id="62_lou8l"]
+[ext_resource type="Texture2D" uid="uid://dictdocospfdt" path="res://Assets/Animations/Enemies/8骨国步兵/move-back_20.png" id="63_0l8x0"]
+[ext_resource type="Texture2D" uid="uid://d1u7h1o6lfn1w" path="res://Assets/Animations/Enemies/8骨国步兵/move-back_21.png" id="64_67rqf"]
+[ext_resource type="Texture2D" uid="uid://lhhv2w4e23d6" path="res://Assets/Animations/Enemies/8骨国步兵/move-back_22.png" id="65_vcaq0"]
+[ext_resource type="Texture2D" uid="uid://bqmc6bqubuj6y" path="res://Assets/Animations/Enemies/8骨国步兵/move-front_00.png" id="66_thofg"]
+[ext_resource type="Texture2D" uid="uid://duh8r1mm1pq2b" path="res://Assets/Animations/Enemies/8骨国步兵/move-front_01.png" id="67_hyqjd"]
+[ext_resource type="Texture2D" uid="uid://dtl8dx15usicd" path="res://Assets/Animations/Enemies/8骨国步兵/move-front_02.png" id="68_j7dr8"]
+[ext_resource type="Texture2D" uid="uid://b6bw0ne6j55i7" path="res://Assets/Animations/Enemies/8骨国步兵/move-front_03.png" id="69_331q8"]
+[ext_resource type="Texture2D" uid="uid://itcs2qjcklp8" path="res://Assets/Animations/Enemies/8骨国步兵/move-front_04.png" id="70_pal3g"]
+[ext_resource type="Texture2D" uid="uid://dgk5im6wur4yp" path="res://Assets/Animations/Enemies/8骨国步兵/move-front_05.png" id="71_3g2xv"]
+[ext_resource type="Texture2D" uid="uid://bc60p87ja6dx0" path="res://Assets/Animations/Enemies/8骨国步兵/move-front_06.png" id="72_f2i1v"]
+[ext_resource type="Texture2D" uid="uid://0pauj70debtv" path="res://Assets/Animations/Enemies/8骨国步兵/move-front_07.png" id="73_kqt8c"]
+[ext_resource type="Texture2D" uid="uid://b1oravy7o25hk" path="res://Assets/Animations/Enemies/8骨国步兵/move-front_08.png" id="74_jxl2p"]
+[ext_resource type="Texture2D" uid="uid://ywsxka72haxm" path="res://Assets/Animations/Enemies/8骨国步兵/move-front_09.png" id="75_weh4y"]
+[ext_resource type="Texture2D" uid="uid://h8ch6x8d27ei" path="res://Assets/Animations/Enemies/8骨国步兵/move-front_10.png" id="76_5udow"]
+[ext_resource type="Texture2D" uid="uid://btpm5ipgehcb5" path="res://Assets/Animations/Enemies/8骨国步兵/move-front_11.png" id="77_t1nc8"]
+[ext_resource type="Texture2D" uid="uid://bis8co83tvhl3" path="res://Assets/Animations/Enemies/8骨国步兵/move-front_12.png" id="78_56t27"]
+[ext_resource type="Texture2D" uid="uid://boopcbj7upyec" path="res://Assets/Animations/Enemies/8骨国步兵/move-front_13.png" id="79_c00ak"]
+[ext_resource type="Texture2D" uid="uid://bpcw2ypy0ykvr" path="res://Assets/Animations/Enemies/8骨国步兵/move-front_14.png" id="80_51fqc"]
+[ext_resource type="Texture2D" uid="uid://befry6ommn80s" path="res://Assets/Animations/Enemies/8骨国步兵/move-front_15.png" id="81_nytrs"]
+[ext_resource type="Texture2D" uid="uid://bu35bms1ipcxt" path="res://Assets/Animations/Enemies/8骨国步兵/move-front_16.png" id="82_36vjv"]
+[ext_resource type="Texture2D" uid="uid://c3subk8gik1un" path="res://Assets/Animations/Enemies/8骨国步兵/move-front_17.png" id="83_jhou0"]
+[ext_resource type="Texture2D" uid="uid://cayqsjshpwx5c" path="res://Assets/Animations/Enemies/8骨国步兵/move-front_18.png" id="84_ylxbn"]
+[ext_resource type="Texture2D" uid="uid://cn1cnw5ey4b5u" path="res://Assets/Animations/Enemies/8骨国步兵/move-front_19.png" id="85_2xn4j"]
+[ext_resource type="Texture2D" uid="uid://d07md5gw6qmhv" path="res://Assets/Animations/Enemies/8骨国步兵/move-front_20.png" id="86_k6iyl"]
+[ext_resource type="Texture2D" uid="uid://c3hxaw85jhqrw" path="res://Assets/Animations/Enemies/8骨国步兵/move-front_21.png" id="87_mt35e"]
+[ext_resource type="Texture2D" uid="uid://xmbxk20gkkbr" path="res://Assets/Animations/Enemies/8骨国步兵/move-front_22.png" id="88_sgnxd"]
+[ext_resource type="Texture2D" uid="uid://ccjgvjih4tf70" path="res://Assets/Animations/Enemies/8骨国步兵/move-normal_00.png" id="89_fq0cf"]
+[ext_resource type="Texture2D" uid="uid://hrv1q73fqwm3" path="res://Assets/Animations/Enemies/8骨国步兵/move-normal_01.png" id="90_etnwb"]
+[ext_resource type="Texture2D" uid="uid://dfb6h4nb82x3q" path="res://Assets/Animations/Enemies/8骨国步兵/move-normal_02.png" id="91_rqpsj"]
+[ext_resource type="Texture2D" uid="uid://cf8sn34ec06k4" path="res://Assets/Animations/Enemies/8骨国步兵/move-normal_03.png" id="92_qighk"]
+[ext_resource type="Texture2D" uid="uid://deuh1y4njn6l3" path="res://Assets/Animations/Enemies/8骨国步兵/move-normal_04.png" id="93_5lfe3"]
+[ext_resource type="Texture2D" uid="uid://dd37dd44h38fo" path="res://Assets/Animations/Enemies/8骨国步兵/move-normal_05.png" id="94_55kn1"]
+[ext_resource type="Texture2D" uid="uid://dgav8w2qsue2h" path="res://Assets/Animations/Enemies/8骨国步兵/move-normal_06.png" id="95_6dqm7"]
+[ext_resource type="Texture2D" uid="uid://l1jvkcf6vudn" path="res://Assets/Animations/Enemies/8骨国步兵/move-normal_07.png" id="96_1vjxd"]
+[ext_resource type="Texture2D" uid="uid://b44gcsfytrrw" path="res://Assets/Animations/Enemies/8骨国步兵/move-normal_08.png" id="97_3j4r2"]
+[ext_resource type="Texture2D" uid="uid://cjq70jnm40f3w" path="res://Assets/Animations/Enemies/8骨国步兵/move-normal_09.png" id="98_cp3wf"]
+[ext_resource type="Texture2D" uid="uid://bwxusp13jx8qd" path="res://Assets/Animations/Enemies/8骨国步兵/move-normal_10.png" id="99_54eoh"]
+[ext_resource type="Texture2D" uid="uid://chvhpex7xrqy8" path="res://Assets/Animations/Enemies/8骨国步兵/move-normal_11.png" id="100_4vo7u"]
+[ext_resource type="Texture2D" uid="uid://d1l7vdo0uryee" path="res://Assets/Animations/Enemies/8骨国步兵/move-normal_12.png" id="101_1uten"]
+[ext_resource type="Texture2D" uid="uid://bdqoqdiyteych" path="res://Assets/Animations/Enemies/8骨国步兵/move-normal_13.png" id="102_t18ja"]
+[ext_resource type="Texture2D" uid="uid://bnv506b2tj27k" path="res://Assets/Animations/Enemies/8骨国步兵/move-normal_14.png" id="103_mxwvi"]
+[ext_resource type="Texture2D" uid="uid://e4t6l0hjprmo" path="res://Assets/Animations/Enemies/8骨国步兵/move-normal_15.png" id="104_x4i46"]
+[ext_resource type="Texture2D" uid="uid://bxwgylgg30b2a" path="res://Assets/Animations/Enemies/8骨国步兵/move-normal_16.png" id="105_4hqtv"]
+[ext_resource type="Texture2D" uid="uid://uks4y7jfghov" path="res://Assets/Animations/Enemies/8骨国步兵/move-normal_17.png" id="106_lfjhp"]
+[ext_resource type="Texture2D" uid="uid://dd1h72eyhv8xf" path="res://Assets/Animations/Enemies/8骨国步兵/move-normal_18.png" id="107_wfrjd"]
+[ext_resource type="Texture2D" uid="uid://uo7umthsjxs2" path="res://Assets/Animations/Enemies/8骨国步兵/move-normal_19.png" id="108_iudmy"]
+[ext_resource type="Texture2D" uid="uid://bnmwkpig4tacx" path="res://Assets/Animations/Enemies/8骨国步兵/move-normal_20.png" id="109_o72ym"]
+[ext_resource type="Texture2D" uid="uid://cmjnr70kbv5on" path="res://Assets/Animations/Enemies/8骨国步兵/move-normal_21.png" id="110_ovf6q"]
+[ext_resource type="Texture2D" uid="uid://cjqnm8mor4wat" path="res://Assets/Animations/Enemies/8骨国步兵/move-normal_22.png" id="111_4w4k7"]
+[ext_resource type="Texture2D" uid="uid://xs2xgwhnndjr" path="res://Assets/Animations/Enemies/8骨国步兵/move-normal_23.png" id="112_7mjrm"]
+[ext_resource type="AudioStream" uid="uid://cy21paby5onde" path="res://Assets/Sounds/FXs/Enemies/骷髅死亡.wav" id="114_glupv"]
+
+[sub_resource type="Resource" id="Resource_bm67v"]
+script = ExtResource("4_y4knd")
+health = 100
+dodge_rate = 0.0
+near_damage_low = 5
+near_damage_high = 8
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.0
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 0.9
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7jbca"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_bpmn0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_t4jbm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xftrv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vto1a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4cso5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xduhr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_yrpv8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_2x415")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jxmst")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_6im5h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_on40i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_3cyvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_fkesi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_xm6o7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_6x5ah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_3tnaf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_c8i2a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_opwy7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_rurje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_rjksa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_f4wu8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_j1i3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_gkdqu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_d2unf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_xtykn")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_h17ns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_nrje4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_jfv4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_cwju3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_ekkoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ps4mx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_yuu78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_00c0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_c4lop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_rju4v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_hhh3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_20of2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_hjv0y")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_bpmn0")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("43_ijq8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_h7lxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_b31u7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_mdyo4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_4da2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_ikcw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_r4wyk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_7a2fp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_t2elu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_rbmlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_qspwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_860yi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_m0pi1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_mndva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_5ln7b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_yihqd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_r7jgy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_7yc1j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_dqgdh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_lou8l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_0l8x0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_67rqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_vcaq0")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("66_thofg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_hyqjd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_j7dr8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_331q8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_pal3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_3g2xv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_f2i1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_kqt8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_jxl2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_weh4y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_5udow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_t1nc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_56t27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_c00ak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_51fqc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_nytrs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_36vjv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_jhou0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_ylxbn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_2xn4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_k6iyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_mt35e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_sgnxd")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("89_fq0cf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_etnwb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_rqpsj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_qighk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_5lfe3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_55kn1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_6dqm7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_1vjxd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_3j4r2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_cp3wf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_54eoh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_4vo7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_1uten")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_t18ja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_mxwvi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_x4i46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_4hqtv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_lfjhp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_wfrjd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_iudmy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_o72ym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_ovf6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_4w4k7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_7mjrm")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 24.0
+}]
+
+[node name="Enemy8" instance=ExtResource("1_sghgc")]
+script = ExtResource("2_74ksw")
+enemy_name = "骨国步兵"
+enemy_id = 8
+enemy_texture = ExtResource("3_gag00")
+start_data = SubResource("Resource_bm67v")
+bounty = 6
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(5, -115)
+sprite_frames = SubResource("SpriteFrames_7jbca")
+animation = &"die"
+
+[node name="EnemyButton" parent="UnitBody" index="4"]
+offset_left = -48.0
+offset_right = 50.0
+
+[node name="SkeletonAudio" type="AudioStreamPlayer" parent="." index="5"]
+stream = ExtResource("43_xr3vw")
+volume_db = -12.0
+bus = &"Sound"
+
+[node name="SkeletonExplosionAudio" type="AudioStreamPlayer" parent="." index="6"]
+stream = ExtResource("114_glupv")
+volume_db = -8.0
+bus = &"Sound"

@@ -1,0 +1,345 @@
+[gd_scene load_steps=72 format=3 uid="uid://epbrqrye6e8k"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_6w25e"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_41.gd" id="2_cd2ph"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="3_as2r5"]
+[ext_resource type="Texture2D" uid="uid://bwr7mon18s8p7" path="res://Assets/Images/UI/InformationBar/EnemyChapter4/蜘蛛.png" id="3_bnehw"]
+[ext_resource type="AudioStream" uid="uid://ct4vofbci7tfx" path="res://Assets/Sounds/FXs/Enemies/腐化蜘蛛/死亡.wav" id="3_hbaup"]
+[ext_resource type="PackedScene" uid="uid://dcjuved17hj6j" path="res://Scenes/Enemies/EnemyComponents/appear_audio_component.tscn" id="4_er52t"]
+[ext_resource type="AudioStream" uid="uid://8ivl61hg27vq" path="res://Assets/Sounds/FXs/Enemies/腐化蜘蛛/入场1.wav" id="5_kq7rd"]
+[ext_resource type="AudioStream" uid="uid://dsw6shykts4by" path="res://Assets/Sounds/FXs/Enemies/腐化蜘蛛/入场2.wav" id="6_782cc"]
+[ext_resource type="Texture2D" uid="uid://brdfj248l7p22" path="res://Assets/Animations/Enemies/41蜘蛛/attack_00.png" id="6_jomxl"]
+[ext_resource type="Texture2D" uid="uid://dfghfrphbvf7v" path="res://Assets/Animations/Enemies/41蜘蛛/attack_01.png" id="7_01vle"]
+[ext_resource type="AudioStream" uid="uid://by77xekplivbi" path="res://Assets/Sounds/FXs/Enemies/腐化蜘蛛/入场3.wav" id="7_tnrxf"]
+[ext_resource type="Texture2D" uid="uid://dvring8mw85e6" path="res://Assets/Animations/Enemies/41蜘蛛/attack_02.png" id="8_7rcwv"]
+[ext_resource type="AudioStream" uid="uid://cdfb830xpbdyn" path="res://Assets/Sounds/FXs/Enemies/腐化蜘蛛/入场4.wav" id="8_d3oqi"]
+[ext_resource type="Texture2D" uid="uid://dcq6lbajv722v" path="res://Assets/Animations/Enemies/41蜘蛛/attack_03.png" id="9_mv53h"]
+[ext_resource type="Texture2D" uid="uid://b7l5hg502v6m1" path="res://Assets/Animations/Enemies/41蜘蛛/attack_04.png" id="10_5dq1x"]
+[ext_resource type="Texture2D" uid="uid://drfhjue3ubuck" path="res://Assets/Animations/Enemies/41蜘蛛/attack_05.png" id="11_x7j3l"]
+[ext_resource type="Texture2D" uid="uid://c1l5auey8gmt0" path="res://Assets/Animations/Enemies/41蜘蛛/attack_06.png" id="12_7715t"]
+[ext_resource type="Texture2D" uid="uid://b5ucs2iiqocna" path="res://Assets/Animations/Enemies/41蜘蛛/attack_07.png" id="13_eqeg3"]
+[ext_resource type="Texture2D" uid="uid://bjgg8tqal5kmg" path="res://Assets/Animations/Enemies/41蜘蛛/attack_08.png" id="14_w1xjl"]
+[ext_resource type="Texture2D" uid="uid://cj0nx22hdtuj4" path="res://Assets/Animations/Enemies/41蜘蛛/attack_09.png" id="15_1l1x5"]
+[ext_resource type="Texture2D" uid="uid://t4s1senqkfoq" path="res://Assets/Animations/Enemies/41蜘蛛/attack_10.png" id="16_s1nqq"]
+[ext_resource type="Texture2D" uid="uid://2a3h3ywohail" path="res://Assets/Animations/Enemies/41蜘蛛/attack_11.png" id="17_wloq0"]
+[ext_resource type="Texture2D" uid="uid://midvqukwrve2" path="res://Assets/Animations/Enemies/41蜘蛛/attack_12.png" id="18_abrjf"]
+[ext_resource type="Texture2D" uid="uid://dk8gpq0vh7lkn" path="res://Assets/Animations/Enemies/41蜘蛛/attack_13.png" id="19_auxs0"]
+[ext_resource type="Texture2D" uid="uid://c8xfnbkpie6mx" path="res://Assets/Animations/Enemies/41蜘蛛/attack_14.png" id="20_4ihbk"]
+[ext_resource type="Texture2D" uid="uid://dgrnidj0xr4im" path="res://Assets/Animations/Enemies/41蜘蛛/attack_15.png" id="21_wju8e"]
+[ext_resource type="Texture2D" uid="uid://c2unsnayenyq3" path="res://Assets/Animations/Enemies/41蜘蛛/attack_16.png" id="22_qov4f"]
+[ext_resource type="Texture2D" uid="uid://cjpa14g8e1645" path="res://Assets/Animations/Enemies/41蜘蛛/attack_17.png" id="23_vp7rb"]
+[ext_resource type="Texture2D" uid="uid://bmxqip4fd3w1q" path="res://Assets/Animations/Enemies/41蜘蛛/attack_18.png" id="24_ynsnt"]
+[ext_resource type="Texture2D" uid="uid://r60iwr5ruyin" path="res://Assets/Animations/Enemies/41蜘蛛/attack_19.png" id="25_psfyd"]
+[ext_resource type="Texture2D" uid="uid://d3d3dsxt0rd47" path="res://Assets/Animations/Enemies/41蜘蛛/die_00.png" id="26_os15r"]
+[ext_resource type="Texture2D" uid="uid://bm1bjltjxb5w2" path="res://Assets/Animations/Enemies/41蜘蛛/die_01.png" id="27_ue3bu"]
+[ext_resource type="Texture2D" uid="uid://btwhgk2rikvbc" path="res://Assets/Animations/Enemies/41蜘蛛/die_02.png" id="28_sj07o"]
+[ext_resource type="Texture2D" uid="uid://cld648b3reafv" path="res://Assets/Animations/Enemies/41蜘蛛/die_03.png" id="29_4cwlj"]
+[ext_resource type="Texture2D" uid="uid://cgoitiey8gw5i" path="res://Assets/Animations/Enemies/41蜘蛛/die_04.png" id="30_sj0wf"]
+[ext_resource type="Texture2D" uid="uid://coyo7rskduvg" path="res://Assets/Animations/Enemies/41蜘蛛/die_05.png" id="31_jgifg"]
+[ext_resource type="Texture2D" uid="uid://b03kitsl0p0b1" path="res://Assets/Animations/Enemies/41蜘蛛/die_06.png" id="32_o4enu"]
+[ext_resource type="Texture2D" uid="uid://cuesypafeqktb" path="res://Assets/Animations/Enemies/41蜘蛛/die_07.png" id="33_o2ot5"]
+[ext_resource type="Texture2D" uid="uid://m4wtlgbw4da7" path="res://Assets/Animations/Enemies/41蜘蛛/die_08.png" id="34_isqt1"]
+[ext_resource type="Texture2D" uid="uid://bf8mw4ycolol1" path="res://Assets/Animations/Enemies/41蜘蛛/die_09.png" id="35_j41ww"]
+[ext_resource type="Texture2D" uid="uid://ciw67fkkmcvn4" path="res://Assets/Animations/Enemies/41蜘蛛/die_10.png" id="36_ha7x8"]
+[ext_resource type="Texture2D" uid="uid://df6wsqgibrcnk" path="res://Assets/Animations/Enemies/41蜘蛛/die_11.png" id="37_22fq7"]
+[ext_resource type="Texture2D" uid="uid://dggnuc1s1j0p1" path="res://Assets/Animations/Enemies/41蜘蛛/die_12.png" id="38_uu1kl"]
+[ext_resource type="Texture2D" uid="uid://0fc5sfd5am8s" path="res://Assets/Animations/Enemies/41蜘蛛/die_13.png" id="39_7v3bv"]
+[ext_resource type="Texture2D" uid="uid://d0prmqsr2nl7j" path="res://Assets/Animations/Enemies/41蜘蛛/move_back_0.png" id="40_573bq"]
+[ext_resource type="Texture2D" uid="uid://g0rsdrg1unpp" path="res://Assets/Animations/Enemies/41蜘蛛/move_back_1.png" id="41_cfjg6"]
+[ext_resource type="Texture2D" uid="uid://cbnv0qqk7j6ey" path="res://Assets/Animations/Enemies/41蜘蛛/move_back_2.png" id="42_glmxr"]
+[ext_resource type="Texture2D" uid="uid://m5ih4tgxdmdp" path="res://Assets/Animations/Enemies/41蜘蛛/move_back_3.png" id="43_kkitb"]
+[ext_resource type="Texture2D" uid="uid://dk6df85ixeork" path="res://Assets/Animations/Enemies/41蜘蛛/move_back_4.png" id="44_jdl2x"]
+[ext_resource type="Texture2D" uid="uid://dt2x2ihc7sfp2" path="res://Assets/Animations/Enemies/41蜘蛛/move_back_5.png" id="45_wwisp"]
+[ext_resource type="Texture2D" uid="uid://bdm2oy6o2oma6" path="res://Assets/Animations/Enemies/41蜘蛛/move_back_6.png" id="46_hpsdx"]
+[ext_resource type="Texture2D" uid="uid://on6ha0tf1l5v" path="res://Assets/Animations/Enemies/41蜘蛛/move_back_7.png" id="47_r1c1x"]
+[ext_resource type="Texture2D" uid="uid://b6ej7qr6yk02t" path="res://Assets/Animations/Enemies/41蜘蛛/move_front_0.png" id="48_rk3eu"]
+[ext_resource type="Texture2D" uid="uid://74mq0y1ppdlx" path="res://Assets/Animations/Enemies/41蜘蛛/move_front_1.png" id="49_d271s"]
+[ext_resource type="Texture2D" uid="uid://4esokuxlapv0" path="res://Assets/Animations/Enemies/41蜘蛛/move_front_2.png" id="50_vxyfr"]
+[ext_resource type="Texture2D" uid="uid://dx4vem40vfiyn" path="res://Assets/Animations/Enemies/41蜘蛛/move_front_3.png" id="51_7jui0"]
+[ext_resource type="Texture2D" uid="uid://btsmxfv21i63n" path="res://Assets/Animations/Enemies/41蜘蛛/move_front_4.png" id="52_454jw"]
+[ext_resource type="Texture2D" uid="uid://c0st37tuj3biu" path="res://Assets/Animations/Enemies/41蜘蛛/move_front_5.png" id="53_tm3fn"]
+[ext_resource type="Texture2D" uid="uid://cn8xy66nvmivi" path="res://Assets/Animations/Enemies/41蜘蛛/move_front_6.png" id="54_n1a0n"]
+[ext_resource type="Texture2D" uid="uid://bpxwk5qvro3o4" path="res://Assets/Animations/Enemies/41蜘蛛/move_front_7.png" id="55_47iq3"]
+[ext_resource type="Texture2D" uid="uid://cfbkeogagicy6" path="res://Assets/Animations/Enemies/41蜘蛛/move_normal_0.png" id="56_wtqia"]
+[ext_resource type="Texture2D" uid="uid://42qlnmt0kwxi" path="res://Assets/Animations/Enemies/41蜘蛛/move_normal_1.png" id="57_c0eje"]
+[ext_resource type="Texture2D" uid="uid://2g3xub6iw4n4" path="res://Assets/Animations/Enemies/41蜘蛛/move_normal_2.png" id="58_fmw8m"]
+[ext_resource type="Texture2D" uid="uid://0mie6uheuxe7" path="res://Assets/Animations/Enemies/41蜘蛛/move_normal_3.png" id="59_ointb"]
+[ext_resource type="Texture2D" uid="uid://qyjhy4q675gp" path="res://Assets/Animations/Enemies/41蜘蛛/move_normal_4.png" id="60_qplcm"]
+[ext_resource type="Texture2D" uid="uid://dir7ss26chyty" path="res://Assets/Animations/Enemies/41蜘蛛/move_normal_5.png" id="61_alg7j"]
+[ext_resource type="Texture2D" uid="uid://cjgoja458eghw" path="res://Assets/Animations/Enemies/41蜘蛛/move_normal_6.png" id="62_o1w7n"]
+[ext_resource type="Texture2D" uid="uid://dodp7t6kj6jl7" path="res://Assets/Animations/Enemies/41蜘蛛/move_normal_7.png" id="63_en5m4"]
+
+[sub_resource type="Resource" id="Resource_aovqv"]
+script = ExtResource("3_as2r5")
+health = 230
+dodge_rate = 0.0
+near_damage_low = 8
+near_damage_high = 21
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.0
+physic_immune = false
+magic_defence = 0.8
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 2.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_txit5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_jomxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_01vle")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7rcwv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_mv53h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5dq1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_x7j3l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7715t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_eqeg3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_w1xjl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1l1x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_s1nqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_wloq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_abrjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_auxs0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_4ihbk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_wju8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_qov4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_vp7rb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ynsnt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_psfyd")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_os15r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ue3bu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_sj07o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_4cwlj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_sj0wf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_jgifg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_o4enu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_o2ot5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_isqt1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_j41ww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_ha7x8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_22fq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_uu1kl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_7v3bv")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_jomxl")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("40_573bq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_cfjg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_glmxr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_kkitb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_jdl2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_wwisp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_hpsdx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_r1c1x")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("48_rk3eu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_d271s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_vxyfr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_7jui0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_454jw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_tm3fn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_n1a0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_47iq3")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("56_wtqia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_c0eje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_fmw8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_ointb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_qplcm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_alg7j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_o1w7n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_en5m4")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 30.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s44x3"]
+size = Vector2(190, 115)
+
+[node name="Enemy41" instance=ExtResource("1_6w25e")]
+script = ExtResource("2_cd2ph")
+enemy_name = "蜘蛛"
+enemy_id = 41
+enemy_texture = ExtResource("3_bnehw")
+start_data = SubResource("Resource_aovqv")
+bounty = 12
+die_audio_stream_list = Array[AudioStream]([ExtResource("3_hbaup")])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(0, -45)
+sprite_frames = SubResource("SpriteFrames_txit5")
+animation = &"move_normal"
+autoplay = "idle"
+
+[node name="BodyCollision" parent="UnitBody" index="1"]
+position = Vector2(0, -55)
+shape = SubResource("RectangleShape2D_s44x3")
+
+[node name="HurtBox" parent="UnitBody" index="2"]
+position = Vector2(0, -60)
+scale = Vector2(8.18182, 8.18182)
+
+[node name="SelectSprite" parent="UnitBody" index="3"]
+scale = Vector2(7.37169, 7.37169)
+
+[node name="EnemyButton" parent="UnitBody" index="4"]
+offset_left = -108.0
+offset_top = -115.0
+offset_right = 110.0
+
+[node name="HealthBar" parent="UnitBody" index="5"]
+offset_left = -135.0
+offset_top = -140.0
+offset_right = 165.0
+offset_bottom = -131.0
+scale = Vector2(0.882894, 1.88085)
+
+[node name="AppearAudioComponent" parent="." index="5" instance=ExtResource("4_er52t")]
+appear_audio_list = Array[AudioStream]([ExtResource("5_kq7rd"), ExtResource("6_782cc"), ExtResource("7_tnrxf"), ExtResource("8_d3oqi")])

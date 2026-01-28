@@ -1,0 +1,183 @@
+[gd_scene load_steps=17 format=3 uid="uid://battap0mupbot"]
+
+[ext_resource type="Shader" path="res://Assets/Shaders/hot_wave.gdshader" id="1_8je0u"]
+[ext_resource type="Script" path="res://Scripts/StageComponents/hot_wave_system.gd" id="1_b0anp"]
+[ext_resource type="Texture2D" uid="uid://cgjl6w6ehkvm2" path="res://Assets/Images/Stages/Stage8/stage8-based.png" id="1_s7iiu"]
+
+[sub_resource type="Gradient" id="Gradient_ntn7l"]
+offsets = PackedFloat32Array(0.232044, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_i1che"]
+seed = 100
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_phiv6"]
+width = 2112
+height = 526
+seamless = true
+color_ramp = SubResource("Gradient_ntn7l")
+noise = SubResource("FastNoiseLite_i1che")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oh15q"]
+shader = ExtResource("1_8je0u")
+shader_parameter/heat_strength = 0.0
+shader_parameter/heat_speed = 1.5
+shader_parameter/brightness_offset = 0.1
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_phiv6")
+
+[sub_resource type="Gradient" id="Gradient_0adkj"]
+offsets = PackedFloat32Array(0, 0.281739, 1)
+colors = PackedColorArray(1, 1, 0.905882, 1, 1, 1, 0.29776, 0.328696, 1, 1, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ldw4h"]
+gradient = SubResource("Gradient_0adkj")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.487179, 0.495726)
+fill_to = Vector2(0.880342, 0.132479)
+
+[sub_resource type="Animation" id="Animation_8aqpa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/HotWaveRect:material:shader_parameter/heat_speed")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5]
+}
+
+[sub_resource type="Animation" id="Animation_13mjm"]
+resource_name = "no_pause"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/HotWaveRect:material:shader_parameter/heat_speed")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5]
+}
+
+[sub_resource type="Animation" id="Animation_okdq2"]
+resource_name = "pause"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/HotWaveRect:material:shader_parameter/heat_speed")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o88w1"]
+_data = {
+"RESET": SubResource("Animation_8aqpa"),
+"no_pause": SubResource("Animation_13mjm"),
+"pause": SubResource("Animation_okdq2")
+}
+
+[sub_resource type="Animation" id="Animation_tl53d"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset_2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.685217, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_ib6go"]
+resource_name = "shine"
+loop_mode = 2
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset_2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.685217, -0.25, 0, 0.25, 0, 0.281739, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1q8sb"]
+_data = {
+"RESET": SubResource("Animation_tl53d"),
+"shine": SubResource("Animation_ib6go")
+}
+
+[node name="HotWaveSystem" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_b0anp")
+offset_2 = 0.685217
+immune_groups = Array[String](["desert", "god", "no_live", "super_unit"])
+
+[node name="BasedSprite" type="Sprite2D" parent="."]
+visible = false
+z_index = -1
+texture = ExtResource("1_s7iiu")
+centered = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HotWaveRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_oh15q")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -18.0
+offset_top = -18.0
+offset_right = 17.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="SunLight" type="PointLight2D" parent="CanvasLayer"]
+scale = Vector2(2.00556, 2.00556)
+texture = SubResource("GradientTexture2D_ldw4h")
+texture_scale = 15.83
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_o88w1")
+}
+autoplay = "no_pause"
+
+[node name="SunAnimationPlayer" type="AnimationPlayer" parent="."]
+process_mode = 1
+libraries = {
+"": SubResource("AnimationLibrary_1q8sb")
+}
+autoplay = "shine"
+speed_scale = 0.5
+
+[node name="HeatTimer" type="Timer" parent="."]
+process_mode = 1
+wait_time = 0.2
+autostart = true
+
+[node name="HitArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 24
+
+[connection signal="timeout" from="HeatTimer" to="." method="_on_heat_timer_timeout"]

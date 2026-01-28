@@ -1,0 +1,1766 @@
+[gd_scene load_steps=304 format=3 uid="uid://dn3gqlx2m6o54"]
+
+[ext_resource type="PackedScene" uid="uid://05u6aueicvo4" path="res://Scenes/Classes/stage_class.tscn" id="1_4y2mf"]
+[ext_resource type="Script" path="res://Scripts/Stages/stage_4_campaign.gd" id="2_4iw5u"]
+[ext_resource type="Texture2D" uid="uid://d2dq07lgm85ta" path="res://Assets/Images/Stages/Stage4/stage4-based.png" id="3_12g5n"]
+[ext_resource type="Script" path="res://Library/EnemySummon/stage_summon_config.gd" id="3_757s2"]
+[ext_resource type="AudioStream" uid="uid://bwxefh0hfb0nu" path="res://Assets/Sounds/Music/皇城-准备.mp3" id="3_my378"]
+[ext_resource type="Texture2D" uid="uid://pe1sf035jhvg" path="res://Assets/Animations/StageComponents/保护点.png" id="4_2d5b2"]
+[ext_resource type="AudioStream" uid="uid://ccxtxk1tauo4w" path="res://Assets/Sounds/Music/皇城-战斗1.mp3" id="4_adjnv"]
+[ext_resource type="Script" path="res://Scripts/Stages/protection_point.gd" id="5_htaib"]
+[ext_resource type="Texture2D" uid="uid://cb7n0rp6m5v2t" path="res://Assets/Images/Stages/Flag.png" id="6_x3qiy"]
+[ext_resource type="Texture2D" uid="uid://csb2w184vto14" path="res://Assets/Images/Stages/Stage4/stage4-hidepath1.png" id="8_pj1ma"]
+[ext_resource type="Texture2D" uid="uid://djabfj5je4s0t" path="res://Assets/Images/Stages/Stage4/stage4-wall.png" id="9_3s60r"]
+[ext_resource type="Texture2D" uid="uid://bn18saxk7p0a1" path="res://Assets/Images/Stages/Stage4/stage4-hidepath2.png" id="9_snx5o"]
+[ext_resource type="Texture2D" uid="uid://b6ybe0hu35oqj" path="res://Assets/Images/Stages/Stage4/stage4-hidetree1.png" id="10_v4x3x"]
+[ext_resource type="Texture2D" uid="uid://7ipnxvb8kyml" path="res://Assets/Images/Stages/Stage4/stage4-hidetree2.png" id="11_i2816"]
+[ext_resource type="Texture2D" uid="uid://crmrpm51i651t" path="res://Assets/Images/Stages/Stage4/stage4-mask1.png" id="12_68yqu"]
+[ext_resource type="Texture2D" uid="uid://da37ocyiqim4h" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_01.png" id="15_5lsdw"]
+[ext_resource type="Texture2D" uid="uid://1unef0rjx3es" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_02.png" id="16_kmlr8"]
+[ext_resource type="Texture2D" uid="uid://cl3tg3ey1bo5r" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_03.png" id="17_el256"]
+[ext_resource type="Texture2D" uid="uid://doqw0uc2kpd6x" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_04.png" id="18_3ffo3"]
+[ext_resource type="Texture2D" uid="uid://d3jqvpbq0t5fk" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_05.png" id="19_pdlo4"]
+[ext_resource type="Texture2D" uid="uid://cgquroes7npan" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_06.png" id="20_l80cf"]
+[ext_resource type="Texture2D" uid="uid://c73bc8vc47gfj" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_07.png" id="21_sc5uq"]
+[ext_resource type="Texture2D" uid="uid://ot1dpveesu13" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_08.png" id="22_ioex4"]
+[ext_resource type="Texture2D" uid="uid://c1o1lbyrt4a3m" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_09.png" id="23_ws5th"]
+[ext_resource type="Texture2D" uid="uid://c758ce4fbs3ss" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_10.png" id="24_7ps0w"]
+[ext_resource type="Texture2D" uid="uid://c7d1j5tsm5tcb" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_11.png" id="25_nm5uv"]
+[ext_resource type="Texture2D" uid="uid://btvxkt324525p" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_12.png" id="26_bcxnx"]
+[ext_resource type="Texture2D" uid="uid://bnlj6yyinbmue" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_13.png" id="27_lf5iq"]
+[ext_resource type="Texture2D" uid="uid://bsf1qcjwdp58e" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_14.png" id="28_ig24m"]
+[ext_resource type="Texture2D" uid="uid://bhb8ugkilqy6j" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_15.png" id="29_cjubt"]
+[ext_resource type="Texture2D" uid="uid://cinntnb6jxdwq" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_16.png" id="30_e2bxc"]
+[ext_resource type="Texture2D" uid="uid://c8gtpqqq07oas" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_17.png" id="31_w2ggb"]
+[ext_resource type="Texture2D" uid="uid://c0ah34dg60f8r" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_18.png" id="32_cinfx"]
+[ext_resource type="Texture2D" uid="uid://b3xsm14st5bgy" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_19.png" id="33_0clfa"]
+[ext_resource type="Texture2D" uid="uid://dc2hp5e3lp4iy" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_20.png" id="34_qo1cj"]
+[ext_resource type="Texture2D" uid="uid://86vpgnibk4se" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_21.png" id="35_n8d2m"]
+[ext_resource type="Texture2D" uid="uid://dvmwt68sau27b" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_22.png" id="36_abg0l"]
+[ext_resource type="Texture2D" uid="uid://cp1snhlku83os" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_23.png" id="37_kijdf"]
+[ext_resource type="Texture2D" uid="uid://dp23tdq17vr27" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_24.png" id="38_h5rgl"]
+[ext_resource type="Texture2D" uid="uid://cf3gh7irf0htx" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_25.png" id="39_ily1i"]
+[ext_resource type="Texture2D" uid="uid://biu0wffxig0gv" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_26.png" id="40_vmwsk"]
+[ext_resource type="Texture2D" uid="uid://cbbhsurew0s64" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_27.png" id="41_lvb6r"]
+[ext_resource type="Texture2D" uid="uid://ncmp13eoeh8v" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_28.png" id="42_mx414"]
+[ext_resource type="Texture2D" uid="uid://b8unta86rhbcv" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_29.png" id="43_gg6dx"]
+[ext_resource type="Texture2D" uid="uid://rjhbxjf0rorq" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_30.png" id="44_qf43f"]
+[ext_resource type="Texture2D" uid="uid://cest11566jc8e" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_31.png" id="45_4cjeh"]
+[ext_resource type="Texture2D" uid="uid://bf137t81jmmem" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_32.png" id="46_0e6ga"]
+[ext_resource type="Texture2D" uid="uid://ikxttkoktb8q" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_33.png" id="47_a62jn"]
+[ext_resource type="Texture2D" uid="uid://jau3wywctox6" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_34.png" id="48_nkw6x"]
+[ext_resource type="Texture2D" uid="uid://dupvkmy35jrav" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_35.png" id="49_3ryn1"]
+[ext_resource type="Texture2D" uid="uid://wweefkvm2o2g" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_36.png" id="50_22t0j"]
+[ext_resource type="Texture2D" uid="uid://c0re6gdr6bdah" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_37.png" id="51_fixri"]
+[ext_resource type="Texture2D" uid="uid://ck4htywx25g5x" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_38.png" id="52_wq1ja"]
+[ext_resource type="Texture2D" uid="uid://u23uam3syq8k" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_39.png" id="53_bm7b4"]
+[ext_resource type="Texture2D" uid="uid://c8c5ijp3v7ggd" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_40.png" id="54_6tvuu"]
+[ext_resource type="PackedScene" uid="uid://d0sta1lv6shgl" path="res://Scenes/DefenceTowers/defence_tower_based.tscn" id="55_ijvj8"]
+[ext_resource type="Script" path="res://Scripts/Classes/enemy_path.gd" id="55_s7rew"]
+[ext_resource type="Resource" uid="uid://cflcpu7w22gbb" path="res://Library/SummonConfigs/Stage4/Campaign/path1.res" id="56_rtv7x"]
+[ext_resource type="Resource" uid="uid://dac0nh6vwydue" path="res://Library/SummonConfigs/Stage4/Campaign/path2.res" id="57_c3gwk"]
+[ext_resource type="Resource" uid="uid://bipx53wec040e" path="res://Library/SummonConfigs/Stage4/Campaign/path3.res" id="58_353uc"]
+[ext_resource type="Resource" uid="uid://bw55hs0gigpsl" path="res://Library/SummonConfigs/Stage4/Campaign/path4.res" id="59_h83qf"]
+[ext_resource type="Resource" uid="uid://dfvfxuk0irxf1" path="res://Library/SummonConfigs/Stage4/Campaign/path5.res" id="60_88id5"]
+[ext_resource type="Resource" uid="uid://byhyt0xte7hyr" path="res://Library/SummonConfigs/Stage4/Campaign/path6.res" id="61_yftmp"]
+[ext_resource type="Resource" uid="uid://cqbrl5e3fqwln" path="res://Library/SummonConfigs/Stage4/Campaign/path7.res" id="62_gvfn2"]
+[ext_resource type="Resource" uid="uid://b6hux7b8v74n3" path="res://Library/SummonConfigs/Stage4/Campaign/path8.res" id="63_gjbik"]
+[ext_resource type="Resource" uid="uid://ctxl0ww31nqr4" path="res://Library/SummonConfigs/Stage4/Campaign/path9.res" id="64_g5bfu"]
+[ext_resource type="Resource" uid="uid://b5w1878hx5evr" path="res://Library/SummonConfigs/Stage4/Campaign/path10.res" id="65_cdls0"]
+[ext_resource type="Resource" uid="uid://b7nqtiht68i7w" path="res://Library/SummonConfigs/Stage4/Campaign/path11.res" id="66_oo72l"]
+[ext_resource type="Resource" uid="uid://pibusobw2lm6" path="res://Library/SummonConfigs/Stage4/Campaign/path12.res" id="67_tbvrb"]
+[ext_resource type="Resource" uid="uid://ctwlaysm2p20r" path="res://Library/SummonConfigs/Stage4/Campaign/path13.res" id="68_3h1ti"]
+[ext_resource type="Resource" uid="uid://wyk1gtpwm75y" path="res://Library/SummonConfigs/Stage4/Campaign/path14.res" id="69_lybbf"]
+[ext_resource type="Resource" uid="uid://bscu48hnk62vo" path="res://Library/SummonConfigs/Stage4/Campaign/path15.res" id="70_vm4sq"]
+[ext_resource type="Resource" uid="uid://e86vo1kodnpg" path="res://Library/SummonConfigs/Stage4/Campaign/path16.res" id="71_lqpdt"]
+[ext_resource type="PackedScene" uid="uid://4j747edyffkd" path="res://Scenes/UI-Components/Stages/wave_button.tscn" id="73_jd3ca"]
+[ext_resource type="Texture2D" uid="uid://d4h7uga26vrgq" path="res://Assets/Images/UI/wave-direction.png" id="74_c4ci4"]
+[ext_resource type="Script" path="res://Library/EnemySummon/wave_summon_text.gd" id="74_yoge1"]
+[ext_resource type="PackedScene" uid="uid://dijjgy2lt1p7w" path="res://Scenes/UI-Components/Stages/wave_panel.tscn" id="75_g3m0g"]
+[ext_resource type="Script" path="res://Library/EnemySummon/SummonTextBlock/summon_text_block.gd" id="76_5lsol"]
+[ext_resource type="Script" path="res://Scripts/summon_count_porcess.gd" id="76_wxl02"]
+[ext_resource type="Script" path="res://Library/EnemySummon/SummonTextBlock/summon_text_block_chapter1.gd" id="77_3muj5"]
+[ext_resource type="PackedScene" uid="uid://dlggpawrxkxx5" path="res://Scenes/TipUI/special_towers_unlock_ui.tscn" id="78_i72el"]
+[ext_resource type="Texture2D" uid="uid://cwi0yhwg7lybr" path="res://Assets/Images/UI/SeenBook/DefenceTowers/Textures/Barrack3.png" id="79_br6at"]
+[ext_resource type="Script" path="res://Library/EnemySummon/path_summon_block.gd" id="80_t8y8p"]
+
+[sub_resource type="Resource" id="Resource_xfkcn"]
+script = ExtResource("3_757s2")
+next_wave_timers = Array[float]([45.0, 45.0, 50.0, 50.0, 55.0, 55.0, 60.0, 60.0, 65.0, 65.0, 70.0, 70.0, 70.0, 70.0])
+wave_exist_timers = Array[float]([10.0, 10.0, 12.0, 14.0, 15.0, 15.0, 15.0, 15.0, 18.0, 18.0, 20.0, 20.0, 25.0, 28.0])
+wave_money_get = Array[int]([20, 30, 30, 30, 30, 36, 40, 40, 44, 48, 50, 60, 64, 70])
+reinforce_cooling_fast = Array[float]([10.0, 10.0, 16.0, 16.0, 20.0, 20.0, 24.0, 24.0, 26.0, 26.0, 28.0, 28.0, 30.0, 36.0, 40.0])
+firerain_cooling_fast = Array[float]([15.0, 36.0, 30.0, 36.0, 40.0, 40.0, 45.0, 45.0, 50.0, 50.0, 55.0, 55.0, 60.0, 65.0, 70.0])
+hero_skill_cooling_fast = Array[float]([10.0, 12.0, 14.0, 15.0, 16.0, 18.0, 20.0, 21.0, 22.0, 24.0, 25.0, 26.0, 28.0, 30.0, 35.0])
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nkqxu"]
+size = Vector2(1920, 1440)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5h5o5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_5lsdw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_kmlr8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_el256")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_3ffo3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_pdlo4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_l80cf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_sc5uq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ioex4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ws5th")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_7ps0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_nm5uv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_bcxnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_lf5iq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_ig24m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_cjubt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_e2bxc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_w2ggb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_cinfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_0clfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_qo1cj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_n8d2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_abg0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_kijdf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_h5rgl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_ily1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_vmwsk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_lvb6r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_mx414")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_gg6dx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_qf43f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_4cjeh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_0e6ga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_a62jn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_nkw6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_3ryn1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_22t0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_fixri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_wq1ja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_bm7b4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_6tvuu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 26.0
+}]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_k2plv"]
+vertices = PackedVector2Array(1668.66, 307.102, 1915.35, 292.633, 1904.45, 476.133, 1731.9, 520.531, 5, 765.063, -5.77344, 246.492, 97.1563, 251.398, 240.344, 264, 895.617, 104.844, 984.992, 103.172, 1000.92, 256.367, 871.602, 264, 1461.81, 289.594, 1500.94, 121, 1589.63, 121, 1604.34, 132.211, 1615.5, 289.367, 1899.96, 731.594, 1933.84, 785.617, 1913.27, 1187.3, 1515.16, 1437.96, 1331.76, 1436.07, 1286.84, 1262.23, 1749.78, 652.453, 126.781, 99.2109, 184.68, 75.5313, 234.258, 88.75, 1106.18, 1119.77, 305.07, 1284.75, -7.78125, 1145.59, 541.406, 1431.9, 432.602, 1430.07, 714.133, 1145.36)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(8, 9, 10, 11), PackedInt32Array(12, 13, 14, 15, 16), PackedInt32Array(17, 18, 19, 20, 21, 22, 23), PackedInt32Array(24, 25, 26, 7, 6), PackedInt32Array(3, 23, 22, 27, 11, 10, 12, 0), PackedInt32Array(11, 28, 29, 4, 7), PackedInt32Array(30, 31, 28, 11, 32), PackedInt32Array(27, 32, 11), PackedInt32Array(0, 12, 16)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-16, 236, 89, 241, 118, 92, 184, 65, 244, 81, 250, 254, 863, 254, 887, 95, 994, 93, 1010, 247, 1454, 279, 1493, 111, 1593, 111, 1614, 127, 1625, 282, 1670, 297, 1926, 282, 1914, 484, 1743, 528, 1759, 646, 1907, 724, 1944, 783, 1923, 1193, 1518, 1448, 1324, 1446, 1278, 1268, 1103, 1130, 720, 1155, 547, 1442, 428, 1440, 299, 1293, -18, 1152, -5, 765)])
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_o165n"]
+vertices = PackedVector2Array(1483.02, 189.211, 1509.22, 134.188, 1580.72, 136.477, 1554.68, 186.141, 1483.96, 277.008, 520.758, 1432.18, 445.328, 1433.75, 479.75, 1154.56, 538.117, 1221.1, 589.156, 1054.72, 538.688, 1008.19, 143.039, 266.258, 161.898, 109.68, 225.063, 107.391, 207.891, 305.789, 153.813, 414.141, 240.938, 439, 228.328, 552.539, 318.297, 519.547, 340.25, 610.891, 435.961, 532.383, 431.109, 607.109, 587.133, 516.273, 561.383, 434.258, 647.609, 483.938, 674.781, 409.063, 897.359, 490.258, 906.719, 423.633, 968.258, 487.953, 1484.11, 1287.28, 1492.44, 1437.12, 1428.12, 1437.88, 1417.78, 1324.17, 914.719, 122.68, 982.68, 127.32, 972.727, 420.82, 1432.67, 1164.01, 1343.66, 1179.01, 1287.34, 1038.32, 1089.75, 935.023, 1113.83, 1033.86, 966.953, 914.578, 989, 821.93, 916.539, 814.797, 963.977, 733.297, 887.781, 751.297, 1564.38, 262.641, 1560.99, 397.492, 1590.53, 475.57, 1626.88, 354.367, 1659.7, 459.578, 1636.8, 578.859, 1569.26, 549.461, 1572.33, 637.719, 1480.62, 585.133, 1455.64, 660.867, 1309.53, 573.859, 1248.32, 634.344, 1192.16, 520.789, 1094.56, 542.078, 1078.95, 446.297, 657.344, 866.008, 747.133, 894.711)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 8), PackedInt32Array(9, 8, 7, 10), PackedInt32Array(11, 12, 13, 14, 15), PackedInt32Array(15, 14, 16, 17), PackedInt32Array(17, 16, 18, 19), PackedInt32Array(19, 18, 20, 21), PackedInt32Array(22, 21, 20, 23), PackedInt32Array(24, 22, 23, 25), PackedInt32Array(26, 24, 25, 27, 28), PackedInt32Array(29, 30, 31, 32), PackedInt32Array(27, 33, 34, 35, 28), PackedInt32Array(36, 29, 32, 37, 38), PackedInt32Array(39, 38, 37, 40, 41), PackedInt32Array(42, 39, 41, 43), PackedInt32Array(44, 42, 43, 45), PackedInt32Array(4, 3, 46, 47), PackedInt32Array(48, 47, 46, 49, 50, 51), PackedInt32Array(52, 48, 51, 53), PackedInt32Array(54, 52, 53, 55), PackedInt32Array(56, 54, 55, 57), PackedInt32Array(58, 56, 57, 59), PackedInt32Array(60, 58, 59, 28, 35), PackedInt32Array(26, 28, 44, 45), PackedInt32Array(61, 45, 43, 62), PackedInt32Array(61, 62, 9, 10)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(153, 100, 133, 266, 144, 417, 221, 560, 338, 621, 434, 617, 592, 525, 650, 494, 887, 500, 878, 745, 651, 858, 530, 1003, 470, 1152, 434, 1444, 530, 1442, 548, 1223, 598, 1060, 753, 903, 912, 828, 959, 921, 1108, 1042, 1336, 1186, 1408, 1327, 1419, 1448, 1503, 1447, 1494, 1285, 1441, 1158, 1293, 1030, 1096, 927, 998, 817, 974, 732, 978, 503, 1090, 551, 1245, 644, 1456, 671, 1577, 647, 1646, 584, 1670, 459, 1636, 350, 1574, 259, 1565, 188, 1597, 127, 1503, 124, 1473, 187, 1474, 280, 1552, 402, 1580, 476, 1561, 542, 1479, 575, 1312, 564, 1197, 512, 1083, 437, 983, 413, 993, 118, 905, 112, 897, 413, 674, 399, 557, 425, 433, 522, 323, 510, 250, 434, 218, 305, 236, 97)])
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_uxftv"]
+vertices = PackedVector2Array(424.578, 1168.33, 463.867, 1176.01, 452.938, 1260.32, 399.219, 1231.45, 284.539, 1152.36, 115.32, 984.281, -3.4375, 941.789, -8.15625, 868.68, 84.4766, 889.461, 225.508, 964.867, 209.07, 1071.92, 322.867, 1084.08)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 8, 9), PackedInt32Array(10, 5, 9, 11), PackedInt32Array(4, 10, 11, 0)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-19, 856, 88, 880, 232, 957, 330, 1077, 429, 1159, 475, 1168, 461, 1276, 394, 1240, 278, 1160, 202, 1079, 110, 993, -13, 949)])
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_j8non"]
+vertices = PackedVector2Array(1575.37, 1318.06, 1493.64, 1349.36, 1478.32, 1266.27, 1592.71, 1221.1, 1667.11, 1256.25, 1648.44, 1132.79, 1721.67, 1139.34, 1768.42, 989.813, 1748.48, 1055.94, 1675.4, 999.953, 1709.71, 949.43, 1763.96, 896.133, 1817.32, 955.359, 1850.15, 876.977, 1913.36, 944.172, 1908.67, 876.133)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(4, 3, 5, 6), PackedInt32Array(7, 8, 6, 5, 9, 10, 11), PackedInt32Array(12, 7, 11, 13), PackedInt32Array(14, 12, 13, 15)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(1918, 866, 1849, 867, 1759, 887, 1702, 943, 1666, 996, 1639, 1129, 1586, 1213, 1467, 1260, 1486, 1363, 1580, 1327, 1675, 1263, 1731, 1143, 1758, 1059, 1777, 996, 1821, 965, 1924, 953)])
+
+[sub_resource type="Curve2D" id="Curve2D_4nk76"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 960, -19, -8.41847, -34.7963, 8.41847, 34.7963, 929, 754, -19.6431, -22.4492, 19.6431, 22.4492, 978, 876, 0, 0, 0, 0, 1066, 954, -11.2246, -11.7859, 11.2246, 11.7859, 1321, 1118, -7.85723, -22.4492, 7.85723, 22.4492, 1428, 1234, -0.561231, -14.592, 0.561231, 14.592, 1457, 1391, 0, 0, 0, 0, 1456, 1611)
+}
+point_count = 8
+
+[sub_resource type="Curve2D" id="Curve2D_2v1i8"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 932, -25, -11.2501, -56.5054, 11.2501, 56.5054, 906, 750, -19.6431, -22.4492, 19.6431, 22.4492, 974, 908, 0, 0, 0, 0, 1060, 986, -11.2246, -11.7859, 11.2246, 11.7859, 1302, 1143, -7.85723, -22.4492, 7.85723, 22.4492, 1403, 1246, -0.561231, -14.592, 0.561231, 14.592, 1425, 1395, 0, 0, 0, 0, 1425, 1609)
+}
+point_count = 8
+
+[sub_resource type="Curve2D" id="Curve2D_g5308"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 992, -20, -15.0256, -58.3932, 15.0256, 58.3932, 959, 740, -19.6431, -22.4492, 19.6431, 22.4492, 1002, 843, 0, 0, 0, 0, 1085, 925, -11.2246, -11.7859, 11.2246, 11.7859, 1343, 1085, -7.85723, -22.4492, 7.85723, 22.4492, 1454, 1222, -0.561231, -14.592, 0.561231, 14.592, 1491, 1389, 0, 0, 0, 0, 1488, 1611)
+}
+point_count = 8
+
+[sub_resource type="Curve2D" id="Curve2D_m11wn"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 206, -25, -8.90899, -41.4268, 8.90899, 41.4268, 186, 331, -28.5905, -29.8518, 28.5905, 29.8518, 232, 507, -16.8179, -3.36359, 16.8179, 3.36359, 305, 556, -23.1247, 12.193, 23.1247, -12.193, 425, 568, -19.3406, 2.52269, 19.3406, -2.52269, 615, 459, -1.68179, -55.0787, 1.68179, 55.0787, 934, 494, -4.62493, -18.0793, 4.62493, 18.0793, 927, 736, -2.36101, -45.4046, 2.36101, 45.4046, 950, 826, -104.421, -50.4481, 104.421, 50.4481, 1244, 1067, -16.0459, -13.2142, 16.0459, 13.2142, 1394, 1187, -4.24743, -12.7423, 4.24743, 12.7423, 1430, 1230, 0, 0, 0, 0, 1457, 1411, 0, 0, 0, 0, 1456, 1609)
+}
+point_count = 14
+
+[sub_resource type="Curve2D" id="Curve2D_sssl4"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 170, -31, -8.90899, -41.4268, 8.90899, 41.4268, 164, 338, -28.5905, -29.8518, 28.5905, 29.8518, 218, 519, -16.8179, -3.36359, 16.8179, 3.36359, 299, 584, -23.1247, 12.193, 23.1247, -12.193, 431, 592, -19.3406, 2.52269, 19.3406, -2.52269, 623, 484, 1.4966, -24.884, -1.4966, 24.884, 911, 492, -4.62493, -18.0793, 4.62493, 18.0793, 897, 745, -12.9556, -43.2857, 12.9556, 43.2857, 928, 845, -85.8808, -53.6265, 85.8808, 53.6265, 1225, 1088, -16.0459, -13.2142, 16.0459, 13.2142, 1377, 1211, -4.24743, -12.7423, 4.24743, 12.7423, 1409, 1261, 0, 0, 0, 0, 1425, 1422, 0, 0, 0, 0, 1425, 1607)
+}
+point_count = 14
+
+[sub_resource type="Curve2D" id="Curve2D_8ny32"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 242, -37, -8.90899, -41.4268, 8.90899, 41.4268, 212, 323, -28.5905, -29.8518, 28.5905, 29.8518, 244, 465, -16.8179, -3.36359, 16.8179, 3.36359, 304, 526, -23.1247, 12.193, 23.1247, -12.193, 406, 549, -19.3406, 2.52269, 19.3406, -2.52269, 605, 426, -1.68179, -55.0787, 1.68179, 55.0787, 963, 463, 0.566378, -32.7093, -0.566378, 32.7093, 954, 702, -15.9013, -36.5322, 15.9013, 36.5322, 976, 814, -107.365, -51.289, 107.365, 51.289, 1260, 1031, -16.0459, -13.2142, 16.0459, 13.2142, 1407, 1158, -4.24743, -12.7423, 4.24743, 12.7423, 1453, 1218, 0, 0, 0, 0, 1490, 1410, 0, 0, 0, 0, 1489, 1610)
+}
+point_count = 14
+
+[sub_resource type="Curve2D" id="Curve2D_aylgy"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1634, -20, 5.66964, -23.3085, -5.66964, 23.3085, 1529, 213, -1.5749, -20.4737, 1.5749, 20.4737, 1528, 265, -1.88988, -21.4187, 1.88988, 21.4187, 1610, 420, 26.3578, -47.4327, -26.3578, 47.4327, 1604, 548, 47.247, -2.51984, -47.247, 2.51984, 1507, 622, 61.1062, 17.9539, -61.1062, -17.9539, 1267, 606, 16.379, 6.29961, -16.379, -6.29961, 1114, 519, 34.6478, -4.40972, -34.6478, 4.40972, 967, 475, 2.83482, -44.0972, -2.83482, 44.0972, 929, 589, 1.25992, -25.5134, -1.25992, 25.5134, 931, 748, 6.29961, -5.35466, -6.29961, 5.35466, 907, 789, 7.57264, -8.01809, -7.57264, 8.01809, 737, 873, 4.89994, -10.2453, -4.89994, 10.2453, 607, 986, 2.6727, -15.5907, -2.6727, 15.5907, 530, 1126, 0.445449, -9.79989, -0.445449, 9.79989, 498, 1256, 0, 0, 0, 0, 483, 1380, 0, 0, 0, 0, 473, 1605)
+}
+point_count = 18
+
+[sub_resource type="Curve2D" id="Curve2D_vyjma"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1581, -20, 5.66964, -23.3085, -5.66964, 23.3085, 1509, 208, -1.5749, -20.4737, 1.5749, 20.4737, 1508, 278, -1.18277, -39.0964, 1.18277, 39.0964, 1591, 426, 14.5407, -26.4328, -14.5407, 26.4328, 1584, 545, 47.247, -2.51984, -47.247, 2.51984, 1487, 594, 61.1062, 17.9539, -61.1062, -17.9539, 1260, 567, 16.379, 6.29961, -16.379, -6.29961, 1107, 477, 51.7455, 12.3717, -51.7455, -12.3717, 980, 432, 4.7247, -68.0357, -4.7247, 68.0357, 905, 554, 1.25992, -25.5134, -1.25992, 25.5134, 897, 738, 6.29961, -5.35466, -6.29961, 5.35466, 845, 782, 7.57264, -8.01809, -7.57264, 8.01809, 708, 849, 4.89994, -10.2453, -4.89994, 10.2453, 582, 969, 2.6727, -15.5907, -2.6727, 15.5907, 499, 1121, 0.445449, -9.79989, -0.445449, 9.79989, 473, 1256, 0, 0, 0, 0, 451, 1382, 0, 0, 0, 0, 447, 1604)
+}
+point_count = 18
+
+[sub_resource type="Curve2D" id="Curve2D_qkdx7"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1666, -19, 5.66964, -23.3085, -5.66964, 23.3085, 1558, 202, -1.5749, -20.4737, 1.5749, 20.4737, 1562, 259, -9.83585, -33.0728, 9.83585, 33.0728, 1641, 422, 12.5847, -47.9625, -12.5847, 47.9625, 1641, 530, 44.0686, -13.6442, -44.0686, 13.6442, 1546, 647, 61.1062, 17.9539, -61.1062, -17.9539, 1257, 634, 16.379, 6.29961, -16.379, -6.29961, 1116, 546, 34.2024, 8.06286, -34.2024, -8.06286, 993, 496, 2.83482, -44.0972, -2.83482, 44.0972, 958, 586, 1.25992, -25.5134, -1.25992, 25.5134, 960, 745, 6.29961, -5.35466, -6.29961, 5.35466, 944, 800, 7.57264, -8.01809, -7.57264, 8.01809, 755, 896, 4.89994, -10.2453, -4.89994, 10.2453, 632, 998, 2.6727, -15.5907, -2.6727, 15.5907, 560, 1134, 0.445449, -9.79989, -0.445449, 9.79989, 534, 1252, 0, 0, 0, 0, 518, 1381, 0, 0, 0, 0, 513, 1603)
+}
+point_count = 18
+
+[sub_resource type="Curve2D" id="Curve2D_wrpmj"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -91, 899, -24.8974, -11.1244, 24.8974, 11.1244, 64, 923, -20.602, -19.7611, 20.602, 19.7611, 200, 1010, 0, 0, 0, 0, 315, 1136, -36.1585, -10.0908, 36.1585, 10.0908, 418, 1201, -0.420448, -29.4314, 0.420448, 29.4314, 495, 1275, 0, 0, 0, 0, 481, 1387, 0, 0, 0, 0, 472, 1603)
+}
+point_count = 8
+
+[sub_resource type="Curve2D" id="Curve2D_ag3ce"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -90, 930, -24.8974, -11.1244, 24.8974, 11.1244, 63, 955, -20.602, -19.7611, 20.602, 19.7611, 192, 1039, 0, 0, 0, 0, 303, 1159, -36.1585, -10.0908, 36.1585, 10.0908, 416, 1241, 7.57955, -35.9314, -7.57955, 35.9314, 468, 1300, 0, 0, 0, 0, 450, 1407, 0, 0, 0, 0, 445, 1602)
+}
+point_count = 8
+
+[sub_resource type="Curve2D" id="Curve2D_m245f"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -92, 865, -24.8974, -11.1244, 24.8974, 11.1244, 69, 889, -20.602, -19.7611, 20.602, 19.7611, 208, 969, 0, 0, 0, 0, 316, 1080, -36.1585, -10.0908, 36.1585, 10.0908, 432, 1171, 3.47384, -26.0383, -3.47384, 26.0383, 534, 1263, 0, 0, 0, 0, 518, 1386, 0, 0, 0, 0, 512, 1602)
+}
+point_count = 8
+
+[sub_resource type="Curve2D" id="Curve2D_x2u8v"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1989, 914, 22.6274, -7.77818, -22.6274, 7.77818, 1826, 914, 21.6924, -32.2635, -21.6924, 32.2635, 1745, 971, 0, 0, 0, 0, 1697, 1113, 41.7193, -21.2132, -41.7193, 21.2132, 1627, 1242, 0, 0, 0, 0, 1490, 1301, 1.41421, -45.2548, -1.41421, 45.2548, 1453, 1353, 0, 0, 0, 0, 1454, 1607)
+}
+point_count = 8
+
+[sub_resource type="Curve2D" id="Curve2D_f8xdk"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1989, 881, 22.6274, -7.77818, -22.6274, 7.77818, 1822, 888, 9.19239, -16.2635, -9.19239, 16.2635, 1727, 945, 6.6742, -30.0339, -6.6742, 30.0339, 1685, 1029, 0, 0, 0, 0, 1663, 1116, 41.7193, -21.2132, -41.7193, 21.2132, 1591, 1229, 0, 0, 0, 0, 1472, 1277, 1.41421, -45.2548, -1.41421, 45.2548, 1421, 1344, 0, 0, 0, 0, 1424, 1608)
+}
+point_count = 9
+
+[sub_resource type="Curve2D" id="Curve2D_t4jvt"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1990, 941, 22.6274, -7.77818, -22.6274, 7.77818, 1838, 944, 9.19239, -16.2635, -9.19239, 16.2635, 1771, 980, 0, 0, 0, 0, 1730, 1113, 41.7193, -21.2132, -41.7193, 21.2132, 1649, 1270, 0, 0, 0, 0, 1520, 1330, 1.41421, -45.2548, -1.41421, 45.2548, 1487, 1371, 0, 0, 0, 0, 1490, 1607)
+}
+point_count = 8
+
+[sub_resource type="Curve2D" id="Curve2D_l7ib6"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 959, -45, 3.3371, -13.0147, -3.3371, 13.0147, 930, 746, 9.01017, -4.33823, -9.01017, 4.33823, 894, 798, 34.9228, -25.3984, -34.9228, 25.3984, 740, 871, 15.0803, -26.1921, -15.0803, 26.1921, 605, 986, 11.1118, -41.2724, -11.1118, 41.2724, 530, 1122, 0, 0, 0, 0, 480, 1383, 0, 0, 0, 0, 473, 1537)
+}
+point_count = 8
+
+[sub_resource type="Resource" id="Resource_qax6h"]
+metadata/__load_path__ = "res://Assets/Images/UI/SkillButton/Firerain/firerain-canuse.png"
+
+[sub_resource type="Resource" id="Resource_qneuu"]
+metadata/__load_path__ = "res://Assets/Images/UI/SkillButton/Firerain/firerain-select.png"
+
+[sub_resource type="Resource" id="Resource_87trf"]
+metadata/__load_path__ = "res://Assets/Images/UI/SkillButton/Reinforce/reinforce_canuse.png"
+
+[sub_resource type="Resource" id="Resource_s4115"]
+metadata/__load_path__ = "res://Assets/Images/UI/SkillButton/Reinforce/reinforce_select.png"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vfr8y"]
+size = Vector2(1962, 1483)
+
+[sub_resource type="Resource" id="Resource_lqgwh"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国杂兵"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_hax1l"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国皮甲兵"
+enemy_count = 10
+
+[sub_resource type="Resource" id="Resource_dkxol"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_45du4"]
+script = ExtResource("77_3muj5")
+enemy_name = "鸡骑士"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_dm4rk"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国小鬼"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_01ibq"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国步兵"
+enemy_count = 3
+
+[sub_resource type="Resource" id="Resource_fd8yo"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_lqgwh"), SubResource("Resource_hax1l"), SubResource("Resource_dkxol"), SubResource("Resource_45du4"), SubResource("Resource_dm4rk"), SubResource("Resource_01ibq")])
+
+[sub_resource type="Resource" id="Resource_06nxx"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 5
+
+[sub_resource type="Resource" id="Resource_om1h7"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国小鬼"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_7vh8c"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国皮甲兵"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_mtwr7"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国步兵"
+enemy_count = 10
+
+[sub_resource type="Resource" id="Resource_gssg0"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_06nxx"), SubResource("Resource_om1h7"), SubResource("Resource_7vh8c"), SubResource("Resource_mtwr7")])
+
+[sub_resource type="Resource" id="Resource_ihabx"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国皮甲兵"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_goomf"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_v0d7n"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国小鬼"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_gl0gn"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国正规军"
+enemy_count = 8
+
+[sub_resource type="Resource" id="Resource_qx8hn"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_ihabx"), SubResource("Resource_goomf"), SubResource("Resource_v0d7n"), SubResource("Resource_gl0gn")])
+
+[sub_resource type="Resource" id="Resource_d8a0h"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国壮汉"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_doc31"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国皮甲兵"
+enemy_count = 12
+
+[sub_resource type="Resource" id="Resource_ocprb"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国杂兵"
+enemy_count = 12
+
+[sub_resource type="Resource" id="Resource_hi6rg"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_d8a0h"), SubResource("Resource_doc31"), SubResource("Resource_ocprb")])
+
+[sub_resource type="Resource" id="Resource_fab5h"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国皮甲兵"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_bo0jk"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 12
+
+[sub_resource type="Resource" id="Resource_nb78s"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国刺杀者"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_dtf2c"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国小鬼"
+enemy_count = 8
+
+[sub_resource type="Resource" id="Resource_sd623"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_fab5h"), SubResource("Resource_bo0jk"), SubResource("Resource_nb78s"), SubResource("Resource_dtf2c")])
+
+[sub_resource type="Resource" id="Resource_s376b"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 11
+
+[sub_resource type="Resource" id="Resource_arxeq"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国壮汉"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_1xqcf"]
+script = ExtResource("77_3muj5")
+enemy_name = "鸡骑士"
+enemy_count = 3
+
+[sub_resource type="Resource" id="Resource_er1jn"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国正规军"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_wec0x"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_s376b"), SubResource("Resource_arxeq"), SubResource("Resource_1xqcf"), SubResource("Resource_er1jn")])
+
+[sub_resource type="Resource" id="Resource_4sbb0"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国步兵"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_hqux1"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国正规军"
+enemy_count = 13
+
+[sub_resource type="Resource" id="Resource_cm5v5"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国壮汉"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_uxlpb"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_4sbb0"), SubResource("Resource_hqux1"), SubResource("Resource_cm5v5")])
+
+[sub_resource type="Resource" id="Resource_koo8n"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国壮汉"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_evscu"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国贵族战士"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_hate5"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国小鬼"
+enemy_count = 21
+
+[sub_resource type="Resource" id="Resource_3luf3"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 5
+
+[sub_resource type="Resource" id="Resource_t12hx"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国步兵"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_k34am"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国正规军"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_ycwec"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_koo8n"), SubResource("Resource_evscu"), SubResource("Resource_hate5"), SubResource("Resource_3luf3"), SubResource("Resource_t12hx"), SubResource("Resource_k34am")])
+
+[sub_resource type="Resource" id="Resource_ovmy1"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_blb56"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国正规军"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_6c8ja"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国贵族战士"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_vc2et"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国刺杀者"
+enemy_count = 12
+
+[sub_resource type="Resource" id="Resource_k4a05"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国步兵"
+enemy_count = 10
+
+[sub_resource type="Resource" id="Resource_ifm45"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_ovmy1"), SubResource("Resource_blb56"), SubResource("Resource_6c8ja"), SubResource("Resource_vc2et"), SubResource("Resource_k4a05")])
+
+[sub_resource type="Resource" id="Resource_2gxlc"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国统帅"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_yrcir"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_2gxlc")])
+
+[sub_resource type="Resource" id="Resource_rakts"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国杂兵"
+enemy_count = 20
+
+[sub_resource type="Resource" id="Resource_xgo06"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国皮甲兵"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_y55ih"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国步兵"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_t5t01"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_rakts"), SubResource("Resource_xgo06"), SubResource("Resource_y55ih")])
+
+[sub_resource type="Resource" id="Resource_khaef"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国杂兵"
+enemy_count = 10
+
+[sub_resource type="Resource" id="Resource_2bk1x"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国皮甲兵"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_f3h35"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国小鬼"
+enemy_count = 16
+
+[sub_resource type="Resource" id="Resource_8qh1s"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 3
+
+[sub_resource type="Resource" id="Resource_3ew3f"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_khaef"), SubResource("Resource_2bk1x"), SubResource("Resource_f3h35"), SubResource("Resource_8qh1s")])
+
+[sub_resource type="Resource" id="Resource_3vxwg"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 8
+
+[sub_resource type="Resource" id="Resource_eme0q"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国刺杀者"
+enemy_count = 5
+
+[sub_resource type="Resource" id="Resource_mkjem"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国小鬼"
+enemy_count = 5
+
+[sub_resource type="Resource" id="Resource_87u13"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_3vxwg"), SubResource("Resource_eme0q"), SubResource("Resource_mkjem")])
+
+[sub_resource type="Resource" id="Resource_bu5oq"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 8
+
+[sub_resource type="Resource" id="Resource_dpie8"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国正规军"
+enemy_count = 3
+
+[sub_resource type="Resource" id="Resource_41k2r"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国步兵"
+enemy_count = 3
+
+[sub_resource type="Resource" id="Resource_y1m3t"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国刺杀者"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_wvl55"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_bu5oq"), SubResource("Resource_dpie8"), SubResource("Resource_41k2r"), SubResource("Resource_y1m3t")])
+
+[sub_resource type="Resource" id="Resource_ovmrj"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 10
+
+[sub_resource type="Resource" id="Resource_c25nr"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国正规军"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_1e12y"]
+script = ExtResource("77_3muj5")
+enemy_name = "鸡骑士"
+enemy_count = 8
+
+[sub_resource type="Resource" id="Resource_304cv"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国步兵"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_b8kof"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_ovmrj"), SubResource("Resource_c25nr"), SubResource("Resource_1e12y"), SubResource("Resource_304cv")])
+
+[sub_resource type="Resource" id="Resource_6vvw2"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国步兵"
+enemy_count = 11
+
+[sub_resource type="Resource" id="Resource_pf2tl"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国正规军"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_rp0c2"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国小鬼"
+enemy_count = 8
+
+[sub_resource type="Resource" id="Resource_0s0as"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国刺杀者"
+enemy_count = 5
+
+[sub_resource type="Resource" id="Resource_uh5gc"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_6vvw2"), SubResource("Resource_pf2tl"), SubResource("Resource_rp0c2"), SubResource("Resource_0s0as")])
+
+[sub_resource type="Resource" id="Resource_urga2"]
+script = ExtResource("77_3muj5")
+enemy_name = "鸡骑士"
+enemy_count = 11
+
+[sub_resource type="Resource" id="Resource_krwq5"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国壮汉"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_sbeaq"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国刺杀者"
+enemy_count = 12
+
+[sub_resource type="Resource" id="Resource_ynnvm"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_5xl1s"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_urga2"), SubResource("Resource_krwq5"), SubResource("Resource_sbeaq"), SubResource("Resource_ynnvm")])
+
+[sub_resource type="Resource" id="Resource_r13m7"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 10
+
+[sub_resource type="Resource" id="Resource_eynqt"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国步兵"
+enemy_count = 16
+
+[sub_resource type="Resource" id="Resource_pox5o"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国正规军"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_3c808"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_r13m7"), SubResource("Resource_eynqt"), SubResource("Resource_pox5o")])
+
+[sub_resource type="Resource" id="Resource_4s8v2"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国贵族战士"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_h6yjk"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国壮汉"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_3lv3q"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国正规军"
+enemy_count = 5
+
+[sub_resource type="Resource" id="Resource_ym6ks"]
+script = ExtResource("77_3muj5")
+enemy_name = "鸡骑士"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_v6awb"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国刺杀者"
+enemy_count = 3
+
+[sub_resource type="Resource" id="Resource_rydxh"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国步兵"
+enemy_count = 5
+
+[sub_resource type="Resource" id="Resource_beupr"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 3
+
+[sub_resource type="Resource" id="Resource_wmyu1"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_4s8v2"), SubResource("Resource_h6yjk"), SubResource("Resource_3lv3q"), SubResource("Resource_ym6ks"), SubResource("Resource_v6awb"), SubResource("Resource_rydxh"), SubResource("Resource_beupr")])
+
+[sub_resource type="Resource" id="Resource_3i5i6"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国杂兵"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_kca1q"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国皮甲兵"
+enemy_count = 9
+
+[sub_resource type="Resource" id="Resource_38u65"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国步兵"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_200wo"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_3i5i6"), SubResource("Resource_kca1q"), SubResource("Resource_38u65")])
+
+[sub_resource type="Resource" id="Resource_f4dq5"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国小鬼"
+enemy_count = 10
+
+[sub_resource type="Resource" id="Resource_5gmbn"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 10
+
+[sub_resource type="Resource" id="Resource_odh27"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_f4dq5"), SubResource("Resource_5gmbn")])
+
+[sub_resource type="Resource" id="Resource_2d1jr"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国步兵"
+enemy_count = 11
+
+[sub_resource type="Resource" id="Resource_hgson"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国正规军"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_n777r"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国皮甲兵"
+enemy_count = 3
+
+[sub_resource type="Resource" id="Resource_v0u0s"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_2d1jr"), SubResource("Resource_hgson"), SubResource("Resource_n777r")])
+
+[sub_resource type="Resource" id="Resource_asx41"]
+script = ExtResource("77_3muj5")
+enemy_name = "鸡骑士"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_uxy0q"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国正规军"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_e6tpa"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国壮汉"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_ybt6v"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国皮甲兵"
+enemy_count = 8
+
+[sub_resource type="Resource" id="Resource_ujhg4"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_6l3na"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_asx41"), SubResource("Resource_uxy0q"), SubResource("Resource_e6tpa"), SubResource("Resource_ybt6v"), SubResource("Resource_ujhg4")])
+
+[sub_resource type="Resource" id="Resource_tsl3y"]
+script = ExtResource("77_3muj5")
+enemy_name = "鸡骑士"
+enemy_count = 10
+
+[sub_resource type="Resource" id="Resource_vvnte"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国壮汉"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_objb3"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_tsl3y"), SubResource("Resource_vvnte")])
+
+[sub_resource type="Resource" id="Resource_b8nde"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国壮汉"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_uf11j"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 13
+
+[sub_resource type="Resource" id="Resource_pqdg7"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_b8nde"), SubResource("Resource_uf11j")])
+
+[sub_resource type="Resource" id="Resource_mvd4j"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国壮汉"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_q02tn"]
+script = ExtResource("77_3muj5")
+enemy_name = "鸡骑士"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_vdkvo"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 12
+
+[sub_resource type="Resource" id="Resource_p4mmd"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国刺杀者"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_qn0vc"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_mvd4j"), SubResource("Resource_q02tn"), SubResource("Resource_vdkvo"), SubResource("Resource_p4mmd")])
+
+[sub_resource type="Resource" id="Resource_bemhq"]
+script = ExtResource("77_3muj5")
+enemy_name = "鸡骑士"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_ynqoh"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国正规军"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_gahql"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国贵族战士"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_utm4x"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国皮甲兵"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_ki2pb"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 15
+
+[sub_resource type="Resource" id="Resource_y51xl"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_bemhq"), SubResource("Resource_ynqoh"), SubResource("Resource_gahql"), SubResource("Resource_utm4x"), SubResource("Resource_ki2pb")])
+
+[sub_resource type="Resource" id="Resource_x1vdg"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 10
+
+[sub_resource type="Resource" id="Resource_fulrt"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国刺杀者"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_ognej"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国贵族战士"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_q67vf"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国步兵"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_wmes1"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国正规军"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_wutsr"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国皮甲兵"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_6uabi"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_x1vdg"), SubResource("Resource_fulrt"), SubResource("Resource_ognej"), SubResource("Resource_q67vf"), SubResource("Resource_wmes1"), SubResource("Resource_wutsr")])
+
+[sub_resource type="Resource" id="Resource_k5pjb"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 9
+
+[sub_resource type="Resource" id="Resource_r5u6j"]
+script = ExtResource("77_3muj5")
+enemy_name = "鸡骑士"
+enemy_count = 3
+
+[sub_resource type="Resource" id="Resource_fsbqb"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国步兵"
+enemy_count = 5
+
+[sub_resource type="Resource" id="Resource_8bpov"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国小鬼"
+enemy_count = 11
+
+[sub_resource type="Resource" id="Resource_pqrda"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国正规军"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_sir74"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_k5pjb"), SubResource("Resource_r5u6j"), SubResource("Resource_fsbqb"), SubResource("Resource_8bpov"), SubResource("Resource_pqrda")])
+
+[sub_resource type="Resource" id="Resource_4axst"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 5
+
+[sub_resource type="Resource" id="Resource_424kg"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国贵族战士"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_t0tc8"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_4axst"), SubResource("Resource_424kg")])
+
+[sub_resource type="Resource" id="Resource_7bhcr"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国贵族战士"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_pj3q0"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 8
+
+[sub_resource type="Resource" id="Resource_rax5l"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国小鬼"
+enemy_count = 12
+
+[sub_resource type="Resource" id="Resource_1vl4m"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国正规军"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_uwbrj"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_7bhcr"), SubResource("Resource_pj3q0"), SubResource("Resource_rax5l"), SubResource("Resource_1vl4m")])
+
+[sub_resource type="Resource" id="Resource_fpjso"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国皮甲兵"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_xv2sw"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国贵族战士"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_eonry"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国步兵"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_7f64h"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国刺杀者"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_64u1e"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_fpjso"), SubResource("Resource_xv2sw"), SubResource("Resource_eonry"), SubResource("Resource_7f64h")])
+
+[sub_resource type="Resource" id="Resource_ncxho"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国贵族战士"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_qg36x"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国刺杀者"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_5cach"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 8
+
+[sub_resource type="Resource" id="Resource_f8llt"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_ncxho"), SubResource("Resource_qg36x"), SubResource("Resource_5cach")])
+
+[sub_resource type="Resource" id="Resource_scvh4"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国贵族战士"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_3s758"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国壮汉"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_rgv30"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 13
+
+[sub_resource type="Resource" id="Resource_ricn7"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国皮甲兵"
+enemy_count = 5
+
+[sub_resource type="Resource" id="Resource_ygk2g"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国正规军"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_rx04d"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_scvh4"), SubResource("Resource_3s758"), SubResource("Resource_rgv30"), SubResource("Resource_ricn7"), SubResource("Resource_ygk2g")])
+
+[sub_resource type="Resource" id="Resource_gbwhl"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国贵族战士"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_0tlab"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 11
+
+[sub_resource type="Resource" id="Resource_0yw40"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国刺杀者"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_7vkc8"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国步兵"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_60rj6"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国正规军"
+enemy_count = 3
+
+[sub_resource type="Resource" id="Resource_rd1b8"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_gbwhl"), SubResource("Resource_0tlab"), SubResource("Resource_0yw40"), SubResource("Resource_7vkc8"), SubResource("Resource_60rj6")])
+
+[sub_resource type="Resource" id="Resource_cphk8"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国贵族战士"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_3kla4"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国步兵"
+enemy_count = 20
+
+[sub_resource type="Resource" id="Resource_bpx4q"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_cphk8"), SubResource("Resource_3kla4")])
+
+[sub_resource type="Resource" id="Resource_k487j"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_5crl6"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国正规军"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_dwe8t"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国贵族战士"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_l75gx"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国步兵"
+enemy_count = 8
+
+[sub_resource type="Resource" id="Resource_5ceu4"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_k487j"), SubResource("Resource_5crl6"), SubResource("Resource_dwe8t"), SubResource("Resource_l75gx")])
+
+[sub_resource type="Resource" id="Resource_c7xwg"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国贵族战士"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_yat5u"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_np8uk"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国正规军"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_2ims1"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国步兵"
+enemy_count = 12
+
+[sub_resource type="Resource" id="Resource_tf4uk"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国刺杀者"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_6sphu"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_c7xwg"), SubResource("Resource_yat5u"), SubResource("Resource_np8uk"), SubResource("Resource_2ims1"), SubResource("Resource_tf4uk")])
+
+[sub_resource type="Resource" id="Resource_afwvr"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国贵族战士"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_1rkm2"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国壮汉"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_iitaq"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国正规军"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_xkg0t"]
+script = ExtResource("77_3muj5")
+enemy_name = "尸国刺杀者"
+enemy_count = 3
+
+[sub_resource type="Resource" id="Resource_4d70k"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国正规军"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_vi84d"]
+script = ExtResource("77_3muj5")
+enemy_name = "骨国步兵"
+enemy_count = 10
+
+[sub_resource type="Resource" id="Resource_dfrns"]
+script = ExtResource("74_yoge1")
+wave_summon_text_list = Array[ExtResource("76_5lsol")]([SubResource("Resource_afwvr"), SubResource("Resource_1rkm2"), SubResource("Resource_iitaq"), SubResource("Resource_xkg0t"), SubResource("Resource_4d70k"), SubResource("Resource_vi84d")])
+
+[node name="Stage4Campaign" node_paths=PackedStringArray("hide_left_based", "hide_left_based_2", "hide_right_based_1", "hide_right_based_2", "hide_right_based_3", "left_path_polygon", "right_path_polygon", "left_explosion_markers", "right_explosion_markers") instance=ExtResource("1_4y2mf")]
+script = ExtResource("2_4iw5u")
+hide_left_based = NodePath("Towers/HideBasedLeft")
+hide_left_based_2 = NodePath("Towers/HideBasedLeft2")
+hide_right_based_1 = NodePath("Towers/HideBasedRight1")
+hide_right_based_2 = NodePath("Towers/HideBasedRight2")
+hide_right_based_3 = NodePath("Towers/HideBasedRight3")
+left_path_polygon = NodePath("PathArea/LeftPathPolygon")
+right_path_polygon = NodePath("PathArea/RightPathPolygon")
+left_explosion_markers = [NodePath("Background/ExplosionMarker1"), NodePath("Background/ExplosionMarker2"), NodePath("Background/ExplosionMarker3")]
+right_explosion_markers = [NodePath("Background/ExplosionMarker4"), NodePath("Background/ExplosionMarker5"), NodePath("Background/ExplosionMarker6"), NodePath("Background/ExplosionMarker7"), NodePath("Background/ExplosionMarker8")]
+stage_count = 4
+current_money = 700
+total_waves = 15
+stage_summon_config = SubResource("Resource_xfkcn")
+
+[node name="EnemyScenePreloadConfig" parent="." index="0"]
+chapter1_boss_preload = true
+
+[node name="StageCamera" parent="." index="2"]
+position = Vector2(960, 887)
+
+[node name="CollisionShape2D" parent="StageCamera" index="0"]
+position = Vector2(960, 720)
+shape = SubResource("RectangleShape2D_nkqxu")
+
+[node name="PreparationMusic" parent="Musics" index="0"]
+stream = ExtResource("3_my378")
+
+[node name="BattleMusic" parent="Musics" index="1"]
+stream = ExtResource("4_adjnv")
+
+[node name="BasedSprite" parent="Background" index="0"]
+y_sort_enabled = true
+texture = ExtResource("3_12g5n")
+
+[node name="ProtectionPoint" parent="Background/BasedSprite" index="0"]
+position = Vector2(482, 1377)
+
+[node name="ProtectionPoint2" type="Sprite2D" parent="Background/BasedSprite" index="1"]
+position = Vector2(1455, 1394)
+texture = ExtResource("4_2d5b2")
+script = ExtResource("5_htaib")
+
+[node name="HidePathLeft" type="Sprite2D" parent="Background/BasedSprite" index="2"]
+texture = ExtResource("8_pj1ma")
+centered = false
+
+[node name="HidePathRight" type="Sprite2D" parent="Background/BasedSprite" index="3"]
+texture = ExtResource("9_snx5o")
+centered = false
+
+[node name="HideTreeLeft" type="Sprite2D" parent="Background/BasedSprite" index="4"]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(411, 1220)
+texture = ExtResource("10_v4x3x")
+centered = false
+offset = Vector2(-411, -1220)
+
+[node name="HideTreeRight" type="Sprite2D" parent="Background/BasedSprite" index="5"]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(1552, 1311)
+texture = ExtResource("11_i2816")
+centered = false
+offset = Vector2(-1552, -1311)
+
+[node name="Flag" parent="Background" index="1"]
+position = Vector2(413, 1393)
+
+[node name="Flag2" type="Sprite2D" parent="Background" index="2"]
+position = Vector2(553, 1393)
+texture = ExtResource("6_x3qiy")
+offset = Vector2(-7, -22)
+region_enabled = true
+region_rect = Rect2(40, 38, 40, 73)
+
+[node name="Flag3" type="Sprite2D" parent="Background" index="3"]
+position = Vector2(1386, 1407.5)
+texture = ExtResource("6_x3qiy")
+offset = Vector2(-7, -22)
+region_enabled = true
+region_rect = Rect2(40, 38, 40, 73)
+
+[node name="Flag4" type="Sprite2D" parent="Background" index="4"]
+position = Vector2(1526, 1407.5)
+texture = ExtResource("6_x3qiy")
+offset = Vector2(-7, -22)
+region_enabled = true
+region_rect = Rect2(40, 38, 40, 73)
+
+[node name="Wall" type="Sprite2D" parent="Background" index="5"]
+y_sort_enabled = true
+position = Vector2(856, 257)
+texture = ExtResource("9_3s60r")
+centered = false
+offset = Vector2(-856, -257)
+
+[node name="MaskTree" type="Sprite2D" parent="Background" index="6"]
+z_index = 1
+y_sort_enabled = true
+texture = ExtResource("12_68yqu")
+centered = false
+
+[node name="FlagAnim" type="AnimatedSprite2D" parent="Background" index="7"]
+y_sort_enabled = true
+position = Vector2(387, 454)
+scale = Vector2(0.460631, 0.460631)
+sprite_frames = SubResource("SpriteFrames_5h5o5")
+autoplay = "default"
+offset = Vector2(127.56, -217.251)
+
+[node name="FlagAnim2" type="AnimatedSprite2D" parent="Background" index="8"]
+y_sort_enabled = true
+position = Vector2(1806, 344)
+scale = Vector2(0.460631, 0.460631)
+sprite_frames = SubResource("SpriteFrames_5h5o5")
+autoplay = "default"
+offset = Vector2(127.56, -217.251)
+
+[node name="ExplosionMarker1" type="Marker2D" parent="Background" index="9"]
+position = Vector2(25, 918)
+
+[node name="ExplosionMarker2" type="Marker2D" parent="Background" index="10"]
+position = Vector2(212, 1030)
+
+[node name="ExplosionMarker3" type="Marker2D" parent="Background" index="11"]
+position = Vector2(411, 1160)
+
+[node name="ExplosionMarker4" type="Marker2D" parent="Background" index="12"]
+position = Vector2(1900, 919)
+
+[node name="ExplosionMarker5" type="Marker2D" parent="Background" index="13"]
+position = Vector2(1739, 984)
+
+[node name="ExplosionMarker6" type="Marker2D" parent="Background" index="14"]
+position = Vector2(1697, 1120)
+
+[node name="ExplosionMarker7" type="Marker2D" parent="Background" index="15"]
+position = Vector2(1606, 1250)
+
+[node name="ExplosionMarker8" type="Marker2D" parent="Background" index="16"]
+position = Vector2(1496, 1297)
+
+[node name="StageNavigationRegion" parent="." index="7"]
+navigation_polygon = SubResource("NavigationPolygon_k2plv")
+
+[node name="FirerainRandomRegion" parent="FirerainRandomRegions" index="0"]
+navigation_polygon = SubResource("NavigationPolygon_o165n")
+
+[node name="FirerainRandomRegionLeft" type="NavigationRegion2D" parent="FirerainRandomRegions" index="1"]
+navigation_polygon = SubResource("NavigationPolygon_uxftv")
+enabled = false
+navigation_layers = 2
+
+[node name="FirerainRandomRegionRight" type="NavigationRegion2D" parent="FirerainRandomRegions" index="2"]
+navigation_polygon = SubResource("NavigationPolygon_j8non")
+enabled = false
+navigation_layers = 2
+
+[node name="EnemyPath" type="Path2D" parent="Enemies" index="0"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_4nk76")
+script = ExtResource("55_s7rew")
+path_summon_config = ExtResource("56_rtv7x")
+
+[node name="EnemyPath2" type="Path2D" parent="Enemies" index="1"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_2v1i8")
+script = ExtResource("55_s7rew")
+path_summon_config = ExtResource("57_c3gwk")
+
+[node name="EnemyPath3" type="Path2D" parent="Enemies" index="2"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_g5308")
+script = ExtResource("55_s7rew")
+path_summon_config = ExtResource("58_353uc")
+
+[node name="EnemyPath4" type="Path2D" parent="Enemies" index="3"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_m11wn")
+script = ExtResource("55_s7rew")
+path_summon_config = ExtResource("59_h83qf")
+
+[node name="EnemyPath5" type="Path2D" parent="Enemies" index="4"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_sssl4")
+script = ExtResource("55_s7rew")
+path_summon_config = ExtResource("60_88id5")
+
+[node name="EnemyPath6" type="Path2D" parent="Enemies" index="5"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_8ny32")
+script = ExtResource("55_s7rew")
+path_summon_config = ExtResource("61_yftmp")
+
+[node name="EnemyPath7" type="Path2D" parent="Enemies" index="6"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_aylgy")
+script = ExtResource("55_s7rew")
+path_summon_config = ExtResource("62_gvfn2")
+
+[node name="EnemyPath8" type="Path2D" parent="Enemies" index="7"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_vyjma")
+script = ExtResource("55_s7rew")
+path_summon_config = ExtResource("63_gjbik")
+
+[node name="EnemyPath9" type="Path2D" parent="Enemies" index="8"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_qkdx7")
+script = ExtResource("55_s7rew")
+path_summon_config = ExtResource("64_g5bfu")
+
+[node name="EnemyPath10" type="Path2D" parent="Enemies" index="9"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_wrpmj")
+script = ExtResource("55_s7rew")
+enabled = false
+path_summon_config = ExtResource("65_cdls0")
+
+[node name="EnemyPath11" type="Path2D" parent="Enemies" index="10"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_ag3ce")
+script = ExtResource("55_s7rew")
+enabled = false
+path_summon_config = ExtResource("66_oo72l")
+
+[node name="EnemyPath12" type="Path2D" parent="Enemies" index="11"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_m245f")
+script = ExtResource("55_s7rew")
+enabled = false
+path_summon_config = ExtResource("67_tbvrb")
+
+[node name="EnemyPath13" type="Path2D" parent="Enemies" index="12"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_x2u8v")
+script = ExtResource("55_s7rew")
+enabled = false
+path_summon_config = ExtResource("68_3h1ti")
+
+[node name="EnemyPath14" type="Path2D" parent="Enemies" index="13"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_f8xdk")
+script = ExtResource("55_s7rew")
+enabled = false
+path_summon_config = ExtResource("69_lybbf")
+
+[node name="EnemyPath15" type="Path2D" parent="Enemies" index="14"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_t4jvt")
+script = ExtResource("55_s7rew")
+enabled = false
+path_summon_config = ExtResource("70_vm4sq")
+
+[node name="BossPath" type="Path2D" parent="Enemies" index="15"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_l7ib6")
+script = ExtResource("55_s7rew")
+path_summon_config = ExtResource("71_lqpdt")
+
+[node name="DefenceTowerBased" parent="Towers" index="0" instance=ExtResource("55_ijvj8")]
+position = Vector2(161, 571)
+
+[node name="DefenceTowerBased2" parent="Towers" index="1" instance=ExtResource("55_ijvj8")]
+position = Vector2(380, 491)
+
+[node name="DefenceTowerBased3" parent="Towers" index="2" instance=ExtResource("55_ijvj8")]
+position = Vector2(506, 628)
+
+[node name="DefenceTowerBased4" parent="Towers" index="3" instance=ExtResource("55_ijvj8")]
+position = Vector2(820, 731)
+
+[node name="DefenceTowerBased5" parent="Towers" index="4" instance=ExtResource("55_ijvj8")]
+position = Vector2(1036, 754)
+
+[node name="DefenceTowerBased6" parent="Towers" index="5" instance=ExtResource("55_ijvj8")]
+position = Vector2(886, 892)
+
+[node name="DefenceTowerBased7" parent="Towers" index="6" instance=ExtResource("55_ijvj8")]
+position = Vector2(609, 1221)
+
+[node name="DefenceTowerBased8" parent="Towers" index="7" instance=ExtResource("55_ijvj8")]
+position = Vector2(670, 1054)
+
+[node name="DefenceTowerBased9" parent="Towers" index="8" instance=ExtResource("55_ijvj8")]
+position = Vector2(1343, 1314)
+
+[node name="HideBasedRight1" parent="Towers" index="9" instance=ExtResource("55_ijvj8")]
+visible = false
+position = Vector2(1521, 1209)
+
+[node name="HideBasedRight2" parent="Towers" index="10" instance=ExtResource("55_ijvj8")]
+visible = false
+position = Vector2(1814, 1099)
+
+[node name="HideBasedRight3" parent="Towers" index="11" instance=ExtResource("55_ijvj8")]
+visible = false
+position = Vector2(1650, 926)
+
+[node name="DefenceTowerBased12" parent="Towers" index="12" instance=ExtResource("55_ijvj8")]
+position = Vector2(1142, 1116)
+
+[node name="DefenceTowerBased13" parent="Towers" index="13" instance=ExtResource("55_ijvj8")]
+position = Vector2(833, 531)
+
+[node name="DefenceTowerBased14" parent="Towers" index="14" instance=ExtResource("55_ijvj8")]
+position = Vector2(1052, 384)
+
+[node name="DefenceTowerBased15" parent="Towers" index="15" instance=ExtResource("55_ijvj8")]
+position = Vector2(829, 371)
+
+[node name="DefenceTowerBased16" parent="Towers" index="16" instance=ExtResource("55_ijvj8")]
+position = Vector2(1503, 530)
+
+[node name="DefenceTowerBased17" parent="Towers" index="17" instance=ExtResource("55_ijvj8")]
+position = Vector2(1657, 650)
+
+[node name="DefenceTowerBased18" parent="Towers" index="18" instance=ExtResource("55_ijvj8")]
+position = Vector2(1365, 700)
+
+[node name="DefenceTowerBased19" parent="Towers" index="19" instance=ExtResource("55_ijvj8")]
+position = Vector2(1706, 376)
+
+[node name="DefenceTowerBased20" parent="Towers" index="20" instance=ExtResource("55_ijvj8")]
+position = Vector2(1280, 510)
+
+[node name="DefenceTowerBased21" parent="Towers" index="21" instance=ExtResource("55_ijvj8")]
+position = Vector2(1303, 988)
+
+[node name="DefenceTowerBased22" parent="Towers" index="22" instance=ExtResource("55_ijvj8")]
+position = Vector2(532, 912)
+
+[node name="HideBasedLeft" parent="Towers" index="23" instance=ExtResource("55_ijvj8")]
+visible = false
+position = Vector2(424, 1095)
+
+[node name="HideBasedLeft2" parent="Towers" index="24" instance=ExtResource("55_ijvj8")]
+visible = false
+position = Vector2(295, 965)
+
+[node name="PauseButton" parent="StageUI" index="3"]
+texture_hover = null
+
+[node name="FirerainButton" parent="StageUI/SkillButtonContainer" index="0"]
+texture_normal = SubResource("Resource_qax6h")
+texture_select = SubResource("Resource_qneuu")
+
+[node name="ReinforceButton" parent="StageUI/SkillButtonContainer" index="1"]
+texture_normal = SubResource("Resource_87trf")
+texture_select = SubResource("Resource_s4115")
+
+[node name="SkillTexture" parent="StageUI/SkillCursor" index="0"]
+texture = null
+
+[node name="CollisionShape2D" parent="ClickArea" index="0"]
+position = Vector2(961, 724)
+shape = SubResource("RectangleShape2D_vfr8y")
+
+[node name="WaveButton" parent="WaveButtons" index="0" node_paths=PackedStringArray("linked_wave_panel") instance=ExtResource("73_jd3ca")]
+offset_left = 947.0
+offset_top = 263.0
+offset_right = 947.0
+offset_bottom = 263.0
+linked_wave_panel = NodePath("../WavePanel")
+summon_text_list = Array[ExtResource("74_yoge1")]([null, SubResource("Resource_fd8yo"), SubResource("Resource_gssg0"), SubResource("Resource_qx8hn"), SubResource("Resource_hi6rg"), null, SubResource("Resource_sd623"), null, SubResource("Resource_wec0x"), SubResource("Resource_uxlpb"), null, null, SubResource("Resource_ycwec"), SubResource("Resource_ifm45"), SubResource("Resource_yrcir")])
+
+[node name="Direction" type="Sprite2D" parent="WaveButtons/WaveButton" index="5"]
+show_behind_parent = true
+rotation = -1.57416
+scale = Vector2(0.942457, 0.942457)
+texture = ExtResource("74_c4ci4")
+
+[node name="WaveButton2" parent="WaveButtons" index="1" node_paths=PackedStringArray("linked_wave_panel") instance=ExtResource("73_jd3ca")]
+offset_left = 185.0
+offset_top = 261.0
+offset_right = 185.0
+offset_bottom = 261.0
+linked_wave_panel = NodePath("../WavePanel2")
+summon_text_list = Array[ExtResource("74_yoge1")]([SubResource("Resource_t5t01"), null, SubResource("Resource_3ew3f"), null, SubResource("Resource_87u13"), SubResource("Resource_wvl55"), null, SubResource("Resource_b8kof"), SubResource("Resource_uh5gc"), null, SubResource("Resource_5xl1s"), SubResource("Resource_3c808"), null, SubResource("Resource_wmyu1"), null])
+
+[node name="Direction" type="Sprite2D" parent="WaveButtons/WaveButton2" index="5"]
+show_behind_parent = true
+rotation = -1.57416
+scale = Vector2(0.942457, 0.942457)
+texture = ExtResource("74_c4ci4")
+
+[node name="WaveButton3" parent="WaveButtons" index="2" node_paths=PackedStringArray("linked_wave_panel") instance=ExtResource("73_jd3ca")]
+offset_left = 1532.0
+offset_top = 273.0
+offset_right = 1532.0
+offset_bottom = 273.0
+linked_wave_panel = NodePath("../WavePanel3")
+summon_text_list = Array[ExtResource("74_yoge1")]([SubResource("Resource_200wo"), null, null, SubResource("Resource_odh27"), SubResource("Resource_v0u0s"), SubResource("Resource_6l3na"), SubResource("Resource_objb3"), null, SubResource("Resource_pqdg7"), SubResource("Resource_qn0vc"), null, SubResource("Resource_y51xl"), SubResource("Resource_6uabi"), SubResource("Resource_sir74"), null])
+
+[node name="Direction" type="Sprite2D" parent="WaveButtons/WaveButton3" index="5"]
+show_behind_parent = true
+rotation = -1.57416
+scale = Vector2(0.942457, 0.942457)
+texture = ExtResource("74_c4ci4")
+
+[node name="WaveButton4" parent="WaveButtons" index="3" node_paths=PackedStringArray("linked_wave_panel") instance=ExtResource("73_jd3ca")]
+offset_left = 109.0
+offset_top = 940.0
+offset_right = 109.0
+offset_bottom = 940.0
+linked_wave_panel = NodePath("../WavePanel4")
+summon_text_list = Array[ExtResource("74_yoge1")]([null, null, null, null, null, null, SubResource("Resource_t0tc8"), SubResource("Resource_uwbrj"), SubResource("Resource_64u1e"), null, SubResource("Resource_f8llt"), null, SubResource("Resource_rx04d"), SubResource("Resource_rd1b8"), null])
+
+[node name="Direction" type="Sprite2D" parent="WaveButtons/WaveButton4" index="5"]
+show_behind_parent = true
+rotation = -2.79823
+scale = Vector2(0.942457, 0.942457)
+texture = ExtResource("74_c4ci4")
+
+[node name="WaveButton5" parent="WaveButtons" index="4" node_paths=PackedStringArray("linked_wave_panel") instance=ExtResource("73_jd3ca")]
+offset_left = 1837.0
+offset_top = 916.0
+offset_right = 1837.0
+offset_bottom = 916.0
+linked_wave_panel = NodePath("../WavePanel5")
+summon_text_list = Array[ExtResource("74_yoge1")]([null, null, null, null, null, null, null, null, null, null, SubResource("Resource_bpx4q"), SubResource("Resource_5ceu4"), SubResource("Resource_6sphu"), SubResource("Resource_dfrns"), null])
+
+[node name="Direction" type="Sprite2D" parent="WaveButtons/WaveButton5" index="5"]
+show_behind_parent = true
+rotation = -0.14226
+scale = Vector2(0.942457, 0.942457)
+texture = ExtResource("74_c4ci4")
+
+[node name="WavePanel" parent="WaveButtons" index="5" instance=ExtResource("75_g3m0g")]
+layout_mode = 0
+offset_left = 991.0
+offset_top = 203.0
+offset_right = 1595.0
+offset_bottom = 497.0
+
+[node name="WavePanel2" parent="WaveButtons" index="6" instance=ExtResource("75_g3m0g")]
+layout_mode = 0
+offset_left = 231.0
+offset_top = 207.0
+offset_right = 835.0
+offset_bottom = 501.0
+
+[node name="WavePanel3" parent="WaveButtons" index="7" instance=ExtResource("75_g3m0g")]
+layout_mode = 0
+offset_left = 1582.0
+offset_top = 213.0
+offset_right = 2186.0
+offset_bottom = 507.0
+
+[node name="WavePanel4" parent="WaveButtons" index="8" instance=ExtResource("75_g3m0g")]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 884.0
+offset_right = 752.0
+offset_bottom = 1178.0
+
+[node name="WavePanel5" parent="WaveButtons" index="9" instance=ExtResource("75_g3m0g")]
+layout_mode = 0
+offset_left = 1475.0
+offset_top = 856.0
+offset_right = 2079.0
+offset_bottom = 1150.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PathArea" index="0"]
+polygon = PackedVector2Array(240, 114, 152, 111, 133, 255, 145, 391, 185, 502, 245, 573, 347, 622, 434, 614, 600, 522, 644, 496, 874, 495, 900, 500, 882, 740, 657, 862, 537, 993, 482, 1107, 456, 1277, 435, 1444, 529, 1442, 556, 1165, 646, 983, 780, 895, 912, 830, 963, 916, 1018, 972, 1129, 1049, 1294, 1148, 1379, 1244, 1413, 1336, 1417, 1451, 1507, 1452, 1497, 1325, 1472, 1216, 1400, 1115, 1247, 1005, 1072, 908, 986, 792, 973, 697, 977, 499, 1083, 547, 1224, 636, 1372, 667, 1555, 660, 1645, 582, 1673, 436, 1637, 358, 1579, 274, 1564, 217, 1594, 139, 1496, 132, 1475, 214, 1490, 301, 1566, 425, 1580, 492, 1563, 542, 1513, 571, 1393, 575, 1280, 560, 1149, 486, 1074, 439, 983, 413, 997, 118, 907, 115, 894, 412, 783, 405, 655, 405, 570, 421, 458, 502, 395, 529, 321, 513, 255, 445, 221, 323, 237, 162)
+
+[node name="LeftPathPolygon" type="CollisionPolygon2D" parent="PathArea" index="1"]
+polygon = PackedVector2Array(-11, 860, -10, 949, 36, 961, 170, 1040, 246, 1122, 287, 1171, 359, 1234, 458, 1269, 478, 1173, 434, 1159, 344, 1095, 259, 1003, 168, 923, 84, 878)
+disabled = true
+
+[node name="RightPathPolygon" type="CollisionPolygon2D" parent="PathArea" index="2"]
+polygon = PackedVector2Array(1937, 865, 1859, 866, 1761, 886, 1700, 951, 1666, 1010, 1640, 1137, 1585, 1220, 1470, 1257, 1485, 1362, 1559, 1335, 1683, 1257, 1745, 1111, 1772, 1009, 1821, 963, 1940, 957)
+disabled = true
+
+[node name="Node2D" type="Node2D" parent="." index="17"]
+script = ExtResource("76_wxl02")
+max_wave_count = 15
+process_summon_blocks = Array[ExtResource("80_t8y8p")]([ExtResource("56_rtv7x"), ExtResource("57_c3gwk"), ExtResource("58_353uc"), ExtResource("59_h83qf"), ExtResource("60_88id5"), ExtResource("61_yftmp"), ExtResource("62_gvfn2"), ExtResource("63_gjbik"), ExtResource("64_g5bfu"), ExtResource("65_cdls0"), ExtResource("66_oo72l"), ExtResource("67_tbvrb"), ExtResource("68_3h1ti"), ExtResource("69_lybbf"), ExtResource("70_vm4sq")])
+
+[node name="SpecialTowersUnlockUI" parent="." index="18" instance=ExtResource("78_i72el")]
+show_texture = ExtResource("79_br6at")
+show_name = "皇家近卫军"
+
+[node name="HeroSummonMarker" parent="." index="21"]
+position = Vector2(484, 1382)

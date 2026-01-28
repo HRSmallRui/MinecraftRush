@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=3 uid="uid://cfd3li1xts23r"]
+
+[ext_resource type="AudioStream" uid="uid://bid2c6pwsfvvv" path="res://Assets/Sounds/Music/opening.mp3" id="1_2fdh5"]
+[ext_resource type="Script" path="res://Scripts/Stages/stage_1_opening.gd" id="1_bdi5g"]
+[ext_resource type="FontFile" uid="uid://dsfgk2j8mabcb" path="res://Assets/Fonts/simsun.ttc" id="3_0i8vf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_egakv"]
+bg_color = Color(0.273873, 0.273873, 0.273873, 0.443137)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m60kk"]
+bg_color = Color(0.0980392, 0.0980392, 0.0980392, 0.443137)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="Stage1Opening" type="CanvasLayer"]
+script = ExtResource("1_bdi5g")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Opening" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_2fdh5")
+autoplay = true
+
+[node name="Subtitle" type="Label" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -958.0
+offset_top = -88.0
+offset_right = 958.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_0i8vf")
+theme_override_font_sizes/font_size = 64
+text = "焦土终会复生，但伤疤永不弥合"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SkipButton" type="Button" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -254.0
+offset_top = 41.0
+offset_right = -122.0
+offset_bottom = 148.0
+grow_horizontal = 0
+scale = Vector2(1.54343, 1.54343)
+theme_override_font_sizes/font_size = 72
+theme_override_styles/hover = SubResource("StyleBoxFlat_egakv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_m60kk")
+theme_override_styles/normal = SubResource("StyleBoxFlat_m60kk")
+text = ">>"
+
+[connection signal="pressed" from="SkipButton" to="." method="_on_skip_button_pressed"]

@@ -1,0 +1,232 @@
+[gd_scene load_steps=13 format=3 uid="uid://800b6mxlp0i0"]
+
+[ext_resource type="Script" path="res://Scripts/launcher.gd" id="1_acdsp"]
+[ext_resource type="Theme" uid="uid://do2u1in3iq2nk" path="res://Assets/Resources/launcher_theme.tres" id="2_ifku4"]
+[ext_resource type="FontFile" uid="uid://drfv8ak22g1rm" path="res://Assets/Fonts/simhei.ttf" id="3_qb3tn"]
+[ext_resource type="FontFile" uid="uid://dsfgk2j8mabcb" path="res://Assets/Fonts/simsun.ttc" id="4_e82ph"]
+[ext_resource type="Texture2D" uid="uid://dn6osr6o4hg84" path="res://Assets/Images/UI/checkbox_select.png" id="4_kkib5"]
+[ext_resource type="Texture2D" uid="uid://dp1qx85r5tt8a" path="res://Assets/Images/UI/checkbox.png" id="5_ns85s"]
+[ext_resource type="Texture2D" uid="uid://dig0qv00vymgk" path="res://Assets/Images/title.jpg" id="6_osabs"]
+[ext_resource type="Texture2D" uid="uid://yaik56ea6ea6" path="res://Assets/Images/MainTitle/logo.png" id="7_cm008"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aajok"]
+bg_color = Color(0, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_37lhl"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4d8oc"]
+atlas = ExtResource("4_kkib5")
+region = Rect2(16, 18, 65, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_blj0m"]
+atlas = ExtResource("5_ns85s")
+region = Rect2(16, 18, 65, 65)
+
+[node name="Launcher" type="CanvasLayer"]
+script = ExtResource("1_acdsp")
+metadata/_edit_vertical_guides_ = [640.0, 320.0]
+metadata/_edit_horizontal_guides_ = [960.0]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.716296, 0.716296, 0.716296, 1)
+
+[node name="StartButton" type="Button" parent="."]
+offset_left = 372.0
+offset_top = 788.0
+offset_right = 658.0
+offset_bottom = 896.0
+scale = Vector2(0.819358, 0.819358)
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_qb3tn")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/hover = SubResource("StyleBoxFlat_aajok")
+theme_override_styles/normal = SubResource("StyleBoxFlat_37lhl")
+text = "启动"
+
+[node name="CloseButton" type="Button" parent="."]
+offset_left = 32.0
+offset_top = 788.0
+offset_right = 318.0
+offset_bottom = 896.0
+scale = Vector2(0.819358, 0.819358)
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_qb3tn")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/hover = SubResource("StyleBoxFlat_aajok")
+theme_override_styles/normal = SubResource("StyleBoxFlat_37lhl")
+text = "关闭"
+
+[node name="Resolution" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 256.0
+offset_right = 40.0
+offset_bottom = 296.0
+
+[node name="ResolutionOption" type="OptionButton" parent="Resolution"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 256.0
+offset_right = 419.0
+offset_bottom = 324.0
+scale = Vector2(0.698959, 0.698959)
+focus_mode = 0
+theme = ExtResource("2_ifku4")
+theme_override_font_sizes/font_size = 48
+selected = 2
+item_count = 6
+popup/item_0/text = "3840x2160"
+popup/item_1/text = "2560x1440"
+popup/item_1/id = 1
+popup/item_2/text = "1920x1080"
+popup/item_2/id = 1
+popup/item_3/text = "1280x720"
+popup/item_3/id = 3
+popup/item_4/text = "1024x576"
+popup/item_4/id = 4
+popup/item_5/text = "640x360"
+popup/item_5/id = 5
+
+[node name="Label" type="Label" parent="Resolution"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 202.0
+offset_right = 405.0
+offset_bottom = 275.0
+scale = Vector2(0.500706, 0.500706)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_qb3tn")
+theme_override_font_sizes/font_size = 72
+text = "游戏窗口大小"
+
+[node name="Language" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -19.0
+offset_top = 260.0
+offset_right = 21.0
+offset_bottom = 300.0
+
+[node name="LanguageOption" type="OptionButton" parent="Language"]
+layout_mode = 0
+offset_left = 364.0
+offset_top = 250.0
+offset_right = 609.0
+offset_bottom = 300.0
+focus_mode = 0
+theme = ExtResource("2_ifku4")
+theme_override_font_sizes/font_size = 36
+selected = 0
+item_count = 2
+popup/item_0/text = "中文"
+popup/item_1/text = "English"
+popup/item_1/id = 1
+
+[node name="Label2" type="Label" parent="Language"]
+layout_mode = 0
+offset_left = 364.0
+offset_top = 202.0
+offset_right = 724.0
+offset_bottom = 275.0
+scale = Vector2(0.500706, 0.500706)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_qb3tn")
+theme_override_font_sizes/font_size = 72
+text = "语言"
+
+[node name="FullScreen" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 139.0
+offset_top = -43.0
+offset_right = 179.0
+offset_bottom = -3.0
+
+[node name="FullScreenCheck" type="CheckBox" parent="FullScreen"]
+layout_mode = 0
+offset_left = 221.0
+offset_top = 731.0
+offset_right = 294.0
+offset_bottom = 804.0
+scale = Vector2(0.783008, 0.783008)
+focus_mode = 0
+theme_override_icons/checked = SubResource("AtlasTexture_4d8oc")
+theme_override_icons/unchecked = SubResource("AtlasTexture_blj0m")
+
+[node name="Label2" type="Label" parent="FullScreen"]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 741.0
+offset_right = 650.0
+offset_bottom = 814.0
+scale = Vector2(0.500706, 0.500706)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_qb3tn")
+theme_override_font_sizes/font_size = 72
+text = "全屏"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 91.0
+offset_top = 64.0
+offset_right = 2288.0
+offset_bottom = 1598.0
+scale = Vector2(0.206599, 0.206599)
+texture = ExtResource("6_osabs")
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureRect"]
+position = Vector2(1113.27, 517.91)
+scale = Vector2(1.29665, 1.29665)
+texture = ExtResource("7_cm008")
+
+[node name="VersionLabel" type="Label" parent="."]
+offset_top = 922.0
+offset_right = 1868.0
+offset_bottom = 1033.0
+scale = Vector2(0.342101, 0.342101)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_e82ph")
+theme_override_font_sizes/font_size = 72
+text = "ver.mr.rebirth.desktop-0.2.4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StopLayer" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.356863)
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="item_selected" from="Resolution/ResolutionOption" to="." method="_on_resolution_option_item_selected"]
+[connection signal="item_selected" from="Language/LanguageOption" to="." method="_on_language_option_item_selected"]
+[connection signal="pressed" from="FullScreen/FullScreenCheck" to="." method="_on_full_screen_check_pressed"]

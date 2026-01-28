@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://0xkf5iw3n1ka"]
+
+[ext_resource type="Texture2D" uid="uid://dkfq4124uoa2e" path="res://Assets/Images/Bullets/energy_ball.png" id="1_vxka8"]
+[ext_resource type="Script" path="res://Scripts/Effects/magic_ball_tail.gd" id="2_rrycp"]
+
+[node name="EnergyBallTail" type="Sprite2D"]
+modulate = Color(1, 1, 1, 0.392157)
+top_level = true
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_vxka8")
+offset = Vector2(0, -2)
+region_enabled = true
+region_rect = Rect2(0, 0, 40, 60)
+script = ExtResource("2_rrycp")

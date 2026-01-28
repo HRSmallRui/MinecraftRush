@@ -1,0 +1,116 @@
+[gd_scene load_steps=23 format=3 uid="uid://dfdhxd82psfih"]
+
+[ext_resource type="PackedScene" uid="uid://i17sy4bx2dfh" path="res://Scenes/DefenceTowers/BarrackTowers/barrack_tower.tscn" id="1_jygg7"]
+[ext_resource type="Texture2D" uid="uid://bqdlwy3hg4fgx" path="res://Assets/Images/UI/InformationBar/barrack-id-6.png" id="2_6anqy"]
+[ext_resource type="Script" path="res://Scripts/Datas/BarrackData.gd" id="2_ou0ti"]
+[ext_resource type="PackedScene" uid="uid://c3vpcx83qnasy" path="res://Scenes/Allys/Soldiers/medical_soldier.tscn" id="3_uriys"]
+[ext_resource type="PackedScene" uid="uid://cjpn07gcbekr1" path="res://Scenes/DefenceTowers/tower_skill_button.tscn" id="4_f45qr"]
+[ext_resource type="Texture2D" uid="uid://bf21kld438av6" path="res://Assets/Images/DefenceTowers/Barracks/UI/感染.png" id="6_4f5fa"]
+[ext_resource type="Texture2D" uid="uid://1lbahtt733y0" path="res://Assets/Images/DefenceTowers/Barracks/UI/感染select.png" id="7_r66ta"]
+[ext_resource type="Texture2D" uid="uid://yfirlfibhpn8" path="res://Assets/Images/DefenceTowers/Barracks/UI/感染disabled.png" id="8_56owr"]
+[ext_resource type="Texture2D" uid="uid://cmqigkhk13nd4" path="res://Assets/Images/DefenceTowers/Barracks/UI/毒瓶.png" id="9_nrnw3"]
+[ext_resource type="Texture2D" uid="uid://qvrbw7vuw6bq" path="res://Assets/Images/DefenceTowers/Barracks/UI/毒瓶select.png" id="10_8k4ib"]
+[ext_resource type="Texture2D" uid="uid://d18ufrcxw0egc" path="res://Assets/Images/DefenceTowers/Barracks/UI/毒瓶disabled.png" id="11_ti10v"]
+[ext_resource type="Texture2D" uid="uid://cglcmln4tjo6c" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV4-3/LV4医疗护卫队.png" id="12_6j42h"]
+[ext_resource type="Texture2D" uid="uid://bwwf7f7mqabee" path="res://Assets/Images/DefenceTowers/Barracks/UI/急救光环.png" id="12_inkru"]
+[ext_resource type="Texture2D" uid="uid://cvs1wtgcaw720" path="res://Assets/Images/DefenceTowers/Barracks/UI/急救光环select.png" id="13_uv5pk"]
+[ext_resource type="Texture2D" uid="uid://wxtfkqxji46o" path="res://Assets/Images/DefenceTowers/Barracks/UI/急救光环disabled.png" id="14_oduf8"]
+
+[sub_resource type="Resource" id="Resource_2ot6s"]
+script = ExtResource("2_ou0ti")
+soldier_health = 250
+damage_low = 7
+damage_high = 12
+armor = 0.3
+rebirth_time = 10
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gwit"]
+atlas = ExtResource("6_4f5fa")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4cs61"]
+atlas = ExtResource("8_56owr")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hayi8"]
+atlas = ExtResource("9_nrnw3")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t16l1"]
+atlas = ExtResource("11_ti10v")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmfiq"]
+atlas = ExtResource("12_inkru")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0ny2"]
+atlas = ExtResource("14_oduf8")
+region = Rect2(6, 6, 85, 85)
+
+[node name="MedicalGuardCamp" instance=ExtResource("1_jygg7")]
+barrack_data = SubResource("Resource_2ot6s")
+soldier_scene = ExtResource("3_uriys")
+is_new_tower = false
+tower_name = "医疗护卫队"
+tower_texture = ExtResource("2_6anqy")
+tower_id = 6
+tower_level = 4
+tower_value = 570
+
+[node name="TowerButton" parent="." index="2"]
+offset_top = -84.0
+
+[node name="Circle" parent="TowerUI" index="4"]
+position = Vector2(0, -41)
+
+[node name="TowerSkillButton" parent="TowerUI/Circle" index="2" node_paths=PackedStringArray("linked_tower") instance=ExtResource("4_f45qr")]
+offset_top = -98.7494
+offset_bottom = -13.7493
+texture_normal = SubResource("AtlasTexture_7gwit")
+texture_pressed = SubResource("AtlasTexture_7gwit")
+texture_hover = ExtResource("7_r66ta")
+texture_disabled = SubResource("AtlasTexture_4cs61")
+linked_tower = NodePath("../../..")
+skill_name = "感染"
+skill_prices = Array[int]([150, 125, 125])
+skill_intro = PackedStringArray("医疗兵每次攻击都会感染敌人，持续4秒，被感染敌人每秒受到8点真实伤害，并在死亡时自爆对周围敌人造成30点真实伤害并感染波及到的敌人。", "医疗兵每次攻击都会感染敌人，持续6秒，被感染敌人每秒受到8点真实伤害，并在死亡时自爆对周围敌人造成30点真实伤害并感染波及到的敌人。", "医疗兵每次攻击都会感染敌人，持续8秒，被感染敌人每秒受到8点真实伤害，并在死亡时自爆对周围敌人造成30点真实伤害并感染波及到的敌人。")
+skill_words = "瘟疫降临"
+
+[node name="TowerSkillButton2" parent="TowerUI/Circle" index="3" node_paths=PackedStringArray("linked_tower") instance=ExtResource("4_f45qr")]
+offset_left = -42.5007
+offset_top = -147.5
+offset_right = 42.4989
+offset_bottom = -62.4998
+texture_normal = SubResource("AtlasTexture_hayi8")
+texture_pressed = SubResource("AtlasTexture_hayi8")
+texture_hover = ExtResource("10_8k4ib")
+texture_disabled = SubResource("AtlasTexture_t16l1")
+linked_tower = NodePath("../../..")
+skill_name = "毒瓶"
+skill_id = 1
+skill_prices = Array[int]([250, 150, 150])
+skill_intro = PackedStringArray("每1.5秒，医疗兵可以远程投掷毒瓶，对目标造成8-12点物理伤害，并感染敌人，持续4秒。", "每1.5秒，医疗兵可以远程投掷毒瓶，对目标造成10-16点物理伤害，并感染敌人，持续6秒。", "每1.5秒，医疗兵可以远程投掷毒瓶，对目标造成15-20点物理伤害，并感染敌人，持续8秒。")
+skill_words = "猜猜葫芦里卖的什么药"
+
+[node name="TowerSkillButton3" parent="TowerUI/Circle" index="4" node_paths=PackedStringArray("linked_tower") instance=ExtResource("4_f45qr")]
+offset_left = 57.4995
+offset_top = -98.7503
+offset_right = 142.499
+offset_bottom = -13.7502
+texture_normal = SubResource("AtlasTexture_gmfiq")
+texture_pressed = SubResource("AtlasTexture_gmfiq")
+texture_hover = ExtResource("13_uv5pk")
+texture_disabled = SubResource("AtlasTexture_c0ny2")
+linked_tower = NodePath("../../..")
+skill_name = "急救光环"
+skill_id = 2
+skill_prices = Array[int]([125, 125, 125])
+skill_intro = PackedStringArray("医疗兵自身生命低于100点时释放生命光环，恢复自身及周围友军60点生命。", "医疗兵自身生命低于100点时释放生命光环，恢复自身及周围友军120点生命。", "医疗兵自身生命低于100点时释放生命光环，恢复自身及周围友军180点生命。")
+skill_words = "萨尼铁塔！"
+
+[node name="TowerSprite" type="Sprite2D" parent="." index="8"]
+position = Vector2(0.0773773, 12.7442)
+scale = Vector2(1.05866, 1.05866)
+texture = ExtResource("12_6j42h")
+offset = Vector2(2.76046, -52.6557)

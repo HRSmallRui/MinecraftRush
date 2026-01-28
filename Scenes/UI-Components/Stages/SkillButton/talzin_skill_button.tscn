@@ -1,0 +1,174 @@
+[gd_scene load_steps=15 format=3 uid="uid://bdayfvw20ih61"]
+
+[ext_resource type="PackedScene" uid="uid://dakq012d6gh6m" path="res://Scenes/UI-Components/Stages/skill_button.tscn" id="1_8ucdf"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Stages/SkillButtons/talzin_skill_button.gd" id="2_ndyig"]
+[ext_resource type="Texture2D" uid="uid://desjphmwm4hmv" path="res://Assets/Images/UI/SkillButton/Heroskill/Talzin/talzin_skill.png" id="3_a4pjr"]
+[ext_resource type="Texture2D" uid="uid://d4lxrdsvr5to" path="res://Assets/Images/UI/SkillButton/Heroskill/Talzin/talzin_skill_using.png" id="4_nykc1"]
+[ext_resource type="Texture2D" uid="uid://fdl34csjxid" path="res://Assets/Images/Effects/skeleton_seckill_effect.png" id="5_55b6b"]
+[ext_resource type="AudioStream" uid="uid://bvniuiao8th54" path="res://Assets/Sounds/FXs/Heroes/Talzin/秒杀准备.mp3" id="6_kc63j"]
+[ext_resource type="AudioStream" uid="uid://dbtgg1fvplh1g" path="res://Assets/Sounds/FXs/Enemies/尸国统帅/尸国统帅死亡.wav" id="7_65lne"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nr1rx"]
+radius = 24.0
+
+[sub_resource type="Animation" id="Animation_ebtfg"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SecKillEffect:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_p5fpb"]
+resource_name = "loop"
+loop_mode = 1
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SecKillEffect:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(1, 1),
+"points": PackedFloat32Array(0, 0, 0, 0, 0, 6.28319, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cds5p"]
+_data = {
+"RESET": SubResource("Animation_ebtfg"),
+"loop": SubResource("Animation_p5fpb")
+}
+
+[sub_resource type="Animation" id="Animation_aclyt"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SecKillEffect:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.5, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SecKillEffect:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.5, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_6x6cm"]
+resource_name = "kill"
+length = 0.8
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SecKillEffect:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0.5, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0.25, -0.25, 0, 0.25, 0, 0.5, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3, 0.5, 0.8)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SecKillEffect:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0.5, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0.25, -0.25, 0, 0.25, 0, 0.5, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3, 0.5, 0.8)
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"sec_kill"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qnjy1"]
+_data = {
+"RESET": SubResource("Animation_aclyt"),
+"kill": SubResource("Animation_6x6cm")
+}
+
+[node name="TalzinSkillButton" instance=ExtResource("1_8ucdf")]
+script = ExtResource("2_ndyig")
+skill_type = 2
+texture_normal = ExtResource("3_a4pjr")
+texture_select = ExtResource("4_nykc1")
+skill_name = "夕阳彼岸红"
+skill_intro = "立即秒杀单个敌人，或对单个敌人造成极大损伤"
+cooling_time = 60.0
+
+[node name="ConditionArea" type="Area2D" parent="." index="3"]
+top_level = true
+position = Vector2(84, 83)
+disable_mode = 2
+collision_layer = 0
+collision_mask = 96
+collision_priority = 100.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ConditionArea" index="0"]
+shape = SubResource("CircleShape2D_nr1rx")
+
+[node name="SecKillEffect" type="Sprite2D" parent="." index="4"]
+visible = false
+top_level = true
+z_index = 10
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_55b6b")
+region_enabled = true
+region_rect = Rect2(10, 7, 143, 143)
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="." index="5"]
+libraries = {
+"": SubResource("AnimationLibrary_cds5p")
+}
+autoplay = "loop"
+speed_scale = 1.5
+
+[node name="PreparationAudio" type="AudioStreamPlayer" parent="." index="6"]
+stream = ExtResource("6_kc63j")
+volume_db = 4.0
+bus = &"Sound"
+
+[node name="KillAnimationPlayer" type="AnimationPlayer" parent="." index="7"]
+libraries = {
+"": SubResource("AnimationLibrary_qnjy1")
+}
+
+[node name="SecKillAudio" type="AudioStreamPlayer" parent="." index="8"]
+stream = ExtResource("7_65lne")
+volume_db = -4.0
+bus = &"Sound"
+
+[connection signal="area_entered" from="ConditionArea" to="." method="_on_condition_area_area_entered"]
+[connection signal="area_exited" from="ConditionArea" to="." method="_on_condition_area_area_exited"]

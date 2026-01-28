@@ -1,0 +1,145 @@
+[gd_scene load_steps=22 format=3 uid="uid://crg611gp4jrmu"]
+
+[ext_resource type="PackedScene" uid="uid://i17sy4bx2dfh" path="res://Scenes/DefenceTowers/BarrackTowers/barrack_tower.tscn" id="1_07vb0"]
+[ext_resource type="Texture2D" uid="uid://djsr2c6km1ra7" path="res://Assets/Images/UI/InformationBar/barrack-id-4.png" id="2_2sxtx"]
+[ext_resource type="Script" path="res://Scripts/Datas/BarrackData.gd" id="2_mjc6r"]
+[ext_resource type="PackedScene" uid="uid://c5x88rohdiv78" path="res://Scenes/Allys/Soldiers/royal_guard.tscn" id="3_0c4jr"]
+[ext_resource type="PackedScene" uid="uid://cjpn07gcbekr1" path="res://Scenes/DefenceTowers/tower_skill_button.tscn" id="5_bvenx"]
+[ext_resource type="Texture2D" uid="uid://dbj657fxabrd5" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV4-1/LV4皇家近卫军.png" id="5_fdvpl"]
+[ext_resource type="Texture2D" uid="uid://b6b1736pwbqd0" path="res://Assets/Images/DefenceTowers/Barracks/UI/神圣盾牌.png" id="6_rqfmk"]
+[ext_resource type="Texture2D" uid="uid://dpt3vg5ibiue5" path="res://Assets/Images/DefenceTowers/Barracks/UI/皇家审判select.png" id="6_y412a"]
+[ext_resource type="Texture2D" uid="uid://8n1mtxcii2xn" path="res://Assets/Images/DefenceTowers/Barracks/UI/神圣盾牌select.png" id="7_82iwu"]
+[ext_resource type="Texture2D" uid="uid://b3yguggr6jwqh" path="res://Assets/Images/DefenceTowers/Barracks/UI/神圣盾牌no.png" id="8_tfy4d"]
+[ext_resource type="Texture2D" uid="uid://djhw1aj8f1yp2" path="res://Assets/Images/DefenceTowers/Barracks/UI/皇家庇佑.png" id="9_cvjvs"]
+[ext_resource type="Texture2D" uid="uid://ceuvggi7bq20y" path="res://Assets/Images/DefenceTowers/Barracks/UI/皇家庇佑select.png" id="10_hwxmv"]
+[ext_resource type="Texture2D" uid="uid://dma6xhp8xwtei" path="res://Assets/Images/DefenceTowers/Barracks/UI/皇家庇佑no.png" id="11_t7mlo"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/light_component.gd" id="13_m17cw"]
+
+[sub_resource type="Resource" id="Resource_nryyr"]
+script = ExtResource("2_mjc6r")
+soldier_health = 200
+damage_low = 12
+damage_high = 15
+armor = 0.65
+rebirth_time = 14
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4p7jr"]
+atlas = ExtResource("6_rqfmk")
+region = Rect2(6, 5, 85, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vr7eb"]
+atlas = ExtResource("8_tfy4d")
+region = Rect2(6, 5, 85, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5848"]
+atlas = ExtResource("9_cvjvs")
+region = Rect2(6, 5, 85, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ufx4"]
+atlas = ExtResource("11_t7mlo")
+region = Rect2(6, 5, 85, 86)
+
+[sub_resource type="Gradient" id="Gradient_38jcw"]
+colors = PackedColorArray(1, 1, 0.0784314, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2bbdp"]
+gradient = SubResource("Gradient_38jcw")
+fill = 1
+fill_from = Vector2(0.491453, 0.529915)
+fill_to = Vector2(0.82906, 0.24359)
+
+[node name="RoyalGuardPalace" instance=ExtResource("1_07vb0")]
+barrack_data = SubResource("Resource_nryyr")
+soldier_scene = ExtResource("3_0c4jr")
+is_new_tower = false
+tower_name = "皇家近卫军"
+tower_texture = ExtResource("2_2sxtx")
+tower_id = 4
+tower_level = 4
+tower_value = 570
+
+[node name="TowerButton" parent="." index="2"]
+offset_left = -58.0
+offset_top = -95.0
+offset_right = 55.0
+
+[node name="BombardSlot" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer/VBoxContainer/Slots" index="3"]
+visible = true
+
+[node name="SkillWords" parent="TowerUI/TowerPanelUI/PanelContainer/MarginContainer/VBoxContainer/Slots" index="4"]
+modulate = Color(1, 1, 1, 0.458824)
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 176.0
+offset_bottom = 93.0
+
+[node name="Circle" parent="TowerUI" index="4"]
+position = Vector2(0, -41)
+
+[node name="TowerSkillButton" parent="TowerUI/Circle" index="2" node_paths=PackedStringArray("linked_tower") instance=ExtResource("5_bvenx")]
+offset_top = -98.7494
+offset_bottom = -13.7493
+texture_hover = ExtResource("6_y412a")
+linked_tower = NodePath("../../..")
+skill_name = "皇家审判"
+skill_prices = Array[int]([250, 150, 150])
+skill_intro = PackedStringArray("皇家近卫军每次攻击有一定概率发动“皇家审判”，对目标造成20-40点真实伤害。", "皇家近卫军每次攻击有一定概率发动“皇家审判”，对目标造成30-60点真实伤害。", "皇家近卫军每次攻击有一定概率发动“皇家审判”，对目标造成40-80点真实伤害。")
+skill_words = "午时已到！"
+
+[node name="TowerSkillButton2" parent="TowerUI/Circle" index="3" node_paths=PackedStringArray("linked_tower") instance=ExtResource("5_bvenx")]
+offset_left = -42.5007
+offset_top = -147.5
+offset_right = 42.4989
+offset_bottom = -62.4998
+texture_normal = SubResource("AtlasTexture_4p7jr")
+texture_pressed = SubResource("AtlasTexture_4p7jr")
+texture_hover = ExtResource("7_82iwu")
+texture_disabled = SubResource("AtlasTexture_vr7eb")
+linked_tower = NodePath("../../..")
+skill_name = "神圣盾牌"
+skill_id = 1
+skill_prices = Array[int]([200])
+skill_intro = PackedStringArray("额外提高少许护甲，皇家近卫军每次受到伤害都有40%概率抵挡。")
+skill_words = "我再也不会受伤"
+
+[node name="TowerSkillButton3" parent="TowerUI/Circle" index="4" node_paths=PackedStringArray("linked_tower") instance=ExtResource("5_bvenx")]
+offset_left = 57.4995
+offset_top = -98.7503
+offset_right = 142.499
+offset_bottom = -13.7502
+texture_normal = SubResource("AtlasTexture_j5848")
+texture_pressed = SubResource("AtlasTexture_j5848")
+texture_hover = ExtResource("10_hwxmv")
+texture_disabled = SubResource("AtlasTexture_4ufx4")
+linked_tower = NodePath("../../..")
+skill_name = "皇家庇佑"
+skill_id = 2
+skill_prices = Array[int]([125, 100, 100])
+skill_intro = PackedStringArray("自身额外获得20%总伤减免，并且每2秒为周围友军施加一层保护效果，提高5点护甲。", "自身额外获得30%总伤减免，并且每2秒为周围友军施加一层保护效果，提高10点护甲。", "自身额外获得40%总伤减免，并且每2秒为周围友军施加一层保护效果，提高15点护甲。")
+skill_words = "没有我的命令，你不可倒下！"
+
+[node name="TowerArea" parent="." index="6"]
+z_index = 0
+
+[node name="LightComponent" type="PointLight2D" parent="." index="8"]
+position = Vector2(-60, 13)
+scale = Vector2(2.2434, 2.2434)
+energy = 1.5
+texture = SubResource("GradientTexture2D_2bbdp")
+texture_scale = 0.49
+script = ExtResource("13_m17cw")
+
+[node name="LightComponent2" type="PointLight2D" parent="." index="9"]
+position = Vector2(54, 15)
+scale = Vector2(2.2434, 2.2434)
+energy = 1.5
+texture = SubResource("GradientTexture2D_2bbdp")
+texture_scale = 0.49
+script = ExtResource("13_m17cw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="10"]
+y_sort_enabled = true
+position = Vector2(-1, 15)
+scale = Vector2(1.15227, 1.15227)
+texture = ExtResource("5_fdvpl")
+offset = Vector2(0.714286, -43.5714)

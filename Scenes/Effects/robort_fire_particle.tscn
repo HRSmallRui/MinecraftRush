@@ -1,0 +1,66 @@
+[gd_scene load_steps=15 format=3 uid="uid://skxt73bgggsk"]
+
+[ext_resource type="Texture2D" uid="uid://dvi6p1u5k00ax" path="res://Assets/Images/Effects/RobortSkill/Fire/0001.png" id="1_1tf43"]
+[ext_resource type="Texture2D" uid="uid://bvr3dvyy6njhl" path="res://Assets/Images/Effects/RobortSkill/Fire/0002.png" id="2_kbe0h"]
+[ext_resource type="Texture2D" uid="uid://8xjoayqvpg07" path="res://Assets/Images/Effects/RobortSkill/Fire/0003.png" id="3_6c4fu"]
+[ext_resource type="Texture2D" uid="uid://ca4g87tm61o2y" path="res://Assets/Images/Effects/RobortSkill/Fire/0004.png" id="4_kmje8"]
+[ext_resource type="Texture2D" uid="uid://f2gwmj8mnbjl" path="res://Assets/Images/Effects/RobortSkill/Fire/0005.png" id="5_mdxtq"]
+[ext_resource type="Texture2D" uid="uid://cu3kkpaw83utj" path="res://Assets/Images/Effects/RobortSkill/Fire/0006.png" id="6_2nisn"]
+[ext_resource type="Texture2D" uid="uid://b483u38uhip61" path="res://Assets/Images/Effects/RobortSkill/Fire/0007.png" id="7_fp6u2"]
+[ext_resource type="Texture2D" uid="uid://bl5qq56pat3ks" path="res://Assets/Images/Effects/RobortSkill/Fire/0008.png" id="8_114t7"]
+[ext_resource type="Texture2D" uid="uid://bkyehxo5kwpb" path="res://Assets/Images/Effects/RobortSkill/Fire/0009.png" id="9_kop2i"]
+[ext_resource type="Texture2D" uid="uid://bujlqr352n2qo" path="res://Assets/Images/Effects/RobortSkill/Fire/0010.png" id="10_s023r"]
+[ext_resource type="Texture2D" uid="uid://btffnov3pgh58" path="res://Assets/Images/Effects/RobortSkill/Fire/0011.png" id="11_p04qi"]
+[ext_resource type="Texture2D" uid="uid://857rjnemuysq" path="res://Assets/Images/Effects/RobortSkill/Fire/0012.png" id="12_b3j3x"]
+[ext_resource type="Script" path="res://Scripts/Effects/normal_effect.gd" id="13_ebwex"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4mr51"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_1tf43")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_kbe0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6c4fu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kmje8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mdxtq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2nisn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fp6u2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_114t7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_kop2i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_s023r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_p04qi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_b3j3x")
+}],
+"loop": false,
+"name": &"default",
+"speed": 24.0
+}]
+
+[node name="RobortFireParticle" type="AnimatedSprite2D"]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_4mr51")
+autoplay = "default"
+offset = Vector2(0, -40)
+script = ExtResource("13_ebwex")

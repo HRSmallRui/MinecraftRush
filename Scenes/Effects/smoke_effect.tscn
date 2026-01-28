@@ -1,0 +1,84 @@
+[gd_scene load_steps=19 format=3 uid="uid://bf25ajrac2ijx"]
+
+[ext_resource type="Script" path="res://Scripts/Effects/normal_effect.gd" id="1_8tvji"]
+[ext_resource type="Texture2D" uid="uid://b0lsdodjccjb0" path="res://Assets/Images/Effects/Smoke/smoke_effect0001.png" id="1_emwi6"]
+[ext_resource type="Texture2D" uid="uid://cabnfenhp864m" path="res://Assets/Images/Effects/Smoke/smoke_effect0002.png" id="2_pdcna"]
+[ext_resource type="Texture2D" uid="uid://21tbesla37cc" path="res://Assets/Images/Effects/Smoke/smoke_effect0003.png" id="3_jlox3"]
+[ext_resource type="Texture2D" uid="uid://dh67bsk77r0yq" path="res://Assets/Images/Effects/Smoke/smoke_effect0004.png" id="4_iao46"]
+[ext_resource type="Texture2D" uid="uid://irxpb8k65jtk" path="res://Assets/Images/Effects/Smoke/smoke_effect0005.png" id="5_byw0k"]
+[ext_resource type="Texture2D" uid="uid://d38oa7vm73r1a" path="res://Assets/Images/Effects/Smoke/smoke_effect0006.png" id="6_js3oy"]
+[ext_resource type="Texture2D" uid="uid://b338ojjs26y7l" path="res://Assets/Images/Effects/Smoke/smoke_effect0007.png" id="7_icrrl"]
+[ext_resource type="Texture2D" uid="uid://cv2qpo3f5lkdk" path="res://Assets/Images/Effects/Smoke/smoke_effect0008.png" id="8_3kyi8"]
+[ext_resource type="Texture2D" uid="uid://cj4wtnj6xoa2x" path="res://Assets/Images/Effects/Smoke/smoke_effect0009.png" id="9_1bfbn"]
+[ext_resource type="Texture2D" uid="uid://274pe12kb2g1" path="res://Assets/Images/Effects/Smoke/smoke_effect0010.png" id="10_7thpd"]
+[ext_resource type="Texture2D" uid="uid://cmem1limvd7r1" path="res://Assets/Images/Effects/Smoke/smoke_effect0011.png" id="11_4vrng"]
+[ext_resource type="Texture2D" uid="uid://c8xtrri8ko6op" path="res://Assets/Images/Effects/Smoke/smoke_effect0012.png" id="12_yfe5y"]
+[ext_resource type="Texture2D" uid="uid://b26xksdtr81b8" path="res://Assets/Images/Effects/Smoke/smoke_effect0013.png" id="13_3i6gs"]
+[ext_resource type="Texture2D" uid="uid://d4n2n1o32o07t" path="res://Assets/Images/Effects/Smoke/smoke_effect0014.png" id="14_bbtdb"]
+[ext_resource type="Texture2D" uid="uid://dr0js4k5mmk5n" path="res://Assets/Images/Effects/Smoke/smoke_effect0015.png" id="15_6aaas"]
+[ext_resource type="Texture2D" uid="uid://dwx7gsf4mhofs" path="res://Assets/Images/Effects/Smoke/smoke_effect0016.png" id="16_iqqr3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vpgq1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_emwi6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_pdcna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jlox3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_iao46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_byw0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_js3oy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_icrrl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_3kyi8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1bfbn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7thpd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_4vrng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_yfe5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_3i6gs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_bbtdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_6aaas")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_iqqr3")
+}],
+"loop": false,
+"name": &"default",
+"speed": 24.0
+}]
+
+[node name="SmokeEffect" type="AnimatedSprite2D"]
+z_index = 2
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_vpgq1")
+autoplay = "default"
+frame = 15
+frame_progress = 1.0
+script = ExtResource("1_8tvji")
