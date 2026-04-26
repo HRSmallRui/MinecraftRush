@@ -1,0 +1,1966 @@
+[gd_scene load_steps=384 format=3 uid="uid://lw7qf5781u07"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_4dhll"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_59.gd" id="2_wxmfb"]
+[ext_resource type="PackedScene" uid="uid://ckvgvsrmqwmk1" path="res://Scenes/UI-Components/Stages/SkillButton/story_special_skill_button.tscn" id="3_80xxc"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="3_ymsbp"]
+[ext_resource type="Texture2D" uid="uid://pvy3khrtluxj" path="res://Assets/Images/UI/InformationBar/EnemyChapter4/厌皇story.png" id="4_66cg3"]
+[ext_resource type="PackedScene" uid="uid://ckm5b8jgdb55j" path="res://Scenes/Enemies/enemy_59_step_2.tscn" id="4_qyawr"]
+[ext_resource type="PackedScene" uid="uid://c5jvuyu5d7671" path="res://Scenes/Stages/Stage20/stage_20_story_layer.tscn" id="5_uuh0k"]
+[ext_resource type="PackedScene" uid="uid://dcqlwpqyykpkq" path="res://Scenes/Enemies/EnemyComponents/boss_ui.tscn" id="6_kxds3"]
+[ext_resource type="PackedScene" uid="uid://ckv7f07m53uem" path="res://Scenes/Stages/Stage20/new_skill_teach_layer.tscn" id="6_qei56"]
+[ext_resource type="PackedScene" uid="uid://de67d6qs1ggfr" path="res://Scenes/Effects/lightning.tscn" id="6_ru36u"]
+[ext_resource type="PackedScene" uid="uid://c3abax6utyxjy" path="res://Scenes/Stages/Stage20/hating_emperor_story_layer.tscn" id="6_ry2uc"]
+[ext_resource type="PackedScene" uid="uid://blf6tdqaj673m" path="res://Scenes/Effects/bullet_explosion_effect.tscn" id="7_34q52"]
+[ext_resource type="Texture2D" uid="uid://dl2usge04c2as" path="res://Assets/Images/UI/dialog_panel.png" id="7_mp5av"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/dialog_panel.gd" id="8_c2j84"]
+[ext_resource type="PackedScene" uid="uid://bf25ajrac2ijx" path="res://Scenes/Effects/smoke_effect.tscn" id="8_v8836"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="9_lt4he"]
+[ext_resource type="Script" path="res://Library/Heroes/damage_block.gd" id="10_1jm06"]
+[ext_resource type="PackedScene" uid="uid://cnva3b0cv1bc3" path="res://Scenes/Skills/HatingEmperorStory/hating_emp_lightning_area.tscn" id="11_k4le1"]
+[ext_resource type="Shader" path="res://Assets/Shaders/hue_color.gdshader" id="12_5n12s"]
+[ext_resource type="PackedScene" uid="uid://c1qhhiire04ye" path="res://Scenes/Skills/HatingEmperorStory/hating_emp_skill_1_area.tscn" id="12_mkme7"]
+[ext_resource type="PackedScene" uid="uid://dd6xov5ialh6a" path="res://Scenes/Stages/Stage20/boss_step_2_music_player.tscn" id="12_r167k"]
+[ext_resource type="Texture2D" uid="uid://ccglhhifm554s" path="res://Assets/Images/Effects/鼓舞光环.png" id="13_eboup"]
+[ext_resource type="PackedScene" uid="uid://blccxnuu7bi7v" path="res://Scenes/TowerBuffs/hating_tower_lock_buff.tscn" id="14_42lek"]
+[ext_resource type="Texture2D" uid="uid://boaabebqdcsxs" path="res://Assets/Animations/Enemies/59厌皇/attack_00.png" id="14_ggy8u"]
+[ext_resource type="Texture2D" uid="uid://bcdl7rgu1vxjk" path="res://Assets/Animations/Enemies/59厌皇/attack_01.png" id="15_8w3fg"]
+[ext_resource type="Texture2D" uid="uid://b645lwqiweukv" path="res://Assets/Animations/Enemies/59厌皇/attack_02.png" id="16_hmj5h"]
+[ext_resource type="Texture2D" uid="uid://beuuvcth238x1" path="res://Assets/Animations/Enemies/59厌皇/attack_03.png" id="17_efci6"]
+[ext_resource type="Texture2D" uid="uid://c310gxb7ojh3p" path="res://Assets/Animations/Enemies/59厌皇/attack_04.png" id="18_14pk0"]
+[ext_resource type="Texture2D" uid="uid://cqr7jtxquhxl5" path="res://Assets/Animations/Enemies/59厌皇/attack_05.png" id="19_rias0"]
+[ext_resource type="Texture2D" uid="uid://bi5byq3y1rusc" path="res://Assets/Animations/Enemies/59厌皇/attack_06.png" id="20_pshyc"]
+[ext_resource type="Texture2D" uid="uid://dlg5gigg7o23e" path="res://Assets/Animations/Enemies/59厌皇/attack_07.png" id="21_j4igv"]
+[ext_resource type="Texture2D" uid="uid://bxyvs0oh3ft3l" path="res://Assets/Animations/Enemies/59厌皇/attack_08.png" id="22_82i0o"]
+[ext_resource type="Texture2D" uid="uid://cialto0egxn1f" path="res://Assets/Animations/Enemies/59厌皇/attack_09.png" id="23_7ma1m"]
+[ext_resource type="Texture2D" uid="uid://bd32pc2su4c7y" path="res://Assets/Animations/Enemies/59厌皇/attack_10.png" id="24_cfre6"]
+[ext_resource type="Texture2D" uid="uid://bx7avb7aphc1f" path="res://Assets/Animations/Enemies/59厌皇/attack_11.png" id="25_pc0ba"]
+[ext_resource type="Texture2D" uid="uid://b82s70rcdtgfp" path="res://Assets/Animations/Enemies/59厌皇/attack_12.png" id="26_fhy0b"]
+[ext_resource type="Texture2D" uid="uid://cb2vkcy8itcoe" path="res://Assets/Animations/Enemies/59厌皇/attack_13.png" id="27_ugr5l"]
+[ext_resource type="Texture2D" uid="uid://tvabnnfr1kad" path="res://Assets/Animations/Enemies/59厌皇/attack_14.png" id="28_xyfyu"]
+[ext_resource type="Texture2D" uid="uid://cco8ub6sncr4i" path="res://Assets/Animations/Enemies/59厌皇/attack_15.png" id="29_h7u1r"]
+[ext_resource type="Texture2D" uid="uid://ci3w7sgk3qwio" path="res://Assets/Animations/Enemies/59厌皇/attack_16.png" id="30_gdioe"]
+[ext_resource type="Texture2D" uid="uid://lgaaet4vilpi" path="res://Assets/Animations/Enemies/59厌皇/attack_17.png" id="31_f0l08"]
+[ext_resource type="Texture2D" uid="uid://c1kh4gluvs2g4" path="res://Assets/Animations/Enemies/59厌皇/attack_18.png" id="32_dllp8"]
+[ext_resource type="Texture2D" uid="uid://v1nr5el0a08f" path="res://Assets/Animations/Enemies/59厌皇/attack_19.png" id="33_ef7xc"]
+[ext_resource type="Texture2D" uid="uid://dra6ok336cvcy" path="res://Assets/Animations/Enemies/59厌皇/attack_20.png" id="34_wfjrl"]
+[ext_resource type="Texture2D" uid="uid://c0jpreqdmffo5" path="res://Assets/Animations/Enemies/59厌皇/attack_21.png" id="35_17g0c"]
+[ext_resource type="Texture2D" uid="uid://be4e64nxcv2we" path="res://Assets/Animations/Enemies/59厌皇/attack_22.png" id="36_05ell"]
+[ext_resource type="Texture2D" uid="uid://d183q3764cba3" path="res://Assets/Animations/Enemies/59厌皇/attack_23.png" id="37_gfdkf"]
+[ext_resource type="Texture2D" uid="uid://dbms8e8ruqkig" path="res://Assets/Animations/Enemies/59厌皇/attack_24.png" id="38_qtjmp"]
+[ext_resource type="Texture2D" uid="uid://b80slqtrvyvfq" path="res://Assets/Animations/Enemies/59厌皇/attack_25.png" id="39_f0x6x"]
+[ext_resource type="Texture2D" uid="uid://p2ktp57h2u42" path="res://Assets/Animations/Enemies/59厌皇/attack_26.png" id="40_leqc7"]
+[ext_resource type="Texture2D" uid="uid://mu0bostnqq70" path="res://Assets/Animations/Enemies/59厌皇/attack_27.png" id="41_nxu45"]
+[ext_resource type="Texture2D" uid="uid://bjjf57fww1shn" path="res://Assets/Animations/Enemies/59厌皇/attack_28.png" id="42_jcp5m"]
+[ext_resource type="Texture2D" uid="uid://lk57pprbk1n4" path="res://Assets/Animations/Enemies/59厌皇/attack_29.png" id="43_804ju"]
+[ext_resource type="Texture2D" uid="uid://8002lxuxv7c4" path="res://Assets/Animations/Enemies/59厌皇/attack_30.png" id="44_n7wry"]
+[ext_resource type="Texture2D" uid="uid://dfsg768wlv2wq" path="res://Assets/Animations/Enemies/59厌皇/attack_31.png" id="45_wv2td"]
+[ext_resource type="Texture2D" uid="uid://c66q5w4afqxjp" path="res://Assets/Animations/Enemies/59厌皇/attack_32.png" id="46_krdmw"]
+[ext_resource type="Texture2D" uid="uid://cibda2i0reitv" path="res://Assets/Animations/Enemies/59厌皇/attack_33.png" id="47_cuhk4"]
+[ext_resource type="Texture2D" uid="uid://dm43je0u0o1gs" path="res://Assets/Animations/Enemies/59厌皇/attack_34.png" id="48_g6rjp"]
+[ext_resource type="Texture2D" uid="uid://c2eq387bayep2" path="res://Assets/Animations/Enemies/59厌皇/die_00.png" id="49_qtjuh"]
+[ext_resource type="Texture2D" uid="uid://c74hjef53hoo3" path="res://Assets/Animations/Enemies/59厌皇/die_01.png" id="50_6i317"]
+[ext_resource type="Texture2D" uid="uid://chjcfhc577w60" path="res://Assets/Animations/Enemies/59厌皇/die_02.png" id="51_4ofy7"]
+[ext_resource type="Texture2D" uid="uid://dc5cv62qclpph" path="res://Assets/Animations/Enemies/59厌皇/die_03.png" id="52_41eoj"]
+[ext_resource type="Texture2D" uid="uid://dwce3f5b2rcmo" path="res://Assets/Animations/Enemies/59厌皇/die_04.png" id="53_0vavn"]
+[ext_resource type="Texture2D" uid="uid://chegh3weo80hs" path="res://Assets/Animations/Enemies/59厌皇/die_05.png" id="54_f8sxe"]
+[ext_resource type="Texture2D" uid="uid://bylkblu7ryujw" path="res://Assets/Animations/Enemies/59厌皇/die_06.png" id="55_b1ttl"]
+[ext_resource type="Texture2D" uid="uid://dp764f1xleq3i" path="res://Assets/Animations/Enemies/59厌皇/die_07.png" id="56_p884i"]
+[ext_resource type="Texture2D" uid="uid://chpt1kcpw7ce6" path="res://Assets/Animations/Enemies/59厌皇/die_08.png" id="57_xx1pu"]
+[ext_resource type="Texture2D" uid="uid://ce0hesul6tytt" path="res://Assets/Animations/Enemies/59厌皇/die_09.png" id="58_xsfh5"]
+[ext_resource type="Texture2D" uid="uid://ddqku5op2r3jg" path="res://Assets/Animations/Enemies/59厌皇/die_10.png" id="59_xcgg2"]
+[ext_resource type="Texture2D" uid="uid://c6vybn3tydptv" path="res://Assets/Animations/Enemies/59厌皇/die_11.png" id="60_5p3cd"]
+[ext_resource type="Texture2D" uid="uid://brglc2mg2316n" path="res://Assets/Animations/Enemies/59厌皇/die_12.png" id="61_jae5m"]
+[ext_resource type="Texture2D" uid="uid://sliqjs2vobt" path="res://Assets/Animations/Enemies/59厌皇/die_13.png" id="62_c61em"]
+[ext_resource type="Texture2D" uid="uid://basdto5ogxufm" path="res://Assets/Animations/Enemies/59厌皇/die_14.png" id="63_6x02k"]
+[ext_resource type="Texture2D" uid="uid://ol6wsxqtqvae" path="res://Assets/Animations/Enemies/59厌皇/die_15.png" id="64_yh3mq"]
+[ext_resource type="Texture2D" uid="uid://di3bkiypgrka1" path="res://Assets/Animations/Enemies/59厌皇/die_16.png" id="65_32okc"]
+[ext_resource type="Texture2D" uid="uid://bv4t0ahru1swb" path="res://Assets/Animations/Enemies/59厌皇/die_17.png" id="66_lmjlw"]
+[ext_resource type="Texture2D" uid="uid://ctin82yhqbmwb" path="res://Assets/Animations/Enemies/59厌皇/die_18.png" id="67_e2un1"]
+[ext_resource type="Texture2D" uid="uid://cawmxhe5bxwxl" path="res://Assets/Animations/Enemies/59厌皇/die_19.png" id="68_hbioe"]
+[ext_resource type="Texture2D" uid="uid://ba1b7irssuln4" path="res://Assets/Animations/Enemies/59厌皇/die_20.png" id="69_n7c04"]
+[ext_resource type="Texture2D" uid="uid://la5pcgbffrb5" path="res://Assets/Animations/Enemies/59厌皇/move_normal_00.png" id="70_o0aea"]
+[ext_resource type="Texture2D" uid="uid://bxuq4fqiukmqd" path="res://Assets/Animations/Enemies/厌皇_Story/idle_00.png" id="70_ukigr"]
+[ext_resource type="Texture2D" uid="uid://cs7w75l3hymwv" path="res://Assets/Animations/Enemies/厌皇_Story/idle_01.png" id="71_ditjl"]
+[ext_resource type="Texture2D" uid="uid://6i8cdefpk687" path="res://Assets/Animations/Enemies/59厌皇/move_normal_01.png" id="71_qkrlx"]
+[ext_resource type="Texture2D" uid="uid://lq8ifa510mc2" path="res://Assets/Animations/Enemies/厌皇_Story/idle_02.png" id="72_nbt2p"]
+[ext_resource type="Texture2D" uid="uid://b4ppso65elkak" path="res://Assets/Animations/Enemies/59厌皇/move_normal_02.png" id="72_wnge6"]
+[ext_resource type="Texture2D" uid="uid://bwsowosdua4aq" path="res://Assets/Animations/Enemies/厌皇_Story/idle_03.png" id="73_8fv4t"]
+[ext_resource type="Texture2D" uid="uid://d3336cd1psuon" path="res://Assets/Animations/Enemies/59厌皇/move_normal_03.png" id="73_f0fcr"]
+[ext_resource type="Texture2D" uid="uid://dp86s6xe1w7n7" path="res://Assets/Animations/Enemies/厌皇_Story/idle_04.png" id="74_awrto"]
+[ext_resource type="Texture2D" uid="uid://d382oo1do35da" path="res://Assets/Animations/Enemies/59厌皇/move_normal_04.png" id="74_xctn3"]
+[ext_resource type="Texture2D" uid="uid://g1r5ugkyp38p" path="res://Assets/Animations/Enemies/59厌皇/move_normal_05.png" id="75_72fac"]
+[ext_resource type="Texture2D" uid="uid://c8soypswgsa2d" path="res://Assets/Animations/Enemies/厌皇_Story/idle_05.png" id="75_ix3gh"]
+[ext_resource type="Texture2D" uid="uid://j08xvmptb726" path="res://Assets/Animations/Enemies/厌皇_Story/idle_06.png" id="76_ohhwb"]
+[ext_resource type="Texture2D" uid="uid://c3b5l6rc86xc" path="res://Assets/Animations/Enemies/59厌皇/move_normal_06.png" id="76_rp3pm"]
+[ext_resource type="Texture2D" uid="uid://pt1udy3rhy2m" path="res://Assets/Animations/Enemies/59厌皇/move_normal_07.png" id="77_2g38g"]
+[ext_resource type="Texture2D" uid="uid://copx27xsltup7" path="res://Assets/Animations/Enemies/厌皇_Story/idle_07.png" id="77_uw5vd"]
+[ext_resource type="Texture2D" uid="uid://drohoucgd6c2o" path="res://Assets/Animations/Enemies/59厌皇/move_normal_08.png" id="78_m18de"]
+[ext_resource type="Texture2D" uid="uid://dlfo11bw5vt7k" path="res://Assets/Animations/Enemies/厌皇_Story/idle_08.png" id="78_y488y"]
+[ext_resource type="Texture2D" uid="uid://b65xuhk332qgw" path="res://Assets/Animations/Enemies/厌皇_Story/idle_09.png" id="79_hkmbd"]
+[ext_resource type="Texture2D" uid="uid://b4kmvbbqp83jm" path="res://Assets/Animations/Enemies/59厌皇/move_normal_09.png" id="79_sle0u"]
+[ext_resource type="Texture2D" uid="uid://bk0kud54ahj6p" path="res://Assets/Animations/Enemies/厌皇_Story/idle_10.png" id="80_jjdya"]
+[ext_resource type="Texture2D" uid="uid://dubnncddh2dq8" path="res://Assets/Animations/Enemies/59厌皇/move_normal_10.png" id="80_kcu5e"]
+[ext_resource type="Texture2D" uid="uid://dxsc3fgbc61mk" path="res://Assets/Animations/Enemies/厌皇_Story/idle_11.png" id="81_2b06s"]
+[ext_resource type="Texture2D" uid="uid://cnmmmpq8ahopv" path="res://Assets/Animations/Enemies/59厌皇/move_normal_11.png" id="81_nu8li"]
+[ext_resource type="Texture2D" uid="uid://b5tiwoesny8ps" path="res://Assets/Animations/Enemies/59厌皇/move_normal_12.png" id="82_7t2ib"]
+[ext_resource type="Texture2D" uid="uid://dl3klnt2e441s" path="res://Assets/Animations/Enemies/厌皇_Story/idle_12.png" id="82_hoiiw"]
+[ext_resource type="Texture2D" uid="uid://dah05wpx64j55" path="res://Assets/Animations/Enemies/厌皇_Story/idle_13.png" id="83_84vkv"]
+[ext_resource type="Texture2D" uid="uid://o0qjyouf2sgw" path="res://Assets/Animations/Enemies/59厌皇/move_normal_13.png" id="83_k1ova"]
+[ext_resource type="Texture2D" uid="uid://cmnuec1fvfibd" path="res://Assets/Animations/Enemies/59厌皇/move_normal_14.png" id="84_66ppe"]
+[ext_resource type="Texture2D" uid="uid://208i36pe8osc" path="res://Assets/Animations/Enemies/厌皇_Story/idle_14.png" id="84_ubtn3"]
+[ext_resource type="Texture2D" uid="uid://c0cs7dvslj2o4" path="res://Assets/Animations/Enemies/厌皇_Story/idle_15.png" id="85_wt1xf"]
+[ext_resource type="Texture2D" uid="uid://b1b2066unh0ax" path="res://Assets/Animations/Enemies/59厌皇/move_normal_15.png" id="85_y2bp4"]
+[ext_resource type="Texture2D" uid="uid://0d6ybi747u3p" path="res://Assets/Animations/Enemies/厌皇_Story/idle_16.png" id="86_lhpyw"]
+[ext_resource type="Texture2D" uid="uid://bcjf5ge5boixe" path="res://Assets/Animations/Enemies/59厌皇/move_normal_16.png" id="86_r2ulk"]
+[ext_resource type="Texture2D" uid="uid://gsmd7vxqxbq8" path="res://Assets/Animations/Enemies/59厌皇/move_normal_17.png" id="87_n4r5p"]
+[ext_resource type="Texture2D" uid="uid://xn4g1msqlrde" path="res://Assets/Animations/Enemies/厌皇_Story/idle_17.png" id="87_qftid"]
+[ext_resource type="Texture2D" uid="uid://bllbms4pt5yrd" path="res://Assets/Animations/Enemies/59厌皇/move_normal_18.png" id="88_dgeaa"]
+[ext_resource type="Texture2D" uid="uid://ehoc827dayvc" path="res://Assets/Animations/Enemies/厌皇_Story/idle_18.png" id="88_tjkpl"]
+[ext_resource type="Texture2D" uid="uid://h1a7nud4bdp1" path="res://Assets/Animations/Enemies/厌皇_Story/idle_19.png" id="89_skdv7"]
+[ext_resource type="Texture2D" uid="uid://dlewi0hv8ehue" path="res://Assets/Animations/Enemies/59厌皇/move_normal_19.png" id="89_so7pa"]
+[ext_resource type="Texture2D" uid="uid://tr51bjnk6c2n" path="res://Assets/Animations/Enemies/59厌皇/move_normal_20.png" id="90_6td1t"]
+[ext_resource type="Texture2D" uid="uid://ckb2fwi2w5gii" path="res://Assets/Animations/Enemies/厌皇_Story/idle_20.png" id="90_bf2i8"]
+[ext_resource type="Texture2D" uid="uid://ittjns3oogh2" path="res://Assets/Animations/Enemies/59厌皇/move_normal_21.png" id="91_2fv8s"]
+[ext_resource type="Texture2D" uid="uid://dqnpcb30fs33q" path="res://Assets/Animations/Enemies/厌皇_Story/idle_21.png" id="91_j43r6"]
+[ext_resource type="Texture2D" uid="uid://dje2cwhn5e4gt" path="res://Assets/Animations/Enemies/59厌皇/move_normal_22.png" id="92_6af5h"]
+[ext_resource type="Texture2D" uid="uid://g7cx3pjh0bv4" path="res://Assets/Animations/Enemies/厌皇_Story/idle_22.png" id="92_8tsga"]
+[ext_resource type="Texture2D" uid="uid://dgfbb2oe2cvma" path="res://Assets/Animations/Enemies/厌皇_Story/idle_23.png" id="93_6l50e"]
+[ext_resource type="Texture2D" uid="uid://b34mdjqvjgf1s" path="res://Assets/Animations/Enemies/59厌皇/move_normal_23.png" id="93_w8h62"]
+[ext_resource type="Texture2D" uid="uid://bfk8dpllqd140" path="res://Assets/Animations/Enemies/59厌皇/move_normal_24.png" id="94_nuxk2"]
+[ext_resource type="Texture2D" uid="uid://c1cigcux8jtom" path="res://Assets/Animations/Enemies/厌皇_Story/idle_24.png" id="94_oo178"]
+[ext_resource type="Texture2D" uid="uid://b3gi8ixuw6ur8" path="res://Assets/Animations/Enemies/59厌皇/move_normal_25.png" id="95_nclvy"]
+[ext_resource type="Texture2D" uid="uid://xm2pnp5qtl1u" path="res://Assets/Animations/Enemies/厌皇_Story/idle_25.png" id="95_omvpd"]
+[ext_resource type="Texture2D" uid="uid://bwe8n6ybvydsr" path="res://Assets/Animations/Enemies/厌皇_Story/idle_26.png" id="96_5436x"]
+[ext_resource type="Texture2D" uid="uid://uwxq1dal76ut" path="res://Assets/Animations/Enemies/59厌皇/move_normal_26.png" id="96_obbtf"]
+[ext_resource type="Texture2D" uid="uid://bjf85qgn4swif" path="res://Assets/Animations/Enemies/59厌皇/move_normal_27.png" id="97_bve2a"]
+[ext_resource type="Texture2D" uid="uid://cdhydylpmuqdc" path="res://Assets/Animations/Enemies/厌皇_Story/idle_27.png" id="97_sq88t"]
+[ext_resource type="Texture2D" uid="uid://rxpfg6u04cjl" path="res://Assets/Animations/Enemies/厌皇_Story/idle_28.png" id="98_8iwxd"]
+[ext_resource type="Texture2D" uid="uid://dsq63ubvaxlnt" path="res://Assets/Animations/Enemies/59厌皇/move_normal_28.png" id="98_ch0nd"]
+[ext_resource type="Texture2D" uid="uid://chb884qg16q1a" path="res://Assets/Animations/Enemies/59厌皇/move_normal_29.png" id="99_b0v5e"]
+[ext_resource type="Texture2D" uid="uid://7mcenhq0pn46" path="res://Assets/Animations/Enemies/厌皇_Story/idle_29.png" id="99_lrltw"]
+[ext_resource type="Texture2D" uid="uid://b0aigiof0g7k2" path="res://Assets/Animations/Enemies/厌皇_Story/idle_30.png" id="100_kxbry"]
+[ext_resource type="Texture2D" uid="uid://b7ylwujbshrdr" path="res://Assets/Animations/Enemies/59厌皇/move_normal_30.png" id="100_n1wc2"]
+[ext_resource type="Texture2D" uid="uid://cryf3y56apiad" path="res://Assets/Animations/Enemies/59厌皇/move_normal_31.png" id="101_7gwac"]
+[ext_resource type="Texture2D" uid="uid://bi0lxl1f53q3r" path="res://Assets/Animations/Enemies/厌皇_Story/idle_31.png" id="101_afs60"]
+[ext_resource type="Texture2D" uid="uid://ciolp6uyhj3b3" path="res://Assets/Animations/Enemies/59厌皇/move_normal_32.png" id="102_bmvob"]
+[ext_resource type="Texture2D" uid="uid://8qmfxrgu3vi7" path="res://Assets/Animations/Enemies/厌皇_Story/idle_32.png" id="102_wmihl"]
+[ext_resource type="Texture2D" uid="uid://d2uqljgwhyhe0" path="res://Assets/Animations/Enemies/59厌皇/move_normal_33.png" id="103_4obnj"]
+[ext_resource type="Texture2D" uid="uid://xnderikarhqa" path="res://Assets/Animations/Enemies/厌皇_Story/idle_33.png" id="103_vlesd"]
+[ext_resource type="Texture2D" uid="uid://bpqc4e6p0g8h5" path="res://Assets/Animations/Enemies/59厌皇/move_normal_34.png" id="104_3q0lh"]
+[ext_resource type="Texture2D" uid="uid://dgdtkuko6pq63" path="res://Assets/Animations/Enemies/厌皇_Story/idle_34.png" id="104_ka43g"]
+[ext_resource type="Texture2D" uid="uid://ce83x5asu24cb" path="res://Assets/Animations/Enemies/59厌皇/move_normal_35.png" id="105_4rpxx"]
+[ext_resource type="Texture2D" uid="uid://6d1uvfmsnosd" path="res://Assets/Animations/Enemies/厌皇_Story/idle_35.png" id="105_yanbb"]
+[ext_resource type="Texture2D" uid="uid://b2j66dcvx0qkk" path="res://Assets/Animations/Enemies/59厌皇/move_normal_36.png" id="106_5lmap"]
+[ext_resource type="Texture2D" uid="uid://dn72nddjcp77s" path="res://Assets/Animations/Enemies/厌皇_Story/idle_36.png" id="106_sbgow"]
+[ext_resource type="Texture2D" uid="uid://doexi4dkw87it" path="res://Assets/Animations/Enemies/厌皇_Story/idle_37.png" id="107_3bbo5"]
+[ext_resource type="Texture2D" uid="uid://diaercb8bk1xy" path="res://Assets/Animations/Enemies/59厌皇/move_normal_37.png" id="107_d3ukn"]
+[ext_resource type="Texture2D" uid="uid://diob1lumppa4b" path="res://Assets/Animations/Enemies/59厌皇/move_normal_38.png" id="108_4o4wo"]
+[ext_resource type="Texture2D" uid="uid://y0e6skewmnfj" path="res://Assets/Animations/Enemies/厌皇_Story/idle_38.png" id="108_hul5d"]
+[ext_resource type="Texture2D" uid="uid://bnqopmyymia6l" path="res://Assets/Animations/Enemies/厌皇_Story/idle_39.png" id="109_w3eh7"]
+[ext_resource type="Texture2D" uid="uid://b8hd4mmq7fwce" path="res://Assets/Animations/Enemies/59厌皇/move_normal_39.png" id="109_w55wo"]
+[ext_resource type="Texture2D" uid="uid://qpsxk36ljvf" path="res://Assets/Animations/Enemies/厌皇_Story/idle_40.png" id="110_gusqq"]
+[ext_resource type="Texture2D" uid="uid://d0uxofn4x3j8u" path="res://Assets/Animations/Enemies/59厌皇/move_normal_40.png" id="110_tp5iw"]
+[ext_resource type="Texture2D" uid="uid://bkml21e7vjfve" path="res://Assets/Animations/Enemies/59厌皇/move_normal_41.png" id="111_5nndf"]
+[ext_resource type="Texture2D" uid="uid://ceohu6pvkoha" path="res://Assets/Animations/Enemies/厌皇_Story/idle_41.png" id="111_wp8gv"]
+[ext_resource type="Texture2D" uid="uid://dx133buq7ti54" path="res://Assets/Animations/Enemies/59厌皇/move_normal_42.png" id="112_ltwu5"]
+[ext_resource type="Texture2D" uid="uid://drcsp24ag4iit" path="res://Assets/Animations/Enemies/厌皇_Story/idle_42.png" id="112_tigck"]
+[ext_resource type="Texture2D" uid="uid://cmx2regknr0lw" path="res://Assets/Animations/Enemies/59厌皇/move_normal_43.png" id="113_8funp"]
+[ext_resource type="Texture2D" uid="uid://pgf62ohk5xsq" path="res://Assets/Animations/Enemies/厌皇_Story/idle_43.png" id="113_345xh"]
+[ext_resource type="Texture2D" uid="uid://ckmitqf6bgymo" path="res://Assets/Animations/Enemies/厌皇_Story/idle_44.png" id="114_s2kqs"]
+[ext_resource type="Texture2D" uid="uid://douvpnkxcb6o8" path="res://Assets/Animations/Enemies/59厌皇/move_normal_44.png" id="114_xcjcf"]
+[ext_resource type="Texture2D" uid="uid://jjptqttd4r1c" path="res://Assets/Animations/Enemies/59厌皇/move_normal_45.png" id="115_eke7d"]
+[ext_resource type="Texture2D" uid="uid://cfltyli6h7hlt" path="res://Assets/Animations/Enemies/厌皇_Story/idle_45.png" id="115_hcapn"]
+[ext_resource type="Texture2D" uid="uid://d03ls7epdlc7" path="res://Assets/Animations/Enemies/59厌皇/move_normal_46.png" id="116_2egeb"]
+[ext_resource type="Texture2D" uid="uid://s8gugkjm3b1c" path="res://Assets/Animations/Enemies/厌皇_Story/idle_46.png" id="116_r3510"]
+[ext_resource type="Texture2D" uid="uid://d4kdk2jeatc1x" path="res://Assets/Animations/Enemies/59厌皇/move_normal_47.png" id="117_s6baq"]
+[ext_resource type="Texture2D" uid="uid://l4f3hvo4wavc" path="res://Assets/Animations/Enemies/厌皇_Story/idle_47.png" id="117_ydyrj"]
+[ext_resource type="Texture2D" uid="uid://bsky1yhjwu4m2" path="res://Assets/Animations/Enemies/厌皇_Story/idle_48.png" id="118_25bke"]
+[ext_resource type="Texture2D" uid="uid://h24wr3wxscyb" path="res://Assets/Animations/Enemies/59厌皇/move_normal_48.png" id="118_wyhvx"]
+[ext_resource type="Texture2D" uid="uid://brqp54ofidped" path="res://Assets/Animations/Enemies/59厌皇/move_normal_49.png" id="119_31xtt"]
+[ext_resource type="Texture2D" uid="uid://de1pbtpmewg7p" path="res://Assets/Animations/Enemies/厌皇_Story/idle_49.png" id="119_05873"]
+[ext_resource type="Texture2D" uid="uid://c85f1ufj3by37" path="res://Assets/Animations/Enemies/59厌皇/recover_00.png" id="170_cqh1c"]
+[ext_resource type="Texture2D" uid="uid://bxv3822rfe1uh" path="res://Assets/Animations/Enemies/59厌皇/recover_01.png" id="171_ra44l"]
+[ext_resource type="Texture2D" uid="uid://b2c13lrxulpd1" path="res://Assets/Animations/Enemies/59厌皇/recover_02.png" id="172_chfwn"]
+[ext_resource type="Texture2D" uid="uid://mhp30jtjcnbc" path="res://Assets/Animations/Enemies/59厌皇/recover_03.png" id="173_qli46"]
+[ext_resource type="Texture2D" uid="uid://dr3wa5j3af0ft" path="res://Assets/Animations/Enemies/59厌皇/recover_04.png" id="174_0vq1t"]
+[ext_resource type="Texture2D" uid="uid://c4xiq48k72l4g" path="res://Assets/Animations/Enemies/59厌皇/recover_05.png" id="175_au0jp"]
+[ext_resource type="Texture2D" uid="uid://dkuq7u038cckt" path="res://Assets/Animations/Enemies/59厌皇/recover_06.png" id="176_4v1wy"]
+[ext_resource type="Texture2D" uid="uid://dj5bgmuvck82m" path="res://Assets/Animations/Enemies/59厌皇/recover_07.png" id="177_lkxa0"]
+[ext_resource type="Texture2D" uid="uid://djxaykk2qxusp" path="res://Assets/Animations/Enemies/59厌皇/recover_08.png" id="178_rnl5v"]
+[ext_resource type="Texture2D" uid="uid://d0p7mhi3ybfnh" path="res://Assets/Animations/Enemies/59厌皇/recover_09.png" id="179_jdty0"]
+[ext_resource type="Texture2D" uid="uid://blwakc6g5ym1" path="res://Assets/Animations/Enemies/59厌皇/recover_10.png" id="180_i7rc0"]
+[ext_resource type="Texture2D" uid="uid://g5u8i121jnqg" path="res://Assets/Animations/Enemies/59厌皇/recover_11.png" id="181_ldqun"]
+[ext_resource type="Texture2D" uid="uid://dusedfk74vobv" path="res://Assets/Animations/Enemies/59厌皇/recover_12.png" id="182_fa4rn"]
+[ext_resource type="Texture2D" uid="uid://b52lrkeduajoo" path="res://Assets/Animations/Enemies/59厌皇/recover_13.png" id="183_j0ojg"]
+[ext_resource type="Texture2D" uid="uid://bpomjdx7obtx5" path="res://Assets/Animations/Enemies/59厌皇/recover_14.png" id="184_4lxwc"]
+[ext_resource type="Texture2D" uid="uid://cii3cstlmgtqp" path="res://Assets/Animations/Enemies/59厌皇/recover_15.png" id="185_07yc5"]
+[ext_resource type="Texture2D" uid="uid://bchbdu6jeidm5" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_00.png" id="186_f713n"]
+[ext_resource type="Texture2D" uid="uid://cx5krbbrtnk" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_00.png" id="186_qcjrw"]
+[ext_resource type="Texture2D" uid="uid://drxey66gtapy2" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_01.png" id="187_l72qn"]
+[ext_resource type="Texture2D" uid="uid://xu6x7ukvyxoc" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_01.png" id="187_lu2jo"]
+[ext_resource type="Texture2D" uid="uid://cybc32q3j02d6" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_02.png" id="188_3n4wb"]
+[ext_resource type="Texture2D" uid="uid://bw2lib0iieloc" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_02.png" id="188_rn780"]
+[ext_resource type="Texture2D" uid="uid://cpe1el75jnes7" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_03.png" id="189_05g6e"]
+[ext_resource type="Texture2D" uid="uid://cpmo7okxv78tx" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_03.png" id="189_ix1p7"]
+[ext_resource type="Texture2D" uid="uid://cbko83rmd2oth" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_04.png" id="190_ig8x3"]
+[ext_resource type="Texture2D" uid="uid://twety1bfpl1s" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_04.png" id="190_v1hxc"]
+[ext_resource type="Texture2D" uid="uid://dn37pbheusqdk" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_05.png" id="191_b8gyf"]
+[ext_resource type="Texture2D" uid="uid://cbgn6o12b6yh5" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_05.png" id="191_m1qid"]
+[ext_resource type="Texture2D" uid="uid://b6bym08x1vuw" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_06.png" id="192_8whxy"]
+[ext_resource type="Texture2D" uid="uid://d1wy3cojo0oqg" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_06.png" id="192_qrog8"]
+[ext_resource type="Texture2D" uid="uid://dacy1y75k0euo" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_07.png" id="193_71oa2"]
+[ext_resource type="Texture2D" uid="uid://dos6jeousi7kn" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_07.png" id="193_mof15"]
+[ext_resource type="Texture2D" uid="uid://bytadk77r0a0f" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_08.png" id="194_4qywr"]
+[ext_resource type="Texture2D" uid="uid://hlu2nt73ka35" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_08.png" id="194_xowwx"]
+[ext_resource type="Texture2D" uid="uid://dwg6a2g52y3qg" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_09.png" id="195_la7oo"]
+[ext_resource type="Texture2D" uid="uid://8w27von7e0p8" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_09.png" id="195_plhen"]
+[ext_resource type="Texture2D" uid="uid://4ivcelwgjvjl" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_10.png" id="196_6dial"]
+[ext_resource type="Texture2D" uid="uid://dikg4djw2w0y3" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_10.png" id="196_url16"]
+[ext_resource type="Texture2D" uid="uid://cpiluf7gu6kpv" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_11.png" id="197_112sj"]
+[ext_resource type="Texture2D" uid="uid://rccmm5dpu8cw" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_11.png" id="197_ius0l"]
+[ext_resource type="Texture2D" uid="uid://iqmfd465s638" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_12.png" id="198_ijmhm"]
+[ext_resource type="Texture2D" uid="uid://fe1pht4melba" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_12.png" id="198_srvri"]
+[ext_resource type="Texture2D" uid="uid://cg3dycu3uypo5" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_13.png" id="199_4nnhi"]
+[ext_resource type="Texture2D" uid="uid://bl3qvwm7skcax" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_13.png" id="199_fibp6"]
+[ext_resource type="Texture2D" uid="uid://bqodtymlabkfi" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_14.png" id="200_7vqtr"]
+[ext_resource type="Texture2D" uid="uid://cvtjl5o2nwwm8" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_14.png" id="200_hkpmu"]
+[ext_resource type="Texture2D" uid="uid://bxhw0n4wydbhx" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_15.png" id="201_n6c7y"]
+[ext_resource type="Texture2D" uid="uid://brtsn07xdo1ad" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_15.png" id="201_sd5fq"]
+[ext_resource type="Texture2D" uid="uid://dl3jffy5o2lq3" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_16.png" id="202_1bprr"]
+[ext_resource type="Texture2D" uid="uid://y8fh4vwcl8fb" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_16.png" id="202_32anx"]
+[ext_resource type="Texture2D" uid="uid://dpbb301458nev" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_17.png" id="203_ews8u"]
+[ext_resource type="Texture2D" uid="uid://b453fkr5xf0na" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_17.png" id="203_jesgo"]
+[ext_resource type="Texture2D" uid="uid://dadarvus8bgi0" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_18.png" id="204_8ecsv"]
+[ext_resource type="Texture2D" uid="uid://cwdy7euer44sq" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_18.png" id="204_s1h17"]
+[ext_resource type="Texture2D" uid="uid://dvdat8851ptb3" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_19.png" id="205_jahdu"]
+[ext_resource type="Texture2D" uid="uid://c1qasqqbo1l1h" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_19.png" id="205_kcjqe"]
+[ext_resource type="Texture2D" uid="uid://8dj1xvsfw0w4" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_20.png" id="206_0p5ju"]
+[ext_resource type="Texture2D" uid="uid://cel2i87c0oqe4" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_20.png" id="206_whojk"]
+[ext_resource type="Texture2D" uid="uid://dhdfpu8aga2y7" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_21.png" id="207_bksk7"]
+[ext_resource type="Texture2D" uid="uid://dirucivwsyblc" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_21.png" id="207_uuogi"]
+[ext_resource type="Texture2D" uid="uid://5igtjbk86k3h" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_22.png" id="208_iyqp4"]
+[ext_resource type="Texture2D" uid="uid://b70638t3narth" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_22.png" id="208_p6wwu"]
+[ext_resource type="Texture2D" uid="uid://b01fpr5pu8t8c" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_23.png" id="209_avel4"]
+[ext_resource type="Texture2D" uid="uid://dbb1d8pnubksj" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_23.png" id="209_ypnxp"]
+[ext_resource type="Texture2D" uid="uid://ckkgtdbcekmsc" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_24.png" id="210_5bleb"]
+[ext_resource type="Texture2D" uid="uid://bf5a0p3tk2kg2" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_24.png" id="210_s2wv8"]
+[ext_resource type="Texture2D" uid="uid://dviib2fumetcf" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_25.png" id="211_62of3"]
+[ext_resource type="Texture2D" uid="uid://vt72d08x2gre" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_25.png" id="211_q0dmn"]
+[ext_resource type="Texture2D" uid="uid://dj2wmskyj2erd" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_26.png" id="212_oo0tr"]
+[ext_resource type="Texture2D" uid="uid://ce3xrlke6daxd" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_26.png" id="212_tplf2"]
+[ext_resource type="Texture2D" uid="uid://b86xwgi2u2cox" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_27.png" id="213_5xm7o"]
+[ext_resource type="Texture2D" uid="uid://beyvyrae7g1ok" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_27.png" id="213_ifhjt"]
+[ext_resource type="Texture2D" uid="uid://bjvqx1junmlq2" path="res://Assets/Animations/Enemies/59厌皇/skill1_end_28.png" id="214_44036"]
+[ext_resource type="Texture2D" uid="uid://i6efmys478px" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_28.png" id="214_fdoto"]
+[ext_resource type="Texture2D" uid="uid://dygxefqes3os" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_29.png" id="215_26pcr"]
+[ext_resource type="Texture2D" uid="uid://d2gw61olqi2ng" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_30.png" id="216_8vn0h"]
+[ext_resource type="Texture2D" uid="uid://bny7lxu2tvpud" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_31.png" id="217_cgrr0"]
+[ext_resource type="Texture2D" uid="uid://cr467tgkhqcpp" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_32.png" id="218_5ta1k"]
+[ext_resource type="Texture2D" uid="uid://c0lk20lwvvufi" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_33.png" id="219_jgruv"]
+[ext_resource type="Texture2D" uid="uid://ba6pom47mpjr6" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_34.png" id="220_vt22y"]
+[ext_resource type="Texture2D" uid="uid://bc2lhxsqq0bn0" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_35.png" id="221_7w4k0"]
+[ext_resource type="Texture2D" uid="uid://e1388towbeqa" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_36.png" id="222_0wl15"]
+[ext_resource type="Texture2D" uid="uid://4rfajdhqc55q" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_37.png" id="223_4es0i"]
+[ext_resource type="Texture2D" uid="uid://d3m0ctmhkunyh" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_38.png" id="224_p8mv8"]
+[ext_resource type="Texture2D" uid="uid://0a8a61jwp1d3" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_39.png" id="225_6ae2v"]
+[ext_resource type="Texture2D" uid="uid://d3figq886knyv" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_40.png" id="226_wknnf"]
+[ext_resource type="Texture2D" uid="uid://bsl4t7r5os6pl" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_41.png" id="227_uk1lo"]
+[ext_resource type="Texture2D" uid="uid://b16ubdc4sfi3d" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_42.png" id="228_mmjga"]
+[ext_resource type="Texture2D" uid="uid://bidq8qx08oevq" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_43.png" id="229_b8bmj"]
+[ext_resource type="Texture2D" uid="uid://b6sgogndqe6eq" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_44.png" id="230_7pvjl"]
+[ext_resource type="Texture2D" uid="uid://n0isouiai1lg" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_45.png" id="231_quhoe"]
+[ext_resource type="Texture2D" uid="uid://kx646gtn13iq" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_46.png" id="232_ufsij"]
+[ext_resource type="Texture2D" uid="uid://d3nhwh1ukod1s" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_47.png" id="233_nqxhh"]
+[ext_resource type="Texture2D" uid="uid://1a2c8ubvyohs" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_48.png" id="234_rw4lm"]
+[ext_resource type="Texture2D" uid="uid://xqgcqqcyy4x7" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_49.png" id="235_0i0my"]
+[ext_resource type="Texture2D" uid="uid://dj5608j6ogkqf" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_50.png" id="236_d1q5t"]
+[ext_resource type="Texture2D" uid="uid://beam0njf8nn23" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_51.png" id="237_lrhad"]
+[ext_resource type="Texture2D" uid="uid://ctw2ijniy4q57" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_52.png" id="238_xclt2"]
+[ext_resource type="Texture2D" uid="uid://crm2qtlb1g3hu" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_53.png" id="239_5mt8t"]
+[ext_resource type="Texture2D" uid="uid://dara8b8kr7xpk" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_54.png" id="240_s87py"]
+[ext_resource type="Texture2D" uid="uid://b25nko2y13oxr" path="res://Assets/Animations/Enemies/59厌皇/skill1_start_55.png" id="241_mlaru"]
+[ext_resource type="Texture2D" uid="uid://8gbwhgrooaxs" path="res://Assets/Animations/Enemies/59厌皇/skill2_00.png" id="271_b2wbo"]
+[ext_resource type="Texture2D" uid="uid://bee8oen2bj7wa" path="res://Assets/Animations/Enemies/59厌皇/skill2_01.png" id="272_7wmts"]
+[ext_resource type="Texture2D" uid="uid://eg6a1v6m41jd" path="res://Assets/Animations/Enemies/59厌皇/skill2_02.png" id="273_v4wxo"]
+[ext_resource type="Texture2D" uid="uid://qsjjg7tr5a77" path="res://Assets/Animations/Enemies/59厌皇/skill2_03.png" id="274_chqd3"]
+[ext_resource type="Texture2D" uid="uid://cnb17dr01up3p" path="res://Assets/Animations/Enemies/59厌皇/skill2_04.png" id="275_v6wf1"]
+[ext_resource type="Texture2D" uid="uid://4dt0244c0df8" path="res://Assets/Animations/Enemies/59厌皇/skill2_05.png" id="276_h8xst"]
+[ext_resource type="Texture2D" uid="uid://yt7hoiafport" path="res://Assets/Animations/Enemies/59厌皇/skill2_06.png" id="277_euwg4"]
+[ext_resource type="Texture2D" uid="uid://d0vwdjhowq6re" path="res://Assets/Animations/Enemies/59厌皇/skill2_07.png" id="278_5rj2l"]
+[ext_resource type="Texture2D" uid="uid://d4cgcdsmy5vl5" path="res://Assets/Animations/Enemies/59厌皇/skill2_08.png" id="279_fr7to"]
+[ext_resource type="Texture2D" uid="uid://daxb5jhtucwy3" path="res://Assets/Animations/Enemies/59厌皇/skill2_09.png" id="280_rj0qe"]
+[ext_resource type="Texture2D" uid="uid://d1pemy1prypbm" path="res://Assets/Animations/Enemies/59厌皇/skill2_10.png" id="281_ssmeo"]
+[ext_resource type="Texture2D" uid="uid://cmngmktvh0fup" path="res://Assets/Animations/Enemies/59厌皇/skill2_11.png" id="282_od84l"]
+[ext_resource type="Texture2D" uid="uid://cqa2mcfr3q2p" path="res://Assets/Animations/Enemies/59厌皇/skill2_12.png" id="283_uhfhn"]
+[ext_resource type="Texture2D" uid="uid://bauldlbkaex0t" path="res://Assets/Animations/Enemies/59厌皇/skill2_13.png" id="284_b7p8t"]
+[ext_resource type="Texture2D" uid="uid://p5lw1664audv" path="res://Assets/Animations/Enemies/59厌皇/skill2_14.png" id="285_gjlib"]
+[ext_resource type="Texture2D" uid="uid://b1p0gfgpfmvxd" path="res://Assets/Animations/Enemies/59厌皇/skill2_15.png" id="286_xnyjn"]
+[ext_resource type="Texture2D" uid="uid://ddlxp3a2wgx17" path="res://Assets/Animations/Enemies/59厌皇/skill2_16.png" id="287_62gkf"]
+[ext_resource type="Texture2D" uid="uid://clfuldd0wweuu" path="res://Assets/Animations/Enemies/59厌皇/skill2_17.png" id="288_ah6g4"]
+[ext_resource type="Texture2D" uid="uid://01ynlyn1ou4t" path="res://Assets/Animations/Enemies/59厌皇/skill2_18.png" id="289_6tb3e"]
+[ext_resource type="Texture2D" uid="uid://dgt2k4vwipncr" path="res://Assets/Animations/Enemies/59厌皇/skill2_19.png" id="290_yi6p0"]
+[ext_resource type="Texture2D" uid="uid://c2stvg2k46u1p" path="res://Assets/Animations/Enemies/59厌皇/skill2_20.png" id="291_cm6cy"]
+[ext_resource type="Texture2D" uid="uid://cugptpgg3batf" path="res://Assets/Animations/Enemies/59厌皇/skill2_21.png" id="292_t2ycy"]
+[ext_resource type="Texture2D" uid="uid://bqno4262g4hyk" path="res://Assets/Animations/Enemies/59厌皇/skill2_22.png" id="293_jms8a"]
+[ext_resource type="Texture2D" uid="uid://ciymdi4y1qbvb" path="res://Assets/Animations/Enemies/59厌皇/skill2_23.png" id="294_jb8xx"]
+[ext_resource type="Texture2D" uid="uid://diiwetoqyiyt5" path="res://Assets/Animations/Enemies/59厌皇/skill2_24.png" id="295_fgk63"]
+[ext_resource type="Texture2D" uid="uid://dptlunv64kpoh" path="res://Assets/Animations/Enemies/59厌皇/skill2_25.png" id="296_1i46a"]
+[ext_resource type="Texture2D" uid="uid://dmd1a4kf6bw73" path="res://Assets/Animations/Enemies/59厌皇/skill2_26.png" id="297_pnj3v"]
+[ext_resource type="Texture2D" uid="uid://bhptoa1be4gin" path="res://Assets/Animations/Enemies/59厌皇/skill2_27.png" id="298_mefjm"]
+[ext_resource type="Texture2D" uid="uid://bni7j8gc5oxbg" path="res://Assets/Animations/Enemies/59厌皇/skill2_28.png" id="299_gcwf1"]
+[ext_resource type="Texture2D" uid="uid://bjtb7klb1p06q" path="res://Assets/Animations/Enemies/59厌皇/skill2_29.png" id="300_emdpn"]
+[ext_resource type="Texture2D" uid="uid://bqsjt74bbi7pj" path="res://Assets/Animations/Enemies/59厌皇/skill2_30.png" id="301_0oyy3"]
+[ext_resource type="Texture2D" uid="uid://b4rygslrog8yc" path="res://Assets/Animations/Enemies/59厌皇/skill2_31.png" id="302_jg3pr"]
+[ext_resource type="Texture2D" uid="uid://4bxiyovvwulk" path="res://Assets/Animations/Enemies/59厌皇/skill2_32.png" id="303_73ppg"]
+[ext_resource type="Texture2D" uid="uid://bylqfrqu7k7i1" path="res://Assets/Animations/Enemies/59厌皇/skill2_33.png" id="304_ukhcn"]
+[ext_resource type="Texture2D" uid="uid://dpibe2bbltul7" path="res://Assets/Animations/Enemies/59厌皇/skill2_34.png" id="305_1n3ri"]
+[ext_resource type="Texture2D" uid="uid://bqupoysw4e451" path="res://Assets/Animations/Enemies/59厌皇/skill2_35.png" id="306_wdmo7"]
+[ext_resource type="Texture2D" uid="uid://i6lyeom57hco" path="res://Assets/Animations/Enemies/59厌皇/skill2_36.png" id="307_p3jqe"]
+[ext_resource type="Texture2D" uid="uid://c1m38wtxhfnmr" path="res://Assets/Animations/Enemies/59厌皇/skill2_37.png" id="308_t08hr"]
+[ext_resource type="Texture2D" uid="uid://bnmigm83e34f2" path="res://Assets/Animations/Enemies/59厌皇/skill2_38.png" id="309_aqedj"]
+[ext_resource type="Texture2D" uid="uid://droc14t17ftof" path="res://Assets/Animations/Enemies/59厌皇/skill2_39.png" id="310_1sk37"]
+[ext_resource type="Texture2D" uid="uid://dvu5wss0g8l4y" path="res://Assets/Animations/Enemies/59厌皇/skill2_40.png" id="311_0vhxs"]
+[ext_resource type="Texture2D" uid="uid://btfa4tq3g2m1c" path="res://Assets/Animations/Enemies/59厌皇/skill2_41.png" id="312_i3b2m"]
+[ext_resource type="Texture2D" uid="uid://dsrojmswhu2cd" path="res://Assets/Animations/Enemies/59厌皇/skill2_42.png" id="313_4g7ep"]
+[ext_resource type="Texture2D" uid="uid://bp3544hf84mbv" path="res://Assets/Animations/Enemies/59厌皇/skill2_43.png" id="314_h1ylx"]
+[ext_resource type="Texture2D" uid="uid://e2ltmsov270b" path="res://Assets/Animations/Enemies/59厌皇/skill2_44.png" id="315_eas4k"]
+[ext_resource type="Texture2D" uid="uid://diobt7ilo0n1q" path="res://Assets/Animations/Enemies/59厌皇/skill2_45.png" id="316_rshrg"]
+[ext_resource type="Texture2D" uid="uid://qv41s5yn5asl" path="res://Assets/Animations/Enemies/59厌皇/skill2_46.png" id="317_43k4c"]
+[ext_resource type="Texture2D" uid="uid://bxcb4oea6osj6" path="res://Assets/Animations/Enemies/59厌皇/skill2_47.png" id="318_ifsd8"]
+[ext_resource type="Texture2D" uid="uid://csg07g0geh8lj" path="res://Assets/Animations/Enemies/59厌皇/skill2_48.png" id="319_7cf57"]
+[ext_resource type="Texture2D" uid="uid://0h4vuacs3rhn" path="res://Assets/Animations/Enemies/59厌皇/skill2_49.png" id="320_mtdqq"]
+[ext_resource type="Texture2D" uid="uid://b45aut2ceis" path="res://Assets/Animations/Enemies/59厌皇/skill2_50.png" id="321_ewvsv"]
+[ext_resource type="Texture2D" uid="uid://bsyraxxgvylp6" path="res://Assets/Animations/Enemies/59厌皇/skill2_51.png" id="322_2b7iq"]
+[ext_resource type="Texture2D" uid="uid://cjm4kqrqjjev5" path="res://Assets/Animations/Enemies/59厌皇/skill2_52.png" id="323_jinel"]
+[ext_resource type="Texture2D" uid="uid://daw8vay6iwjpf" path="res://Assets/Animations/Enemies/59厌皇/skill2_53.png" id="324_08e83"]
+[ext_resource type="Texture2D" uid="uid://cqhyrxk2j4yk8" path="res://Assets/Animations/Enemies/59厌皇/skill2_54.png" id="325_nvdkh"]
+[ext_resource type="Texture2D" uid="uid://ldryd14ik86g" path="res://Assets/Animations/Enemies/59厌皇/skill2_55.png" id="326_v77hc"]
+[ext_resource type="Texture2D" uid="uid://bnglhku3qfnev" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_00.png" id="327_qurjh"]
+[ext_resource type="Texture2D" uid="uid://bik1ltqje5qfx" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_01.png" id="328_aeewl"]
+[ext_resource type="Texture2D" uid="uid://ygryysy0ppxk" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_02.png" id="329_fejy5"]
+[ext_resource type="Texture2D" uid="uid://busrbctumxfde" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_03.png" id="330_56gsu"]
+[ext_resource type="Texture2D" uid="uid://dfg074tn3dfpp" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_04.png" id="331_3rnmy"]
+[ext_resource type="Texture2D" uid="uid://bdbspaxv1avjf" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_05.png" id="332_hly4s"]
+[ext_resource type="Texture2D" uid="uid://bqm25a4pg7wo6" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_06.png" id="333_7s24u"]
+[ext_resource type="Texture2D" uid="uid://c4mwhvbtqqh3o" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_07.png" id="334_m3vnf"]
+[ext_resource type="Texture2D" uid="uid://dbdtf06cd60pg" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_08.png" id="335_g6xbh"]
+[ext_resource type="Texture2D" uid="uid://ddsipdd4k1yxl" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_09.png" id="336_tu3oc"]
+[ext_resource type="Texture2D" uid="uid://scjmfb0wwtno" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_10.png" id="337_hpwry"]
+[ext_resource type="Texture2D" uid="uid://ceg6pw5r162h0" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_11.png" id="338_wqayx"]
+[ext_resource type="Texture2D" uid="uid://ch18x1736jqvr" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_12.png" id="339_s042c"]
+[ext_resource type="Texture2D" uid="uid://dqemr0k7ythse" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_13.png" id="340_7s07c"]
+[ext_resource type="Texture2D" uid="uid://d1uxsauk7iv13" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_14.png" id="341_mxedk"]
+[ext_resource type="Texture2D" uid="uid://lrw3toxcrtav" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_15.png" id="342_acbx4"]
+[ext_resource type="Texture2D" uid="uid://b15ah0aby148k" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_16.png" id="343_lfrhw"]
+[ext_resource type="Texture2D" uid="uid://l47qfqq7aywr" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_17.png" id="344_tjbyx"]
+[ext_resource type="Texture2D" uid="uid://dos5m1wqyy1xi" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_18.png" id="345_t6rlu"]
+[ext_resource type="Texture2D" uid="uid://dsl8x07ka5q7k" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_19.png" id="346_s0231"]
+[ext_resource type="Texture2D" uid="uid://dijcyd2637apv" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_20.png" id="347_0tjbk"]
+[ext_resource type="Texture2D" uid="uid://5u6yea404ho0" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_21.png" id="348_l8810"]
+[ext_resource type="Texture2D" uid="uid://dqhw606pj51v4" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_22.png" id="349_a2ju7"]
+[ext_resource type="Texture2D" uid="uid://bcre0wh0cmeb0" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_23.png" id="350_6ry75"]
+[ext_resource type="Texture2D" uid="uid://b4p8txc7afxop" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_24.png" id="351_bps00"]
+[ext_resource type="Texture2D" uid="uid://bwuli1sc16jyr" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_25.png" id="352_dod3j"]
+[ext_resource type="Texture2D" uid="uid://bb2038u4giswj" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_26.png" id="353_uwkfv"]
+[ext_resource type="Texture2D" uid="uid://bg48dhbtf0vdh" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_27.png" id="354_f2fe6"]
+[ext_resource type="Texture2D" uid="uid://ds6k3e6d8e6xu" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_28.png" id="355_baibw"]
+[ext_resource type="Texture2D" uid="uid://c5eujddwgbem7" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_29.png" id="356_ggdmx"]
+[ext_resource type="Texture2D" uid="uid://b57lee01uxvdk" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_30.png" id="357_g57m3"]
+[ext_resource type="Texture2D" uid="uid://dxog4rxbsma10" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_31.png" id="358_nnxak"]
+[ext_resource type="Texture2D" uid="uid://dofo2elaxav26" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_32.png" id="359_q3d8o"]
+[ext_resource type="Texture2D" uid="uid://bvxwmeee4j0rm" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_33.png" id="360_7agx8"]
+[ext_resource type="Texture2D" uid="uid://cgwc63pol447l" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_34.png" id="361_4266c"]
+[ext_resource type="Texture2D" uid="uid://bgadj05xafvcn" path="res://Assets/Animations/Enemies/59厌皇/skill3_4_35.png" id="362_0xlrq"]
+[ext_resource type="AudioStream" uid="uid://dbtgg1fvplh1g" path="res://Assets/Sounds/FXs/Enemies/尸国统帅/尸国统帅死亡.wav" id="372_ntvux"]
+[ext_resource type="AudioStream" uid="uid://5vm66inghgpc" path="res://Assets/Sounds/FXs/Heroes/Fuchen/末日.wav" id="374_a2vw7"]
+
+[sub_resource type="Resource" id="Resource_j32x1"]
+script = ExtResource("3_ymsbp")
+health = 8000
+dodge_rate = 0.0
+near_damage_low = 600
+near_damage_high = 900
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.0
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 0.4
+
+[sub_resource type="Resource" id="Resource_c54ek"]
+script = ExtResource("10_1jm06")
+damage_low = 600
+damage_high = 900
+
+[sub_resource type="Resource" id="Resource_22kfs"]
+resource_local_to_scene = true
+script = ExtResource("3_ymsbp")
+health = -1
+dodge_rate = 0.0
+near_damage_low = -1
+near_damage_high = -1
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.0
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 0.4
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2mefp"]
+shader = ExtResource("12_5n12s")
+shader_parameter/hue_shift = 0.8
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_enah1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_ggy8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_8w3fg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_hmj5h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_efci6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_14pk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_rias0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_pshyc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_j4igv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_82i0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_7ma1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_cfre6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_pc0ba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_fhy0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ugr5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_xyfyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_h7u1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_gdioe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_f0l08")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_dllp8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_ef7xc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_wfjrl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_17g0c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_05ell")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_gfdkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_qtjmp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_f0x6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_leqc7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_nxu45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_jcp5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_804ju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_n7wry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_wv2td")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_krdmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_cuhk4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_g6rjp")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("49_qtjuh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_6i317")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_4ofy7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_41eoj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_0vavn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_f8sxe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_b1ttl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_p884i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_xx1pu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_xsfh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_xcgg2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_5p3cd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_jae5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_c61em")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_6x02k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_yh3mq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_32okc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_lmjlw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_e2un1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_hbioe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_n7c04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_n7c04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_n7c04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_n7c04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_n7c04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_n7c04")
+}],
+"loop": false,
+"name": &"break",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("49_qtjuh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_6i317")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_4ofy7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_41eoj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_0vavn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_f8sxe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_b1ttl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_p884i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_xx1pu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_xsfh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_xcgg2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_5p3cd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_jae5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_c61em")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_6x02k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_yh3mq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_32okc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_lmjlw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_e2un1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_hbioe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_n7c04")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_ggy8u")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("70_ukigr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_ditjl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_nbt2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_8fv4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_awrto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_ix3gh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_ohhwb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_uw5vd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_y488y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_hkmbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_jjdya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_2b06s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_hoiiw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_84vkv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_ubtn3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_wt1xf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_lhpyw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_qftid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_tjkpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_skdv7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_bf2i8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_j43r6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_8tsga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_6l50e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_oo178")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_omvpd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_5436x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_sq88t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_8iwxd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_lrltw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_kxbry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_afs60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_wmihl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_vlesd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_ka43g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_yanbb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_sbgow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_3bbo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_hul5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_w3eh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_gusqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_wp8gv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_tigck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_345xh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_s2kqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_hcapn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_r3510")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_ydyrj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_25bke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_05873")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("70_o0aea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_qkrlx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_wnge6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_f0fcr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_xctn3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_72fac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_rp3pm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_2g38g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_m18de")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_sle0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_kcu5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_nu8li")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_7t2ib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_k1ova")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_66ppe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_y2bp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_r2ulk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_n4r5p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_dgeaa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_so7pa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_6td1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_2fv8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_6af5h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_w8h62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_nuxk2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_nclvy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_obbtf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_bve2a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_ch0nd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_b0v5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_n1wc2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_7gwac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_bmvob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_4obnj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_3q0lh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_4rpxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_5lmap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_d3ukn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_4o4wo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_w55wo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_tp5iw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_5nndf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_ltwu5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_8funp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_xcjcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_eke7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_2egeb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_s6baq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_wyhvx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_31xtt")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("170_cqh1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("171_ra44l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_chfwn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("173_qli46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_0vq1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("175_au0jp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("176_4v1wy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("177_lkxa0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("178_rnl5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("179_jdty0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("180_i7rc0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("181_ldqun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("182_fa4rn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("183_j0ojg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("184_4lxwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("185_07yc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("185_07yc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("185_07yc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("185_07yc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("185_07yc5")
+}],
+"loop": false,
+"name": &"recover",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("186_f713n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("187_l72qn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("188_rn780")
+}, {
+"duration": 1.0,
+"texture": ExtResource("189_ix1p7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("190_ig8x3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("191_m1qid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("192_8whxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("193_mof15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("194_4qywr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("195_la7oo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("196_url16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("197_112sj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("198_srvri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("199_4nnhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("200_7vqtr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("201_sd5fq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("202_32anx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("203_ews8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("204_s1h17")
+}, {
+"duration": 1.0,
+"texture": ExtResource("205_jahdu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("206_0p5ju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("207_uuogi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("208_iyqp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("209_ypnxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("210_5bleb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("211_q0dmn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("212_oo0tr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("213_5xm7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("214_44036")
+}, {
+"duration": 1.0,
+"texture": ExtResource("214_44036")
+}, {
+"duration": 1.0,
+"texture": ExtResource("214_44036")
+}, {
+"duration": 1.0,
+"texture": ExtResource("214_44036")
+}, {
+"duration": 1.0,
+"texture": ExtResource("214_44036")
+}, {
+"duration": 1.0,
+"texture": ExtResource("214_44036")
+}, {
+"duration": 1.0,
+"texture": ExtResource("214_44036")
+}, {
+"duration": 1.0,
+"texture": ExtResource("214_44036")
+}, {
+"duration": 1.0,
+"texture": ExtResource("214_44036")
+}, {
+"duration": 1.0,
+"texture": ExtResource("214_44036")
+}, {
+"duration": 1.0,
+"texture": ExtResource("214_44036")
+}],
+"loop": false,
+"name": &"skill1_end",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("186_qcjrw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("187_lu2jo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("188_3n4wb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("189_05g6e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("190_v1hxc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("191_b8gyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("192_qrog8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("193_71oa2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("194_xowwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("195_plhen")
+}, {
+"duration": 1.0,
+"texture": ExtResource("196_6dial")
+}, {
+"duration": 1.0,
+"texture": ExtResource("197_ius0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("198_ijmhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("199_fibp6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("200_hkpmu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("201_n6c7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("202_1bprr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("203_jesgo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("204_8ecsv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("205_kcjqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("206_whojk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("207_bksk7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("208_p6wwu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("209_avel4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("210_s2wv8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("211_62of3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("212_tplf2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("213_ifhjt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("214_fdoto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("215_26pcr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("216_8vn0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("217_cgrr0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("218_5ta1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("219_jgruv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("220_vt22y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("221_7w4k0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("222_0wl15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("223_4es0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("224_p8mv8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("225_6ae2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("226_wknnf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("227_uk1lo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("228_mmjga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("229_b8bmj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("230_7pvjl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("231_quhoe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("232_ufsij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("233_nqxhh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("234_rw4lm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("235_0i0my")
+}, {
+"duration": 1.0,
+"texture": ExtResource("236_d1q5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("237_lrhad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("238_xclt2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("239_5mt8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("240_s87py")
+}, {
+"duration": 1.0,
+"texture": ExtResource("241_mlaru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("241_mlaru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("241_mlaru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("241_mlaru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("241_mlaru")
+}],
+"loop": false,
+"name": &"skill1_start",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("271_b2wbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("272_7wmts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("273_v4wxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("274_chqd3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("275_v6wf1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("276_h8xst")
+}, {
+"duration": 1.0,
+"texture": ExtResource("277_euwg4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("278_5rj2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("279_fr7to")
+}, {
+"duration": 1.0,
+"texture": ExtResource("280_rj0qe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("281_ssmeo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("282_od84l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("283_uhfhn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("284_b7p8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("285_gjlib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("286_xnyjn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("287_62gkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("288_ah6g4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("289_6tb3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("290_yi6p0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("291_cm6cy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("292_t2ycy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("293_jms8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("294_jb8xx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("295_fgk63")
+}, {
+"duration": 1.0,
+"texture": ExtResource("296_1i46a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("297_pnj3v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("298_mefjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("299_gcwf1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("300_emdpn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("301_0oyy3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("302_jg3pr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("303_73ppg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("304_ukhcn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("305_1n3ri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("306_wdmo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("307_p3jqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("308_t08hr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("309_aqedj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("310_1sk37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("311_0vhxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("312_i3b2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("313_4g7ep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("314_h1ylx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("315_eas4k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("316_rshrg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("317_43k4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("318_ifsd8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("319_7cf57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("320_mtdqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("321_ewvsv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("322_2b7iq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("323_jinel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("324_08e83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("325_nvdkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("326_v77hc")
+}],
+"loop": false,
+"name": &"skill2",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("327_qurjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("328_aeewl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("329_fejy5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("330_56gsu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("331_3rnmy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("332_hly4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("333_7s24u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("334_m3vnf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("335_g6xbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("336_tu3oc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("337_hpwry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("338_wqayx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("339_s042c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("340_7s07c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("341_mxedk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("342_acbx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("343_lfrhw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("344_tjbyx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("345_t6rlu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("346_s0231")
+}, {
+"duration": 1.0,
+"texture": ExtResource("347_0tjbk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("348_l8810")
+}, {
+"duration": 1.0,
+"texture": ExtResource("349_a2ju7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("350_6ry75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("351_bps00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("352_dod3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("353_uwkfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("354_f2fe6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("355_baibw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("356_ggdmx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("357_g57m3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("358_nnxak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("359_q3d8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("360_7agx8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("361_4266c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("362_0xlrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("362_0xlrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("362_0xlrq")
+}],
+"loop": false,
+"name": &"skill3",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("327_qurjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("328_aeewl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("329_fejy5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("330_56gsu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("331_3rnmy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("332_hly4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("333_7s24u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("334_m3vnf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("335_g6xbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("336_tu3oc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("337_hpwry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("338_wqayx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("339_s042c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("340_7s07c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("341_mxedk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("342_acbx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("343_lfrhw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("344_tjbyx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("345_t6rlu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("346_s0231")
+}, {
+"duration": 1.0,
+"texture": ExtResource("347_0tjbk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("348_l8810")
+}, {
+"duration": 1.0,
+"texture": ExtResource("349_a2ju7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("350_6ry75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("351_bps00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("352_dod3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("353_uwkfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("354_f2fe6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("355_baibw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("356_ggdmx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("357_g57m3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("358_nnxak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("359_q3d8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("360_7agx8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("361_4266c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("362_0xlrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("362_0xlrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("362_0xlrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("362_0xlrq")
+}],
+"loop": false,
+"name": &"skill4",
+"speed": 30.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7mxxu"]
+radius = 73.9444
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u826u"]
+radius = 73.9444
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20pu2"]
+atlas = ExtResource("7_mp5av")
+region = Rect2(9, 9, 302, 302)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qclx6"]
+texture = SubResource("AtlasTexture_20pu2")
+
+[node name="Enemy59" node_paths=PackedStringArray("normal_attack_area") groups=["boss", "god"] instance=ExtResource("1_4dhll")]
+script = ExtResource("2_wxmfb")
+later_data = SubResource("Resource_j32x1")
+skill4_scene = ExtResource("3_80xxc")
+skill4_unlocked_story_scene = ExtResource("5_uuh0k")
+skill4_teach_scene = ExtResource("6_qei56")
+step_2_enemy_scene = ExtResource("4_qyawr")
+lightning_scene = ExtResource("6_ru36u")
+explosion_scene = ExtResource("7_34q52")
+smoke_scene = ExtResource("8_v8836")
+broken_damage = 200
+fighting_text_list = Array[String](["瞧吾英武之神威，简直就是天神下凡！", "在尼古拉斯的神威面前颤抖吧，凡人！", "从今天起，历史只会记住两件事：尼古拉斯・特斯拉的雷霆踏碎了人族，以及你们曾像蛆虫一样在我的脚边蠕动过", "绝望吧、仇恨吧、愤怒吧——尔等之无能狂怒，正是吾突破极限的养料！", "吾既成神，何来败亡？", "不过区区凡人，妄图阻挠吾？笑话！", "濒死的羔羊，妄图做最后无用的抵抗吗？"])
+step2_text_list = Array[String](["呵呵……", "一切皆是徒劳……", "人族灭亡的命运，不可能被改写……"])
+step2_story_scene = ExtResource("6_ry2uc")
+step2_boss_music_scene = ExtResource("12_r167k")
+normal_attack_damage = SubResource("Resource_c54ek")
+normal_attack_area = NodePath("UnitBody/NormalAttackArea")
+skill2_summon_count = 66
+skill2_hit_area_scene = ExtResource("11_k4le1")
+skill3_lightning_area_scene = ExtResource("12_mkme7")
+tower_lock_buff_scene = ExtResource("14_42lek")
+enemy_name = "厌皇-尼古拉斯"
+enemy_id = 59
+enemy_texture = ExtResource("4_66cg3")
+enemy_type = 5
+start_data = SubResource("Resource_22kfs")
+lives_taken = 666
+show_tip = false
+die_audio_stream_list = Array[AudioStream]([])
+
+[node name="PowerLight" type="Sprite2D" parent="UnitBody" index="0"]
+material = SubResource("ShaderMaterial_2mefp")
+position = Vector2(0, -10)
+scale = Vector2(1.18903, 1.18903)
+texture = ExtResource("13_eboup")
+region_rect = Rect2(18, 24, 110, 63)
+
+[node name="EnemySprite" parent="UnitBody" index="1"]
+position = Vector2(-15, -110)
+sprite_frames = SubResource("SpriteFrames_enah1")
+animation = &"recover"
+autoplay = "idle"
+
+[node name="HurtBox" parent="UnitBody" index="3"]
+position = Vector2(0, -110)
+
+[node name="EnemyButton" parent="UnitBody" index="5"]
+offset_left = -53.0
+offset_top = -200.0
+offset_right = 55.0
+
+[node name="HealthBar" parent="UnitBody" index="6"]
+offset_left = -70.0
+offset_top = -235.0
+offset_right = 230.0
+offset_bottom = -226.0
+
+[node name="AllyConditionArea" type="Area2D" parent="UnitBody" index="9"]
+scale = Vector2(10, 10)
+collision_layer = 0
+collision_mask = 24
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/AllyConditionArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_7mxxu")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="TowerConditionArea" type="Area2D" parent="UnitBody" index="10"]
+scale = Vector2(20, 20)
+collision_layer = 0
+collision_mask = 1024
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/TowerConditionArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_7mxxu")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="NormalAttackArea" type="Area2D" parent="UnitBody" index="11"]
+top_level = true
+collision_layer = 0
+collision_mask = 24
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/NormalAttackArea" index="0"]
+scale = Vector2(1, 0.7)
+shape = SubResource("CircleShape2D_u826u")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="DialogPanel" type="PanelContainer" parent="UnitBody" index="16"]
+visible = false
+modulate = Color(0, 1, 0, 1)
+z_index = 4096
+offset_left = 100.0
+offset_top = -255.0
+offset_right = 875.0
+offset_bottom = 66.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qclx6")
+script = ExtResource("8_c2j84")
+
+[node name="MarginContainer" type="MarginContainer" parent="UnitBody/DialogPanel" index="0"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 20
+
+[node name="DialogLabel" type="Label" parent="UnitBody/DialogPanel/MarginContainer" index="0"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_lt4he")
+theme_override_font_sizes/font_size = 64
+text = "啊啊啊啊啊啊啊啊啊啊啊"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="BossUI" parent="." index="5" node_paths=PackedStringArray("linked_boss") instance=ExtResource("6_kxds3")]
+linked_boss = NodePath("..")
+
+[node name="Skill2Timer" type="Timer" parent="." index="6"]
+wait_time = 12.0
+one_shot = true
+
+[node name="Skill3Timer" type="Timer" parent="." index="7"]
+wait_time = 8.0
+one_shot = true
+
+[node name="Skill4Timer" type="Timer" parent="." index="8"]
+wait_time = 16.0
+one_shot = true
+
+[node name="InvincibleTimer" type="Timer" parent="." index="9"]
+wait_time = 75.0
+one_shot = true
+
+[node name="RecoverTimer" type="Timer" parent="." index="10"]
+wait_time = 8.0
+one_shot = true
+
+[node name="ProtectionTimer" type="Timer" parent="." index="11"]
+one_shot = true
+
+[node name="BrokenAudio" type="AudioStreamPlayer" parent="." index="12"]
+stream = ExtResource("372_ntvux")
+volume_db = -4.0
+bus = &"Sound"
+
+[node name="DialogTimer" type="Timer" parent="." index="13"]
+wait_time = 15.0
+
+[node name="Skill1Audio" type="AudioStreamPlayer" parent="." index="14"]
+stream = ExtResource("374_a2vw7")
+bus = &"Sound"
+
+[connection signal="timeout" from="ProtectionTimer" to="." method="_on_protection_timer_timeout"]
+[connection signal="timeout" from="DialogTimer" to="." method="_on_dialog_timer_timeout"]

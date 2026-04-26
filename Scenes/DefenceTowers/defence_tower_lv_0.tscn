@@ -1,0 +1,85 @@
+[gd_scene load_steps=13 format=3 uid="uid://ss3u6uxsf6j0"]
+
+[ext_resource type="PackedScene" uid="uid://b1245qux56fh4" path="res://Scenes/Classes/defence_tower_class.tscn" id="1_30kaw"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/defence_tower_lv_0.gd" id="2_3kqo7"]
+[ext_resource type="Texture2D" uid="uid://bo4q5wo18lqp1" path="res://Assets/Images/DefenceTowers/Based/royal-build.png" id="2_oxgec"]
+[ext_resource type="Texture2D" uid="uid://c5ux4kta4lhxy" path="res://Assets/Images/DefenceTowers/Based/royal-build-select.png" id="3_c0np4"]
+[ext_resource type="AudioStream" uid="uid://bh73prcdnd7wi" path="res://Assets/Sounds/FXs/DefenceTowers/Sound_TowerBuilding.ogg" id="4_2skhp"]
+[ext_resource type="Texture2D" uid="uid://bffminamg3gs5" path="res://Assets/Images/DefenceTowers/Archers/Towers/LV0.png" id="5_to6ut"]
+[ext_resource type="Texture2D" uid="uid://c5kexdg3hy1hg" path="res://Assets/Images/DefenceTowers/UI/prograss_bar.png" id="6_dok2o"]
+[ext_resource type="Texture2D" uid="uid://bp7sqn15byk47" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV0.png" id="6_gp3ia"]
+[ext_resource type="Texture2D" uid="uid://73hag5pbltu3" path="res://Assets/Images/DefenceTowers/Magics/Towers/LV0.png" id="7_m47gd"]
+[ext_resource type="Texture2D" uid="uid://cugsa0xj7jif5" path="res://Assets/Images/DefenceTowers/Bombards/Towers/cannan_uc.png" id="8_46v7d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lmlmn"]
+atlas = ExtResource("6_dok2o")
+region = Rect2(2, 134, 297, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttqui"]
+atlas = ExtResource("6_dok2o")
+region = Rect2(6, 73, 288, 24)
+
+[node name="DefenceTowerLV0" instance=ExtResource("1_30kaw")]
+script = ExtResource("2_3kqo7")
+tower_type = 0
+
+[node name="BasedSprite" parent="Based" index="0"]
+texture = ExtResource("2_oxgec")
+
+[node name="BasedSpriteSelect" parent="Based" index="1"]
+texture = ExtResource("3_c0np4")
+
+[node name="Slots" type="Node2D" parent="Based" index="2"]
+
+[node name="Archer" type="Sprite2D" parent="Based/Slots" index="0"]
+position = Vector2(0, -9)
+texture = ExtResource("5_to6ut")
+
+[node name="Barrack" type="Sprite2D" parent="Based/Slots" index="1"]
+visible = false
+position = Vector2(0, -21)
+scale = Vector2(1.31964, 1.31964)
+texture = ExtResource("6_gp3ia")
+
+[node name="Magic" type="Sprite2D" parent="Based/Slots" index="2"]
+visible = false
+position = Vector2(0, -26)
+texture = ExtResource("7_m47gd")
+
+[node name="Bombard" type="Sprite2D" parent="Based/Slots" index="3"]
+visible = false
+position = Vector2(5, 4)
+scale = Vector2(1.13941, 1.13941)
+texture = ExtResource("8_46v7d")
+
+[node name="TowerButton" parent="." index="2"]
+visible = false
+
+[node name="BuildingAudio" type="AudioStreamPlayer" parent="." index="6"]
+stream = ExtResource("4_2skhp")
+autoplay = true
+bus = &"Sound"
+
+[node name="BuildingTimer" type="Timer" parent="." index="7"]
+wait_time = 1.2
+one_shot = true
+autostart = true
+
+[node name="BuildingProgressBar" type="TextureProgressBar" parent="." index="8"]
+z_index = 1
+offset_left = -67.0
+offset_top = -57.0
+offset_right = 230.0
+offset_bottom = -25.0
+scale = Vector2(0.455777, 0.455777)
+max_value = 1.2
+step = 0.0
+value = 1.2
+texture_under = SubResource("AtlasTexture_lmlmn")
+texture_progress = SubResource("AtlasTexture_ttqui")
+texture_progress_offset = Vector2(4, 4)
+
+[node name="CollisionShape2D" parent="TowerSelfArea" index="0"]
+disabled = true
+
+[connection signal="timeout" from="BuildingTimer" to="." method="_on_building_timer_timeout"]

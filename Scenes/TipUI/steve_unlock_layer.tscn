@@ -1,0 +1,820 @@
+[gd_scene load_steps=24 format=3 uid="uid://7qijydvbvd4j"]
+
+[ext_resource type="Script" path="res://Scripts/UI-Tips/steve_unlock_layer.gd" id="1_7j830"]
+[ext_resource type="Texture2D" uid="uid://dot88c47fg4kw" path="res://Assets/Images/UI/HeroHall/HeroTextures/史蒂夫SP.png" id="2_oi4hw"]
+[ext_resource type="Shader" path="res://Assets/Shaders/pause_background.gdshader" id="3_v1adv"]
+[ext_resource type="Texture2D" uid="uid://b0epckbs18yrd" path="res://Assets/Images/UI/HeroHall/SkillTextures/SteveSP/此剑，献与世界.png" id="4_5tjfa"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="5_bgk0c"]
+[ext_resource type="Texture2D" uid="uid://og3hs76m13qw" path="res://Assets/Images/UI/HeroHall/SkillTextures/SteveSP/你会见证，落日的余晖.png" id="6_2w6m2"]
+[ext_resource type="Texture2D" uid="uid://dm1clisw6ltdc" path="res://Assets/Images/UI/HeroHall/SkillTextures/SteveSP/向着明日进发.png" id="7_lr8fh"]
+[ext_resource type="Texture2D" uid="uid://wtoq46b1lbwt" path="res://Assets/Images/UI/HeroHall/SkillTextures/SteveSP/此箭，终抵群星.png" id="8_oatm5"]
+[ext_resource type="Texture2D" uid="uid://dxavsrjmcdoc8" path="res://Assets/Images/UI/HeroHall/SkillTextures/SteveSP/旅程的问答.png" id="9_k2icq"]
+[ext_resource type="Texture2D" uid="uid://5vskalp00r1x" path="res://Assets/Images/UI/mobile_button2.png" id="10_kssn5"]
+[ext_resource type="Texture2D" uid="uid://cikybo262yisy" path="res://Assets/Images/UI/delete_no.png" id="11_g3p3f"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cavnu"]
+shader = ExtResource("3_v1adv")
+shader_parameter/f = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trnh0"]
+bg_color = Color(0, 0, 0, 0.541176)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fvau"]
+atlas = ExtResource("4_5tjfa")
+region = Rect2(67, 67, 121, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygoec"]
+atlas = ExtResource("6_2w6m2")
+region = Rect2(67, 67, 121, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2matk"]
+atlas = ExtResource("7_lr8fh")
+region = Rect2(67, 67, 121, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_osqcg"]
+atlas = ExtResource("8_oatm5")
+region = Rect2(67, 67, 121, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vy8b8"]
+atlas = ExtResource("9_k2icq")
+region = Rect2(67, 67, 121, 122)
+
+[sub_resource type="Animation" id="Animation_4ix4f"]
+resource_name = "entry"
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Panel:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ColorRect:material:shader_parameter/f")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 3, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TextureRect:position:x")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-670, -0.25, 0, 0.25, 0, 208, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("TextureRect:position:y")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(145, -0.25, 0, 0.25, 0, 145, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ColorRect:position:x")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(2052, -0.25, 0, 0.25, 0, 946, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("ColorRect:position:y")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("ColorRect/Label:modulate:r")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.2, 0.7)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("ColorRect/Label:modulate:g")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.2, 0.7)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("ColorRect/Label:modulate:b")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.2, 0.7)
+}
+tracks/12/type = "bezier"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("ColorRect/Label:modulate:a")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.2, 0.7)
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Label:modulate:r")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.2, 0.7)
+}
+tracks/14/type = "bezier"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Label:modulate:g")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.2, 0.7)
+}
+tracks/15/type = "bezier"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Label:modulate:b")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.2, 0.7)
+}
+tracks/16/type = "bezier"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Label:modulate:a")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.2, 0.7)
+}
+tracks/17/type = "bezier"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("CloseButton:position:x")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1764, -0.25, 0, 0.25, 0, 1764, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.7, 1)
+}
+tracks/18/type = "bezier"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("CloseButton:position:y")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-170, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.7, 1)
+}
+
+[sub_resource type="Animation" id="Animation_fyvrs"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Panel:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ColorRect:material:shader_parameter/f")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(3, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TextureRect:position:x")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(208, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("TextureRect:position:y")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(145, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ColorRect:position:x")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(946, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("ColorRect:position:y")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("ColorRect/Label:modulate:r")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("ColorRect/Label:modulate:g")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("ColorRect/Label:modulate:b")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/12/type = "bezier"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("ColorRect/Label:modulate:a")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Label:modulate:r")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/14/type = "bezier"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Label:modulate:g")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/15/type = "bezier"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Label:modulate:b")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/16/type = "bezier"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Label:modulate:a")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/17/type = "bezier"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("CloseButton:position:x")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1764, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/18/type = "bezier"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("CloseButton:position:y")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yagfm"]
+_data = {
+"RESET": SubResource("Animation_fyvrs"),
+"entry": SubResource("Animation_4ix4f")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2kpug"]
+atlas = ExtResource("10_kssn5")
+region = Rect2(50, 50, 156, 156)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xw3e0"]
+atlas = ExtResource("11_g3p3f")
+region = Rect2(84, 87, 94, 83)
+
+[node name="SteveUnlockLayer" type="CanvasLayer"]
+process_mode = 3
+layer = 10
+script = ExtResource("1_7j830")
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1630.0
+offset_top = -395.0
+offset_right = -1069.0
+offset_bottom = 395.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_oi4hw")
+stretch_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_cavnu")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2052.0
+offset_right = 1106.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 83.0
+offset_top = 227.0
+offset_right = -83.0
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 35
+
+[node name="PanelContainer" type="PanelContainer" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(800, 200)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_trnh0")
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_bottom = 40
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_3fvau")
+stretch_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+modulate = Color(1, 1, 0, 1)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("5_bgk0c")
+theme_override_font_sizes/font_size = 48
+text = "此剑，献与世界"
+
+[node name="Label2" type="Label" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_bgk0c")
+theme_override_font_sizes/font_size = 36
+text = "对一定范围内的所有敌人造成一定真实伤害，并给予自身持续10秒的力量增幅效果。"
+autowrap_mode = 3
+
+[node name="PanelContainer2" type="PanelContainer" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(800, 200)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_trnh0")
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer2"]
+layout_mode = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_bottom = 40
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer2/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_ygoec")
+stretch_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer/VBoxContainer"]
+modulate = Color(1, 1, 0, 1)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("5_bgk0c")
+theme_override_font_sizes/font_size = 48
+text = "你会见证，落日的余晖"
+
+[node name="Label2" type="Label" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_bgk0c")
+theme_override_font_sizes/font_size = 36
+text = "立即秒杀超远射程内生命最高的敌人，或对该敌人造成高额真实伤害。"
+autowrap_mode = 3
+
+[node name="PanelContainer3" type="PanelContainer" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(800, 200)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_trnh0")
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer3"]
+layout_mode = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_bottom = 40
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer3/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_2matk")
+stretch_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer/VBoxContainer"]
+modulate = Color(1, 1, 0, 1)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("5_bgk0c")
+theme_override_font_sizes/font_size = 48
+text = "向着明日进发"
+
+[node name="Label2" type="Label" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_bgk0c")
+theme_override_font_sizes/font_size = 36
+text = "射出多支爆炸箭矢，对面前一定区域进行轰炸，造成多段范围伤害。"
+autowrap_mode = 3
+
+[node name="PanelContainer4" type="PanelContainer" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(800, 200)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_trnh0")
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer4"]
+layout_mode = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_bottom = 40
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer4/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_osqcg")
+stretch_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer/VBoxContainer"]
+modulate = Color(1, 1, 0, 1)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("5_bgk0c")
+theme_override_font_sizes/font_size = 48
+text = "落日圆舞曲"
+
+[node name="Label2" type="Label" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_bgk0c")
+theme_override_font_sizes/font_size = 36
+text = "朝天射出一支箭，大范围内落下一片箭雨，对范围内敌人造成少量物理伤害，并在1.5秒后引爆造成大范围爆炸伤害。"
+autowrap_mode = 3
+
+[node name="PanelContainer5" type="PanelContainer" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(800, 200)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_trnh0")
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer5"]
+layout_mode = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_bottom = 40
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer5/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer5/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_vy8b8")
+stretch_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer5/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer5/MarginContainer/HBoxContainer/VBoxContainer"]
+modulate = Color(1, 1, 0, 1)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("5_bgk0c")
+theme_override_font_sizes/font_size = 48
+text = "旅程的问答"
+
+[node name="Label2" type="Label" parent="ColorRect/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer5/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_bgk0c")
+theme_override_font_sizes/font_size = 36
+text = "史蒂夫拥有“因何踏上旅程”和“仍有要守护之物”两个技能，初始为前者，每次使用技能都会切换到另一个技能进行冷却。"
+autowrap_mode = 3
+
+[node name="Label" type="Label" parent="ColorRect"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -280.0
+offset_top = 85.0
+offset_right = 280.0
+offset_bottom = 149.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("5_bgk0c")
+theme_override_font_sizes/font_size = 64
+text = "落日见证者-史蒂夫"
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_yagfm")
+}
+autoplay = "entry"
+
+[node name="Label" type="Label" parent="."]
+offset_right = 1002.0
+offset_bottom = 139.0
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("5_bgk0c")
+theme_override_font_sizes/font_size = 64
+text = "英雄已替换"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloseButton" type="TextureButton" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -156.0
+offset_top = -170.0
+offset_bottom = -13.9996
+grow_horizontal = 0
+focus_mode = 0
+texture_normal = SubResource("AtlasTexture_2kpug")
+
+[node name="TextureRect" type="TextureRect" parent="CloseButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_xw3e0")
+stretch_mode = 3
+
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]

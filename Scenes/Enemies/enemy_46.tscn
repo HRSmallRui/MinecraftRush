@@ -1,0 +1,530 @@
+[gd_scene load_steps=119 format=3 uid="uid://v21qijvh67pp"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_iwjx1"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_46.gd" id="2_e2o2s"]
+[ext_resource type="Texture2D" uid="uid://bgvaoimpy2110" path="res://Assets/Images/UI/InformationBar/EnemyChapter5/白眼勇士.png" id="3_0qevk"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="4_bx15s"]
+[ext_resource type="AudioStream" uid="uid://mdc5281gfyfh" path="res://Assets/Sounds/FXs/Enemies/人偶/脉冲.wav" id="5_gm03h"]
+[ext_resource type="Texture2D" uid="uid://lffyqfvkf5w6" path="res://Assets/Animations/Enemies/46白眼勇士/attack_00.png" id="6_345g6"]
+[ext_resource type="PackedScene" uid="uid://dcjuved17hj6j" path="res://Scenes/Enemies/EnemyComponents/appear_audio_component.tscn" id="6_sc57p"]
+[ext_resource type="AudioStream" uid="uid://tj2qdr0snm0b" path="res://Assets/Sounds/FXs/Enemies/人偶/人偶.wav" id="7_ajpqt"]
+[ext_resource type="Texture2D" uid="uid://dc87s3jprfg50" path="res://Assets/Animations/Enemies/46白眼勇士/attack_01.png" id="7_j5dlr"]
+[ext_resource type="Texture2D" uid="uid://cv4n0cou2mbqa" path="res://Assets/Animations/Enemies/46白眼勇士/attack_02.png" id="8_34vrd"]
+[ext_resource type="Texture2D" uid="uid://dio7d88fta3xt" path="res://Assets/Animations/Enemies/46白眼勇士/attack_03.png" id="9_fuk4h"]
+[ext_resource type="Texture2D" uid="uid://c8sdq4f8qetm7" path="res://Assets/Animations/Enemies/46白眼勇士/attack_04.png" id="10_8bemk"]
+[ext_resource type="Texture2D" uid="uid://dan72mfcf6lut" path="res://Assets/Animations/Enemies/46白眼勇士/attack_05.png" id="11_tj77d"]
+[ext_resource type="Texture2D" uid="uid://gbfucpgu2y8w" path="res://Assets/Animations/Enemies/46白眼勇士/attack_06.png" id="12_xxkb2"]
+[ext_resource type="Texture2D" uid="uid://klnuvygu8ecp" path="res://Assets/Animations/Enemies/46白眼勇士/attack_07.png" id="13_c6cck"]
+[ext_resource type="Texture2D" uid="uid://dbc8oau30qqmy" path="res://Assets/Animations/Enemies/46白眼勇士/attack_08.png" id="14_yor8k"]
+[ext_resource type="Texture2D" uid="uid://cf22bk3xnefcm" path="res://Assets/Animations/Enemies/46白眼勇士/attack_09.png" id="15_h5ut8"]
+[ext_resource type="Texture2D" uid="uid://dep8a6ism8fcs" path="res://Assets/Animations/Enemies/46白眼勇士/attack_10.png" id="16_s52ks"]
+[ext_resource type="Texture2D" uid="uid://bni0lx06vj83k" path="res://Assets/Animations/Enemies/46白眼勇士/attack_11.png" id="17_mhqw1"]
+[ext_resource type="Texture2D" uid="uid://bl8eq7ddxlsi4" path="res://Assets/Animations/Enemies/46白眼勇士/attack_12.png" id="18_34jjx"]
+[ext_resource type="Texture2D" uid="uid://b0y0wnh8ajhxm" path="res://Assets/Animations/Enemies/46白眼勇士/attack_13.png" id="19_mspvp"]
+[ext_resource type="Texture2D" uid="uid://bblst5gbfqmhm" path="res://Assets/Animations/Enemies/46白眼勇士/attack_14.png" id="20_i2f7k"]
+[ext_resource type="Texture2D" uid="uid://3hlthpa4nanu" path="res://Assets/Animations/Enemies/46白眼勇士/attack_15.png" id="21_tlu7d"]
+[ext_resource type="Texture2D" uid="uid://v81amtvq06t" path="res://Assets/Animations/Enemies/46白眼勇士/attack_16.png" id="22_dku1x"]
+[ext_resource type="Texture2D" uid="uid://bsud0yxksbyoi" path="res://Assets/Animations/Enemies/46白眼勇士/attack_17.png" id="23_bpgt7"]
+[ext_resource type="Texture2D" uid="uid://cnhb4ypo5vmip" path="res://Assets/Animations/Enemies/46白眼勇士/attack_18.png" id="24_xbay6"]
+[ext_resource type="Texture2D" uid="uid://ctkesiuebj6ij" path="res://Assets/Animations/Enemies/46白眼勇士/attack_19.png" id="25_8kkkh"]
+[ext_resource type="Texture2D" uid="uid://c8uxs47k6b7ye" path="res://Assets/Animations/Enemies/46白眼勇士/attack_20.png" id="26_fs3o7"]
+[ext_resource type="Texture2D" uid="uid://c2cn35bben1mi" path="res://Assets/Animations/Enemies/46白眼勇士/attack_21.png" id="27_is2xl"]
+[ext_resource type="Texture2D" uid="uid://ctrwnbgqmitb1" path="res://Assets/Animations/Enemies/46白眼勇士/attack_22.png" id="28_0d6qm"]
+[ext_resource type="Texture2D" uid="uid://dn4dwrrktnn5k" path="res://Assets/Animations/Enemies/46白眼勇士/attack_23.png" id="29_px01n"]
+[ext_resource type="Texture2D" uid="uid://d0aaj5m5e111l" path="res://Assets/Animations/Enemies/46白眼勇士/attack_24.png" id="30_nx7ef"]
+[ext_resource type="Texture2D" uid="uid://cwxm8qk5u8yif" path="res://Assets/Animations/Enemies/46白眼勇士/die_00.png" id="31_8i274"]
+[ext_resource type="Texture2D" uid="uid://d3trapx6copqt" path="res://Assets/Animations/Enemies/46白眼勇士/die_01.png" id="32_xhr6t"]
+[ext_resource type="Texture2D" uid="uid://dw7ksnd3c86s1" path="res://Assets/Animations/Enemies/46白眼勇士/die_02.png" id="33_5ijlx"]
+[ext_resource type="Texture2D" uid="uid://b8lua4ypu682w" path="res://Assets/Animations/Enemies/46白眼勇士/die_03.png" id="34_qma8p"]
+[ext_resource type="Texture2D" uid="uid://cq16r3brdv8st" path="res://Assets/Animations/Enemies/46白眼勇士/die_04.png" id="35_a5dd4"]
+[ext_resource type="Texture2D" uid="uid://fupfm8gkgnws" path="res://Assets/Animations/Enemies/46白眼勇士/die_05.png" id="36_tvg0f"]
+[ext_resource type="Texture2D" uid="uid://cboebjcycjoc6" path="res://Assets/Animations/Enemies/46白眼勇士/die_06.png" id="37_8qenl"]
+[ext_resource type="Texture2D" uid="uid://dfbh53wvlie8p" path="res://Assets/Animations/Enemies/46白眼勇士/die_07.png" id="38_gcvhe"]
+[ext_resource type="Texture2D" uid="uid://bo6vrdlxubh03" path="res://Assets/Animations/Enemies/46白眼勇士/die_08.png" id="39_yk3wl"]
+[ext_resource type="Texture2D" uid="uid://4mclrx5bgsyh" path="res://Assets/Animations/Enemies/46白眼勇士/die_09.png" id="40_51a8a"]
+[ext_resource type="Texture2D" uid="uid://k4xcmks58dao" path="res://Assets/Animations/Enemies/46白眼勇士/die_10.png" id="41_0ron5"]
+[ext_resource type="Texture2D" uid="uid://dc5oaeqbs3bfr" path="res://Assets/Animations/Enemies/46白眼勇士/die_11.png" id="42_nojyb"]
+[ext_resource type="Texture2D" uid="uid://cttlxq2d227w3" path="res://Assets/Animations/Enemies/46白眼勇士/move_back_00.png" id="43_3rf6t"]
+[ext_resource type="Texture2D" uid="uid://bv4en3ho6g22j" path="res://Assets/Animations/Enemies/46白眼勇士/move_back_01.png" id="44_744di"]
+[ext_resource type="Texture2D" uid="uid://d0i5fth7f4pld" path="res://Assets/Animations/Enemies/46白眼勇士/move_back_02.png" id="45_okqav"]
+[ext_resource type="Texture2D" uid="uid://cfa1qvckwye53" path="res://Assets/Animations/Enemies/46白眼勇士/move_back_03.png" id="46_ga42p"]
+[ext_resource type="Texture2D" uid="uid://dfy2tg7owgd84" path="res://Assets/Animations/Enemies/46白眼勇士/move_back_04.png" id="47_3uc3f"]
+[ext_resource type="Texture2D" uid="uid://76s1jlrqr1i1" path="res://Assets/Animations/Enemies/46白眼勇士/move_back_05.png" id="48_fdx3v"]
+[ext_resource type="Texture2D" uid="uid://djohhn22td6u4" path="res://Assets/Animations/Enemies/46白眼勇士/move_back_06.png" id="49_xxj3f"]
+[ext_resource type="Texture2D" uid="uid://d04a83p4n42oj" path="res://Assets/Animations/Enemies/46白眼勇士/move_back_07.png" id="50_nsr13"]
+[ext_resource type="Texture2D" uid="uid://tqlttx3f2tyl" path="res://Assets/Animations/Enemies/46白眼勇士/move_back_08.png" id="51_yl30n"]
+[ext_resource type="Texture2D" uid="uid://eltb25v0btxg" path="res://Assets/Animations/Enemies/46白眼勇士/move_back_09.png" id="52_w778h"]
+[ext_resource type="Texture2D" uid="uid://decdnli8do54j" path="res://Assets/Animations/Enemies/46白眼勇士/move_back_10.png" id="53_a1k4a"]
+[ext_resource type="Texture2D" uid="uid://bpmwrvik8nykb" path="res://Assets/Animations/Enemies/46白眼勇士/move_back_11.png" id="54_nfpdc"]
+[ext_resource type="Texture2D" uid="uid://djuml6qoptk3m" path="res://Assets/Animations/Enemies/46白眼勇士/move_back_12.png" id="55_g0xdx"]
+[ext_resource type="Texture2D" uid="uid://cslbobdk7s3cw" path="res://Assets/Animations/Enemies/46白眼勇士/move_back_13.png" id="56_hx3sk"]
+[ext_resource type="Texture2D" uid="uid://bdc3y61ilbrmv" path="res://Assets/Animations/Enemies/46白眼勇士/move_back_14.png" id="57_u14ym"]
+[ext_resource type="Texture2D" uid="uid://k001emfiknlq" path="res://Assets/Animations/Enemies/46白眼勇士/move_back_15.png" id="58_d4xum"]
+[ext_resource type="Texture2D" uid="uid://buka8604qrvx6" path="res://Assets/Animations/Enemies/46白眼勇士/move_back_16.png" id="59_2lpnr"]
+[ext_resource type="Texture2D" uid="uid://1t7y1q7gvt6k" path="res://Assets/Animations/Enemies/46白眼勇士/move_back_17.png" id="60_eh4mg"]
+[ext_resource type="Texture2D" uid="uid://dldet2jhfwtv7" path="res://Assets/Animations/Enemies/46白眼勇士/move_back_18.png" id="61_rxmdo"]
+[ext_resource type="Texture2D" uid="uid://cb4jjcmitd1y7" path="res://Assets/Animations/Enemies/46白眼勇士/move_back_19.png" id="62_fgopv"]
+[ext_resource type="Texture2D" uid="uid://cs4n121xn3uri" path="res://Assets/Animations/Enemies/46白眼勇士/move_back_20.png" id="63_j4x7e"]
+[ext_resource type="Texture2D" uid="uid://buxqhu371eiep" path="res://Assets/Animations/Enemies/46白眼勇士/move_back_21.png" id="64_444yw"]
+[ext_resource type="Texture2D" uid="uid://ceg18nrhcvsui" path="res://Assets/Animations/Enemies/46白眼勇士/move_back_22.png" id="65_dk7on"]
+[ext_resource type="Texture2D" uid="uid://bbhop7sgyny1k" path="res://Assets/Animations/Enemies/46白眼勇士/move_back_23.png" id="66_rvkso"]
+[ext_resource type="Texture2D" uid="uid://btx046wwc7wr4" path="res://Assets/Animations/Enemies/46白眼勇士/move_front_00.png" id="67_n04hd"]
+[ext_resource type="Texture2D" uid="uid://3a4qjqlntncq" path="res://Assets/Animations/Enemies/46白眼勇士/move_front_01.png" id="68_nj46h"]
+[ext_resource type="Texture2D" uid="uid://b274actel5r8g" path="res://Assets/Animations/Enemies/46白眼勇士/move_front_02.png" id="69_cd6ve"]
+[ext_resource type="Texture2D" uid="uid://dgjnekqc5iush" path="res://Assets/Animations/Enemies/46白眼勇士/move_front_03.png" id="70_oq8wf"]
+[ext_resource type="Texture2D" uid="uid://df82mfb7ki7xx" path="res://Assets/Animations/Enemies/46白眼勇士/move_front_04.png" id="71_sno8t"]
+[ext_resource type="Texture2D" uid="uid://cy67mtixxe83i" path="res://Assets/Animations/Enemies/46白眼勇士/move_front_05.png" id="72_xd7oo"]
+[ext_resource type="Texture2D" uid="uid://dm8hfkhsbogwu" path="res://Assets/Animations/Enemies/46白眼勇士/move_front_06.png" id="73_teoi4"]
+[ext_resource type="Texture2D" uid="uid://bqs6ihcmydnni" path="res://Assets/Animations/Enemies/46白眼勇士/move_front_07.png" id="74_4sknr"]
+[ext_resource type="Texture2D" uid="uid://doq0f6cu67j5n" path="res://Assets/Animations/Enemies/46白眼勇士/move_front_08.png" id="75_q4wfj"]
+[ext_resource type="Texture2D" uid="uid://bjqpdmpw6a5wo" path="res://Assets/Animations/Enemies/46白眼勇士/move_front_09.png" id="76_fvovu"]
+[ext_resource type="Texture2D" uid="uid://ddyv8poldyvsx" path="res://Assets/Animations/Enemies/46白眼勇士/move_front_10.png" id="77_llxg7"]
+[ext_resource type="Texture2D" uid="uid://sm5guhn6s0ov" path="res://Assets/Animations/Enemies/46白眼勇士/move_front_11.png" id="78_5dwxb"]
+[ext_resource type="Texture2D" uid="uid://dalvy4srd7r4o" path="res://Assets/Animations/Enemies/46白眼勇士/move_front_12.png" id="79_sx3bh"]
+[ext_resource type="Texture2D" uid="uid://dmc7lu5ejwmvb" path="res://Assets/Animations/Enemies/46白眼勇士/move_front_13.png" id="80_vkfqs"]
+[ext_resource type="Texture2D" uid="uid://6qu1tl0ediy8" path="res://Assets/Animations/Enemies/46白眼勇士/move_front_14.png" id="81_phukm"]
+[ext_resource type="Texture2D" uid="uid://cgt4bb57iqkj" path="res://Assets/Animations/Enemies/46白眼勇士/move_front_15.png" id="82_qpcxu"]
+[ext_resource type="Texture2D" uid="uid://jpdg7rrkwtu8" path="res://Assets/Animations/Enemies/46白眼勇士/move_front_16.png" id="83_rdr4c"]
+[ext_resource type="Texture2D" uid="uid://0lvnfmqg4o0h" path="res://Assets/Animations/Enemies/46白眼勇士/move_front_17.png" id="84_jejhn"]
+[ext_resource type="Texture2D" uid="uid://dvp6t16e8oaoy" path="res://Assets/Animations/Enemies/46白眼勇士/move_front_18.png" id="85_jeytt"]
+[ext_resource type="Texture2D" uid="uid://du3o6fw73d34x" path="res://Assets/Animations/Enemies/46白眼勇士/move_front_19.png" id="86_g53w4"]
+[ext_resource type="Texture2D" uid="uid://b06du2rndw1ny" path="res://Assets/Animations/Enemies/46白眼勇士/move_front_20.png" id="87_ygglt"]
+[ext_resource type="Texture2D" uid="uid://gr15myww0u7t" path="res://Assets/Animations/Enemies/46白眼勇士/move_front_21.png" id="88_xpsy0"]
+[ext_resource type="Texture2D" uid="uid://bh7cp8dpuxo3t" path="res://Assets/Animations/Enemies/46白眼勇士/move_front_22.png" id="89_ugx06"]
+[ext_resource type="Texture2D" uid="uid://bgv71jligaaqy" path="res://Assets/Animations/Enemies/46白眼勇士/move_front_23.png" id="90_ug5ee"]
+[ext_resource type="Texture2D" uid="uid://b80kpsb6pcg1m" path="res://Assets/Animations/Enemies/46白眼勇士/move_normal_00.png" id="91_rc6x2"]
+[ext_resource type="Texture2D" uid="uid://xjshyxnyg7ua" path="res://Assets/Animations/Enemies/46白眼勇士/move_normal_01.png" id="92_gwjii"]
+[ext_resource type="Texture2D" uid="uid://covm3nspqkn5j" path="res://Assets/Animations/Enemies/46白眼勇士/move_normal_02.png" id="93_uphme"]
+[ext_resource type="Texture2D" uid="uid://badti5tpnw7f" path="res://Assets/Animations/Enemies/46白眼勇士/move_normal_03.png" id="94_emg0c"]
+[ext_resource type="Texture2D" uid="uid://duqd3xkbux73a" path="res://Assets/Animations/Enemies/46白眼勇士/move_normal_04.png" id="95_5nvap"]
+[ext_resource type="Texture2D" uid="uid://b47enh8wm5epf" path="res://Assets/Animations/Enemies/46白眼勇士/move_normal_05.png" id="96_cwl2w"]
+[ext_resource type="Texture2D" uid="uid://70jfonc34yfl" path="res://Assets/Animations/Enemies/46白眼勇士/move_normal_06.png" id="97_bbfpa"]
+[ext_resource type="Texture2D" uid="uid://dggx57l1igv61" path="res://Assets/Animations/Enemies/46白眼勇士/move_normal_07.png" id="98_04i1w"]
+[ext_resource type="Texture2D" uid="uid://cydd7fv10nnny" path="res://Assets/Animations/Enemies/46白眼勇士/move_normal_08.png" id="99_urimi"]
+[ext_resource type="Texture2D" uid="uid://clho4dtbnn48g" path="res://Assets/Animations/Enemies/46白眼勇士/move_normal_09.png" id="100_mde8k"]
+[ext_resource type="Texture2D" uid="uid://bgs881uq4624c" path="res://Assets/Animations/Enemies/46白眼勇士/move_normal_10.png" id="101_yhchw"]
+[ext_resource type="Texture2D" uid="uid://dbjamu44k4w3c" path="res://Assets/Animations/Enemies/46白眼勇士/move_normal_11.png" id="102_sq4n7"]
+[ext_resource type="Texture2D" uid="uid://qxh5o5rtacmc" path="res://Assets/Animations/Enemies/46白眼勇士/move_normal_12.png" id="103_eg1rf"]
+[ext_resource type="Texture2D" uid="uid://xfexre17jlm5" path="res://Assets/Animations/Enemies/46白眼勇士/move_normal_13.png" id="104_ry8yy"]
+[ext_resource type="Texture2D" uid="uid://cb6yit1melfbs" path="res://Assets/Animations/Enemies/46白眼勇士/move_normal_14.png" id="105_n3vai"]
+[ext_resource type="Texture2D" uid="uid://h7k1c1rdf8ku" path="res://Assets/Animations/Enemies/46白眼勇士/move_normal_15.png" id="106_pu7jq"]
+[ext_resource type="Texture2D" uid="uid://cuksyi6d6xqyq" path="res://Assets/Animations/Enemies/46白眼勇士/move_normal_16.png" id="107_dugcp"]
+[ext_resource type="Texture2D" uid="uid://dtur6lfvbfvhv" path="res://Assets/Animations/Enemies/46白眼勇士/move_normal_17.png" id="108_m2y1e"]
+[ext_resource type="Texture2D" uid="uid://c0prrre6levdq" path="res://Assets/Animations/Enemies/46白眼勇士/move_normal_18.png" id="109_q3o8w"]
+[ext_resource type="Texture2D" uid="uid://cd7nat0ei7vyc" path="res://Assets/Animations/Enemies/46白眼勇士/move_normal_19.png" id="110_fb24d"]
+[ext_resource type="Texture2D" uid="uid://ik6f32d5idn1" path="res://Assets/Animations/Enemies/46白眼勇士/move_normal_20.png" id="111_hod1i"]
+[ext_resource type="Texture2D" uid="uid://y0lrppfk8nlu" path="res://Assets/Animations/Enemies/46白眼勇士/move_normal_21.png" id="112_31j70"]
+[ext_resource type="Texture2D" uid="uid://deokryr36b0ps" path="res://Assets/Animations/Enemies/46白眼勇士/move_normal_22.png" id="113_47unv"]
+[ext_resource type="Texture2D" uid="uid://dqmqajjtub8o3" path="res://Assets/Animations/Enemies/46白眼勇士/move_normal_23.png" id="114_csnsd"]
+
+[sub_resource type="Resource" id="Resource_n8fyk"]
+script = ExtResource("4_bx15s")
+health = 480
+dodge_rate = 0.0
+near_damage_low = 15
+near_damage_high = 25
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.3
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 1.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x5twh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_345g6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_j5dlr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_34vrd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_fuk4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_8bemk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_tj77d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xxkb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_c6cck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_yor8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_h5ut8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_s52ks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_mhqw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_34jjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_mspvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_i2f7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_tlu7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_dku1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_bpgt7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_xbay6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_8kkkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_fs3o7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_is2xl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_0d6qm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_px01n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_nx7ef")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_8i274")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_xhr6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_5ijlx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_qma8p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_a5dd4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_tvg0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_8qenl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_gcvhe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_yk3wl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_51a8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_0ron5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_nojyb")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_345g6")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("43_3rf6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_744di")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_okqav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_ga42p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_3uc3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_fdx3v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_xxj3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_nsr13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_yl30n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_w778h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_a1k4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_nfpdc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_g0xdx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_hx3sk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_u14ym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_d4xum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_2lpnr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_eh4mg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_rxmdo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_fgopv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_j4x7e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_444yw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_dk7on")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_rvkso")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("67_n04hd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_nj46h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_cd6ve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_oq8wf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_sno8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_xd7oo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_teoi4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_4sknr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_q4wfj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_fvovu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_llxg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_5dwxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_sx3bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_vkfqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_phukm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_qpcxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_rdr4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_jejhn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_jeytt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_g53w4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_ygglt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_xpsy0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_ugx06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_ug5ee")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("91_rc6x2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_gwjii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_uphme")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_emg0c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_5nvap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_cwl2w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_bbfpa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_04i1w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_urimi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_mde8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_yhchw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_sq4n7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_eg1rf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_ry8yy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_n3vai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_pu7jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_dugcp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_m2y1e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_q3o8w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_fb24d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_hod1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_31j70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_47unv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_csnsd")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 30.0
+}]
+
+[node name="Enemy46" groups=["super_unit"] instance=ExtResource("1_iwjx1")]
+script = ExtResource("2_e2o2s")
+enemy_name = "白眼勇士"
+enemy_id = 46
+enemy_texture = ExtResource("3_0qevk")
+enemy_type = 2
+start_data = SubResource("Resource_n8fyk")
+bounty = 10
+die_audio_stream_list = Array[AudioStream]([ExtResource("5_gm03h")])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(15, -100)
+sprite_frames = SubResource("SpriteFrames_x5twh")
+animation = &"attack"
+autoplay = "idle"
+
+[node name="DieAudio" parent="." index="3"]
+volume_db = -8.0
+
+[node name="AppearAudioComponent" parent="." index="5" instance=ExtResource("6_sc57p")]
+appear_audio_list = Array[AudioStream]([ExtResource("7_ajpqt")])
+
+[node name="AppearAudioPlayer" parent="AppearAudioComponent" index="0"]
+stream = ExtResource("7_ajpqt")
+volume_db = -12.0
+
+[editable path="AppearAudioComponent"]

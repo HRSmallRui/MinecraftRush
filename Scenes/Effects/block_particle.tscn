@@ -1,0 +1,111 @@
+[gd_scene load_steps=25 format=3 uid="uid://g0ayk5knufsh"]
+
+[ext_resource type="Texture2D" uid="uid://drlsd0unadtgc" path="res://Assets/Images/Effects/BlockParticle/0001.png" id="1_63q7f"]
+[ext_resource type="Texture2D" uid="uid://bqo0egkle3rx" path="res://Assets/Images/Effects/BlockParticle/0002.png" id="2_clyoe"]
+[ext_resource type="Texture2D" uid="uid://blh44buwks3q0" path="res://Assets/Images/Effects/BlockParticle/0003.png" id="3_t4vmd"]
+[ext_resource type="Texture2D" uid="uid://btvnxkrxc5k1p" path="res://Assets/Images/Effects/BlockParticle/0004.png" id="4_p8dxy"]
+[ext_resource type="Texture2D" uid="uid://b4vclbpn5wrdy" path="res://Assets/Images/Effects/BlockParticle/0005.png" id="5_s55sm"]
+[ext_resource type="Texture2D" uid="uid://dmtm362hb80gr" path="res://Assets/Images/Effects/BlockParticle/0006.png" id="6_h60qp"]
+[ext_resource type="Texture2D" uid="uid://1yyo53hcbdqj" path="res://Assets/Images/Effects/BlockParticle/0007.png" id="7_yac2d"]
+[ext_resource type="Texture2D" uid="uid://coajnhltmi5nb" path="res://Assets/Images/Effects/BlockParticle/0008.png" id="8_vm34g"]
+[ext_resource type="Texture2D" uid="uid://diwgcdvd0rmyh" path="res://Assets/Images/Effects/BlockParticle/0009.png" id="9_org1o"]
+[ext_resource type="Texture2D" uid="uid://c4hj8mde84f3n" path="res://Assets/Images/Effects/BlockParticle/0010.png" id="10_wv02u"]
+[ext_resource type="Texture2D" uid="uid://bqn57aush10bj" path="res://Assets/Images/Effects/BlockParticle/0011.png" id="11_b3vet"]
+[ext_resource type="Texture2D" uid="uid://rwet3cnc6cmp" path="res://Assets/Images/Effects/BlockParticle/0012.png" id="12_f5pe2"]
+[ext_resource type="Texture2D" uid="uid://3o8sibsboffc" path="res://Assets/Images/Effects/BlockParticle/0013.png" id="13_e8n3m"]
+[ext_resource type="Texture2D" uid="uid://848miq7qpi37" path="res://Assets/Images/Effects/BlockParticle/0014.png" id="14_hmbob"]
+[ext_resource type="Texture2D" uid="uid://l6ovp5bb5pa8" path="res://Assets/Images/Effects/BlockParticle/0015.png" id="15_qq4ci"]
+[ext_resource type="Texture2D" uid="uid://dtkkpx1vm3wpy" path="res://Assets/Images/Effects/BlockParticle/0016.png" id="16_suxdk"]
+[ext_resource type="Texture2D" uid="uid://btnpc06m5k3if" path="res://Assets/Images/Effects/BlockParticle/0017.png" id="17_bu7mm"]
+[ext_resource type="Texture2D" uid="uid://ea8dykyrcayj" path="res://Assets/Images/Effects/BlockParticle/0018.png" id="18_p5nxk"]
+[ext_resource type="Texture2D" uid="uid://b0gavcqgkhgxh" path="res://Assets/Images/Effects/BlockParticle/0019.png" id="19_rfiqd"]
+[ext_resource type="Texture2D" uid="uid://chbq3mevlcya" path="res://Assets/Images/Effects/BlockParticle/0020.png" id="20_082jo"]
+[ext_resource type="Texture2D" uid="uid://ur5a5ly4vd3q" path="res://Assets/Images/Effects/BlockParticle/0021.png" id="21_a2ig5"]
+[ext_resource type="Texture2D" uid="uid://bya7wiys2sd8a" path="res://Assets/Images/Effects/BlockParticle/0022.png" id="22_o3yo0"]
+[ext_resource type="Script" path="res://Scripts/Effects/normal_effect.gd" id="23_hb17o"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oqfqw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_63q7f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_clyoe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_t4vmd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_p8dxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_s55sm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_h60qp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_yac2d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vm34g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_org1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_wv02u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_b3vet")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_f5pe2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_e8n3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_hmbob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_qq4ci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_suxdk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_bu7mm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_p5nxk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_rfiqd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_082jo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_a2ig5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_o3yo0")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 24.0
+}]
+
+[node name="BlockParticle" type="AnimatedSprite2D"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_oqfqw")
+autoplay = "default"
+frame = 22
+frame_progress = 1.0
+offset = Vector2(0, 16)
+script = ExtResource("23_hb17o")

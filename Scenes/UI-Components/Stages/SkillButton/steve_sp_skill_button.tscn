@@ -1,0 +1,29 @@
+[gd_scene load_steps=9 format=3 uid="uid://cxtqcldp8cif2"]
+
+[ext_resource type="PackedScene" uid="uid://dakq012d6gh6m" path="res://Scenes/UI-Components/Stages/skill_button.tscn" id="1_ctw2g"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Stages/SkillButtons/steve_sp_skill_button.gd" id="2_14cv4"]
+[ext_resource type="Texture2D" uid="uid://kefyghj2p5pu" path="res://Assets/Images/UI/SkillButton/Heroskill/SteveSP/因何踏上旅程.png" id="3_fvt4g"]
+[ext_resource type="Texture2D" uid="uid://ccq8xdqonh0l1" path="res://Assets/Images/UI/SkillButton/Heroskill/SteveSP/因何踏上旅程using.png" id="4_gtpny"]
+[ext_resource type="PackedScene" uid="uid://c2wlk0mxridsh" path="res://Scenes/Skills/steve_front_skill_area.tscn" id="5_2b8i5"]
+[ext_resource type="Texture2D" uid="uid://ioxth5ppo8i6" path="res://Assets/Images/UI/SkillButton/Heroskill/SteveSP/仍有要守护之物.png" id="5_ui3ek"]
+[ext_resource type="Texture2D" uid="uid://biujfpeswlii7" path="res://Assets/Images/UI/SkillButton/Heroskill/SteveSP/仍有要守护之物using.png" id="6_v5dcq"]
+[ext_resource type="PackedScene" uid="uid://dpr553lmxdmf8" path="res://Scenes/Skills/steve_back_skill_area.tscn" id="8_r7bus"]
+
+[node name="SteveSPSkillButton" instance=ExtResource("1_ctw2g")]
+script = ExtResource("2_14cv4")
+front_skill_name = "因何踏上旅程"
+front_skill_intro = "对范围内的敌人造成大量伤害并眩晕敌人"
+front_skill_normal_texture = ExtResource("3_fvt4g")
+front_skill_select_texture = ExtResource("4_gtpny")
+front_skill_area_scene = ExtResource("5_2b8i5")
+back_skill_name = "仍有要守护之物"
+back_skill_intro = "召唤一片领域，持续增益领域内的我方单位"
+back_skill_normal_texture = ExtResource("5_ui3ek")
+back_skill_select_texture = ExtResource("6_v5dcq")
+back_skill_area_scene = ExtResource("8_r7bus")
+skill_type = 2
+texture_normal = ExtResource("3_fvt4g")
+texture_select = ExtResource("4_gtpny")
+skill_name = "因何踏上旅程"
+skill_intro = "对范围内的敌人造成大量伤害并眩晕敌人"
+cooling_time = 40.0

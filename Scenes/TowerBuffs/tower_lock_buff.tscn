@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://du4s3nu3di0he"]
+
+[ext_resource type="PackedScene" uid="uid://bu12mu4ubv04k" path="res://Scenes/Classes/tower_buff.tscn" id="1_wceey"]
+[ext_resource type="Script" path="res://Scripts/TowerBuffs/tower_lock_buff.gd" id="2_c8js8"]
+[ext_resource type="Script" path="res://Scripts/TowerBuffs/tower_property_buff_block.gd" id="3_vcwv5"]
+
+[sub_resource type="Resource" id="Resource_u8hqc"]
+script = ExtResource("3_vcwv5")
+tower_property_type = 1
+operation_type = 1
+operation_data = 0.0
+
+[node name="TowerLockBuff" instance=ExtResource("1_wceey")]
+script = ExtResource("2_c8js8")
+buff_blocks = Array[ExtResource("3_vcwv5")]([SubResource("Resource_u8hqc")])
+valid_tower_types = Array[bool]([true, true, true, true])
+buff_tag = "tower_lock"

@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqwhspsb1m7me"]
+
+[ext_resource type="PackedScene" uid="uid://bjfa3t67tpsbr" path="res://Scenes/Buffs/property_buff.tscn" id="1_05h4u"]
+[ext_resource type="Script" path="res://Scripts/Buffs/property_buff_block.gd" id="2_11hvx"]
+[ext_resource type="Script" path="res://Scripts/Classes/potion_particle_leader.gd" id="3_mpgyt"]
+
+[sub_resource type="Resource" id="Resource_usc1u"]
+script = ExtResource("2_11hvx")
+property_type = 8
+operation_type = 0
+operation_data = 0.3
+
+[node name="GDFateBuffLV2" instance=ExtResource("1_05h4u")]
+buff_blocks = Array[ExtResource("2_11hvx")]([SubResource("Resource_usc1u")])
+buff_level = 2
+buff_tag = "GDFateBuff"
+
+[node name="PotionParticleLeader" type="Node2D" parent="." index="0" node_paths=PackedStringArray("buff_vehicle")]
+script = ExtResource("3_mpgyt")
+potion_color = Color(1, 1, 0, 1)
+buff_vehicle = NodePath("..")

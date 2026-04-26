@@ -1,0 +1,378 @@
+[gd_scene load_steps=20 format=3 uid="uid://c2wlk0mxridsh"]
+
+[ext_resource type="Script" path="res://Scripts/Skills/steve_front_skill_area.gd" id="1_3xr3l"]
+[ext_resource type="Texture2D" uid="uid://lwjmqf5us70v" path="res://Assets/Images/Effects/黄色激光.png" id="2_dpfuv"]
+[ext_resource type="PackedScene" uid="uid://bu71x0boy17c4" path="res://Scenes/Buffs/SteveSP/steve_skill_slow_buff.tscn" id="2_x4v22"]
+[ext_resource type="AudioStream" uid="uid://cdwi7aoe3lqdb" path="res://Assets/Sounds/FXs/DefenceTowers/OperatorTurret/演算者发射.mp3" id="3_dp3dj"]
+[ext_resource type="PackedScene" uid="uid://bnjgq5a2h0i0t" path="res://Scenes/Buffs/SteveSP/steve_skill_armor_broken_buff.tscn" id="3_exurl"]
+[ext_resource type="PackedScene" uid="uid://blf6tdqaj673m" path="res://Scenes/Effects/bullet_explosion_effect.tscn" id="4_4t4eb"]
+[ext_resource type="Texture2D" uid="uid://bd674kbilvbyt" path="res://Assets/Images/Effects/bomb.png" id="4_e5s6a"]
+[ext_resource type="PackedScene" uid="uid://b76b7g5n6efop" path="res://Scenes/Buffs/dizness_buff.tscn" id="4_rb85j"]
+[ext_resource type="PackedScene" uid="uid://bf25ajrac2ijx" path="res://Scenes/Effects/smoke_effect.tscn" id="5_flvsl"]
+[ext_resource type="Texture2D" uid="uid://fdl34csjxid" path="res://Assets/Images/Effects/skeleton_seckill_effect.png" id="10_dsuen"]
+[ext_resource type="AudioStream" uid="uid://fbwpwvsu6gr3" path="res://Assets/Sounds/FXs/Heroes/Mike/二段爆炸预备.wav" id="11_3vgc6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_56l7t"]
+radius = 73.9444
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hevtt"]
+atlas = ExtResource("2_dpfuv")
+region = Rect2(0, 47, 800, 56)
+
+[sub_resource type="Gradient" id="Gradient_lw55d"]
+offsets = PackedFloat32Array(0.489945, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gv1mg"]
+gradient = SubResource("Gradient_lw55d")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.534188)
+
+[sub_resource type="Animation" id="Animation_s0mm1"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ray:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(8, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Ray:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LightSprite:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LightSprite:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Ray:width")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(200, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Bomb:scale:x")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Bomb:scale:y")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Bomb:self_modulate:a")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("SecKillSprite:scale:x")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1.87698, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("SecKillSprite:scale:y")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1.87698, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("SecKillSprite:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_klttg"]
+resource_name = "release"
+length = 1.2
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ray:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(8, -0.25, 0, 0.25, 0, 50, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.8)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Ray:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-600, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.8)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LightSprite:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 5.37288, -0.25, 0, 0.25, 0, 1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.1, 0.2, 0.8)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LightSprite:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 5.37288, -0.25, 0, 0.25, 0, 1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.1, 0.2, 0.8)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Ray:width")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1000, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.2, 0.8)
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"cause_damage"
+}]
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("SecKillSprite:scale:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 1.87698, -0.25, 0, 0.25, 0, 1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.2, 0.6, 1.1)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("SecKillSprite:scale:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 1.87698, -0.25, 0, 0.25, 0, 1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.2, 0.6, 1.1)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("SecKillSprite:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 2.77408, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.2, 1.1)
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("PrepareAudio:playing")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_pdetq"]
+resource_name = "second"
+length = 0.7
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bomb:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 0.6, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Bomb:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 0.6, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Bomb:self_modulate:a")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tkq04"]
+_data = {
+"RESET": SubResource("Animation_s0mm1"),
+"release": SubResource("Animation_klttg"),
+"second": SubResource("Animation_pdetq")
+}
+
+[node name="SteveFrontSkillArea" type="Area2D"]
+z_index = 1
+collision_layer = 0
+collision_mask = 96
+script = ExtResource("1_3xr3l")
+skill_damage_list = Array[int]([40, 60, 80, 100])
+slow_buff_scene = ExtResource("2_x4v22")
+armor_broken_buff_scene = ExtResource("3_exurl")
+second_damage_list = Array[int]([200, 300, 400, 500])
+dizness_buff_scene = ExtResource("4_rb85j")
+dizness_duration = 4.0
+extra_damage_per_layer_list = Array[int]([20, 30, 40, 50])
+explosion_effect_scene = ExtResource("4_4t4eb")
+smoke_scene = ExtResource("5_flvsl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 1.4)
+shape = SubResource("CircleShape2D_56l7t")
+debug_color = Color(0, 1, 1, 0)
+
+[node name="Ray" type="Line2D" parent="."]
+position = Vector2(8, 0)
+points = PackedVector2Array(0, -2000, 0, 0)
+width = 200.0
+texture = SubResource("AtlasTexture_hevtt")
+texture_mode = 1
+
+[node name="LightSprite" type="Sprite2D" parent="."]
+scale = Vector2(1e-05, 1e-05)
+texture = SubResource("GradientTexture2D_gv1mg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tkq04")
+}
+autoplay = "release"
+speed_scale = 1.2
+
+[node name="ShootAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_dp3dj")
+volume_db = -6.0
+autoplay = true
+bus = &"Sound"
+
+[node name="Bomb" type="Sprite2D" parent="."]
+position = Vector2(0, 24)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("4_e5s6a")
+offset = Vector2(0, -120)
+
+[node name="SecKillSprite" type="Sprite2D" parent="."]
+scale = Vector2(1.87698, 1.87698)
+texture = ExtResource("10_dsuen")
+region_enabled = true
+region_rect = Rect2(10, 7, 143, 143)
+
+[node name="PrepareAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_3vgc6")
+bus = &"Sound"

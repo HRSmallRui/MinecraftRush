@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1xwu3yq5mwdq"]
+
+[ext_resource type="PackedScene" uid="uid://bjfa3t67tpsbr" path="res://Scenes/Buffs/property_buff.tscn" id="1_rivvg"]
+[ext_resource type="Script" path="res://Scripts/Buffs/property_buff_block.gd" id="2_m76ja"]
+
+[sub_resource type="Resource" id="Resource_bv23b"]
+script = ExtResource("2_m76ja")
+property_type = 5
+operation_type = 0
+operation_data = 0.3
+
+[node name="SteveArmorUpBuff" instance=ExtResource("1_rivvg")]
+buff_blocks = Array[ExtResource("2_m76ja")]([SubResource("Resource_bv23b")])
+buff_tag = "SteveArmorUpBuff"

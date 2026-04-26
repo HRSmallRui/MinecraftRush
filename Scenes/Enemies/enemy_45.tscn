@@ -1,0 +1,519 @@
+[gd_scene load_steps=116 format=3 uid="uid://dmru61x2gae2m"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_cdkjh"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_45.gd" id="2_gqgvv"]
+[ext_resource type="Texture2D" uid="uid://bpbxwvejosjx7" path="res://Assets/Images/UI/InformationBar/EnemyChapter5/白眼士兵.png" id="3_hgtnx"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="3_lj1d0"]
+[ext_resource type="Texture2D" uid="uid://dfh3x5k157yh8" path="res://Assets/Animations/Enemies/45白眼士兵/attack_00.png" id="5_mwi5r"]
+[ext_resource type="AudioStream" uid="uid://mdc5281gfyfh" path="res://Assets/Sounds/FXs/Enemies/人偶/脉冲.wav" id="5_vt52t"]
+[ext_resource type="Texture2D" uid="uid://3aibothergyt" path="res://Assets/Animations/Enemies/45白眼士兵/attack_01.png" id="6_2agnj"]
+[ext_resource type="Texture2D" uid="uid://cfk4vtalhdqjf" path="res://Assets/Animations/Enemies/45白眼士兵/attack_02.png" id="7_ur7s0"]
+[ext_resource type="Texture2D" uid="uid://be20qnoo87a2g" path="res://Assets/Animations/Enemies/45白眼士兵/attack_03.png" id="8_1wegg"]
+[ext_resource type="Texture2D" uid="uid://dnlqcy0y2cdkt" path="res://Assets/Animations/Enemies/45白眼士兵/attack_04.png" id="9_0ajfm"]
+[ext_resource type="Texture2D" uid="uid://dr8xkij1u1138" path="res://Assets/Animations/Enemies/45白眼士兵/attack_05.png" id="10_lhs0e"]
+[ext_resource type="Texture2D" uid="uid://dgr3wuogddw6p" path="res://Assets/Animations/Enemies/45白眼士兵/attack_06.png" id="11_a1211"]
+[ext_resource type="Texture2D" uid="uid://51008y5nkip6" path="res://Assets/Animations/Enemies/45白眼士兵/attack_07.png" id="12_5xcbd"]
+[ext_resource type="Texture2D" uid="uid://ketwjr2buld5" path="res://Assets/Animations/Enemies/45白眼士兵/attack_08.png" id="13_j7uig"]
+[ext_resource type="Texture2D" uid="uid://k8nsdwrhfbse" path="res://Assets/Animations/Enemies/45白眼士兵/attack_09.png" id="14_a8ve2"]
+[ext_resource type="Texture2D" uid="uid://vxul42f4wv6w" path="res://Assets/Animations/Enemies/45白眼士兵/attack_10.png" id="15_n3c45"]
+[ext_resource type="Texture2D" uid="uid://meg7jmefuf7u" path="res://Assets/Animations/Enemies/45白眼士兵/attack_11.png" id="16_o0v0m"]
+[ext_resource type="Texture2D" uid="uid://dagv2qaesu8nu" path="res://Assets/Animations/Enemies/45白眼士兵/attack_12.png" id="17_i8ico"]
+[ext_resource type="Texture2D" uid="uid://b6ds7uavpu8ww" path="res://Assets/Animations/Enemies/45白眼士兵/attack_13.png" id="18_t6kxf"]
+[ext_resource type="Texture2D" uid="uid://c4gyv2wend362" path="res://Assets/Animations/Enemies/45白眼士兵/attack_14.png" id="19_l07up"]
+[ext_resource type="Texture2D" uid="uid://3w3s0evbuluw" path="res://Assets/Animations/Enemies/45白眼士兵/attack_15.png" id="20_gnnaw"]
+[ext_resource type="Texture2D" uid="uid://d2gck5bfpu170" path="res://Assets/Animations/Enemies/45白眼士兵/attack_16.png" id="21_smirj"]
+[ext_resource type="Texture2D" uid="uid://d0o6uau6q357" path="res://Assets/Animations/Enemies/45白眼士兵/attack_17.png" id="22_1b2xx"]
+[ext_resource type="Texture2D" uid="uid://dygm2xv4wpdnm" path="res://Assets/Animations/Enemies/45白眼士兵/attack_18.png" id="23_e4058"]
+[ext_resource type="Texture2D" uid="uid://cuapwo7ur7wt" path="res://Assets/Animations/Enemies/45白眼士兵/attack_19.png" id="24_vp78p"]
+[ext_resource type="Texture2D" uid="uid://bl188lcogtnq5" path="res://Assets/Animations/Enemies/45白眼士兵/attack_20.png" id="25_gvxhs"]
+[ext_resource type="Texture2D" uid="uid://drsgrf2sdwqcl" path="res://Assets/Animations/Enemies/45白眼士兵/die_00.png" id="27_m81lq"]
+[ext_resource type="Texture2D" uid="uid://b186sv0v7velg" path="res://Assets/Animations/Enemies/45白眼士兵/die_01.png" id="28_mlurp"]
+[ext_resource type="Texture2D" uid="uid://bohbhdafnor5p" path="res://Assets/Animations/Enemies/45白眼士兵/die_02.png" id="29_7gxxa"]
+[ext_resource type="Texture2D" uid="uid://db83qwh8qe0vl" path="res://Assets/Animations/Enemies/45白眼士兵/die_03.png" id="30_kktrt"]
+[ext_resource type="Texture2D" uid="uid://s658bluimb5a" path="res://Assets/Animations/Enemies/45白眼士兵/die_04.png" id="31_fi323"]
+[ext_resource type="Texture2D" uid="uid://ddvwi5e4406ad" path="res://Assets/Animations/Enemies/45白眼士兵/die_05.png" id="32_spjo2"]
+[ext_resource type="Texture2D" uid="uid://lcrk0kg4wecd" path="res://Assets/Animations/Enemies/45白眼士兵/die_06.png" id="33_vtruy"]
+[ext_resource type="Texture2D" uid="uid://dy2kcr3p5xixr" path="res://Assets/Animations/Enemies/45白眼士兵/die_07.png" id="34_x3fqo"]
+[ext_resource type="Texture2D" uid="uid://b23uj3o03kgxo" path="res://Assets/Animations/Enemies/45白眼士兵/die_08.png" id="35_rtj4f"]
+[ext_resource type="Texture2D" uid="uid://c26w85ciyxn1e" path="res://Assets/Animations/Enemies/45白眼士兵/die_09.png" id="36_hhfq0"]
+[ext_resource type="Texture2D" uid="uid://bnpvb8d86jj8u" path="res://Assets/Animations/Enemies/45白眼士兵/die_10.png" id="37_f4bn5"]
+[ext_resource type="Texture2D" uid="uid://b0bkmq4r16hgc" path="res://Assets/Animations/Enemies/45白眼士兵/die_11.png" id="38_44ylv"]
+[ext_resource type="Texture2D" uid="uid://jh5ng6b50x5h" path="res://Assets/Animations/Enemies/45白眼士兵/move_back_00.png" id="39_vohbt"]
+[ext_resource type="Texture2D" uid="uid://dd3whlyp62ofl" path="res://Assets/Animations/Enemies/45白眼士兵/move_back_01.png" id="40_pybo0"]
+[ext_resource type="Texture2D" uid="uid://mbwtw80ityl6" path="res://Assets/Animations/Enemies/45白眼士兵/move_back_02.png" id="41_552c0"]
+[ext_resource type="Texture2D" uid="uid://drji2ofmh2mqq" path="res://Assets/Animations/Enemies/45白眼士兵/move_back_03.png" id="42_wnydk"]
+[ext_resource type="Texture2D" uid="uid://bmubd6gli6sd7" path="res://Assets/Animations/Enemies/45白眼士兵/move_back_04.png" id="43_srhax"]
+[ext_resource type="Texture2D" uid="uid://clsbp5w132o3v" path="res://Assets/Animations/Enemies/45白眼士兵/move_back_05.png" id="44_5aj2i"]
+[ext_resource type="Texture2D" uid="uid://ddh1k1gcsuhiq" path="res://Assets/Animations/Enemies/45白眼士兵/move_back_06.png" id="45_d2yxt"]
+[ext_resource type="Texture2D" uid="uid://diqj7dnbwgsem" path="res://Assets/Animations/Enemies/45白眼士兵/move_back_07.png" id="46_ywxnr"]
+[ext_resource type="Texture2D" uid="uid://c0htbiqg8cdkq" path="res://Assets/Animations/Enemies/45白眼士兵/move_back_08.png" id="47_yk6wc"]
+[ext_resource type="Texture2D" uid="uid://cnjg0e2leqtjx" path="res://Assets/Animations/Enemies/45白眼士兵/move_back_09.png" id="48_sl3t4"]
+[ext_resource type="Texture2D" uid="uid://b1olfv73l5ajx" path="res://Assets/Animations/Enemies/45白眼士兵/move_back_10.png" id="49_a2hy6"]
+[ext_resource type="Texture2D" uid="uid://qh7mya6saprl" path="res://Assets/Animations/Enemies/45白眼士兵/move_back_11.png" id="50_qpwfb"]
+[ext_resource type="Texture2D" uid="uid://dfvqrcxbnkqfi" path="res://Assets/Animations/Enemies/45白眼士兵/move_back_12.png" id="51_yh5fe"]
+[ext_resource type="Texture2D" uid="uid://c1jjktriftcww" path="res://Assets/Animations/Enemies/45白眼士兵/move_back_13.png" id="52_4ejn3"]
+[ext_resource type="Texture2D" uid="uid://cp0dko2g382kv" path="res://Assets/Animations/Enemies/45白眼士兵/move_back_14.png" id="53_w5vb8"]
+[ext_resource type="Texture2D" uid="uid://b8a40wv5addwv" path="res://Assets/Animations/Enemies/45白眼士兵/move_back_15.png" id="54_f7gln"]
+[ext_resource type="Texture2D" uid="uid://c0i4x6b6tok5d" path="res://Assets/Animations/Enemies/45白眼士兵/move_back_16.png" id="55_csrqn"]
+[ext_resource type="Texture2D" uid="uid://dik7g3susgmvx" path="res://Assets/Animations/Enemies/45白眼士兵/move_back_17.png" id="56_0hqav"]
+[ext_resource type="Texture2D" uid="uid://ck5yety7rd0by" path="res://Assets/Animations/Enemies/45白眼士兵/move_back_18.png" id="57_hnpsm"]
+[ext_resource type="Texture2D" uid="uid://c2cvk43q36c4t" path="res://Assets/Animations/Enemies/45白眼士兵/move_back_19.png" id="58_qmf7l"]
+[ext_resource type="Texture2D" uid="uid://stv2u0nrrhd8" path="res://Assets/Animations/Enemies/45白眼士兵/move_back_20.png" id="59_bk1vm"]
+[ext_resource type="Texture2D" uid="uid://cfmqtygvr4m0p" path="res://Assets/Animations/Enemies/45白眼士兵/move_back_21.png" id="60_iirnk"]
+[ext_resource type="Texture2D" uid="uid://c3ldo4wndk2vy" path="res://Assets/Animations/Enemies/45白眼士兵/move_back_22.png" id="61_1u2w7"]
+[ext_resource type="Texture2D" uid="uid://dmktvoqon8oci" path="res://Assets/Animations/Enemies/45白眼士兵/move_back_23.png" id="62_uoia2"]
+[ext_resource type="Texture2D" uid="uid://cw0evils2w6yn" path="res://Assets/Animations/Enemies/45白眼士兵/move_front_00.png" id="63_o5koy"]
+[ext_resource type="Texture2D" uid="uid://blx0y7moy4lox" path="res://Assets/Animations/Enemies/45白眼士兵/move_front_01.png" id="64_b7fx8"]
+[ext_resource type="Texture2D" uid="uid://dgygdqepyajxq" path="res://Assets/Animations/Enemies/45白眼士兵/move_front_02.png" id="65_g3610"]
+[ext_resource type="Texture2D" uid="uid://bjy06qpwodb4r" path="res://Assets/Animations/Enemies/45白眼士兵/move_front_03.png" id="66_i4wea"]
+[ext_resource type="Texture2D" uid="uid://bqtc8ypakk7ia" path="res://Assets/Animations/Enemies/45白眼士兵/move_front_04.png" id="67_6k23b"]
+[ext_resource type="Texture2D" uid="uid://xcgvr01bq1rs" path="res://Assets/Animations/Enemies/45白眼士兵/move_front_05.png" id="68_n74kh"]
+[ext_resource type="Texture2D" uid="uid://c11dic2tgq4ho" path="res://Assets/Animations/Enemies/45白眼士兵/move_front_06.png" id="69_ys0qr"]
+[ext_resource type="Texture2D" uid="uid://cq7imkpcrm4xn" path="res://Assets/Animations/Enemies/45白眼士兵/move_front_07.png" id="70_7klhi"]
+[ext_resource type="Texture2D" uid="uid://cdm7k2g5imkyr" path="res://Assets/Animations/Enemies/45白眼士兵/move_front_08.png" id="71_yi47v"]
+[ext_resource type="Texture2D" uid="uid://dx2cg6s2e2emf" path="res://Assets/Animations/Enemies/45白眼士兵/move_front_09.png" id="72_aop10"]
+[ext_resource type="Texture2D" uid="uid://c2tbmvg5hu1d3" path="res://Assets/Animations/Enemies/45白眼士兵/move_front_10.png" id="73_qmuw6"]
+[ext_resource type="Texture2D" uid="uid://dh8m035c6dmxg" path="res://Assets/Animations/Enemies/45白眼士兵/move_front_11.png" id="74_jiui0"]
+[ext_resource type="Texture2D" uid="uid://bmlnvokn1ecqt" path="res://Assets/Animations/Enemies/45白眼士兵/move_front_12.png" id="75_1upx2"]
+[ext_resource type="Texture2D" uid="uid://o3lwxmd8gwm7" path="res://Assets/Animations/Enemies/45白眼士兵/move_front_13.png" id="76_avfih"]
+[ext_resource type="Texture2D" uid="uid://berckbqpvbauj" path="res://Assets/Animations/Enemies/45白眼士兵/move_front_14.png" id="77_d2ui5"]
+[ext_resource type="Texture2D" uid="uid://doqd5prcfvu0r" path="res://Assets/Animations/Enemies/45白眼士兵/move_front_15.png" id="78_0iiuk"]
+[ext_resource type="Texture2D" uid="uid://276td1hw22wr" path="res://Assets/Animations/Enemies/45白眼士兵/move_front_16.png" id="79_4muec"]
+[ext_resource type="Texture2D" uid="uid://s0durrd03xcg" path="res://Assets/Animations/Enemies/45白眼士兵/move_front_17.png" id="80_kjx8b"]
+[ext_resource type="Texture2D" uid="uid://cixqn2uoosmqj" path="res://Assets/Animations/Enemies/45白眼士兵/move_front_18.png" id="81_3rum7"]
+[ext_resource type="Texture2D" uid="uid://ybb7hiibf4bh" path="res://Assets/Animations/Enemies/45白眼士兵/move_front_19.png" id="82_q8i2l"]
+[ext_resource type="Texture2D" uid="uid://cpbc2cmx4t3og" path="res://Assets/Animations/Enemies/45白眼士兵/move_front_20.png" id="83_3w3hp"]
+[ext_resource type="Texture2D" uid="uid://34mrs7o2jgmf" path="res://Assets/Animations/Enemies/45白眼士兵/move_front_21.png" id="84_84s08"]
+[ext_resource type="Texture2D" uid="uid://cuhdpws8yrfxx" path="res://Assets/Animations/Enemies/45白眼士兵/move_front_22.png" id="85_wdiss"]
+[ext_resource type="Texture2D" uid="uid://c2k38x3fh5rpw" path="res://Assets/Animations/Enemies/45白眼士兵/move_front_23.png" id="86_jjllg"]
+[ext_resource type="Texture2D" uid="uid://dl11rt7luphau" path="res://Assets/Animations/Enemies/45白眼士兵/move_normal_00.png" id="87_p2qn8"]
+[ext_resource type="Texture2D" uid="uid://dttla4xukaqcw" path="res://Assets/Animations/Enemies/45白眼士兵/move_normal_01.png" id="88_4hl0v"]
+[ext_resource type="Texture2D" uid="uid://7yrytpkjejo8" path="res://Assets/Animations/Enemies/45白眼士兵/move_normal_02.png" id="89_d0n4v"]
+[ext_resource type="Texture2D" uid="uid://dn3vrg3s1c5q0" path="res://Assets/Animations/Enemies/45白眼士兵/move_normal_03.png" id="90_ooh0v"]
+[ext_resource type="Texture2D" uid="uid://cdwlhwxrsawuf" path="res://Assets/Animations/Enemies/45白眼士兵/move_normal_04.png" id="91_8x5ds"]
+[ext_resource type="Texture2D" uid="uid://dgo6l86h2auky" path="res://Assets/Animations/Enemies/45白眼士兵/move_normal_05.png" id="92_g3k25"]
+[ext_resource type="Texture2D" uid="uid://2w42r5to51jr" path="res://Assets/Animations/Enemies/45白眼士兵/move_normal_06.png" id="93_0u4bj"]
+[ext_resource type="Texture2D" uid="uid://bby15ma14dgrc" path="res://Assets/Animations/Enemies/45白眼士兵/move_normal_07.png" id="94_f6oii"]
+[ext_resource type="Texture2D" uid="uid://c06iquflsgn8v" path="res://Assets/Animations/Enemies/45白眼士兵/move_normal_08.png" id="95_w8oat"]
+[ext_resource type="Texture2D" uid="uid://ieajwdl5lnv8" path="res://Assets/Animations/Enemies/45白眼士兵/move_normal_09.png" id="96_b1djs"]
+[ext_resource type="Texture2D" uid="uid://b0eq6k4vhk3pj" path="res://Assets/Animations/Enemies/45白眼士兵/move_normal_10.png" id="97_3sk5a"]
+[ext_resource type="Texture2D" uid="uid://10dlqrtlurq3" path="res://Assets/Animations/Enemies/45白眼士兵/move_normal_11.png" id="98_o6shf"]
+[ext_resource type="Texture2D" uid="uid://dimr8n372ainr" path="res://Assets/Animations/Enemies/45白眼士兵/move_normal_12.png" id="99_51uhw"]
+[ext_resource type="Texture2D" uid="uid://butp7jl7d15l7" path="res://Assets/Animations/Enemies/45白眼士兵/move_normal_13.png" id="100_75iyc"]
+[ext_resource type="Texture2D" uid="uid://csie6krbd2ogs" path="res://Assets/Animations/Enemies/45白眼士兵/move_normal_14.png" id="101_kc60t"]
+[ext_resource type="Texture2D" uid="uid://cyp2ehdugw05i" path="res://Assets/Animations/Enemies/45白眼士兵/move_normal_15.png" id="102_gfjrl"]
+[ext_resource type="Texture2D" uid="uid://cyx71thsvw48i" path="res://Assets/Animations/Enemies/45白眼士兵/move_normal_16.png" id="103_wnipo"]
+[ext_resource type="Texture2D" uid="uid://du866yqp8aep7" path="res://Assets/Animations/Enemies/45白眼士兵/move_normal_17.png" id="104_tjt60"]
+[ext_resource type="Texture2D" uid="uid://50yktljnva87" path="res://Assets/Animations/Enemies/45白眼士兵/move_normal_18.png" id="105_34ah8"]
+[ext_resource type="Texture2D" uid="uid://0ui28pqa5tkv" path="res://Assets/Animations/Enemies/45白眼士兵/move_normal_19.png" id="106_26d1s"]
+[ext_resource type="Texture2D" uid="uid://dgsku0dug8ucb" path="res://Assets/Animations/Enemies/45白眼士兵/move_normal_20.png" id="107_pegrg"]
+[ext_resource type="Texture2D" uid="uid://dpuesd7m1rqrh" path="res://Assets/Animations/Enemies/45白眼士兵/move_normal_21.png" id="108_svo4b"]
+[ext_resource type="Texture2D" uid="uid://167hgsb0fv81" path="res://Assets/Animations/Enemies/45白眼士兵/move_normal_22.png" id="109_fu4hw"]
+[ext_resource type="Texture2D" uid="uid://dsgh2fv4sgas8" path="res://Assets/Animations/Enemies/45白眼士兵/move_normal_23.png" id="110_5o8hl"]
+[ext_resource type="Texture2D" uid="uid://bveccsb2pyhc5" path="res://Assets/Animations/Enemies/45白眼士兵/move_normal_24.png" id="111_ayqoh"]
+[ext_resource type="PackedScene" uid="uid://dcjuved17hj6j" path="res://Scenes/Enemies/EnemyComponents/appear_audio_component.tscn" id="112_yqovg"]
+[ext_resource type="AudioStream" uid="uid://tj2qdr0snm0b" path="res://Assets/Sounds/FXs/Enemies/人偶/人偶.wav" id="113_jcaas"]
+
+[sub_resource type="Resource" id="Resource_2aepe"]
+script = ExtResource("3_lj1d0")
+health = 300
+dodge_rate = 0.0
+near_damage_low = 6
+near_damage_high = 12
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.0
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 1.2
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ihyuw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_mwi5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2agnj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ur7s0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1wegg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0ajfm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lhs0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_a1211")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_5xcbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_j7uig")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_a8ve2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_n3c45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_o0v0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_i8ico")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_t6kxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_l07up")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_gnnaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_smirj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_1b2xx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_e4058")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_vp78p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_gvxhs")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_m81lq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_mlurp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_7gxxa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_kktrt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_fi323")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_spjo2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_vtruy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_x3fqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_rtj4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_hhfq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_f4bn5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_44ylv")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_mwi5r")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("39_vohbt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_pybo0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_552c0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_wnydk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_srhax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_5aj2i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_d2yxt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_ywxnr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_yk6wc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_sl3t4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_a2hy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_qpwfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_yh5fe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_4ejn3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_w5vb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_f7gln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_csrqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_0hqav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_hnpsm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_qmf7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_bk1vm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_iirnk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_1u2w7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_uoia2")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("63_o5koy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_b7fx8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_g3610")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_i4wea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_6k23b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_n74kh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_ys0qr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_7klhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_yi47v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_aop10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_qmuw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_jiui0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_1upx2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_avfih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_d2ui5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_0iiuk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_4muec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_kjx8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_3rum7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_q8i2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_3w3hp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_84s08")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_wdiss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_jjllg")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("87_p2qn8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_4hl0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_d0n4v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_ooh0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_8x5ds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_g3k25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_0u4bj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_f6oii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_w8oat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_b1djs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_3sk5a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_o6shf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_51uhw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_75iyc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_kc60t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_gfjrl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_wnipo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_tjt60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_34ah8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_26d1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_pegrg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_svo4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_fu4hw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_5o8hl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_ayqoh")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 30.0
+}]
+
+[node name="Enemy45" groups=["super_unit"] instance=ExtResource("1_cdkjh")]
+script = ExtResource("2_gqgvv")
+enemy_name = "白眼士兵"
+enemy_id = 45
+enemy_texture = ExtResource("3_hgtnx")
+enemy_type = 2
+start_data = SubResource("Resource_2aepe")
+bounty = 5
+die_audio_stream_list = Array[AudioStream]([ExtResource("5_vt52t")])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(0, -95)
+sprite_frames = SubResource("SpriteFrames_ihyuw")
+animation = &"attack"
+autoplay = "idle"
+
+[node name="DieAudio" parent="." index="3"]
+stream = ExtResource("5_vt52t")
+volume_db = -8.0
+
+[node name="AppearAudioComponent" parent="." index="5" instance=ExtResource("112_yqovg")]
+appear_audio_list = Array[AudioStream]([ExtResource("113_jcaas")])
+
+[node name="AppearAudioPlayer" parent="AppearAudioComponent" index="0"]
+stream = ExtResource("113_jcaas")
+volume_db = -12.0
+
+[editable path="AppearAudioComponent"]

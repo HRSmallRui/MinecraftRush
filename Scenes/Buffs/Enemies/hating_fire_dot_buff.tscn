@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dud0s02bwua34"]
+
+[ext_resource type="PackedScene" uid="uid://bwifge7de0uys" path="res://Scenes/Buffs/dot_buff.tscn" id="1_3v7gr"]
+[ext_resource type="Script" path="res://Scripts/Classes/potion_particle_leader.gd" id="2_7swct"]
+[ext_resource type="Texture2D" uid="uid://dvi6p1u5k00ax" path="res://Assets/Images/Effects/RobortSkill/Fire/0001.png" id="3_1u58i"]
+
+[node name="HatingFireDotBuff" instance=ExtResource("1_3v7gr")]
+dot_damage = Array[int]([5])
+duration = 10.0
+buff_tag = "HatingFireDotBuff"
+immune_groups = Array[String](["god", "super_unit"])
+
+[node name="DotTimer" parent="." index="0"]
+wait_time = 10.0
+
+[node name="PotionParticleLeader" type="Node2D" parent="." index="1" node_paths=PackedStringArray("buff_vehicle")]
+script = ExtResource("2_7swct")
+potion_texture = ExtResource("3_1u58i")
+buff_vehicle = NodePath("..")
+particle_size_rate = 0.4
+particle_z_index = 1

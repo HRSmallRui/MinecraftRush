@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://clf5p1wbbsimd"]
+
+[ext_resource type="Script" path="res://Scripts/Skills/oil_area.gd" id="1_1p7v2"]
+[ext_resource type="Texture2D" uid="uid://nrilhw2s2sow" path="res://Assets/Images/Effects/oil.png" id="2_rhy58"]
+[ext_resource type="AudioStream" uid="uid://bsn52x18c1tkf" path="res://Assets/Sounds/FXs/Enemies/史莱姆/史莱姆攻击1.wav" id="3_2h7nk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yikh0"]
+radius = 73.9444
+
+[node name="OilArea" type="Area2D"]
+collision_layer = 0
+collision_mask = 32
+script = ExtResource("1_1p7v2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 0.7)
+shape = SubResource("CircleShape2D_yikh0")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="OilSprite" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(0, -14)
+scale = Vector2(0.563698, 0.563698)
+texture = ExtResource("2_rhy58")
+
+[node name="DuringTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="ShotTimer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="AppearAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_2h7nk")
+volume_db = -4.0
+autoplay = true
+bus = &"Sound"
+
+[connection signal="timeout" from="DuringTimer" to="." method="_on_during_timer_timeout"]
+[connection signal="timeout" from="ShotTimer" to="." method="_on_shot_timer_timeout"]

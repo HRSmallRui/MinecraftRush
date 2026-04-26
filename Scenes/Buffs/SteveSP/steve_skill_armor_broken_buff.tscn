@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnjgq5a2h0i0t"]
+
+[ext_resource type="PackedScene" uid="uid://bjfa3t67tpsbr" path="res://Scenes/Buffs/property_buff.tscn" id="1_cfdf3"]
+[ext_resource type="Script" path="res://Scripts/Buffs/property_buff_block.gd" id="2_f7s5b"]
+
+[sub_resource type="Resource" id="Resource_vfg4o"]
+script = ExtResource("2_f7s5b")
+property_type = 5
+operation_type = 0
+operation_data = -0.2
+
+[node name="SteveSkillArmorBrokenBuff" instance=ExtResource("1_cfdf3")]
+buff_blocks = Array[ExtResource("2_f7s5b")]([SubResource("Resource_vfg4o")])
+buff_type = 1
+buff_tag = "SteveSkillArmorBrokenBuff"
+immune_groups = Array[String](["boss", "god"])

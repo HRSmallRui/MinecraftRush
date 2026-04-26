@@ -1,0 +1,53 @@
+[gd_scene load_steps=10 format=3 uid="uid://d2yx55dgabof"]
+
+[ext_resource type="PackedScene" uid="uid://caufauw6v502y" path="res://Scenes/Classes/bullet_class.tscn" id="1_8rttm"]
+[ext_resource type="Script" path="res://Scripts/Bullets/energy_ball.gd" id="2_iwcl3"]
+[ext_resource type="PackedScene" uid="uid://0xkf5iw3n1ka" path="res://Scenes/Effects/energy_ball_tail.tscn" id="3_ncq74"]
+[ext_resource type="PackedScene" uid="uid://b3btjp6015gu2" path="res://Scenes/Effects/energy_ball_hit_effect.tscn" id="4_1e4wo"]
+[ext_resource type="Texture2D" uid="uid://dkfq4124uoa2e" path="res://Assets/Images/Bullets/energy_ball.png" id="5_hsqp5"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/light_component.gd" id="6_ur1xq"]
+
+[sub_resource type="Gradient" id="Gradient_xm1bb"]
+colors = PackedColorArray(0.27451, 1, 0.968627, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ekssn"]
+gradient = SubResource("Gradient_xm1bb")
+fill = 1
+fill_from = Vector2(0.491453, 0.529915)
+fill_to = Vector2(0.82906, 0.24359)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u8x6c"]
+
+[node name="EnergyBall" instance=ExtResource("1_8rttm")]
+z_index = 2
+script = ExtResource("2_iwcl3")
+magic_ball_tail_scene = ExtResource("3_ncq74")
+hit_effect_scene = ExtResource("4_1e4wo")
+damage_type = 3
+move_type = 1
+bullet_speed = 800.0
+damage_source = "MagicBall"
+
+[node name="BulletSprite" parent="." index="0"]
+position = Vector2(0, 12)
+texture = ExtResource("5_hsqp5")
+offset = Vector2(0, -13.3333)
+region_rect = Rect2(208, 451, 356, 328)
+
+[node name="LightComponent" type="PointLight2D" parent="BulletSprite" index="0"]
+position = Vector2(0, -12)
+scale = Vector2(0.324057, 0.324057)
+energy = 1.5
+texture = SubResource("GradientTexture2D_ekssn")
+script = ExtResource("6_ur1xq")
+
+[node name="HitBox" parent="." index="1"]
+scale = Vector2(0.551539, 0.551539)
+collision_mask = 96
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+shape = SubResource("CircleShape2D_u8x6c")
+
+[node name="TailTimer" type="Timer" parent="FreeTimer" index="0"]
+wait_time = 0.05
+autostart = true

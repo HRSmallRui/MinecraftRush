@@ -1,0 +1,90 @@
+[gd_scene load_steps=16 format=3 uid="uid://dmq2qhqipm7xk"]
+
+[ext_resource type="PackedScene" uid="uid://bwifge7de0uys" path="res://Scenes/Buffs/dot_buff.tscn" id="1_kbj3s"]
+[ext_resource type="Script" path="res://Scripts/Buffs/villager_knight_bleed.gd" id="2_4bxp5"]
+[ext_resource type="Texture2D" uid="uid://bf26mndb3xwlw" path="res://Assets/Images/Effects/BloodBuff/0001.png" id="2_rpw4n"]
+[ext_resource type="Texture2D" uid="uid://511ukiv1ttbk" path="res://Assets/Images/Effects/BloodBuff/0002.png" id="3_m36wx"]
+[ext_resource type="Texture2D" uid="uid://btj632r5nv5ho" path="res://Assets/Images/Effects/BloodBuff/0003.png" id="4_30tir"]
+[ext_resource type="Texture2D" uid="uid://dy3b33r2v1tmp" path="res://Assets/Images/Effects/BloodBuff/0004.png" id="5_efagd"]
+[ext_resource type="Texture2D" uid="uid://cj3ifyudjcjim" path="res://Assets/Images/Effects/BloodBuff/0005.png" id="6_fpgv4"]
+[ext_resource type="Texture2D" uid="uid://3ox8o77rci0q" path="res://Assets/Images/Effects/BloodBuff/0006.png" id="7_i0l3b"]
+[ext_resource type="Texture2D" uid="uid://c35m3emevjdj4" path="res://Assets/Images/Effects/BloodBuff/0007.png" id="8_rhtty"]
+[ext_resource type="Texture2D" uid="uid://dtu5ixhir3bun" path="res://Assets/Images/Effects/BloodBuff/0008.png" id="9_fcb8c"]
+[ext_resource type="Texture2D" uid="uid://kupx6y4ia8lw" path="res://Assets/Images/Effects/BloodBuff/0009.png" id="10_1uvn5"]
+[ext_resource type="Texture2D" uid="uid://chkbfnoksug0q" path="res://Assets/Images/Effects/BloodBuff/0010.png" id="11_5u2o8"]
+[ext_resource type="Texture2D" uid="uid://866qa1dgqjhk" path="res://Assets/Images/Effects/BloodBuff/0011.png" id="12_4wlju"]
+[ext_resource type="Texture2D" uid="uid://1vsa2x5anv01" path="res://Assets/Images/Effects/BloodBuff/0012.png" id="13_8k0io"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ad33h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_rpw4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_m36wx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_30tir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_efagd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fpgv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_i0l3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rhtty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_fcb8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1uvn5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5u2o8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4wlju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_8k0io")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
+[node name="VillagerKnightBleed" instance=ExtResource("1_kbj3s")]
+script = ExtResource("2_4bxp5")
+dot_damage = Array[int]([2, 3, 4])
+duration = 4.0
+buff_tag = "VillagerKnightBleed"
+immune_groups = Array[String](["boss", "god", "super_unit", "skeleton", "no_live"])
+
+[node name="DotTimer" parent="." index="0"]
+wait_time = 0.2
+
+[node name="BloodBuffAnim" type="AnimatedSprite2D" parent="." index="1"]
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_ad33h")
+autoplay = "default"

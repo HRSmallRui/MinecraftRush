@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://d23a0wuffckpv"]
+
+[ext_resource type="PackedScene" uid="uid://b76b7g5n6efop" path="res://Scenes/Buffs/dizness_buff.tscn" id="1_dr17f"]
+[ext_resource type="Script" path="res://Scripts/Buffs/illager_cage.gd" id="2_y4yco"]
+
+[node name="IllagerCage" instance=ExtResource("1_dr17f")]
+script = ExtResource("2_y4yco")
+buff_tag = "illager_cage"
+immune_groups = Array[String](["boss", "god"])

@@ -1,0 +1,888 @@
+[gd_scene load_steps=204 format=3 uid="uid://dnq7ksu8v441f"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_by3e7"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_54.gd" id="2_qm8yo"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="2_ym42l"]
+[ext_resource type="Texture2D" uid="uid://da8mqc5mk2cln" path="res://Assets/Images/UI/InformationBar/尸国小队长.png" id="3_7airt"]
+[ext_resource type="Texture2D" uid="uid://d4bym3x47darj" path="res://Assets/Animations/Enemies/54尸国小队长/attack_00.png" id="5_b3rbp"]
+[ext_resource type="AudioStream" uid="uid://dbtgg1fvplh1g" path="res://Assets/Sounds/FXs/Enemies/尸国统帅/尸国统帅死亡.wav" id="5_lvxoe"]
+[ext_resource type="Texture2D" uid="uid://di4mfpi0740kv" path="res://Assets/Animations/Enemies/54尸国小队长/attack_01.png" id="6_egurx"]
+[ext_resource type="Texture2D" uid="uid://dwlwdbcmvrab6" path="res://Assets/Animations/Enemies/54尸国小队长/attack_02.png" id="7_esor8"]
+[ext_resource type="Texture2D" uid="uid://c0m8lb7kmshu2" path="res://Assets/Animations/Enemies/54尸国小队长/attack_03.png" id="8_y5pll"]
+[ext_resource type="Texture2D" uid="uid://bmma5b6f821pv" path="res://Assets/Animations/Enemies/54尸国小队长/attack_04.png" id="9_cfguv"]
+[ext_resource type="Texture2D" uid="uid://c02q5yf6koppg" path="res://Assets/Animations/Enemies/54尸国小队长/attack_05.png" id="10_erwg6"]
+[ext_resource type="Texture2D" uid="uid://btt34veowho1j" path="res://Assets/Animations/Enemies/54尸国小队长/attack_06.png" id="11_ckdpj"]
+[ext_resource type="Texture2D" uid="uid://0i6cxlhsx53s" path="res://Assets/Animations/Enemies/54尸国小队长/attack_07.png" id="12_eexgv"]
+[ext_resource type="Texture2D" uid="uid://dnfjqt1716pa1" path="res://Assets/Animations/Enemies/54尸国小队长/attack_08.png" id="13_khkp3"]
+[ext_resource type="Texture2D" uid="uid://b6lo174byd7ih" path="res://Assets/Animations/Enemies/54尸国小队长/attack_09.png" id="14_c1ik0"]
+[ext_resource type="Texture2D" uid="uid://dv4sy3lfrw5il" path="res://Assets/Animations/Enemies/54尸国小队长/attack_10.png" id="15_k6oes"]
+[ext_resource type="Texture2D" uid="uid://co2mmpcxatbwn" path="res://Assets/Animations/Enemies/54尸国小队长/attack_11.png" id="16_0txpe"]
+[ext_resource type="Texture2D" uid="uid://dfyakl7o4ffpv" path="res://Assets/Animations/Enemies/54尸国小队长/attack_12.png" id="17_d0bco"]
+[ext_resource type="Texture2D" uid="uid://jaimbqkeurnw" path="res://Assets/Animations/Enemies/54尸国小队长/attack_13.png" id="18_sx6wr"]
+[ext_resource type="Texture2D" uid="uid://dpw4ihugh3nq2" path="res://Assets/Animations/Enemies/54尸国小队长/attack_14.png" id="19_8srbk"]
+[ext_resource type="Texture2D" uid="uid://cio2c5m4ot8f2" path="res://Assets/Animations/Enemies/54尸国小队长/attack_15.png" id="20_me541"]
+[ext_resource type="Texture2D" uid="uid://dd0le2stfux0s" path="res://Assets/Animations/Enemies/54尸国小队长/attack_16.png" id="21_f6jdm"]
+[ext_resource type="Texture2D" uid="uid://dkyt1wwy85kn" path="res://Assets/Animations/Enemies/54尸国小队长/attack_17.png" id="22_68ct1"]
+[ext_resource type="Texture2D" uid="uid://bligyeljwo2g5" path="res://Assets/Animations/Enemies/54尸国小队长/attack_18.png" id="23_lqbpf"]
+[ext_resource type="Texture2D" uid="uid://day7dkvjsuxf7" path="res://Assets/Animations/Enemies/54尸国小队长/attack_19.png" id="24_fpd6p"]
+[ext_resource type="Texture2D" uid="uid://cjttajn654fhy" path="res://Assets/Animations/Enemies/54尸国小队长/attack_20.png" id="25_klgrq"]
+[ext_resource type="Texture2D" uid="uid://dm0j4pp3nadvf" path="res://Assets/Animations/Enemies/54尸国小队长/attack_21.png" id="26_be61c"]
+[ext_resource type="Texture2D" uid="uid://phcs121aiqcx" path="res://Assets/Animations/Enemies/54尸国小队长/attack_22.png" id="27_ktwm4"]
+[ext_resource type="Texture2D" uid="uid://hgf85co0mofh" path="res://Assets/Animations/Enemies/54尸国小队长/attack_23.png" id="28_64la2"]
+[ext_resource type="Texture2D" uid="uid://ch8woxgk4e2te" path="res://Assets/Animations/Enemies/54尸国小队长/attack_24.png" id="29_pgcf7"]
+[ext_resource type="Texture2D" uid="uid://o7rnjng4du1l" path="res://Assets/Animations/Enemies/54尸国小队长/die_00.png" id="30_y3jhx"]
+[ext_resource type="Texture2D" uid="uid://dmrxxdlap6bx2" path="res://Assets/Animations/Enemies/54尸国小队长/die_01.png" id="31_80n7f"]
+[ext_resource type="Texture2D" uid="uid://cwkudfqre45n6" path="res://Assets/Animations/Enemies/54尸国小队长/die_02.png" id="32_dla1m"]
+[ext_resource type="Texture2D" uid="uid://c0not5j8x4r4a" path="res://Assets/Animations/Enemies/54尸国小队长/die_03.png" id="33_5hhjx"]
+[ext_resource type="Texture2D" uid="uid://b3cwsu25ruha4" path="res://Assets/Animations/Enemies/54尸国小队长/die_04.png" id="34_eo3bq"]
+[ext_resource type="Texture2D" uid="uid://umyn1hb4pnrj" path="res://Assets/Animations/Enemies/54尸国小队长/die_05.png" id="35_rpl60"]
+[ext_resource type="Texture2D" uid="uid://ct43t57nirxhy" path="res://Assets/Animations/Enemies/54尸国小队长/die_06.png" id="36_1xa82"]
+[ext_resource type="Texture2D" uid="uid://drerf7teqqvbg" path="res://Assets/Animations/Enemies/54尸国小队长/die_07.png" id="37_fb1ww"]
+[ext_resource type="Texture2D" uid="uid://14jc05j7b5tc" path="res://Assets/Animations/Enemies/54尸国小队长/die_08.png" id="38_73v2v"]
+[ext_resource type="Texture2D" uid="uid://campbrbfc1cpt" path="res://Assets/Animations/Enemies/54尸国小队长/die_09.png" id="39_shphx"]
+[ext_resource type="Texture2D" uid="uid://ds855d3hxngbd" path="res://Assets/Animations/Enemies/54尸国小队长/die_10.png" id="40_dfmtp"]
+[ext_resource type="Texture2D" uid="uid://6ri04x4mpuj" path="res://Assets/Animations/Enemies/54尸国小队长/die_11.png" id="41_70usy"]
+[ext_resource type="Texture2D" uid="uid://c1ue3afpqxqgk" path="res://Assets/Animations/Enemies/54尸国小队长/die_12.png" id="42_8e8fa"]
+[ext_resource type="Texture2D" uid="uid://cd0t3w2vbrj1m" path="res://Assets/Animations/Enemies/54尸国小队长/die_13.png" id="43_860vb"]
+[ext_resource type="Texture2D" uid="uid://dxqhv0rb8b8pa" path="res://Assets/Animations/Enemies/54尸国小队长/die_14.png" id="44_5oyvs"]
+[ext_resource type="Texture2D" uid="uid://b4vi13ou5eb7t" path="res://Assets/Animations/Enemies/54尸国小队长/die_15.png" id="45_8qfbq"]
+[ext_resource type="Texture2D" uid="uid://dqelcu0kfjsv5" path="res://Assets/Animations/Enemies/54尸国小队长/die_16.png" id="46_dnpsh"]
+[ext_resource type="Texture2D" uid="uid://ceyt3a8ac1q1f" path="res://Assets/Animations/Enemies/54尸国小队长/die_17.png" id="47_une18"]
+[ext_resource type="Texture2D" uid="uid://bowwxmg8jeav5" path="res://Assets/Animations/Enemies/54尸国小队长/die_18.png" id="48_8g4d0"]
+[ext_resource type="Texture2D" uid="uid://tiar7qmf4k3v" path="res://Assets/Animations/Enemies/54尸国小队长/die_19.png" id="49_2ed6h"]
+[ext_resource type="Texture2D" uid="uid://64b4yixiv0el" path="res://Assets/Animations/Enemies/54尸国小队长/die_20.png" id="50_jng27"]
+[ext_resource type="Texture2D" uid="uid://b28n7fm3ji5uc" path="res://Assets/Animations/Enemies/54尸国小队长/die_21.png" id="51_we5q5"]
+[ext_resource type="Texture2D" uid="uid://cw3qiiaq0mtev" path="res://Assets/Animations/Enemies/54尸国小队长/die_22.png" id="52_q11qa"]
+[ext_resource type="Texture2D" uid="uid://cfn61nm3k4msf" path="res://Assets/Animations/Enemies/54尸国小队长/die_23.png" id="53_a5b3e"]
+[ext_resource type="Texture2D" uid="uid://b7obllgwqjhsp" path="res://Assets/Animations/Enemies/54尸国小队长/die_24.png" id="54_2x3mr"]
+[ext_resource type="Texture2D" uid="uid://bwefv0qub4j2r" path="res://Assets/Animations/Enemies/54尸国小队长/die_25.png" id="55_yxdii"]
+[ext_resource type="Texture2D" uid="uid://c3d46npbbs5wb" path="res://Assets/Animations/Enemies/54尸国小队长/die_26.png" id="56_1rr2d"]
+[ext_resource type="Texture2D" uid="uid://bvaqqfmpae363" path="res://Assets/Animations/Enemies/54尸国小队长/die_27.png" id="57_0aexv"]
+[ext_resource type="Texture2D" uid="uid://bke2hr2ixwc7s" path="res://Assets/Animations/Enemies/54尸国小队长/die_28.png" id="58_03poc"]
+[ext_resource type="Texture2D" uid="uid://j0cudbqor5om" path="res://Assets/Animations/Enemies/54尸国小队长/die_29.png" id="59_blcui"]
+[ext_resource type="Texture2D" uid="uid://e2l5v4ymwwjh" path="res://Assets/Animations/Enemies/54尸国小队长/die_30.png" id="60_o3lvr"]
+[ext_resource type="Texture2D" uid="uid://by32tcgy73ru7" path="res://Assets/Animations/Enemies/54尸国小队长/die_31.png" id="61_l5imb"]
+[ext_resource type="Texture2D" uid="uid://bmns3dmqcacc3" path="res://Assets/Animations/Enemies/54尸国小队长/die_32.png" id="62_01ip1"]
+[ext_resource type="Texture2D" uid="uid://wsojnij78ujj" path="res://Assets/Animations/Enemies/54尸国小队长/die_33.png" id="63_nbvad"]
+[ext_resource type="Texture2D" uid="uid://clofpbohlgl0l" path="res://Assets/Animations/Enemies/54尸国小队长/die_34.png" id="64_ovfj8"]
+[ext_resource type="Texture2D" uid="uid://b4kjdlovabaid" path="res://Assets/Animations/Enemies/54尸国小队长/die_35.png" id="65_3kukn"]
+[ext_resource type="Texture2D" uid="uid://odxq156u1if7" path="res://Assets/Animations/Enemies/54尸国小队长/die_36.png" id="66_aqgp3"]
+[ext_resource type="Texture2D" uid="uid://dyvj2qcg6syh8" path="res://Assets/Animations/Enemies/54尸国小队长/die_37.png" id="67_fvacc"]
+[ext_resource type="Texture2D" uid="uid://bud0l87c4m5q0" path="res://Assets/Animations/Enemies/54尸国小队长/die_38.png" id="68_2fmqg"]
+[ext_resource type="Texture2D" uid="uid://2ptb5rc7ejva" path="res://Assets/Animations/Enemies/54尸国小队长/die_39.png" id="69_0n2gw"]
+[ext_resource type="Texture2D" uid="uid://cmcab6jqbtrfv" path="res://Assets/Animations/Enemies/54尸国小队长/die_40.png" id="70_wm8n3"]
+[ext_resource type="Texture2D" uid="uid://crhbxjextbhyi" path="res://Assets/Animations/Enemies/54尸国小队长/die_41.png" id="71_ppbel"]
+[ext_resource type="Texture2D" uid="uid://blrvqw3y38lj3" path="res://Assets/Animations/Enemies/54尸国小队长/die_42.png" id="72_4tlfv"]
+[ext_resource type="Texture2D" uid="uid://doerdpp5my1gh" path="res://Assets/Animations/Enemies/54尸国小队长/die_43.png" id="73_747lt"]
+[ext_resource type="Texture2D" uid="uid://c14qpxjb12cck" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_00.png" id="74_virjs"]
+[ext_resource type="Texture2D" uid="uid://c4p1cjhd7k3ag" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_01.png" id="75_tlhyd"]
+[ext_resource type="Texture2D" uid="uid://f21j5ekcq1ua" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_02.png" id="76_spdip"]
+[ext_resource type="Texture2D" uid="uid://bioi4xcj3yfd2" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_03.png" id="77_1g0m2"]
+[ext_resource type="Texture2D" uid="uid://tjj2jlp8qvt6" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_04.png" id="78_o3avq"]
+[ext_resource type="Texture2D" uid="uid://x0sfb46tiasw" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_05.png" id="79_x5ird"]
+[ext_resource type="Texture2D" uid="uid://x3pmgxwvvnry" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_06.png" id="80_r1vjx"]
+[ext_resource type="Texture2D" uid="uid://2jopsgrhdhtg" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_07.png" id="81_mc1js"]
+[ext_resource type="Texture2D" uid="uid://bt0bja2yqy0yc" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_08.png" id="82_qe54d"]
+[ext_resource type="Texture2D" uid="uid://gscx7euqaqsm" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_09.png" id="83_jx58r"]
+[ext_resource type="Texture2D" uid="uid://dqrr7kumcrm2r" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_10.png" id="84_ecncp"]
+[ext_resource type="Texture2D" uid="uid://chrxe3wauhppk" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_11.png" id="85_3dryu"]
+[ext_resource type="Texture2D" uid="uid://dsq0ueo8wutqw" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_12.png" id="86_eno8e"]
+[ext_resource type="Texture2D" uid="uid://ch54lm5f2y8gq" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_13.png" id="87_m54i2"]
+[ext_resource type="Texture2D" uid="uid://vkmgeu437411" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_14.png" id="88_8envx"]
+[ext_resource type="Texture2D" uid="uid://cnxgevfe3uwyu" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_15.png" id="89_1ptvb"]
+[ext_resource type="Texture2D" uid="uid://dunopbe1f3p1c" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_16.png" id="90_pvrf5"]
+[ext_resource type="Texture2D" uid="uid://bje3i0h5xdnkg" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_17.png" id="91_fhycx"]
+[ext_resource type="Texture2D" uid="uid://cqvlevshxuf4p" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_18.png" id="92_68mkf"]
+[ext_resource type="Texture2D" uid="uid://bklgw65alvmc5" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_19.png" id="93_mddle"]
+[ext_resource type="Texture2D" uid="uid://bn3wmi3tv3vgi" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_20.png" id="94_lt2jh"]
+[ext_resource type="Texture2D" uid="uid://5fxp0cgg6bxp" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_21.png" id="95_2a6a5"]
+[ext_resource type="Texture2D" uid="uid://c1s2ivsnyf4rj" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_22.png" id="96_yj24a"]
+[ext_resource type="Texture2D" uid="uid://guwwhpiwood0" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_23.png" id="97_p525q"]
+[ext_resource type="Texture2D" uid="uid://drq8se0dqaor3" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_24.png" id="98_bb384"]
+[ext_resource type="Texture2D" uid="uid://c5hiccf6ah0eh" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_25.png" id="99_ob4uw"]
+[ext_resource type="Texture2D" uid="uid://c1488uj0pln34" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_26.png" id="100_norse"]
+[ext_resource type="Texture2D" uid="uid://cfqp7tmlb3ueu" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_27.png" id="101_7ri75"]
+[ext_resource type="Texture2D" uid="uid://ulujgld386r6" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_28.png" id="102_o2dvy"]
+[ext_resource type="Texture2D" uid="uid://bo5jn6evflh4q" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_29.png" id="103_cgn4b"]
+[ext_resource type="Texture2D" uid="uid://dj5fhl2phjcbj" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_30.png" id="104_jaay8"]
+[ext_resource type="Texture2D" uid="uid://dy2ol4kjuofs4" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_31.png" id="105_l45jw"]
+[ext_resource type="Texture2D" uid="uid://bak2jnahaltly" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_32.png" id="106_usw0f"]
+[ext_resource type="Texture2D" uid="uid://chw3i0u17ub2l" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_33.png" id="107_tchqu"]
+[ext_resource type="Texture2D" uid="uid://bvc7n5yt5otov" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_34.png" id="108_w22sf"]
+[ext_resource type="Texture2D" uid="uid://5ha6lqkuyusc" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_35.png" id="109_8ynjn"]
+[ext_resource type="Texture2D" uid="uid://cthcuq8cuink" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_36.png" id="110_6keei"]
+[ext_resource type="Texture2D" uid="uid://1hrxarjo3cqi" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_37.png" id="111_3luvj"]
+[ext_resource type="Texture2D" uid="uid://dd6tyu0hkll32" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_38.png" id="112_s8rtn"]
+[ext_resource type="Texture2D" uid="uid://cvfbnvuwlqq8r" path="res://Assets/Animations/Enemies/54尸国小队长/move_back_39.png" id="113_ulbkw"]
+[ext_resource type="Texture2D" uid="uid://dqth0dst7l51t" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_00.png" id="114_gqxkj"]
+[ext_resource type="Texture2D" uid="uid://bp056awkg6n0g" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_01.png" id="115_a7o42"]
+[ext_resource type="Texture2D" uid="uid://crgxucox27rs1" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_02.png" id="116_65v65"]
+[ext_resource type="Texture2D" uid="uid://nwwadpftt156" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_03.png" id="117_b12m3"]
+[ext_resource type="Texture2D" uid="uid://bs8trwbs4raxn" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_04.png" id="118_datwb"]
+[ext_resource type="Texture2D" uid="uid://jkbede5xekbq" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_05.png" id="119_moqqe"]
+[ext_resource type="Texture2D" uid="uid://buke62epfuyrl" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_06.png" id="120_4swxp"]
+[ext_resource type="Texture2D" uid="uid://d0dv4ht1ejv7w" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_07.png" id="121_ksjnw"]
+[ext_resource type="Texture2D" uid="uid://c2csx44atfxxm" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_08.png" id="122_hly8k"]
+[ext_resource type="Texture2D" uid="uid://bxr21gh7hdtsf" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_09.png" id="123_0gw25"]
+[ext_resource type="Texture2D" uid="uid://oloa3vtu4vce" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_10.png" id="124_2ndba"]
+[ext_resource type="Texture2D" uid="uid://0pgsfilhru38" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_11.png" id="125_y7r1l"]
+[ext_resource type="Texture2D" uid="uid://ox33v0j1mnon" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_12.png" id="126_o7ojg"]
+[ext_resource type="Texture2D" uid="uid://bgg7stjy71hpe" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_13.png" id="127_rsad5"]
+[ext_resource type="Texture2D" uid="uid://bdgtq5fsj8pki" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_14.png" id="128_spgg6"]
+[ext_resource type="Texture2D" uid="uid://b6scf5wjoxffw" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_15.png" id="129_8ly83"]
+[ext_resource type="Texture2D" uid="uid://ct7ybhyd1s7td" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_16.png" id="130_0bbii"]
+[ext_resource type="Texture2D" uid="uid://c36ygqd722xmm" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_17.png" id="131_0oy5e"]
+[ext_resource type="Texture2D" uid="uid://dkoctst0igdaw" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_18.png" id="132_bqouo"]
+[ext_resource type="Texture2D" uid="uid://baekvi4hbw5mu" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_19.png" id="133_6mu3s"]
+[ext_resource type="Texture2D" uid="uid://cjml7otsivj03" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_20.png" id="134_h3pht"]
+[ext_resource type="Texture2D" uid="uid://dbc0i5o137vpq" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_21.png" id="135_hryka"]
+[ext_resource type="Texture2D" uid="uid://daq2wtjsqc031" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_22.png" id="136_1kbgk"]
+[ext_resource type="Texture2D" uid="uid://b56usv0sb6j8l" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_23.png" id="137_7kkgi"]
+[ext_resource type="Texture2D" uid="uid://58bwr1tpr4cw" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_24.png" id="138_gmjqj"]
+[ext_resource type="Texture2D" uid="uid://ddbigvclkq8q0" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_25.png" id="139_5wwkx"]
+[ext_resource type="Texture2D" uid="uid://ch55dfa7u87is" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_26.png" id="140_glbjb"]
+[ext_resource type="Texture2D" uid="uid://byuv1l6nqxpdf" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_27.png" id="141_o36er"]
+[ext_resource type="Texture2D" uid="uid://rfdidgap0f3d" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_28.png" id="142_haoq7"]
+[ext_resource type="Texture2D" uid="uid://cmkjxxwrej4f4" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_29.png" id="143_8ll6l"]
+[ext_resource type="Texture2D" uid="uid://b35rfnboul56w" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_30.png" id="144_6pwga"]
+[ext_resource type="Texture2D" uid="uid://bnhpk7bk6sad7" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_31.png" id="145_xhmpk"]
+[ext_resource type="Texture2D" uid="uid://buvhvbfxoq0b5" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_32.png" id="146_jwnoj"]
+[ext_resource type="Texture2D" uid="uid://crwhn5myuu18k" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_33.png" id="147_7g2os"]
+[ext_resource type="Texture2D" uid="uid://cskbpq1pkafs0" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_34.png" id="148_kdj2h"]
+[ext_resource type="Texture2D" uid="uid://q4ju2uhwdr10" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_35.png" id="149_h54xv"]
+[ext_resource type="Texture2D" uid="uid://b0yu1520qi681" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_36.png" id="150_ve34y"]
+[ext_resource type="Texture2D" uid="uid://cl5ig8l857p4x" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_37.png" id="151_aqsbe"]
+[ext_resource type="Texture2D" uid="uid://oj6w7ojuwvw" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_38.png" id="152_7brtr"]
+[ext_resource type="Texture2D" uid="uid://birfwwcbtx8fp" path="res://Assets/Animations/Enemies/54尸国小队长/move_front_39.png" id="153_cesuk"]
+[ext_resource type="Texture2D" uid="uid://bexiaoxpqqmoi" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_00.png" id="154_mhdy8"]
+[ext_resource type="Texture2D" uid="uid://bvqxo6rptcdgs" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_01.png" id="155_lqdir"]
+[ext_resource type="Texture2D" uid="uid://bpk7betxqneto" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_02.png" id="156_bba2h"]
+[ext_resource type="Texture2D" uid="uid://syqv0y3aoa3g" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_03.png" id="157_iixwe"]
+[ext_resource type="Texture2D" uid="uid://cubj2xdpcxu1o" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_04.png" id="158_wqpv8"]
+[ext_resource type="Texture2D" uid="uid://cuu5mxw2glihb" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_05.png" id="159_37mvv"]
+[ext_resource type="Texture2D" uid="uid://dx66ocaxdueq2" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_06.png" id="160_2k4ev"]
+[ext_resource type="Texture2D" uid="uid://j3fc3yksi6oc" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_07.png" id="161_rjeq7"]
+[ext_resource type="Texture2D" uid="uid://bhww5dlujir6h" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_08.png" id="162_6b2v4"]
+[ext_resource type="Texture2D" uid="uid://bhoemedb0s0jx" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_09.png" id="163_au2l7"]
+[ext_resource type="Texture2D" uid="uid://dt7nt36n45kxm" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_10.png" id="164_jccgh"]
+[ext_resource type="Texture2D" uid="uid://btlml7orcmutn" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_11.png" id="165_6yvr0"]
+[ext_resource type="Texture2D" uid="uid://ct0clrqf6miyk" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_12.png" id="166_ped7a"]
+[ext_resource type="Texture2D" uid="uid://0twuvlkgkb0w" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_13.png" id="167_jvp35"]
+[ext_resource type="Texture2D" uid="uid://c54tbae7bhu8a" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_14.png" id="168_whd8w"]
+[ext_resource type="Texture2D" uid="uid://de4g3uje7e10l" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_15.png" id="169_6e3dr"]
+[ext_resource type="Texture2D" uid="uid://8qepp05cfrqt" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_16.png" id="170_yjxhy"]
+[ext_resource type="Texture2D" uid="uid://cq7soiuphpw73" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_17.png" id="171_pin8t"]
+[ext_resource type="Texture2D" uid="uid://cfj0gtuyresbi" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_18.png" id="172_i2r48"]
+[ext_resource type="Texture2D" uid="uid://c4nf8knvidbtc" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_19.png" id="173_2kp8b"]
+[ext_resource type="Texture2D" uid="uid://dkfqgfcqktj1b" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_20.png" id="174_8yvy3"]
+[ext_resource type="Texture2D" uid="uid://c27qgaqr8kvfr" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_21.png" id="175_17lt4"]
+[ext_resource type="Texture2D" uid="uid://cbijgxj558p6u" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_22.png" id="176_o1m3s"]
+[ext_resource type="Texture2D" uid="uid://dwyhvt1dwtujm" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_23.png" id="177_lab00"]
+[ext_resource type="Texture2D" uid="uid://sb8vifcaiqgo" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_24.png" id="178_ve112"]
+[ext_resource type="Texture2D" uid="uid://uvhpj5giw7vd" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_25.png" id="179_qskuw"]
+[ext_resource type="Texture2D" uid="uid://d3ke3ij8l2gnu" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_26.png" id="180_4ru2d"]
+[ext_resource type="Texture2D" uid="uid://c3s358k7k268r" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_27.png" id="181_qfspa"]
+[ext_resource type="Texture2D" uid="uid://cp62ihi15dndr" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_28.png" id="182_73lhv"]
+[ext_resource type="Texture2D" uid="uid://dpx27f4nylanp" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_29.png" id="183_62gg3"]
+[ext_resource type="Texture2D" uid="uid://ls4hp52ow3yq" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_30.png" id="184_ckcrl"]
+[ext_resource type="Texture2D" uid="uid://c3uvus7njd207" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_31.png" id="185_2i6qu"]
+[ext_resource type="Texture2D" uid="uid://b1p7nhqhed6uu" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_32.png" id="186_7ng6a"]
+[ext_resource type="Texture2D" uid="uid://bfe03kxv7g5cq" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_33.png" id="187_bnsiw"]
+[ext_resource type="Texture2D" uid="uid://b5eu30txkyoo6" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_34.png" id="188_msqc8"]
+[ext_resource type="Texture2D" uid="uid://e7vgfvuvsjl1" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_35.png" id="189_r350y"]
+[ext_resource type="Texture2D" uid="uid://c5uydb76u5hdq" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_36.png" id="190_a3gag"]
+[ext_resource type="Texture2D" uid="uid://7f10b4nnxwps" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_37.png" id="191_k1gmk"]
+[ext_resource type="Texture2D" uid="uid://bxoecgh50b24t" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_38.png" id="192_3wfsh"]
+[ext_resource type="Texture2D" uid="uid://bcfvam1j60amd" path="res://Assets/Animations/Enemies/54尸国小队长/move_normal_39.png" id="193_qk2o2"]
+[ext_resource type="PackedScene" uid="uid://dcqlwpqyykpkq" path="res://Scenes/Enemies/EnemyComponents/boss_ui.tscn" id="194_hfatu"]
+[ext_resource type="AudioStream" uid="uid://k4kkpxmp52ii" path="res://Assets/Sounds/FXs/Enemies/尸国统帅/统帅攻击.wav" id="195_m0pvy"]
+[ext_resource type="AudioStream" uid="uid://deoylb3dk2ljx" path="res://Assets/Sounds/FXs/Enemies/尸国统帅/血雨.wav" id="197_d84ji"]
+[ext_resource type="AudioStream" uid="uid://blll36ixbnmx6" path="res://Assets/Sounds/FXs/Enemies/尸国统帅/跪地.wav" id="198_gd4tv"]
+[ext_resource type="AudioStream" uid="uid://dle1i61spe4lv" path="res://Assets/Sounds/FXs/Enemies/尸国统帅/剑落地.wav" id="199_o24do"]
+
+[sub_resource type="Resource" id="Resource_plbku"]
+script = ExtResource("2_ym42l")
+health = 4000
+dodge_rate = 0.0
+near_damage_low = 24
+near_damage_high = 76
+near_attack_speed = 1.2
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.85
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 0.5
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jlxft"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_b3rbp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_egurx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_esor8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_y5pll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cfguv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_erwg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ckdpj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_eexgv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_khkp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_c1ik0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_k6oes")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_0txpe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_d0bco")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_sx6wr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_8srbk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_me541")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_f6jdm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_68ct1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_lqbpf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_fpd6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_klgrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_be61c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ktwm4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_64la2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_pgcf7")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_y3jhx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_80n7f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_dla1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_5hhjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_eo3bq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_rpl60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_1xa82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_fb1ww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_73v2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_shphx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_dfmtp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_70usy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_8e8fa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_860vb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_5oyvs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_8qfbq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_dnpsh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_une18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_8g4d0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_2ed6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_jng27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_we5q5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_q11qa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_a5b3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_2x3mr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_yxdii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_1rr2d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_0aexv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_03poc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_blcui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_o3lvr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_l5imb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_01ip1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_nbvad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_ovfj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_3kukn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_aqgp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_fvacc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_2fmqg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_0n2gw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_wm8n3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_ppbel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_4tlfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_747lt")
+}],
+"loop": false,
+"name": &"die",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_b3rbp")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("74_virjs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_tlhyd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_spdip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_1g0m2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_o3avq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_x5ird")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_r1vjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_mc1js")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_qe54d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_jx58r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_ecncp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_3dryu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_eno8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_m54i2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_8envx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_1ptvb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_pvrf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_fhycx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_68mkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_mddle")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_lt2jh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_2a6a5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_yj24a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_p525q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_bb384")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_ob4uw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_norse")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_7ri75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_o2dvy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_cgn4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_jaay8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_l45jw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_usw0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_tchqu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_w22sf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_8ynjn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_6keei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_3luvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_s8rtn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_ulbkw")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("114_gqxkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_a7o42")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_65v65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_b12m3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_datwb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_moqqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_4swxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_ksjnw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_hly8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_0gw25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_2ndba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_y7r1l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_o7ojg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_rsad5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_spgg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_8ly83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_0bbii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_0oy5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_bqouo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_6mu3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_h3pht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_hryka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_1kbgk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_7kkgi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_gmjqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_5wwkx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_glbjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_o36er")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_haoq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_8ll6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_6pwga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_xhmpk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_jwnoj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_7g2os")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_kdj2h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_h54xv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_ve34y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_aqsbe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_7brtr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_cesuk")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("154_mhdy8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_lqdir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_bba2h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_iixwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("158_wqpv8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_37mvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_2k4ev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_rjeq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_6b2v4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_au2l7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_jccgh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_6yvr0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("166_ped7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("167_jvp35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("168_whd8w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("169_6e3dr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("170_yjxhy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("171_pin8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_i2r48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("173_2kp8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_8yvy3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("175_17lt4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("176_o1m3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("177_lab00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("178_ve112")
+}, {
+"duration": 1.0,
+"texture": ExtResource("179_qskuw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("180_4ru2d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("181_qfspa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("182_73lhv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("183_62gg3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("184_ckcrl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("185_2i6qu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("186_7ng6a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("187_bnsiw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("188_msqc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("189_r350y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("190_a3gag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("191_k1gmk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("192_3wfsh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("193_qk2o2")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 30.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_skjbk"]
+size = Vector2(83.3333, 97.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7mxxu"]
+radius = 73.9444
+
+[node name="Enemy54" groups=["boss"] instance=ExtResource("1_by3e7")]
+scale = Vector2(1.2, 1.2)
+script = ExtResource("2_qm8yo")
+enemy_name = "尸国统帅"
+enemy_id = 54
+enemy_texture = ExtResource("3_7airt")
+enemy_type = 5
+is_final_boss = true
+start_data = SubResource("Resource_plbku")
+lives_taken = 20
+show_tip = false
+die_audio_stream_list = Array[AudioStream]([ExtResource("5_lvxoe")])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(5, -110)
+sprite_frames = SubResource("SpriteFrames_jlxft")
+animation = &"die"
+autoplay = "idle"
+
+[node name="BodyCollision" parent="UnitBody" index="1"]
+shape = SubResource("RectangleShape2D_skjbk")
+
+[node name="EnemyButton" parent="UnitBody" index="4"]
+offset_left = -53.0
+offset_right = 55.0
+
+[node name="AttackArea" type="Area2D" parent="UnitBody" index="10"]
+position = Vector2(115, 0)
+scale = Vector2(0.5, 0.5)
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/AttackArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_7mxxu")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="BossUI" parent="." index="5" node_paths=PackedStringArray("linked_boss") instance=ExtResource("194_hfatu")]
+linked_boss = NodePath("..")
+
+[node name="AttackAudio" type="AudioStreamPlayer" parent="." index="6"]
+stream = ExtResource("195_m0pvy")
+bus = &"Sound"
+
+[node name="RainAudio" type="AudioStreamPlayer" parent="." index="7"]
+stream = ExtResource("197_d84ji")
+volume_db = -8.0
+bus = &"Sound"
+
+[node name="KneeAudio" type="AudioStreamPlayer" parent="." index="8"]
+stream = ExtResource("198_gd4tv")
+bus = &"Sound"
+
+[node name="FallAudio" type="AudioStreamPlayer" parent="." index="9"]
+stream = ExtResource("199_o24do")
+bus = &"Sound"

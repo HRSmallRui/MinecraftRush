@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5d3sqw4i1g4n"]
+
+[ext_resource type="PackedScene" uid="uid://bjfa3t67tpsbr" path="res://Scenes/Buffs/property_buff.tscn" id="1_buxtm"]
+[ext_resource type="Script" path="res://Scripts/Buffs/freeze_buff.gd" id="2_gl88h"]
+[ext_resource type="Script" path="res://Scripts/Buffs/property_buff_block.gd" id="3_diau7"]
+
+[sub_resource type="Resource" id="Resource_dkpsg"]
+script = ExtResource("3_diau7")
+property_type = 9
+operation_type = 1
+operation_data = 0.0
+
+[node name="FreezeBuff" instance=ExtResource("1_buxtm")]
+script = ExtResource("2_gl88h")
+buff_blocks = Array[ExtResource("3_diau7")]([SubResource("Resource_dkpsg")])
+buff_type = 1
+buff_tag = "god_freeze"
+immune_groups = Array[String](["god", "boss", "super_unit"])

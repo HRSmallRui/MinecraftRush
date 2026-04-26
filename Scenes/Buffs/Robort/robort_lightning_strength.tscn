@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2v8m0cvibtcd"]
+
+[ext_resource type="PackedScene" uid="uid://bjfa3t67tpsbr" path="res://Scenes/Buffs/property_buff.tscn" id="1_o7ib5"]
+[ext_resource type="Script" path="res://Scripts/Buffs/property_buff_block.gd" id="2_i75i1"]
+[ext_resource type="Script" path="res://Scripts/Classes/potion_particle_leader.gd" id="3_rcain"]
+
+[sub_resource type="Resource" id="Resource_aak3k"]
+script = ExtResource("2_i75i1")
+property_type = 1
+operation_type = 1
+operation_data = 1.5
+
+[sub_resource type="Resource" id="Resource_qx1i2"]
+script = ExtResource("2_i75i1")
+property_type = 2
+operation_type = 1
+operation_data = 1.5
+
+[node name="RobortLightningStrength" instance=ExtResource("1_o7ib5")]
+buff_blocks = Array[ExtResource("2_i75i1")]([SubResource("Resource_aak3k"), SubResource("Resource_qx1i2")])
+duration = 4.0
+buff_tag = "RobortLightningStrength"
+
+[node name="PotionParticleLeader" type="Node2D" parent="." index="0" node_paths=PackedStringArray("buff_vehicle")]
+script = ExtResource("3_rcain")
+potion_color = Color(0.631373, 0, 0, 1)
+buff_vehicle = NodePath("..")

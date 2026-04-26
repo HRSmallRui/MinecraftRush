@@ -1,0 +1,228 @@
+[gd_scene load_steps=10 format=3 uid="uid://d13s4xxuiqsra"]
+
+[ext_resource type="Script" path="res://Scripts/StageComponents/camera_up_down_component.gd" id="1_nls2m"]
+[ext_resource type="Texture2D" uid="uid://5vskalp00r1x" path="res://Assets/Images/UI/mobile_button2.png" id="2_oma1o"]
+[ext_resource type="Texture2D" uid="uid://dmicwrk5uv4w6" path="res://Assets/Images/UI/pause_continue_hover.png" id="3_gjbaw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jpo10"]
+atlas = ExtResource("2_oma1o")
+region = Rect2(50, 50, 156, 156)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d2ccm"]
+bg_color = Color(0.103744, 0.103744, 0.103744, 0.427451)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hilxh"]
+bg_color = Color(0, 0, 0, 0.427451)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="Animation" id="Animation_t4ul2"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1925, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(351.5, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("IntoButton:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1830, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("IntoButton:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(416, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("IntoButton:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["<"]
+}
+
+[sub_resource type="Animation" id="Animation_2jere"]
+resource_name = "entry"
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1925, -0.25, 0, 0.25, 0, 1762, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(351.5, -0.25, 0, 0.25, 0, 351.5, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("IntoButton:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1830, -0.25, 0, 0.25, 0, 1667, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("IntoButton:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(416, -0.25, 0, 0.25, 0, 416, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("IntoButton:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["<", ">"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pp0ju"]
+_data = {
+"RESET": SubResource("Animation_t4ul2"),
+"entry": SubResource("Animation_2jere")
+}
+
+[node name="CameraUpDownComponent" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_nls2m")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 5.0
+offset_top = -188.5
+offset_right = 161.0
+offset_bottom = 188.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 65
+
+[node name="UpButton" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+texture_normal = SubResource("AtlasTexture_jpo10")
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/UpButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 154.0
+offset_bottom = 154.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+texture = ExtResource("3_gjbaw")
+
+[node name="DownButton" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+texture_normal = SubResource("AtlasTexture_jpo10")
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/DownButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 157.0
+offset_top = -1.0
+offset_right = 157.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5708
+texture = ExtResource("3_gjbaw")
+
+[node name="IntoButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1830.0
+offset_top = 416.0
+offset_right = 1917.0
+offset_bottom = 657.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 72
+theme_override_styles/hover = SubResource("StyleBoxFlat_d2ccm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hilxh")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hilxh")
+text = "<"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_pp0ju")
+}
+speed_scale = 2.0

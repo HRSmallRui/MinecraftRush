@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3 uid="uid://dwl05icpd3c7f"]
+
+[ext_resource type="Texture2D" uid="uid://imgqmw8vtc6i" path="res://Assets/Images/UI/SeenBook/normal.png" id="1_rdg4x"]
+[ext_resource type="Texture2D" uid="uid://7ov2dyp8x1x8" path="res://Assets/Images/UI/SeenBook/hover.png" id="2_kqb5h"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Map/seen_book_button.gd" id="3_m1p38"]
+[ext_resource type="Texture2D" uid="uid://b4pk4l2pxdk51" path="res://Assets/Images/UI/SeenBook/Locked.png" id="4_w2yrd"]
+[ext_resource type="AudioStream" uid="uid://ckytwx1c0ug78" path="res://Assets/Sounds/FXs/UIs/bookchange.mp3" id="5_0r53j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gn3pf"]
+atlas = ExtResource("1_rdg4x")
+region = Rect2(23, 25, 82, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jjls6"]
+atlas = ExtResource("2_kqb5h")
+region = Rect2(23, 25, 82, 78)
+
+[node name="SeenBookButton" type="TextureButton"]
+focus_mode = 0
+texture_normal = SubResource("AtlasTexture_gn3pf")
+texture_pressed = SubResource("AtlasTexture_gn3pf")
+texture_hover = SubResource("AtlasTexture_jjls6")
+texture_disabled = SubResource("AtlasTexture_gn3pf")
+script = ExtResource("3_m1p38")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 6.0
+offset_right = 137.0
+offset_bottom = 134.0
+scale = Vector2(0.510547, 0.510547)
+texture = ExtResource("4_w2yrd")
+
+[node name="ChangeAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_0r53j")
+max_polyphony = 4
+bus = &"Sound"

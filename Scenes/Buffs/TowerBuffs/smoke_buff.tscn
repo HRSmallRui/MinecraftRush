@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://byav5daq1t5xp"]
+
+[ext_resource type="PackedScene" uid="uid://bjfa3t67tpsbr" path="res://Scenes/Buffs/property_buff.tscn" id="1_jfx8a"]
+[ext_resource type="Script" path="res://Scripts/Buffs/property_buff_block.gd" id="2_oy1cx"]
+
+[sub_resource type="Resource" id="Resource_idrwu"]
+script = ExtResource("2_oy1cx")
+property_type = 9
+operation_type = 1
+operation_data = 0.6
+
+[sub_resource type="Resource" id="Resource_02ed7"]
+script = ExtResource("2_oy1cx")
+property_type = 10
+operation_type = 0
+operation_data = -0.5
+
+[sub_resource type="Resource" id="Resource_opy3k"]
+script = ExtResource("2_oy1cx")
+property_type = 12
+operation_type = 1
+operation_data = 0.1
+
+[node name="SmokeBuff" instance=ExtResource("1_jfx8a")]
+buff_blocks = Array[ExtResource("2_oy1cx")]([SubResource("Resource_idrwu"), SubResource("Resource_02ed7"), SubResource("Resource_opy3k")])
+buff_type = 1
+duration = 0.5
+immune_groups = Array[String](["boss", "super_unit", "god"])

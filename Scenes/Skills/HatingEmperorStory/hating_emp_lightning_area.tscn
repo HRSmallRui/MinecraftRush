@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnva3b0cv1bc3"]
+
+[ext_resource type="Script" path="res://Scripts/Skills/hating_emp_lightning_area.gd" id="1_1if83"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g3mjy"]
+radius = 73.9444
+
+[node name="HatingEmpLightningArea" type="Area2D"]
+collision_layer = 0
+collision_mask = 24
+script = ExtResource("1_1if83")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.5, 1.05)
+shape = SubResource("CircleShape2D_g3mjy")
+debug_color = Color(1, 1, 1, 0)

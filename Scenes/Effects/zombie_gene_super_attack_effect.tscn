@@ -1,0 +1,75 @@
+[gd_scene load_steps=7 format=3 uid="uid://b0v30fltp7a4m"]
+
+[ext_resource type="Script" path="res://Scripts/Effects/zombie_gene_super_attack_effect.gd" id="1_orvom"]
+[ext_resource type="Texture2D" uid="uid://jwhrywmm3csh" path="res://Assets/Images/Effects/ZombieGeneSworid.png" id="1_vokee"]
+
+[sub_resource type="Animation" id="Animation_lboj8"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cut/SwordSprite:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(281, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_h6fm5"]
+resource_name = "appear"
+length = 0.2
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cut/SwordSprite:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(281, -0.25, 0, 0.25, 0, 143, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q635m"]
+_data = {
+"RESET": SubResource("Animation_lboj8"),
+"appear": SubResource("Animation_h6fm5")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q5nkn"]
+radius = 19.0536
+
+[node name="ZombieGeneSuperAttackEffect" type="Node2D"]
+script = ExtResource("1_orvom")
+
+[node name="Cut" type="Control" parent="."]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = -47.0
+offset_top = -145.0
+offset_right = 47.0
+
+[node name="SwordSprite" type="Sprite2D" parent="Cut"]
+position = Vector2(47, 281)
+rotation = -1.5708
+texture = ExtResource("1_vokee")
+offset = Vector2(43.5232, 1.33557)
+region_enabled = true
+region_rect = Rect2(1, 2, 185, 58)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_q635m")
+}
+autoplay = "appear"
+
+[node name="PathArea" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathArea"]
+scale = Vector2(1, 0.7)
+shape = SubResource("CircleShape2D_q5nkn")

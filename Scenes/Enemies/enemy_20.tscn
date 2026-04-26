@@ -1,0 +1,528 @@
+[gd_scene load_steps=124 format=3 uid="uid://o3xssgmrkof1"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_cw4j4"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_20.gd" id="2_ffwmu"]
+[ext_resource type="AudioStream" uid="uid://dw1xc50um8dws" path="res://Assets/Sounds/FXs/Enemies/尸壳/尸壳死亡1.wav" id="3_dkxlc"]
+[ext_resource type="Texture2D" uid="uid://dhg8dlh63743c" path="res://Assets/Images/UI/InformationBar/尸壳勇士.png" id="3_dynjx"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="3_jfded"]
+[ext_resource type="Texture2D" uid="uid://c2w83nsa0ncqv" path="res://Assets/Animations/Enemies/20尸壳勇士/attack_00.png" id="3_yrsll"]
+[ext_resource type="AudioStream" uid="uid://dpppdrj6vx40o" path="res://Assets/Sounds/FXs/Enemies/尸壳/尸壳死亡2.wav" id="4_fyooa"]
+[ext_resource type="Texture2D" uid="uid://cqp1amq33urag" path="res://Assets/Animations/Enemies/20尸壳勇士/attack_01.png" id="4_jpobw"]
+[ext_resource type="Texture2D" uid="uid://d1y04tcl4qj7v" path="res://Assets/Animations/Enemies/20尸壳勇士/attack_02.png" id="5_g62bd"]
+[ext_resource type="AudioStream" uid="uid://d0pnofrboijy" path="res://Assets/Sounds/FXs/Enemies/尸壳/尸壳死亡3.wav" id="5_ss5re"]
+[ext_resource type="Texture2D" uid="uid://dl6kh6i0k2ig" path="res://Assets/Animations/Enemies/20尸壳勇士/attack_03.png" id="6_gx6vi"]
+[ext_resource type="Texture2D" uid="uid://bwwb8x6yvjo2w" path="res://Assets/Animations/Enemies/20尸壳勇士/attack_04.png" id="7_qb8yh"]
+[ext_resource type="Texture2D" uid="uid://dkykasfobfiyu" path="res://Assets/Animations/Enemies/20尸壳勇士/attack_05.png" id="8_oss0x"]
+[ext_resource type="Texture2D" uid="uid://de0pqbo8txer" path="res://Assets/Animations/Enemies/20尸壳勇士/attack_06.png" id="9_32cb7"]
+[ext_resource type="Texture2D" uid="uid://b62p6wy6kc38s" path="res://Assets/Animations/Enemies/20尸壳勇士/attack_07.png" id="10_yjt4h"]
+[ext_resource type="Texture2D" uid="uid://dgonxo6sqb8x2" path="res://Assets/Animations/Enemies/20尸壳勇士/attack_08.png" id="11_xohmq"]
+[ext_resource type="Texture2D" uid="uid://b8hppon5sghhr" path="res://Assets/Animations/Enemies/20尸壳勇士/attack_09.png" id="12_yngy5"]
+[ext_resource type="Texture2D" uid="uid://d2m7ior75knxo" path="res://Assets/Animations/Enemies/20尸壳勇士/attack_10.png" id="13_4cpq2"]
+[ext_resource type="Texture2D" uid="uid://c731w7uhwn2va" path="res://Assets/Animations/Enemies/20尸壳勇士/attack_11.png" id="14_jyii7"]
+[ext_resource type="Texture2D" uid="uid://dqcgcxdplrbiw" path="res://Assets/Animations/Enemies/20尸壳勇士/attack_12.png" id="15_71x13"]
+[ext_resource type="Texture2D" uid="uid://ysm36aedxybc" path="res://Assets/Animations/Enemies/20尸壳勇士/attack_13.png" id="16_2ou6h"]
+[ext_resource type="Texture2D" uid="uid://qeoxs4uc5yhq" path="res://Assets/Animations/Enemies/20尸壳勇士/attack_14.png" id="17_5f0e0"]
+[ext_resource type="Texture2D" uid="uid://cy2k0h7gvim6b" path="res://Assets/Animations/Enemies/20尸壳勇士/attack_15.png" id="18_p4euy"]
+[ext_resource type="Texture2D" uid="uid://dcosutcv021fl" path="res://Assets/Animations/Enemies/20尸壳勇士/attack_16.png" id="19_wjqjh"]
+[ext_resource type="Texture2D" uid="uid://ck7imwp77yunw" path="res://Assets/Animations/Enemies/20尸壳勇士/attack_17.png" id="20_xrbxa"]
+[ext_resource type="Texture2D" uid="uid://dht4qc6a2l8yd" path="res://Assets/Animations/Enemies/20尸壳勇士/attack_18.png" id="21_xlqt1"]
+[ext_resource type="Texture2D" uid="uid://yjif14ccy7yi" path="res://Assets/Animations/Enemies/20尸壳勇士/attack_19.png" id="22_shetu"]
+[ext_resource type="Texture2D" uid="uid://b8t1h86v7fvix" path="res://Assets/Animations/Enemies/20尸壳勇士/attack_20.png" id="23_d2330"]
+[ext_resource type="Texture2D" uid="uid://r00llgxy765y" path="res://Assets/Animations/Enemies/20尸壳勇士/attack_21.png" id="24_1vcmm"]
+[ext_resource type="Texture2D" uid="uid://v7av2iyogwb5" path="res://Assets/Animations/Enemies/20尸壳勇士/attack_22.png" id="25_hvc4g"]
+[ext_resource type="Texture2D" uid="uid://bmy880rcknyli" path="res://Assets/Animations/Enemies/20尸壳勇士/attack_23.png" id="26_0dkmi"]
+[ext_resource type="Texture2D" uid="uid://vkor0x0d863b" path="res://Assets/Animations/Enemies/20尸壳勇士/attack_24.png" id="27_h6vd6"]
+[ext_resource type="Texture2D" uid="uid://nc72qgo40rnc" path="res://Assets/Animations/Enemies/20尸壳勇士/die_00.png" id="28_e080f"]
+[ext_resource type="Texture2D" uid="uid://c7atk07b38md1" path="res://Assets/Animations/Enemies/20尸壳勇士/die_01.png" id="29_iwhij"]
+[ext_resource type="Texture2D" uid="uid://b3egp6uybaoa4" path="res://Assets/Animations/Enemies/20尸壳勇士/die_02.png" id="30_1w6qr"]
+[ext_resource type="Texture2D" uid="uid://ba7ulwgnc1nw8" path="res://Assets/Animations/Enemies/20尸壳勇士/die_03.png" id="31_bwd1y"]
+[ext_resource type="Texture2D" uid="uid://sgwmgwr11r2y" path="res://Assets/Animations/Enemies/20尸壳勇士/die_04.png" id="32_apm85"]
+[ext_resource type="Texture2D" uid="uid://bqcfk0m6nlenf" path="res://Assets/Animations/Enemies/20尸壳勇士/die_05.png" id="33_qbrnn"]
+[ext_resource type="Texture2D" uid="uid://bxch7df5d3dio" path="res://Assets/Animations/Enemies/20尸壳勇士/die_06.png" id="34_qarhw"]
+[ext_resource type="Texture2D" uid="uid://dimdrfjebxifc" path="res://Assets/Animations/Enemies/20尸壳勇士/die_07.png" id="35_ps7lu"]
+[ext_resource type="Texture2D" uid="uid://bacekcxrjb2ey" path="res://Assets/Animations/Enemies/20尸壳勇士/die_08.png" id="36_raxt3"]
+[ext_resource type="Texture2D" uid="uid://dtfrd8sv54ffy" path="res://Assets/Animations/Enemies/20尸壳勇士/die_09.png" id="37_myuro"]
+[ext_resource type="Texture2D" uid="uid://cvhumcgmwlvnk" path="res://Assets/Animations/Enemies/20尸壳勇士/die_10.png" id="38_87fx3"]
+[ext_resource type="Texture2D" uid="uid://bvw08cd5seml4" path="res://Assets/Animations/Enemies/20尸壳勇士/die_11.png" id="39_p3ypu"]
+[ext_resource type="Texture2D" uid="uid://cyvi4vg0n5hyo" path="res://Assets/Animations/Enemies/20尸壳勇士/die_12.png" id="40_bh0ee"]
+[ext_resource type="Texture2D" uid="uid://c7pg0c62pyyct" path="res://Assets/Animations/Enemies/20尸壳勇士/move_back_00.png" id="41_m4d8q"]
+[ext_resource type="Texture2D" uid="uid://qhfg5mtlutv8" path="res://Assets/Animations/Enemies/20尸壳勇士/move_front_00.png" id="41_wrd47"]
+[ext_resource type="Texture2D" uid="uid://ckjdjqywed1rs" path="res://Assets/Animations/Enemies/20尸壳勇士/move_front_01.png" id="42_8ww8p"]
+[ext_resource type="Texture2D" uid="uid://ca2564pbrp7hk" path="res://Assets/Animations/Enemies/20尸壳勇士/move_back_01.png" id="42_f7hn1"]
+[ext_resource type="Texture2D" uid="uid://dyimc666wr55s" path="res://Assets/Animations/Enemies/20尸壳勇士/move_back_02.png" id="43_33jju"]
+[ext_resource type="Texture2D" uid="uid://dgiin1xbf40xi" path="res://Assets/Animations/Enemies/20尸壳勇士/move_front_02.png" id="43_lma7v"]
+[ext_resource type="Texture2D" uid="uid://tiistbxax5e4" path="res://Assets/Animations/Enemies/20尸壳勇士/move_back_03.png" id="44_46efg"]
+[ext_resource type="Texture2D" uid="uid://he4pssrs7nqt" path="res://Assets/Animations/Enemies/20尸壳勇士/move_front_03.png" id="44_ujd4q"]
+[ext_resource type="Texture2D" uid="uid://bjuhety61whkd" path="res://Assets/Animations/Enemies/20尸壳勇士/move_front_04.png" id="45_70m8f"]
+[ext_resource type="Texture2D" uid="uid://cy10qka3bs0p0" path="res://Assets/Animations/Enemies/20尸壳勇士/move_back_04.png" id="45_ceesj"]
+[ext_resource type="Texture2D" uid="uid://uykp8t3xbu0l" path="res://Assets/Animations/Enemies/20尸壳勇士/move_back_05.png" id="46_0fa6f"]
+[ext_resource type="Texture2D" uid="uid://ckfu1pom3stc2" path="res://Assets/Animations/Enemies/20尸壳勇士/move_front_05.png" id="46_d6tvh"]
+[ext_resource type="Texture2D" uid="uid://c1jy5xrec56l6" path="res://Assets/Animations/Enemies/20尸壳勇士/move_front_06.png" id="47_gm3ib"]
+[ext_resource type="Texture2D" uid="uid://bwldmsl7fbpw1" path="res://Assets/Animations/Enemies/20尸壳勇士/move_back_06.png" id="47_r2gks"]
+[ext_resource type="Texture2D" uid="uid://cc744jkgkrppv" path="res://Assets/Animations/Enemies/20尸壳勇士/move_front_07.png" id="48_6jvyd"]
+[ext_resource type="Texture2D" uid="uid://wrp0m7eucrdn" path="res://Assets/Animations/Enemies/20尸壳勇士/move_back_07.png" id="48_c0spc"]
+[ext_resource type="Texture2D" uid="uid://brxuq3v0n2sst" path="res://Assets/Animations/Enemies/20尸壳勇士/move_back_08.png" id="49_i4ikd"]
+[ext_resource type="Texture2D" uid="uid://d1p4yxb34jxpb" path="res://Assets/Animations/Enemies/20尸壳勇士/move_front_08.png" id="49_lx4eo"]
+[ext_resource type="Texture2D" uid="uid://cq6qf3pd5vhux" path="res://Assets/Animations/Enemies/20尸壳勇士/move_back_09.png" id="50_g2ej2"]
+[ext_resource type="Texture2D" uid="uid://ds18j7ws4ot6u" path="res://Assets/Animations/Enemies/20尸壳勇士/move_front_09.png" id="50_qo667"]
+[ext_resource type="Texture2D" uid="uid://c4gphton18exo" path="res://Assets/Animations/Enemies/20尸壳勇士/move_back_10.png" id="51_hpbge"]
+[ext_resource type="Texture2D" uid="uid://2h7khvmsoppj" path="res://Assets/Animations/Enemies/20尸壳勇士/move_front_10.png" id="51_u0jjm"]
+[ext_resource type="Texture2D" uid="uid://dfy8jfyc3t0bt" path="res://Assets/Animations/Enemies/20尸壳勇士/move_front_11.png" id="52_1syvl"]
+[ext_resource type="Texture2D" uid="uid://xlasyii64v3p" path="res://Assets/Animations/Enemies/20尸壳勇士/move_back_11.png" id="52_o0clm"]
+[ext_resource type="Texture2D" uid="uid://cu1qlawq7dq1v" path="res://Assets/Animations/Enemies/20尸壳勇士/move_front_12.png" id="53_hu16m"]
+[ext_resource type="Texture2D" uid="uid://cijaainbb3hwj" path="res://Assets/Animations/Enemies/20尸壳勇士/move_back_12.png" id="53_kfq6e"]
+[ext_resource type="Texture2D" uid="uid://dxefve27xpym7" path="res://Assets/Animations/Enemies/20尸壳勇士/move_front_13.png" id="54_e2sn8"]
+[ext_resource type="Texture2D" uid="uid://cjxidmrghi6nl" path="res://Assets/Animations/Enemies/20尸壳勇士/move_back_13.png" id="54_yfi0f"]
+[ext_resource type="Texture2D" uid="uid://8jxeg2hf8y34" path="res://Assets/Animations/Enemies/20尸壳勇士/move_back_14.png" id="55_4622u"]
+[ext_resource type="Texture2D" uid="uid://bum1aile7nfdv" path="res://Assets/Animations/Enemies/20尸壳勇士/move_front_14.png" id="55_g57bv"]
+[ext_resource type="Texture2D" uid="uid://hlpgyljrvvew" path="res://Assets/Animations/Enemies/20尸壳勇士/move_front_15.png" id="56_f7c03"]
+[ext_resource type="Texture2D" uid="uid://d0576yg8mnqoa" path="res://Assets/Animations/Enemies/20尸壳勇士/move_back_15.png" id="56_lbuq1"]
+[ext_resource type="Texture2D" uid="uid://4gfaxrhsr3mr" path="res://Assets/Animations/Enemies/20尸壳勇士/move_back_16.png" id="57_5mrse"]
+[ext_resource type="Texture2D" uid="uid://doevcnrcdfs4l" path="res://Assets/Animations/Enemies/20尸壳勇士/move_front_16.png" id="57_sqn4x"]
+[ext_resource type="Texture2D" uid="uid://fekhb0pp2xre" path="res://Assets/Animations/Enemies/20尸壳勇士/move_front_17.png" id="58_3dpaa"]
+[ext_resource type="Texture2D" uid="uid://csy8tyu6hxrxm" path="res://Assets/Animations/Enemies/20尸壳勇士/move_back_17.png" id="58_em2pw"]
+[ext_resource type="Texture2D" uid="uid://dpq1nr3kquloj" path="res://Assets/Animations/Enemies/20尸壳勇士/move_front_18.png" id="59_j8y1g"]
+[ext_resource type="Texture2D" uid="uid://tatvsoappy6m" path="res://Assets/Animations/Enemies/20尸壳勇士/move_back_18.png" id="59_na3dl"]
+[ext_resource type="Texture2D" uid="uid://lhrma6tve4x6" path="res://Assets/Animations/Enemies/20尸壳勇士/move_back_19.png" id="60_1roco"]
+[ext_resource type="Texture2D" uid="uid://dd2hi4luwjto5" path="res://Assets/Animations/Enemies/20尸壳勇士/move_front_19.png" id="60_blopj"]
+[ext_resource type="Texture2D" uid="uid://b1qaxxo6wuqrb" path="res://Assets/Animations/Enemies/20尸壳勇士/move_front_20.png" id="61_jxclb"]
+[ext_resource type="Texture2D" uid="uid://je5s62vvcivi" path="res://Assets/Animations/Enemies/20尸壳勇士/move_back_20.png" id="61_k7eem"]
+[ext_resource type="Texture2D" uid="uid://darbjtk34syav" path="res://Assets/Animations/Enemies/20尸壳勇士/move_back_21.png" id="62_lv5gj"]
+[ext_resource type="Texture2D" uid="uid://2tnp4k5qtl0u" path="res://Assets/Animations/Enemies/20尸壳勇士/move_front_21.png" id="62_uj7cv"]
+[ext_resource type="Texture2D" uid="uid://d4h48ke4hveap" path="res://Assets/Animations/Enemies/20尸壳勇士/move_back_22.png" id="63_8n6wa"]
+[ext_resource type="Texture2D" uid="uid://ioohg0d0pft7" path="res://Assets/Animations/Enemies/20尸壳勇士/move_front_22.png" id="63_s0gmm"]
+[ext_resource type="Texture2D" uid="uid://dv7a1gb4pepvp" path="res://Assets/Animations/Enemies/20尸壳勇士/move_back_23.png" id="64_n7moy"]
+[ext_resource type="Texture2D" uid="uid://b34g6abxw61xh" path="res://Assets/Animations/Enemies/20尸壳勇士/move_front_23.png" id="64_ooinj"]
+[ext_resource type="Texture2D" uid="uid://cejv1dj22vsxw" path="res://Assets/Animations/Enemies/20尸壳勇士/move_normal_00.png" id="65_dl1dx"]
+[ext_resource type="Texture2D" uid="uid://iee1dy53c750" path="res://Assets/Animations/Enemies/20尸壳勇士/move_normal_01.png" id="66_ghqyy"]
+[ext_resource type="Texture2D" uid="uid://dqtm8ggom6hma" path="res://Assets/Animations/Enemies/20尸壳勇士/move_normal_02.png" id="67_qwwb2"]
+[ext_resource type="Texture2D" uid="uid://dqop7nn4rkpgo" path="res://Assets/Animations/Enemies/20尸壳勇士/move_normal_03.png" id="68_543nx"]
+[ext_resource type="Texture2D" uid="uid://cw1orbomn4p28" path="res://Assets/Animations/Enemies/20尸壳勇士/move_normal_04.png" id="69_silsw"]
+[ext_resource type="Texture2D" uid="uid://dd6xtq7ixtwud" path="res://Assets/Animations/Enemies/20尸壳勇士/move_normal_05.png" id="70_e7ty5"]
+[ext_resource type="Texture2D" uid="uid://ch5sywuvtkwu3" path="res://Assets/Animations/Enemies/20尸壳勇士/move_normal_06.png" id="71_jfpt5"]
+[ext_resource type="Texture2D" uid="uid://cy5qn0r6te43j" path="res://Assets/Animations/Enemies/20尸壳勇士/move_normal_07.png" id="72_xfjs6"]
+[ext_resource type="Texture2D" uid="uid://clh0w3lnhue7o" path="res://Assets/Animations/Enemies/20尸壳勇士/move_normal_08.png" id="73_q6w6x"]
+[ext_resource type="Texture2D" uid="uid://dr4uq21u2ebhj" path="res://Assets/Animations/Enemies/20尸壳勇士/move_normal_09.png" id="74_at1d3"]
+[ext_resource type="Texture2D" uid="uid://c6aeyedx376af" path="res://Assets/Animations/Enemies/20尸壳勇士/move_normal_10.png" id="75_iqm2a"]
+[ext_resource type="Texture2D" uid="uid://kulcwgxgnoye" path="res://Assets/Animations/Enemies/20尸壳勇士/move_normal_11.png" id="76_d7mi2"]
+[ext_resource type="Texture2D" uid="uid://dga3rg2hy8jvg" path="res://Assets/Animations/Enemies/20尸壳勇士/move_normal_12.png" id="77_2414k"]
+[ext_resource type="Texture2D" uid="uid://brbbh102f8bq7" path="res://Assets/Animations/Enemies/20尸壳勇士/move_normal_13.png" id="78_eoww6"]
+[ext_resource type="Texture2D" uid="uid://dv6ja5utopmi4" path="res://Assets/Animations/Enemies/20尸壳勇士/move_normal_14.png" id="79_rdapw"]
+[ext_resource type="Texture2D" uid="uid://4k61jxr7k1o7" path="res://Assets/Animations/Enemies/20尸壳勇士/move_normal_15.png" id="80_wo3ea"]
+[ext_resource type="Texture2D" uid="uid://bgb4ijsq2icvp" path="res://Assets/Animations/Enemies/20尸壳勇士/move_normal_16.png" id="81_fwb86"]
+[ext_resource type="Texture2D" uid="uid://bsgovsg7661qk" path="res://Assets/Animations/Enemies/20尸壳勇士/move_normal_17.png" id="82_yusp3"]
+[ext_resource type="Texture2D" uid="uid://cakm8i2p7mshf" path="res://Assets/Animations/Enemies/20尸壳勇士/move_normal_18.png" id="83_4vah0"]
+[ext_resource type="Texture2D" uid="uid://cp26vcf07joa5" path="res://Assets/Animations/Enemies/20尸壳勇士/move_normal_19.png" id="84_ewnpt"]
+[ext_resource type="Texture2D" uid="uid://len3gr7uhnfd" path="res://Assets/Animations/Enemies/20尸壳勇士/move_normal_20.png" id="85_epd0j"]
+[ext_resource type="Texture2D" uid="uid://bd8trtwp5fdvj" path="res://Assets/Animations/Enemies/20尸壳勇士/move_normal_21.png" id="86_yi73q"]
+[ext_resource type="Texture2D" uid="uid://sb8vui8hulnr" path="res://Assets/Animations/Enemies/20尸壳勇士/move_normal_22.png" id="87_864js"]
+[ext_resource type="Texture2D" uid="uid://wgmq7ytndjan" path="res://Assets/Animations/Enemies/20尸壳勇士/move_normal_23.png" id="88_su08c"]
+[ext_resource type="PackedScene" uid="uid://dcjuved17hj6j" path="res://Scenes/Enemies/EnemyComponents/appear_audio_component.tscn" id="113_nkiqh"]
+[ext_resource type="AudioStream" uid="uid://cwt2rga6wmbip" path="res://Assets/Sounds/FXs/Enemies/尸壳/尸壳出现1.wav" id="114_rylhk"]
+[ext_resource type="AudioStream" uid="uid://ddwrkohhv4ma2" path="res://Assets/Sounds/FXs/Enemies/尸壳/尸壳出现2.wav" id="115_x0qcu"]
+[ext_resource type="AudioStream" uid="uid://cdlnobqdkucyt" path="res://Assets/Sounds/FXs/Enemies/尸壳/尸壳出现3.wav" id="116_oo4mf"]
+
+[sub_resource type="Resource" id="Resource_wcqex"]
+script = ExtResource("3_jfded")
+health = 320
+dodge_rate = 0.0
+near_damage_low = 16
+near_damage_high = 24
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.2
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 1.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1nfkd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_yrsll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jpobw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_g62bd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gx6vi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qb8yh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_oss0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_32cb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_yjt4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_xohmq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_yngy5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_4cpq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_jyii7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_71x13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_2ou6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_5f0e0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_p4euy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_wjqjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_xrbxa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_xlqt1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_shetu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_d2330")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_1vcmm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_hvc4g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_0dkmi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_h6vd6")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_e080f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_iwhij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_1w6qr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_bwd1y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_apm85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_qbrnn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_qarhw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ps7lu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_raxt3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_myuro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_87fx3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_p3ypu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_bh0ee")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_yrsll")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("41_m4d8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_f7hn1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_33jju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_46efg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_ceesj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_0fa6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_r2gks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_c0spc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_i4ikd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_g2ej2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_hpbge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_o0clm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_kfq6e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_yfi0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_4622u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_lbuq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_5mrse")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_em2pw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_na3dl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_1roco")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_k7eem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_lv5gj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_8n6wa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_n7moy")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("41_wrd47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_8ww8p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_lma7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_ujd4q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_70m8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_d6tvh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_gm3ib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_6jvyd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_lx4eo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_qo667")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_u0jjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_1syvl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_hu16m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_e2sn8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_g57bv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_f7c03")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_sqn4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_3dpaa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_j8y1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_blopj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_jxclb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_uj7cv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_s0gmm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_ooinj")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("65_dl1dx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_ghqyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_qwwb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_543nx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_silsw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_e7ty5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_jfpt5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_xfjs6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_q6w6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_at1d3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_iqm2a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_d7mi2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_2414k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_eoww6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_rdapw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_wo3ea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_fwb86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_yusp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_4vah0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_ewnpt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_epd0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_yi73q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_864js")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_su08c")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 30.0
+}]
+
+[node name="Enemy20" groups=["desert", "undead"] instance=ExtResource("1_cw4j4")]
+script = ExtResource("2_ffwmu")
+enemy_name = "尸壳勇士"
+enemy_id = 20
+enemy_texture = ExtResource("3_dynjx")
+start_data = SubResource("Resource_wcqex")
+bounty = 12
+die_audio_stream_list = Array[AudioStream]([ExtResource("3_dkxlc"), ExtResource("4_fyooa"), ExtResource("5_ss5re")])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(15, -95)
+sprite_frames = SubResource("SpriteFrames_1nfkd")
+animation = &"attack"
+autoplay = "idle"
+
+[node name="AppearAudioComponent" parent="." index="5" instance=ExtResource("113_nkiqh")]
+appear_audio_list = Array[AudioStream]([ExtResource("114_rylhk"), ExtResource("115_x0qcu"), ExtResource("116_oo4mf")])

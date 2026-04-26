@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://cayi08r634pxw"]
+
+[ext_resource type="Script" path="res://Scripts/Skills/hating_lightning_area.gd" id="1_s7r3e"]
+[ext_resource type="Script" path="res://Library/Heroes/damage_block.gd" id="2_wg68i"]
+[ext_resource type="PackedScene" uid="uid://b76b7g5n6efop" path="res://Scenes/Buffs/dizness_buff.tscn" id="3_of3ty"]
+
+[sub_resource type="Resource" id="Resource_2vstv"]
+script = ExtResource("2_wg68i")
+damage_low = 400
+damage_high = 450
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_178qx"]
+radius = 73.9444
+
+[node name="HatingLightningArea" type="Area2D"]
+collision_layer = 0
+collision_mask = 24
+script = ExtResource("1_s7r3e")
+damage_block = SubResource("Resource_2vstv")
+dizness_scene = ExtResource("3_of3ty")
+dizness_duration = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 1.4)
+shape = SubResource("CircleShape2D_178qx")
+debug_color = Color(1, 1, 1, 0)

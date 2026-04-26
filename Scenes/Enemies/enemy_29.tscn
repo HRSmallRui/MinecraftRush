@@ -1,0 +1,588 @@
+[gd_scene load_steps=128 format=3 uid="uid://d0mpofppk7l0a"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_j4gyr"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_29.gd" id="2_565m2"]
+[ext_resource type="Texture2D" uid="uid://dm8ycwt35ufq4" path="res://Assets/Images/UI/InformationBar/EnemyChapter4/厌国战士.png" id="3_ydmhx"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="4_fythy"]
+[ext_resource type="PackedScene" uid="uid://cohusgeeaau8f" path="res://Scenes/Bullets/enemy_tnt.tscn" id="5_j0fix"]
+[ext_resource type="Texture2D" uid="uid://b36bgoh6yy4n7" path="res://Assets/Animations/Enemies/29厌国战士/attack_00.png" id="5_q70wl"]
+[ext_resource type="Texture2D" uid="uid://d0ogxlfr67mg1" path="res://Assets/Animations/Enemies/29厌国战士/attack_01.png" id="6_rn8mk"]
+[ext_resource type="Texture2D" uid="uid://40bi48bwup5g" path="res://Assets/Animations/Enemies/29厌国战士/attack_02.png" id="7_4vahj"]
+[ext_resource type="Texture2D" uid="uid://bfbhsp8gblg0b" path="res://Assets/Animations/Enemies/29厌国战士/attack_03.png" id="8_liecq"]
+[ext_resource type="Texture2D" uid="uid://dtu2dmlfdr74d" path="res://Assets/Animations/Enemies/29厌国战士/attack_04.png" id="9_kkf0x"]
+[ext_resource type="Texture2D" uid="uid://d0i78o0bas7uj" path="res://Assets/Animations/Enemies/29厌国战士/attack_05.png" id="10_l3xnk"]
+[ext_resource type="Texture2D" uid="uid://ludq8v5nphw0" path="res://Assets/Animations/Enemies/29厌国战士/attack_06.png" id="11_5jhd5"]
+[ext_resource type="Texture2D" uid="uid://btcwlvxbee2ik" path="res://Assets/Animations/Enemies/29厌国战士/attack_07.png" id="12_yv38j"]
+[ext_resource type="Texture2D" uid="uid://2xbg73qdsjd5" path="res://Assets/Animations/Enemies/29厌国战士/attack_08.png" id="13_02bjm"]
+[ext_resource type="Texture2D" uid="uid://dosuyhm5mwxkx" path="res://Assets/Animations/Enemies/29厌国战士/attack_09.png" id="14_bt6w7"]
+[ext_resource type="Texture2D" uid="uid://dd3eo7dxwiv6g" path="res://Assets/Animations/Enemies/29厌国战士/attack_10.png" id="15_2nw0f"]
+[ext_resource type="Texture2D" uid="uid://jb5rb4qbnov2" path="res://Assets/Animations/Enemies/29厌国战士/attack_11.png" id="16_gvpxt"]
+[ext_resource type="Texture2D" uid="uid://n1vch8tgta45" path="res://Assets/Animations/Enemies/29厌国战士/attack_12.png" id="17_we1bt"]
+[ext_resource type="Texture2D" uid="uid://cy1jp0vxt1g41" path="res://Assets/Animations/Enemies/29厌国战士/attack_13.png" id="18_gl4up"]
+[ext_resource type="Texture2D" uid="uid://duqoncri48snp" path="res://Assets/Animations/Enemies/29厌国战士/attack_14.png" id="19_bb00e"]
+[ext_resource type="Texture2D" uid="uid://bn5akou5q85jk" path="res://Assets/Animations/Enemies/29厌国战士/attack_15.png" id="20_uaqvh"]
+[ext_resource type="Texture2D" uid="uid://w623te3wsv8t" path="res://Assets/Animations/Enemies/29厌国战士/attack_16.png" id="21_ap0nm"]
+[ext_resource type="Texture2D" uid="uid://d3o0qkhqueps7" path="res://Assets/Animations/Enemies/29厌国战士/attack_17.png" id="22_5qakq"]
+[ext_resource type="Texture2D" uid="uid://3dyusfysdpxq" path="res://Assets/Animations/Enemies/29厌国战士/attack_18.png" id="23_ypiw0"]
+[ext_resource type="Texture2D" uid="uid://b3jl0lv6xpwmm" path="res://Assets/Animations/Enemies/29厌国战士/attack_19.png" id="24_328vj"]
+[ext_resource type="Texture2D" uid="uid://b33peikgoe0lg" path="res://Assets/Animations/Enemies/29厌国战士/attack_20.png" id="25_ukp4g"]
+[ext_resource type="Texture2D" uid="uid://ce3w5agotvlwa" path="res://Assets/Animations/Enemies/29厌国战士/far_attack_00.png" id="26_ogesg"]
+[ext_resource type="Texture2D" uid="uid://fhl20o8gw2t2" path="res://Assets/Animations/Enemies/29厌国战士/far_attack_01.png" id="27_n7546"]
+[ext_resource type="Texture2D" uid="uid://bpp3fycv67q4o" path="res://Assets/Animations/Enemies/29厌国战士/far_attack_02.png" id="28_7pphh"]
+[ext_resource type="Texture2D" uid="uid://ccglwsxmnf7sy" path="res://Assets/Animations/Enemies/29厌国战士/far_attack_03.png" id="29_jwncd"]
+[ext_resource type="Texture2D" uid="uid://dahgclwcm2sgo" path="res://Assets/Animations/Enemies/29厌国战士/far_attack_04.png" id="30_2vrl8"]
+[ext_resource type="Texture2D" uid="uid://bkqirfe2xk612" path="res://Assets/Animations/Enemies/29厌国战士/far_attack_05.png" id="31_p1p4f"]
+[ext_resource type="Texture2D" uid="uid://brrcss1vd501t" path="res://Assets/Animations/Enemies/29厌国战士/far_attack_06.png" id="32_sl6fo"]
+[ext_resource type="Texture2D" uid="uid://ue8fsk8ps35v" path="res://Assets/Animations/Enemies/29厌国战士/far_attack_07.png" id="33_eax3n"]
+[ext_resource type="Texture2D" uid="uid://gptvi4iuksn5" path="res://Assets/Animations/Enemies/29厌国战士/far_attack_08.png" id="34_r2fm0"]
+[ext_resource type="Texture2D" uid="uid://cwcepwa6ivj2d" path="res://Assets/Animations/Enemies/29厌国战士/far_attack_09.png" id="35_cv3sc"]
+[ext_resource type="Texture2D" uid="uid://qyyegnrmpok6" path="res://Assets/Animations/Enemies/29厌国战士/far_attack_10.png" id="36_pd7vu"]
+[ext_resource type="Texture2D" uid="uid://bwic8amhrclvt" path="res://Assets/Animations/Enemies/29厌国战士/far_attack_11.png" id="37_8e7o1"]
+[ext_resource type="Texture2D" uid="uid://cqgk707cagyp2" path="res://Assets/Animations/Enemies/29厌国战士/far_attack_12.png" id="38_r7ifh"]
+[ext_resource type="Texture2D" uid="uid://brkpmaxgnybew" path="res://Assets/Animations/Enemies/29厌国战士/far_attack_13.png" id="39_8muir"]
+[ext_resource type="Texture2D" uid="uid://2cdnowj8ej67" path="res://Assets/Animations/Enemies/29厌国战士/far_attack_14.png" id="40_wwtsw"]
+[ext_resource type="Texture2D" uid="uid://ddt7aleeatjwr" path="res://Assets/Animations/Enemies/29厌国战士/far_attack_15.png" id="41_j3pgm"]
+[ext_resource type="Texture2D" uid="uid://b38rk63m4sgrk" path="res://Assets/Animations/Enemies/29厌国战士/far_attack_16.png" id="42_kg5kr"]
+[ext_resource type="Texture2D" uid="uid://dd5u13n7hl1sc" path="res://Assets/Animations/Enemies/29厌国战士/far_attack_17.png" id="43_6jgrx"]
+[ext_resource type="Texture2D" uid="uid://p1ngxnwx1swy" path="res://Assets/Animations/Enemies/29厌国战士/far_attack_18.png" id="44_54edp"]
+[ext_resource type="Texture2D" uid="uid://1xn5lb18psd1" path="res://Assets/Animations/Enemies/29厌国战士/far_attack_19.png" id="45_j0w3b"]
+[ext_resource type="Texture2D" uid="uid://buj24gmdr8bfg" path="res://Assets/Animations/Enemies/29厌国战士/far_attack_20.png" id="46_5lyfq"]
+[ext_resource type="Texture2D" uid="uid://d385l2hvaidno" path="res://Assets/Animations/Enemies/29厌国战士/far_attack_21.png" id="47_j6sj6"]
+[ext_resource type="Texture2D" uid="uid://kooyjwkmjx53" path="res://Assets/Animations/Enemies/29厌国战士/far_attack_22.png" id="48_17s3c"]
+[ext_resource type="Texture2D" uid="uid://bjomh755nkwnt" path="res://Assets/Animations/Enemies/29厌国战士/far_attack_23.png" id="49_306s6"]
+[ext_resource type="Texture2D" uid="uid://exb4r7kxvlkf" path="res://Assets/Animations/Enemies/29厌国战士/far_attack_24.png" id="50_kpibh"]
+[ext_resource type="Texture2D" uid="uid://dwgxd3iyabprl" path="res://Assets/Animations/Enemies/29厌国战士/move_back_00.png" id="51_wohw5"]
+[ext_resource type="Texture2D" uid="uid://ces62epfhnx88" path="res://Assets/Animations/Enemies/29厌国战士/move_back_01.png" id="52_q4gqt"]
+[ext_resource type="Texture2D" uid="uid://gev7svd6ein3" path="res://Assets/Animations/Enemies/29厌国战士/move_back_02.png" id="53_f6m3p"]
+[ext_resource type="Texture2D" uid="uid://ddge8rd1atybf" path="res://Assets/Animations/Enemies/29厌国战士/move_back_03.png" id="54_sf03t"]
+[ext_resource type="Texture2D" uid="uid://b4l7s333bnw3m" path="res://Assets/Animations/Enemies/29厌国战士/move_back_04.png" id="55_7bama"]
+[ext_resource type="Texture2D" uid="uid://coh0kjmkqstgq" path="res://Assets/Animations/Enemies/29厌国战士/move_back_05.png" id="56_h35i8"]
+[ext_resource type="Texture2D" uid="uid://bk6xo5wr8n0js" path="res://Assets/Animations/Enemies/29厌国战士/move_back_06.png" id="57_3wl7s"]
+[ext_resource type="Texture2D" uid="uid://cxv7imb7ocye5" path="res://Assets/Animations/Enemies/29厌国战士/move_back_07.png" id="58_j7a8l"]
+[ext_resource type="Texture2D" uid="uid://bpu2jpr4ir42l" path="res://Assets/Animations/Enemies/29厌国战士/move_back_08.png" id="59_3unum"]
+[ext_resource type="Texture2D" uid="uid://rnvtyp6tlbl0" path="res://Assets/Animations/Enemies/29厌国战士/move_back_09.png" id="60_eihsd"]
+[ext_resource type="Texture2D" uid="uid://lc57fqkepifp" path="res://Assets/Animations/Enemies/29厌国战士/move_back_10.png" id="61_i37rm"]
+[ext_resource type="Texture2D" uid="uid://cblt6s6ftmtti" path="res://Assets/Animations/Enemies/29厌国战士/move_back_11.png" id="62_pffmu"]
+[ext_resource type="Texture2D" uid="uid://d1a8b8ku3jh2g" path="res://Assets/Animations/Enemies/29厌国战士/move_back_12.png" id="63_ybrhf"]
+[ext_resource type="Texture2D" uid="uid://dveuu3qvhevjn" path="res://Assets/Animations/Enemies/29厌国战士/move_back_13.png" id="64_n4mnf"]
+[ext_resource type="Texture2D" uid="uid://como87d28aaal" path="res://Assets/Animations/Enemies/29厌国战士/move_back_14.png" id="65_r0e4d"]
+[ext_resource type="Texture2D" uid="uid://cd7lt4yc5uttg" path="res://Assets/Animations/Enemies/29厌国战士/move_back_15.png" id="66_gprib"]
+[ext_resource type="Texture2D" uid="uid://c8rivu0jgqrbw" path="res://Assets/Animations/Enemies/29厌国战士/move_back_16.png" id="67_2rjmx"]
+[ext_resource type="Texture2D" uid="uid://dk4shwtacoxja" path="res://Assets/Animations/Enemies/29厌国战士/move_back_17.png" id="68_3uv6g"]
+[ext_resource type="Texture2D" uid="uid://3c4ularfmnbt" path="res://Assets/Animations/Enemies/29厌国战士/move_back_18.png" id="69_agnje"]
+[ext_resource type="Texture2D" uid="uid://phwn5cuf7x0v" path="res://Assets/Animations/Enemies/29厌国战士/move_back_19.png" id="70_xxiyb"]
+[ext_resource type="Texture2D" uid="uid://dhd0n2rjudwlk" path="res://Assets/Animations/Enemies/29厌国战士/move_back_20.png" id="71_imynv"]
+[ext_resource type="Texture2D" uid="uid://c2hcqt4kw6ao3" path="res://Assets/Animations/Enemies/29厌国战士/move_back_21.png" id="72_veetw"]
+[ext_resource type="Texture2D" uid="uid://dlgb2e20hd4g3" path="res://Assets/Animations/Enemies/29厌国战士/move_back_22.png" id="73_wcui1"]
+[ext_resource type="Texture2D" uid="uid://bgupwpwoa80dc" path="res://Assets/Animations/Enemies/29厌国战士/move_back_23.png" id="74_3wrw6"]
+[ext_resource type="Texture2D" uid="uid://cntcxgqmpeqlc" path="res://Assets/Animations/Enemies/29厌国战士/move_front_00.png" id="75_lxwjh"]
+[ext_resource type="Texture2D" uid="uid://q5w0u8lcu74u" path="res://Assets/Animations/Enemies/29厌国战士/move_front_01.png" id="76_oeeoj"]
+[ext_resource type="Texture2D" uid="uid://ceipj42aglu13" path="res://Assets/Animations/Enemies/29厌国战士/move_front_02.png" id="77_odnpw"]
+[ext_resource type="Texture2D" uid="uid://cqlkwvlub4hd7" path="res://Assets/Animations/Enemies/29厌国战士/move_front_03.png" id="78_un4ge"]
+[ext_resource type="Texture2D" uid="uid://dvjjx8osbasmf" path="res://Assets/Animations/Enemies/29厌国战士/move_front_04.png" id="79_b0a2x"]
+[ext_resource type="Texture2D" uid="uid://c6j0t75xprqly" path="res://Assets/Animations/Enemies/29厌国战士/move_front_05.png" id="80_lyh1x"]
+[ext_resource type="Texture2D" uid="uid://bugh4jh37s5jw" path="res://Assets/Animations/Enemies/29厌国战士/move_front_06.png" id="81_51k1w"]
+[ext_resource type="Texture2D" uid="uid://b5pay03g2n1jc" path="res://Assets/Animations/Enemies/29厌国战士/move_front_07.png" id="82_qraun"]
+[ext_resource type="Texture2D" uid="uid://blabef3h72u70" path="res://Assets/Animations/Enemies/29厌国战士/move_front_08.png" id="83_koau1"]
+[ext_resource type="Texture2D" uid="uid://uvsuxq0rxib6" path="res://Assets/Animations/Enemies/29厌国战士/move_front_09.png" id="84_hv8es"]
+[ext_resource type="Texture2D" uid="uid://drbdbs8edub23" path="res://Assets/Animations/Enemies/29厌国战士/move_front_10.png" id="85_ygolh"]
+[ext_resource type="Texture2D" uid="uid://burjddwswha7d" path="res://Assets/Animations/Enemies/29厌国战士/move_front_11.png" id="86_00u1b"]
+[ext_resource type="Texture2D" uid="uid://drkh0tjo6j1d2" path="res://Assets/Animations/Enemies/29厌国战士/move_front_12.png" id="87_aq03o"]
+[ext_resource type="Texture2D" uid="uid://cr7tr1i3pn2xb" path="res://Assets/Animations/Enemies/29厌国战士/move_front_13.png" id="88_1ht3q"]
+[ext_resource type="Texture2D" uid="uid://c4pslsxipj6hq" path="res://Assets/Animations/Enemies/29厌国战士/move_front_14.png" id="89_cgwcm"]
+[ext_resource type="Texture2D" uid="uid://pchs2wkjogtq" path="res://Assets/Animations/Enemies/29厌国战士/move_front_15.png" id="90_qomgk"]
+[ext_resource type="Texture2D" uid="uid://cq3dlqn852pdo" path="res://Assets/Animations/Enemies/29厌国战士/move_front_16.png" id="91_50ksi"]
+[ext_resource type="Texture2D" uid="uid://coyw6cm01h6np" path="res://Assets/Animations/Enemies/29厌国战士/move_front_17.png" id="92_xhu24"]
+[ext_resource type="Texture2D" uid="uid://bqdg53cfgdkah" path="res://Assets/Animations/Enemies/29厌国战士/move_front_18.png" id="93_jiof6"]
+[ext_resource type="Texture2D" uid="uid://b8rlw6t6fnsx1" path="res://Assets/Animations/Enemies/29厌国战士/move_front_19.png" id="94_vbqlu"]
+[ext_resource type="Texture2D" uid="uid://sbbk4hl7tkl6" path="res://Assets/Animations/Enemies/29厌国战士/move_front_20.png" id="95_tl0th"]
+[ext_resource type="Texture2D" uid="uid://qsf0kbfsyn5" path="res://Assets/Animations/Enemies/29厌国战士/move_front_21.png" id="96_wy1ed"]
+[ext_resource type="Texture2D" uid="uid://bodp3pq78lxab" path="res://Assets/Animations/Enemies/29厌国战士/move_front_22.png" id="97_pqvye"]
+[ext_resource type="Texture2D" uid="uid://bg5112d1l2phl" path="res://Assets/Animations/Enemies/29厌国战士/move_front_23.png" id="98_by0u6"]
+[ext_resource type="Texture2D" uid="uid://dsbltjleslc70" path="res://Assets/Animations/Enemies/29厌国战士/move_normal_00.png" id="99_aq6rl"]
+[ext_resource type="Texture2D" uid="uid://5on8q2xp0r2d" path="res://Assets/Animations/Enemies/29厌国战士/move_normal_01.png" id="100_prk0e"]
+[ext_resource type="Texture2D" uid="uid://d0015qw2eief2" path="res://Assets/Animations/Enemies/29厌国战士/move_normal_02.png" id="101_phgts"]
+[ext_resource type="Texture2D" uid="uid://ro8721xbovin" path="res://Assets/Animations/Enemies/29厌国战士/move_normal_03.png" id="102_me3t4"]
+[ext_resource type="Texture2D" uid="uid://lv4mqijrko8w" path="res://Assets/Animations/Enemies/29厌国战士/move_normal_04.png" id="103_qocox"]
+[ext_resource type="Texture2D" uid="uid://c76qk4phr1lvn" path="res://Assets/Animations/Enemies/29厌国战士/move_normal_05.png" id="104_p41h2"]
+[ext_resource type="Texture2D" uid="uid://b8c6ddy5xi261" path="res://Assets/Animations/Enemies/29厌国战士/move_normal_06.png" id="105_veyg2"]
+[ext_resource type="Texture2D" uid="uid://ba51ytsghujnf" path="res://Assets/Animations/Enemies/29厌国战士/move_normal_07.png" id="106_w1gb4"]
+[ext_resource type="Texture2D" uid="uid://bbb1cayico18w" path="res://Assets/Animations/Enemies/29厌国战士/move_normal_08.png" id="107_qqxka"]
+[ext_resource type="Texture2D" uid="uid://dmb8ptfktcw5o" path="res://Assets/Animations/Enemies/29厌国战士/move_normal_09.png" id="108_jbsj1"]
+[ext_resource type="Texture2D" uid="uid://co41d4ae2gm0h" path="res://Assets/Animations/Enemies/29厌国战士/move_normal_10.png" id="109_6co56"]
+[ext_resource type="Texture2D" uid="uid://c8yx7gqul6s4u" path="res://Assets/Animations/Enemies/29厌国战士/move_normal_11.png" id="110_vbbet"]
+[ext_resource type="Texture2D" uid="uid://cl2hvx5h8b5ed" path="res://Assets/Animations/Enemies/29厌国战士/move_normal_12.png" id="111_bgvo4"]
+[ext_resource type="Texture2D" uid="uid://b8nne513moa8x" path="res://Assets/Animations/Enemies/29厌国战士/move_normal_13.png" id="112_exdbk"]
+[ext_resource type="Texture2D" uid="uid://c3hh47q04ty1n" path="res://Assets/Animations/Enemies/29厌国战士/move_normal_14.png" id="113_qmthy"]
+[ext_resource type="Texture2D" uid="uid://bkpcifhhisedw" path="res://Assets/Animations/Enemies/29厌国战士/move_normal_15.png" id="114_phjnr"]
+[ext_resource type="Texture2D" uid="uid://d2q3rjjffx2k1" path="res://Assets/Animations/Enemies/29厌国战士/move_normal_16.png" id="115_jpd6q"]
+[ext_resource type="Texture2D" uid="uid://c0ntbrnvjvsax" path="res://Assets/Animations/Enemies/29厌国战士/move_normal_17.png" id="116_y2rr3"]
+[ext_resource type="Texture2D" uid="uid://d1myxkd7v1elp" path="res://Assets/Animations/Enemies/29厌国战士/move_normal_18.png" id="117_3t8g5"]
+[ext_resource type="Texture2D" uid="uid://wtndgd110254" path="res://Assets/Animations/Enemies/29厌国战士/move_normal_19.png" id="118_thwa3"]
+[ext_resource type="Texture2D" uid="uid://ucc8kejvypfv" path="res://Assets/Animations/Enemies/29厌国战士/move_normal_20.png" id="119_x546o"]
+[ext_resource type="Texture2D" uid="uid://c3ndqnvek1wek" path="res://Assets/Animations/Enemies/29厌国战士/move_normal_21.png" id="120_35rqs"]
+[ext_resource type="Texture2D" uid="uid://dtu6qpng70ec1" path="res://Assets/Animations/Enemies/29厌国战士/move_normal_22.png" id="121_l8t2k"]
+[ext_resource type="Texture2D" uid="uid://cfa8sdwbmvl3j" path="res://Assets/Animations/Enemies/29厌国战士/move_normal_23.png" id="122_txhho"]
+[ext_resource type="AudioStream" uid="uid://bl8dawh2f8bnn" path="res://Assets/Sounds/FXs/Throw.wav" id="124_xnapq"]
+
+[sub_resource type="Resource" id="Resource_vc31h"]
+script = ExtResource("4_fythy")
+health = 200
+dodge_rate = 0.0
+near_damage_low = 7
+near_damage_high = 12
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 20
+far_damage_high = 40
+far_attack_speed = 1.5
+far_damage_range = 280
+armor = 0.5
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 1.2
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vdvic"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_q70wl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_rn8mk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4vahj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_liecq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_kkf0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_l3xnk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5jhd5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_yv38j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_02bjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_bt6w7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_2nw0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_gvpxt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_we1bt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_gl4up")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_bb00e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_uaqvh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ap0nm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_5qakq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ypiw0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_328vj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ukp4g")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_q70wl")
+}],
+"loop": false,
+"name": &"die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_ogesg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_n7546")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_7pphh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_jwncd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_2vrl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_p1p4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_sl6fo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_eax3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_r2fm0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_cv3sc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_pd7vu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_8e7o1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_r7ifh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_8muir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_wwtsw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_j3pgm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_kg5kr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_6jgrx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_54edp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_j0w3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_5lyfq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_j6sj6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_17s3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_306s6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_kpibh")
+}],
+"loop": false,
+"name": &"far_attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_q70wl")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("51_wohw5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_q4gqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_f6m3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_sf03t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_7bama")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_h35i8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_3wl7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_j7a8l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_3unum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_eihsd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_i37rm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_pffmu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_ybrhf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_n4mnf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_r0e4d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_gprib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_2rjmx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_3uv6g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_agnje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_xxiyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_imynv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_veetw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_wcui1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_3wrw6")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("75_lxwjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_oeeoj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_odnpw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_un4ge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_b0a2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_lyh1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_51k1w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_qraun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_koau1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_hv8es")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_ygolh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_00u1b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_aq03o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_1ht3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_cgwcm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_qomgk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_50ksi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_xhu24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_jiof6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_vbqlu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_tl0th")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_wy1ed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_pqvye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_by0u6")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("99_aq6rl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_prk0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_phgts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_me3t4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_qocox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_p41h2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_veyg2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_w1gb4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_qqxka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_jbsj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_6co56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_vbbet")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_bgvo4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_exdbk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_qmthy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_phjnr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_jpd6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_y2rr3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_3t8g5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_thwa3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_x546o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_35rqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_l8t2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_txhho")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 30.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1wvat"]
+radius = 73.9444
+
+[node name="Enemy29" groups=["creeper"] instance=ExtResource("1_j4gyr")]
+script = ExtResource("2_565m2")
+enemy_name = "厌国战士"
+enemy_id = 29
+enemy_texture = ExtResource("3_ydmhx")
+start_data = SubResource("Resource_vc31h")
+far_attack_bullet_scene = ExtResource("5_j0fix")
+bounty = 15
+die_audio_stream_list = Array[AudioStream]([])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(-10, -100)
+sprite_frames = SubResource("SpriteFrames_vdvic")
+animation = &"far_attack"
+autoplay = "idle"
+
+[node name="FarAttackArea" parent="UnitBody" index="7"]
+collision_mask = 8
+
+[node name="FarAttackMarker" parent="UnitBody" index="8"]
+position = Vector2(-70, -145)
+
+[node name="FarAttackMarkerFlip" parent="UnitBody" index="9"]
+position = Vector2(70, -145)
+
+[node name="ExplosionArea" type="Area2D" parent="UnitBody" index="11"]
+scale = Vector2(0.8, 0.8)
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/ExplosionArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_1wvat")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="FarAttackAudio" type="AudioStreamPlayer" parent="." index="5"]
+stream = ExtResource("124_xnapq")
+volume_db = 5.0
+bus = &"Sound"

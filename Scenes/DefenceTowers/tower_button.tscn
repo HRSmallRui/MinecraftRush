@@ -1,0 +1,73 @@
+[gd_scene load_steps=12 format=3 uid="uid://drjvqvw33m3ab"]
+
+[ext_resource type="Texture2D" uid="uid://ekuygya1xab8" path="res://Assets/Images/DefenceTowers/UI/level_up.png" id="1_jadkm"]
+[ext_resource type="Texture2D" uid="uid://bhownbndy34n" path="res://Assets/Images/DefenceTowers/UI/level_up_select.png" id="2_7m7ew"]
+[ext_resource type="Texture2D" uid="uid://otu0krm8wab7" path="res://Assets/Images/DefenceTowers/UI/level_up_NO.png" id="3_ttqlk"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/tower_button.gd" id="4_w2d4k"]
+[ext_resource type="Texture2D" uid="uid://dkkvqrebxwj01" path="res://Assets/Images/DefenceTowers/UI/price_bar_panel.png" id="5_qaiol"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="6_q5bsh"]
+[ext_resource type="AudioStream" uid="uid://qjdlkswxr431" path="res://Assets/Sounds/FXs/Sound_GUIOpenTowerMenu.ogg" id="7_shdmt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dobus"]
+atlas = ExtResource("1_jadkm")
+region = Rect2(17, 18, 62, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7oibc"]
+atlas = ExtResource("3_ttqlk")
+region = Rect2(17, 18, 62, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dpixe"]
+atlas = ExtResource("5_qaiol")
+region = Rect2(17, 18, 62, 61)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ub0ti"]
+content_margin_left = 49.0
+content_margin_top = 14.0
+content_margin_right = 44.0
+content_margin_bottom = 14.0
+texture = SubResource("AtlasTexture_dpixe")
+
+[node name="TowerButton" type="TextureButton"]
+offset_right = 62.0
+offset_bottom = 61.0
+focus_mode = 0
+texture_normal = SubResource("AtlasTexture_dobus")
+texture_pressed = SubResource("AtlasTexture_dobus")
+texture_hover = ExtResource("2_7m7ew")
+texture_disabled = SubResource("AtlasTexture_7oibc")
+stretch_mode = 3
+script = ExtResource("4_w2d4k")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 53.0
+offset_right = 84.0
+offset_bottom = 83.0
+scale = Vector2(0.570777, 0.570777)
+theme_override_styles/panel = SubResource("StyleBoxTexture_ub0ti")
+
+[node name="PriceLabel" type="Label" parent="Panel"]
+modulate = Color(1, 1, 0, 1)
+layout_mode = 0
+offset_left = 7.0
+offset_top = 4.0
+offset_right = 189.0
+offset_bottom = 78.0
+scale = Vector2(0.326788, 0.326788)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("6_q5bsh")
+theme_override_font_sizes/font_size = 64
+text = "70"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MouseOverAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_shdmt")
+max_polyphony = 10
+bus = &"Sound"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://vocnlyb703p3"]
+
+[ext_resource type="PackedScene" uid="uid://doqtusnl6v3jq" path="res://Scenes/StageComponents/story_layer.tscn" id="1_7fbxn"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Stages/dialog_block.gd" id="2_am2wr"]
+
+[sub_resource type="Resource" id="Resource_baimv"]
+script = ExtResource("2_am2wr")
+dialog_text = "什么？！"
+text_color = Color(0, 1, 1, 1)
+text_exist_time = 0.0
+
+[sub_resource type="Resource" id="Resource_sre6u"]
+script = ExtResource("2_am2wr")
+dialog_text = ""
+text_color = Color(1, 1, 1, 1)
+text_exist_time = 4.0
+
+[sub_resource type="Resource" id="Resource_v7gow"]
+script = ExtResource("2_am2wr")
+dialog_text = "诸位友军莫慌——厌国精锐已至，特来支援！"
+text_color = Color(0, 1, 0, 1)
+text_exist_time = 6.0
+
+[sub_resource type="Resource" id="Resource_7n6wc"]
+script = ExtResource("2_am2wr")
+dialog_text = ""
+text_color = Color(1, 1, 1, 1)
+text_exist_time = 11.0
+
+[sub_resource type="Resource" id="Resource_kgn33"]
+script = ExtResource("2_am2wr")
+dialog_text = "呵，支援……"
+text_color = Color(0, 0.462745, 0, 1)
+text_exist_time = 12.0
+
+[node name="HatingExplosionStoryLayer" instance=ExtResource("1_7fbxn")]
+ending_time = 15.0
+dialog_list = Array[ExtResource("2_am2wr")]([SubResource("Resource_baimv"), SubResource("Resource_sre6u"), SubResource("Resource_v7gow"), SubResource("Resource_7n6wc"), SubResource("Resource_kgn33")])
+
+[node name="ColorRect" parent="." index="0"]
+visible = false
+
+[node name="SkipButton" parent="." index="3"]
+visible = false

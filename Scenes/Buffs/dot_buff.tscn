@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwifge7de0uys"]
+
+[ext_resource type="PackedScene" uid="uid://c3gyjosb382do" path="res://Scenes/Classes/buff_class.tscn" id="1_2ctwc"]
+[ext_resource type="Script" path="res://Scripts/Buffs/dot_buff.gd" id="2_i1at8"]
+
+[node name="DotBuff" instance=ExtResource("1_2ctwc")]
+script = ExtResource("2_i1at8")
+dot_damage = Array[int]([])
+can_be_dead = true
+buff_type = 1
+
+[node name="DotTimer" type="Timer" parent="." index="0"]
+autostart = true
+
+[connection signal="timeout" from="DotTimer" to="." method="_on_dot_timer_timeout"]

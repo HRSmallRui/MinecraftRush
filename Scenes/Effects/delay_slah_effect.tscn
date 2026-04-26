@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://76kfv1hp7pey"]
+
+[ext_resource type="Script" path="res://Scripts/Effects/delay_slah_effect.gd" id="1_rog2a"]
+[ext_resource type="Texture2D" uid="uid://fdl34csjxid" path="res://Assets/Images/Effects/skeleton_seckill_effect.png" id="2_siips"]
+
+[sub_resource type="Animation" id="Animation_01351"]
+resource_name = "loop"
+loop_mode = 1
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(1, 1),
+"points": PackedFloat32Array(0, 0, 0, 0, 0, 6.28319, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="Animation" id="Animation_2akbm"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6sndi"]
+_data = {
+"RESET": SubResource("Animation_2akbm"),
+"loop": SubResource("Animation_01351")
+}
+
+[node name="DelaySlahEffect" type="Node2D"]
+z_index = 1
+script = ExtResource("1_rog2a")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6sndi")
+}
+autoplay = "loop"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_siips")
+region_enabled = true
+region_rect = Rect2(10, 7, 143, 143)

@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://c8x14dawwbx44"]
+
+[ext_resource type="PackedScene" uid="uid://caufauw6v502y" path="res://Scenes/Classes/bullet_class.tscn" id="1_5wmbv"]
+[ext_resource type="Script" path="res://Scripts/Bullets/steve_passive_arrow.gd" id="2_t6py3"]
+[ext_resource type="PackedScene" uid="uid://b76b7g5n6efop" path="res://Scenes/Buffs/dizness_buff.tscn" id="3_crx2k"]
+[ext_resource type="Texture2D" uid="uid://b6g465hmch6qg" path="res://Assets/Images/Bullets/skeleton_seckill_arrow.png" id="3_iubip"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o5n3q"]
+radius = 11.0
+
+[sub_resource type="Curve" id="Curve_3es4e"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 2.99159, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_mnl6y"]
+colors = PackedColorArray(1, 1, 1, 0.717647, 1, 1, 1, 0)
+
+[node name="StevePassiveArrow" instance=ExtResource("1_5wmbv")]
+script = ExtResource("2_t6py3")
+dizness_buff_scene = ExtResource("3_crx2k")
+dizness_duration = 1.5
+tail_max_length = 20
+move_type = 1
+bullet_speed = 1200.0
+
+[node name="BulletSprite" parent="." index="0"]
+rotation = 0.645772
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_iubip")
+
+[node name="HitBox" parent="." index="1"]
+collision_mask = 96
+monitorable = false
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+shape = SubResource("CircleShape2D_o5n3q")
+
+[node name="FreeTimer" parent="." index="2"]
+wait_time = 4.0
+
+[node name="Tail" type="Line2D" parent="." index="3"]
+top_level = true
+width_curve = SubResource("Curve_3es4e")
+gradient = SubResource("Gradient_mnl6y")
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 16
+
+[node name="TailTimer" type="Timer" parent="Tail" index="0"]
+wait_time = 0.05
+autostart = true

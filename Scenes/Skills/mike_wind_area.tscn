@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://81wyjq6isf0g"]
+
+[ext_resource type="Script" path="res://Scripts/Skills/mike_wind_area.gd" id="1_nkg7y"]
+[ext_resource type="AudioStream" uid="uid://bt0dr8e2jdhri" path="res://Assets/Sounds/FXs/Heroes/Mike/迈克风刃.wav" id="2_ngl6d"]
+[ext_resource type="Texture2D" uid="uid://dxtbm2sugxqwh" path="res://Assets/Images/Effects/wind光矛.png" id="3_uvy6j"]
+[ext_resource type="AudioStream" uid="uid://c26x7bprxxddb" path="res://Assets/Sounds/FXs/Heroes/Mike/玻璃破碎.mp3" id="4_jvklg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gcfah"]
+radius = 73.9444
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4woiw"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(80, 80, 1)
+angle_min = -385.0
+angle_max = 279.2
+gravity = Vector3(0, 0, 0)
+
+[node name="MikeWindArea" type="Area2D"]
+collision_layer = 0
+collision_mask = 96
+script = ExtResource("1_nkg7y")
+
+[node name="AttackAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ngl6d")
+max_polyphony = 100
+bus = &"Sound"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 1.4)
+shape = SubResource("CircleShape2D_gcfah")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="WindHitParticle" type="GPUParticles2D" parent="."]
+z_index = 1
+amount = 800
+process_material = SubResource("ParticleProcessMaterial_4woiw")
+texture = ExtResource("3_uvy6j")
+lifetime = 10.0
+
+[node name="FinishAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_jvklg")

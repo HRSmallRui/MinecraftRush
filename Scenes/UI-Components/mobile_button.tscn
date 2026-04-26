@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://7f0yjftbuogj"]
+
+[ext_resource type="Texture2D" uid="uid://chw5vwv4m8ptb" path="res://Assets/Images/UI/mobile_button.png" id="1_5km0j"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/mobile_button.gd" id="2_1dheg"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="2_yjla6"]
+[ext_resource type="AudioStream" uid="uid://i0to3f5pe1rc" path="res://Assets/Sounds/FXs/UIs/MC_Click.mp3" id="4_vsclx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1fu8"]
+atlas = ExtResource("1_5km0j")
+region = Rect2(99, 8, 343, 72)
+
+[node name="MobileButton" type="TextureButton"]
+offset_left = 617.0
+offset_top = 541.0
+offset_right = 960.0
+offset_bottom = 613.0
+scale = Vector2(2, 2)
+texture_normal = SubResource("AtlasTexture_b1fu8")
+script = ExtResource("2_1dheg")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 604.0
+offset_bottom = 122.0
+scale = Vector2(0.562069, 0.562069)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_yjla6")
+theme_override_font_sizes/font_size = 64
+text = "游戏"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClickAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_vsclx")
+volume_db = 8.0
+bus = &"Sound"
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

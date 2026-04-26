@@ -1,0 +1,23 @@
+[gd_scene load_steps=11 format=3 uid="uid://bj34jrw72f8te"]
+
+[ext_resource type="PackedScene" uid="uid://dakq012d6gh6m" path="res://Scenes/UI-Components/Stages/skill_button.tscn" id="1_ajhs1"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Stages/SkillButtons/mike_skill_button.gd" id="2_wpl8p"]
+[ext_resource type="Texture2D" uid="uid://cg8y7gvthv1pt" path="res://Assets/Images/UI/SkillButton/Heroskill/Mike/fire.png" id="3_qqiu3"]
+[ext_resource type="Texture2D" uid="uid://dqp805x5nv5wu" path="res://Assets/Images/UI/SkillButton/Heroskill/Mike/fire_using.png" id="4_402hj"]
+[ext_resource type="Texture2D" uid="uid://bj2vehlykv7mu" path="res://Assets/Images/UI/SkillButton/Heroskill/Mike/water.png" id="4_dhmii"]
+[ext_resource type="Texture2D" uid="uid://dkendqxdjjk7b" path="res://Assets/Images/UI/SkillButton/Heroskill/Mike/earth.png" id="5_slnca"]
+[ext_resource type="Texture2D" uid="uid://ckuuj7rsuesdc" path="res://Assets/Images/UI/SkillButton/Heroskill/Mike/wind.png" id="6_gact3"]
+[ext_resource type="Texture2D" uid="uid://djpvkskc7xgha" path="res://Assets/Images/UI/SkillButton/Heroskill/Mike/water_using.png" id="8_umon2"]
+[ext_resource type="Texture2D" uid="uid://h1owpg4svuy6" path="res://Assets/Images/UI/SkillButton/Heroskill/Mike/earth_using.png" id="9_a7qbi"]
+[ext_resource type="Texture2D" uid="uid://cf5l1eifchu7p" path="res://Assets/Images/UI/SkillButton/Heroskill/Mike/wind_using.png" id="10_vb81y"]
+
+[node name="MikeSkillButton" instance=ExtResource("1_ajhs1")]
+script = ExtResource("2_wpl8p")
+skill_name_list = PackedStringArray("天火", "海啸", "地震", "风刃")
+skill_intro_list = PackedStringArray("召唤烈火陨石从天而降，对敌人造成极大损伤。", "造成大范围真实伤害，大幅削弱并沉默所有敌人。", "造成大范围多段伤害，波及到的敌人均保持眩晕状态。", "造成大范围多段真实伤害，减速敌人并摧毁敌人护甲。")
+normal_texture_list = Array[Texture]([ExtResource("3_qqiu3"), ExtResource("4_dhmii"), ExtResource("5_slnca"), ExtResource("6_gact3")])
+hover_texture_list = Array[Texture]([ExtResource("4_402hj"), ExtResource("8_umon2"), ExtResource("9_a7qbi"), ExtResource("10_vb81y")])
+skill_type = 2
+texture_normal = ExtResource("3_qqiu3")
+texture_select = ExtResource("4_402hj")
+cooling_time = 32.0

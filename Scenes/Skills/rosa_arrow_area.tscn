@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://c6fhmd1q7jfxq"]
+
+[ext_resource type="Script" path="res://Scripts/Skills/rosa_arrow_area.gd" id="1_65bys"]
+[ext_resource type="Texture2D" uid="uid://byxxoprgk0e4y" path="res://Assets/Images/Bullets/ArrowMagic.png" id="2_6piri"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bu0km"]
+radius = 73.9444
+
+[sub_resource type="Curve" id="Curve_iw2do"]
+_data = [Vector2(0.0159292, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_p75ce"]
+colors = PackedColorArray(1, 1, 1, 0.776471, 1, 1, 1, 0)
+
+[node name="RosaArrowArea" type="Area2D"]
+collision_layer = 0
+collision_mask = 96
+script = ExtResource("1_65bys")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.3, 0.21)
+shape = SubResource("CircleShape2D_bu0km")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="ArrowNode" type="Node2D" parent="."]
+rotation = -0.328129
+
+[node name="ArrowMagic" type="Sprite2D" parent="ArrowNode"]
+position = Vector2(0, -20)
+rotation = 3.14159
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_6piri")
+offset = Vector2(0.344248, 14.0912)
+
+[node name="Tail" type="Line2D" parent="."]
+top_level = true
+points = PackedVector2Array(-72, -75, -7, -19)
+width = 5.0
+width_curve = SubResource("Curve_iw2do")
+gradient = SubResource("Gradient_p75ce")

@@ -1,0 +1,1424 @@
+[gd_scene load_steps=206 format=3 uid="uid://gpe07pr87wlw"]
+
+[ext_resource type="PackedScene" uid="uid://05u6aueicvo4" path="res://Scenes/Classes/stage_class.tscn" id="1_q7n8k"]
+[ext_resource type="Script" path="res://Library/EnemySummon/stage_summon_config.gd" id="2_4twoc"]
+[ext_resource type="AudioStream" uid="uid://bdthvsar8ir28" path="res://Assets/Sounds/Music/高山-准备2.mp3" id="3_ymfdx"]
+[ext_resource type="PackedScene" uid="uid://u2adgh7wjmdi" path="res://Scenes/Enemies/enemy_4.tscn" id="4_ghga8"]
+[ext_resource type="PackedScene" uid="uid://86c75yb50mgo" path="res://Scenes/Classes/loop_music_player.tscn" id="4_ucgru"]
+[ext_resource type="AudioStream" uid="uid://bc1cxjmh8o2k" path="res://Assets/Sounds/Music/chapter6_fight_start.mp3" id="5_biw1s"]
+[ext_resource type="PackedScene" uid="uid://nymsao7yy471" path="res://Scenes/Enemies/enemy_5.tscn" id="5_y715r"]
+[ext_resource type="AudioStream" uid="uid://dvbou7exu828c" path="res://Assets/Sounds/Music/chapter6_fight_loop.mp3" id="6_3nx00"]
+[ext_resource type="PackedScene" uid="uid://cwbpaqknpx70u" path="res://Scenes/Enemies/enemy_7.tscn" id="7_3ler7"]
+[ext_resource type="Texture2D" uid="uid://b2iqwbkrbhr2q" path="res://Assets/Images/Stages/Stage18/stage18-based.png" id="7_600dd"]
+[ext_resource type="PackedScene" uid="uid://cu5yypfgmssji" path="res://Scenes/Enemies/enemy_8.tscn" id="8_jqdj8"]
+[ext_resource type="PackedScene" uid="uid://cmi4sbej8syn" path="res://Scenes/Enemies/enemy_9.tscn" id="9_i4a8v"]
+[ext_resource type="PackedScene" uid="uid://d07pbdmj8g6nf" path="res://Scenes/Enemies/enemy_49.tscn" id="10_1ykar"]
+[ext_resource type="Texture2D" uid="uid://cb7n0rp6m5v2t" path="res://Assets/Images/Stages/Flag.png" id="10_3qtw8"]
+[ext_resource type="PackedScene" uid="uid://civkk3fm2ol6" path="res://Scenes/Enemies/enemy_51.tscn" id="11_3b7ku"]
+[ext_resource type="Texture2D" uid="uid://dstvxjt2i4na8" path="res://Assets/Images/Stages/Stage18/wall.png" id="11_6fsrx"]
+[ext_resource type="Texture2D" uid="uid://dbyq78ggwv7fg" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_00.png" id="40_0x4er"]
+[ext_resource type="Texture2D" uid="uid://b3cm0yxaorpjo" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_01.png" id="41_ac3d4"]
+[ext_resource type="Texture2D" uid="uid://dtxr03b8jegiu" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_02.png" id="42_v2dn1"]
+[ext_resource type="Texture2D" uid="uid://cvocfc7j2gysb" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_03.png" id="43_81lbh"]
+[ext_resource type="Texture2D" uid="uid://cfhggo6tigaqj" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_04.png" id="44_moewl"]
+[ext_resource type="Texture2D" uid="uid://baqf0y7snhcow" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_05.png" id="45_g0nto"]
+[ext_resource type="Texture2D" uid="uid://8g63wx0re2m5" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_06.png" id="46_2on8x"]
+[ext_resource type="Texture2D" uid="uid://7f8wvivfnrt2" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_07.png" id="47_slfd4"]
+[ext_resource type="Texture2D" uid="uid://d4jfqanrn88wd" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_08.png" id="48_xo17r"]
+[ext_resource type="Texture2D" uid="uid://btlmpulbitdm1" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_09.png" id="49_7qj16"]
+[ext_resource type="Texture2D" uid="uid://bjqkovx5wcc4u" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_10.png" id="50_oajfx"]
+[ext_resource type="Texture2D" uid="uid://bnmtf6gvk1608" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_11.png" id="51_3ivm6"]
+[ext_resource type="Texture2D" uid="uid://bpwh6hhc6xt6w" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_12.png" id="52_x4smh"]
+[ext_resource type="Texture2D" uid="uid://dtse3fle86uu3" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_13.png" id="53_wr1hj"]
+[ext_resource type="Texture2D" uid="uid://e4ohjuqy6xp0" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_14.png" id="54_vjl3o"]
+[ext_resource type="Texture2D" uid="uid://cwv80nugii26t" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_15.png" id="55_ih5hw"]
+[ext_resource type="Texture2D" uid="uid://b2crlju28i6r3" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_16.png" id="56_kjbad"]
+[ext_resource type="Texture2D" uid="uid://bfc4x5442ioep" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_17.png" id="57_ti3tn"]
+[ext_resource type="Texture2D" uid="uid://dw0y78kahc805" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_18.png" id="58_lkju7"]
+[ext_resource type="Texture2D" uid="uid://diuereeenx5gj" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_19.png" id="59_f3y17"]
+[ext_resource type="Texture2D" uid="uid://gdy2lxeh22x7" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_20.png" id="60_6sgqb"]
+[ext_resource type="Texture2D" uid="uid://di16m0g1jqot6" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_21.png" id="61_nvwgj"]
+[ext_resource type="Texture2D" uid="uid://ct5yhtelq8h8u" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_22.png" id="62_nciuw"]
+[ext_resource type="Texture2D" uid="uid://bsiqo3j8pofsq" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_23.png" id="63_6vg4u"]
+[ext_resource type="Texture2D" uid="uid://cbowwy4p15h1e" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_24.png" id="64_mnqd5"]
+[ext_resource type="Texture2D" uid="uid://cc2o1m0rlgbv3" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_25.png" id="65_cc6ia"]
+[ext_resource type="Texture2D" uid="uid://doa1cr0qxo6na" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_26.png" id="66_pdckd"]
+[ext_resource type="Texture2D" uid="uid://b0quovlmvl7gs" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_27.png" id="67_2mvet"]
+[ext_resource type="Texture2D" uid="uid://pnquoaa63q4w" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_28.png" id="68_pplag"]
+[ext_resource type="Texture2D" uid="uid://dfa8fhkfs5evj" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_29.png" id="69_yd38q"]
+[ext_resource type="Texture2D" uid="uid://lws5dsla6ymi" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_30.png" id="70_gwo5i"]
+[ext_resource type="Texture2D" uid="uid://xx7tqeqjeohi" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_31.png" id="71_s6idv"]
+[ext_resource type="Texture2D" uid="uid://ctpu5pd7c2hbx" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_32.png" id="72_70q8k"]
+[ext_resource type="Texture2D" uid="uid://dv01d3eo4wehe" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_33.png" id="73_ef06o"]
+[ext_resource type="Texture2D" uid="uid://qpcv5ns27a1b" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_34.png" id="74_jo7rd"]
+[ext_resource type="Texture2D" uid="uid://b7cn0v55takat" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_35.png" id="75_6a5t5"]
+[ext_resource type="Texture2D" uid="uid://deoy8skw6nnr1" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_36.png" id="76_3tkvq"]
+[ext_resource type="Texture2D" uid="uid://h7fwjmfkuf8f" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_37.png" id="77_jtkgu"]
+[ext_resource type="Texture2D" uid="uid://cf55nl516rt2y" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_38.png" id="78_qwoh1"]
+[ext_resource type="Texture2D" uid="uid://37ylyhasw01s" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_39.png" id="79_4oqo5"]
+[ext_resource type="Texture2D" uid="uid://dbgkx5qsn1ixu" path="res://Assets/Animations/StageComponents/Flag1/flag_noshadow_40.png" id="80_ju5hd"]
+[ext_resource type="Script" path="res://Scripts/Classes/enemy_path.gd" id="83_8miul"]
+[ext_resource type="Texture2D" uid="uid://dnrxg6tdwx1mp" path="res://Assets/Animations/StageComponents/Sheep/dead_0.png" id="83_j06hi"]
+[ext_resource type="PackedScene" uid="uid://cp2fqy02him1l" path="res://Scenes/StageComponents/wall_arhcer.tscn" id="84_8soqn"]
+[ext_resource type="Resource" uid="uid://c6vxld1aatj4x" path="res://Library/SummonConfigs/Stage18/Diamond/path1.res" id="84_d2q2l"]
+[ext_resource type="Resource" uid="uid://bj4r1u3i2tfs" path="res://Library/SummonConfigs/Stage18/Diamond/path2.res" id="85_h8val"]
+[ext_resource type="Resource" uid="uid://d7d41ubgda2v" path="res://Library/SummonConfigs/Stage18/Diamond/path3.res" id="86_e1a7v"]
+[ext_resource type="Resource" uid="uid://ctcscccxxka6i" path="res://Library/SummonConfigs/Stage18/Diamond/path4.res" id="87_8h7b5"]
+[ext_resource type="Script" path="res://Scripts/path_config_save.gd" id="87_hr1d0"]
+[ext_resource type="Resource" uid="uid://dhd76u8rpmim6" path="res://Library/SummonConfigs/Stage18/Diamond/path5.res" id="88_235tc"]
+[ext_resource type="Resource" uid="uid://1mwk10tkwc0h" path="res://Library/SummonConfigs/diamond_template.res" id="88_tb0re"]
+[ext_resource type="Resource" uid="uid://cfsukx3vuysej" path="res://Library/SummonConfigs/Stage18/Diamond/path6.res" id="89_xxy0m"]
+[ext_resource type="Resource" uid="uid://ddgtk2bvtuluj" path="res://Library/SummonConfigs/Stage18/Diamond/path7.res" id="90_rqnr4"]
+[ext_resource type="Resource" uid="uid://b5pnojb7ibd8t" path="res://Library/SummonConfigs/Stage18/Diamond/path8.res" id="91_amfgc"]
+[ext_resource type="Texture2D" uid="uid://bfhvapkruvlxi" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_00.png" id="92_5q3ig"]
+[ext_resource type="Resource" uid="uid://d48tyhe34m64" path="res://Library/SummonConfigs/Stage18/Diamond/path9.res" id="92_65mnw"]
+[ext_resource type="Texture2D" uid="uid://bhtojqaoy0bfd" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_01.png" id="93_bhm16"]
+[ext_resource type="Resource" uid="uid://b02ktg66hqfme" path="res://Library/SummonConfigs/Stage18/Diamond/path10.res" id="93_rwocb"]
+[ext_resource type="Resource" uid="uid://b3tm4c35milr5" path="res://Library/SummonConfigs/Stage18/Diamond/path11.res" id="94_asram"]
+[ext_resource type="Texture2D" uid="uid://b1bpi8i343gth" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_02.png" id="94_drvvj"]
+[ext_resource type="Resource" uid="uid://cnxmagishinfn" path="res://Library/SummonConfigs/Stage18/Diamond/path12.res" id="95_dsfa3"]
+[ext_resource type="Texture2D" uid="uid://b737hfn8wyfoi" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_03.png" id="95_vf1qs"]
+[ext_resource type="Texture2D" uid="uid://c562s2bwfm6vu" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_04.png" id="96_x8r70"]
+[ext_resource type="Texture2D" uid="uid://cnwtqs1fwsv2n" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_05.png" id="97_fclbc"]
+[ext_resource type="PackedScene" uid="uid://4j747edyffkd" path="res://Scenes/UI-Components/Stages/wave_button.tscn" id="98_88wvo"]
+[ext_resource type="Texture2D" uid="uid://c3acsnxu7orbg" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_06.png" id="98_lewuh"]
+[ext_resource type="Script" path="res://Library/EnemySummon/wave_summon_text.gd" id="99_7r1jc"]
+[ext_resource type="PackedScene" uid="uid://dhdnu8gyxuw6m" path="res://Scenes/DefenceTowers/ArcherTowers/red_stone_archer_tower.tscn" id="99_fjx3u"]
+[ext_resource type="Texture2D" uid="uid://c3kvja30numo5" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_07.png" id="99_n4x2v"]
+[ext_resource type="PackedScene" uid="uid://d375eovp4mj6l" path="res://Scenes/DefenceTowers/BuyingSoldierTower/trader_shop.tscn" id="100_32u8g"]
+[ext_resource type="Texture2D" uid="uid://c1ugp65ywtj8l" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_08.png" id="100_hicim"]
+[ext_resource type="Texture2D" uid="uid://d4h7uga26vrgq" path="res://Assets/Images/UI/wave-direction.png" id="100_hqq81"]
+[ext_resource type="PackedScene" uid="uid://dijjgy2lt1p7w" path="res://Scenes/UI-Components/Stages/wave_panel.tscn" id="101_e54r0"]
+[ext_resource type="Texture2D" uid="uid://bq76dcj682o0g" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_09.png" id="101_hyvbv"]
+[ext_resource type="Script" path="res://Scripts/path_config_load.gd" id="101_wemme"]
+[ext_resource type="Script" path="res://Scripts/summon_count_porcess.gd" id="102_6iy6f"]
+[ext_resource type="Texture2D" uid="uid://bd0oocvjxmiag" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_10.png" id="102_jvbll"]
+[ext_resource type="Script" path="res://Library/EnemySummon/path_summon_block.gd" id="103_a5aud"]
+[ext_resource type="Script" path="res://Library/EnemySummon/SummonTextBlock/summon_text_block.gd" id="103_i7hcs"]
+[ext_resource type="Texture2D" uid="uid://cvjhbjq4e0fcr" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_11.png" id="103_yaab0"]
+[ext_resource type="Texture2D" uid="uid://jl3jy0vdo8o" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_12.png" id="104_f380o"]
+[ext_resource type="Texture2D" uid="uid://5vmlmlhedejk" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_13.png" id="105_1ctlu"]
+[ext_resource type="Texture2D" uid="uid://duejxqkwinmuu" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_14.png" id="106_xvixj"]
+[ext_resource type="Texture2D" uid="uid://cuet0si2kuwd8" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_15.png" id="107_ua0vb"]
+[ext_resource type="Texture2D" uid="uid://bcsnanvrm7c2o" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_16.png" id="108_g0o0m"]
+[ext_resource type="Texture2D" uid="uid://bagbqf7couxjs" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_17.png" id="109_iuqjx"]
+[ext_resource type="Texture2D" uid="uid://c0qqg75n0qanf" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_18.png" id="110_fbaw8"]
+[ext_resource type="Texture2D" uid="uid://dtgmv4b2wkuc8" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_19.png" id="111_50r5p"]
+[ext_resource type="Script" path="res://Library/EnemySummon/SummonTextBlock/summon_text_block_chapter1.gd" id="111_c4kf8"]
+[ext_resource type="Texture2D" uid="uid://dj8pd8kjpa0d3" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_20.png" id="112_kdntx"]
+[ext_resource type="Script" path="res://Library/EnemySummon/SummonTextBlock/summon_text_block_chapter6.gd" id="112_ms8rm"]
+[ext_resource type="Texture2D" uid="uid://bu2d2x2pij5pn" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_21.png" id="113_vf040"]
+[ext_resource type="Texture2D" uid="uid://dldipxgnkyakh" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_22.png" id="114_lfm56"]
+[ext_resource type="Texture2D" uid="uid://bfx2kt5d0abfj" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_23.png" id="115_35w4k"]
+[ext_resource type="Texture2D" uid="uid://dgyiakm1pm2n3" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_24.png" id="116_no6sl"]
+[ext_resource type="Texture2D" uid="uid://ds1fnu7l53it" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_25.png" id="117_21h8m"]
+[ext_resource type="Texture2D" uid="uid://dkkjs06rsi3gv" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_26.png" id="118_6ih4l"]
+[ext_resource type="Texture2D" uid="uid://clo0pgh0x8v4b" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_27.png" id="119_5n1yq"]
+[ext_resource type="Texture2D" uid="uid://dtunb5swwu455" path="res://Assets/Images/DefenceTowers/Barracks/Towers/OnlyFire/only_fire_28.png" id="120_l4kif"]
+[ext_resource type="Script" path="res://Scripts/StageComponents/fire_sprite.gd" id="121_7gt85"]
+[ext_resource type="Texture2D" uid="uid://d3pwdgxq2pr4f" path="res://Assets/Images/Stages/Stage18/tree_masks.png" id="122_cc4pa"]
+[ext_resource type="Script" path="res://Scripts/Stages/hide_area.gd" id="123_oux23"]
+[ext_resource type="PackedScene" uid="uid://d0sta1lv6shgl" path="res://Scenes/DefenceTowers/defence_tower_based.tscn" id="124_7tfsf"]
+
+[sub_resource type="Resource" id="Resource_275g3"]
+script = ExtResource("2_4twoc")
+next_wave_timers = Array[float]([60.0, 65.0, 70.0, 75.0])
+wave_exist_timers = Array[float]([20.0, 25.0, 30.0, 35.0])
+wave_money_get = Array[int]([0, 0, 0, 0])
+reinforce_cooling_fast = Array[float]([0.0, 0.0, 0.0, 0.0])
+firerain_cooling_fast = Array[float]([0.0, 0.0, 0.0, 0.0])
+hero_skill_cooling_fast = Array[float]([0.0, 0.0, 0.0, 0.0])
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tt2tg"]
+size = Vector2(3450, 1600)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v435e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("92_5q3ig")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_bhm16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_drvvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_vf1qs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_x8r70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_fclbc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_lewuh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_n4x2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_hicim")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_hyvbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_jvbll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_yaab0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_f380o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_1ctlu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_xvixj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_ua0vb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_g0o0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_iuqjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_fbaw8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_50r5p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_kdntx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_vf040")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_lfm56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_35w4k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_no6sl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_21h8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_6ih4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_5n1yq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_l4kif")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_hn4kq"]
+offsets = PackedFloat32Array(0, 0.0749543, 0.383912, 0.590494, 1)
+colors = PackedColorArray(1, 0.592157, 0, 1, 0.723583, 0.428475, 0, 1, 0.462523, 0.273886, 0, 1, 0.291363, 0.172533, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_e6l0s"]
+gradient = SubResource("Gradient_hn4kq")
+fill = 1
+fill_from = Vector2(0.5, 0.517094)
+fill_to = Vector2(1, 0.504274)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2tdjm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("40_0x4er")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_ac3d4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_v2dn1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_81lbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_moewl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_g0nto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_2on8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_slfd4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_xo17r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_7qj16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_oajfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_3ivm6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_x4smh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_wr1hj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_vjl3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_ih5hw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_kjbad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_ti3tn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_lkju7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_f3y17")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_6sgqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_nvwgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_nciuw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_6vg4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_mnqd5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_cc6ia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_pdckd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_2mvet")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_pplag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_yd38q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_gwo5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_s6idv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_70q8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_ef06o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_jo7rd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_6a5t5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_3tkvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_jtkgu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_qwoh1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_4oqo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_ju5hd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 36.0
+}]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_21vye"]
+vertices = PackedVector2Array(1863.97, 842.789, 1865.81, 212.523, 1934.06, 418.844, 1874.9, 999.211, 2307.64, 547.453, 2587.56, 948.422, 2599.17, 1131.06, -8.07813, 1594.04, -21.9063, -23.8984, 1301.8, -12.0938, 1286.86, 777.43, 1261.03, 1001.34, 1251.16, 1599.95, 1284.85, 927.617, 1383.18, 805.891, 1797.95, 954.141, 2996.98, 1322.24, 3189.38, 1437.29, 3172, 1600.99, 1885.82, 1600, 2653.44, 1221.5, 2649.03, 455.539, 2973.05, 793.406, 3477.88, 682.969, 2958.72, 342.008, 3473.13, 346.898)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 0, 2, 4, 5, 6), PackedInt32Array(7, 8, 9, 10, 11), PackedInt32Array(11, 12, 7), PackedInt32Array(13, 11, 10), PackedInt32Array(13, 10, 14, 15), PackedInt32Array(15, 14, 0), PackedInt32Array(3, 15, 0), PackedInt32Array(16, 17, 18, 19, 3, 20), PackedInt32Array(6, 20, 3), PackedInt32Array(5, 4, 21, 22), PackedInt32Array(23, 22, 21, 24, 25)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-32, -34, 1312, -22, 1297, 770, 1385, 796, 1854, 832, 1856, 151, 1942, 411, 2308, 537, 2646, 446, 2957, 332, 3483, 337, 3488, 691, 2976, 803, 2598, 955, 2609, 1128, 2660, 1213, 3001, 1313, 3200, 1432, 3181, 1611, 1876, 1610, 1865, 1005, 1795, 964, 1292, 938, 1271, 1003, 1261, 1610, -18, 1604)])
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_ex01q"]
+vertices = PackedVector2Array(2537.41, 1396.09, 2424.17, 1384.07, 2424.18, 1384.07, 1797.34, 941.578, 1758.78, 868.32, 1843.27, 878.992, 1941.35, 955.977, 2152.94, 885.023, 1992.58, 954.742, 2967.13, 1549.71, 2986.63, 1594.69, 2905.23, 1593.11, 2883.1, 1548.84, 2928.15, 1490.26, 2865.81, 1425, 2819.14, 1491.07, 2802.77, 1390.09, 2755.35, 1448.89, 2709.3, 1354.67, 2655.4, 1417.27, 2641.15, 1341.83, 2550.36, 1325.86, 2451.93, 1311.94, 3254.12, 544, 3449.1, 544.953, 3449.89, 619.031, 3134.75, 620, 3030.18, 552.953, 3003.26, 626.07, 2858.02, 587.578, 2849.32, 673.672, 2689.69, 659.867, 2654.1, 768.258, 2572.13, 736.602, 2442.04, 807.188, 2525.43, 851.039, 2369.94, 911.461, 2312.66, 851.656, 2244.96, 943.203, 2161.03, 958.008, 2096.95, 958.992, 2055.3, 957.648, 1988.04, 1037.56, 2062.07, 1060.42, 2002.7, 1133.34, 2078.51, 1134.41, 2025.93, 1192.39, 2108.74, 1193.81, 2069.96, 1259.91, 2143.26, 1230.43, 2109.29, 1304.02, 2185.08, 1262.84, 2175.8, 1339.69, 2254.57, 1288.77, 2246.19, 1360.22, 2323.24, 1372.07, 2376.88, 1304.94, 2641.15, 1341.82)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5, 6), PackedInt32Array(6, 5, 7, 8), PackedInt32Array(9, 10, 11, 12, 13), PackedInt32Array(14, 13, 12, 15, 16), PackedInt32Array(16, 15, 17, 18), PackedInt32Array(18, 17, 19, 20), PackedInt32Array(21, 20, 19, 0, 22), PackedInt32Array(23, 24, 25, 26, 27), PackedInt32Array(27, 26, 28, 29), PackedInt32Array(29, 28, 30, 31), PackedInt32Array(31, 30, 32, 33), PackedInt32Array(34, 33, 32, 35, 36), PackedInt32Array(37, 34, 36, 38), PackedInt32Array(8, 7, 37, 38, 39, 40, 41), PackedInt32Array(42, 8, 41, 43, 44), PackedInt32Array(44, 43, 45, 46), PackedInt32Array(46, 45, 47, 48), PackedInt32Array(48, 47, 49, 50), PackedInt32Array(50, 49, 51, 52), PackedInt32Array(52, 51, 53, 54), PackedInt32Array(55, 54, 53, 56, 2), PackedInt32Array(2, 56, 22, 0), PackedInt32Array(20, 21, 57)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(3459, 535, 3254, 534, 3029, 543, 2855, 578, 2685, 651, 2567, 728, 2438, 798, 2310, 842, 2152, 875, 1844, 869, 1741, 856, 1791, 951, 1941, 966, 1982, 965, 1978, 1038, 1993, 1136, 2017, 1197, 2062, 1266, 2103, 1312, 2172, 1349, 2244, 1370, 2322, 1382, 2423, 1394, 2536, 1406, 2653, 1427, 2751, 1458, 2813, 1499, 2875, 1555, 2899, 1603, 3002, 1605, 2976, 1545, 2936, 1484, 2872, 1417, 2807, 1381, 2712, 1345, 2643, 1332, 2552, 1316, 2453, 1302, 2378, 1295, 2257, 1279, 2190, 1254, 2150, 1223, 2117, 1188, 2088, 1131, 2072, 1059, 2066, 968, 2097, 969, 2162, 968, 2247, 953, 2373, 921, 2530, 860, 2659, 777, 2853, 683, 3005, 636, 3135, 630, 3460, 629)])
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_f3ua8"]
+vertices = PackedVector2Array(630.711, 64.8516, 603.852, -1.85938, 693.531, -1.0625, 710.242, 54.6172, 679.141, 123.938, 70.8438, 758.219, 0.5625, 777.688, 3.67188, 703.008, 166.391, 664.938, 179.688, 740.078, 341.172, 657, 762.656, 100.742, 736.141, 172.102, 802.547, 220.398, 833.477, 154.602, 909.109, 226.313, 857.992, 276.867, 961.469, 314.539, 936.43, 1590.83, 861.398, 1589.27, 881.922, 1521.75, 958.891, 1510, 892.922, 336.141, 974.758, 387.609, 951.133, 1410.17, 887.117, 1426.09, 924.906, 1340.24, 1243.49, 798.68, 1366.43, 829.867, 1338.03, 900.078, 1141.73, 848.367, 948.406, 720.328, 969.422, 797.289, 939.172, 695.242, 806.758, 764.148, 868.289, 703.109, 293.43, 729.008, 412.727, 727, 554.453, 658.992, 498.391, 724.719, 895.031, 408.938, 951.352, 477.367, 880.602, 474.891, 926.867, 567.133, 854.961, 611.023, 852.078, 548.648, 845.641, 1334.84, 869.219, 1241.56, 803.422, 1279.24, 808.281, 1192.23, 753.539, 1233.51, 701.219, 1127.8, 613.633, 1085.02, 652.5, 1189.05, 586.203, 1151.45, 534.039, 1119.21, 571.328, 1032.96, 503.602, 1043.1, 489.031, 977.063, 820.742, 685.82, 568.906, 727.477, 560.992, 823.672, 563.008, 945.563)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 8), PackedInt32Array(9, 5, 8, 10), PackedInt32Array(4, 3, 11, 12), PackedInt32Array(13, 12, 11, 14, 15), PackedInt32Array(16, 13, 15, 17), PackedInt32Array(18, 19, 20, 21), PackedInt32Array(22, 16, 17, 23), PackedInt32Array(24, 21, 20, 25, 26), PackedInt32Array(27, 28, 29, 30), PackedInt32Array(31, 27, 30, 32), PackedInt32Array(33, 31, 32, 34, 35), PackedInt32Array(36, 9, 10), PackedInt32Array(37, 36, 10, 38, 39), PackedInt32Array(40, 22, 23, 41), PackedInt32Array(42, 40, 41, 43), PackedInt32Array(44, 45, 42, 43, 33, 35), PackedInt32Array(26, 25, 46, 47), PackedInt32Array(47, 46, 48, 49), PackedInt32Array(49, 48, 50, 51), PackedInt32Array(52, 51, 50, 53, 54, 55), PackedInt32Array(56, 52, 55, 57, 58), PackedInt32Array(38, 59, 35, 34, 60), PackedInt32Array(39, 38, 60, 61, 58), PackedInt32Array(58, 61, 62), PackedInt32Array(58, 62, 56)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-6, 695, 165, 655, 341, 647, 555, 649, 823, 676, 856, 688, 845, 612, 842, 547, 871, 472, 885, 408, 883, 339, 850, 283, 796, 228, 730, 180, 672, 131, 622, 70, 589, -12, 701, -11, 719, 49, 769, 93, 840, 147, 917, 220, 971, 311, 985, 388, 961, 480, 937, 568, 949, 693, 956, 712, 1246, 789, 1380, 823, 1344, 912, 1139, 858, 967, 807, 805, 774, 578, 739, 571, 824, 573, 945, 581, 1029, 620, 1077, 706, 1119, 814, 1184, 877, 1235, 934, 1336, 961, 1408, 969, 1511, 944, 1601, 848, 1599, 872, 1520, 877, 1428, 837, 1340, 796, 1286, 748, 1242, 648, 1198, 581, 1160, 526, 1126, 494, 1046, 479, 978, 488, 735, 413, 737, 294, 739, 181, 750, 73, 768, -10, 791)])
+
+[sub_resource type="Curve2D" id="Curve2D_rs6yl"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 3531, 588, 0, 0, 0, 0, 3155, 587, 62.2957, -14.1581, -62.2957, 14.1581, 2976, 594, 27.6179, -13.3635, -27.6179, 13.3635, 2802, 655, 50.9692, -26.4285, -50.9692, 26.4285, 2656, 734, 0, 0, 0, 0, 2469, 833, 52.857, -16.0459, -52.857, 16.0459, 2293, 907, 0, 0, 0, 0, 2121, 924, 48.1376, 0, -48.1376, 0, 1986, 924, 62.2957, 6.60712, -62.2957, -6.60712, 1758, 916, 67.9589, 18.8775, -67.9589, -18.8775, 1356, 860, 65.1273, 14.1581, -65.1273, -14.1581, 862, 737, 53.8008, 6.60712, -53.8008, -6.60712, 599, 703, 58.5202, 0, -58.5202, 0, 460, 698, 82.1171, -6.60712, -82.1171, 6.60712, 144, 705, 0, 0, 0, 0, -134, 751)
+}
+point_count = 16
+
+[sub_resource type="Curve2D" id="Curve2D_slt1r"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 3526, 550, 0, 0, 0, 0, 3154, 550, 62.2957, -14.1581, -62.2957, 14.1581, 2973, 562, 27.6179, -13.3635, -27.6179, 13.3635, 2788, 623, 50.9692, -26.4285, -50.9692, 26.4285, 2639, 698, 0, 0, 0, 0, 2451, 807, 54.0462, -13.6674, -54.0462, 13.6674, 2279, 867, 0, 0, 0, 0, 2116, 888, 48.1376, 0, -48.1376, 0, 1984, 884, 62.2957, 6.60712, -62.2957, -6.60712, 1759, 875, 67.9589, 18.8775, -67.9589, -18.8775, 1354, 828, 65.1273, 14.1581, -65.1273, -14.1581, 863, 707, 53.8008, 6.60712, -53.8008, -6.60712, 602, 673, 58.5202, 0, -58.5202, 0, 454, 662, 82.1171, -6.60712, -82.1171, 6.60712, 139, 673, 0, 0, 0, 0, -135, 725)
+}
+point_count = 16
+
+[sub_resource type="Curve2D" id="Curve2D_y88xm"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 3533, 617, 0, 0, 0, 0, 3154, 617, 77.4489, -14.7193, -77.4489, 14.7193, 2980, 629, 27.6179, -13.3635, -27.6179, 13.3635, 2811, 691, 50.9692, -26.4285, -50.9692, 26.4285, 2666, 762, 0, 0, 0, 0, 2485, 862, 52.857, -16.0459, -52.857, 16.0459, 2298, 932, 0, 0, 0, 0, 2122, 955, 48.1376, 0, -48.1376, 0, 1987, 953, 62.2957, 6.60712, -62.2957, -6.60712, 1789, 945, 67.9589, 18.8775, -67.9589, -18.8775, 1341, 891, 65.1273, 14.1581, -65.1273, -14.1581, 854, 766, 53.8008, 6.60712, -53.8008, -6.60712, 596, 730, 58.5202, 0, -58.5202, 0, 454, 720, 82.1171, -6.60712, -82.1171, 6.60712, 145, 734, 0, 0, 0, 0, -135, 784)
+}
+point_count = 16
+
+[sub_resource type="Curve2D" id="Curve2D_gkhqe"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2951, 1692, 3.9685, 38.0976, -3.9685, -38.0976, 2945, 1597, 19.4457, 19.8425, -19.4457, -19.8425, 2880, 1486, 38.4945, 14.6835, -38.4945, -14.6835, 2783, 1421, 51.1937, 7.1433, -51.1937, -7.1433, 2575, 1371, 42.0661, 13.0961, -42.0661, -13.0961, 2254, 1329, 29.3669, 26.589, -29.3669, -26.589, 2120, 1264, 7.937, 35.7165, -7.937, -35.7165, 2047, 1154, 1.48651, 19.6219, -1.48651, -19.6219, 2026, 1023, 1.88775, 18.4055, -1.88775, -18.4055, 2023, 970, 29.732, 10.8546, -29.732, -10.8546, 1980, 934, 0, 0, 0, 0, 1835, 920, 35.3953, 3.30356, -35.3953, -3.30356, 1764, 916, 64.1834, 14.6301, -64.1834, -14.6301, 1376, 864, 66.0712, 21.2372, -66.0712, -21.2372, 1003, 772, 51.4412, 7.55099, -51.4412, -7.55099, 737, 717, 54.2728, 3.7755, -54.2728, -3.7755, 529, 697, 53.3289, -4.24743, -53.3289, 4.24743, 144, 703, 0, 0, 0, 0, -131, 750)
+}
+point_count = 19
+
+[sub_resource type="Curve2D" id="Curve2D_kbgab"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2986, 1692, 3.9685, 38.0976, -3.9685, -38.0976, 2979, 1598, 19.4457, 19.8425, -19.4457, -19.8425, 2896, 1459, 38.4945, 14.6835, -38.4945, -14.6835, 2792, 1389, 51.1937, 7.1433, -51.1937, -7.1433, 2577, 1333, 42.0661, 13.0961, -42.0661, -13.0961, 2263, 1289, 21.7988, 27.8503, -21.7988, -27.8503, 2131, 1223, 7.937, 35.7165, -7.937, -35.7165, 2075, 1128, 1.48651, 19.6219, -1.48651, -19.6219, 2060, 1020, 1.88775, 18.4055, -1.88775, -18.4055, 2056, 960, 29.732, 10.8546, -29.732, -10.8546, 2001, 903, 0, 0, 0, 0, 1837, 880, 35.3953, 3.30356, -35.3953, -3.30356, 1763, 875, 64.1834, 14.6301, -64.1834, -14.6301, 1379, 833, 66.0712, 17.7372, -66.0712, -17.7372, 1010, 739, 51.4412, 7.55099, -51.4412, -7.55099, 743, 687, 54.2728, 3.7755, -54.2728, -3.7755, 527, 666, 53.3289, -4.24743, -53.3289, 4.24743, 146, 670, 0, 0, 0, 0, -133, 724)
+}
+point_count = 19
+
+[sub_resource type="Curve2D" id="Curve2D_yet5b"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2911, 1694, 3.9685, 38.0976, -3.9685, -38.0976, 2905, 1598, 19.4457, 19.8425, -19.4457, -19.8425, 2853, 1510, 38.4945, 14.6835, -38.4945, -14.6835, 2764, 1451, 51.1937, 7.1433, -51.1937, -7.1433, 2570, 1401, 42.0661, 13.0961, -42.0661, -13.0961, 2243, 1356, 29.3669, 26.589, -29.3669, -26.589, 2095, 1286, 7.937, 35.7165, -7.937, -35.7165, 2016, 1156, 1.48651, 19.6219, -1.48651, -19.6219, 1999, 1036, 1.88775, 14.8339, -1.88775, -14.8339, 1995, 985, 22.5887, 7.67975, -22.5887, -7.67975, 1969, 956, 0, 0, 0, 0, 1833, 950, 35.3953, 3.30356, -35.3953, -3.30356, 1782, 942, 64.1834, 14.6301, -64.1834, -14.6301, 1366, 894, 66.0712, 21.2372, -66.0712, -21.2372, 993, 800, 51.4412, 7.55099, -51.4412, -7.55099, 734, 747, 54.2728, 3.7755, -54.2728, -3.7755, 528, 723, 53.3289, -4.24743, -53.3289, 4.24743, 142, 734, 0, 0, 0, 0, -135, 786)
+}
+point_count = 19
+
+[sub_resource type="Curve2D" id="Curve2D_5im0n"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 648, -85, -2.67572, -24.0814, 2.67572, 24.0814, 650, 3, -18.4327, -21.1084, 18.4327, 21.1084, 692, 97, -16.3516, -15.4597, 16.3516, 15.4597, 780, 163, -11.5948, -24.0814, 11.5948, 24.0814, 880, 250, 0.594603, -27.0545, -0.594603, 27.0545, 935, 358, 8.62175, -22.8922, -8.62175, 22.8922, 923, 475, 0.594603, -30.6221, -0.594603, 30.6221, 893, 561, 10.4056, -24.3787, -10.4056, 24.3787, 898, 674, 18.73, -4.45953, -18.73, 4.45953, 853, 726, 33.8924, 4.75683, -33.8924, -4.75683, 777, 725, 36.8654, 3.56762, -36.8654, -3.56762, 567, 700, 38.0546, -0.297302, -38.0546, 0.297302, 439, 696, 46.6171, -0.944941, -46.6171, 0.944941, 210, 700, 0, 0, 0, 0, 144, 705, 0, 0, 0, 0, -135, 750)
+}
+point_count = 16
+
+[sub_resource type="Curve2D" id="Curve2D_gb5ff"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 618, -84, -2.67572, -24.0814, 2.67572, 24.0814, 620, 4, -18.4327, -21.1084, 18.4327, 21.1084, 672, 114, -16.3516, -15.4597, 16.3516, 15.4597, 757, 181, -11.5948, -24.0814, 11.5948, 24.0814, 856, 268, 0.594603, -27.0545, -0.594603, 27.0545, 900, 357, 8.62175, -22.8922, -8.62175, 22.8922, 888, 466, 0.594603, -30.6221, -0.594603, 30.6221, 859, 565, 3.39017, -21.292, -3.39017, 21.292, 864, 666, 8.06662, -3.8983, -8.06662, 3.8983, 850, 701, 33.8924, 4.75683, -33.8924, -4.75683, 775, 692, 36.8654, 3.56762, -36.8654, -3.56762, 566, 668, 38.0546, -0.297302, -38.0546, 0.297302, 432, 662, 46.6171, -0.944941, -46.6171, 0.944941, 207, 668, 0, 0, 0, 0, 135, 669, 0, 0, 0, 0, -133, 727)
+}
+point_count = 16
+
+[sub_resource type="Curve2D" id="Curve2D_582jd"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 679, -84, -2.67572, -24.0814, 2.67572, 24.0814, 681, 0, -18.4327, -21.1084, 18.4327, 21.1084, 721, 80, -16.3516, -15.4597, 16.3516, 15.4597, 804, 144, -11.5948, -24.0814, 11.5948, 24.0814, 898, 232, 0.594603, -27.0545, -0.594603, 27.0545, 961, 350, 8.62175, -22.8922, -8.62175, 22.8922, 948, 477, -2.9054, -27.6221, 2.9054, 27.6221, 925, 568, 10.4056, -24.3787, -10.4056, 24.3787, 929, 699, 31.73, 0.540474, -31.73, -0.540474, 867, 753, 33.8924, 4.75683, -33.8924, -4.75683, 772, 753, 36.8654, 3.56762, -36.8654, -3.56762, 563, 726, 38.0546, -0.297302, -38.0546, 0.297302, 434, 721, 46.6171, -0.944941, -46.6171, 0.944941, 212, 731, 0, 0, 0, 0, 138, 736, 0, 0, 0, 0, -131, 783)
+}
+point_count = 16
+
+[sub_resource type="Curve2D" id="Curve2D_cytiv"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 895, 1679, 0, 25.2269, 0, -25.2269, 896, 1601, -3.78403, 14.2952, 3.78403, -14.2952, 919, 1518, 0, 29.0109, 0, -29.0109, 928, 1441, 8.82941, 23.5451, -8.82941, -23.5451, 902, 1360, 18.0793, 22.7042, -18.0793, -22.7042, 855, 1279, 24.386, 15.5566, -24.386, -15.5566, 763, 1206, 17.2384, 13.8748, -17.2384, -13.8748, 613, 1127, 9.24986, 24.386, -9.24986, -24.386, 548, 1055, 2.10224, 31.1132, -2.10224, -31.1132, 530, 960, -1.26134, 26.4882, 1.26134, -26.4882, 530, 849, 6.74645, 20.6362, -6.74645, -20.6362, 536, 750, 23.811, 11.9055, -23.811, -11.9055, 498, 706, 0, 0, 0, 0, 343, 696, 0, 0, 0, 0, 142, 703, 0, 0, 0, 0, -132, 753)
+}
+point_count = 16
+
+[sub_resource type="Curve2D" id="Curve2D_537yl"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 931, 1681, 0, 25.2269, 0, -25.2269, 931, 1598, -5.30417, 28.6492, 5.30417, -28.6492, 953, 1518, 0, 29.0109, 0, -29.0109, 953, 1432, 8.82941, 23.5451, -8.82941, -23.5451, 921, 1339, 18.0793, 22.7042, -18.0793, -22.7042, 867, 1251, 24.386, 15.5566, -24.386, -15.5566, 772, 1171, 16.3475, 15.2111, -16.3475, -15.2111, 622, 1094, 9.24986, 24.386, -9.24986, -24.386, 576, 1034, 2.10224, 31.1132, -2.10224, -31.1132, 563, 949, -1.26134, 26.4882, 1.26134, -26.4882, 562, 845, 6.74645, 20.6362, -6.74645, -20.6362, 565, 747, 34.5018, 20.369, -34.5018, -20.369, 517, 685, 0, 0, 0, 0, 343, 661, 22.7179, -2.22725, -22.7179, 2.22725, 135, 671, 0, 0, 0, 0, -133, 724)
+}
+point_count = 16
+
+[sub_resource type="Curve2D" id="Curve2D_8wptb"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 864, 1680, 0, 25.2269, 0, -25.2269, 869, 1596, -3.78403, 14.2952, 3.78403, -14.2952, 884, 1518, 5.29732, 30.6001, -5.29732, -30.6001, 895, 1441, 8.82941, 23.5451, -8.82941, -23.5451, 874, 1374, 18.0793, 22.7042, -18.0793, -22.7042, 824, 1291, 24.386, 15.5566, -24.386, -15.5566, 740, 1227, 17.2384, 13.8748, -17.2384, -13.8748, 592, 1147, 9.24986, 24.386, -9.24986, -24.386, 518, 1070, 2.10224, 31.1132, -2.10224, -31.1132, 494, 962, -1.26134, 26.4882, 1.26134, -26.4882, 498, 847, -0.68609, 17.0686, 0.68609, -17.0686, 504, 777, 11.3243, 10.7163, -11.3243, -10.7163, 498, 727, 0, 0, 0, 0, 335, 725, 0, 0, 0, 0, 142, 733, 0, 0, 0, 0, -133, 787)
+}
+point_count = 16
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7ugp"]
+size = Vector2(3480, 1631)
+
+[sub_resource type="Resource" id="Resource_xvmvx"]
+script = ExtResource("111_c4kf8")
+enemy_name = "尸国正规军"
+enemy_count = 15
+
+[sub_resource type="Resource" id="Resource_amjbo"]
+script = ExtResource("111_c4kf8")
+enemy_name = "骨国步兵"
+enemy_count = 5
+
+[sub_resource type="Resource" id="Resource_ao6wy"]
+script = ExtResource("111_c4kf8")
+enemy_name = "尸国壮汉"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_ivckf"]
+script = ExtResource("111_c4kf8")
+enemy_name = "骨国正规军"
+enemy_count = 5
+
+[sub_resource type="Resource" id="Resource_qnag7"]
+script = ExtResource("99_7r1jc")
+wave_summon_text_list = Array[ExtResource("103_i7hcs")]([SubResource("Resource_xvmvx"), SubResource("Resource_amjbo"), SubResource("Resource_ao6wy"), SubResource("Resource_ivckf")])
+
+[sub_resource type="Resource" id="Resource_3bwui"]
+script = ExtResource("112_ms8rm")
+enemy_name = "尸国斗剑士"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_vspiu"]
+script = ExtResource("112_ms8rm")
+enemy_name = "荆棘射手"
+enemy_count = 3
+
+[sub_resource type="Resource" id="Resource_lmv6j"]
+script = ExtResource("111_c4kf8")
+enemy_name = "尸国正规军"
+enemy_count = 24
+
+[sub_resource type="Resource" id="Resource_cgqu4"]
+script = ExtResource("111_c4kf8")
+enemy_name = "尸国壮汉"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_mq85s"]
+script = ExtResource("99_7r1jc")
+wave_summon_text_list = Array[ExtResource("103_i7hcs")]([SubResource("Resource_3bwui"), SubResource("Resource_vspiu"), SubResource("Resource_lmv6j"), SubResource("Resource_cgqu4")])
+
+[sub_resource type="Resource" id="Resource_ucleh"]
+script = ExtResource("112_ms8rm")
+enemy_name = "尸国斗剑士"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_qv1ie"]
+script = ExtResource("112_ms8rm")
+enemy_name = "荆棘射手"
+enemy_count = 5
+
+[sub_resource type="Resource" id="Resource_7dk64"]
+script = ExtResource("111_c4kf8")
+enemy_name = "尸国正规军"
+enemy_count = 16
+
+[sub_resource type="Resource" id="Resource_b8705"]
+script = ExtResource("111_c4kf8")
+enemy_name = "尸国贵族战士"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_1o0fy"]
+script = ExtResource("111_c4kf8")
+enemy_name = "尸国壮汉"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_8sqw1"]
+script = ExtResource("111_c4kf8")
+enemy_name = "骨国正规军"
+enemy_count = 3
+
+[sub_resource type="Resource" id="Resource_t1r7e"]
+script = ExtResource("99_7r1jc")
+wave_summon_text_list = Array[ExtResource("103_i7hcs")]([SubResource("Resource_ucleh"), SubResource("Resource_qv1ie"), SubResource("Resource_7dk64"), SubResource("Resource_b8705"), SubResource("Resource_1o0fy"), SubResource("Resource_8sqw1")])
+
+[sub_resource type="Resource" id="Resource_t4610"]
+script = ExtResource("111_c4kf8")
+enemy_name = "尸国正规军"
+enemy_count = 19
+
+[sub_resource type="Resource" id="Resource_72bpp"]
+script = ExtResource("111_c4kf8")
+enemy_name = "尸国壮汉"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_8x24q"]
+script = ExtResource("111_c4kf8")
+enemy_name = "骨国正规军"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_osx6g"]
+script = ExtResource("99_7r1jc")
+wave_summon_text_list = Array[ExtResource("103_i7hcs")]([SubResource("Resource_t4610"), SubResource("Resource_72bpp"), SubResource("Resource_8x24q")])
+
+[sub_resource type="Resource" id="Resource_hqrki"]
+script = ExtResource("112_ms8rm")
+enemy_name = "尸国斗剑士"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_1hbel"]
+script = ExtResource("112_ms8rm")
+enemy_name = "荆棘射手"
+enemy_count = 3
+
+[sub_resource type="Resource" id="Resource_oi1gg"]
+script = ExtResource("111_c4kf8")
+enemy_name = "尸国正规军"
+enemy_count = 19
+
+[sub_resource type="Resource" id="Resource_2efaa"]
+script = ExtResource("111_c4kf8")
+enemy_name = "骨国正规军"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_m746x"]
+script = ExtResource("111_c4kf8")
+enemy_name = "尸国贵族战士"
+enemy_count = 3
+
+[sub_resource type="Resource" id="Resource_ofg8i"]
+script = ExtResource("99_7r1jc")
+wave_summon_text_list = Array[ExtResource("103_i7hcs")]([SubResource("Resource_hqrki"), SubResource("Resource_1hbel"), SubResource("Resource_oi1gg"), SubResource("Resource_2efaa"), SubResource("Resource_m746x")])
+
+[sub_resource type="Resource" id="Resource_tiflt"]
+script = ExtResource("112_ms8rm")
+enemy_name = "尸国斗剑士"
+enemy_count = 3
+
+[sub_resource type="Resource" id="Resource_eifwy"]
+script = ExtResource("112_ms8rm")
+enemy_name = "荆棘射手"
+enemy_count = 9
+
+[sub_resource type="Resource" id="Resource_l7jmk"]
+script = ExtResource("111_c4kf8")
+enemy_name = "尸国正规军"
+enemy_count = 15
+
+[sub_resource type="Resource" id="Resource_gx1yv"]
+script = ExtResource("111_c4kf8")
+enemy_name = "尸国贵族战士"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_5qtlm"]
+script = ExtResource("99_7r1jc")
+wave_summon_text_list = Array[ExtResource("103_i7hcs")]([SubResource("Resource_tiflt"), SubResource("Resource_eifwy"), SubResource("Resource_l7jmk"), SubResource("Resource_gx1yv")])
+
+[sub_resource type="Resource" id="Resource_vtqjt"]
+script = ExtResource("112_ms8rm")
+enemy_name = "尸国斗剑士"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_q5xuq"]
+script = ExtResource("112_ms8rm")
+enemy_name = "荆棘射手"
+enemy_count = 3
+
+[sub_resource type="Resource" id="Resource_40y2k"]
+script = ExtResource("111_c4kf8")
+enemy_name = "尸国贵族战士"
+enemy_count = 3
+
+[sub_resource type="Resource" id="Resource_lksbg"]
+script = ExtResource("111_c4kf8")
+enemy_name = "尸国正规军"
+enemy_count = 8
+
+[sub_resource type="Resource" id="Resource_uc08o"]
+script = ExtResource("111_c4kf8")
+enemy_name = "尸国壮汉"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_cvnml"]
+script = ExtResource("99_7r1jc")
+wave_summon_text_list = Array[ExtResource("103_i7hcs")]([SubResource("Resource_vtqjt"), SubResource("Resource_q5xuq"), SubResource("Resource_40y2k"), SubResource("Resource_lksbg"), SubResource("Resource_uc08o")])
+
+[sub_resource type="Resource" id="Resource_hgsxe"]
+script = ExtResource("112_ms8rm")
+enemy_name = "尸国斗剑士"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_agse7"]
+script = ExtResource("112_ms8rm")
+enemy_name = "荆棘射手"
+enemy_count = 5
+
+[sub_resource type="Resource" id="Resource_5cgwa"]
+script = ExtResource("111_c4kf8")
+enemy_name = "尸国贵族战士"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_328he"]
+script = ExtResource("111_c4kf8")
+enemy_name = "尸国正规军"
+enemy_count = 14
+
+[sub_resource type="Resource" id="Resource_t6l8j"]
+script = ExtResource("99_7r1jc")
+wave_summon_text_list = Array[ExtResource("103_i7hcs")]([SubResource("Resource_hgsxe"), SubResource("Resource_agse7"), SubResource("Resource_5cgwa"), SubResource("Resource_328he")])
+
+[sub_resource type="Resource" id="Resource_f33g4"]
+script = ExtResource("112_ms8rm")
+enemy_name = "尸国斗剑士"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_m4bjs"]
+script = ExtResource("112_ms8rm")
+enemy_name = "荆棘射手"
+enemy_count = 8
+
+[sub_resource type="Resource" id="Resource_l7ejn"]
+script = ExtResource("111_c4kf8")
+enemy_name = "尸国正规军"
+enemy_count = 19
+
+[sub_resource type="Resource" id="Resource_vprib"]
+script = ExtResource("111_c4kf8")
+enemy_name = "尸国壮汉"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_havyk"]
+script = ExtResource("99_7r1jc")
+wave_summon_text_list = Array[ExtResource("103_i7hcs")]([SubResource("Resource_f33g4"), SubResource("Resource_m4bjs"), SubResource("Resource_l7ejn"), SubResource("Resource_vprib")])
+
+[sub_resource type="Resource" id="Resource_xnd5l"]
+script = ExtResource("112_ms8rm")
+enemy_name = "尸国斗剑士"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_besd8"]
+script = ExtResource("111_c4kf8")
+enemy_name = "尸国正规军"
+enemy_count = 11
+
+[sub_resource type="Resource" id="Resource_3mog5"]
+script = ExtResource("111_c4kf8")
+enemy_name = "尸国贵族战士"
+enemy_count = 3
+
+[sub_resource type="Resource" id="Resource_34wwx"]
+script = ExtResource("111_c4kf8")
+enemy_name = "尸国壮汉"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_7d8gu"]
+script = ExtResource("99_7r1jc")
+wave_summon_text_list = Array[ExtResource("103_i7hcs")]([SubResource("Resource_xnd5l"), SubResource("Resource_besd8"), SubResource("Resource_3mog5"), SubResource("Resource_34wwx")])
+
+[sub_resource type="Resource" id="Resource_xpftr"]
+script = ExtResource("112_ms8rm")
+enemy_name = "尸国斗剑士"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_1sevx"]
+script = ExtResource("112_ms8rm")
+enemy_name = "荆棘射手"
+enemy_count = 7
+
+[sub_resource type="Resource" id="Resource_cs0f1"]
+script = ExtResource("111_c4kf8")
+enemy_name = "尸国贵族战士"
+enemy_count = 5
+
+[sub_resource type="Resource" id="Resource_12d5u"]
+script = ExtResource("111_c4kf8")
+enemy_name = "尸国壮汉"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_gl2as"]
+script = ExtResource("111_c4kf8")
+enemy_name = "尸国正规军"
+enemy_count = 17
+
+[sub_resource type="Resource" id="Resource_pigaw"]
+script = ExtResource("99_7r1jc")
+wave_summon_text_list = Array[ExtResource("103_i7hcs")]([SubResource("Resource_xpftr"), SubResource("Resource_1sevx"), SubResource("Resource_cs0f1"), SubResource("Resource_12d5u"), SubResource("Resource_gl2as")])
+
+[sub_resource type="Resource" id="Resource_t814c"]
+script = ExtResource("112_ms8rm")
+enemy_name = "尸国斗剑士"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_0vpi4"]
+script = ExtResource("112_ms8rm")
+enemy_name = "荆棘射手"
+enemy_count = 7
+
+[sub_resource type="Resource" id="Resource_tv4sl"]
+script = ExtResource("111_c4kf8")
+enemy_name = "尸国正规军"
+enemy_count = 20
+
+[sub_resource type="Resource" id="Resource_ntfm6"]
+script = ExtResource("111_c4kf8")
+enemy_name = "骨国正规军"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_p5sbk"]
+script = ExtResource("99_7r1jc")
+wave_summon_text_list = Array[ExtResource("103_i7hcs")]([SubResource("Resource_t814c"), SubResource("Resource_0vpi4"), SubResource("Resource_tv4sl"), SubResource("Resource_ntfm6")])
+
+[node name="Stage18Diamond" instance=ExtResource("1_q7n8k")]
+stage_count = 18
+stage_mode = 1
+enemy_scene_list = Array[PackedScene]([ExtResource("4_ghga8"), ExtResource("5_y715r"), ExtResource("7_3ler7"), ExtResource("8_jqdj8"), ExtResource("9_i4a8v"), ExtResource("10_1ykar"), ExtResource("11_3b7ku")])
+current_health = 1
+current_money = 600
+total_waves = 5
+stage_summon_config = SubResource("Resource_275g3")
+
+[node name="StageCamera" parent="." index="2"]
+position = Vector2(146, 702)
+min_zoom_length_desktop = 0.9
+
+[node name="CollisionShape2D" parent="StageCamera" index="0"]
+position = Vector2(1725, 800)
+shape = SubResource("RectangleShape2D_tt2tg")
+
+[node name="PreparationMusic" parent="Musics" index="0"]
+stream = ExtResource("3_ymfdx")
+
+[node name="LoopMusicPlayer" parent="Musics" index="3" node_paths=PackedStringArray("music_list") instance=ExtResource("4_ucgru")]
+music_mode = 1
+music_list = [NodePath("Chapter6FightStart"), NodePath("CooperationLoop")]
+next_wait_time = Array[float]([34.85])
+
+[node name="Chapter6FightStart" type="AudioStreamPlayer" parent="Musics/LoopMusicPlayer" index="1"]
+stream = ExtResource("5_biw1s")
+volume_db = 4.0
+bus = &"Music"
+
+[node name="CooperationLoop" type="AudioStreamPlayer" parent="Musics/LoopMusicPlayer" index="2"]
+stream = ExtResource("6_3nx00")
+volume_db = 4.0
+bus = &"Music"
+
+[node name="BasedSprite" parent="Background" index="0"]
+texture = ExtResource("7_600dd")
+
+[node name="ProtectionPoint" parent="Background/BasedSprite" index="0"]
+position = Vector2(143, 699)
+
+[node name="Flag" parent="Background" index="1"]
+position = Vector2(145, 648.5)
+
+[node name="Flag2" type="Sprite2D" parent="Background" index="2"]
+position = Vector2(145, 767.5)
+texture = ExtResource("10_3qtw8")
+offset = Vector2(-7, -22)
+region_enabled = true
+region_rect = Rect2(40, 38, 40, 73)
+
+[node name="Wall" type="Sprite2D" parent="Background" index="3"]
+position = Vector2(1569, 1598)
+texture = ExtResource("11_6fsrx")
+centered = false
+offset = Vector2(-1569, -1598)
+
+[node name="FireSprite" type="AnimatedSprite2D" parent="Background/Wall" index="0"]
+position = Vector2(119, -457)
+scale = Vector2(1.84078, 1.84078)
+sprite_frames = SubResource("SpriteFrames_v435e")
+autoplay = "default"
+frame_progress = 0.800859
+offset = Vector2(-1, -9)
+script = ExtResource("121_7gt85")
+
+[node name="PointLight2D" type="PointLight2D" parent="Background/Wall/FireSprite" index="0"]
+position = Vector2(0, -7)
+range_z_max = 10
+texture = SubResource("GradientTexture2D_e6l0s")
+texture_scale = 1.49
+
+[node name="FireSprite2" type="AnimatedSprite2D" parent="Background/Wall" index="1"]
+position = Vector2(-6, -387)
+scale = Vector2(1.84078, 1.84078)
+sprite_frames = SubResource("SpriteFrames_v435e")
+autoplay = "default"
+frame_progress = 0.800859
+offset = Vector2(-1, -9)
+script = ExtResource("121_7gt85")
+
+[node name="PointLight2D" type="PointLight2D" parent="Background/Wall/FireSprite2" index="0"]
+position = Vector2(0, -7)
+range_z_max = 10
+texture = SubResource("GradientTexture2D_e6l0s")
+texture_scale = 1.49
+
+[node name="FireSprite3" type="AnimatedSprite2D" parent="Background/Wall" index="2"]
+position = Vector2(25, -590)
+scale = Vector2(1.84078, 1.84078)
+sprite_frames = SubResource("SpriteFrames_v435e")
+autoplay = "default"
+frame_progress = 0.800859
+offset = Vector2(-1, -9)
+script = ExtResource("121_7gt85")
+
+[node name="PointLight2D" type="PointLight2D" parent="Background/Wall/FireSprite3" index="0"]
+position = Vector2(0, -7)
+range_z_max = 10
+texture = SubResource("GradientTexture2D_e6l0s")
+texture_scale = 1.49
+
+[node name="FireSprite4" type="AnimatedSprite2D" parent="Background/Wall" index="3"]
+position = Vector2(114, -870)
+scale = Vector2(1.84078, 1.84078)
+sprite_frames = SubResource("SpriteFrames_v435e")
+autoplay = "default"
+frame_progress = 0.800859
+offset = Vector2(-1, -9)
+script = ExtResource("121_7gt85")
+
+[node name="PointLight2D" type="PointLight2D" parent="Background/Wall/FireSprite4" index="0"]
+position = Vector2(0, -7)
+range_z_max = 10
+texture = SubResource("GradientTexture2D_e6l0s")
+texture_scale = 1.49
+
+[node name="FireSprite5" type="AnimatedSprite2D" parent="Background/Wall" index="4"]
+position = Vector2(51, -1199)
+scale = Vector2(1.84078, 1.84078)
+sprite_frames = SubResource("SpriteFrames_v435e")
+autoplay = "default"
+frame_progress = 0.800859
+offset = Vector2(-1, -9)
+script = ExtResource("121_7gt85")
+
+[node name="PointLight2D" type="PointLight2D" parent="Background/Wall/FireSprite5" index="0"]
+position = Vector2(0, -7)
+range_z_max = 10
+texture = SubResource("GradientTexture2D_e6l0s")
+texture_scale = 1.49
+
+[node name="FireSprite6" type="AnimatedSprite2D" parent="Background/Wall" index="5"]
+position = Vector2(-28, -1525)
+scale = Vector2(1.84078, 1.84078)
+sprite_frames = SubResource("SpriteFrames_v435e")
+autoplay = "default"
+frame_progress = 0.800859
+offset = Vector2(-1, -9)
+script = ExtResource("121_7gt85")
+
+[node name="PointLight2D" type="PointLight2D" parent="Background/Wall/FireSprite6" index="0"]
+position = Vector2(0, -7)
+range_z_max = 10
+texture = SubResource("GradientTexture2D_e6l0s")
+texture_scale = 1.49
+
+[node name="FireSprite7" type="AnimatedSprite2D" parent="Background/Wall" index="6"]
+position = Vector2(-16, -979)
+scale = Vector2(1.84078, 1.84078)
+sprite_frames = SubResource("SpriteFrames_v435e")
+autoplay = "default"
+frame_progress = 0.800859
+offset = Vector2(-1, -9)
+script = ExtResource("121_7gt85")
+
+[node name="PointLight2D" type="PointLight2D" parent="Background/Wall/FireSprite7" index="0"]
+position = Vector2(0, -7)
+range_z_max = 10
+texture = SubResource("GradientTexture2D_e6l0s")
+texture_scale = 1.49
+
+[node name="FlagAnim" type="AnimatedSprite2D" parent="Background/Wall" index="7"]
+position = Vector2(123, -151)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_2tdjm")
+autoplay = "default"
+
+[node name="FlagAnim2" type="AnimatedSprite2D" parent="Background/Wall" index="8"]
+position = Vector2(121, -1428)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_2tdjm")
+autoplay = "default"
+
+[node name="TreeMask" type="Sprite2D" parent="Background" index="4"]
+position = Vector2(2382, 497)
+texture = ExtResource("122_cc4pa")
+offset = Vector2(264, -248)
+region_enabled = true
+region_rect = Rect2(1837, 0, 1613, 503)
+
+[node name="TreeMask2" type="Sprite2D" parent="Background" index="5"]
+position = Vector2(3326, 1599)
+texture = ExtResource("122_cc4pa")
+offset = Vector2(-316, -499)
+region_enabled = true
+region_rect = Rect2(2561, 595, 889, 1005)
+
+[node name="TreeMask3" type="Sprite2D" parent="Background" index="6"]
+position = Vector2(470, 1580)
+texture = ExtResource("122_cc4pa")
+offset = Vector2(0, -126)
+region_enabled = true
+region_rect = Rect2(351, 1321, 224, 263)
+
+[node name="TreeMask4" type="Sprite2D" parent="Background" index="7"]
+position = Vector2(114, 1317)
+texture = ExtResource("122_cc4pa")
+offset = Vector2(0, -126)
+region_enabled = true
+region_rect = Rect2(351, 1321, 224, 263)
+
+[node name="TreeMask5" type="Sprite2D" parent="Background" index="8"]
+position = Vector2(108, 248)
+texture = ExtResource("122_cc4pa")
+offset = Vector2(0, -126)
+region_enabled = true
+region_rect = Rect2(351, 1321, 224, 263)
+
+[node name="TreeMask6" type="Sprite2D" parent="Background" index="9"]
+position = Vector2(415, 393)
+texture = ExtResource("122_cc4pa")
+offset = Vector2(0, -126)
+region_enabled = true
+region_rect = Rect2(351, 1321, 224, 263)
+
+[node name="TreeMask7" type="Sprite2D" parent="Background" index="10"]
+position = Vector2(1009, 1109)
+texture = ExtResource("122_cc4pa")
+offset = Vector2(0, -126)
+region_enabled = true
+region_rect = Rect2(351, 1321, 224, 263)
+
+[node name="Fires" type="Node2D" parent="Background" index="11"]
+y_sort_enabled = true
+
+[node name="FireSprite7" type="AnimatedSprite2D" parent="Background/Fires" index="0"]
+position = Vector2(1003, 573)
+scale = Vector2(1.84078, 1.84078)
+sprite_frames = SubResource("SpriteFrames_v435e")
+autoplay = "default"
+frame_progress = 0.800859
+offset = Vector2(-1, -9)
+script = ExtResource("121_7gt85")
+
+[node name="PointLight2D" type="PointLight2D" parent="Background/Fires/FireSprite7" index="0"]
+position = Vector2(0, -7)
+range_z_max = 10
+texture = SubResource("GradientTexture2D_e6l0s")
+texture_scale = 1.49
+
+[node name="FireSprite8" type="AnimatedSprite2D" parent="Background/Fires" index="1"]
+position = Vector2(1142, 716)
+scale = Vector2(1.84078, 1.84078)
+sprite_frames = SubResource("SpriteFrames_v435e")
+autoplay = "default"
+frame_progress = 0.800859
+offset = Vector2(-1, -9)
+script = ExtResource("121_7gt85")
+
+[node name="PointLight2D" type="PointLight2D" parent="Background/Fires/FireSprite8" index="0"]
+position = Vector2(0, -7)
+range_z_max = 10
+texture = SubResource("GradientTexture2D_e6l0s")
+texture_scale = 1.49
+
+[node name="FireSprite9" type="AnimatedSprite2D" parent="Background/Fires" index="2"]
+position = Vector2(859, 397)
+scale = Vector2(1.84078, 1.84078)
+sprite_frames = SubResource("SpriteFrames_v435e")
+autoplay = "default"
+frame_progress = 0.800859
+offset = Vector2(-1, -9)
+script = ExtResource("121_7gt85")
+
+[node name="PointLight2D" type="PointLight2D" parent="Background/Fires/FireSprite9" index="0"]
+position = Vector2(0, -7)
+range_z_max = 10
+texture = SubResource("GradientTexture2D_e6l0s")
+texture_scale = 1.49
+
+[node name="FireSprite10" type="AnimatedSprite2D" parent="Background/Fires" index="3"]
+position = Vector2(986, 235)
+scale = Vector2(1.84078, 1.84078)
+sprite_frames = SubResource("SpriteFrames_v435e")
+autoplay = "default"
+frame_progress = 0.800859
+offset = Vector2(-1, -9)
+script = ExtResource("121_7gt85")
+
+[node name="PointLight2D" type="PointLight2D" parent="Background/Fires/FireSprite10" index="0"]
+position = Vector2(0, -7)
+range_z_max = 10
+texture = SubResource("GradientTexture2D_e6l0s")
+texture_scale = 1.49
+
+[node name="FireSprite11" type="AnimatedSprite2D" parent="Background/Fires" index="4"]
+position = Vector2(626, 634)
+scale = Vector2(1.84078, 1.84078)
+sprite_frames = SubResource("SpriteFrames_v435e")
+autoplay = "default"
+frame_progress = 0.800859
+offset = Vector2(-1, -9)
+script = ExtResource("121_7gt85")
+
+[node name="PointLight2D" type="PointLight2D" parent="Background/Fires/FireSprite11" index="0"]
+position = Vector2(0, -7)
+range_z_max = 10
+texture = SubResource("GradientTexture2D_e6l0s")
+texture_scale = 1.49
+
+[node name="HideArea" type="Area2D" parent="Background" index="12"]
+position = Vector2(488, 393)
+collision_layer = 0
+collision_mask = 352
+script = ExtResource("123_oux23")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Background/HideArea" index="0"]
+polygon = PackedVector2Array(904, 410, 836, 528, 898, 563, 1314, 576, 1269, 503, 1265, 452)
+
+[node name="Sheeps" type="Node2D" parent="Background" index="13"]
+y_sort_enabled = true
+
+[node name="DeadSheep" type="Sprite2D" parent="Background/Sheeps" index="0"]
+position = Vector2(766, 937)
+texture = ExtResource("83_j06hi")
+flip_h = true
+
+[node name="DeadSheep2" type="Sprite2D" parent="Background/Sheeps" index="1"]
+position = Vector2(220, 1057)
+texture = ExtResource("83_j06hi")
+
+[node name="DeadSheep3" type="Sprite2D" parent="Background/Sheeps" index="2"]
+position = Vector2(231, 1402)
+texture = ExtResource("83_j06hi")
+
+[node name="DeadSheep4" type="Sprite2D" parent="Background/Sheeps" index="3"]
+position = Vector2(83, 313)
+texture = ExtResource("83_j06hi")
+flip_h = true
+
+[node name="DeadSheep5" type="Sprite2D" parent="Background/Sheeps" index="4"]
+position = Vector2(1216, 358)
+texture = ExtResource("83_j06hi")
+flip_h = true
+
+[node name="DeadSheep6" type="Sprite2D" parent="Background/Sheeps" index="5"]
+position = Vector2(1105, 1557)
+texture = ExtResource("83_j06hi")
+flip_h = true
+
+[node name="DeadSheep7" type="Sprite2D" parent="Background/Sheeps" index="6"]
+position = Vector2(2440, 1524)
+texture = ExtResource("83_j06hi")
+
+[node name="DeadSheep8" type="Sprite2D" parent="Background/Sheeps" index="7"]
+position = Vector2(2407, 636)
+texture = ExtResource("83_j06hi")
+
+[node name="DeadSheep9" type="Sprite2D" parent="Background/Sheeps" index="8"]
+position = Vector2(2151, 608)
+texture = ExtResource("83_j06hi")
+flip_h = true
+
+[node name="DeadSheep10" type="Sprite2D" parent="Background/Sheeps" index="9"]
+position = Vector2(3190, 1420)
+texture = ExtResource("83_j06hi")
+
+[node name="DeadSheep11" type="Sprite2D" parent="Background/Sheeps" index="10"]
+position = Vector2(2514, 1159)
+texture = ExtResource("83_j06hi")
+flip_h = true
+
+[node name="DeadSheep12" type="Sprite2D" parent="Background/Sheeps" index="11"]
+position = Vector2(2975, 736)
+texture = ExtResource("83_j06hi")
+
+[node name="DeadSheep13" type="Sprite2D" parent="Background/Sheeps" index="12"]
+position = Vector2(2202, 1115)
+texture = ExtResource("83_j06hi")
+flip_h = true
+
+[node name="StageNavigationRegion" parent="." index="7"]
+navigation_polygon = SubResource("NavigationPolygon_21vye")
+
+[node name="FirerainRandomRegion" parent="FirerainRandomRegions" index="0"]
+navigation_polygon = SubResource("NavigationPolygon_ex01q")
+
+[node name="FirerainRandomRegion2" type="NavigationRegion2D" parent="FirerainRandomRegions" index="1"]
+navigation_polygon = SubResource("NavigationPolygon_f3ua8")
+use_edge_connections = false
+navigation_layers = 2
+
+[node name="EnemyPath" type="Path2D" parent="Enemies" index="0"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_rs6yl")
+script = ExtResource("83_8miul")
+path_summon_config = ExtResource("84_d2q2l")
+
+[node name="EnemyPath2" type="Path2D" parent="Enemies" index="1"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_slt1r")
+script = ExtResource("83_8miul")
+path_summon_config = ExtResource("85_h8val")
+
+[node name="EnemyPath3" type="Path2D" parent="Enemies" index="2"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_y88xm")
+script = ExtResource("83_8miul")
+path_summon_config = ExtResource("86_e1a7v")
+
+[node name="EnemyPath4" type="Path2D" parent="Enemies" index="3"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_gkhqe")
+script = ExtResource("83_8miul")
+path_summon_config = ExtResource("87_8h7b5")
+
+[node name="EnemyPath5" type="Path2D" parent="Enemies" index="4"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_kbgab")
+script = ExtResource("83_8miul")
+path_summon_config = ExtResource("88_235tc")
+
+[node name="EnemyPath6" type="Path2D" parent="Enemies" index="5"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_yet5b")
+script = ExtResource("83_8miul")
+path_summon_config = ExtResource("89_xxy0m")
+
+[node name="EnemyPath7" type="Path2D" parent="Enemies" index="6"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_5im0n")
+script = ExtResource("83_8miul")
+path_summon_config = ExtResource("90_rqnr4")
+
+[node name="EnemyPath8" type="Path2D" parent="Enemies" index="7"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_gb5ff")
+script = ExtResource("83_8miul")
+path_summon_config = ExtResource("91_amfgc")
+
+[node name="EnemyPath9" type="Path2D" parent="Enemies" index="8"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_582jd")
+script = ExtResource("83_8miul")
+path_summon_config = ExtResource("92_65mnw")
+
+[node name="EnemyPath10" type="Path2D" parent="Enemies" index="9"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_cytiv")
+script = ExtResource("83_8miul")
+path_summon_config = ExtResource("93_rwocb")
+
+[node name="EnemyPath11" type="Path2D" parent="Enemies" index="10"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_537yl")
+script = ExtResource("83_8miul")
+path_summon_config = ExtResource("94_asram")
+
+[node name="EnemyPath12" type="Path2D" parent="Enemies" index="11"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_8wptb")
+script = ExtResource("83_8miul")
+path_summon_config = ExtResource("95_dsfa3")
+
+[node name="DefenceTowerBased" parent="Towers" index="0" instance=ExtResource("124_7tfsf")]
+position = Vector2(386, 815)
+
+[node name="DefenceTowerBased3" parent="Towers" index="1" instance=ExtResource("124_7tfsf")]
+position = Vector2(1006, 664)
+based_skin = 2
+
+[node name="DefenceTowerBased5" parent="Towers" index="2" instance=ExtResource("124_7tfsf")]
+position = Vector2(1042, 418)
+based_skin = 2
+
+[node name="DefenceTowerBased6" parent="Towers" index="3" instance=ExtResource("124_7tfsf")]
+position = Vector2(432, 557)
+
+[node name="DefenceTowerBased8" parent="Towers" index="4" instance=ExtResource("124_7tfsf")]
+position = Vector2(2054, 841)
+
+[node name="DefenceTowerBased9" parent="Towers" index="5" instance=ExtResource("124_7tfsf")]
+position = Vector2(2249, 1228)
+
+[node name="DefenceTowerBased10" parent="Towers" index="6" instance=ExtResource("124_7tfsf")]
+position = Vector2(2090, 1356)
+
+[node name="DefenceTowerBased11" parent="Towers" index="7" instance=ExtResource("124_7tfsf")]
+position = Vector2(2330, 796)
+
+[node name="DefenceTowerBased12" parent="Towers" index="8" instance=ExtResource("124_7tfsf")]
+position = Vector2(2528, 909)
+
+[node name="DefenceTowerBased13" parent="Towers" index="9" instance=ExtResource("124_7tfsf")]
+position = Vector2(2804, 756)
+
+[node name="DefenceTowerBased14" parent="Towers" index="10" instance=ExtResource("124_7tfsf")]
+position = Vector2(2937, 520)
+
+[node name="DefenceTowerBased15" parent="Towers" index="11" instance=ExtResource("124_7tfsf")]
+position = Vector2(2624, 644)
+
+[node name="DefenceTowerBased16" parent="Towers" index="12" instance=ExtResource("124_7tfsf")]
+position = Vector2(724, 1042)
+
+[node name="DefenceTowerBased17" parent="Towers" index="13" instance=ExtResource("124_7tfsf")]
+position = Vector2(626, 1299)
+
+[node name="DefenceTowerBased18" parent="Towers" index="14" instance=ExtResource("124_7tfsf")]
+position = Vector2(740, 324)
+
+[node name="DefenceTowerBased19" parent="Towers" index="15" instance=ExtResource("124_7tfsf")]
+position = Vector2(2811, 1341)
+
+[node name="DefenceTowerBased20" parent="Towers" index="16" instance=ExtResource("124_7tfsf")]
+position = Vector2(2492, 1436)
+
+[node name="DefenceTowerBased21" parent="Towers" index="17" instance=ExtResource("124_7tfsf")]
+position = Vector2(1916, 1002)
+
+[node name="WallArhcer" parent="Towers" index="18" instance=ExtResource("84_8soqn")]
+position = Vector2(1587, 887)
+
+[node name="WallArhcer2" parent="Towers" index="19" instance=ExtResource("84_8soqn")]
+position = Vector2(1587, 887)
+
+[node name="Shooter" parent="Towers/WallArhcer2/TowerSprite" index="0"]
+position = Vector2(-1, -255)
+
+[node name="WallArhcer3" parent="Towers" index="20" instance=ExtResource("84_8soqn")]
+position = Vector2(1587, 887)
+
+[node name="Shooter" parent="Towers/WallArhcer3/TowerSprite" index="0"]
+position = Vector2(-1, 206)
+
+[node name="RedStoneArcherTower" parent="Towers" index="21" instance=ExtResource("99_fjx3u")]
+position = Vector2(747, 573)
+
+[node name="RedStoneArcherTower2" parent="Towers" index="22" instance=ExtResource("99_fjx3u")]
+position = Vector2(2132, 1005)
+
+[node name="TraderShop" parent="Towers" index="23" instance=ExtResource("100_32u8g")]
+position = Vector2(674, 833)
+
+[node name="CollisionShape2D" parent="ClickArea" index="0"]
+position = Vector2(1730, 805.5)
+shape = SubResource("RectangleShape2D_k7ugp")
+
+[node name="WaveButton" parent="WaveButtons" index="0" node_paths=PackedStringArray("linked_wave_panel") instance=ExtResource("98_88wvo")]
+offset_left = 3203.0
+offset_top = 588.0
+offset_right = 3203.0
+offset_bottom = 588.0
+linked_wave_panel = NodePath("../WavePanel")
+summon_text_list = Array[ExtResource("99_7r1jc")]([SubResource("Resource_qnag7"), null, SubResource("Resource_mq85s"), null, SubResource("Resource_t1r7e")])
+
+[node name="Direction" type="Sprite2D" parent="WaveButtons/WaveButton" index="5"]
+show_behind_parent = true
+position = Vector2(0.000152469, 1.25)
+rotation = 6.20036
+scale = Vector2(0.942457, 0.942457)
+texture = ExtResource("100_hqq81")
+
+[node name="WaveButton2" parent="WaveButtons" index="1" node_paths=PackedStringArray("linked_wave_panel") instance=ExtResource("98_88wvo")]
+offset_left = 2783.0
+offset_top = 1422.0
+offset_right = 2783.0
+offset_bottom = 1422.0
+linked_wave_panel = NodePath("../WavePanel2")
+summon_text_list = Array[ExtResource("99_7r1jc")]([SubResource("Resource_osx6g"), null, null, SubResource("Resource_ofg8i"), SubResource("Resource_5qtlm")])
+
+[node name="Direction" type="Sprite2D" parent="WaveButtons/WaveButton2" index="5"]
+show_behind_parent = true
+position = Vector2(0.000152469, 1.25)
+rotation = 6.75054
+scale = Vector2(0.942457, 0.942457)
+texture = ExtResource("100_hqq81")
+
+[node name="WaveButton3" parent="WaveButtons" index="2" node_paths=PackedStringArray("linked_wave_panel") instance=ExtResource("98_88wvo")]
+offset_left = 709.0
+offset_top = 108.0
+offset_right = 709.0
+offset_bottom = 108.0
+linked_wave_panel = NodePath("../WavePanel3")
+summon_text_list = Array[ExtResource("99_7r1jc")]([null, SubResource("Resource_cvnml"), SubResource("Resource_t6l8j"), null, SubResource("Resource_havyk")])
+
+[node name="Direction" type="Sprite2D" parent="WaveButtons/WaveButton3" index="5"]
+show_behind_parent = true
+position = Vector2(0.000152469, 1.25)
+rotation = 4.16503
+scale = Vector2(0.942457, 0.942457)
+texture = ExtResource("100_hqq81")
+
+[node name="WaveButton4" parent="WaveButtons" index="3" node_paths=PackedStringArray("linked_wave_panel") instance=ExtResource("98_88wvo")]
+offset_left = 926.0
+offset_top = 1450.0
+offset_right = 926.0
+offset_bottom = 1450.0
+linked_wave_panel = NodePath("../WavePanel4")
+summon_text_list = Array[ExtResource("99_7r1jc")]([null, SubResource("Resource_7d8gu"), null, SubResource("Resource_pigaw"), SubResource("Resource_p5sbk")])
+
+[node name="Direction" type="Sprite2D" parent="WaveButtons/WaveButton4" index="5"]
+show_behind_parent = true
+position = Vector2(0.000152469, 1.25)
+rotation = 1.59037
+scale = Vector2(0.942457, 0.942457)
+texture = ExtResource("100_hqq81")
+
+[node name="WavePanel" parent="WaveButtons" index="4" instance=ExtResource("101_e54r0")]
+layout_mode = 0
+offset_left = 2849.0
+offset_top = 504.0
+offset_right = 3453.0
+offset_bottom = 798.0
+
+[node name="WavePanel2" parent="WaveButtons" index="5" instance=ExtResource("101_e54r0")]
+layout_mode = 0
+offset_left = 2432.0
+offset_top = 1335.0
+offset_right = 3036.0
+offset_bottom = 1629.0
+
+[node name="WavePanel3" parent="WaveButtons" index="6" instance=ExtResource("101_e54r0")]
+layout_mode = 0
+offset_left = 756.0
+offset_top = 23.0
+offset_right = 1360.0
+offset_bottom = 317.0
+
+[node name="WavePanel4" parent="WaveButtons" index="7" instance=ExtResource("101_e54r0")]
+layout_mode = 0
+offset_left = 574.0
+offset_top = 1358.0
+offset_right = 1178.0
+offset_bottom = 1652.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PathArea" index="0"]
+polygon = PackedVector2Array(1741, 856, 1792, 955, 1980, 966, 1984, 1077, 2020, 1214, 2090, 1301, 2175, 1349, 2326, 1383, 2431, 1393, 2598, 1413, 2730, 1449, 2814, 1498, 2881, 1562, 2901, 1603, 2999, 1603, 2975, 1541, 2921, 1468, 2838, 1391, 2662, 1333, 2409, 1297, 2254, 1277, 2165, 1242, 2114, 1182, 2076, 1085, 2066, 968, 2169, 970, 2373, 920, 2526, 863, 2661, 777, 2748, 728, 2861, 679, 3003, 637, 3105, 629, 3463, 629, 3463, 536, 3202, 536, 3006, 544, 2850, 578, 2700, 647, 2582, 709, 2466, 788, 2341, 829, 2206, 864, 2097, 875, 1916, 872)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="PathArea" index="1"]
+polygon = PackedVector2Array(592, -11, 614, 49, 654, 119, 723, 173, 823, 259, 876, 328, 887, 402, 871, 469, 842, 551, 853, 686, 579, 650, 203, 647, -6, 696, -10, 784, 77, 764, 288, 740, 488, 732, 494, 747, 480, 835, 479, 992, 509, 1089, 529, 1123, 602, 1175, 670, 1205, 764, 1253, 818, 1305, 848, 1361, 879, 1440, 878, 1500, 856, 1570, 844, 1601, 941, 1605, 959, 1558, 969, 1498, 956, 1385, 917, 1299, 864, 1222, 777, 1157, 677, 1103, 622, 1080, 582, 1032, 575, 969, 573, 865, 573, 812, 578, 735, 613, 745, 849, 780, 1008, 816, 1242, 884, 1344, 906, 1389, 826, 1234, 789, 1085, 742, 951, 708, 934, 608, 944, 545, 984, 388, 955, 291, 889, 187, 795, 111, 730, 56, 698, -7)
+
+[node name="PathConfigSave" type="Node2D" parent="." index="20"]
+script = ExtResource("87_hr1d0")
+sample_config = ExtResource("88_tb0re")
+path_front = "res://Library/SummonConfigs/Stage18/Diamond"
+loop_count = 12
+
+[node name="PathConfigLoadProcess" type="Node" parent="." index="21" node_paths=PackedStringArray("enemy_parent_node")]
+script = ExtResource("101_wemme")
+enemy_parent_node = NodePath("../Enemies")
+config_path_front = "res://Library/SummonConfigs/Stage18/Diamond"
+loading_count = 12
+
+[node name="HeroSummonMarker" parent="." index="22"]
+position = Vector2(144, 705)
+
+[node name="SummonCountProcess" type="Node2D" parent="." index="23" node_paths=PackedStringArray("enemy_parnt_node")]
+script = ExtResource("102_6iy6f")
+enemy_parnt_node = NodePath("../Enemies")
+max_wave_count = 5
+process_summon_blocks = Array[ExtResource("103_a5aud")]([ExtResource("84_d2q2l"), ExtResource("85_h8val"), ExtResource("86_e1a7v"), ExtResource("87_8h7b5"), ExtResource("88_235tc"), ExtResource("89_xxy0m"), ExtResource("90_rqnr4"), ExtResource("91_amfgc"), ExtResource("92_65mnw"), ExtResource("93_rwocb"), ExtResource("94_asram"), ExtResource("95_dsfa3")])
+
+[editable path="Towers/WallArhcer2"]
+[editable path="Towers/WallArhcer3"]

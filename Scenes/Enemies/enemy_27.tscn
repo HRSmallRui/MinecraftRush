@@ -1,0 +1,645 @@
+[gd_scene load_steps=143 format=3 uid="uid://bcq26o20y1cum"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_sx2p5"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_27.gd" id="2_u2ln8"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="3_0bv77"]
+[ext_resource type="Texture2D" uid="uid://dym6gfyk2fxsa" path="res://Assets/Images/UI/InformationBar/沙漠雇佣兵.png" id="3_gnsw1"]
+[ext_resource type="Texture2D" uid="uid://de7c3qnm3iygs" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/appear_00.png" id="5_k7qot"]
+[ext_resource type="Texture2D" uid="uid://1i4lu5bcjyrx" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/appear_01.png" id="6_vp7c1"]
+[ext_resource type="Texture2D" uid="uid://cp3k3pcx7l41j" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/appear_02.png" id="7_xnhqu"]
+[ext_resource type="Texture2D" uid="uid://dvaeg2v2h2joh" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/appear_03.png" id="8_ygcao"]
+[ext_resource type="Texture2D" uid="uid://dimexr4frb838" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/appear_04.png" id="9_nfcy4"]
+[ext_resource type="Texture2D" uid="uid://dpojdwt0vr24u" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/appear_05.png" id="10_jkvs6"]
+[ext_resource type="Texture2D" uid="uid://6p683n7kcg8n" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/appear_06.png" id="11_kbnuw"]
+[ext_resource type="Texture2D" uid="uid://bq6vgjasu8bdy" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/appear_07.png" id="12_avapd"]
+[ext_resource type="Texture2D" uid="uid://c2hjuhkqgbh2x" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/appear_08.png" id="13_bwgm0"]
+[ext_resource type="Texture2D" uid="uid://q7d7govvlasi" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/appear_09.png" id="14_golmm"]
+[ext_resource type="Texture2D" uid="uid://dfur7djg4ggfg" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/appear_10.png" id="15_4w21m"]
+[ext_resource type="Texture2D" uid="uid://m31l33sgcc0h" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/appear_11.png" id="16_a4ppi"]
+[ext_resource type="Texture2D" uid="uid://cuxbboyjg17qg" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/appear_12.png" id="17_r2q6r"]
+[ext_resource type="Texture2D" uid="uid://dd5wu018rcevj" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/appear_13.png" id="18_ryo0y"]
+[ext_resource type="Texture2D" uid="uid://dn2jwdljad32i" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/appear_14.png" id="19_cf2ge"]
+[ext_resource type="Texture2D" uid="uid://cjfpxgndfvqfi" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/appear_15.png" id="20_honmw"]
+[ext_resource type="Texture2D" uid="uid://bgt374kl5yqm8" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/appear_16.png" id="21_g2hws"]
+[ext_resource type="Texture2D" uid="uid://bmsgqjo8ye6i" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/appear_17.png" id="22_58off"]
+[ext_resource type="Texture2D" uid="uid://dcskbdm8u2j3q" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/appear_18.png" id="23_2buh4"]
+[ext_resource type="Texture2D" uid="uid://ctw16v3miw7w0" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/appear_19.png" id="24_wln2t"]
+[ext_resource type="Texture2D" uid="uid://cf5qpb1jwujx2" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/appear_20.png" id="25_uve8x"]
+[ext_resource type="Texture2D" uid="uid://blkjyk7mj85wu" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/appear_21.png" id="26_0lok7"]
+[ext_resource type="Texture2D" uid="uid://okoyanxn5ajp" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/appear_22.png" id="27_jcrhn"]
+[ext_resource type="Texture2D" uid="uid://kx1uqxckd0gy" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/appear_23.png" id="28_0dtsy"]
+[ext_resource type="Texture2D" uid="uid://csktwwbsqettx" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/appear_24.png" id="29_4mnio"]
+[ext_resource type="Texture2D" uid="uid://denyjqa1b7rf6" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/appear_25.png" id="30_53bgl"]
+[ext_resource type="Texture2D" uid="uid://bi01uvo7l7dg0" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/attack_00.png" id="31_ley4q"]
+[ext_resource type="Texture2D" uid="uid://bv7p0e75872yg" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/attack_01.png" id="32_q1nft"]
+[ext_resource type="Texture2D" uid="uid://bve6ox1yfv0xy" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/attack_02.png" id="33_cs8ae"]
+[ext_resource type="Texture2D" uid="uid://ur724yua162g" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/attack_03.png" id="34_e7s51"]
+[ext_resource type="Texture2D" uid="uid://de6tjskjqdmm4" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/attack_04.png" id="35_ebaxx"]
+[ext_resource type="Texture2D" uid="uid://ilkpms6sbqbf" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/attack_05.png" id="36_2a0mj"]
+[ext_resource type="Texture2D" uid="uid://dh7d2suto1n5e" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/attack_06.png" id="37_n01mi"]
+[ext_resource type="Texture2D" uid="uid://ckw8vbfdlh27u" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/attack_07.png" id="38_co6sa"]
+[ext_resource type="Texture2D" uid="uid://ddg5w8ooaspf4" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/attack_08.png" id="39_of6h3"]
+[ext_resource type="Texture2D" uid="uid://b2c1k8v1624wj" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/attack_09.png" id="40_hw7i1"]
+[ext_resource type="Texture2D" uid="uid://b1wsldolhdgb1" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/attack_10.png" id="41_h0kix"]
+[ext_resource type="Texture2D" uid="uid://csuitvp4rqmxe" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/attack_11.png" id="42_3sg81"]
+[ext_resource type="Texture2D" uid="uid://chrkckgiosbic" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/attack_12.png" id="43_ip581"]
+[ext_resource type="Texture2D" uid="uid://blcmhklnqeefa" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/attack_13.png" id="44_tgf50"]
+[ext_resource type="Texture2D" uid="uid://btabml5dpnqmy" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/attack_14.png" id="45_8idkn"]
+[ext_resource type="Texture2D" uid="uid://cupt1l064fe57" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/attack_15.png" id="46_h6xgj"]
+[ext_resource type="Texture2D" uid="uid://d2v3deido2vgl" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/attack_16.png" id="47_hfsjn"]
+[ext_resource type="Texture2D" uid="uid://dgmghh7sksert" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/attack_17.png" id="48_7hhhl"]
+[ext_resource type="Texture2D" uid="uid://cqck6wdodqqj1" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/attack_18.png" id="49_56638"]
+[ext_resource type="Texture2D" uid="uid://b5wmae7tnhxao" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/attack_19.png" id="50_25dq2"]
+[ext_resource type="Texture2D" uid="uid://ctwtvqv5twdvu" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/attack_20.png" id="51_rs0oc"]
+[ext_resource type="Texture2D" uid="uid://b11s3o34xj44r" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/attack_21.png" id="52_qvejf"]
+[ext_resource type="Texture2D" uid="uid://7gau5a47e2m5" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/attack_22.png" id="53_ij6d5"]
+[ext_resource type="Texture2D" uid="uid://gy185f8ii7ej" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/attack_23.png" id="54_uyexy"]
+[ext_resource type="Texture2D" uid="uid://cj1uowldc36ea" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/attack_24.png" id="55_8wafe"]
+[ext_resource type="Texture2D" uid="uid://dus4in4xpahjj" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/die_00.png" id="56_0umkj"]
+[ext_resource type="Texture2D" uid="uid://cpx6i1sdujn25" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/die_01.png" id="57_eg38e"]
+[ext_resource type="Texture2D" uid="uid://g2ifytooefex" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/die_02.png" id="58_63npc"]
+[ext_resource type="Texture2D" uid="uid://c75rk5gkdckfm" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/die_03.png" id="59_q5qij"]
+[ext_resource type="Texture2D" uid="uid://drumlrg01i47c" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/die_04.png" id="60_tvlmb"]
+[ext_resource type="Texture2D" uid="uid://mievu30frgao" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/die_05.png" id="61_camaa"]
+[ext_resource type="Texture2D" uid="uid://cja3spr2fuh4x" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/die_06.png" id="62_tiqvc"]
+[ext_resource type="Texture2D" uid="uid://c7iq6sk1j4u5j" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/die_07.png" id="63_2lqjm"]
+[ext_resource type="Texture2D" uid="uid://chneyt6opgu0e" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/die_08.png" id="64_dup16"]
+[ext_resource type="Texture2D" uid="uid://cu1svak6xoxoy" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/die_09.png" id="65_vp3ab"]
+[ext_resource type="Texture2D" uid="uid://c5v0v5ginevfg" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/die_10.png" id="66_xrn7i"]
+[ext_resource type="Texture2D" uid="uid://4y38wiquac0j" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/die_11.png" id="67_3mnql"]
+[ext_resource type="Texture2D" uid="uid://c6ig7rdb5cad4" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/die_12.png" id="68_ck3lp"]
+[ext_resource type="Texture2D" uid="uid://ddd0b28cxjd01" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_back_00.png" id="69_vwjyd"]
+[ext_resource type="Texture2D" uid="uid://d2a5orcu5geh2" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_back_01.png" id="70_1x5ga"]
+[ext_resource type="Texture2D" uid="uid://bgpbf5he5jl02" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_back_02.png" id="71_w1aud"]
+[ext_resource type="Texture2D" uid="uid://du0q27y4yy66t" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_back_03.png" id="72_ayrwt"]
+[ext_resource type="Texture2D" uid="uid://5cxqfu0q8bgg" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_back_04.png" id="73_3ynxa"]
+[ext_resource type="Texture2D" uid="uid://cwumqftcygfwm" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_back_05.png" id="74_upr76"]
+[ext_resource type="Texture2D" uid="uid://c82ujj46qql65" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_back_06.png" id="75_py64d"]
+[ext_resource type="Texture2D" uid="uid://c2xlk8ptayagc" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_back_07.png" id="76_doejr"]
+[ext_resource type="Texture2D" uid="uid://cs1impi5sf3im" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_back_08.png" id="77_t8f2s"]
+[ext_resource type="Texture2D" uid="uid://bk6o4rpenj74p" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_back_09.png" id="78_csrfc"]
+[ext_resource type="Texture2D" uid="uid://v5dtqgl5kbx3" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_back_10.png" id="79_3up1w"]
+[ext_resource type="Texture2D" uid="uid://b6mltdyfrjk73" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_back_11.png" id="80_xa6bo"]
+[ext_resource type="Texture2D" uid="uid://b5lin4txnlshs" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_back_12.png" id="81_0dml3"]
+[ext_resource type="Texture2D" uid="uid://2j1mm8oi64t3" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_back_13.png" id="82_10g4p"]
+[ext_resource type="Texture2D" uid="uid://4v1v2ike5ol5" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_back_14.png" id="83_0o4s5"]
+[ext_resource type="Texture2D" uid="uid://c4et5nc667cum" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_back_15.png" id="84_ewhr4"]
+[ext_resource type="Texture2D" uid="uid://d8uyxyh2ssf4" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_back_16.png" id="85_vjv4a"]
+[ext_resource type="Texture2D" uid="uid://byswfpexh7g2n" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_back_17.png" id="86_s2nqy"]
+[ext_resource type="Texture2D" uid="uid://bf743iw1j2e7r" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_back_18.png" id="87_dl671"]
+[ext_resource type="Texture2D" uid="uid://bk0jv3cnro3tt" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_back_19.png" id="88_tq3of"]
+[ext_resource type="Texture2D" uid="uid://dv6a7ilbwfpw0" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_back_20.png" id="89_dvfhg"]
+[ext_resource type="Texture2D" uid="uid://b3umntscu4g08" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_back_21.png" id="90_5e16y"]
+[ext_resource type="Texture2D" uid="uid://chcxjfboersn2" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_back_22.png" id="91_6ypjh"]
+[ext_resource type="Texture2D" uid="uid://ckhal1ot7gb3b" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_back_23.png" id="92_0uiyu"]
+[ext_resource type="Texture2D" uid="uid://d2dhm0say682i" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_front_00.png" id="93_wrcqu"]
+[ext_resource type="Texture2D" uid="uid://4ix831aq26ap" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_front_01.png" id="94_e02pb"]
+[ext_resource type="Texture2D" uid="uid://dscuqtxboifen" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_front_02.png" id="95_gfgnr"]
+[ext_resource type="Texture2D" uid="uid://c7ae6cnhbm0n2" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_front_03.png" id="96_b52o3"]
+[ext_resource type="Texture2D" uid="uid://clypwskuiecb" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_front_04.png" id="97_o664q"]
+[ext_resource type="Texture2D" uid="uid://c6ox04jexkspj" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_front_05.png" id="98_7kd1i"]
+[ext_resource type="Texture2D" uid="uid://cdchxg6kdim0t" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_front_06.png" id="99_ynn3m"]
+[ext_resource type="Texture2D" uid="uid://ch6653723roqj" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_front_07.png" id="100_27saa"]
+[ext_resource type="Texture2D" uid="uid://dvwec8ykeacom" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_front_08.png" id="101_eg6kt"]
+[ext_resource type="Texture2D" uid="uid://2pw1187pgmdo" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_front_09.png" id="102_celsr"]
+[ext_resource type="Texture2D" uid="uid://epfsunpt2fob" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_front_10.png" id="103_cfbfr"]
+[ext_resource type="Texture2D" uid="uid://c1c4msvshgvn3" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_front_11.png" id="104_v5osw"]
+[ext_resource type="Texture2D" uid="uid://bhwyotgs0cxed" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_front_12.png" id="105_r8i03"]
+[ext_resource type="Texture2D" uid="uid://caaaqqafl4e08" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_front_13.png" id="106_nrnem"]
+[ext_resource type="Texture2D" uid="uid://cv1sd0la6p7jf" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_front_14.png" id="107_gcel4"]
+[ext_resource type="Texture2D" uid="uid://b17e5ycxit6dw" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_front_15.png" id="108_8tbij"]
+[ext_resource type="Texture2D" uid="uid://bjxcmm0gehim1" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_front_16.png" id="109_gey68"]
+[ext_resource type="Texture2D" uid="uid://drk2vt4mt18mk" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_front_17.png" id="110_00jpa"]
+[ext_resource type="Texture2D" uid="uid://f1mkanqtolqn" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_front_18.png" id="111_pncqr"]
+[ext_resource type="Texture2D" uid="uid://c8ds1gx1ur3ec" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_front_19.png" id="112_6u17g"]
+[ext_resource type="Texture2D" uid="uid://g7jcofyv3xgy" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_front_20.png" id="113_k8raf"]
+[ext_resource type="Texture2D" uid="uid://bna5xhf8vfa7" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_front_21.png" id="114_chqhn"]
+[ext_resource type="Texture2D" uid="uid://daegt772qddyr" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_front_22.png" id="115_5ga1t"]
+[ext_resource type="Texture2D" uid="uid://bcaepxlhfe2u7" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_front_23.png" id="116_hmx00"]
+[ext_resource type="Texture2D" uid="uid://id1hirxsvu7o" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_normal_00.png" id="117_h1tbo"]
+[ext_resource type="Texture2D" uid="uid://wobg4xhsust8" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_normal_01.png" id="118_lrnvi"]
+[ext_resource type="Texture2D" uid="uid://cqb2prsg1cbb7" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_normal_02.png" id="119_bdlth"]
+[ext_resource type="Texture2D" uid="uid://dapgbid5b40tj" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_normal_03.png" id="120_oc0gy"]
+[ext_resource type="Texture2D" uid="uid://vx5yh0wovq4t" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_normal_04.png" id="121_q0vg5"]
+[ext_resource type="Texture2D" uid="uid://5o8tqu1kikv0" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_normal_05.png" id="122_hlaah"]
+[ext_resource type="Texture2D" uid="uid://40t6ww56ngsk" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_normal_06.png" id="123_xotup"]
+[ext_resource type="Texture2D" uid="uid://bvtqj8ae5akjs" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_normal_07.png" id="124_72lb7"]
+[ext_resource type="Texture2D" uid="uid://bh6dtjkanmhd1" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_normal_08.png" id="125_jegyj"]
+[ext_resource type="Texture2D" uid="uid://cx6xngkw0s7ar" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_normal_09.png" id="126_ac6ym"]
+[ext_resource type="Texture2D" uid="uid://cfq33e35fw1fm" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_normal_10.png" id="127_met3q"]
+[ext_resource type="Texture2D" uid="uid://c2rayc04f2kjh" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_normal_11.png" id="128_o2ggb"]
+[ext_resource type="Texture2D" uid="uid://cgaj003r47n2u" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_normal_12.png" id="129_m24pw"]
+[ext_resource type="Texture2D" uid="uid://bhnjuo2hxlfqa" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_normal_13.png" id="130_7uv4e"]
+[ext_resource type="Texture2D" uid="uid://x4dmyd2vpjii" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_normal_14.png" id="131_qnrgk"]
+[ext_resource type="Texture2D" uid="uid://c64147h7udtdy" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_normal_15.png" id="132_34kuu"]
+[ext_resource type="Texture2D" uid="uid://cqbxd4fppnjba" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_normal_16.png" id="133_r1xiw"]
+[ext_resource type="Texture2D" uid="uid://dt1tpmlyo3njd" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_normal_17.png" id="134_exeuo"]
+[ext_resource type="Texture2D" uid="uid://bky3i4wh6texn" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_normal_18.png" id="135_pgo6s"]
+[ext_resource type="Texture2D" uid="uid://2v725vpsm7oa" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_normal_19.png" id="136_1ifj4"]
+[ext_resource type="Texture2D" uid="uid://dy6n1agxuouol" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_normal_20.png" id="137_y8p81"]
+[ext_resource type="Texture2D" uid="uid://dorlg6w6ppmmf" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_normal_21.png" id="138_tqycu"]
+[ext_resource type="Texture2D" uid="uid://b4hgibo305vl5" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_normal_22.png" id="139_cs7vm"]
+[ext_resource type="Texture2D" uid="uid://b8ws7adawbfy6" path="res://Assets/Animations/Enemies/27沙漠雇佣兵/move_normal_23.png" id="140_qxrqg"]
+
+[sub_resource type="Resource" id="Resource_154yk"]
+script = ExtResource("3_0bv77")
+health = 200
+dodge_rate = 0.0
+near_damage_low = 24
+near_damage_high = 48
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.15
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 1.2
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ccsra"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_k7qot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_k7qot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vp7c1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xnhqu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ygcao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_nfcy4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jkvs6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_kbnuw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_avapd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_bwgm0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_golmm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4w21m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_a4ppi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_r2q6r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ryo0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_cf2ge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_honmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_g2hws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_58off")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_2buh4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_wln2t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_uve8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_0lok7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_jcrhn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_0dtsy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_4mnio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_53bgl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_53bgl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_53bgl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_53bgl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_53bgl")
+}],
+"loop": false,
+"name": &"appear",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_ley4q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_q1nft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_cs8ae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_e7s51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ebaxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_2a0mj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_n01mi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_co6sa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_of6h3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_hw7i1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_h0kix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_3sg81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_ip581")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_tgf50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_8idkn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_h6xgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_hfsjn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_7hhhl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_56638")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_25dq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_rs0oc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_qvejf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_ij6d5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_uyexy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_8wafe")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("56_0umkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_eg38e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_63npc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_q5qij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_tvlmb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_camaa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_tiqvc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_2lqjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_dup16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_vp3ab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_xrn7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_3mnql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_ck3lp")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_ley4q")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("69_vwjyd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_1x5ga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_w1aud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_ayrwt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_3ynxa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_upr76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_py64d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_doejr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_t8f2s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_csrfc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_3up1w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_xa6bo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_0dml3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_10g4p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_0o4s5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_ewhr4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_vjv4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_s2nqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_dl671")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_tq3of")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_dvfhg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_5e16y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_6ypjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_0uiyu")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("93_wrcqu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_e02pb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_gfgnr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_b52o3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_o664q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_7kd1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_ynn3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_27saa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_eg6kt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_celsr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_cfbfr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_v5osw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_r8i03")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_nrnem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_gcel4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_8tbij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_gey68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_00jpa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_pncqr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_6u17g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_k8raf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_chqhn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_5ga1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_hmx00")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("117_h1tbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_lrnvi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_bdlth")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_oc0gy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_q0vg5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_hlaah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_xotup")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_72lb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_jegyj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_ac6ym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_met3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_o2ggb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_m24pw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_7uv4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_qnrgk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_34kuu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_r1xiw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_exeuo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_pgo6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_1ifj4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_y8p81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_tqycu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_cs7vm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_qxrqg")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 24.0
+}]
+
+[node name="Enemy27" instance=ExtResource("1_sx2p5")]
+script = ExtResource("2_u2ln8")
+enemy_name = "沙漠雇佣兵"
+enemy_id = 27
+enemy_texture = ExtResource("3_gnsw1")
+enemy_type = 1
+start_data = SubResource("Resource_154yk")
+bounty = 12
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(20, -95)
+sprite_frames = SubResource("SpriteFrames_ccsra")
+animation = &"appear"
+autoplay = "idle"
+
+[node name="DieAudio" parent="." index="3"]
+pitch_scale = 0.9

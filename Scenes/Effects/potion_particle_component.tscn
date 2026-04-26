@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://e2aodg4iwohu"]
+
+[ext_resource type="Script" path="res://Scripts/Effects/potion_particle_component.gd" id="1_mjukr"]
+[ext_resource type="Texture2D" uid="uid://cwdlm5vaoo4qy" path="res://Assets/Images/Effects/粒子特效.png" id="2_206tj"]
+
+[node name="PotionParticleComponent" type="Node2D"]
+position = Vector2(115, 80)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_mjukr")
+particle_color = Color(1, 1, 1, 1)
+
+[node name="ParticleSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_206tj")

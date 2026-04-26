@@ -1,0 +1,22 @@
+[gd_scene load_steps=7 format=3 uid="uid://cnehqoj6f1nsv"]
+
+[ext_resource type="PackedScene" uid="uid://d11w8wb6ou4nk" path="res://Scenes/UI-Components/TipButtons/ArmorTipButton.tscn" id="1_mqgjk"]
+[ext_resource type="PackedScene" uid="uid://lidsmsvyvlo2" path="res://Scenes/TipUI/magic_defence_tip.tscn" id="2_ar4e2"]
+[ext_resource type="Texture2D" uid="uid://ctbr3gl2ljrfa" path="res://Assets/Images/UI/TipIcons/magic_tip.png" id="3_ib4mo"]
+[ext_resource type="Texture2D" uid="uid://bjxbpxlxb6x6a" path="res://Assets/Images/UI/TipIcons/magic_tip-hover.png" id="4_5yg2m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5xhj"]
+atlas = ExtResource("3_ib4mo")
+region = Rect2(10, 9, 106, 108)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fe25q"]
+atlas = ExtResource("4_5yg2m")
+region = Rect2(4, 4, 118, 118)
+
+[node name="MagicDefenceTipButton" instance=ExtResource("1_mqgjk")]
+open_tip_scene = ExtResource("2_ar4e2")
+
+[node name="TextureButton" parent="Button" index="0"]
+texture_normal = SubResource("AtlasTexture_i5xhj")
+texture_pressed = SubResource("AtlasTexture_i5xhj")
+texture_hover = SubResource("AtlasTexture_fe25q")

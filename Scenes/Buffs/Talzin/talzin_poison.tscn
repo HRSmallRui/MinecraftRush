@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1ix265mdny2a"]
+
+[ext_resource type="PackedScene" uid="uid://bwifge7de0uys" path="res://Scenes/Buffs/dot_buff.tscn" id="1_wbusl"]
+[ext_resource type="Script" path="res://Scripts/Classes/potion_particle_leader.gd" id="2_swesk"]
+
+[node name="TalzinPoison" instance=ExtResource("1_wbusl")]
+dot_damage = Array[int]([6, 8, 10])
+duration = 10.0
+buff_tag = "TalzinPoison"
+immune_groups = Array[String](["god", "super_unit"])
+
+[node name="DotTimer" parent="." index="0"]
+wait_time = 0.5
+
+[node name="PotionParticleLeader" type="Node2D" parent="." index="1" node_paths=PackedStringArray("buff_vehicle")]
+script = ExtResource("2_swesk")
+potion_color = Color(0, 0.217548, 1.20327e-07, 1)
+buff_vehicle = NodePath("..")

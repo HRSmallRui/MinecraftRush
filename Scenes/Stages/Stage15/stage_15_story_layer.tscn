@@ -1,0 +1,110 @@
+[gd_scene load_steps=13 format=3 uid="uid://cl7rohwaio23a"]
+
+[ext_resource type="Script" path="res://Scripts/UI-Components/Stages/story_layer.gd" id="1_ynujd"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Stages/dialog_block.gd" id="2_73yoa"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="2_xc8du"]
+
+[sub_resource type="Resource" id="Resource_dkut0"]
+script = ExtResource("2_73yoa")
+dialog_text = "终于解决完这个大家伙了，将军，我们要赶紧回国支援。"
+text_color = Color(1, 1, 1, 1)
+text_exist_time = 4.0
+
+[sub_resource type="Resource" id="Resource_uaqda"]
+script = ExtResource("2_73yoa")
+dialog_text = "史蒂夫：大家抓紧时间，片刻后备船离开，越快越好。我现在总有一种不祥的预感……"
+text_color = Color(0, 1, 1, 1)
+text_exist_time = 8.0
+
+[sub_resource type="Resource" id="Resource_o0tn2"]
+script = ExtResource("2_73yoa")
+dialog_text = ""
+text_color = Color(1, 1, 1, 1)
+text_exist_time = 14.0
+
+[sub_resource type="Resource" id="Resource_ji20p"]
+script = ExtResource("2_73yoa")
+dialog_text = "尔等止步。"
+text_color = Color(0, 1, 0, 1)
+text_exist_time = 16.0
+
+[sub_resource type="Resource" id="Resource_scorw"]
+script = ExtResource("2_73yoa")
+dialog_text = ""
+text_color = Color(1, 1, 1, 1)
+text_exist_time = 18.0
+
+[sub_resource type="Resource" id="Resource_44j71"]
+script = ExtResource("2_73yoa")
+dialog_text = "那是什么？！"
+text_color = Color(1, 1, 1, 1)
+text_exist_time = 19.0
+
+[sub_resource type="Resource" id="Resource_mxp07"]
+script = ExtResource("2_73yoa")
+dialog_text = "……厌皇，尼古拉斯？！"
+text_color = Color(1, 1, 1, 1)
+text_exist_time = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wjk2n"]
+bg_color = Color(0.273873, 0.273873, 0.273873, 0.443137)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_es77x"]
+bg_color = Color(0.0980392, 0.0980392, 0.0980392, 0.443137)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="Stage15StoryLayer" type="CanvasLayer" node_paths=PackedStringArray("subtitle", "skip_button", "cg_player")]
+layer = 11
+script = ExtResource("1_ynujd")
+ending_time = 23.0
+dialog_list = Array[ExtResource("2_73yoa")]([SubResource("Resource_dkut0"), SubResource("Resource_uaqda"), SubResource("Resource_o0tn2"), SubResource("Resource_ji20p"), SubResource("Resource_scorw"), SubResource("Resource_44j71"), SubResource("Resource_mxp07")])
+subtitle = NodePath("Subtitle")
+skip_button = NodePath("SkipButton")
+cg_player = NodePath("CGPlayer")
+
+[node name="CGPlayer" type="Sprite2D" parent="."]
+centered = false
+
+[node name="Subtitle" type="Label" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -586.0
+offset_top = -177.0
+offset_right = 586.0
+offset_bottom = -89.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("2_xc8du")
+theme_override_font_sizes/font_size = 48
+text = "焦土终会复生，但伤疤永不弥合"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="SkipButton" type="Button" parent="."]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -254.0
+offset_top = 41.0
+offset_right = -122.0
+offset_bottom = 148.0
+grow_horizontal = 0
+scale = Vector2(1.54343, 1.54343)
+theme_override_font_sizes/font_size = 72
+theme_override_styles/hover = SubResource("StyleBoxFlat_wjk2n")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_es77x")
+theme_override_styles/normal = SubResource("StyleBoxFlat_es77x")
+text = ">>"

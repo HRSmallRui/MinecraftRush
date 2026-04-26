@@ -1,0 +1,76 @@
+[gd_scene load_steps=12 format=3 uid="uid://p713aa6uaqsb"]
+
+[ext_resource type="PackedScene" uid="uid://bjfa3t67tpsbr" path="res://Scenes/Buffs/property_buff.tscn" id="1_rji6h"]
+[ext_resource type="Script" path="res://Scripts/Buffs/gd_soul_buff.gd" id="2_8ojna"]
+[ext_resource type="Script" path="res://Scripts/Buffs/property_buff_block.gd" id="3_tg2il"]
+[ext_resource type="Shader" path="res://Assets/Shaders/hue_color.gdshader" id="4_h38vg"]
+[ext_resource type="Texture2D" uid="uid://bqdije0cnh2r5" path="res://Assets/Images/Effects/plugin_effect.png" id="5_ca04t"]
+
+[sub_resource type="Resource" id="Resource_u64jq"]
+script = ExtResource("3_tg2il")
+property_type = 1
+operation_type = 1
+operation_data = 1.6
+
+[sub_resource type="Resource" id="Resource_eu4yu"]
+script = ExtResource("3_tg2il")
+property_type = 2
+operation_type = 1
+operation_data = 1.6
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_31x18"]
+shader = ExtResource("4_h38vg")
+shader_parameter/hue_shift = 0.5
+
+[sub_resource type="Animation" id="Animation_bjvy8"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SoulEffect:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_mxl1e"]
+resource_name = "loop"
+loop_mode = 1
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SoulEffect:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(1, 1),
+"points": PackedFloat32Array(0, 0, 0, 0, 0, -6.28319, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yn6cp"]
+_data = {
+"RESET": SubResource("Animation_bjvy8"),
+"loop": SubResource("Animation_mxl1e")
+}
+
+[node name="GDSkillChip2BuffLV3" instance=ExtResource("1_rji6h")]
+script = ExtResource("2_8ojna")
+buff_blocks = Array[ExtResource("3_tg2il")]([SubResource("Resource_u64jq"), SubResource("Resource_eu4yu")])
+buff_level = 3
+buff_tag = "GDSkillChip2Buff"
+
+[node name="SoulEffect" type="Sprite2D" parent="." index="0"]
+material = SubResource("ShaderMaterial_31x18")
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_ca04t")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_yn6cp")
+}
+autoplay = "loop"

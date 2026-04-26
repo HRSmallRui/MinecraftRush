@@ -1,0 +1,635 @@
+[gd_scene load_steps=46 format=3 uid="uid://dyokbwfgrtwlg"]
+
+[ext_resource type="Script" path="res://Scripts/GameBased/extra_contents.gd" id="1_k8s4v"]
+[ext_resource type="PackedScene" uid="uid://d0qpojuqd2xb7" path="res://Scenes/UI-Components/Extra/Wiki/book_ui.tscn" id="2_068mt"]
+[ext_resource type="AudioStream" uid="uid://de2x442c48ngl" path="res://Assets/Sounds/Music/ExtraPart/extra_start.mp3" id="2_vsq8l"]
+[ext_resource type="AudioStream" uid="uid://cvdq52pu4h06k" path="res://Assets/Sounds/Music/ExtraPart/extra_loop.mp3" id="3_2n71d"]
+[ext_resource type="PackedScene" uid="uid://byvjetebl8feb" path="res://Scenes/UI-Components/Extra/Map/big_map_ui.tscn" id="3_hcf5n"]
+[ext_resource type="Texture2D" uid="uid://bcp4g3aqqpru" path="res://Assets/Images/UI/Extra/HouseAnim/normal0001.jpg" id="4_7ixbn"]
+[ext_resource type="PackedScene" uid="uid://66ipi8u04xnk" path="res://Scenes/UI-Components/Extra/Bed/bed_ui.tscn" id="4_hmc84"]
+[ext_resource type="Texture2D" uid="uid://cb04ia7hnokpr" path="res://Assets/Images/UI/Extra/HouseAnim/normal0002.jpg" id="5_nwdjg"]
+[ext_resource type="PackedScene" uid="uid://wxct3woeilia" path="res://Scenes/UI-Components/Extra/Desk/desk_ui.tscn" id="5_v0ttm"]
+[ext_resource type="Texture2D" uid="uid://bdqfk0hdbwwq5" path="res://Assets/Images/UI/Extra/HouseAnim/normal0003.jpg" id="6_71erg"]
+[ext_resource type="Texture2D" uid="uid://r8dn36rvpynp" path="res://Assets/Images/UI/Extra/HouseAnim/normal0004.jpg" id="7_xg230"]
+[ext_resource type="Texture2D" uid="uid://3gtdwc2npse6" path="res://Assets/Images/UI/Extra/HouseAnim/normal0005.jpg" id="8_wnfkl"]
+[ext_resource type="Texture2D" uid="uid://cpfu1glntt2e5" path="res://Assets/Images/UI/Extra/HouseAnim/normal0006.jpg" id="9_kdltu"]
+[ext_resource type="Texture2D" uid="uid://dynhnrboy0y8w" path="res://Assets/Images/UI/Extra/HouseAnim/normal0007.jpg" id="10_lgtuy"]
+[ext_resource type="Texture2D" uid="uid://8tk7vpjnnoda" path="res://Assets/Images/UI/Extra/HouseAnim/normal0008.jpg" id="11_70ooi"]
+[ext_resource type="Texture2D" uid="uid://33ypwfry612l" path="res://Assets/Images/UI/Extra/HouseAnim/normal0009.jpg" id="12_283ti"]
+[ext_resource type="Texture2D" uid="uid://cdqhiouvt0ncn" path="res://Assets/Images/UI/Extra/HouseAnim/normal0010.jpg" id="13_gv2g4"]
+[ext_resource type="Texture2D" uid="uid://dferxhqcxn5uy" path="res://Assets/Images/UI/Extra/HouseAnim/normal0011.jpg" id="14_25fsf"]
+[ext_resource type="Texture2D" uid="uid://coukyyg156xlt" path="res://Assets/Images/UI/Extra/HouseAnim/normal0012.jpg" id="15_es05m"]
+[ext_resource type="Texture2D" uid="uid://d1edwexjuo1sv" path="res://Assets/Images/UI/Extra/HouseAnim/normal0013.jpg" id="16_2ry3k"]
+[ext_resource type="Texture2D" uid="uid://c1w5ke2wersxe" path="res://Assets/Images/UI/Extra/HouseAnim/normal0014.jpg" id="17_20ufj"]
+[ext_resource type="Texture2D" uid="uid://bll1nu4pkqqon" path="res://Assets/Images/UI/Extra/HouseAnim/normal0015.jpg" id="18_06cpv"]
+[ext_resource type="Texture2D" uid="uid://c6hqm5jvm66ng" path="res://Assets/Images/UI/Extra/HouseAnim/normal0016.jpg" id="19_3mhma"]
+[ext_resource type="Texture2D" uid="uid://bfdtqw6hsleng" path="res://Assets/Images/UI/Extra/HouseAnim/normal0017.jpg" id="20_v0jfo"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Extra/extra_normal_button.gd" id="25_nkg5d"]
+[ext_resource type="Texture2D" uid="uid://3sylay5bxh11" path="res://Assets/Images/UI/Extra/Arrow-White.png" id="26_4ohhb"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Extra/extra_exit_click_area.gd" id="26_pg388"]
+[ext_resource type="Texture2D" uid="uid://c7ydoucglihg1" path="res://Assets/Images/UI/Extra/Arrow-Yellow.png" id="27_7yjeq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fnbdd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_7ixbn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nwdjg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_71erg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xg230")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wnfkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_kdltu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lgtuy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_70ooi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_283ti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_gv2g4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_25fsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_es05m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_2ry3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_20ufj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_06cpv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_3mhma")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_v0jfo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
+[sub_resource type="Animation" id="Animation_ginys"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_qu358"]
+resource_name = "loop"
+length = 6.0
+loop_mode = 1
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(1, 1, 1, 1),
+"points": PackedFloat32Array(0, 0, 0, 0, 0, -20, 0, 0, 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 1.5, 4.5, 6)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y8ka8"]
+_data = {
+"RESET": SubResource("Animation_ginys"),
+"loop": SubResource("Animation_qu358")
+}
+
+[sub_resource type="Animation" id="Animation_ejdyf"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_qpc8c"]
+resource_name = "loop"
+length = 2.4
+loop_mode = 1
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(1, 1, 1, 1),
+"points": PackedFloat32Array(0, 0, 0, 0, 0, -30, 0, 0, 0, 0, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.6, 1.8, 2.4)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5blvq"]
+_data = {
+"RESET": SubResource("Animation_ejdyf"),
+"loop": SubResource("Animation_qpc8c")
+}
+
+[sub_resource type="Gradient" id="Gradient_jwnma"]
+offsets = PackedFloat32Array(0, 0.570384, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.639854, 0.639854, 0.639854, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qeopp"]
+gradient = SubResource("Gradient_jwnma")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.918803, 0.222222)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t7yv1"]
+size = Vector2(313.583, 179.767)
+
+[sub_resource type="Animation" id="Animation_8frja"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(960, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(540, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera2D:zoom:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera2D:zoom:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_cr6r1"]
+resource_name = "bed"
+length = 0.3
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:zoom:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.15, 0, 0.15, 0, 4, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:zoom:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.15, 0, 0.15, 0, 4, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera2D:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(960, -0.15, 0, 0.15, 0, 1300, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera2D:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(540, -0.15, 0, 0.15, 0, 644, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+
+[sub_resource type="Animation" id="Animation_cbulm"]
+resource_name = "book"
+length = 0.4
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(960, -0.2, 0, 0.2, 0, 526, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(540, -0.2, 0, 0.2, 0, 848, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera2D:zoom:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0, 4, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera2D:zoom:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0, 4, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+
+[sub_resource type="Animation" id="Animation_3mqwq"]
+resource_name = "desk"
+length = 0.3
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(960, -0.15, 0, 0.15, 0, 1333, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(540, -0.15, 0, 0.15, 0, 809, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera2D:zoom:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.15, 0, 0.15, 0, 4, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera2D:zoom:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.15, 0, 0.15, 0, 4, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+
+[sub_resource type="Animation" id="Animation_j506i"]
+resource_name = "map"
+length = 0.4
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(960, -0.25, 0, 0.25, 0, 905, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(540, -0.25, 0, 0.25, 0, 343, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera2D:zoom:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 4, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera2D:zoom:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 4, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+
+[sub_resource type="Animation" id="Animation_ht202"]
+resource_name = "tomb"
+length = 0.3
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(960, -0.15, 0, 0.15, 0, 597, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(540, -0.15, 0, 0.15, 0, 636, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera2D:zoom:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.15, 0, 0.15, 0, 4, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera2D:zoom:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.15, 0, 0.15, 0, 4, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ymxme"]
+_data = {
+"RESET": SubResource("Animation_8frja"),
+"bed": SubResource("Animation_cr6r1"),
+"book": SubResource("Animation_cbulm"),
+"desk": SubResource("Animation_3mqwq"),
+"map": SubResource("Animation_j506i"),
+"tomb": SubResource("Animation_ht202")
+}
+
+[node name="ExtraContents" type="Node2D"]
+script = ExtResource("1_k8s4v")
+book_ui_scene = ExtResource("2_068mt")
+big_map_ui_scene = ExtResource("3_hcf5n")
+bed_ui_scene = ExtResource("4_hmc84")
+desk_ui_scene = ExtResource("5_v0ttm")
+
+[node name="ExtraStart" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_vsq8l")
+autoplay = true
+bus = &"Music"
+
+[node name="ExtraLoop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_2n71d")
+bus = &"Music"
+
+[node name="Background" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_fnbdd")
+autoplay = "default"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(960, 540)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D"]
+libraries = {
+"": SubResource("AnimationLibrary_y8ka8")
+}
+autoplay = "loop"
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Camera2D"]
+libraries = {
+"": SubResource("AnimationLibrary_5blvq")
+}
+autoplay = "loop"
+speed_scale = 0.6
+
+[node name="MapButton" type="Button" parent="." node_paths=PackedStringArray("light")]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 782.0
+offset_top = 240.0
+offset_right = 1007.0
+offset_bottom = 465.0
+focus_mode = 0
+script = ExtResource("25_nkg5d")
+light = NodePath("PointLight2D")
+
+[node name="PointLight2D" type="PointLight2D" parent="MapButton"]
+position = Vector2(114, 117)
+color = Color(1, 1, 0.572549, 1)
+energy = 2.0
+texture = SubResource("GradientTexture2D_qeopp")
+texture_scale = 4.99
+
+[node name="BookButton" type="Button" parent="." node_paths=PackedStringArray("light")]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 394.0
+offset_top = 772.0
+offset_right = 619.0
+offset_bottom = 997.0
+focus_mode = 0
+script = ExtResource("25_nkg5d")
+light = NodePath("PointLight2D")
+
+[node name="PointLight2D" type="PointLight2D" parent="BookButton"]
+position = Vector2(114, 128)
+color = Color(1, 1, 0.572549, 1)
+energy = 2.0
+texture = SubResource("GradientTexture2D_qeopp")
+texture_scale = 4.99
+
+[node name="DeskButton" type="Button" parent="." node_paths=PackedStringArray("light")]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 1186.0
+offset_top = 701.0
+offset_right = 1513.0
+offset_bottom = 938.0
+focus_mode = 0
+script = ExtResource("25_nkg5d")
+light = NodePath("PointLight2D")
+
+[node name="PointLight2D" type="PointLight2D" parent="DeskButton"]
+position = Vector2(174, 129)
+scale = Vector2(1.23326, 1.23326)
+color = Color(1, 1, 0.572549, 1)
+energy = 2.0
+texture = SubResource("GradientTexture2D_qeopp")
+texture_scale = 4.99
+
+[node name="BedButton" type="Button" parent="." node_paths=PackedStringArray("light")]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 1202.0
+offset_top = 616.0
+offset_right = 1395.0
+offset_bottom = 688.0
+focus_mode = 0
+script = ExtResource("25_nkg5d")
+light = NodePath("PointLight2D")
+
+[node name="PointLight2D" type="PointLight2D" parent="BedButton"]
+position = Vector2(100, 28)
+scale = Vector2(0.854738, 0.494738)
+color = Color(1, 1, 0.572549, 1)
+energy = 2.0
+texture = SubResource("GradientTexture2D_qeopp")
+texture_scale = 4.99
+
+[node name="TombButton" type="Button" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 548.0
+offset_top = 559.0
+offset_right = 651.0
+offset_bottom = 746.0
+focus_mode = 0
+
+[node name="ExtraExitClickArea" type="Area2D" parent="."]
+position = Vector2(1073, 1000)
+rotation = -1.85269
+scale = Vector2(0.332179, 0.332179)
+skew = 0.20944
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("26_pg388")
+
+[node name="Shadow" type="Sprite2D" parent="ExtraExitClickArea"]
+self_modulate = Color(0, 0, 0, 0.388235)
+position = Vector2(-68.4445, -53.7991)
+texture = ExtResource("26_4ohhb")
+
+[node name="WhiteArrow" type="Sprite2D" parent="ExtraExitClickArea"]
+texture = ExtResource("26_4ohhb")
+
+[node name="YellowArrow" type="Sprite2D" parent="ExtraExitClickArea"]
+visible = false
+texture = ExtResource("27_7yjeq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExtraExitClickArea"]
+shape = SubResource("RectangleShape2D_t7yv1")
+
+[node name="UIAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ymxme")
+}
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+
+[connection signal="pressed" from="MapButton" to="." method="_on_map_button_pressed"]
+[connection signal="pressed" from="BookButton" to="." method="_on_book_button_pressed"]
+[connection signal="pressed" from="DeskButton" to="." method="_on_desk_button_pressed"]
+[connection signal="pressed" from="BedButton" to="." method="_on_bed_button_pressed"]
+[connection signal="pressed" from="TombButton" to="." method="_on_tomb_button_pressed"]
+[connection signal="input_event" from="ExtraExitClickArea" to="ExtraExitClickArea" method="_on_input_event"]
+[connection signal="mouse_entered" from="ExtraExitClickArea" to="ExtraExitClickArea" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ExtraExitClickArea" to="ExtraExitClickArea" method="_on_mouse_exited"]

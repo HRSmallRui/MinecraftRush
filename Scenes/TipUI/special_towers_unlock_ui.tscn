@@ -1,0 +1,547 @@
+[gd_scene load_steps=15 format=3 uid="uid://dlggpawrxkxx5"]
+
+[ext_resource type="PackedScene" uid="uid://bw0kjoybdcexh" path="res://Scenes/Classes/tip_ui.tscn" id="1_kukom"]
+[ext_resource type="Script" path="res://Scripts/UI-Tips/special_towers_unlock_ui.gd" id="2_05xh7"]
+[ext_resource type="Texture2D" uid="uid://bg8tjl6mnh8wn" path="res://Assets/Images/UI/Pages/gray.png" id="2_7xt3d"]
+[ext_resource type="Texture2D" uid="uid://08xnqnqn18s2" path="res://Assets/Images/UI/Pages/pxArt (1).png" id="4_mxakt"]
+[ext_resource type="Texture2D" uid="uid://j68gd7t8w0t3" path="res://Assets/Images/UI/SeenBook/Enemies/Textures/enemy0.png" id="5_us8qc"]
+[ext_resource type="FontFile" uid="uid://drfv8ak22g1rm" path="res://Assets/Fonts/simhei.ttf" id="6_ig5kl"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="7_1joef"]
+[ext_resource type="AudioStream" uid="uid://cviyfrmvl7m" path="res://Assets/Sounds/FXs/UIs/TipCloseAudio.mp3" id="8_cbfo5"]
+[ext_resource type="AudioStream" uid="uid://b2wskyv0fi2i6" path="res://Assets/Sounds/FXs/UIs/TipWritingAudio.wav" id="9_1ld2n"]
+[ext_resource type="AudioStream" uid="uid://byscys7edg586" path="res://Assets/Sounds/FXs/UIs/TipTextureAudio.mp3" id="10_hw2o6"]
+
+[sub_resource type="Animation" id="Animation_hm80k"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Paper/Icon:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-331.359, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Paper/Icon:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-7.62543, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Paper/Icon:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.123438, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Paper/Icon:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Paper/NameLabel:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Paper/GroupLabel:visible_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Paper/IntroLabel:visible_ratio")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Paper/OKButton:position:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(177.464, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("ButtonAppearAudio:playing")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("TipTextureAudio:playing")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("TipWritingAudio:playing")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath(".:can_control")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/12/type = "bezier"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Paper/NameLabel:self_modulate:a")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Paper/GroupLabel:modulate:a")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/14/type = "bezier"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Paper/IntroLabel:self_modulate:a")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_oylrx"]
+resource_name = "hide"
+length = 0.4
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Paper/Icon:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-0.123438, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.1, 0.4)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Paper/Icon:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-331.359, -0.25, 0, 0.25, 0, -12.478, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.1, 0.4)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Paper/Icon:position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-7.62543, -0.25, 0, 0.25, 0, -7.62543, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.1, 0.4)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Paper/Icon:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.1, 0.4)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Paper/NameLabel:self_modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0, 0, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Paper/GroupLabel:modulate:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0, 0, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Paper/IntroLabel:self_modulate:a")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.2, 0, 0.2, 0, 0, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".:can_control")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_2vd7u"]
+resource_name = "show"
+length = 2.7
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Paper/Icon:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-30.5017, -0.25, 0, 0.25, 0, -331.359, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.6, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Paper/Icon:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-7.62543, -0.25, 0, 0.25, 0, -7.62543, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.6, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Paper/Icon:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.123438, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.6, 1)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Paper/Icon:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.5, 0.9)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Paper/NameLabel:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, 0, 0, 0, 0, 1, 0, 0, 0, 0),
+"times": PackedFloat32Array(1.5, 2)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Paper/GroupLabel:visible_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(1.1, 1.5)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Paper/IntroLabel:visible_ratio")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(2, 2.5)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Paper/OKButton:position:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(79.7205, -0.25, 0, 0.25, 0, 177.464, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(2.4, 2.7)
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("ButtonAppearAudio:playing")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(2.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("TipTextureAudio:playing")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("TipWritingAudio:playing")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath(".:can_control")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 2.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_08uqu"]
+_data = {
+"RESET": SubResource("Animation_hm80k"),
+"hide": SubResource("Animation_oylrx"),
+"show": SubResource("Animation_2vd7u")
+}
+
+[node name="SpecialTowersUnlockUI" instance=ExtResource("1_kukom")]
+script = ExtResource("2_05xh7")
+show_texture = null
+show_name = ""
+tower_group = 1
+tower_id = 3
+archer_intro_list = PackedStringArray("这些来自原始部落的投石手投出的奇怪石头在命中目标后还会再弹射一次，对后方的敌军造成二次伤害。", "这群蛰伏于黄沙风暴中的刺客每一次扔出的飞刀都隐藏着致命杀机，每一发飞刀都有可能命中弱点对敌人造成成倍于平常的伤害，任何盔甲在这致命一击之下都显得形同虚设。", "被顶层同类长期压迫的低等刌民，在绝望中攥紧了手中的武器，决心将积压的怒火尽数宣泄在战场上。对那些同样身为刌民、却甘愿沦为压迫者帮凶的敌人，他们心中的痛恨更是化作了致命的力量，每一发箭矢都直击要害。")
+barrack_intro_list = PackedStringArray("帝王亲自训练的忠勇禁卫，身披重铠，以血肉之躯铸成万敌不可破的钢铁洪流。作为身经百战的精锐战士，他们的剑术更是如影随形，任由敌人如何敏捷都难以规避他们的剑刃。", "在荒芜之地领略神迹之后他们便狂热地叩拜神明，得赐撕裂天地般神力。磐石般的步伐虽让他们移动迟缓，但手中的开山巨刃每一次挥砍都会带着排山倒海的气势撕裂面前的一切敌人。", "反抗厌鸣统治的组织，这里的成员各个都是医疗生化专家，都曾担任各实验室的研究员。觉醒倒戈后，决定将生的希望带与世人，将死的绝望带与敌军。在战场上，医疗护卫队可以持续治疗周围友军的伤势。")
+magic_intro_list = PackedStringArray("神父仅需数十秒就可以将大个头的敌人烤成一片焦炭！圣焰一开始微光摇曳，神父以时间为引，他们发射的死亡射线会随着时间威力逐渐增大。", "这些当地被扣上莫须有罪名的女巫，曾深陷不公的桎梏，现如今重见天日的她们，决心以掌控的致命魔法回馈这份救赎——将愤懑化作最恶毒的诅咒，注入每一次攻击，让命中的敌人在短时间内防御崩解，承受的伤害愈发致命。", "这群炼金术士是隐居世间的科学狂人，本与世无争，但是见厌皇作恶无法坐视不管，遂挺身而出，他们扔出的魔法药水瓶在伤害敌人的同时能够留下一滩粘稠的魔法药水延缓敌人的步伐。")
+bombard_intro_list = PackedStringArray("不同于寻常炮台，这些奇怪的家伙能够发射能量炮弹，锁定地面和飞行单位，对命中目标造成较低真实伤害，随后能量炮弹四散火花溅射伤害周围目标。", "以高能液体为动力的终极炮塔，可倾泻毁灭性火力，不过维护成本相当昂贵。同时得益于高能液体的放射性，被炮弹波及的敌人会被“放射病”折磨，不断减少生命的同时也会降低自身攻击力。", "帝国工程师的最新力作，利用岩浆与水混合不断产生的圆石进行范围打击，每次攻击都会让敌人暂缓脚步。")
+
+[node name="Title" parent="Paper" index="0"]
+position = Vector2(-193.409, -217.671)
+scale = Vector2(0.981602, 0.981602)
+texture = ExtResource("2_7xt3d")
+region_rect = Rect2(220, 240, 364, 114)
+
+[node name="Label" parent="Paper/Title" index="0"]
+text = "新防御塔解锁！"
+
+[node name="OKButton" parent="Paper" index="1"]
+offset_left = 105.369
+offset_right = 339.37
+
+[node name="Label" parent="Paper/OKButton" index="0"]
+offset_left = 16.638
+offset_top = 4.16009
+offset_right = 438.638
+offset_bottom = 146.16
+
+[node name="Icon" type="Sprite2D" parent="Paper" index="2"]
+position = Vector2(-331.359, -7.62543)
+rotation = -0.123438
+scale = Vector2(0.93257, 0.93257)
+texture = ExtResource("4_mxakt")
+region_enabled = true
+region_rect = Rect2(117, 132, 308, 293)
+
+[node name="TowerTexture" type="TextureRect" parent="Paper/Icon" index="0"]
+show_behind_parent = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -279.421
+offset_top = -276.665
+offset_right = -23.4209
+offset_bottom = -20.6643
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_us8qc")
+
+[node name="NameLabel" type="Label" parent="Paper" index="3"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -148.349
+offset_top = -88.0392
+offset_right = 211.651
+offset_bottom = -15.0392
+scale = Vector2(0.567333, 0.567333)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("6_ig5kl")
+theme_override_font_sizes/font_size = 72
+text = "皇家近卫军"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="GroupLabel" type="Label" parent="Paper" index="4"]
+modulate = Color(0.215686, 0, 0, 1)
+offset_left = -148.0
+offset_top = -136.0
+offset_right = 1278.0
+offset_bottom = -23.0
+scale = Vector2(0.34527, 0.34527)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_1joef")
+theme_override_font_sizes/font_size = 72
+text = "等级4 兵营"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="IntroLabel" type="Label" parent="Paper" index="5"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -143.0
+offset_top = -24.0
+offset_right = 1515.0
+offset_bottom = 348.0
+scale = Vector2(0.289934, 0.289934)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("7_1joef")
+theme_override_font_sizes/font_size = 72
+text = "神父仅需数十秒就可以将大个头的敌人烤成一片焦炭，他们发射的死亡射线会随着时间威力逐渐增大。"
+autowrap_mode = 3
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="EnemyTipAnimationPlayer" type="AnimationPlayer" parent="." index="3"]
+libraries = {
+"": SubResource("AnimationLibrary_08uqu")
+}
+autoplay = "show"
+
+[node name="TipOpenAudio" parent="." index="4"]
+stream = null
+
+[node name="ButtonAppearAudio" parent="." index="5"]
+stream = null
+
+[node name="TipTextureAudio" type="AudioStreamPlayer" parent="." index="6"]
+stream = ExtResource("8_cbfo5")
+bus = &"Sound"
+
+[node name="TipWritingAudio" type="AudioStreamPlayer" parent="." index="7"]
+stream = ExtResource("9_1ld2n")
+bus = &"Sound"
+
+[node name="TipCloseAudio" parent="." index="8"]
+stream = ExtResource("10_hw2o6")

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://du5utcfske2cw"]
+
+[ext_resource type="PackedScene" uid="uid://bwifge7de0uys" path="res://Scenes/Buffs/dot_buff.tscn" id="1_oja2k"]
+[ext_resource type="Script" path="res://Scripts/Classes/potion_particle_leader.gd" id="2_iyw3k"]
+
+[node name="WitchPoisonDebuff" instance=ExtResource("1_oja2k")]
+dot_damage = Array[int]([4])
+can_be_dead = false
+duration = 8.0
+buff_tag = "WitchPoison"
+immune_groups = Array[String](["god", "no_live", "undead", "super_unit"])
+
+[node name="DotTimer" parent="." index="0"]
+wait_time = 0.2
+
+[node name="PotionParticleLeader" type="Node2D" parent="." index="1" node_paths=PackedStringArray("buff_vehicle")]
+script = ExtResource("2_iyw3k")
+potion_color = Color(0.18449, 0.427563, 0.128106, 1)
+buff_vehicle = NodePath("..")

@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://caufauw6v502y"]
+
+[ext_resource type="Script" path="res://Scripts/Classes/bullet_class.gd" id="1_t5613"]
+
+[node name="BulletClass" type="Node2D"]
+script = ExtResource("1_t5613")
+
+[node name="BulletSprite" type="Sprite2D" parent="."]
+
+[node name="HitBox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+
+[node name="FreeTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="FreeTimer" to="." method="_on_free_timer_timeout"]

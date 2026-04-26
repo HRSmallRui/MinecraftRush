@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bax8c6qf32yod"]
+
+[ext_resource type="PackedScene" uid="uid://bmr7x0vo1n3ky" path="res://Scenes/Buffs/heal_buff.tscn" id="1_mgtrs"]
+
+[node name="AlchemistHealBuff" instance=ExtResource("1_mgtrs")]
+heal_datas = Array[int]([1, 2, 3])
+duration = 1.0
+buff_tag = "AlchemistHealBuff"
+
+[node name="Timer" parent="." index="0"]
+wait_time = 0.2

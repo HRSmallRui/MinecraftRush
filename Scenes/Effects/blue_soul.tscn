@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqs63ismqybxc"]
+
+[ext_resource type="PackedScene" uid="uid://caufauw6v502y" path="res://Scenes/Classes/bullet_class.tscn" id="1_y2l8c"]
+[ext_resource type="Script" path="res://Scripts/Effects/soul.gd" id="2_t7qwg"]
+[ext_resource type="PackedScene" uid="uid://cuj1iate6751p" path="res://Scenes/Effects/magic_ball_tail.tscn" id="3_2cxsn"]
+[ext_resource type="Texture2D" uid="uid://cvj5rlytuqmgm" path="res://Assets/Images/Bullets/magic_bullet1.png" id="4_5berb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u8x6c"]
+
+[node name="Soul" instance=ExtResource("1_y2l8c")]
+z_index = 2
+script = ExtResource("2_t7qwg")
+magic_ball_tail_scene = ExtResource("3_2cxsn")
+hit_effect_scene = null
+damage_type = 1
+bullet_speed = 0.5
+damage_source = "MagicBall"
+
+[node name="BulletSprite" parent="." index="0"]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_5berb")
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+shape = SubResource("CircleShape2D_u8x6c")
+
+[node name="TailTimer" type="Timer" parent="FreeTimer" index="0"]
+wait_time = 0.05
+autostart = true

@@ -1,0 +1,69 @@
+[gd_scene load_steps=26 format=3 uid="uid://ctj2n1dsmdrj8"]
+
+[ext_resource type="PackedScene" uid="uid://dakq012d6gh6m" path="res://Scenes/UI-Components/Stages/skill_button.tscn" id="1_hxhel"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Stages/SkillButtons/golden_diamond_skill_button.gd" id="2_tbkyd"]
+[ext_resource type="PackedScene" uid="uid://cun6kkkdf4rbf" path="res://Scenes/Buffs/GoldenDiamond/SkillButtonPart/gd_skill_chip_1_buff_lv_0.tscn" id="3_0qjjl"]
+[ext_resource type="Texture2D" uid="uid://bhqn2q1wn86rt" path="res://Assets/Images/UI/SkillButton/Heroskill/GoldenDiamond/golden_diamond_skill.png" id="3_nxsl7"]
+[ext_resource type="PackedScene" uid="uid://dtnpo5yv2c2bd" path="res://Scenes/Buffs/GoldenDiamond/SkillButtonPart/gd_skill_chip_1_buff_lv_1.tscn" id="4_7j0qd"]
+[ext_resource type="Texture2D" uid="uid://c2ovp60p7cuxl" path="res://Assets/Images/UI/SkillButton/Heroskill/GoldenDiamond/golden_diamond_skill_using.png" id="4_nnuq8"]
+[ext_resource type="PackedScene" uid="uid://c7ysui2yae2k5" path="res://Scenes/Buffs/GoldenDiamond/SkillButtonPart/gd_skill_chip_1_buff_lv_2.tscn" id="5_8oen7"]
+[ext_resource type="PackedScene" uid="uid://2flub08bxh7e" path="res://Scenes/Buffs/GoldenDiamond/SkillButtonPart/gd_skill_chip_1_buff_lv_3.tscn" id="6_760pa"]
+[ext_resource type="PackedScene" uid="uid://b76b7g5n6efop" path="res://Scenes/Buffs/dizness_buff.tscn" id="7_v2j4n"]
+[ext_resource type="PackedScene" uid="uid://cc7d78hsolcm8" path="res://Scenes/Buffs/GoldenDiamond/SkillButtonPart/gd_skill_chip_2_buff_lv_0.tscn" id="8_38bm1"]
+[ext_resource type="PackedScene" uid="uid://ctvudst2auvdq" path="res://Scenes/TowerBuffs/GoldenDiamond/gd_skill_tower_buff_lv_0.tscn" id="8_dnuvs"]
+[ext_resource type="PackedScene" uid="uid://cit2nt64ri3ge" path="res://Scenes/Buffs/GoldenDiamond/SkillButtonPart/gd_skill_chip_2_buff_lv_1.tscn" id="9_kmtyh"]
+[ext_resource type="PackedScene" uid="uid://bibp1trifem3x" path="res://Scenes/TowerBuffs/GoldenDiamond/gd_skill_tower_buff_lv_1.tscn" id="9_prkj1"]
+[ext_resource type="PackedScene" uid="uid://bwub0ro87hsfu" path="res://Scenes/Buffs/GoldenDiamond/SkillButtonPart/gd_skill_chip_2_buff_lv_2.tscn" id="10_ds1r7"]
+[ext_resource type="PackedScene" uid="uid://sohc8nk01c3q" path="res://Scenes/TowerBuffs/GoldenDiamond/gd_skill_tower_buff_lv_2.tscn" id="10_gefsr"]
+[ext_resource type="PackedScene" uid="uid://cmsd5xhfw3ogv" path="res://Scenes/TowerBuffs/GoldenDiamond/gd_skill_tower_buff_lv_3.tscn" id="11_412ph"]
+[ext_resource type="PackedScene" uid="uid://p713aa6uaqsb" path="res://Scenes/Buffs/GoldenDiamond/SkillButtonPart/gd_skill_chip_2_buff_lv_3.tscn" id="11_eu4rn"]
+[ext_resource type="PackedScene" uid="uid://cpjdqfiy187x2" path="res://Scenes/Buffs/GoldenDiamond/SkillButtonPart/gd_skill_heal_buff.tscn" id="12_2n8hy"]
+[ext_resource type="PackedScene" uid="uid://d3wmbvmk3dcm3" path="res://Scenes/Buffs/GoldenDiamond/SkillButtonPart/gd_skill_chip_4_buff.tscn" id="17_v2e7c"]
+[ext_resource type="PackedScene" uid="uid://rvh40kwwuf2m" path="res://Scenes/Buffs/GoldenDiamond/SkillButtonPart/gd_invincible_buff.tscn" id="18_xw8n4"]
+[ext_resource type="PackedScene" uid="uid://blf6tdqaj673m" path="res://Scenes/Effects/bullet_explosion_effect.tscn" id="19_8pppi"]
+[ext_resource type="AudioStream" uid="uid://do6lkq4m3bv7e" path="res://Assets/Sounds/FXs/Heroes/GoldenDiamond/金钻减速.wav" id="22_ukncd"]
+[ext_resource type="AudioStream" uid="uid://cvr85147a6civ" path="res://Assets/Sounds/FXs/Enemies/瞬移1.wav" id="23_m5li0"]
+[ext_resource type="AudioStream" uid="uid://c7r7ydgqlmmlf" path="res://Assets/Sounds/FXs/Enemies/瞬移2.wav" id="24_wvf6g"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_rjcse"]
+playback_mode = 1
+streams_count = 2
+stream_0/stream = ExtResource("23_m5li0")
+stream_1/stream = ExtResource("24_wvf6g")
+
+[node name="GoldenDiamondSkillButton" instance=ExtResource("1_hxhel")]
+script = ExtResource("2_tbkyd")
+skill_name_list = Array[String](["高牌", "顺子", "四条", "皇家同花顺"])
+skill_intro_list = Array[String](["减速所有敌人，并施加易伤效果。", "眩晕所有敌人，并对目标造成少量真实伤害。", "提高我方全体单位攻击力，并持续恢复生命", "传送所有敌人后退一段距离，金钻在此期间获得无敌效果。"])
+skill_duration = 8.0
+stage1_enemy_buff_list = Array[PackedScene]([ExtResource("3_0qjjl"), ExtResource("4_7j0qd"), ExtResource("5_8oen7"), ExtResource("6_760pa")])
+stage2_dizness_buff_scene = ExtResource("7_v2j4n")
+stage2_dizness_duration = 1.5
+stage2_damage_list = Array[int]([80, 120, 160, 200])
+stage3_tower_buff_list = Array[PackedScene]([ExtResource("8_dnuvs"), ExtResource("9_prkj1"), ExtResource("10_gefsr"), ExtResource("11_412ph")])
+stage3_ally_buff_list = Array[PackedScene]([ExtResource("8_38bm1"), ExtResource("9_kmtyh"), ExtResource("10_ds1r7"), ExtResource("11_eu4rn")])
+stage3_heal_buff_scene = ExtResource("12_2n8hy")
+stage4_teleport_length = 240.0
+stage4_enemy_buff_scene = ExtResource("17_v2e7c")
+stage4_invincible_buff_scene = ExtResource("18_xw8n4")
+teleport_effect_scene = ExtResource("19_8pppi")
+skill_type = 2
+texture_normal = ExtResource("3_nxsl7")
+texture_select = ExtResource("4_nnuq8")
+cooling_time = 60.0
+
+[node name="UnleaseAudio" type="AudioStreamPlayer" parent="." index="3"]
+stream = ExtResource("22_ukncd")
+volume_db = -5.0
+bus = &"Sound"
+
+[node name="TeleportAudio" type="AudioStreamPlayer" parent="." index="4"]
+stream = SubResource("AudioStreamRandomizer_rjcse")
+bus = &"Sound"
+
+[node name="EnemyConditionArea" type="Area2D" parent="." index="5"]
+top_level = true
+collision_layer = 0
+collision_mask = 96
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyConditionArea" index="0"]

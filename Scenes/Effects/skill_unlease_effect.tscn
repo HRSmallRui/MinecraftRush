@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbitq4suhw8dq"]
+
+[ext_resource type="Texture2D" uid="uid://bx7canjsuxyg4" path="res://Assets/Images/UI/SkillButton/Reinforce/reinforce_canuse.png" id="1_0s7cg"]
+[ext_resource type="Script" path="res://Scripts/Effects/skill_unlease_effect.gd" id="1_diwpe"]
+
+[node name="SkillUnleaseEffect" type="Sprite2D"]
+z_index = 800
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_0s7cg")
+script = ExtResource("1_diwpe")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true

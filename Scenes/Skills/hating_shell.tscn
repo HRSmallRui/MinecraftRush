@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=3 uid="uid://bhw5cmheixnd1"]
+
+[ext_resource type="Script" path="res://Scripts/Skills/hating_shell.gd" id="1_cxv7u"]
+[ext_resource type="Script" path="res://Library/Heroes/damage_block.gd" id="2_0k2td"]
+[ext_resource type="Texture2D" uid="uid://bpxhug7y53wh0" path="res://Assets/Images/Bullets/TNT.png" id="2_a88uh"]
+[ext_resource type="PackedScene" uid="uid://blf6tdqaj673m" path="res://Scenes/Effects/bullet_explosion_effect.tscn" id="3_flnc3"]
+[ext_resource type="PackedScene" uid="uid://bf25ajrac2ijx" path="res://Scenes/Effects/smoke_effect.tscn" id="4_klim1"]
+
+[sub_resource type="Resource" id="Resource_11u6b"]
+script = ExtResource("2_0k2td")
+damage_low = 150
+damage_high = 250
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5xix8"]
+radius = 73.9444
+
+[node name="HatingShell" type="Area2D"]
+collision_layer = 0
+collision_mask = 120
+script = ExtResource("1_cxv7u")
+damage_block = SubResource("Resource_11u6b")
+explosion_effect_scene = ExtResource("3_flnc3")
+smoke_effect_scene = ExtResource("4_klim1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.5, 1.05)
+shape = SubResource("CircleShape2D_5xix8")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="ShellSprite" type="Sprite2D" parent="."]
+scale = Vector2(0.0470913, 0.0470913)
+texture = ExtResource("2_a88uh")

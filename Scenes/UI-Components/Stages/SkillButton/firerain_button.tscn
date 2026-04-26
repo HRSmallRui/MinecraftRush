@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxr6fiwxshcwh"]
+
+[ext_resource type="PackedScene" uid="uid://dakq012d6gh6m" path="res://Scenes/UI-Components/Stages/skill_button.tscn" id="1_t3xc1"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Stages/SkillButtons/firerain_button.gd" id="2_efucx"]
+[ext_resource type="Texture2D" uid="uid://chy3fbtyjhyad" path="res://Assets/Images/UI/SkillButton/Firerain/firerain-select.png" id="3_4apcw"]
+[ext_resource type="Texture2D" uid="uid://bvwfrbysjjdik" path="res://Assets/Images/UI/SkillButton/Firerain/firerain-canuse.png" id="3_thvsy"]
+
+[node name="FirerainButton" instance=ExtResource("1_t3xc1")]
+script = ExtResource("2_efucx")
+texture_normal = ExtResource("3_thvsy")
+texture_select = ExtResource("3_4apcw")
+skill_name = "天降火雨"
+skill_intro = "从高空降下熔岩与岩浆块进行大面积轰炸"
+cooling_time = 60.0
+
+[node name="CoolingFinishedAudio" parent="." index="2"]
+stream = null
+
+[node name="NavigationComponent" type="Node2D" parent="." index="3"]
+
+[node name="NavigationAgent" type="NavigationAgent2D" parent="NavigationComponent" index="0"]
+navigation_layers = 2

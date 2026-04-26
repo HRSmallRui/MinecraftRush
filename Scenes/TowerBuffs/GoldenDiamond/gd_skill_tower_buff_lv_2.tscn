@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://sohc8nk01c3q"]
+
+[ext_resource type="PackedScene" uid="uid://bu12mu4ubv04k" path="res://Scenes/Classes/tower_buff.tscn" id="1_xdemu"]
+[ext_resource type="Script" path="res://Scripts/TowerBuffs/tower_property_buff_block.gd" id="2_g7x6p"]
+[ext_resource type="Shader" path="res://Assets/Shaders/hue_color.gdshader" id="3_cd82l"]
+[ext_resource type="Texture2D" uid="uid://ccglhhifm554s" path="res://Assets/Images/Effects/鼓舞光环.png" id="4_whk21"]
+
+[sub_resource type="Resource" id="Resource_ivxud"]
+script = ExtResource("2_g7x6p")
+tower_property_type = 0
+operation_type = 1
+operation_data = 1.5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k1p6m"]
+shader = ExtResource("3_cd82l")
+shader_parameter/hue_shift = 0.15
+
+[node name="GDSkillTowerBuffLV2" instance=ExtResource("1_xdemu")]
+buff_blocks = Array[ExtResource("2_g7x6p")]([SubResource("Resource_ivxud")])
+buff_level = 2
+buff_tag = "GDSkillTowerBuff"
+
+[node name="EncourageEffect" type="Sprite2D" parent="." index="1"]
+z_index = -1
+material = SubResource("ShaderMaterial_k1p6m")
+position = Vector2(0, -1.19209e-07)
+scale = Vector2(2.2, 2.2)
+texture = ExtResource("4_whk21")
+offset = Vector2(0, -5)

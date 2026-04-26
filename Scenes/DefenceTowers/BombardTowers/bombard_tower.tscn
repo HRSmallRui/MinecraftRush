@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://bbhe3d6c7dhtc"]
+
+[ext_resource type="PackedScene" uid="uid://b1245qux56fh4" path="res://Scenes/Classes/defence_tower_class.tscn" id="1_k1h01"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/BombardTowers/bombard_tower.gd" id="2_vccyr"]
+[ext_resource type="Texture2D" uid="uid://bo4q5wo18lqp1" path="res://Assets/Images/DefenceTowers/Based/royal-build.png" id="3_2doty"]
+[ext_resource type="Texture2D" uid="uid://b7ynfqlyos1pt" path="res://Assets/Images/UI/InformationBar/bombard-id-1.png" id="3_pls5b"]
+[ext_resource type="Texture2D" uid="uid://c5ux4kta4lhxy" path="res://Assets/Images/DefenceTowers/Based/royal-build-select.png" id="4_vsets"]
+
+[node name="BombardTower" instance=ExtResource("1_k1h01")]
+script = ExtResource("2_vccyr")
+start_data = null
+tower_type = 3
+tower_texture = ExtResource("3_pls5b")
+
+[node name="BasedSprite" parent="Based" index="0"]
+texture = ExtResource("3_2doty")
+
+[node name="BasedSpriteSelect" parent="Based" index="1"]
+texture = ExtResource("4_vsets")
+
+[node name="NormalAttackTimer" type="Timer" parent="." index="7"]
+one_shot = true

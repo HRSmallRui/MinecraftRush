@@ -1,0 +1,445 @@
+[gd_scene load_steps=7 format=3 uid="uid://ps6dlr3u08l7"]
+
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="1_dwf67"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Map/achievements_ui.gd" id="1_lsmp5"]
+[ext_resource type="PackedScene" uid="uid://otco3sjwkpxq" path="res://Scenes/UI-Components/Map/achievement_card.tscn" id="2_tto8o"]
+
+[sub_resource type="Animation" id="Animation_2wvbm"]
+resource_name = "Entry"
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ScrollContainer:position:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(102, -0.25, 0, 0.25, 0, 102, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.2, 0.6)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ScrollContainer:position:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(135, -0.25, 0, 0.25, 0, 135, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.2, 0.6)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ScrollContainer:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.2, 0.6)
+}
+
+[sub_resource type="Animation" id="Animation_ls6hq"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ScrollContainer:position:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(102, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ScrollContainer:position:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(135, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ScrollContainer:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oswws"]
+_data = {
+"Entry": SubResource("Animation_2wvbm"),
+"RESET": SubResource("Animation_ls6hq")
+}
+
+[node name="AchievementsUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lsmp5")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_top = -26.0
+offset_right = 48.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 23.0
+offset_bottom = 103.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_dwf67")
+theme_override_font_sizes/font_size = 48
+text = "进度"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 135.0
+offset_right = 1831.0
+offset_bottom = 996.0
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(873, 404)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 55
+
+[node name="CardGroup1" type="VBoxContainer" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 45
+
+[node name="AchievementCard" parent="ScrollContainer/HBoxContainer/CardGroup1" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+
+[node name="AchievementCard2" parent="ScrollContainer/HBoxContainer/CardGroup1" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "LevelPanelHuman"
+achievement_name = "不灭帝国"
+achievement_condition = "解锁人族帝国的地区描述。"
+
+[node name="AchievementCard3" parent="ScrollContainer/HBoxContainer/CardGroup1" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "LevelPanelJungle"
+achievement_name = "初入雨林"
+achievement_condition = "解锁野区雨林的地区描述。"
+
+[node name="AchievementCard4" parent="ScrollContainer/HBoxContainer/CardGroup1" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "LevelPanelDesert"
+achievement_name = "初入沙漠"
+achievement_condition = "解锁沙漠地区的地区描述。"
+
+[node name="CardGroup2" type="VBoxContainer" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 45
+
+[node name="AchievementCard" parent="ScrollContainer/HBoxContainer/CardGroup2" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "LevelPanelHate"
+achievement_name = "百年前的传说"
+achievement_condition = "解锁厌国的地区描述。"
+
+[node name="AchievementCard2" parent="ScrollContainer/HBoxContainer/CardGroup2" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "LevelPanelHerobrine"
+achievement_name = "边陲之国"
+achievement_condition = "解锁失落帝国的地区描述。"
+
+[node name="AchievementCard3" parent="ScrollContainer/HBoxContainer/CardGroup2" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "FirstBlood"
+achievement_name = "第一滴血"
+achievement_condition = "杀死第一个敌人。"
+
+[node name="AchievementCard4" parent="ScrollContainer/HBoxContainer/CardGroup2" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "EmpireKill"
+achievement_name = "帝国的捍卫者"
+achievement_condition = "在第一章节和第六章节杀死超过1000个敌人。"
+
+[node name="CardGroup3" type="VBoxContainer" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 45
+
+[node name="AchievementCard" parent="ScrollContainer/HBoxContainer/CardGroup3" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "WildAreaKill"
+achievement_name = "野区清理者"
+achievement_condition = "在第二章节和第三章节杀死超过1200个敌人。"
+
+[node name="AchievementCard2" parent="ScrollContainer/HBoxContainer/CardGroup3" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "HateKill"
+achievement_name = "阴谋粉碎者"
+achievement_condition = "在第四章节杀死超过1500个敌人。"
+
+[node name="AchievementCard3" parent="ScrollContainer/HBoxContainer/CardGroup3" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "Kill1"
+achievement_name = "嗜血"
+achievement_condition = "杀死800个敌人。"
+
+[node name="AchievementCard4" parent="ScrollContainer/HBoxContainer/CardGroup3" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "Kill2"
+achievement_name = "杀戮者"
+achievement_condition = "累计杀死超过4000个敌人。"
+
+[node name="CardGroup4" type="VBoxContainer" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 45
+
+[node name="AchievementCard" parent="ScrollContainer/HBoxContainer/CardGroup4" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "Damage1"
+achievement_name = "无情的输出机器"
+achievement_condition = "造成的总伤累计超过400000。"
+
+[node name="AchievementCard2" parent="ScrollContainer/HBoxContainer/CardGroup4" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "FirstLevel"
+achievement_name = "塔防新手的试炼"
+achievement_condition = "第一关战役模式三星通关。"
+
+[node name="AchievementCard3" parent="ScrollContainer/HBoxContainer/CardGroup4" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "BOSS1"
+achievement_name = "终究是自诩"
+achievement_condition = "击败尸国小队长。"
+
+[node name="AchievementCard4" parent="ScrollContainer/HBoxContainer/CardGroup4" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "BOSS2"
+achievement_name = "雨林之王的陨落"
+achievement_condition = "击败泰坦丧尸。"
+
+[node name="CardGroup5" type="VBoxContainer" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 45
+
+[node name="AchievementCard" parent="ScrollContainer/HBoxContainer/CardGroup5" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "BOSS3"
+achievement_name = "殊途同归"
+achievement_condition = "击败巨型尸壳。"
+
+[node name="AchievementCard2" parent="ScrollContainer/HBoxContainer/CardGroup5" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "BOSS4"
+achievement_name = "水军终结者"
+achievement_condition = "击败远古守卫者。"
+
+[node name="AchievementCard3" parent="ScrollContainer/HBoxContainer/CardGroup5" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "BOSS5"
+achievement_name = "他不是白王，我才是"
+achievement_condition = "击败LIVER。"
+
+[node name="AchievementCard4" parent="ScrollContainer/HBoxContainer/CardGroup5" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "BOSS6"
+achievement_name = "男人只有在一切结束后才能掉泪"
+achievement_condition = "击败厌皇尼古拉斯。"
+
+[node name="CardGroup6" type="VBoxContainer" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 45
+
+[node name="AchievementCard" parent="ScrollContainer/HBoxContainer/CardGroup6" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "RoyalGuard1"
+achievement_name = "斩立决"
+achievement_condition = "触发皇家近卫军处决技能100次。"
+
+[node name="AchievementCard2" parent="ScrollContainer/HBoxContainer/CardGroup6" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "RoyalGuard2"
+achievement_name = "草船借箭"
+achievement_condition = "让皇家近卫军抵挡远程攻击1200次。"
+
+[node name="AchievementCard3" parent="ScrollContainer/HBoxContainer/CardGroup6" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "ProtectorChurch1"
+achievement_name = "尘归尘，土归土"
+achievement_condition = "利用守卫者教堂的尘解技能分解800个敌人。"
+
+[node name="AchievementCard4" parent="ScrollContainer/HBoxContainer/CardGroup6" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "ProtectorChurch2"
+achievement_name = "钢铁是怎样炼成的"
+achievement_condition = "让铁傀儡累计恢复40000生命值。"
+
+[node name="CardGroup7" type="VBoxContainer" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 45
+
+[node name="AchievementCard" parent="ScrollContainer/HBoxContainer/CardGroup7" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "StoneTower1"
+achievement_name = "友谊的小船说翻就翻"
+achievement_condition = "用投石高塔的碎石机能累计造成6500伤害。"
+
+[node name="AchievementCard2" parent="ScrollContainer/HBoxContainer/CardGroup7" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "StoneTower2"
+achievement_name = "高空抛物"
+achievement_condition = "用投石高塔黑曜石技能杀死超过450个敌人。"
+
+[node name="AchievementCard3" parent="ScrollContainer/HBoxContainer/CardGroup7" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "ProtectorTurrest1"
+achievement_name = "以雷霆，击碎黑暗！"
+achievement_condition = "累计召唤100次闪电。"
+
+[node name="AchievementCard4" parent="ScrollContainer/HBoxContainer/CardGroup7" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "ProtectorTurrest2"
+achievement_name = "科技改变世界"
+achievement_condition = "累计建造180座守卫者炮塔。"
+
+[node name="CardGroup8" type="VBoxContainer" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 45
+
+[node name="AchievementCard" parent="ScrollContainer/HBoxContainer/CardGroup8" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "DesertTower1"
+achievement_name = "沙漠刀王"
+achievement_condition = "累计触发沙漠哨塔暴击超过350次。"
+
+[node name="AchievementCard2" parent="ScrollContainer/HBoxContainer/CardGroup8" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "EpeeChurch1"
+achievement_name = "超越生死"
+achievement_condition = "让单个大刀兵连续触发4次复活。"
+
+[node name="AchievementCard3" parent="ScrollContainer/HBoxContainer/CardGroup8" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "EpeeChurch2"
+achievement_name = "刽子手"
+achievement_condition = "用大刀兵的大刀斩累计杀死1400个敌人。"
+
+[node name="AchievementCard4" parent="ScrollContainer/HBoxContainer/CardGroup8" instance=ExtResource("2_tto8o")]
+layout_mode = 2
+sav_keyword = "NuclearTurrest1"
+achievement_name = "ALIEZ"
+achievement_condition = "累计发射120次核弹。"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_oswws")
+}

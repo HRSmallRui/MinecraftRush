@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8x0kq15o53mv"]
+
+[ext_resource type="PackedScene" uid="uid://dakq012d6gh6m" path="res://Scenes/UI-Components/Stages/skill_button.tscn" id="1_j2q1u"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Stages/SkillButtons/johnny_skill_button.gd" id="2_53bf4"]
+[ext_resource type="Texture2D" uid="uid://cs3l3ig4ft2ea" path="res://Assets/Images/UI/SkillButton/Heroskill/Johnny/johnny_skill.png" id="3_vv87e"]
+[ext_resource type="Texture2D" uid="uid://vqwfhk15yr8o" path="res://Assets/Images/UI/SkillButton/Heroskill/Johnny/johnny_skill_using.png" id="4_2y2at"]
+
+[node name="JohnnySkillButton" instance=ExtResource("1_j2q1u")]
+script = ExtResource("2_53bf4")
+skill_type = 2
+texture_normal = ExtResource("3_vv87e")
+texture_select = ExtResource("4_2y2at")
+skill_name = "胜利旌旗"
+skill_intro = "强化一定范围内的所有友军和防御塔"
+cooling_time = 40.0

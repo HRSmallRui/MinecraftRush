@@ -1,0 +1,266 @@
+[gd_scene load_steps=42 format=3 uid="uid://dl6vdcwruy2i"]
+
+[ext_resource type="PackedScene" uid="uid://174hc6y32pu3" path="res://Scenes/DefenceTowers/EnemyTower/enemy_tower_class.tscn" id="1_mw10s"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/EnemyTower/skeleton_wall_shooter_tower.gd" id="2_45xxi"]
+[ext_resource type="Script" path="res://Scripts/Datas/TowerData.gd" id="2_f14bt"]
+[ext_resource type="Texture2D" uid="uid://qwav16vo03cf" path="res://Assets/Animations/Enemies/9骨国正规军/die_00.png" id="3_0cq02"]
+[ext_resource type="PackedScene" uid="uid://cmg4q04xfhhcu" path="res://Scenes/Bullets/skeletion_physics_arrow.tscn" id="3_3w4f1"]
+[ext_resource type="Texture2D" uid="uid://dtlh7b7t41tyt" path="res://Assets/Animations/Enemies/9骨国正规军/far_attack_00.png" id="3_5hpms"]
+[ext_resource type="Texture2D" uid="uid://crdruama14v7g" path="res://Assets/Animations/Enemies/9骨国正规军/die_01.png" id="4_0id5k"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/EnemyTower/skeleton_wall_shooter.gd" id="4_e3qt3"]
+[ext_resource type="Texture2D" uid="uid://bx6kyg0mlf4gd" path="res://Assets/Animations/Enemies/9骨国正规军/far_attack_01.png" id="4_qwpcw"]
+[ext_resource type="Texture2D" uid="uid://dd0r2cbsw6qjy" path="res://Assets/Animations/Enemies/9骨国正规军/die_02.png" id="5_8tr8b"]
+[ext_resource type="Texture2D" uid="uid://c676pb820e5y5" path="res://Assets/Animations/Enemies/9骨国正规军/far_attack_02.png" id="5_ky7xi"]
+[ext_resource type="Texture2D" uid="uid://bv76tqol4aijr" path="res://Assets/Animations/Enemies/9骨国正规军/die_03.png" id="6_q78ad"]
+[ext_resource type="Texture2D" uid="uid://dm81ojhtde78l" path="res://Assets/Animations/Enemies/9骨国正规军/far_attack_03.png" id="6_x8bcc"]
+[ext_resource type="Texture2D" uid="uid://dpfois2dmdpto" path="res://Assets/Animations/Enemies/9骨国正规军/die_04.png" id="7_67uup"]
+[ext_resource type="Texture2D" uid="uid://bw1amm70obtbs" path="res://Assets/Animations/Enemies/9骨国正规军/far_attack_04.png" id="7_wtxyj"]
+[ext_resource type="Texture2D" uid="uid://bpfrr03j5rlwa" path="res://Assets/Animations/Enemies/9骨国正规军/far_attack_05.png" id="8_ka8um"]
+[ext_resource type="Texture2D" uid="uid://oe5kv6p6beid" path="res://Assets/Animations/Enemies/9骨国正规军/die_05.png" id="8_p0d87"]
+[ext_resource type="Texture2D" uid="uid://btoakdidmqul4" path="res://Assets/Animations/Enemies/9骨国正规军/far_attack_06.png" id="9_mcid7"]
+[ext_resource type="Texture2D" uid="uid://xkw5g4vxwuq4" path="res://Assets/Animations/Enemies/9骨国正规军/die_06.png" id="9_okcwg"]
+[ext_resource type="Texture2D" uid="uid://bc8yc24dw6veb" path="res://Assets/Animations/Enemies/9骨国正规军/die_07.png" id="10_enpct"]
+[ext_resource type="Texture2D" uid="uid://bqgavdqfbs7l4" path="res://Assets/Animations/Enemies/9骨国正规军/far_attack_07.png" id="10_ksc3c"]
+[ext_resource type="Texture2D" uid="uid://di2mbtsuuj2mp" path="res://Assets/Animations/Enemies/9骨国正规军/far_attack_08.png" id="11_fvrtv"]
+[ext_resource type="Texture2D" uid="uid://c8he1ivbdx02e" path="res://Assets/Animations/Enemies/9骨国正规军/die_08.png" id="11_u5s75"]
+[ext_resource type="Texture2D" uid="uid://brgi5naogvxfs" path="res://Assets/Animations/Enemies/9骨国正规军/die_09.png" id="12_1wgl8"]
+[ext_resource type="Texture2D" uid="uid://dnfwomf7c46jf" path="res://Assets/Animations/Enemies/9骨国正规军/far_attack_09.png" id="12_4psql"]
+[ext_resource type="Texture2D" uid="uid://clshrvhy8vvsr" path="res://Assets/Animations/Enemies/9骨国正规军/die_10.png" id="13_rdkoq"]
+[ext_resource type="Texture2D" uid="uid://byva8ycpl85wh" path="res://Assets/Animations/Enemies/9骨国正规军/far_attack_10.png" id="13_rp1bu"]
+[ext_resource type="Texture2D" uid="uid://x1wr2lbl2vjm" path="res://Assets/Animations/Enemies/9骨国正规军/die_11.png" id="14_rb1m7"]
+[ext_resource type="Texture2D" uid="uid://wlujqjj2vc1q" path="res://Assets/Animations/Enemies/9骨国正规军/far_attack_11.png" id="14_t8xo7"]
+[ext_resource type="Texture2D" uid="uid://yxp72wp4d0uh" path="res://Assets/Animations/Enemies/9骨国正规军/die_12.png" id="15_f8wmp"]
+[ext_resource type="Texture2D" uid="uid://ck288h70jfcu2" path="res://Assets/Animations/Enemies/9骨国正规军/far_attack_12.png" id="15_yf2dd"]
+[ext_resource type="Texture2D" uid="uid://cvmgigp4ce1ke" path="res://Assets/Animations/Enemies/9骨国正规军/far_attack_13.png" id="16_g6ypj"]
+[ext_resource type="Texture2D" uid="uid://dmjptkegr38mn" path="res://Assets/Animations/Enemies/9骨国正规军/far_attack_14.png" id="17_nk3bv"]
+[ext_resource type="Texture2D" uid="uid://hef3sxm0ro7q" path="res://Assets/Animations/Enemies/9骨国正规军/far_attack_15.png" id="18_tppw7"]
+[ext_resource type="Texture2D" uid="uid://bxgyadxbk4n3v" path="res://Assets/Animations/Enemies/9骨国正规军/far_attack_16.png" id="19_p4ue5"]
+[ext_resource type="Texture2D" uid="uid://deobfrito8qpj" path="res://Assets/Animations/Enemies/9骨国正规军/far_attack_17.png" id="20_g8wue"]
+[ext_resource type="Texture2D" uid="uid://v7dlgwvtwrev" path="res://Assets/Animations/Enemies/9骨国正规军/far_attack_18.png" id="21_71878"]
+[ext_resource type="Texture2D" uid="uid://blilglbe0li2h" path="res://Assets/Animations/Enemies/9骨国正规军/far_attack_19.png" id="22_10wub"]
+[ext_resource type="Texture2D" uid="uid://chmt38n75ws6g" path="res://Assets/Animations/Enemies/9骨国正规军/far_attack_20.png" id="23_xsa4w"]
+
+[sub_resource type="Resource" id="Resource_l83m1"]
+script = ExtResource("2_f14bt")
+damage_low = 20
+damage_high = 40
+attack_speed = 4.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k4xkc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_0cq02")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0id5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8tr8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_q78ad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_67uup")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p0d87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_okcwg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_enpct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_u5s75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_1wgl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_rdkoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_rb1m7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_f8wmp")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_5hpms")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_5hpms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qwpcw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ky7xi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_x8bcc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wtxyj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ka8um")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_mcid7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ksc3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_fvrtv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4psql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_rp1bu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_t8xo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_yf2dd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_g6ypj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_nk3bv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_tppw7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_p4ue5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_g8wue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_71878")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_10wub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_xsa4w")
+}],
+"loop": false,
+"name": &"shoot_back",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_5hpms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qwpcw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ky7xi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_x8bcc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wtxyj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ka8um")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_mcid7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ksc3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_fvrtv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4psql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_rp1bu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_t8xo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_yf2dd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_g6ypj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_nk3bv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_tppw7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_p4ue5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_g8wue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_71878")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_10wub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_xsa4w")
+}],
+"loop": false,
+"name": &"shoot_front",
+"speed": 30.0
+}]
+
+[node name="SkeletonWallShooterTower" instance=ExtResource("1_mw10s")]
+script = ExtResource("2_45xxi")
+tower_data = SubResource("Resource_l83m1")
+target_mode = 1
+tower_range = 2000
+
+[node name="EnemyTowerShooter" parent="." index="1"]
+position = Vector2(0, -19)
+sprite_frames = SubResource("SpriteFrames_k4xkc")
+animation = &"shoot_front"
+autoplay = "idle"
+frame = 16
+script = ExtResource("4_e3qt3")
+bullet_scene = ExtResource("3_3w4f1")
+summon_frame = 16
+
+[node name="Front" parent="EnemyTowerShooter" index="0"]
+position = Vector2(6, -10)
+
+[node name="FrontFlip" parent="EnemyTowerShooter" index="1"]
+position = Vector2(-6, -10)
+
+[node name="Back" parent="EnemyTowerShooter" index="2"]
+position = Vector2(6, -10)
+
+[node name="BackFlip" parent="EnemyTowerShooter" index="3"]
+position = Vector2(-6, -10)

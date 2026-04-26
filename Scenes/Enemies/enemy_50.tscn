@@ -1,0 +1,346 @@
+[gd_scene load_steps=72 format=3 uid="uid://dy8rqmkt0rg2t"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_h8y26"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_50.gd" id="2_ndxby"]
+[ext_resource type="Texture2D" uid="uid://vxoc2itvdf0f" path="res://Assets/Images/UI/InformationBar/EnemyChapter6/洞穴蜘蛛.png" id="3_4ga31"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="4_u3vek"]
+[ext_resource type="AudioStream" uid="uid://ct4vofbci7tfx" path="res://Assets/Sounds/FXs/Enemies/腐化蜘蛛/死亡.wav" id="5_x2ocy"]
+[ext_resource type="Texture2D" uid="uid://dgvw1fqjxktmd" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/attack_00.png" id="6_872jo"]
+[ext_resource type="PackedScene" uid="uid://dcjuved17hj6j" path="res://Scenes/Enemies/EnemyComponents/appear_audio_component.tscn" id="6_ltfqj"]
+[ext_resource type="Texture2D" uid="uid://cgonjeecm8c0e" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/attack_01.png" id="7_hcgtt"]
+[ext_resource type="AudioStream" uid="uid://8ivl61hg27vq" path="res://Assets/Sounds/FXs/Enemies/腐化蜘蛛/入场1.wav" id="7_ig1v7"]
+[ext_resource type="Texture2D" uid="uid://c8equsdyj6sk1" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/attack_02.png" id="8_8dgve"]
+[ext_resource type="AudioStream" uid="uid://dsw6shykts4by" path="res://Assets/Sounds/FXs/Enemies/腐化蜘蛛/入场2.wav" id="8_mvst4"]
+[ext_resource type="Texture2D" uid="uid://da1oyipk8ve0b" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/attack_03.png" id="9_jeith"]
+[ext_resource type="AudioStream" uid="uid://by77xekplivbi" path="res://Assets/Sounds/FXs/Enemies/腐化蜘蛛/入场3.wav" id="9_mdqhx"]
+[ext_resource type="AudioStream" uid="uid://cdfb830xpbdyn" path="res://Assets/Sounds/FXs/Enemies/腐化蜘蛛/入场4.wav" id="10_5vnn7"]
+[ext_resource type="Texture2D" uid="uid://cxmrpffyqnb4x" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/attack_04.png" id="10_jnvgo"]
+[ext_resource type="Texture2D" uid="uid://dnqinjj0ldpjh" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/attack_05.png" id="11_j8cof"]
+[ext_resource type="Texture2D" uid="uid://x60jfgyus7bq" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/attack_06.png" id="12_agn85"]
+[ext_resource type="Texture2D" uid="uid://6rg8wf0bkau" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/attack_07.png" id="13_3g5o7"]
+[ext_resource type="Texture2D" uid="uid://u7b0g0cr7y4t" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/attack_08.png" id="14_iw7ow"]
+[ext_resource type="Texture2D" uid="uid://dmtlkcdw1rexl" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/attack_09.png" id="15_c5c3g"]
+[ext_resource type="Texture2D" uid="uid://dxho11sryfqj" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/attack_10.png" id="16_st38y"]
+[ext_resource type="Texture2D" uid="uid://dmim6ndx4ya25" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/attack_11.png" id="17_fsw0y"]
+[ext_resource type="Texture2D" uid="uid://ds6mqpf2gt0fn" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/attack_12.png" id="18_4yqhp"]
+[ext_resource type="Texture2D" uid="uid://drp2een6e76bk" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/attack_13.png" id="19_66uun"]
+[ext_resource type="Texture2D" uid="uid://sseninfa2r1m" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/attack_14.png" id="20_nygde"]
+[ext_resource type="Texture2D" uid="uid://cfit6q2ech05c" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/attack_15.png" id="21_nx8bg"]
+[ext_resource type="Texture2D" uid="uid://br128bhupg8ov" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/attack_16.png" id="22_5xvby"]
+[ext_resource type="Texture2D" uid="uid://b4k4ymoi4jd7x" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/attack_17.png" id="23_25ca7"]
+[ext_resource type="Texture2D" uid="uid://vf45k2g7pqyj" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/attack_18.png" id="24_ag0u3"]
+[ext_resource type="Texture2D" uid="uid://cn12e43xi3seb" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/attack_19.png" id="25_xtieb"]
+[ext_resource type="Texture2D" uid="uid://uxo7amgltugg" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/die_00.png" id="26_aqpqw"]
+[ext_resource type="Texture2D" uid="uid://dwttf3wyeo2sm" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/die_01.png" id="27_jm7b7"]
+[ext_resource type="Texture2D" uid="uid://0ggkxuekfpoj" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/die_02.png" id="28_vmrei"]
+[ext_resource type="Texture2D" uid="uid://2cqqrp7i62ov" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/die_03.png" id="29_vonq7"]
+[ext_resource type="Texture2D" uid="uid://ocrxw6qtumme" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/die_04.png" id="30_2svdw"]
+[ext_resource type="Texture2D" uid="uid://d3nlsx1legq7" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/die_05.png" id="31_o3cvh"]
+[ext_resource type="Texture2D" uid="uid://dwj4oad4emhui" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/die_06.png" id="32_dx65c"]
+[ext_resource type="Texture2D" uid="uid://b7yd8abdmxb3w" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/die_07.png" id="33_c4tua"]
+[ext_resource type="Texture2D" uid="uid://b2d7fweiqjqg2" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/die_08.png" id="34_5esdv"]
+[ext_resource type="Texture2D" uid="uid://mcmwqdig5d58" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/die_09.png" id="35_b1h27"]
+[ext_resource type="Texture2D" uid="uid://1nakg6kyhq7j" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/die_10.png" id="36_rmelk"]
+[ext_resource type="Texture2D" uid="uid://cwnfgox0ko3kf" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/die_11.png" id="37_jyn2w"]
+[ext_resource type="Texture2D" uid="uid://xbgwtw4dbxrn" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/die_12.png" id="38_ur27k"]
+[ext_resource type="Texture2D" uid="uid://bed4od8krqtrs" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/die_13.png" id="39_mnps4"]
+[ext_resource type="Texture2D" uid="uid://nglxura44kr3" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/move_back_0.png" id="40_4jtyj"]
+[ext_resource type="Texture2D" uid="uid://cmba1rjmycrg3" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/move_back_1.png" id="41_tawyr"]
+[ext_resource type="Texture2D" uid="uid://djtptyra1b3mg" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/move_back_2.png" id="42_xkylc"]
+[ext_resource type="Texture2D" uid="uid://iaypfpqxmtg5" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/move_back_3.png" id="43_umyh0"]
+[ext_resource type="Texture2D" uid="uid://lauv67pgbl5d" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/move_back_4.png" id="44_00sa1"]
+[ext_resource type="Texture2D" uid="uid://ne3psw3er2oq" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/move_back_5.png" id="45_8rptj"]
+[ext_resource type="Texture2D" uid="uid://blw2vsfk4e8m3" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/move_back_6.png" id="46_trgeu"]
+[ext_resource type="Texture2D" uid="uid://1u0p50t7masb" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/move_back_7.png" id="47_kxpmu"]
+[ext_resource type="Texture2D" uid="uid://cm3na8sy7q2lm" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/move_front_0.png" id="48_8kytm"]
+[ext_resource type="Texture2D" uid="uid://6equgej20cv" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/move_front_1.png" id="49_2stpf"]
+[ext_resource type="Texture2D" uid="uid://dodn1o60kh5w0" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/move_front_2.png" id="50_8exdg"]
+[ext_resource type="Texture2D" uid="uid://dem48bm6btdid" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/move_front_3.png" id="51_e7t0p"]
+[ext_resource type="Texture2D" uid="uid://cc4whq3wexskl" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/move_front_4.png" id="52_upgo8"]
+[ext_resource type="Texture2D" uid="uid://cdqnjnqpht6jt" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/move_front_5.png" id="53_sgfcq"]
+[ext_resource type="Texture2D" uid="uid://dcff6blkafd3u" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/move_front_6.png" id="54_0gvmb"]
+[ext_resource type="Texture2D" uid="uid://cyxjedcfca5a1" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/move_front_7.png" id="55_yfwam"]
+[ext_resource type="Texture2D" uid="uid://dxao2wr5w2xn5" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/move_normal_0.png" id="56_jfbxa"]
+[ext_resource type="Texture2D" uid="uid://0jpgs43b6iys" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/move_normal_1.png" id="57_vd5ne"]
+[ext_resource type="Texture2D" uid="uid://csk2ooppfm7uy" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/move_normal_2.png" id="58_n2kht"]
+[ext_resource type="Texture2D" uid="uid://df62ju8pxbkk6" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/move_normal_3.png" id="59_3spv2"]
+[ext_resource type="Texture2D" uid="uid://bldor358c3y3m" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/move_normal_4.png" id="60_qhr2i"]
+[ext_resource type="Texture2D" uid="uid://dpjc6oph71vy0" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/move_normal_5.png" id="61_52vgb"]
+[ext_resource type="Texture2D" uid="uid://bovlo8fd8xptl" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/move_normal_6.png" id="62_540iw"]
+[ext_resource type="Texture2D" uid="uid://0rbir65k54hg" path="res://Assets/Animations/Enemies/50剧毒蜘蛛/move_normal_7.png" id="63_q8f3d"]
+
+[sub_resource type="Resource" id="Resource_vfybo"]
+script = ExtResource("4_u3vek")
+health = 150
+dodge_rate = 0.0
+near_damage_low = 60
+near_damage_high = 80
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.0
+physic_immune = false
+magic_defence = 0.9
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 2.4
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7qau0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_872jo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hcgtt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8dgve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jeith")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jnvgo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_j8cof")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_agn85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_3g5o7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_iw7ow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_c5c3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_st38y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_fsw0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_4yqhp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_66uun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_nygde")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_nx8bg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_5xvby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_25ca7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ag0u3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_xtieb")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_aqpqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_jm7b7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_vmrei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_vonq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_2svdw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_o3cvh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_dx65c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_c4tua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_5esdv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_b1h27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_rmelk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_jyn2w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_ur27k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_mnps4")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_872jo")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("40_4jtyj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_tawyr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_xkylc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_umyh0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_00sa1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_8rptj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_trgeu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_kxpmu")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("48_8kytm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_2stpf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_8exdg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_e7t0p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_upgo8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_sgfcq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_0gvmb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_yfwam")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("56_jfbxa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_vd5ne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_n2kht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_3spv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_qhr2i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_52vgb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_540iw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_q8f3d")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 30.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cc06s"]
+size = Vector2(160, 35)
+
+[node name="Enemy50" instance=ExtResource("1_h8y26")]
+script = ExtResource("2_ndxby")
+enemy_name = "剧毒蜘蛛"
+enemy_id = 50
+enemy_texture = ExtResource("3_4ga31")
+start_data = SubResource("Resource_vfybo")
+bounty = 12
+die_audio_stream_list = Array[AudioStream]([ExtResource("5_x2ocy")])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(0, -35)
+sprite_frames = SubResource("SpriteFrames_7qau0")
+animation = &"attack"
+autoplay = "idle"
+
+[node name="BodyCollision" parent="UnitBody" index="1"]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_cc06s")
+
+[node name="HurtBox" parent="UnitBody" index="2"]
+position = Vector2(0, -35)
+scale = Vector2(6.42313, 3.82313)
+
+[node name="SelectSprite" parent="UnitBody" index="3"]
+position = Vector2(0, 10)
+scale = Vector2(5.92367, 5.92367)
+
+[node name="EnemyButton" parent="UnitBody" index="4"]
+offset_left = -83.0
+offset_top = -90.0
+offset_right = 85.0
+
+[node name="HealthBar" parent="UnitBody" index="5"]
+offset_left = -100.0
+offset_top = -115.0
+offset_right = 200.0
+offset_bottom = -106.0
+scale = Vector2(0.682891, 1.88085)
+
+[node name="AppearAudioComponent" parent="." index="5" instance=ExtResource("6_ltfqj")]
+appear_audio_list = Array[AudioStream]([ExtResource("7_ig1v7"), ExtResource("8_mvst4"), ExtResource("9_mdqhx"), ExtResource("10_5vnn7")])

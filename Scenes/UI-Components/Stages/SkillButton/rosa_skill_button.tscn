@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://cnent4dbfhwcr"]
+
+[ext_resource type="PackedScene" uid="uid://dakq012d6gh6m" path="res://Scenes/UI-Components/Stages/skill_button.tscn" id="1_k35yp"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Stages/SkillButtons/rosa_skill_button.gd" id="2_wem2a"]
+[ext_resource type="Texture2D" uid="uid://bbix2ejk7c5om" path="res://Assets/Images/UI/SkillButton/Heroskill/Rosa/rosa_skill.png" id="3_nopmy"]
+[ext_resource type="Texture2D" uid="uid://nowfqe1fr7y6" path="res://Assets/Images/UI/SkillButton/Heroskill/Rosa/rosa_skill_using.png" id="4_whc6i"]
+
+[node name="RosaSkillButton" instance=ExtResource("1_k35yp")]
+script = ExtResource("2_wem2a")
+skill_type = 2
+texture_normal = ExtResource("3_nopmy")
+texture_select = ExtResource("4_whc6i")
+skill_name = "黑暗风暴"
+skill_intro = "沿指定道路射出大量箭矢，对命中敌人造成真实伤害"
+cooling_time = 35.0

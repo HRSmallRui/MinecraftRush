@@ -1,0 +1,1159 @@
+[gd_scene load_steps=192 format=3 uid="uid://kr4a50ijschb"]
+
+[ext_resource type="PackedScene" uid="uid://05u6aueicvo4" path="res://Scenes/Classes/stage_class.tscn" id="1_o645j"]
+[ext_resource type="AudioStream" uid="uid://bdthvsar8ir28" path="res://Assets/Sounds/Music/高山-准备2.mp3" id="2_7yt7r"]
+[ext_resource type="Script" path="res://Scripts/Stages/stage_17_campaign.gd" id="2_763tb"]
+[ext_resource type="Script" path="res://Library/EnemySummon/stage_summon_config.gd" id="2_xwufb"]
+[ext_resource type="PackedScene" uid="uid://dmru61x2gae2m" path="res://Scenes/Enemies/enemy_45.tscn" id="3_i5skx"]
+[ext_resource type="AudioStream" uid="uid://djir0cpjei6nj" path="res://Assets/Sounds/Music/高山-战斗2.mp3" id="3_llu2j"]
+[ext_resource type="Texture2D" uid="uid://cews1d3x4vxh5" path="res://Assets/Images/Stages/Stage17/stage17-based.png" id="4_oy1l6"]
+[ext_resource type="PackedScene" uid="uid://v21qijvh67pp" path="res://Scenes/Enemies/enemy_46.tscn" id="4_s4vl6"]
+[ext_resource type="Texture2D" uid="uid://pe1sf035jhvg" path="res://Assets/Animations/StageComponents/保护点.png" id="5_8ygof"]
+[ext_resource type="PackedScene" uid="uid://dp25g8s5is0j" path="res://Scenes/Enemies/enemy_47.tscn" id="5_vd5bl"]
+[ext_resource type="PackedScene" uid="uid://ceg4ixysmvsx" path="res://Scenes/Enemies/enemy_48.tscn" id="6_c880j"]
+[ext_resource type="Script" path="res://Scripts/Stages/protection_point.gd" id="6_hthgm"]
+[ext_resource type="Texture2D" uid="uid://cb7n0rp6m5v2t" path="res://Assets/Images/Stages/Flag.png" id="7_e857l"]
+[ext_resource type="PackedScene" uid="uid://ds6gk401s8krk" path="res://Scenes/Enemies/enemy_58.tscn" id="7_x0fxt"]
+[ext_resource type="PackedScene" uid="uid://i2ikd0xvj08u" path="res://Scenes/StageComponents/rain_layer.tscn" id="8_vxkb5"]
+[ext_resource type="Texture2D" uid="uid://ddqgkjf4hqkwm" path="res://Assets/Animations/StageComponents/Lakes/Pop/1.png" id="10_hxknm"]
+[ext_resource type="Texture2D" uid="uid://b4pc24p1a2xf7" path="res://Assets/Animations/StageComponents/Lakes/Pop/2.png" id="11_vrck0"]
+[ext_resource type="Texture2D" uid="uid://rbod4mupa2y6" path="res://Assets/Animations/StageComponents/Lakes/Pop/3.png" id="12_ahvx4"]
+[ext_resource type="Texture2D" uid="uid://bwl8sfa6ltkub" path="res://Assets/Animations/StageComponents/Lakes/Pop/4.png" id="13_bexta"]
+[ext_resource type="Texture2D" uid="uid://b4suedr63w8b4" path="res://Assets/Animations/StageComponents/Lakes/Pop/5.png" id="14_48um7"]
+[ext_resource type="Texture2D" uid="uid://dqdrc2e80mptv" path="res://Assets/Animations/StageComponents/Lakes/Pop/6.png" id="15_s3gv7"]
+[ext_resource type="PackedScene" uid="uid://dvqlop127qgu8" path="res://Scenes/StageComponents/white_lily.tscn" id="16_0nob3"]
+[ext_resource type="PackedScene" uid="uid://ijh1asl8h5lg" path="res://Scenes/StageComponents/red_lily.tscn" id="17_gd0yh"]
+[ext_resource type="PackedScene" uid="uid://d0sta1lv6shgl" path="res://Scenes/DefenceTowers/defence_tower_based.tscn" id="18_4v3g0"]
+[ext_resource type="Script" path="res://Scripts/Classes/enemy_path.gd" id="18_7y6ob"]
+[ext_resource type="Resource" uid="uid://bd3fcutjk2joo" path="res://Library/SummonConfigs/Stage17/Campaign/path1.res" id="19_kx82y"]
+[ext_resource type="Resource" uid="uid://75r3jd1c7ytd" path="res://Library/SummonConfigs/Stage17/Campaign/path2.res" id="20_3n2r4"]
+[ext_resource type="Script" path="res://Scripts/path_config_save.gd" id="20_5e2s5"]
+[ext_resource type="Resource" uid="uid://jcn76l4n6hfd" path="res://Library/SummonConfigs/Stage17/Campaign/path3.res" id="21_e0xa0"]
+[ext_resource type="Resource" uid="uid://dnb0ywa18xixy" path="res://Library/SummonConfigs/wave_15_template.res" id="21_g25j4"]
+[ext_resource type="Script" path="res://Scripts/path_config_load.gd" id="22_c3k5h"]
+[ext_resource type="Resource" uid="uid://dq267qjsfglmn" path="res://Library/SummonConfigs/Stage17/Campaign/path4.res" id="22_sebyo"]
+[ext_resource type="Resource" uid="uid://56frbc4fl078" path="res://Library/SummonConfigs/Stage17/Campaign/path5.res" id="23_v8ohy"]
+[ext_resource type="Resource" uid="uid://6ps66y3343j6" path="res://Library/SummonConfigs/Stage17/Campaign/path6.res" id="24_vv847"]
+[ext_resource type="Resource" uid="uid://cetig02l6i3bp" path="res://Library/SummonConfigs/Stage17/Campaign/path7.res" id="25_hso6y"]
+[ext_resource type="Resource" uid="uid://53mb24dgnt2p" path="res://Library/SummonConfigs/Stage17/Campaign/path8.res" id="26_fsy6l"]
+[ext_resource type="Resource" uid="uid://x1owysdn4ae5" path="res://Library/SummonConfigs/Stage17/Campaign/path9.res" id="27_hapog"]
+[ext_resource type="Resource" uid="uid://df7mmaxxuqa11" path="res://Library/SummonConfigs/Stage17/Campaign/path10.res" id="28_ablqj"]
+[ext_resource type="Resource" uid="uid://d1wlki8wix40b" path="res://Library/SummonConfigs/Stage17/Campaign/path11.res" id="29_vpukb"]
+[ext_resource type="Resource" uid="uid://ig7ykpl7ej3f" path="res://Library/SummonConfigs/Stage17/Campaign/path12.res" id="30_o4kc6"]
+[ext_resource type="PackedScene" uid="uid://4j747edyffkd" path="res://Scenes/UI-Components/Stages/wave_button.tscn" id="32_2fws0"]
+[ext_resource type="Script" path="res://Library/EnemySummon/wave_summon_text.gd" id="33_i43py"]
+[ext_resource type="Texture2D" uid="uid://d4h7uga26vrgq" path="res://Assets/Images/UI/wave-direction.png" id="34_l7kor"]
+[ext_resource type="PackedScene" uid="uid://dijjgy2lt1p7w" path="res://Scenes/UI-Components/Stages/wave_panel.tscn" id="35_qjhl4"]
+[ext_resource type="Script" path="res://Library/EnemySummon/SummonTextBlock/summon_text_block.gd" id="36_86sfi"]
+[ext_resource type="Script" path="res://Library/EnemySummon/SummonTextBlock/summon_text_block_chapter5.gd" id="37_65uk1"]
+[ext_resource type="Script" path="res://Scripts/summon_count_porcess.gd" id="42_rfcjs"]
+[ext_resource type="Script" path="res://Library/EnemySummon/path_summon_block.gd" id="43_1yghm"]
+
+[sub_resource type="Resource" id="Resource_74ug6"]
+script = ExtResource("2_xwufb")
+next_wave_timers = Array[float]([40.0, 40.0, 45.0, 45.0, 50.0, 50.0, 55.0, 55.0, 60.0, 60.0, 60.0, 64.0, 65.0, 65.0])
+wave_exist_timers = Array[float]([15.0, 20.0, 24.0, 25.0, 24.0, 20.0, 24.0, 25.0, 25.0, 30.0, 30.0, 32.0, 32.0, 35.0])
+wave_money_get = Array[int]([10, 10, 12, 12, 14, 15, 15, 16, 16, 18, 18, 20, 20, 25])
+reinforce_cooling_fast = Array[float]([5.0, 5.0, 10.0, 10.0, 12.0, 12.0, 14.0, 14.0, 15.0, 15.0, 16.0, 16.0, 18.0, 20.0])
+firerain_cooling_fast = Array[float]([20.0, 22.0, 21.0, 22.0, 24.0, 24.0, 25.0, 25.0, 26.0, 26.0, 28.0, 28.0, 30.0, 35.0])
+hero_skill_cooling_fast = Array[float]([8.0, 10.0, 14.0, 15.0, 16.0, 18.0, 20.0, 21.0, 21.0, 24.0, 24.0, 25.0, 30.0, 32.0])
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xtu1q"]
+size = Vector2(2200, 1200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6w3hw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_hxknm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vrck0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ahvx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_bexta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_48um7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_s3gv7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_pko58"]
+vertices = PackedVector2Array(395.75, 6.97656, 1687.99, 4.03906, 1530.11, 185.422, 380.5, 121.383, 1947.95, 537.313, 2202.77, 474.797, 2190.17, 1193.05, 1300.27, 1197.94, 1504.9, 980.727, 1292.96, 1100.14, 1287.14, 1041.16, 1367.88, 1049.24, 1251.42, 910.609, 1273.23, 1201.09, -0.0078125, 1212.9, -0.992188, 267.609, 288.039, 224.359, 1565.99, 259.211, 1495.13, 421.781, 1421.07, 862.453)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7, 8), PackedInt32Array(9, 10, 11), PackedInt32Array(12, 13, 14, 15, 16), PackedInt32Array(12, 16, 3, 2, 17, 18), PackedInt32Array(19, 12, 18, 4), PackedInt32Array(8, 19, 4), PackedInt32Array(11, 8, 7, 9)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(387, -3, 371, 117, 283, 215, -11, 259, -10, 1223, 1284, 1211, 1262, 918, 1417, 874, 1490, 977, 1366, 1039, 1276, 1030, 1283, 1101, 1291, 1208, 2200, 1203, 2213, 462, 1948, 527, 1509, 415, 1577, 259, 1542, 187, 1710, -6)])
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_wguqu"]
+vertices = PackedVector2Array(1176.78, 496.922, 1176.78, 496.906, 1251.54, 575.719, 1436.91, 30, 1467.79, 2.96875, 1577.08, 2.15625, 1548.19, 33.6172, 1495.03, 75.1797, 1397.59, 112.211, 1333.03, 59.8203, 1296.65, 124.094, 1217.17, 74.6719, 1223.17, 135.469, 1147.83, 113.203, 1140.5, 193.344, 1045.66, 204.461, 965.141, 278.938, 1043.04, 292.898, 979.148, 335.508, 5.89063, 435.156, 5.14063, 369.719, 72.5078, 385.93, 148.813, 453.023, 236.594, 395.992, 374.992, 461.992, 337.797, 398, 457.828, 403, 618.148, 456.008, 924.367, 1149.98, 933.008, 1197.11, 853.359, 1197.91, 846.727, 1160.6, 883.313, 1059.05, 820.023, 1076.37, 832.906, 989.867, 799.141, 943.117, 759.188, 994.906, 750.852, 918.438, 2199.4, 671.078, 2194.81, 736.891, 2143, 726.203, 2133.21, 657.844, 2034.06, 643.961, 2028, 703, 1950.2, 638.039, 337.797, 397.992, 597.633, 402, 750.242, 383.797, 810.109, 427.32, 860.383, 346.07, 922.969, 375.297, 1054.64, 343.953, 1020.54, 406.797, 1106.13, 423.242, 1078.79, 499.602, 1171.29, 586.188, 1218.52, 618.891, 1928.34, 703, 1848.96, 649.961, 1742.58, 657.977, 1837.08, 715.031, 1711.63, 723, 1597.88, 664.008, 1556.63, 724.992, 1458.48, 654.922, 1408.25, 703.219, 1320.95, 621.297, 1281.2, 663.648, 1234.32, 710.539, 1120.52, 740.852, 1196.94, 763.641, 1115.2, 816.188, 1025.14, 792.133, 979.227, 877.719, 849.453, 858, 666.711, 923.773, 693.859, 866.938, 603.328, 807.891, 551.203, 851.828, 468.422, 752.75, 394.758, 803.07, 308.281, 731.992, 205.188, 794, 180.828, 731, 70.2188, 728.008, 8.11719, 795.898, 8.88281, 732.328)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5, 6, 7, 8), PackedInt32Array(9, 3, 8, 10), PackedInt32Array(11, 9, 10, 12, 13), PackedInt32Array(13, 12, 14, 15), PackedInt32Array(16, 15, 14, 17, 18), PackedInt32Array(19, 20, 21, 22), PackedInt32Array(22, 21, 23, 24), PackedInt32Array(24, 23, 25, 26, 27), PackedInt32Array(28, 29, 30, 31, 32), PackedInt32Array(32, 31, 33, 34), PackedInt32Array(35, 34, 33, 36, 37), PackedInt32Array(38, 39, 40, 41), PackedInt32Array(42, 41, 40, 43, 44), PackedInt32Array(25, 45, 26), PackedInt32Array(27, 26, 46), PackedInt32Array(27, 46, 47, 48), PackedInt32Array(48, 47, 49, 50), PackedInt32Array(50, 49, 16, 18), PackedInt32Array(18, 17, 51, 52), PackedInt32Array(52, 51, 53, 54), PackedInt32Array(55, 54, 53, 0, 2, 56), PackedInt32Array(44, 43, 57, 58), PackedInt32Array(59, 58, 57, 60, 61), PackedInt32Array(62, 59, 61, 63), PackedInt32Array(64, 62, 63, 65), PackedInt32Array(66, 64, 65, 67), PackedInt32Array(56, 2, 66, 67, 68), PackedInt32Array(69, 56, 68, 70, 71), PackedInt32Array(72, 69, 71, 73), PackedInt32Array(74, 72, 73, 35, 37), PackedInt32Array(37, 36, 75, 76), PackedInt32Array(77, 76, 75, 78, 79), PackedInt32Array(79, 78, 80, 81), PackedInt32Array(81, 80, 82, 83), PackedInt32Array(84, 83, 82, 85, 86)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-5, 357, 74, 376, 237, 386, 338, 388, 458, 393, 597, 392, 748, 374, 856, 337, 959, 271, 1039, 197, 1142, 105, 1214, 65, 1331, 50, 1432, 21, 1464, -7, 1600, -8, 1555, 41, 1500, 84, 1400, 122, 1298, 134, 1227, 145, 1147, 201, 1054, 296, 1064, 340, 1114, 417, 1184, 490, 1258, 568, 1325, 612, 1460, 645, 1598, 654, 1742, 648, 1848, 640, 1950, 628, 2035, 634, 2135, 648, 2210, 663, 2204, 749, 2141, 736, 2027, 713, 1929, 713, 1838, 725, 1712, 733, 1556, 735, 1406, 713, 1284, 675, 1242, 717, 1204, 771, 1120, 825, 983, 887, 815, 948, 841, 984, 892, 1054, 934, 1147, 945, 1207, 845, 1208, 837, 1163, 811, 1081, 752, 1002, 661, 932, 547, 861, 393, 813, 205, 804, -2, 806, -1, 723, 70, 718, 181, 721, 309, 722, 471, 743, 608, 799, 700, 859, 752, 906, 845, 849, 1021, 783, 1114, 733, 1204, 621, 1165, 594, 1071, 506, 1012, 412, 976, 350, 928, 384, 813, 437, 619, 466, 375, 472, 148, 463, -4, 444)])
+
+[sub_resource type="Curve2D" id="Curve2D_qioy8"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1532, -46, 21.9203, -15.9099, -21.9203, 15.9099, 1500, 28, 0, 0, 0, 0, 1409, 70, 22.981, -6.36396, -22.981, 6.36396, 1231, 109, 31.1127, -27.9307, -31.1127, 27.9307, 1116, 172, 0, 0, 0, 0, 1014, 275, 41.0122, -21.2132, -41.0122, 21.2132, 911, 349, 0, 0, 0, 0, 792, 398, 37.8302, -1.06066, -37.8302, 1.06066, 605, 426, 0, 0, 0, 0, 419, 428, 41.2034, 1.49831, -41.2034, -1.49831, 183, 425, 0, 0, 0, 0, -18, 403, 0, 0, 0, 0, -85, 392)
+}
+point_count = 13
+
+[sub_resource type="Curve2D" id="Curve2D_dchox"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1572, -38, 21.9203, -15.9099, -21.9203, 15.9099, 1515, 47, 0, 0, 0, 0, 1415, 100, 22.981, -6.36396, -22.981, 6.36396, 1231, 134, 31.1127, -27.9307, -31.1127, 27.9307, 1125, 210, 0, 0, 0, 0, 1021, 308, 41.0122, -21.2132, -41.0122, 21.2132, 916, 379, 0, 0, 0, 0, 788, 425, 37.8302, -1.06066, -37.8302, 1.06066, 603, 454, 0, 0, 0, 0, 414, 458, 41.2034, 1.49831, -41.2034, -1.49831, 179, 456, 0, 0, 0, 0, -24, 429, 0, 0, 0, 0, -88, 421)
+}
+point_count = 13
+
+[sub_resource type="Curve2D" id="Curve2D_5xx53"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1495, -52, 21.9203, -15.9099, -21.9203, 15.9099, 1467, 6, 0, 0, 0, 0, 1394, 41, 22.981, -6.36396, -22.981, 6.36396, 1221, 78, 31.1127, -27.9307, -31.1127, 27.9307, 1101, 150, 0, 0, 0, 0, 990, 257, 41.0122, -21.2132, -41.0122, 21.2132, 886, 325, 0, 0, 0, 0, 783, 363, 37.8302, -1.06066, -37.8302, 1.06066, 600, 395, 0, 0, 0, 0, 417, 395, 41.2034, 1.49831, -41.2034, -1.49831, 184, 395, 0, 0, 0, 0, -12, 373, 0, 0, 0, 0, -76, 363)
+}
+point_count = 13
+
+[sub_resource type="Curve2D" id="Curve2D_6fk4v"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 893, 1259, 1.58919, 25.9568, -1.58919, -25.9568, 891, 1180, 14.4891, 26.1434, -14.4891, -26.1434, 865, 1095, 0, 0, 0, 0, 808, 1009, 21.5668, 19.0919, -21.5668, -19.0919, 752, 945, 28.2843, 18.3848, -28.2843, -18.3848, 642, 869, 37.4767, 14.8492, -37.4767, -14.8492, 523, 811, 43.4871, 7.77818, -43.4871, -7.77818, 386, 774, 33.9411, 2.82843, -33.9411, -2.82843, 262, 760, 30, 0.5, -30, -0.5, 117, 756, 0, 0, 0, 0, -78, 760)
+}
+point_count = 11
+
+[sub_resource type="Curve2D" id="Curve2D_ydl0v"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 923, 1258, 1.58919, 25.9568, -1.58919, -25.9568, 918, 1176, 14.4891, 26.1434, -14.4891, -26.1434, 888, 1073, 0, 0, 0, 0, 838, 994, 21.5668, 19.0919, -21.5668, -19.0919, 771, 925, 28.2843, 18.3848, -28.2843, -18.3848, 655, 841, 37.4767, 14.8492, -37.4767, -14.8492, 529, 780, 43.4871, 7.77818, -43.4871, -7.77818, 392, 738, 33.9411, 2.82843, -33.9411, -2.82843, 260, 730, 30, 0.5, -30, -0.5, 119, 729, 0, 0, 0, 0, -79, 734)
+}
+point_count = 11
+
+[sub_resource type="Curve2D" id="Curve2D_pvmru"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 857, 1260, 1.58919, 25.9568, -1.58919, -25.9568, 853, 1189, 14.4891, 26.1434, -14.4891, -26.1434, 837, 1105, 0, 0, 0, 0, 791, 1035, 21.8817, 22.5567, -21.8817, -22.5567, 734, 968, 28.2843, 18.3848, -28.2843, -18.3848, 621, 895, 37.4767, 14.8492, -37.4767, -14.8492, 512, 838, 43.4871, 7.77818, -43.4871, -7.77818, 379, 799, 33.9411, 2.82843, -33.9411, -2.82843, 255, 786, 30, 0.5, -30, -0.5, 112, 783, 0, 0, 0, 0, -82, 783)
+}
+point_count = 11
+
+[sub_resource type="Curve2D" id="Curve2D_brjwa"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2266, 724, 56.9368, 11.3507, -56.9368, -11.3507, 2074, 683, 56.397, -2.66968, -56.397, 2.66968, 1881, 680, 33.0373, 0, -33.0373, 0, 1701, 696, 42.3812, 7.00791, -42.3812, -7.00791, 1466, 695, 27.3642, 15.0169, -27.3642, -15.0169, 1325, 653, 0, 0, 0, 0, 1206, 570, 16.6855, 21.0237, -16.6855, -21.0237, 1074, 439, 0, 0, 0, 0, 1015, 353, 12.3473, 2.33597, -12.3473, -2.33597, 983, 330, 21.3574, -9.01017, -21.3574, 9.01017, 929, 339, 0, 0, 0, 0, 852, 376, 30.0339, -9.01017, -30.0339, 9.01017, 796, 396, 32.0362, -2.33597, -32.0362, 2.33597, 616, 425, 0, 0, 0, 0, 411, 429, 45.0508, 1.66855, -45.0508, -1.66855, 185, 424, 0, 0, 0, 0, -85, 392)
+}
+point_count = 17
+
+[sub_resource type="Curve2D" id="Curve2D_4rn3s"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2271, 688, 61.4009, 8.65929, -61.4009, -8.65929, 2075, 646, 56.397, -2.66968, -56.397, 2.66968, 1871, 650, 33.0373, 0, -33.0373, 0, 1683, 663, 42.3812, 7.00791, -42.3812, -7.00791, 1459, 657, 27.3642, 15.0169, -27.3642, -15.0169, 1325, 617, 0, 0, 0, 0, 1211, 540, 16.6855, 21.0237, -16.6855, -21.0237, 1097, 412, 0, 0, 0, 0, 1033, 323, 36.4015, 8.12681, -36.4015, -8.12681, 986, 297, 21.3574, -9.01017, -21.3574, 9.01017, 915, 310, 0, 0, 0, 0, 832, 350, 30.0339, -9.01017, -30.0339, 9.01017, 778, 365, 32.0362, -2.33597, -32.0362, 2.33597, 609, 395, 0, 0, 0, 0, 406, 397, 45.0508, 1.66855, -45.0508, -1.66855, 180, 395, 0, 0, 0, 0, -77, 363)
+}
+point_count = 17
+
+[sub_resource type="Curve2D" id="Curve2D_hduem"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2260, 753, 43.4673, 6.29961, -43.4673, -6.29961, 2069, 704, 56.397, -2.66968, -56.397, 2.66968, 1879, 707, 33.0373, 0, -33.0373, 0, 1702, 727, 42.3812, 7.00791, -42.3812, -7.00791, 1462, 719, 27.3642, 15.0169, -27.3642, -15.0169, 1309, 677, 0, 0, 0, 0, 1186, 600, 16.6855, 21.0237, -16.6855, -21.0237, 1055, 458, 0, 0, 0, 0, 1002, 377, 12.3473, 2.33597, -12.3473, -2.33597, 985, 350, 21.3574, -9.01017, -21.3574, 9.01017, 935, 369, 0, 0, 0, 0, 860, 400, 30.0339, -9.01017, -30.0339, 9.01017, 801, 421, 32.0362, -2.33597, -32.0362, 2.33597, 618, 453, 0, 0, 0, 0, 409, 458, 45.0508, 1.66855, -45.0508, -1.66855, 180, 456, 0, 0, 0, 0, -85, 422)
+}
+point_count = 17
+
+[sub_resource type="Curve2D" id="Curve2D_yqrwk"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2269, 724, 14.6832, 3.00339, -14.6832, -3.00339, 2067, 683, 42.3812, 0, -42.3812, 0, 1994, 674, 43.0486, -3.00339, -43.0486, 3.00339, 1849, 684, 21.0237, 0, -21.0237, 0, 1685, 696, 51.317, 1.49831, -51.317, -1.49831, 1500, 698, 15.3576, 7.49154, -15.3576, -7.49154, 1346, 659, 10.8627, -1.49831, -10.8627, 1.49831, 1282, 645, 13.8593, -13.8593, -13.8593, 13.8593, 1237, 659, 0, 0, 0, 0, 1205, 701, 25.8458, -14.9831, -25.8458, 14.9831, 1152, 758, 0, 0, 0, 0, 1070, 806, 0, 0, 0, 0, 991, 838, 0, 0, 0, 0, 907, 870, 0, 0, 0, 0, 837, 898, 19.8526, -0.749154, -19.8526, 0.749154, 774, 921, 19.8526, 6.36781, -19.8526, -6.36781, 716, 917, 34.0865, 25.0966, -34.0865, -25.0966, 663, 886, 0, 0, 0, 0, 556, 822, 47.9458, 13.8593, -47.9458, -13.8593, 462, 790, 0, 0, 0, 0, 371, 772, 48.695, 3.37119, -48.695, -3.37119, 239, 760, 0, 0, 0, 0, 117, 755, 23.5983, -0.374577, -23.5983, 0.374577, 1, 757, 0, 0, 0, 0, -80, 760)
+}
+point_count = 25
+
+[sub_resource type="Curve2D" id="Curve2D_fes7n"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2272, 688, 14.6832, 3.00339, -14.6832, -3.00339, 2069, 644, 42.3812, 0, -42.3812, 0, 1986, 643, 43.0486, -3.00339, -43.0486, 3.00339, 1840, 653, 21.0237, 0, -21.0237, 0, 1678, 664, 51.317, 1.49831, -51.317, -1.49831, 1495, 660, 15.3576, 7.49154, -15.3576, -7.49154, 1347, 628, 22.368, -2.62077, -22.368, 2.62077, 1262, 616, 13.8593, -13.8593, -13.8593, 13.8593, 1212, 641, 0, 0, 0, 0, 1179, 681, 25.8458, -14.9831, -25.8458, 14.9831, 1122, 736, 0, 0, 0, 0, 1048, 773, 0, 0, 0, 0, 966, 810, 0, 0, 0, 0, 894, 839, 0, 0, 0, 0, 824, 866, 10.8471, -2.60321, -10.8471, 2.60321, 758, 903, 10.3174, 5.83807, -10.3174, -5.83807, 720, 888, 26.9351, 20.5939, -26.9351, -20.5939, 667, 848, 0, 0, 0, 0, 565, 796, 47.9458, 13.8593, -47.9458, -13.8593, 470, 759, 0, 0, 0, 0, 367, 734, 48.695, 3.37119, -48.695, -3.37119, 236, 730, 0, 0, 0, 0, 115, 729, 23.5983, -0.374577, -23.5983, 0.374577, -2, 732, 0, 0, 0, 0, -79, 735)
+}
+point_count = 25
+
+[sub_resource type="Curve2D" id="Curve2D_iwajl"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2262, 753, 14.6832, 3.00339, -14.6832, -3.00339, 2056, 701, 42.3812, 0, -42.3812, 0, 1987, 703, 43.0486, -3.00339, -43.0486, 3.00339, 1847, 710, 21.0237, 0, -21.0237, 0, 1683, 728, 48.4822, 2.44325, -48.4822, -2.44325, 1498, 721, 15.3576, 7.49154, -15.3576, -7.49154, 1327, 683, 10.8627, -1.49831, -10.8627, 1.49831, 1277, 662, 13.8593, -13.8593, -13.8593, 13.8593, 1252, 689, 0, 0, 0, 0, 1225, 728, 25.8458, -14.9831, -25.8458, 14.9831, 1162, 787, 0, 0, 0, 0, 1072, 837, 0, 0, 0, 0, 994, 871, 0, 0, 0, 0, 910, 906, 0, 0, 0, 0, 848, 931, 21.3526, 2.75085, -21.3526, -2.75085, 770, 961, 12.8526, 7.11781, -12.8526, -7.11781, 707, 947, 34.0865, 25.0966, -34.0865, -25.0966, 638, 904, 0, 0, 0, 0, 529, 844, 47.9458, 13.8593, -47.9458, -13.8593, 444, 815, 0, 0, 0, 0, 366, 797, 48.695, 3.37119, -48.695, -3.37119, 237, 784, 0, 0, 0, 0, 112, 784, 23.5983, -0.374577, -23.5983, 0.374577, -3, 782, 0, 0, 0, 0, -81, 784)
+}
+point_count = 25
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4eu2v"]
+size = Vector2(2234, 1233)
+
+[sub_resource type="Resource" id="Resource_326iq"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼士兵"
+enemy_count = 12
+
+[sub_resource type="Resource" id="Resource_1j3sk"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼勇士"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_kydyd"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_326iq"), SubResource("Resource_1j3sk")])
+
+[sub_resource type="Resource" id="Resource_sssmh"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼士兵"
+enemy_count = 10
+
+[sub_resource type="Resource" id="Resource_xqkir"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼勇士"
+enemy_count = 5
+
+[sub_resource type="Resource" id="Resource_h8i7o"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_sssmh"), SubResource("Resource_xqkir")])
+
+[sub_resource type="Resource" id="Resource_r1jax"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼法师"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_plo3k"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼勇士"
+enemy_count = 7
+
+[sub_resource type="Resource" id="Resource_5cmkg"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼士兵"
+enemy_count = 8
+
+[sub_resource type="Resource" id="Resource_ewlfn"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼傀儡"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_wfh1e"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_r1jax"), SubResource("Resource_plo3k"), SubResource("Resource_5cmkg"), SubResource("Resource_ewlfn")])
+
+[sub_resource type="Resource" id="Resource_i3tbo"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼士兵"
+enemy_count = 20
+
+[sub_resource type="Resource" id="Resource_2bibh"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼傀儡"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_g5utw"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼法师"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_5t351"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_i3tbo"), SubResource("Resource_2bibh"), SubResource("Resource_g5utw")])
+
+[sub_resource type="Resource" id="Resource_wpouo"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼士兵"
+enemy_count = 12
+
+[sub_resource type="Resource" id="Resource_h2o08"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼勇士"
+enemy_count = 10
+
+[sub_resource type="Resource" id="Resource_wsckk"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼法师"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_xpxj5"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼傀儡"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_recfp"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_wpouo"), SubResource("Resource_h2o08"), SubResource("Resource_wsckk"), SubResource("Resource_xpxj5")])
+
+[sub_resource type="Resource" id="Resource_f7mdr"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼士兵"
+enemy_count = 12
+
+[sub_resource type="Resource" id="Resource_3xfsw"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼勇士"
+enemy_count = 10
+
+[sub_resource type="Resource" id="Resource_emafl"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼法师"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_qqcf6"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼傀儡"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_po6no"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_f7mdr"), SubResource("Resource_3xfsw"), SubResource("Resource_emafl"), SubResource("Resource_qqcf6")])
+
+[sub_resource type="Resource" id="Resource_5pxk4"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼士兵"
+enemy_count = 10
+
+[sub_resource type="Resource" id="Resource_fasbi"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼勇士"
+enemy_count = 10
+
+[sub_resource type="Resource" id="Resource_6rlof"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼法师"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_7g1hs"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼傀儡"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_uhmoc"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_5pxk4"), SubResource("Resource_fasbi"), SubResource("Resource_6rlof"), SubResource("Resource_7g1hs")])
+
+[sub_resource type="Resource" id="Resource_hvrkf"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼士兵"
+enemy_count = 10
+
+[sub_resource type="Resource" id="Resource_5d48w"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼勇士"
+enemy_count = 10
+
+[sub_resource type="Resource" id="Resource_fpx7i"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼法师"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_jpyxy"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼傀儡"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_vntwe"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_hvrkf"), SubResource("Resource_5d48w"), SubResource("Resource_fpx7i"), SubResource("Resource_jpyxy")])
+
+[sub_resource type="Resource" id="Resource_751pp"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼士兵"
+enemy_count = 11
+
+[sub_resource type="Resource" id="Resource_2dms5"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼勇士"
+enemy_count = 8
+
+[sub_resource type="Resource" id="Resource_sxfso"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼法师"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_shptp"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼傀儡"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_5ibu2"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_751pp"), SubResource("Resource_2dms5"), SubResource("Resource_sxfso"), SubResource("Resource_shptp")])
+
+[sub_resource type="Resource" id="Resource_y53y0"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼士兵"
+enemy_count = 10
+
+[sub_resource type="Resource" id="Resource_hck6r"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼勇士"
+enemy_count = 6
+
+[sub_resource type="Resource" id="Resource_jy3i0"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼傀儡"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_g1v44"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_y53y0"), SubResource("Resource_hck6r"), SubResource("Resource_jy3i0")])
+
+[sub_resource type="Resource" id="Resource_pjx8v"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼士兵"
+enemy_count = 14
+
+[sub_resource type="Resource" id="Resource_f852s"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼勇士"
+enemy_count = 3
+
+[sub_resource type="Resource" id="Resource_6blc7"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_pjx8v"), SubResource("Resource_f852s")])
+
+[sub_resource type="Resource" id="Resource_rr4og"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼士兵"
+enemy_count = 22
+
+[sub_resource type="Resource" id="Resource_epemu"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼勇士"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_lpsvx"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_rr4og"), SubResource("Resource_epemu")])
+
+[sub_resource type="Resource" id="Resource_0hu1b"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼士兵"
+enemy_count = 16
+
+[sub_resource type="Resource" id="Resource_g8j2x"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼勇士"
+enemy_count = 8
+
+[sub_resource type="Resource" id="Resource_v3k4w"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_0hu1b"), SubResource("Resource_g8j2x")])
+
+[sub_resource type="Resource" id="Resource_l73dp"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼士兵"
+enemy_count = 15
+
+[sub_resource type="Resource" id="Resource_xusjq"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼勇士"
+enemy_count = 8
+
+[sub_resource type="Resource" id="Resource_4xnwx"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼傀儡"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_b3s6y"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_l73dp"), SubResource("Resource_xusjq"), SubResource("Resource_4xnwx")])
+
+[sub_resource type="Resource" id="Resource_r3mbm"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼士兵"
+enemy_count = 15
+
+[sub_resource type="Resource" id="Resource_albxf"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼勇士"
+enemy_count = 8
+
+[sub_resource type="Resource" id="Resource_3r5l7"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼傀儡"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_k7od2"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_r3mbm"), SubResource("Resource_albxf"), SubResource("Resource_3r5l7")])
+
+[sub_resource type="Resource" id="Resource_hw2wq"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼士兵"
+enemy_count = 14
+
+[sub_resource type="Resource" id="Resource_21vw2"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼勇士"
+enemy_count = 8
+
+[sub_resource type="Resource" id="Resource_4bw0n"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼法师"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_pdlmy"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼傀儡"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_r5s2k"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_hw2wq"), SubResource("Resource_21vw2"), SubResource("Resource_4bw0n"), SubResource("Resource_pdlmy")])
+
+[sub_resource type="Resource" id="Resource_7iojg"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼士兵"
+enemy_count = 14
+
+[sub_resource type="Resource" id="Resource_8wd2o"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼勇士"
+enemy_count = 8
+
+[sub_resource type="Resource" id="Resource_tgeac"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼傀儡"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_s0s8e"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼法师"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_tq4ej"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_7iojg"), SubResource("Resource_8wd2o"), SubResource("Resource_tgeac"), SubResource("Resource_s0s8e")])
+
+[sub_resource type="Resource" id="Resource_lpdxg"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_7iojg"), SubResource("Resource_8wd2o"), SubResource("Resource_tgeac"), SubResource("Resource_s0s8e")])
+
+[sub_resource type="Resource" id="Resource_48kye"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼士兵"
+enemy_count = 9
+
+[sub_resource type="Resource" id="Resource_5morc"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼傀儡"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_fvwab"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼勇士"
+enemy_count = 5
+
+[sub_resource type="Resource" id="Resource_kfy5u"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_48kye"), SubResource("Resource_5morc"), SubResource("Resource_fvwab")])
+
+[sub_resource type="Resource" id="Resource_06yu8"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼士兵"
+enemy_count = 12
+
+[sub_resource type="Resource" id="Resource_7pwjt"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼勇士"
+enemy_count = 5
+
+[sub_resource type="Resource" id="Resource_0i8pv"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼傀儡"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_qqtxt"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_06yu8"), SubResource("Resource_7pwjt"), SubResource("Resource_0i8pv")])
+
+[sub_resource type="Resource" id="Resource_ij85e"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼士兵"
+enemy_count = 12
+
+[sub_resource type="Resource" id="Resource_mtgec"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼勇士"
+enemy_count = 3
+
+[sub_resource type="Resource" id="Resource_gslft"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼傀儡"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_51xv1"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼法师"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_oeesy"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_ij85e"), SubResource("Resource_mtgec"), SubResource("Resource_gslft"), SubResource("Resource_51xv1")])
+
+[sub_resource type="Resource" id="Resource_mt53s"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼士兵"
+enemy_count = 5
+
+[sub_resource type="Resource" id="Resource_3aly5"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼勇士"
+enemy_count = 4
+
+[sub_resource type="Resource" id="Resource_0475r"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼傀儡"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_dopig"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_mt53s"), SubResource("Resource_3aly5"), SubResource("Resource_0475r")])
+
+[sub_resource type="Resource" id="Resource_0kvuj"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼士兵"
+enemy_count = 10
+
+[sub_resource type="Resource" id="Resource_25va1"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼勇士"
+enemy_count = 3
+
+[sub_resource type="Resource" id="Resource_pivae"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼傀儡"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_c2xcy"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_0kvuj"), SubResource("Resource_25va1"), SubResource("Resource_pivae")])
+
+[sub_resource type="Resource" id="Resource_h2uw1"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼勇士"
+enemy_count = 9
+
+[sub_resource type="Resource" id="Resource_lb4x4"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼法师"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_db8nn"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_h2uw1"), SubResource("Resource_lb4x4")])
+
+[sub_resource type="Resource" id="Resource_idr0n"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼勇士"
+enemy_count = 9
+
+[sub_resource type="Resource" id="Resource_wja84"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼法师"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_i6t6h"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_idr0n"), SubResource("Resource_wja84")])
+
+[sub_resource type="Resource" id="Resource_pnevr"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_idr0n"), SubResource("Resource_wja84")])
+
+[sub_resource type="Resource" id="Resource_fuvvi"]
+script = ExtResource("37_65uk1")
+enemy_name = "LIVER"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_hofhg"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_fuvvi")])
+
+[sub_resource type="Resource" id="Resource_ogqis"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼傀儡"
+enemy_count = 2
+
+[sub_resource type="Resource" id="Resource_win6y"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_ogqis")])
+
+[sub_resource type="Resource" id="Resource_vk6t4"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼士兵"
+enemy_count = 8
+
+[sub_resource type="Resource" id="Resource_w00cr"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼傀儡"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_swn67"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_vk6t4"), SubResource("Resource_w00cr")])
+
+[sub_resource type="Resource" id="Resource_hqyqq"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼士兵"
+enemy_count = 14
+
+[sub_resource type="Resource" id="Resource_u8kwf"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼傀儡"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_wc24f"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼法师"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_hbmnn"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_hqyqq"), SubResource("Resource_u8kwf"), SubResource("Resource_wc24f")])
+
+[sub_resource type="Resource" id="Resource_jwscq"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼士兵"
+enemy_count = 8
+
+[sub_resource type="Resource" id="Resource_7eies"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼勇士"
+enemy_count = 8
+
+[sub_resource type="Resource" id="Resource_kgc3j"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼傀儡"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_u38sh"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼法师"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_8rjv3"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_jwscq"), SubResource("Resource_7eies"), SubResource("Resource_kgc3j"), SubResource("Resource_u38sh")])
+
+[sub_resource type="Resource" id="Resource_wbfrt"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼勇士"
+enemy_count = 9
+
+[sub_resource type="Resource" id="Resource_owyws"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼法师"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_hgrug"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_wbfrt"), SubResource("Resource_owyws")])
+
+[sub_resource type="Resource" id="Resource_yy1be"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼士兵"
+enemy_count = 10
+
+[sub_resource type="Resource" id="Resource_0bveb"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼勇士"
+enemy_count = 3
+
+[sub_resource type="Resource" id="Resource_ms3ra"]
+script = ExtResource("37_65uk1")
+enemy_name = "白眼傀儡"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_c8ndv"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_yy1be"), SubResource("Resource_0bveb"), SubResource("Resource_ms3ra")])
+
+[sub_resource type="Resource" id="Resource_y4c3y"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_yy1be"), SubResource("Resource_0bveb"), SubResource("Resource_ms3ra")])
+
+[sub_resource type="Resource" id="Resource_1uyoi"]
+script = ExtResource("33_i43py")
+wave_summon_text_list = Array[ExtResource("36_86sfi")]([SubResource("Resource_yy1be"), SubResource("Resource_0bveb"), SubResource("Resource_ms3ra")])
+
+[node name="Stage17Campaign" instance=ExtResource("1_o645j")]
+script = ExtResource("2_763tb")
+stage_count = 17
+enemy_scene_list = Array[PackedScene]([ExtResource("3_i5skx"), ExtResource("4_s4vl6"), ExtResource("5_vd5bl"), ExtResource("6_c880j"), ExtResource("7_x0fxt")])
+current_money = 1300
+total_waves = 15
+stage_summon_config = SubResource("Resource_74ug6")
+
+[node name="EnemyScenePreloadConfig" parent="." index="0"]
+chapter1_preload = false
+chapter5_preload = true
+chapter5_boss_preload = true
+
+[node name="StageCamera" parent="." index="2"]
+position = Vector2(129, 415)
+
+[node name="CollisionShape2D" parent="StageCamera" index="0"]
+position = Vector2(1100, 600)
+shape = SubResource("RectangleShape2D_xtu1q")
+
+[node name="PreparationMusic" parent="Musics" index="0"]
+stream = ExtResource("2_7yt7r")
+
+[node name="BattleMusic" parent="Musics" index="1"]
+stream = ExtResource("3_llu2j")
+
+[node name="BasedSprite" parent="Background" index="0"]
+texture = ExtResource("4_oy1l6")
+
+[node name="ProtectionPoint" parent="Background/BasedSprite" index="0"]
+position = Vector2(121, 410)
+
+[node name="ProtectionPoint2" type="Sprite2D" parent="Background/BasedSprite" index="1"]
+position = Vector2(118, 749)
+texture = ExtResource("5_8ygof")
+script = ExtResource("6_hthgm")
+
+[node name="Flag" parent="Background" index="1"]
+position = Vector2(126, 366)
+
+[node name="Flag2" type="Sprite2D" parent="Background" index="2"]
+position = Vector2(122, 471)
+texture = ExtResource("7_e857l")
+offset = Vector2(-7, -22)
+region_enabled = true
+region_rect = Rect2(40, 38, 40, 73)
+
+[node name="Flag3" type="Sprite2D" parent="Background" index="3"]
+position = Vector2(114, 704)
+texture = ExtResource("7_e857l")
+offset = Vector2(-7, -22)
+region_enabled = true
+region_rect = Rect2(40, 38, 40, 73)
+
+[node name="Flag4" type="Sprite2D" parent="Background" index="4"]
+position = Vector2(113, 812)
+texture = ExtResource("7_e857l")
+offset = Vector2(-7, -22)
+region_enabled = true
+region_rect = Rect2(40, 38, 40, 73)
+
+[node name="RainLayer" parent="Background" index="5" instance=ExtResource("8_vxkb5")]
+
+[node name="RainLayer" parent="Background/RainLayer" index="0"]
+start_rain_step = 1
+step_color_list = Array[Color]([Color(0, 0, 0, 0), Color(0, 0, 0, 0.275), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 0)])
+wave_step_list = Array[int]([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
+
+[node name="BlackMask" parent="Background/RainLayer/RainLayer" index="0"]
+color = Color(0, 0, 0, 0.27451)
+
+[node name="RainStepLabel" parent="Background/RainLayer/RainLayer" index="17"]
+self_modulate = Color(1, 1, 1, 0)
+
+[node name="CollisionShape2D" parent="Background/RainLayer/HitArea" index="0"]
+shape = null
+
+[node name="LakePop" type="AnimatedSprite2D" parent="Background" index="6"]
+position = Vector2(1330, 985)
+scale = Vector2(0.500414, 0.500414)
+sprite_frames = SubResource("SpriteFrames_6w3hw")
+autoplay = "default"
+frame = 4
+frame_progress = 0.0851228
+
+[node name="LakePop2" type="AnimatedSprite2D" parent="Background" index="7"]
+position = Vector2(1392, 982)
+scale = Vector2(0.500414, 0.500414)
+sprite_frames = SubResource("SpriteFrames_6w3hw")
+autoplay = "default"
+frame = 3
+frame_progress = 0.894163
+
+[node name="Lilies" type="Node2D" parent="Background" index="8"]
+y_sort_enabled = true
+
+[node name="WhiteLily" parent="Background/Lilies" index="0" instance=ExtResource("16_0nob3")]
+position = Vector2(611, 150)
+show_wave_count = 3
+
+[node name="WhiteLily2" parent="Background/Lilies" index="1" instance=ExtResource("16_0nob3")]
+position = Vector2(987, 594)
+show_wave_count = 6
+
+[node name="WhiteLily3" parent="Background/Lilies" index="2" instance=ExtResource("16_0nob3")]
+position = Vector2(226, 1032)
+show_wave_count = 9
+
+[node name="WhiteLily4" parent="Background/Lilies" index="3" instance=ExtResource("16_0nob3")]
+position = Vector2(1998, 1055)
+show_wave_count = 12
+
+[node name="WhiteLily5" parent="Background/Lilies" index="4" instance=ExtResource("16_0nob3")]
+position = Vector2(1367, 361)
+show_wave_count = 15
+
+[node name="RedLily" parent="Background/Lilies" index="5" instance=ExtResource("17_gd0yh")]
+position = Vector2(769, 129)
+show_wave_count = 2
+
+[node name="RedLily2" parent="Background/Lilies" index="6" instance=ExtResource("17_gd0yh")]
+position = Vector2(801, 627)
+show_wave_count = 5
+
+[node name="RedLily3" parent="Background/Lilies" index="7" instance=ExtResource("17_gd0yh")]
+position = Vector2(444, 1152)
+show_wave_count = 8
+
+[node name="RedLily4" parent="Background/Lilies" index="8" instance=ExtResource("17_gd0yh")]
+position = Vector2(1636, 1056)
+show_wave_count = 11
+
+[node name="RedLily5" parent="Background/Lilies" index="9" instance=ExtResource("17_gd0yh")]
+position = Vector2(1503, 492)
+show_wave_count = 14
+
+[node name="StageNavigationRegion" parent="." index="7"]
+navigation_polygon = SubResource("NavigationPolygon_pko58")
+
+[node name="FirerainRandomRegion" parent="FirerainRandomRegions" index="0"]
+navigation_polygon = SubResource("NavigationPolygon_wguqu")
+
+[node name="EnemyPath" type="Path2D" parent="Enemies" index="0"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_qioy8")
+script = ExtResource("18_7y6ob")
+path_summon_config = ExtResource("19_kx82y")
+
+[node name="EnemyPath2" type="Path2D" parent="Enemies" index="1"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_dchox")
+script = ExtResource("18_7y6ob")
+path_summon_config = ExtResource("20_3n2r4")
+
+[node name="EnemyPath3" type="Path2D" parent="Enemies" index="2"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_5xx53")
+script = ExtResource("18_7y6ob")
+path_summon_config = ExtResource("21_e0xa0")
+
+[node name="EnemyPath4" type="Path2D" parent="Enemies" index="3"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_6fk4v")
+script = ExtResource("18_7y6ob")
+path_summon_config = ExtResource("22_sebyo")
+
+[node name="EnemyPath5" type="Path2D" parent="Enemies" index="4"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_ydl0v")
+script = ExtResource("18_7y6ob")
+path_summon_config = ExtResource("23_v8ohy")
+
+[node name="EnemyPath6" type="Path2D" parent="Enemies" index="5"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_pvmru")
+script = ExtResource("18_7y6ob")
+path_summon_config = ExtResource("24_vv847")
+
+[node name="EnemyPath7" type="Path2D" parent="Enemies" index="6"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_brjwa")
+script = ExtResource("18_7y6ob")
+path_summon_config = ExtResource("25_hso6y")
+
+[node name="EnemyPath8" type="Path2D" parent="Enemies" index="7"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_4rn3s")
+script = ExtResource("18_7y6ob")
+path_summon_config = ExtResource("26_fsy6l")
+
+[node name="EnemyPath9" type="Path2D" parent="Enemies" index="8"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_hduem")
+script = ExtResource("18_7y6ob")
+path_summon_config = ExtResource("27_hapog")
+
+[node name="EnemyPath10" type="Path2D" parent="Enemies" index="9"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_yqrwk")
+script = ExtResource("18_7y6ob")
+path_summon_config = ExtResource("28_ablqj")
+
+[node name="EnemyPath11" type="Path2D" parent="Enemies" index="10"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_fes7n")
+script = ExtResource("18_7y6ob")
+path_summon_config = ExtResource("29_vpukb")
+
+[node name="EnemyPath12" type="Path2D" parent="Enemies" index="11"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_iwajl")
+script = ExtResource("18_7y6ob")
+path_summon_config = ExtResource("30_o4kc6")
+
+[node name="DefenceTowerBased" parent="Towers" index="0" instance=ExtResource("18_4v3g0")]
+position = Vector2(941, 433)
+based_skin = 4
+
+[node name="DefenceTowerBased2" parent="Towers" index="1" instance=ExtResource("18_4v3g0")]
+position = Vector2(918, 226)
+based_skin = 4
+
+[node name="DefenceTowerBased3" parent="Towers" index="2" instance=ExtResource("18_4v3g0")]
+position = Vector2(1123, 311)
+based_skin = 4
+
+[node name="DefenceTowerBased4" parent="Towers" index="3" instance=ExtResource("18_4v3g0")]
+position = Vector2(1123, 636)
+based_skin = 4
+
+[node name="DefenceTowerBased5" parent="Towers" index="4" instance=ExtResource("18_4v3g0")]
+position = Vector2(1309, 740)
+based_skin = 4
+
+[node name="DefenceTowerBased6" parent="Towers" index="5" instance=ExtResource("18_4v3g0")]
+position = Vector2(1316, 532)
+based_skin = 4
+
+[node name="DefenceTowerBased7" parent="Towers" index="6" instance=ExtResource("18_4v3g0")]
+position = Vector2(750, 826)
+based_skin = 4
+
+[node name="DefenceTowerBased8" parent="Towers" index="7" instance=ExtResource("18_4v3g0")]
+position = Vector2(905, 962)
+based_skin = 4
+
+[node name="DefenceTowerBased9" parent="Towers" index="8" instance=ExtResource("18_4v3g0")]
+position = Vector2(670, 1004)
+based_skin = 4
+
+[node name="DefenceTowerBased10" parent="Towers" index="9" instance=ExtResource("18_4v3g0")]
+position = Vector2(485, 887)
+based_skin = 4
+
+[node name="DefenceTowerBased11" parent="Towers" index="10" instance=ExtResource("18_4v3g0")]
+position = Vector2(349, 679)
+based_skin = 4
+
+[node name="DefenceTowerBased12" parent="Towers" index="11" instance=ExtResource("18_4v3g0")]
+position = Vector2(277, 506)
+based_skin = 4
+
+[node name="DefenceTowerBased13" parent="Towers" index="12" instance=ExtResource("18_4v3g0")]
+position = Vector2(573, 338)
+based_skin = 4
+
+[node name="DefenceTowerBased14" parent="Towers" index="13" instance=ExtResource("18_4v3g0")]
+position = Vector2(643, 502)
+based_skin = 4
+
+[node name="DefenceTowerBased15" parent="Towers" index="14" instance=ExtResource("18_4v3g0")]
+position = Vector2(1607, 612)
+based_skin = 4
+
+[node name="DefenceTowerBased16" parent="Towers" index="15" instance=ExtResource("18_4v3g0")]
+position = Vector2(1698, 776)
+based_skin = 4
+
+[node name="CollisionShape2D" parent="ClickArea" index="0"]
+position = Vector2(1107, 606.5)
+shape = SubResource("RectangleShape2D_4eu2v")
+
+[node name="WaveButton" parent="WaveButtons" index="0" node_paths=PackedStringArray("linked_wave_panel") instance=ExtResource("32_2fws0")]
+offset_left = 1468.0
+offset_top = 48.0
+offset_right = 1468.0
+offset_bottom = 48.0
+linked_wave_panel = NodePath("../WavePanel")
+summon_text_list = Array[ExtResource("33_i43py")]([SubResource("Resource_kydyd"), SubResource("Resource_h8i7o"), SubResource("Resource_wfh1e"), null, null, null, SubResource("Resource_5t351"), null, SubResource("Resource_recfp"), SubResource("Resource_po6no"), SubResource("Resource_uhmoc"), null, SubResource("Resource_vntwe"), SubResource("Resource_5ibu2"), null])
+
+[node name="Direction" type="Sprite2D" parent="WaveButtons/WaveButton" index="5"]
+show_behind_parent = true
+position = Vector2(0.000152469, 1.25)
+rotation = 5.31332
+scale = Vector2(0.942457, 0.942457)
+texture = ExtResource("34_l7kor")
+
+[node name="WaveButton2" parent="WaveButtons" index="1" node_paths=PackedStringArray("linked_wave_panel") instance=ExtResource("32_2fws0")]
+offset_left = 844.0
+offset_top = 1052.0
+offset_right = 844.0
+offset_bottom = 1052.0
+linked_wave_panel = NodePath("../WavePanel2")
+summon_text_list = Array[ExtResource("33_i43py")]([null, null, null, SubResource("Resource_g1v44"), SubResource("Resource_6blc7"), SubResource("Resource_lpsvx"), SubResource("Resource_v3k4w"), null, SubResource("Resource_b3s6y"), SubResource("Resource_k7od2"), null, SubResource("Resource_r5s2k"), SubResource("Resource_tq4ej"), SubResource("Resource_lpdxg"), null])
+
+[node name="Direction" type="Sprite2D" parent="WaveButtons/WaveButton2" index="5"]
+show_behind_parent = true
+position = Vector2(0.000152469, 1.25)
+rotation = 7.34641
+scale = Vector2(0.942457, 0.942457)
+texture = ExtResource("34_l7kor")
+
+[node name="WaveButton3" parent="WaveButtons" index="2" node_paths=PackedStringArray("linked_wave_panel") instance=ExtResource("32_2fws0")]
+offset_left = 2134.0
+offset_top = 659.0
+offset_right = 2134.0
+offset_bottom = 659.0
+linked_wave_panel = NodePath("../WavePanel3")
+summon_text_list = Array[ExtResource("33_i43py")]([null, SubResource("Resource_kfy5u"), null, null, SubResource("Resource_qqtxt"), null, null, SubResource("Resource_oeesy"), SubResource("Resource_dopig"), null, SubResource("Resource_c2xcy"), SubResource("Resource_db8nn"), SubResource("Resource_i6t6h"), SubResource("Resource_pnevr"), SubResource("Resource_hofhg")])
+
+[node name="Direction" type="Sprite2D" parent="WaveButtons/WaveButton3" index="5"]
+show_behind_parent = true
+position = Vector2(0.000152469, 1.25)
+rotation = 6.44134
+scale = Vector2(0.942457, 0.942457)
+texture = ExtResource("34_l7kor")
+
+[node name="WaveButton4" parent="WaveButtons" index="3" node_paths=PackedStringArray("linked_wave_panel") instance=ExtResource("32_2fws0")]
+offset_left = 2129.0
+offset_top = 713.0
+offset_right = 2129.0
+offset_bottom = 713.0
+linked_wave_panel = NodePath("../WavePanel4")
+summon_text_list = Array[ExtResource("33_i43py")]([null, null, SubResource("Resource_win6y"), null, null, SubResource("Resource_swn67"), null, SubResource("Resource_hbmnn"), null, SubResource("Resource_8rjv3"), SubResource("Resource_hgrug"), SubResource("Resource_c8ndv"), SubResource("Resource_y4c3y"), SubResource("Resource_1uyoi"), null])
+
+[node name="Direction" type="Sprite2D" parent="WaveButtons/WaveButton4" index="5"]
+show_behind_parent = true
+position = Vector2(0.000152469, 1.25)
+rotation = 6.44182
+scale = Vector2(0.942457, 0.942457)
+texture = ExtResource("34_l7kor")
+
+[node name="WavePanel" parent="WaveButtons" index="4" instance=ExtResource("35_qjhl4")]
+layout_mode = 0
+offset_left = 1112.0
+offset_top = 19.0
+offset_right = 1716.0
+offset_bottom = 313.0
+
+[node name="WavePanel2" parent="WaveButtons" index="5" instance=ExtResource("35_qjhl4")]
+layout_mode = 0
+offset_left = 886.0
+offset_top = 924.0
+offset_right = 1490.0
+offset_bottom = 1218.0
+
+[node name="WavePanel3" parent="WaveButtons" index="6" instance=ExtResource("35_qjhl4")]
+layout_mode = 0
+offset_left = 1786.0
+offset_top = 552.0
+offset_right = 2390.0
+offset_bottom = 846.0
+
+[node name="WavePanel4" parent="WaveButtons" index="7" instance=ExtResource("35_qjhl4")]
+layout_mode = 0
+offset_left = 1786.0
+offset_top = 645.0
+offset_right = 2390.0
+offset_bottom = 939.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PathArea" index="0"]
+polygon = PackedVector2Array(-5, 358, 95, 377, 231, 386, 456, 391, 630, 391, 759, 365, 887, 321, 967, 267, 1061, 174, 1144, 104, 1205, 68, 1291, 54, 1394, 35, 1462, -5, 1594, -7, 1565, 24, 1528, 64, 1453, 100, 1377, 120, 1254, 138, 1181, 172, 1074, 276, 1051, 303, 1075, 364, 1134, 436, 1230, 548, 1318, 611, 1418, 645, 1515, 654, 1629, 656, 1750, 645, 1860, 638, 1973, 628, 2077, 643, 2208, 662, 2203, 750, 2098, 718, 1955, 707, 1816, 724, 1687, 736, 1532, 731, 1416, 716, 1309, 688, 1280, 671, 1253, 693, 1224, 741, 1167, 795, 1087, 841, 976, 883, 869, 927, 817, 948, 855, 999, 903, 1073, 933, 1147, 945, 1207, 847, 1208, 842, 1153, 820, 1092, 763, 1012, 695, 949, 621, 900, 528, 845, 386, 812, 219, 802, 50, 804, -9, 802, -8, 723, 76, 721, 191, 719, 272, 719, 403, 730, 499, 757, 603, 798, 714, 870, 753, 910, 806, 870, 878, 837, 989, 801, 1068, 759, 1132, 719, 1176, 662, 1206, 619, 1173, 593, 1092, 523, 1022, 432, 980, 355, 961, 354, 930, 385, 880, 410, 808, 434, 686, 457, 581, 465, 447, 469, 281, 468, 161, 461, 68, 450, -1, 442)
+
+[node name="HeroSummonMarker" parent="." index="20"]
+position = Vector2(122, 415)
+
+[node name="PathConfigSave" type="Node2D" parent="." index="21"]
+script = ExtResource("20_5e2s5")
+sample_config = ExtResource("21_g25j4")
+path_front = "res://Library/SummonConfigs/Stage17/Campaign"
+loop_count = 12
+
+[node name="PathConfigLoadProcess" type="Node" parent="." index="22" node_paths=PackedStringArray("enemy_parent_node")]
+script = ExtResource("22_c3k5h")
+enemy_parent_node = NodePath("../Enemies")
+config_path_front = "res://Library/SummonConfigs/Stage17/Campaign"
+loading_count = 12
+
+[node name="SummonCountProcess" type="Node2D" parent="." index="23" node_paths=PackedStringArray("enemy_parnt_node")]
+script = ExtResource("42_rfcjs")
+enemy_parnt_node = NodePath("../Enemies")
+max_wave_count = 15
+process_summon_blocks = Array[ExtResource("43_1yghm")]([ExtResource("19_kx82y"), ExtResource("20_3n2r4"), ExtResource("21_e0xa0"), ExtResource("22_sebyo"), ExtResource("23_v8ohy"), ExtResource("24_vv847"), ExtResource("25_hso6y"), ExtResource("26_fsy6l"), ExtResource("27_hapog"), ExtResource("28_ablqj"), ExtResource("29_vpukb"), ExtResource("30_o4kc6")])
+
+[editable path="Background/RainLayer"]

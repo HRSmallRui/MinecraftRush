@@ -1,0 +1,564 @@
+[gd_scene load_steps=126 format=3 uid="uid://cwfhgx3m8ssx7"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_4jpan"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_6.gd" id="2_4mfct"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="2_om6vr"]
+[ext_resource type="Texture2D" uid="uid://bxiqx8rk365su" path="res://Assets/Images/UI/InformationBar/杀人狂魔.png" id="3_vuuxj"]
+[ext_resource type="Texture2D" uid="uid://c2sgfp104r4c4" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_00.png" id="4_msy2n"]
+[ext_resource type="Texture2D" uid="uid://dciub5mxjo7a2" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_01.png" id="5_agqwn"]
+[ext_resource type="Texture2D" uid="uid://chqauh1xr6vqe" path="res://Assets/Animations/Enemies/6杀人狂魔/move_normal_00.png" id="5_jhipr"]
+[ext_resource type="Texture2D" uid="uid://clu4fljn462fv" path="res://Assets/Animations/Enemies/6杀人狂魔/move_normal_01.png" id="6_b8r34"]
+[ext_resource type="Texture2D" uid="uid://brrb1ssyxyq0j" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_02.png" id="6_enmw4"]
+[ext_resource type="Texture2D" uid="uid://cdk3arrbh8x83" path="res://Assets/Animations/Enemies/6杀人狂魔/move_normal_02.png" id="7_c4mbj"]
+[ext_resource type="Texture2D" uid="uid://o0d6t0gwbfr5" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_03.png" id="7_nvveb"]
+[ext_resource type="Texture2D" uid="uid://bhlnoeo05ureg" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_04.png" id="8_bgb6e"]
+[ext_resource type="Texture2D" uid="uid://bm1atdispia6d" path="res://Assets/Animations/Enemies/6杀人狂魔/move_normal_03.png" id="8_krj20"]
+[ext_resource type="Texture2D" uid="uid://df7drs4cf3otp" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_05.png" id="9_3ktsy"]
+[ext_resource type="Texture2D" uid="uid://cdqkwbwjy2f1m" path="res://Assets/Animations/Enemies/6杀人狂魔/move_normal_04.png" id="9_76j47"]
+[ext_resource type="Texture2D" uid="uid://7s0thjajg27o" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_06.png" id="10_5k67n"]
+[ext_resource type="Texture2D" uid="uid://dkifjj7bd07ql" path="res://Assets/Animations/Enemies/6杀人狂魔/move_normal_05.png" id="10_r7nqy"]
+[ext_resource type="Texture2D" uid="uid://cpkbs4msi2hrs" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_07.png" id="11_35lsp"]
+[ext_resource type="Texture2D" uid="uid://dd836otibjs0r" path="res://Assets/Animations/Enemies/6杀人狂魔/move_normal_06.png" id="11_lvmjy"]
+[ext_resource type="Texture2D" uid="uid://byybmcynds3vj" path="res://Assets/Animations/Enemies/6杀人狂魔/move_normal_07.png" id="12_r0evj"]
+[ext_resource type="Texture2D" uid="uid://dthp1wki37juw" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_08.png" id="12_sxeut"]
+[ext_resource type="Texture2D" uid="uid://dutgkhssx720h" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_09.png" id="13_5xkls"]
+[ext_resource type="Texture2D" uid="uid://830l3lemfy78" path="res://Assets/Animations/Enemies/6杀人狂魔/move_normal_08.png" id="13_kignr"]
+[ext_resource type="Texture2D" uid="uid://dmhfdoxraid5f" path="res://Assets/Animations/Enemies/6杀人狂魔/move_normal_09.png" id="14_4moks"]
+[ext_resource type="Texture2D" uid="uid://b5rk1tva0tw7d" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_10.png" id="14_m4rtp"]
+[ext_resource type="Texture2D" uid="uid://b7millreflfco" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_11.png" id="15_g16de"]
+[ext_resource type="Texture2D" uid="uid://cactlf6b052st" path="res://Assets/Animations/Enemies/6杀人狂魔/move_normal_10.png" id="15_ukh6m"]
+[ext_resource type="Texture2D" uid="uid://cv5skchwbebb6" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_12.png" id="16_8onja"]
+[ext_resource type="Texture2D" uid="uid://cfmg5abdpqht2" path="res://Assets/Animations/Enemies/6杀人狂魔/move_normal_11.png" id="16_it4tw"]
+[ext_resource type="Texture2D" uid="uid://dprxkwq7hod4y" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_13.png" id="17_678l5"]
+[ext_resource type="Texture2D" uid="uid://bmws6pw2uv7ya" path="res://Assets/Animations/Enemies/6杀人狂魔/move_normal_12.png" id="17_ehgy2"]
+[ext_resource type="Texture2D" uid="uid://deks1gy868mcx" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_14.png" id="18_ljwhw"]
+[ext_resource type="Texture2D" uid="uid://ckhtwj46bg6kt" path="res://Assets/Animations/Enemies/6杀人狂魔/move_normal_13.png" id="18_q8and"]
+[ext_resource type="Texture2D" uid="uid://l0qcrjfwmwwd" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_15.png" id="19_h6rke"]
+[ext_resource type="Texture2D" uid="uid://chweu6n7quabq" path="res://Assets/Animations/Enemies/6杀人狂魔/move_normal_14.png" id="19_ungjs"]
+[ext_resource type="Texture2D" uid="uid://dgy4qh3ih8k5e" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_16.png" id="20_fp8us"]
+[ext_resource type="Texture2D" uid="uid://dyjpubrlfr15u" path="res://Assets/Animations/Enemies/6杀人狂魔/move_normal_15.png" id="20_quaob"]
+[ext_resource type="Texture2D" uid="uid://cr0hkwm17homh" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_17.png" id="21_jxnu1"]
+[ext_resource type="Texture2D" uid="uid://dixkljwrk0jrt" path="res://Assets/Animations/Enemies/6杀人狂魔/move_normal_16.png" id="21_sgsyf"]
+[ext_resource type="Texture2D" uid="uid://bulp1xdebe1kw" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_18.png" id="22_35qxd"]
+[ext_resource type="Texture2D" uid="uid://bfpt1oshkn2ni" path="res://Assets/Animations/Enemies/6杀人狂魔/move_normal_17.png" id="22_m0w4y"]
+[ext_resource type="Texture2D" uid="uid://b20w1wjh2t74u" path="res://Assets/Animations/Enemies/6杀人狂魔/move_normal_18.png" id="23_ao5y0"]
+[ext_resource type="Texture2D" uid="uid://bcolwj506twnn" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_19.png" id="23_ymjl2"]
+[ext_resource type="Texture2D" uid="uid://qt0ejr5h1y0k" path="res://Assets/Animations/Enemies/6杀人狂魔/move_normal_19.png" id="24_4gaap"]
+[ext_resource type="Texture2D" uid="uid://dknrfan38pxjj" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_20.png" id="24_jy5bq"]
+[ext_resource type="Texture2D" uid="uid://bfgekeetafro" path="res://Assets/Animations/Enemies/6杀人狂魔/move_normal_20.png" id="25_c0osj"]
+[ext_resource type="Texture2D" uid="uid://ccoewv7qjjqh5" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_21.png" id="25_jidds"]
+[ext_resource type="Texture2D" uid="uid://cg1s36bapvq47" path="res://Assets/Animations/Enemies/6杀人狂魔/move_normal_21.png" id="26_fa6bu"]
+[ext_resource type="Texture2D" uid="uid://c5u4dp80skbqw" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_22.png" id="26_vgkpn"]
+[ext_resource type="Texture2D" uid="uid://diuyjbi2rfx0c" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_23.png" id="27_go35r"]
+[ext_resource type="Texture2D" uid="uid://b5u5tdcdwduri" path="res://Assets/Animations/Enemies/6杀人狂魔/move_normal_22.png" id="27_v545i"]
+[ext_resource type="Texture2D" uid="uid://b46qwwoo53ck4" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_24.png" id="28_6wj62"]
+[ext_resource type="Texture2D" uid="uid://fci84euid2qh" path="res://Assets/Animations/Enemies/6杀人狂魔/move_normal_23.png" id="28_dgs01"]
+[ext_resource type="Texture2D" uid="uid://dh2gfy5olrjbt" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_25.png" id="29_b5cxv"]
+[ext_resource type="Texture2D" uid="uid://dwlpj8r8lyowx" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_26.png" id="30_5lsmg"]
+[ext_resource type="Texture2D" uid="uid://c2iomkuko3yfr" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_27.png" id="31_0eudw"]
+[ext_resource type="Texture2D" uid="uid://bbw5iq3hsvyhx" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_28.png" id="32_17kxg"]
+[ext_resource type="Texture2D" uid="uid://dc7t3j0w2lujg" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_29.png" id="33_qa58d"]
+[ext_resource type="Texture2D" uid="uid://vbr2w8h0vtfw" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_30.png" id="34_xvfgb"]
+[ext_resource type="Texture2D" uid="uid://dv45ikurutsxr" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_31.png" id="35_mduto"]
+[ext_resource type="Texture2D" uid="uid://bkl67lrq8kmph" path="res://Assets/Animations/Enemies/6杀人狂魔/attack_32.png" id="36_v8hhd"]
+[ext_resource type="Texture2D" uid="uid://c4s7wxudwor2e" path="res://Assets/Animations/Enemies/6杀人狂魔/die_00.png" id="37_wramq"]
+[ext_resource type="Texture2D" uid="uid://c26feox7qwk8f" path="res://Assets/Animations/Enemies/6杀人狂魔/die_01.png" id="38_54otn"]
+[ext_resource type="Texture2D" uid="uid://dx8j0w6f2rwai" path="res://Assets/Animations/Enemies/6杀人狂魔/die_02.png" id="39_vrncn"]
+[ext_resource type="Texture2D" uid="uid://rqkcf63c5xfj" path="res://Assets/Animations/Enemies/6杀人狂魔/die_03.png" id="40_olwfx"]
+[ext_resource type="Texture2D" uid="uid://boib3s4l7acoo" path="res://Assets/Animations/Enemies/6杀人狂魔/die_04.png" id="41_unmt1"]
+[ext_resource type="Texture2D" uid="uid://cvbpgxgl7nmdp" path="res://Assets/Animations/Enemies/6杀人狂魔/die_05.png" id="42_c7daj"]
+[ext_resource type="Texture2D" uid="uid://b46db0gfo8jw6" path="res://Assets/Animations/Enemies/6杀人狂魔/die_06.png" id="43_vf8p8"]
+[ext_resource type="Texture2D" uid="uid://3otya505lnw" path="res://Assets/Animations/Enemies/6杀人狂魔/die_07.png" id="44_vog6v"]
+[ext_resource type="Texture2D" uid="uid://b1s7jbu4n8giw" path="res://Assets/Animations/Enemies/6杀人狂魔/die_08.png" id="45_8vwsy"]
+[ext_resource type="Texture2D" uid="uid://djqvd0xf4e3b1" path="res://Assets/Animations/Enemies/6杀人狂魔/die_09.png" id="46_5jicl"]
+[ext_resource type="Texture2D" uid="uid://c211vwdthiksa" path="res://Assets/Animations/Enemies/6杀人狂魔/die_10.png" id="47_eagv3"]
+[ext_resource type="Texture2D" uid="uid://ckui5dlnty43y" path="res://Assets/Animations/Enemies/6杀人狂魔/die_11.png" id="48_slgco"]
+[ext_resource type="Texture2D" uid="uid://bgsl7t0xt1mb2" path="res://Assets/Animations/Enemies/6杀人狂魔/die_12.png" id="49_c1xuu"]
+[ext_resource type="Texture2D" uid="uid://cfglh3jx33xxe" path="res://Assets/Animations/Enemies/6杀人狂魔/move_back_00.png" id="51_3la33"]
+[ext_resource type="Texture2D" uid="uid://cbt4b1nys2pri" path="res://Assets/Animations/Enemies/6杀人狂魔/move_back_01.png" id="52_iht3f"]
+[ext_resource type="Texture2D" uid="uid://dq35uuy8sbanb" path="res://Assets/Animations/Enemies/6杀人狂魔/move_back_02.png" id="53_vyxl1"]
+[ext_resource type="Texture2D" uid="uid://bh7q4vsdpnv3l" path="res://Assets/Animations/Enemies/6杀人狂魔/move_back_03.png" id="54_5btri"]
+[ext_resource type="Texture2D" uid="uid://c04vpfoj4jibv" path="res://Assets/Animations/Enemies/6杀人狂魔/move_back_04.png" id="55_5qsug"]
+[ext_resource type="Texture2D" uid="uid://c2hnc4adx6ow3" path="res://Assets/Animations/Enemies/6杀人狂魔/move_back_05.png" id="56_ymuap"]
+[ext_resource type="Texture2D" uid="uid://duys00c5hhuck" path="res://Assets/Animations/Enemies/6杀人狂魔/move_back_06.png" id="57_sjf6k"]
+[ext_resource type="Texture2D" uid="uid://ddycd63c7cnok" path="res://Assets/Animations/Enemies/6杀人狂魔/move_back_07.png" id="58_fx74b"]
+[ext_resource type="Texture2D" uid="uid://cvckoxh31grhq" path="res://Assets/Animations/Enemies/6杀人狂魔/move_back_08.png" id="59_ljre0"]
+[ext_resource type="Texture2D" uid="uid://q6vg617ixiq" path="res://Assets/Animations/Enemies/6杀人狂魔/move_back_09.png" id="60_5lwfe"]
+[ext_resource type="Texture2D" uid="uid://bmcmi0n8harcu" path="res://Assets/Animations/Enemies/6杀人狂魔/move_back_10.png" id="61_4y45v"]
+[ext_resource type="Texture2D" uid="uid://slsx63tps7wd" path="res://Assets/Animations/Enemies/6杀人狂魔/move_back_11.png" id="62_6ox2j"]
+[ext_resource type="Texture2D" uid="uid://phts2ntiokyf" path="res://Assets/Animations/Enemies/6杀人狂魔/move_back_12.png" id="63_6scyu"]
+[ext_resource type="Texture2D" uid="uid://b0i6qblh7ae0i" path="res://Assets/Animations/Enemies/6杀人狂魔/move_back_13.png" id="64_sabdr"]
+[ext_resource type="Texture2D" uid="uid://dqgxvnxt2r0vk" path="res://Assets/Animations/Enemies/6杀人狂魔/move_back_14.png" id="65_y4b0u"]
+[ext_resource type="Texture2D" uid="uid://bgabs17mfvlwl" path="res://Assets/Animations/Enemies/6杀人狂魔/move_back_15.png" id="66_c875w"]
+[ext_resource type="Texture2D" uid="uid://d87lisbed2u1" path="res://Assets/Animations/Enemies/6杀人狂魔/move_back_16.png" id="67_3uo4v"]
+[ext_resource type="Texture2D" uid="uid://bqgwtufv3j5p2" path="res://Assets/Animations/Enemies/6杀人狂魔/move_back_17.png" id="68_be58v"]
+[ext_resource type="Texture2D" uid="uid://basbsx2621pn4" path="res://Assets/Animations/Enemies/6杀人狂魔/move_back_18.png" id="69_7pja0"]
+[ext_resource type="Texture2D" uid="uid://68tu84hybkwd" path="res://Assets/Animations/Enemies/6杀人狂魔/move_back_19.png" id="70_8tcqr"]
+[ext_resource type="Texture2D" uid="uid://m31b6jlyy34a" path="res://Assets/Animations/Enemies/6杀人狂魔/move_back_20.png" id="71_y7pdk"]
+[ext_resource type="Texture2D" uid="uid://bqwrywp5r46n0" path="res://Assets/Animations/Enemies/6杀人狂魔/move_back_21.png" id="72_fordx"]
+[ext_resource type="Texture2D" uid="uid://bkkcy8ambnqxm" path="res://Assets/Animations/Enemies/6杀人狂魔/move_back_22.png" id="73_xlivj"]
+[ext_resource type="Texture2D" uid="uid://dlhk8fu3amxkq" path="res://Assets/Animations/Enemies/6杀人狂魔/move_back_23.png" id="74_54nrq"]
+[ext_resource type="Texture2D" uid="uid://b04wqxphnsjqc" path="res://Assets/Animations/Enemies/6杀人狂魔/move_front_00.png" id="75_nel67"]
+[ext_resource type="Texture2D" uid="uid://cescfllr1e5i7" path="res://Assets/Animations/Enemies/6杀人狂魔/move_front_01.png" id="76_b2kot"]
+[ext_resource type="Texture2D" uid="uid://byuvhix4h6d5a" path="res://Assets/Animations/Enemies/6杀人狂魔/move_front_02.png" id="77_iwk43"]
+[ext_resource type="Texture2D" uid="uid://b0p4jp4jjkib5" path="res://Assets/Animations/Enemies/6杀人狂魔/move_front_03.png" id="78_m40mf"]
+[ext_resource type="Texture2D" uid="uid://cnk3xggavup1q" path="res://Assets/Animations/Enemies/6杀人狂魔/move_front_04.png" id="79_d3iq4"]
+[ext_resource type="Texture2D" uid="uid://co2kymyv2ovpy" path="res://Assets/Animations/Enemies/6杀人狂魔/move_front_05.png" id="80_r1qoa"]
+[ext_resource type="Texture2D" uid="uid://bu1ekvjjbwb2b" path="res://Assets/Animations/Enemies/6杀人狂魔/move_front_06.png" id="81_k0w1t"]
+[ext_resource type="Texture2D" uid="uid://dqaplhllv8174" path="res://Assets/Animations/Enemies/6杀人狂魔/move_front_07.png" id="82_k6uf7"]
+[ext_resource type="Texture2D" uid="uid://b6hgdosnt43l7" path="res://Assets/Animations/Enemies/6杀人狂魔/move_front_08.png" id="83_uxyp8"]
+[ext_resource type="Texture2D" uid="uid://h0kh01onchss" path="res://Assets/Animations/Enemies/6杀人狂魔/move_front_09.png" id="84_aorvv"]
+[ext_resource type="Texture2D" uid="uid://65ad8qhpsmj5" path="res://Assets/Animations/Enemies/6杀人狂魔/move_front_10.png" id="85_rfve0"]
+[ext_resource type="Texture2D" uid="uid://dn6oxjnvp4tre" path="res://Assets/Animations/Enemies/6杀人狂魔/move_front_11.png" id="86_14m6w"]
+[ext_resource type="Texture2D" uid="uid://d4hqir5r8si7q" path="res://Assets/Animations/Enemies/6杀人狂魔/move_front_12.png" id="87_bf2er"]
+[ext_resource type="Texture2D" uid="uid://x8lmwriwrplp" path="res://Assets/Animations/Enemies/6杀人狂魔/move_front_13.png" id="88_hii2v"]
+[ext_resource type="Texture2D" uid="uid://dc1n1rbs0jvoc" path="res://Assets/Animations/Enemies/6杀人狂魔/move_front_14.png" id="89_7phg3"]
+[ext_resource type="Texture2D" uid="uid://bvqx4gcv1hxhs" path="res://Assets/Animations/Enemies/6杀人狂魔/move_front_15.png" id="90_hrssa"]
+[ext_resource type="Texture2D" uid="uid://fx8tyl04cdqg" path="res://Assets/Animations/Enemies/6杀人狂魔/move_front_16.png" id="91_t2dlw"]
+[ext_resource type="Texture2D" uid="uid://dhit2dlx001gv" path="res://Assets/Animations/Enemies/6杀人狂魔/move_front_17.png" id="92_baawt"]
+[ext_resource type="Texture2D" uid="uid://xjqkvim44jvg" path="res://Assets/Animations/Enemies/6杀人狂魔/move_front_18.png" id="93_j5d2r"]
+[ext_resource type="Texture2D" uid="uid://pl2fntb27ynx" path="res://Assets/Animations/Enemies/6杀人狂魔/move_front_19.png" id="94_84myw"]
+[ext_resource type="Texture2D" uid="uid://cb2ercqhk34ek" path="res://Assets/Animations/Enemies/6杀人狂魔/move_front_20.png" id="95_ffisw"]
+[ext_resource type="Texture2D" uid="uid://c80gtjd8xqv70" path="res://Assets/Animations/Enemies/6杀人狂魔/move_front_21.png" id="96_h5dk5"]
+[ext_resource type="Texture2D" uid="uid://bks18a6e1iwnj" path="res://Assets/Animations/Enemies/6杀人狂魔/move_front_22.png" id="97_3ijjc"]
+[ext_resource type="Texture2D" uid="uid://rjgc4v5eripn" path="res://Assets/Animations/Enemies/6杀人狂魔/move_front_23.png" id="98_use5k"]
+
+[sub_resource type="Resource" id="Resource_07yso"]
+script = ExtResource("2_om6vr")
+health = 60
+dodge_rate = 0.5
+near_damage_low = 32
+near_damage_high = 64
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.3
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 1.8
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qyc4n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_msy2n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_agqwn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_enmw4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nvveb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bgb6e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3ktsy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5k67n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_35lsp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_sxeut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_5xkls")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_m4rtp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_g16de")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_8onja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_678l5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ljwhw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_h6rke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_fp8us")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_jxnu1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_35qxd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ymjl2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_jy5bq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_jidds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_vgkpn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_go35r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_6wj62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_b5cxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_5lsmg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_0eudw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_17kxg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_qa58d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_xvfgb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_mduto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_v8hhd")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 36.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_wramq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_54otn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_vrncn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_olwfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_unmt1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_c7daj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_vf8p8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_vog6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_8vwsy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_5jicl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_eagv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_slgco")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_c1xuu")
+}],
+"loop": false,
+"name": &"die",
+"speed": 45.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_msy2n")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("51_3la33")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_iht3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_vyxl1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_5btri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_5qsug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_ymuap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_sjf6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_fx74b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_ljre0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_5lwfe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_4y45v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_6ox2j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_6scyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_sabdr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_y4b0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_c875w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_3uo4v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_be58v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_7pja0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_8tcqr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_y7pdk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_fordx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_xlivj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_54nrq")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 48.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("75_nel67")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_b2kot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_iwk43")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_m40mf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_d3iq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_r1qoa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_k0w1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_k6uf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_uxyp8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_aorvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_rfve0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_14m6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_bf2er")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_hii2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_7phg3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_hrssa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_t2dlw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_baawt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_j5d2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_84myw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_ffisw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_h5dk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_3ijjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_use5k")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 48.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_jhipr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_b8r34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_c4mbj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_krj20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_76j47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_r7nqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_lvmjy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_r0evj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_kignr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4moks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ukh6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_it4tw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ehgy2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_q8and")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ungjs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_quaob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_sgsyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_m0w4y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ao5y0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_4gaap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_c0osj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_fa6bu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_v545i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_dgs01")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 48.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4548s"]
+size = Vector2(100, 175)
+
+[node name="Enemy6" instance=ExtResource("1_4jpan")]
+script = ExtResource("2_4mfct")
+enemy_name = "尸国刺杀者"
+enemy_id = 6
+enemy_texture = ExtResource("3_vuuxj")
+start_data = SubResource("Resource_07yso")
+bounty = 6
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(9.53674e-07, -80)
+sprite_frames = SubResource("SpriteFrames_qyc4n")
+animation = &"move_front"
+autoplay = "idle"
+frame_progress = 0.470191
+flip_h = true
+
+[node name="BodyCollision" parent="UnitBody" index="1"]
+shape = SubResource("RectangleShape2D_4548s")
+
+[node name="HurtBox" parent="UnitBody" index="2"]
+scale = Vector2(6.563, 6.563)
+
+[node name="EnemyButton" parent="UnitBody" index="4"]
+offset_left = -58.0
+offset_right = 60.0

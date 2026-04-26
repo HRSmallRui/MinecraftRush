@@ -1,0 +1,79 @@
+[gd_scene load_steps=16 format=3 uid="uid://bhswvwjnoxctb"]
+
+[ext_resource type="PackedScene" uid="uid://doqtusnl6v3jq" path="res://Scenes/StageComponents/story_layer.tscn" id="1_b2e6o"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Stages/ending_layer.gd" id="2_cynjy"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Stages/dialog_block.gd" id="3_6pi2k"]
+[ext_resource type="VideoStream" path="res://Assets/Videos/ENDING0001-6686.ogv" id="3_640pg"]
+[ext_resource type="PackedScene" uid="uid://frj2n4d7ttf" path="res://Scenes/Stages/Stage20/later_ending_layer.tscn" id="3_b1ey6"]
+[ext_resource type="AudioStream" uid="uid://dv6p6ilpnbywh" path="res://Assets/Sounds/Music/Story/ENDING_BACK.mp3" id="4_4ntbg"]
+[ext_resource type="AudioStream" uid="uid://cyanrw3k3iblb" path="res://Assets/Sounds/Music/Story/Across Battle Result.mp3" id="6_wutxf"]
+
+[sub_resource type="Resource" id="Resource_k5ltw"]
+script = ExtResource("3_6pi2k")
+dialog_text = "我们做到了！将军！我们战胜了厌皇！"
+text_color = Color(1, 1, 1, 1)
+text_exist_time = 3.5
+
+[sub_resource type="Resource" id="Resource_82o1u"]
+script = ExtResource("3_6pi2k")
+dialog_text = "我们胜利了！"
+text_color = Color(1, 1, 1, 1)
+text_exist_time = 6.0
+
+[sub_resource type="Resource" id="Resource_171pk"]
+script = ExtResource("3_6pi2k")
+dialog_text = ""
+text_color = Color(1, 1, 1, 1)
+text_exist_time = 8.0
+
+[sub_resource type="Resource" id="Resource_d2r3l"]
+script = ExtResource("3_6pi2k")
+dialog_text = "这大喜之日，朕要设宴三日！"
+text_color = Color(1, 1, 1, 1)
+text_exist_time = 9.0
+
+[sub_resource type="Resource" id="Resource_tvitv"]
+script = ExtResource("3_6pi2k")
+dialog_text = "将军，朕正式封你为“人国最伟大的守护者——伟大将军”！"
+text_color = Color(1, 1, 1, 1)
+text_exist_time = 12.0
+
+[sub_resource type="Resource" id="Resource_2gk56"]
+script = ExtResource("3_6pi2k")
+dialog_text = "万岁万岁万万岁！"
+text_color = Color(1, 1, 1, 1)
+text_exist_time = 18.0
+
+[sub_resource type="Resource" id="Resource_ie245"]
+script = ExtResource("3_6pi2k")
+dialog_text = "谢主隆恩……"
+text_color = Color(0, 1, 1, 1)
+text_exist_time = 21.0
+
+[sub_resource type="Resource" id="Resource_ysjqu"]
+script = ExtResource("3_6pi2k")
+dialog_text = ""
+text_color = Color(1, 1, 1, 1)
+text_exist_time = 23.0
+
+[node name="EndingLayer" instance=ExtResource("1_b2e6o")]
+process_mode = 3
+layer = 11
+script = ExtResource("2_cynjy")
+ending_layer_scene = ExtResource("3_b1ey6")
+ending_time = 2000.0
+dialog_list = Array[ExtResource("3_6pi2k")]([SubResource("Resource_k5ltw"), SubResource("Resource_82o1u"), SubResource("Resource_171pk"), SubResource("Resource_d2r3l"), SubResource("Resource_tvitv"), SubResource("Resource_2gk56"), SubResource("Resource_ie245"), SubResource("Resource_ysjqu")])
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." index="1"]
+offset_right = 1920.0
+offset_bottom = 1088.0
+stream = ExtResource("3_640pg")
+
+[node name="BGM" type="AudioStreamPlayer" parent="." index="5"]
+stream = ExtResource("4_4ntbg")
+volume_db = 4.0
+bus = &"Music"
+
+[node name="FirstMusic" type="AudioStreamPlayer" parent="." index="6"]
+stream = ExtResource("6_wutxf")
+bus = &"Music"

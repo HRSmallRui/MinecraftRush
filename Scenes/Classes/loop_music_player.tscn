@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://86c75yb50mgo"]
+
+[ext_resource type="Script" path="res://Scripts/Classes/loop_music_player.gd" id="1_r6yrt"]
+
+[node name="LoopMusicPlayer" type="Node"]
+script = ExtResource("1_r6yrt")
+
+[node name="WaitTimer" type="Timer" parent="."]
+process_callback = 0
+one_shot = true
+
+[connection signal="timeout" from="WaitTimer" to="." method="_on_wait_timer_timeout"]

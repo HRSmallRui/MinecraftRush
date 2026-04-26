@@ -1,0 +1,86 @@
+[gd_scene load_steps=14 format=3 uid="uid://xyousn4skn88"]
+
+[ext_resource type="Script" path="res://Scripts/Skills/hating_dark_area.gd" id="1_cqypq"]
+[ext_resource type="PackedScene" uid="uid://b76b7g5n6efop" path="res://Scenes/Buffs/dizness_buff.tscn" id="2_6uvis"]
+[ext_resource type="Shader" path="res://Assets/Shaders/MagicianRayShader.gdshader" id="2_bny7w"]
+[ext_resource type="Texture2D" uid="uid://bfypq5d241fn8" path="res://Assets/Images/DefenceTowers/Magics/Towers/LV4-1/LV4-1-RAY.png" id="3_23v63"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/skill_particle_shooter.gd" id="4_gssun"]
+[ext_resource type="AudioStream" uid="uid://cou4q2i8rmiwi" path="res://Assets/Sounds/FXs/Heroes/Mike/skill3_release.wav" id="6_mymhh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qmf5d"]
+radius = 73.9444
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ryrmh"]
+shader = ExtResource("2_bny7w")
+shader_parameter/speed = 1.0
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6ama0"]
+particle_flag_disable_z = true
+radial_velocity_min = 178.45
+radial_velocity_max = 178.45
+gravity = Vector3(0, 0, 0)
+radial_accel_min = 42.38
+radial_accel_max = 75.83
+scale_min = 0.4
+scale_max = 0.6
+
+[sub_resource type="Gradient" id="Gradient_6bg12"]
+offsets = PackedFloat32Array(0, 0.303636)
+colors = PackedColorArray(1, 1, 1, 1, 0.552941, 0, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_upw3b"]
+gradient = SubResource("Gradient_6bg12")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.495726, 0.512821)
+fill_to = Vector2(0.82906, 0.260684)
+
+[sub_resource type="Gradient" id="Gradient_grknk"]
+offsets = PackedFloat32Array(0.204753, 0.564899)
+colors = PackedColorArray(1, 1, 1, 1, 0.568627, 0, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_q0mn3"]
+gradient = SubResource("Gradient_grknk")
+fill = 1
+fill_from = Vector2(0.487179, 0.512821)
+fill_to = Vector2(0.782051, 0.222222)
+
+[node name="HatingDarkArea" type="Area2D"]
+collision_layer = 0
+collision_mask = 24
+script = ExtResource("1_cqypq")
+dizness_scene = ExtResource("2_6uvis")
+dizness_duration = 4.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 1.4)
+shape = SubResource("CircleShape2D_qmf5d")
+debug_color = Color(0, 1, 1, 0.137255)
+
+[node name="Ray" type="Line2D" parent="."]
+material = SubResource("ShaderMaterial_ryrmh")
+position = Vector2(-4, 0)
+points = PackedVector2Array(0, 0, 0, -3000)
+width = 400.0
+texture = ExtResource("3_23v63")
+texture_mode = 1
+
+[node name="EndPointParticle" type="GPUParticles2D" parent="Ray"]
+z_index = 1
+position = Vector2(11, -8)
+process_material = SubResource("ParticleProcessMaterial_6ama0")
+texture = SubResource("GradientTexture2D_upw3b")
+lifetime = 0.2
+script = ExtResource("4_gssun")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ray/EndPointParticle"]
+scale = Vector2(8.74314, 8.74314)
+texture = SubResource("GradientTexture2D_q0mn3")
+
+[node name="Skill3Release" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_mymhh")
+volume_db = 8.0
+pitch_scale = 0.9
+autoplay = true
+bus = &"Sound"

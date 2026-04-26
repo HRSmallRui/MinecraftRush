@@ -1,0 +1,72 @@
+[gd_scene load_steps=12 format=3 uid="uid://pnegk5guo2lv"]
+
+[ext_resource type="PackedScene" uid="uid://bjfa3t67tpsbr" path="res://Scenes/Buffs/property_buff.tscn" id="1_x006c"]
+[ext_resource type="Script" path="res://Scripts/Buffs/property_buff_block.gd" id="2_1w6vo"]
+[ext_resource type="Script" path="res://Scripts/Buffs/kong_shu_lin_soul_debuff.gd" id="2_tr2xk"]
+[ext_resource type="PackedScene" uid="uid://bqs63ismqybxc" path="res://Scenes/Effects/blue_soul.tscn" id="3_5rrjs"]
+[ext_resource type="Texture2D" uid="uid://bqdije0cnh2r5" path="res://Assets/Images/Effects/plugin_effect.png" id="4_3m6nk"]
+[ext_resource type="Shader" path="res://Assets/Shaders/hue_color.gdshader" id="4_mn5dg"]
+
+[sub_resource type="Resource" id="Resource_hx2d7"]
+script = ExtResource("2_1w6vo")
+property_type = 9
+operation_type = 1
+operation_data = 0.4
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ad0eq"]
+shader = ExtResource("4_mn5dg")
+shader_parameter/hue_shift = 0.5
+
+[sub_resource type="Animation" id="Animation_bjvy8"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PluginEffect:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_mxl1e"]
+resource_name = "loop"
+loop_mode = 1
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PluginEffect:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(1, 1),
+"points": PackedFloat32Array(0, 0, 0, 0, 0, -6.28319, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yn6cp"]
+_data = {
+"RESET": SubResource("Animation_bjvy8"),
+"loop": SubResource("Animation_mxl1e")
+}
+
+[node name="KongShuLinSoulDebuff" instance=ExtResource("1_x006c")]
+script = ExtResource("2_tr2xk")
+soul_scene = ExtResource("3_5rrjs")
+buff_blocks = Array[ExtResource("2_1w6vo")]([SubResource("Resource_hx2d7")])
+buff_type = 1
+buff_tag = "KongShuLinSoulDebuff"
+
+[node name="PluginEffect" type="Sprite2D" parent="." index="0"]
+material = SubResource("ShaderMaterial_ad0eq")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_3m6nk")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_yn6cp")
+}
+autoplay = "loop"

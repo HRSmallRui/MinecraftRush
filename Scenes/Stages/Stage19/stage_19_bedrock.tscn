@@ -1,0 +1,754 @@
+[gd_scene load_steps=130 format=3 uid="uid://m0jphe37ag5m"]
+
+[ext_resource type="PackedScene" uid="uid://05u6aueicvo4" path="res://Scenes/Classes/stage_class.tscn" id="1_faw8d"]
+[ext_resource type="PackedScene" uid="uid://d0mpofppk7l0a" path="res://Scenes/Enemies/enemy_29.tscn" id="2_3r2sf"]
+[ext_resource type="PackedScene" uid="uid://dk81pa88qj7rh" path="res://Scenes/Enemies/enemy_30.tscn" id="3_2i0n6"]
+[ext_resource type="AudioStream" uid="uid://bdthvsar8ir28" path="res://Assets/Sounds/Music/高山-准备2.mp3" id="3_f5cju"]
+[ext_resource type="PackedScene" uid="uid://dny4v8gl6x6b" path="res://Scenes/Enemies/enemy_31.tscn" id="4_1215y"]
+[ext_resource type="PackedScene" uid="uid://cltgr2yuqb18g" path="res://Scenes/StageComponents/cooperation_music_player.tscn" id="4_djhft"]
+[ext_resource type="Texture2D" uid="uid://bb2io0tsuuj4q" path="res://Assets/Images/Stages/Stage19/stage19-based.png" id="5_olhnf"]
+[ext_resource type="PackedScene" uid="uid://dkm4khot84thm" path="res://Scenes/Enemies/enemy_32.tscn" id="5_uyewa"]
+[ext_resource type="Texture2D" uid="uid://pe1sf035jhvg" path="res://Assets/Animations/StageComponents/保护点.png" id="6_bg27r"]
+[ext_resource type="PackedScene" uid="uid://c0i5mwbqr4fdj" path="res://Scenes/Enemies/enemy_33.tscn" id="6_e75ia"]
+[ext_resource type="Script" path="res://Scripts/Stages/protection_point.gd" id="7_1skc5"]
+[ext_resource type="PackedScene" uid="uid://1jntuff0cxsu" path="res://Scenes/Enemies/enemy_34.tscn" id="7_wsk2l"]
+[ext_resource type="PackedScene" uid="uid://dyxr3bawtqjel" path="res://Scenes/Enemies/enemy_35.tscn" id="8_66pgg"]
+[ext_resource type="Texture2D" uid="uid://cb7n0rp6m5v2t" path="res://Assets/Images/Stages/Flag.png" id="8_l53ns"]
+[ext_resource type="PackedScene" uid="uid://dldv6lkqb3cu0" path="res://Scenes/Enemies/enemy_36.tscn" id="9_2uky4"]
+[ext_resource type="Texture2D" uid="uid://dgjf37kuaglga" path="res://Assets/Images/Stages/Stage19/stage19-mask.png" id="9_7si7s"]
+[ext_resource type="Texture2D" uid="uid://dnrxg6tdwx1mp" path="res://Assets/Animations/StageComponents/Sheep/dead_0.png" id="10_imxlf"]
+[ext_resource type="PackedScene" uid="uid://d2c404kk7xb4d" path="res://Scenes/Enemies/enemy_37.tscn" id="10_l68g3"]
+[ext_resource type="Texture2D" uid="uid://da37ocyiqim4h" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_01.png" id="11_7cl2i"]
+[ext_resource type="PackedScene" uid="uid://g8kevs3lebju" path="res://Scenes/Enemies/enemy_38.tscn" id="11_iqju3"]
+[ext_resource type="PackedScene" uid="uid://bccm6sjsetyyj" path="res://Scenes/Enemies/enemy_39.tscn" id="12_24tb7"]
+[ext_resource type="Texture2D" uid="uid://1unef0rjx3es" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_02.png" id="12_keakw"]
+[ext_resource type="Texture2D" uid="uid://cl3tg3ey1bo5r" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_03.png" id="13_ibdsf"]
+[ext_resource type="PackedScene" uid="uid://d20lg48d4560c" path="res://Scenes/Enemies/enemy_40.tscn" id="13_mruxn"]
+[ext_resource type="Texture2D" uid="uid://doqw0uc2kpd6x" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_04.png" id="14_0rjk8"]
+[ext_resource type="PackedScene" uid="uid://epbrqrye6e8k" path="res://Scenes/Enemies/enemy_41.tscn" id="14_5q1yd"]
+[ext_resource type="PackedScene" uid="uid://b7h2sovy54j3d" path="res://Scenes/Enemies/enemy_42.tscn" id="15_et7sv"]
+[ext_resource type="Texture2D" uid="uid://d3jqvpbq0t5fk" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_05.png" id="15_v1fqq"]
+[ext_resource type="Texture2D" uid="uid://cgquroes7npan" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_06.png" id="16_180fk"]
+[ext_resource type="PackedScene" uid="uid://cwe0lexv3xqbi" path="res://Scenes/Enemies/enemy_43.tscn" id="16_gjida"]
+[ext_resource type="Texture2D" uid="uid://c73bc8vc47gfj" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_07.png" id="17_520sm"]
+[ext_resource type="PackedScene" uid="uid://dy8rqmkt0rg2t" path="res://Scenes/Enemies/enemy_50.tscn" id="17_p8fjq"]
+[ext_resource type="Texture2D" uid="uid://ot1dpveesu13" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_08.png" id="18_8i887"]
+[ext_resource type="PackedScene" uid="uid://bhr0uppyoi7w4" path="res://Scenes/Enemies/enemy_52.tscn" id="18_d8y6f"]
+[ext_resource type="Texture2D" uid="uid://c1o1lbyrt4a3m" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_09.png" id="19_okjbi"]
+[ext_resource type="Texture2D" uid="uid://c758ce4fbs3ss" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_10.png" id="20_6gena"]
+[ext_resource type="Texture2D" uid="uid://c7d1j5tsm5tcb" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_11.png" id="21_37hn7"]
+[ext_resource type="Texture2D" uid="uid://btvxkt324525p" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_12.png" id="22_3ceqv"]
+[ext_resource type="Texture2D" uid="uid://bnlj6yyinbmue" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_13.png" id="23_kyree"]
+[ext_resource type="Texture2D" uid="uid://bsf1qcjwdp58e" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_14.png" id="24_7hw54"]
+[ext_resource type="Texture2D" uid="uid://bhb8ugkilqy6j" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_15.png" id="25_722qv"]
+[ext_resource type="Texture2D" uid="uid://cinntnb6jxdwq" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_16.png" id="26_3ttcw"]
+[ext_resource type="Texture2D" uid="uid://c8gtpqqq07oas" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_17.png" id="27_jrx55"]
+[ext_resource type="Texture2D" uid="uid://c0ah34dg60f8r" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_18.png" id="28_cnhae"]
+[ext_resource type="Texture2D" uid="uid://b3xsm14st5bgy" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_19.png" id="29_0yomj"]
+[ext_resource type="Texture2D" uid="uid://dc2hp5e3lp4iy" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_20.png" id="30_6brdh"]
+[ext_resource type="Texture2D" uid="uid://86vpgnibk4se" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_21.png" id="31_hako8"]
+[ext_resource type="Texture2D" uid="uid://dvmwt68sau27b" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_22.png" id="32_0ju8p"]
+[ext_resource type="Texture2D" uid="uid://cp1snhlku83os" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_23.png" id="33_lc2nm"]
+[ext_resource type="Texture2D" uid="uid://dp23tdq17vr27" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_24.png" id="34_k2owr"]
+[ext_resource type="Texture2D" uid="uid://cf3gh7irf0htx" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_25.png" id="35_ja360"]
+[ext_resource type="Texture2D" uid="uid://biu0wffxig0gv" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_26.png" id="36_2788d"]
+[ext_resource type="Texture2D" uid="uid://cbbhsurew0s64" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_27.png" id="37_u8gl2"]
+[ext_resource type="Texture2D" uid="uid://ncmp13eoeh8v" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_28.png" id="38_6aku3"]
+[ext_resource type="Texture2D" uid="uid://b8unta86rhbcv" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_29.png" id="39_53ev0"]
+[ext_resource type="Texture2D" uid="uid://rjhbxjf0rorq" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_30.png" id="40_gepp4"]
+[ext_resource type="Texture2D" uid="uid://cest11566jc8e" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_31.png" id="41_k5w2j"]
+[ext_resource type="Texture2D" uid="uid://bf137t81jmmem" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_32.png" id="42_fcogw"]
+[ext_resource type="Texture2D" uid="uid://ikxttkoktb8q" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_33.png" id="43_x1ryp"]
+[ext_resource type="Texture2D" uid="uid://jau3wywctox6" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_34.png" id="44_lqc5b"]
+[ext_resource type="Texture2D" uid="uid://dupvkmy35jrav" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_35.png" id="45_18ygp"]
+[ext_resource type="Texture2D" uid="uid://wweefkvm2o2g" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_36.png" id="46_4cjhc"]
+[ext_resource type="Texture2D" uid="uid://c0re6gdr6bdah" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_37.png" id="47_17kdl"]
+[ext_resource type="Texture2D" uid="uid://ck4htywx25g5x" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_38.png" id="48_108d4"]
+[ext_resource type="Texture2D" uid="uid://u23uam3syq8k" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_39.png" id="49_cffmq"]
+[ext_resource type="Script" path="res://Scripts/StageComponents/lawyer.gd" id="50_hrj3i"]
+[ext_resource type="Texture2D" uid="uid://c8c5ijp3v7ggd" path="res://Assets/Animations/StageComponents/Flag2/scene_flag_40.png" id="50_kkj70"]
+[ext_resource type="Script" path="res://Scripts/Classes/enemy_path.gd" id="51_bws44"]
+[ext_resource type="Texture2D" uid="uid://day0pa7vap8u1" path="res://Assets/Images/Stages/Stage19/lawyer.png" id="51_f1eeb"]
+[ext_resource type="Resource" uid="uid://c00q2t26jbmif" path="res://Library/SummonConfigs/Stage19/Bedrock/path1.res" id="51_fwct1"]
+[ext_resource type="Resource" uid="uid://vtl8dlgeqko0" path="res://Library/SummonConfigs/Stage19/Bedrock/path2.res" id="52_0ynor"]
+[ext_resource type="AudioStream" uid="uid://b7cyu06jruyqa" path="res://Assets/Sounds/FXs/Stages/objection.wav" id="52_dlphw"]
+[ext_resource type="Texture2D" uid="uid://70xbuoj5bg47" path="res://Assets/Images/Stages/Stage19/objection.png" id="53_ckpnn"]
+[ext_resource type="Resource" uid="uid://pqo2jgcnp2w2" path="res://Library/SummonConfigs/Stage19/Bedrock/path3.res" id="53_y0lv4"]
+[ext_resource type="Resource" uid="uid://cghach1ftourn" path="res://Library/SummonConfigs/Stage19/Bedrock/path4.res" id="54_aqct8"]
+[ext_resource type="Resource" uid="uid://cjim2qjdj4hxb" path="res://Library/SummonConfigs/Stage19/Bedrock/path5.res" id="55_464jw"]
+[ext_resource type="Resource" uid="uid://6g17ylh0jyb7" path="res://Library/SummonConfigs/Stage19/Bedrock/path6.res" id="56_00kpj"]
+[ext_resource type="Resource" uid="uid://bymamj4ypuqgn" path="res://Library/SummonConfigs/Stage19/Bedrock/path7.res" id="57_edetk"]
+[ext_resource type="Resource" uid="uid://cyugfegpbvwmq" path="res://Library/SummonConfigs/Stage19/Bedrock/path8.res" id="58_a43v5"]
+[ext_resource type="Resource" uid="uid://b8y4v47cxtilb" path="res://Library/SummonConfigs/Stage19/Bedrock/path9.res" id="59_gfhk5"]
+[ext_resource type="PackedScene" uid="uid://d0sta1lv6shgl" path="res://Scenes/DefenceTowers/defence_tower_based.tscn" id="61_dvjv1"]
+[ext_resource type="PackedScene" uid="uid://4j747edyffkd" path="res://Scenes/UI-Components/Stages/wave_button.tscn" id="62_ve2jv"]
+[ext_resource type="Script" path="res://Library/EnemySummon/wave_summon_text.gd" id="63_0v85f"]
+[ext_resource type="Script" path="res://Library/EnemySummon/SummonTextBlock/summon_text_block.gd" id="63_enndu"]
+[ext_resource type="Texture2D" uid="uid://d4h7uga26vrgq" path="res://Assets/Images/UI/wave-direction.png" id="64_hsj46"]
+[ext_resource type="PackedScene" uid="uid://crvf6uhgs2gu8" path="res://Scenes/DefenceTowers/BarrackTowers/zombie_berserker_barrack.tscn" id="65_kftp0"]
+[ext_resource type="PackedScene" uid="uid://dijjgy2lt1p7w" path="res://Scenes/UI-Components/Stages/wave_panel.tscn" id="65_o3yqv"]
+[ext_resource type="PackedScene" uid="uid://diml616l40lvc" path="res://Scenes/DefenceTowers/ArcherTowers/skeleton_archer_tower.tscn" id="66_n5rey"]
+[ext_resource type="Script" path="res://Scripts/path_config_save.gd" id="67_dj1fn"]
+[ext_resource type="PackedScene" uid="uid://tf7do34gqsgt" path="res://Scenes/DefenceTowers/BarrackTowers/skeleton_barrack.tscn" id="67_vt2yp"]
+[ext_resource type="Resource" uid="uid://b3ktn3aodt1b2" path="res://Library/SummonConfigs/bedrock_template.res" id="68_dh13j"]
+[ext_resource type="PackedScene" uid="uid://dty3c22jvjcnc" path="res://Scenes/DefenceTowers/BarrackTowers/barrack_tower_zombie.tscn" id="68_maumi"]
+[ext_resource type="Script" path="res://Scripts/path_config_load.gd" id="69_b483h"]
+[ext_resource type="Script" path="res://Scripts/summon_count_porcess.gd" id="70_ungmh"]
+[ext_resource type="Script" path="res://Scripts/StageComponents/extra_hero_summon_manager.gd" id="75_sa81k"]
+[ext_resource type="PackedScene" uid="uid://bvrxqb3y3bukv" path="res://Scenes/Allys/Heroes/zombie_gene.tscn" id="76_wr2p3"]
+[ext_resource type="PackedScene" uid="uid://cx72kwhmtfcet" path="res://Scenes/Allys/Heroes/skeleton_gene.tscn" id="77_1jcln"]
+[ext_resource type="Script" path="res://Library/EnemySummon/SummonTextBlock/summon_text_block_chapter4.gd" id="89_nn86p"]
+[ext_resource type="Script" path="res://Library/EnemySummon/path_summon_block.gd" id="98_jwyva"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_avrf6"]
+size = Vector2(3600, 1400)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kgxo3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_7cl2i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_keakw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ibdsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_0rjk8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_v1fqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_180fk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_520sm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_8i887")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_okjbi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_6gena")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_37hn7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_3ceqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_kyree")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_7hw54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_722qv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_3ttcw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_jrx55")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_cnhae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_0yomj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_6brdh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_hako8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_0ju8p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_lc2nm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_k2owr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ja360")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_2788d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_u8gl2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_6aku3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_53ev0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_gepp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_k5w2j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_fcogw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_x1ryp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_lqc5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_18ygp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_4cjhc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_17kdl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_108d4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_cffmq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_kkj70")
+}],
+"loop": true,
+"name": &"default",
+"speed": 26.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_308ph"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_l5aqg"]
+vertices = PackedVector2Array(1080.06, 575.258, 7.96875, 809.578, 6.02344, -3.02344, 3606.04, -12.9688, 1347.87, 582.977, 1480.81, 574.609, 3608.96, 694.063, 3244.25, 735.133, 2923.83, 812.977, 2593.8, 810, 2296.03, 765.039, 2026.64, 750.078, 1784.43, 683.297, 1603.7, 642.68, 1486.86, 586, 1549.83, 658.078, 1391.8, 709.258, 1426.44, 778.406, 1276.83, 847.023, 1345.93, 887.438, 1212.45, 1032.01, 1322.13, 965.656, 3589.77, 1058.66, 3616.22, 1410.99, 3.15625, 1409, 3150.27, 1089, 2577.9, 1081, 1900.73, 1084, 1484.04, 1059.84, 812.953, 1090.97, 7.84375, 1125.58)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 0, 3, 5), PackedInt32Array(5, 3, 6, 7), PackedInt32Array(5, 7, 8, 9, 10), PackedInt32Array(5, 10, 11, 12), PackedInt32Array(5, 12, 13, 14), PackedInt32Array(14, 13, 15), PackedInt32Array(16, 14, 15, 17), PackedInt32Array(18, 16, 17, 19, 20), PackedInt32Array(20, 19, 21), PackedInt32Array(22, 23, 24, 25), PackedInt32Array(26, 25, 24, 27), PackedInt32Array(28, 27, 24, 29), PackedInt32Array(24, 30, 29), PackedInt32Array(28, 29, 20), PackedInt32Array(20, 21, 28)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-4, -13, -2, 822, 1081, 585.291, 1348, 593, 1475, 585, 1384, 703, 1268, 842, 1205, 1023, 812, 1081, -2, 1116, -7, 1419, 3627, 1421, 3599, 1048, 3150, 1079, 2578, 1071, 1901, 1074, 1487, 1050, 1334, 961, 1355, 892, 1434, 785, 1555, 667, 1604, 653, 1782, 693, 2025, 760, 2295, 775, 2593, 820, 2925, 823, 3246, 745, 3619, 703, 3616, -23)])
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_d8cv1"]
+vertices = PackedVector2Array(2112.4, 655.07, 1995.09, 630.219, 1995.1, 630.219, 1837.69, 596.344, 1637.04, 526.258, 1646.27, 460.898, 1920.63, 542.727, 2131.59, 582.906, 2465.28, 680.992, 2435.58, 612.008, 2715.17, 679, 2714.18, 608.992, 2910.59, 648.25, 3100.12, 520.539, 3210.69, 545.563, 3343.06, 499.078, 3264.91, 449.633, 3419.18, 421.938, 3599.79, 486.477, 3598.21, 411.57)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5, 6, 2), PackedInt32Array(0, 2, 6, 7, 8), PackedInt32Array(8, 7, 9), PackedInt32Array(10, 8, 9, 11, 12), PackedInt32Array(12, 11, 13, 14), PackedInt32Array(15, 14, 13, 16, 17), PackedInt32Array(18, 15, 17, 19)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(1638, 448, 1626, 533, 1835, 606, 1993, 640, 2111, 665, 2465, 691, 2465, 691, 2716, 689, 2913, 658, 3214, 555, 3345, 509, 3610, 496, 3608, 401, 3418, 412, 3262, 440, 3097, 511, 2713, 599, 2436, 602, 2133, 573, 1923, 533)])
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_1k2cd"]
+vertices = PackedVector2Array(1650.58, 457.961, 1631.37, 517.789, 1619.84, 510.703, 1481.84, 393.492, 182.367, 584.133, 5, 614.156, 4.99219, 552.141, 118.102, 528.781, 248.703, 499.641, 354.008, 556.352, 379.523, 455.359, 532.883, 471.891, 673.258, 411.289, 626.898, 352.617, 760.492, 327.883, 912.344, 376.992, 932.469, 306.008, 1100.83, 379.008, 1118.01, 310.977, 1255.98, 403.188, 1285.91, 339.789, 1393.82, 437.398, 1522.43, 481.289, 1544.39, 503.25, 1595.9, 559.852, 1524.65, 539.031, 1460.76, 643.477, 1559.4, 645.656, 1504.75, 710.07, 1385.26, 710.922, 1456.05, 754.797, 1390.05, 821.82, 1311.25, 802.688, 1348.04, 891.5, 1268.83, 873.719, 1242.58, 931.07, 1318.58, 963.617, 1230.81, 989.961, 1291.24, 1051.7, 1216.96, 1071.05, 1280.07, 1119.75, 1213.68, 1171.96, 1275.07, 1176.02, 3619, 1255.97, 0.109375, 1246.02, 0.882813, 1176.95, 3619, 1172.01)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(4, 7, 8, 9), PackedInt32Array(9, 8, 10, 11), PackedInt32Array(12, 11, 10, 13, 14), PackedInt32Array(15, 12, 14, 16), PackedInt32Array(17, 15, 16, 18), PackedInt32Array(19, 17, 18, 20), PackedInt32Array(21, 19, 20, 3), PackedInt32Array(22, 21, 3, 2), PackedInt32Array(23, 22, 2), PackedInt32Array(23, 2, 24, 25), PackedInt32Array(26, 25, 24, 27, 28), PackedInt32Array(29, 26, 28, 30), PackedInt32Array(29, 30, 31, 32), PackedInt32Array(32, 31, 33, 34), PackedInt32Array(35, 34, 33, 36, 37), PackedInt32Array(37, 36, 38, 39), PackedInt32Array(39, 38, 40, 41), PackedInt32Array(41, 40, 42), PackedInt32Array(43, 44, 45, 42), PackedInt32Array(42, 46, 43), PackedInt32Array(41, 42, 45)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-5, 544, -5, 626, 184, 594, 357, 566, 537, 481, 676, 421, 913, 387, 1100, 389, 1254, 413, 1391, 447, 1517, 490, 1532, 505, 1516, 534, 1453, 637, 1378, 704, 1303, 797, 1260, 869, 1233, 928, 1221, 988, 1207, 1070, 1204, 1162, -9, 1167, -10, 1256, 3629, 1266, 3629, 1162, 1286, 1166, 1290, 1121, 1301, 1054, 1328, 967, 1357, 896, 1398, 828, 1463, 762, 1512, 717, 1568, 651, 1605, 564, 1624, 525, 1637, 533, 1663, 452, 1485, 384, 1288, 330, 1119, 301, 932, 296, 759, 318, 624, 343, 376, 446, 246, 490, 116, 519)])
+
+[sub_resource type="Curve2D" id="Curve2D_biqlq"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -99, 603, -46.8283, 7.937, 46.8283, -7.937, 104, 574, -38.2068, 10.8627, 38.2068, -10.8627, 387, 502, -42.7018, 12.361, 42.7018, -12.361, 630, 402, -38.956, 8.61527, 38.956, -8.61527, 820, 352, -41.578, -2.99661, 41.578, 2.99661, 1023, 345, -43.4509, -10.1136, 43.4509, 10.1136, 1295, 377, -36.7085, -11.2373, 36.7085, 11.2373, 1575, 474, -52.3259, -13.0815, 52.3259, 13.0815, 1797, 549, -37.8302, -8.48528, 37.8302, 8.48528, 2038, 611, -46.3155, -2.47487, 46.3155, 2.47487, 2364, 653, -52.808, 1.39005, 52.808, -1.39005, 2637, 661, -56.9357, 11.6119, 56.9357, -11.6119, 2905, 617, -28.4678, 10.4882, 28.4678, -10.4882, 3138, 541, -25.8458, 8.24069, 25.8458, -8.24069, 3281, 489, -43.8255, 9.739, 43.8255, -9.739, 3392, 461, 0, 0, 0, 0, 3673, 457)
+}
+point_count = 17
+
+[sub_resource type="Curve2D" id="Curve2D_f8qiq"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -102, 574, -46.8283, 7.937, 46.8283, -7.937, 103, 541, -37.4997, 13.6911, 37.4997, -13.6911, 378, 469, -42.7018, 12.361, 42.7018, -12.361, 605, 367, -38.956, 8.61527, 38.956, -8.61527, 813, 319, -41.578, -2.99661, 41.578, 2.99661, 1029, 311, -43.4509, -10.1136, 43.4509, 10.1136, 1307, 343, -36.7085, -11.2373, 36.7085, 11.2373, 1585, 441, -52.3259, -13.0815, 52.3259, 13.0815, 1806, 517, -37.8302, -8.48528, 37.8302, 8.48528, 2044, 578, -46.3155, -2.47487, 46.3155, 2.47487, 2366, 615, -51.6188, -2.47487, 51.6188, 2.47487, 2637, 621, -56.9357, 11.6119, 56.9357, -11.6119, 2892, 580, -28.4678, 10.4882, 28.4678, -10.4882, 3126, 504, -25.8458, 8.24069, 25.8458, -8.24069, 3275, 454, -43.8255, 9.739, 43.8255, -9.739, 3389, 426, 0, 0, 0, 0, 3673, 419)
+}
+point_count = 17
+
+[sub_resource type="Curve2D" id="Curve2D_j1kwc"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -98, 634, -46.8283, 7.937, 46.8283, -7.937, 107, 602, -38.2068, 10.8627, 38.2068, -10.8627, 391, 530, -42.7018, 12.361, 42.7018, -12.361, 633, 432, -38.956, 8.61527, 38.956, -8.61527, 817, 385, -41.578, -2.99661, 41.578, 2.99661, 1014, 378, -43.4509, -10.1136, 43.4509, 10.1136, 1283, 411, -36.1139, -15.6968, 36.1139, 15.6968, 1560, 500, -51.1367, -16.3518, 51.1367, 16.3518, 1785, 579, -37.8302, -8.48528, 37.8302, 8.48528, 2026, 641, -46.3155, -2.47487, 46.3155, 2.47487, 2363, 680, -51.6188, -2.47487, 51.6188, 2.47487, 2640, 686, -56.9357, 11.6119, 56.9357, -11.6119, 2909, 650, -28.4678, 10.4882, 28.4678, -10.4882, 3143, 572, -25.8458, 8.24069, 25.8458, -8.24069, 3286, 520, -35.2102, 5.61866, 35.2102, -5.61866, 3390, 491, 0, 0, 0, 0, 3671, 488)
+}
+point_count = 17
+
+[sub_resource type="Curve2D" id="Curve2D_3blvw"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -78, 1213, -31.813, 2.83482, 31.813, -2.83482, 1149, 1214, -11.6543, 11.3393, 11.6543, -11.3393, 1225, 1180, -5.66964, 25.1984, 5.66964, -25.1984, 1244, 1120, -3.77976, 20.1587, 3.77976, -20.1587, 1255, 1043, -12.5992, 25.5134, 12.5992, -25.5134, 1295, 907, -19.8438, 21.1037, 19.8438, -21.1037, 1383, 780, -12.5992, 16.379, 12.5992, -16.379, 1486, 672, 0, 0, 0, 0, 1551, 571, -14.8041, 9.13443, 14.8041, -9.13443, 1582, 529, -15.749, 1.25992, 15.749, -1.25992, 1640, 508, -35.5928, -12.2842, 35.5928, 12.2842, 1702, 517, -51.9717, -12.2842, 51.9717, 12.2842, 1899, 576, -53.2317, -12.5992, 53.2317, 12.5992, 2023, 607, -74.6503, -6.92957, 74.6503, 6.92957, 2327, 649, -55.7515, 4.09474, 55.7515, -4.09474, 2636, 661, -78.1151, 22.9936, 78.1151, -22.9936, 2917, 614, -38.7426, 13.8591, 38.7426, -13.8591, 3201, 519, -29.6081, 6.29961, 29.6081, -6.29961, 3360, 466, 0, 0, 0, 0, 3491, 455, 0, 0, 0, 0, 3671, 457)
+}
+point_count = 21
+
+[sub_resource type="Curve2D" id="Curve2D_pq8bq"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -77, 1179, -31.813, 2.83482, 31.813, -2.83482, 1148, 1179, -7.48734, 7.17236, 7.48734, -7.17236, 1205, 1159, -2.49484, 25.9921, 2.49484, -25.9921, 1216, 1109, -3.77976, 20.1587, 3.77976, -20.1587, 1225, 1036, -12.5992, 25.5134, 12.5992, -25.5134, 1267, 894, -19.8438, 21.1037, 19.8438, -21.1037, 1361, 752, -12.5992, 16.379, 12.5992, -16.379, 1458, 651, 0, 0, 0, 0, 1531, 552, -14.8041, 9.13443, 14.8041, -9.13443, 1571, 505, -28.6573, 3.78546, 28.6573, -3.78546, 1631, 480, -35.5928, -12.2842, 35.5928, 12.2842, 1708, 485, -51.9717, -12.2842, 51.9717, 12.2842, 1909, 544, -53.2317, -12.5992, 53.2317, 12.5992, 2031, 575, -74.6503, -6.92957, 74.6503, 6.92957, 2327, 612, -51.2617, -1.51757, 51.2617, 1.51757, 2634, 620, -78.1151, 22.9936, 78.1151, -22.9936, 2908, 575, -38.7426, 13.8591, 38.7426, -13.8591, 3187, 484, -29.6081, 6.29961, 29.6081, -6.29961, 3358, 431, 0, 0, 0, 0, 3490, 419, 0, 0, 0, 0, 3674, 419)
+}
+point_count = 21
+
+[sub_resource type="Curve2D" id="Curve2D_5pu8k"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -81, 1242, -31.813, 2.83482, 31.813, -2.83482, 1156, 1248, -29.333, 26.4925, 29.333, -26.4925, 1256, 1216, -5.66964, 25.1984, 5.66964, -25.1984, 1286, 1129, -0.692993, 21.5618, 0.692993, -21.5618, 1295, 1049, -7.54813, 27.4777, 7.54813, -27.4777, 1334, 916, -19.8438, 21.1037, 19.8438, -21.1037, 1409, 807, -12.5992, 16.379, 12.5992, -16.379, 1508, 701, 0, 0, 0, 0, 1584, 593, -8.08793, 10.8181, 8.08793, -10.8181, 1599, 555, -13.895, 1.25992, 13.895, -1.25992, 1631, 529, -35.5928, -12.2842, 35.5928, 12.2842, 1692, 550, -51.9717, -12.2842, 51.9717, 12.2842, 1886, 606, -53.2317, -12.5992, 53.2317, 12.5992, 2013, 638, -74.6503, -6.92957, 74.6503, 6.92957, 2320, 676, -53.1028, 0.121758, 53.1028, -0.121758, 2636, 686, -78.1151, 22.9936, 78.1151, -22.9936, 2919, 647, -38.7426, 13.8591, 38.7426, -13.8591, 3202, 551, -29.6081, 6.29961, 29.6081, -6.29961, 3362, 497, 0, 0, 0, 0, 3486, 486, 0, 0, 0, 0, 3672, 488)
+}
+point_count = 21
+
+[sub_resource type="Curve2D" id="Curve2D_m2vi3"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -81, 1213, 0, 0, 0, 0, 3692, 1209)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_eva3i"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -82, 1242, 0, 0, 0, 0, 3687, 1251)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_l57xo"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -77, 1178, 0, 0, 0, 0, 3694, 1176)
+}
+point_count = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l1jqf"]
+size = Vector2(3632, 1427)
+
+[sub_resource type="Resource" id="Resource_w2w1n"]
+script = ExtResource("89_nn86p")
+enemy_name = "厌国战士"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_05l5u"]
+script = ExtResource("89_nn86p")
+enemy_name = "厌国精英"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_26ms2"]
+script = ExtResource("89_nn86p")
+enemy_name = "苦力怕"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_nqvfh"]
+script = ExtResource("89_nn86p")
+enemy_name = "厌国狂战士"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_5dsdc"]
+script = ExtResource("89_nn86p")
+enemy_name = "劫掠者"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_e6lbt"]
+script = ExtResource("89_nn86p")
+enemy_name = "女巫"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_uu5kg"]
+script = ExtResource("89_nn86p")
+enemy_name = "劫掠者队长"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_qbnlx"]
+script = ExtResource("89_nn86p")
+enemy_name = "劫掠兽"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_0dfcu"]
+script = ExtResource("89_nn86p")
+enemy_name = "泰坦威克斯"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_30jyf"]
+script = ExtResource("63_0v85f")
+wave_summon_text_list = Array[ExtResource("63_enndu")]([SubResource("Resource_w2w1n"), SubResource("Resource_05l5u"), SubResource("Resource_26ms2"), SubResource("Resource_nqvfh"), SubResource("Resource_5dsdc"), SubResource("Resource_e6lbt"), SubResource("Resource_uu5kg"), SubResource("Resource_qbnlx"), SubResource("Resource_0dfcu")])
+
+[sub_resource type="Resource" id="Resource_jl6v5"]
+script = ExtResource("89_nn86p")
+enemy_name = "唤魔者"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_w22qp"]
+script = ExtResource("89_nn86p")
+enemy_name = "卫道士"
+enemy_count = 1
+
+[sub_resource type="Resource" id="Resource_rc1t7"]
+script = ExtResource("63_0v85f")
+wave_summon_text_list = Array[ExtResource("63_enndu")]([SubResource("Resource_w2w1n"), SubResource("Resource_05l5u"), SubResource("Resource_26ms2"), SubResource("Resource_nqvfh"), SubResource("Resource_5dsdc"), SubResource("Resource_e6lbt"), SubResource("Resource_uu5kg"), SubResource("Resource_qbnlx"), SubResource("Resource_0dfcu"), SubResource("Resource_jl6v5"), SubResource("Resource_w22qp")])
+
+[sub_resource type="Resource" id="Resource_tos0h"]
+script = ExtResource("63_0v85f")
+wave_summon_text_list = Array[ExtResource("63_enndu")]([SubResource("Resource_w2w1n"), SubResource("Resource_05l5u"), SubResource("Resource_26ms2"), SubResource("Resource_nqvfh"), SubResource("Resource_5dsdc"), SubResource("Resource_e6lbt"), SubResource("Resource_uu5kg"), SubResource("Resource_qbnlx"), SubResource("Resource_0dfcu")])
+
+[node name="Stage19Bedrock" instance=ExtResource("1_faw8d")]
+stage_count = 19
+stage_mode = 2
+enemy_scene_list = Array[PackedScene]([ExtResource("2_3r2sf"), ExtResource("3_2i0n6"), ExtResource("4_1215y"), ExtResource("5_uyewa"), ExtResource("6_e75ia"), ExtResource("7_wsk2l"), ExtResource("8_66pgg"), ExtResource("9_2uky4"), ExtResource("10_l68g3"), ExtResource("11_iqju3"), ExtResource("12_24tb7"), ExtResource("13_mruxn"), ExtResource("14_5q1yd"), ExtResource("15_et7sv"), ExtResource("16_gjida"), ExtResource("17_p8fjq"), ExtResource("18_d8y6f")])
+current_health = 1
+current_money = 1600
+total_waves = 1
+unlocked_tower_list = [false, true, false, true]
+
+[node name="StageCamera" parent="." index="2"]
+position = Vector2(3480, 455)
+min_zoom_length_desktop = 0.9
+
+[node name="CollisionShape2D" parent="StageCamera" index="0"]
+position = Vector2(1800, 700)
+shape = SubResource("RectangleShape2D_avrf6")
+
+[node name="PreparationMusic" parent="Musics" index="0"]
+stream = ExtResource("3_f5cju")
+
+[node name="CooperationMusicPlayer" parent="Musics" index="3" instance=ExtResource("4_djhft")]
+
+[node name="BasedSprite" parent="Background" index="0"]
+texture = ExtResource("5_olhnf")
+
+[node name="ProtectionPoint" parent="Background/BasedSprite" index="0"]
+position = Vector2(3480, 449)
+
+[node name="ProtectionPoint2" type="Sprite2D" parent="Background/BasedSprite" index="1"]
+position = Vector2(3480, 1201)
+texture = ExtResource("6_bg27r")
+script = ExtResource("7_1skc5")
+
+[node name="Flag" parent="Background" index="1"]
+position = Vector2(3482, 395)
+
+[node name="Flag2" type="Sprite2D" parent="Background" index="2"]
+position = Vector2(3482, 506)
+texture = ExtResource("8_l53ns")
+offset = Vector2(-7, -22)
+region_enabled = true
+region_rect = Rect2(40, 38, 40, 73)
+
+[node name="Flag3" type="Sprite2D" parent="Background" index="3"]
+position = Vector2(3482, 1149)
+texture = ExtResource("8_l53ns")
+offset = Vector2(-7, -22)
+region_enabled = true
+region_rect = Rect2(40, 38, 40, 73)
+
+[node name="Flag4" type="Sprite2D" parent="Background" index="4"]
+position = Vector2(3482, 1264)
+texture = ExtResource("8_l53ns")
+offset = Vector2(-7, -22)
+region_enabled = true
+region_rect = Rect2(40, 38, 40, 73)
+
+[node name="Stage19-mask" type="Sprite2D" parent="Background" index="5"]
+position = Vector2(63, 1430)
+texture = ExtResource("9_7si7s")
+centered = false
+offset = Vector2(-63, -1430)
+
+[node name="Sheeps" type="Node2D" parent="Background" index="6"]
+y_sort_enabled = true
+
+[node name="DeadSheep" type="Sprite2D" parent="Background/Sheeps" index="0"]
+position = Vector2(2326, 372)
+texture = ExtResource("10_imxlf")
+
+[node name="DeadSheep2" type="Sprite2D" parent="Background/Sheeps" index="1"]
+position = Vector2(2746, 266)
+texture = ExtResource("10_imxlf")
+
+[node name="DeadSheep5" type="Sprite2D" parent="Background/Sheeps" index="2"]
+position = Vector2(2758, 120)
+texture = ExtResource("10_imxlf")
+
+[node name="DeadSheep6" type="Sprite2D" parent="Background/Sheeps" index="3"]
+position = Vector2(2122, 207)
+texture = ExtResource("10_imxlf")
+
+[node name="DeadSheep7" type="Sprite2D" parent="Background/Sheeps" index="4"]
+position = Vector2(1169, 130)
+texture = ExtResource("10_imxlf")
+
+[node name="DeadSheep8" type="Sprite2D" parent="Background/Sheeps" index="5"]
+position = Vector2(1664, 1102)
+texture = ExtResource("10_imxlf")
+flip_h = true
+
+[node name="DeadSheep9" type="Sprite2D" parent="Background/Sheeps" index="6"]
+position = Vector2(712, 570)
+texture = ExtResource("10_imxlf")
+flip_h = true
+
+[node name="DeadSheep10" type="Sprite2D" parent="Background/Sheeps" index="7"]
+position = Vector2(574, 178)
+texture = ExtResource("10_imxlf")
+flip_h = true
+
+[node name="DeadSheep11" type="Sprite2D" parent="Background/Sheeps" index="8"]
+position = Vector2(1530, 225)
+texture = ExtResource("10_imxlf")
+flip_h = true
+
+[node name="DeadSheep3" type="Sprite2D" parent="Background/Sheeps" index="9"]
+position = Vector2(3366, 262)
+texture = ExtResource("10_imxlf")
+flip_h = true
+
+[node name="DeadSheep4" type="Sprite2D" parent="Background/Sheeps" index="10"]
+position = Vector2(3092, 180)
+texture = ExtResource("10_imxlf")
+flip_h = true
+
+[node name="FlagAnim" type="AnimatedSprite2D" parent="Background" index="7"]
+position = Vector2(2955, 332)
+scale = Vector2(0.460631, 0.460631)
+sprite_frames = SubResource("SpriteFrames_kgxo3")
+autoplay = "default"
+offset = Vector2(127.56, -217.251)
+
+[node name="Lawyer" type="Area2D" parent="Background" index="8"]
+position = Vector2(2603, 1104)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("50_hrj3i")
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Lawyer" index="0"]
+scale = Vector2(0.0809035, 0.0809035)
+texture = ExtResource("51_f1eeb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Lawyer" index="1"]
+shape = SubResource("CircleShape2D_308ph")
+
+[node name="ObjectionAudio" type="AudioStreamPlayer" parent="Background/Lawyer" index="2"]
+stream = ExtResource("52_dlphw")
+bus = &"Sound"
+
+[node name="ObjectionSprite" type="Sprite2D" parent="Background/Lawyer" index="3"]
+visible = false
+texture = ExtResource("53_ckpnn")
+
+[node name="StageNavigationRegion" parent="." index="7"]
+navigation_polygon = SubResource("NavigationPolygon_l5aqg")
+
+[node name="FirerainRandomRegion" parent="FirerainRandomRegions" index="0"]
+navigation_polygon = SubResource("NavigationPolygon_d8cv1")
+
+[node name="FirerainRandomRegion2" type="NavigationRegion2D" parent="FirerainRandomRegions" index="1"]
+navigation_polygon = SubResource("NavigationPolygon_1k2cd")
+navigation_layers = 2
+
+[node name="EnemyPath" type="Path2D" parent="Enemies" index="0"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_biqlq")
+script = ExtResource("51_bws44")
+path_summon_config = ExtResource("51_fwct1")
+
+[node name="EnemyPath2" type="Path2D" parent="Enemies" index="1"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_f8qiq")
+script = ExtResource("51_bws44")
+path_summon_config = ExtResource("52_0ynor")
+
+[node name="EnemyPath3" type="Path2D" parent="Enemies" index="2"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_j1kwc")
+script = ExtResource("51_bws44")
+path_summon_config = ExtResource("53_y0lv4")
+
+[node name="EnemyPath4" type="Path2D" parent="Enemies" index="3"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_3blvw")
+script = ExtResource("51_bws44")
+path_summon_config = ExtResource("54_aqct8")
+
+[node name="EnemyPath5" type="Path2D" parent="Enemies" index="4"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_pq8bq")
+script = ExtResource("51_bws44")
+path_summon_config = ExtResource("55_464jw")
+
+[node name="EnemyPath6" type="Path2D" parent="Enemies" index="5"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_5pu8k")
+script = ExtResource("51_bws44")
+path_summon_config = ExtResource("56_00kpj")
+
+[node name="EnemyPath7" type="Path2D" parent="Enemies" index="6"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_m2vi3")
+script = ExtResource("51_bws44")
+path_summon_config = ExtResource("57_edetk")
+
+[node name="EnemyPath8" type="Path2D" parent="Enemies" index="7"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_eva3i")
+script = ExtResource("51_bws44")
+path_summon_config = ExtResource("58_a43v5")
+
+[node name="EnemyPath9" type="Path2D" parent="Enemies" index="8"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_l57xo")
+script = ExtResource("51_bws44")
+path_summon_config = ExtResource("59_gfhk5")
+
+[node name="DefenceTowerBased6" parent="Towers" index="0" instance=ExtResource("61_dvjv1")]
+position = Vector2(1352, 1128)
+
+[node name="DefenceTowerBased7" parent="Towers" index="1" instance=ExtResource("61_dvjv1")]
+position = Vector2(3067, 1131)
+
+[node name="DefenceTowerBased14" parent="Towers" index="2" instance=ExtResource("61_dvjv1")]
+position = Vector2(1458, 513)
+
+[node name="DefenceTowerBased15" parent="Towers" index="3" instance=ExtResource("61_dvjv1")]
+position = Vector2(1655, 597)
+
+[node name="DefenceTowerBased16" parent="Towers" index="4" instance=ExtResource("61_dvjv1")]
+position = Vector2(1629, 403)
+
+[node name="DefenceTowerBased17" parent="Towers" index="5" instance=ExtResource("61_dvjv1")]
+position = Vector2(1273, 289)
+
+[node name="DefenceTowerBased18" parent="Towers" index="6" instance=ExtResource("61_dvjv1")]
+position = Vector2(986, 422)
+
+[node name="DefenceTowerBased19" parent="Towers" index="7" instance=ExtResource("61_dvjv1")]
+position = Vector2(676, 468)
+
+[node name="DefenceTowerBased20" parent="Towers" index="8" instance=ExtResource("61_dvjv1")]
+position = Vector2(811, 268)
+
+[node name="DefenceTowerBased21" parent="Towers" index="9" instance=ExtResource("61_dvjv1")]
+position = Vector2(418, 386)
+
+[node name="DefenceTowerBased22" parent="Towers" index="10" instance=ExtResource("61_dvjv1")]
+position = Vector2(1937, 506)
+
+[node name="DefenceTowerBased23" parent="Towers" index="11" instance=ExtResource("61_dvjv1")]
+position = Vector2(2223, 711)
+
+[node name="DefenceTowerBased24" parent="Towers" index="12" instance=ExtResource("61_dvjv1")]
+position = Vector2(2450, 572)
+
+[node name="DefenceTowerBased25" parent="Towers" index="13" instance=ExtResource("61_dvjv1")]
+position = Vector2(2922, 696)
+
+[node name="DefenceTowerBased26" parent="Towers" index="14" instance=ExtResource("61_dvjv1")]
+position = Vector2(2769, 549)
+
+[node name="DefenceTowerBased27" parent="Towers" index="15" instance=ExtResource("61_dvjv1")]
+position = Vector2(3124, 448)
+
+[node name="DefenceTowerBased28" parent="Towers" index="16" instance=ExtResource("61_dvjv1")]
+position = Vector2(3188, 605)
+
+[node name="ZombieBerserkerBarrack" parent="Towers" index="17" instance=ExtResource("65_kftp0")]
+position = Vector2(2258, 1128)
+
+[node name="SkeletonArcherTower" parent="Towers" index="18" instance=ExtResource("66_n5rey")]
+position = Vector2(569, 1122)
+
+[node name="SkeletonArcherTower2" parent="Towers" index="19" instance=ExtResource("66_n5rey")]
+position = Vector2(1139, 1127)
+
+[node name="SkeletonBarrack" parent="Towers" index="20" instance=ExtResource("67_vt2yp")]
+position = Vector2(2545, 1128)
+
+[node name="BarrackTowerZombie" parent="Towers" index="21" instance=ExtResource("68_maumi")]
+position = Vector2(1833, 1130)
+
+[node name="CollisionShape2D" parent="ClickArea" index="0"]
+position = Vector2(1806, 703.5)
+shape = SubResource("RectangleShape2D_l1jqf")
+
+[node name="WaveButton" parent="WaveButtons" index="0" node_paths=PackedStringArray("linked_wave_panel") instance=ExtResource("62_ve2jv")]
+offset_left = 90.0
+offset_top = 578.0
+offset_right = 90.0
+offset_bottom = 578.0
+linked_wave_panel = NodePath("../WavePanel2")
+summon_text_list = Array[ExtResource("63_0v85f")]([SubResource("Resource_30jyf")])
+
+[node name="Direction" type="Sprite2D" parent="WaveButtons/WaveButton" index="5"]
+show_behind_parent = true
+position = Vector2(0.000152469, 1.25)
+rotation = 2.99799
+scale = Vector2(0.942457, 0.942457)
+texture = ExtResource("64_hsj46")
+
+[node name="WaveButton2" parent="WaveButtons" index="1" node_paths=PackedStringArray("linked_wave_panel") instance=ExtResource("62_ve2jv")]
+offset_left = 163.0
+offset_top = 1181.0
+offset_right = 163.0
+offset_bottom = 1181.0
+linked_wave_panel = NodePath("../WavePanel3")
+summon_text_list = Array[ExtResource("63_0v85f")]([SubResource("Resource_rc1t7")])
+
+[node name="Direction" type="Sprite2D" parent="WaveButtons/WaveButton2" index="5"]
+show_behind_parent = true
+position = Vector2(0.000152469, 1.25)
+rotation = 3.1373
+scale = Vector2(0.942457, 0.942457)
+texture = ExtResource("64_hsj46")
+
+[node name="WaveButton3" parent="WaveButtons" index="2" node_paths=PackedStringArray("linked_wave_panel") instance=ExtResource("62_ve2jv")]
+offset_left = 163.0
+offset_top = 1230.0
+offset_right = 163.0
+offset_bottom = 1230.0
+linked_wave_panel = NodePath("../WavePanel4")
+summon_text_list = Array[ExtResource("63_0v85f")]([SubResource("Resource_tos0h")])
+
+[node name="Direction" type="Sprite2D" parent="WaveButtons/WaveButton3" index="5"]
+show_behind_parent = true
+position = Vector2(0.000152469, 1.25)
+rotation = 3.1373
+scale = Vector2(0.942457, 0.942457)
+texture = ExtResource("64_hsj46")
+
+[node name="WavePanel2" parent="WaveButtons" index="3" instance=ExtResource("65_o3yqv")]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 498.0
+offset_right = 730.0
+offset_bottom = 792.0
+
+[node name="WavePanel3" parent="WaveButtons" index="4" instance=ExtResource("65_o3yqv")]
+layout_mode = 0
+offset_left = 219.0
+offset_top = 1044.0
+offset_right = 823.0
+offset_bottom = 1338.0
+
+[node name="WavePanel4" parent="WaveButtons" index="5" instance=ExtResource("65_o3yqv")]
+layout_mode = 0
+offset_left = 221.0
+offset_top = 1140.0
+offset_right = 825.0
+offset_bottom = 1434.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PathArea" index="0"]
+polygon = PackedVector2Array(-3, 547, 118, 517, 242, 492, 378, 449, 496, 393, 617, 347, 766, 316, 927, 295, 1140, 302, 1411, 359, 1612, 440, 1837, 510, 2045, 558, 2281, 596, 2484, 605, 2673, 601, 2811, 585, 2951, 552, 3106, 504, 3210, 460, 3336, 422, 3441, 410, 3612, 409, 3612, 496, 3502, 496, 3346, 509, 3220, 552, 3075, 606, 2880, 665, 2730, 688, 2565, 692, 2418, 689, 2239, 678, 2092, 661, 1937, 627, 1810, 598, 1643, 540, 1614, 524, 1593, 594, 1538, 682, 1483, 737, 1396, 831, 1340, 936, 1308, 1003, 1298, 1087, 1284, 1165, 3612, 1163, 3607, 1254, -10, 1256, -9, 1169, 1195, 1162, 1208, 1023, 1229, 940, 1259, 868, 1291, 811, 1334, 757, 1390, 696, 1443, 647, 1490, 600, 1528, 504, 1462, 471, 1336, 428, 1190, 403, 1024, 390, 856, 394, 727, 411, 546, 472, 421, 528, 327, 566, 233, 587, 110, 608, -7, 628)
+
+[node name="HeroSummonMarker" parent="." index="20"]
+position = Vector2(3480, 457)
+
+[node name="PathConfigSave" type="Node2D" parent="." index="21"]
+script = ExtResource("67_dj1fn")
+sample_config = ExtResource("68_dh13j")
+path_front = "res://Library/SummonConfigs/Stage19/Bedrock"
+loop_count = 9
+
+[node name="PathConfigLoadProcess" type="Node" parent="." index="22" node_paths=PackedStringArray("enemy_parent_node")]
+script = ExtResource("69_b483h")
+enemy_parent_node = NodePath("../Enemies")
+config_path_front = "res://Library/SummonConfigs/Stage19/Bedrock"
+loading_count = 9
+
+[node name="ExtraHeroSummonManager" type="Node2D" parent="." index="23" node_paths=PackedStringArray("hero_marker_list")]
+script = ExtResource("75_sa81k")
+hero_scene_list = Array[PackedScene]([ExtResource("76_wr2p3"), ExtResource("77_1jcln")])
+hero_marker_list = [NodePath("Marker2D"), NodePath("Marker2D2")]
+
+[node name="Marker2D" type="Marker2D" parent="ExtraHeroSummonManager" index="0"]
+position = Vector2(3421, 1209)
+
+[node name="Marker2D2" type="Marker2D" parent="ExtraHeroSummonManager" index="1"]
+position = Vector2(3529, 1209)
+
+[node name="SummonCountProcess" type="Node2D" parent="." index="24" node_paths=PackedStringArray("enemy_parnt_node")]
+script = ExtResource("70_ungmh")
+enemy_parnt_node = NodePath("../Enemies")
+max_wave_count = 1
+process_summon_blocks = Array[ExtResource("98_jwyva")]([ExtResource("51_fwct1"), ExtResource("52_0ynor"), ExtResource("53_y0lv4"), ExtResource("54_aqct8"), ExtResource("55_464jw"), ExtResource("56_00kpj"), ExtResource("57_edetk"), ExtResource("58_a43v5"), ExtResource("59_gfhk5")])
+
+[connection signal="input_event" from="Background/Lawyer" to="Background/Lawyer" method="_on_input_event"]

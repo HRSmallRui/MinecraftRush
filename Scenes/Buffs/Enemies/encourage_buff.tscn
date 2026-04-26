@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://dnqd6nfpv7cum"]
+
+[ext_resource type="PackedScene" uid="uid://bjfa3t67tpsbr" path="res://Scenes/Buffs/property_buff.tscn" id="1_83uwf"]
+[ext_resource type="Script" path="res://Scripts/Buffs/property_buff_block.gd" id="2_sqfjr"]
+[ext_resource type="Script" path="res://Scripts/Classes/potion_particle_leader.gd" id="3_rvjmk"]
+[ext_resource type="Texture2D" uid="uid://ccglhhifm554s" path="res://Assets/Images/Effects/鼓舞光环.png" id="4_4nf4u"]
+
+[sub_resource type="Resource" id="Resource_sn87u"]
+script = ExtResource("2_sqfjr")
+property_type = 9
+operation_type = 1
+operation_data = 1.5
+
+[sub_resource type="Resource" id="Resource_bh4e1"]
+script = ExtResource("2_sqfjr")
+property_type = 1
+operation_type = 1
+operation_data = 1.4
+
+[sub_resource type="Resource" id="Resource_vk2ci"]
+script = ExtResource("2_sqfjr")
+property_type = 2
+operation_type = 1
+operation_data = 1.4
+
+[node name="EncourageBuff" instance=ExtResource("1_83uwf")]
+buff_blocks = Array[ExtResource("2_sqfjr")]([SubResource("Resource_sn87u"), SubResource("Resource_bh4e1"), SubResource("Resource_vk2ci")])
+duration = 8.0
+
+[node name="PotionParticleLeader" type="Node2D" parent="." index="0" node_paths=PackedStringArray("buff_vehicle")]
+script = ExtResource("3_rvjmk")
+potion_color = Color(1, 0, 0, 1)
+buff_vehicle = NodePath("..")
+
+[node name="EncourageEffect" type="Sprite2D" parent="." index="1"]
+z_index = -1
+position = Vector2(0, -1.19209e-07)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_4nf4u")
+offset = Vector2(0, -5)

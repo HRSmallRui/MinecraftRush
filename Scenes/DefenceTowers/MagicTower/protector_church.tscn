@@ -1,0 +1,495 @@
+[gd_scene load_steps=71 format=3 uid="uid://b80evc1oc2kvb"]
+
+[ext_resource type="PackedScene" uid="uid://cw6pat17gtbr3" path="res://Scenes/DefenceTowers/MagicTower/magic_tower.tscn" id="1_8jdpb"]
+[ext_resource type="Texture2D" uid="uid://cfm3i5ji0kjkg" path="res://Assets/Images/UI/InformationBar/magic-id-4.png" id="2_dl6qr"]
+[ext_resource type="Script" path="res://Scripts/Datas/TowerData.gd" id="2_g36jg"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/MagicTowers/protector_church.gd" id="2_ganok"]
+[ext_resource type="Script" path="res://Library/Heroes/damage_block.gd" id="3_n74to"]
+[ext_resource type="PackedScene" uid="uid://cjpn07gcbekr1" path="res://Scenes/DefenceTowers/tower_skill_button.tscn" id="4_rckvb"]
+[ext_resource type="Texture2D" uid="uid://dn2otgerw5wti" path="res://Assets/Images/DefenceTowers/Magics/UI/铁傀儡.png" id="5_6vsfd"]
+[ext_resource type="Texture2D" uid="uid://tmwp33dr57m4" path="res://Assets/Images/DefenceTowers/Magics/Towers/LV4-1/LV4-1-tower.png" id="5_g03sn"]
+[ext_resource type="Texture2D" uid="uid://bavc5v3d6lurc" path="res://Assets/Images/DefenceTowers/Magics/Towers/LV4-1/heart-purple.png" id="6_cpoqd"]
+[ext_resource type="Texture2D" uid="uid://cxcke55yoho1k" path="res://Assets/Animations/Magicians/LV4-1/attack_00.png" id="6_sjbti"]
+[ext_resource type="Texture2D" uid="uid://do35a5t83p6da" path="res://Assets/Images/DefenceTowers/Magics/UI/铁傀儡select.png" id="6_whfuf"]
+[ext_resource type="Texture2D" uid="uid://b5tc3arhc1jmn" path="res://Assets/Animations/Magicians/LV4-1/attack_back_00.png" id="7_gdu5b"]
+[ext_resource type="Texture2D" uid="uid://c17j36iprgsv" path="res://Assets/Images/DefenceTowers/Magics/UI/铁傀儡no.png" id="7_va8ct"]
+[ext_resource type="Texture2D" uid="uid://bx8ocp0uow5sf" path="res://Assets/Animations/Magicians/LV4-1/attack_back_01.png" id="8_ammva"]
+[ext_resource type="Texture2D" uid="uid://bjjaglw47b50i" path="res://Assets/Images/DefenceTowers/Magics/UI/尘解.png" id="8_q1w1h"]
+[ext_resource type="Texture2D" uid="uid://qye5k0glqq7q" path="res://Assets/Images/DefenceTowers/Magics/UI/尘解select.png" id="9_8tddd"]
+[ext_resource type="Texture2D" uid="uid://bjm23q8540r5o" path="res://Assets/Animations/Magicians/LV4-1/attack_back_02.png" id="9_rk86w"]
+[ext_resource type="Texture2D" uid="uid://erjbxxmupcr3" path="res://Assets/Images/DefenceTowers/Magics/UI/尘解no.png" id="10_0ikjs"]
+[ext_resource type="Texture2D" uid="uid://brhk4803o2tek" path="res://Assets/Animations/Magicians/LV4-1/attack_back_03.png" id="10_0o2sq"]
+[ext_resource type="Texture2D" uid="uid://di244pjtyyl2a" path="res://Assets/Images/DefenceTowers/UI/flag_button.png" id="11_2v0hw"]
+[ext_resource type="Texture2D" uid="uid://h7llcpc7dk5b" path="res://Assets/Animations/Magicians/LV4-1/attack_back_04.png" id="11_kq0ee"]
+[ext_resource type="Texture2D" uid="uid://7xl2wnc5nk41" path="res://Assets/Images/DefenceTowers/UI/flag_button_select.png" id="12_2pu2t"]
+[ext_resource type="Texture2D" uid="uid://cni7p7xr11nef" path="res://Assets/Animations/Magicians/LV4-1/attack_back_05.png" id="12_uemny"]
+[ext_resource type="Texture2D" uid="uid://doaqjt5bj0rug" path="res://Assets/Animations/Magicians/LV4-1/attack_back_06.png" id="13_48kpu"]
+[ext_resource type="Texture2D" uid="uid://cedxped8kj1rl" path="res://Assets/Animations/Magicians/LV4-1/attack_back_07.png" id="14_0wb62"]
+[ext_resource type="Texture2D" uid="uid://b8sdu6p2vc5ww" path="res://Assets/Animations/Magicians/LV4-1/attack_back_08.png" id="15_drh16"]
+[ext_resource type="Texture2D" uid="uid://clqmup272drtf" path="res://Assets/Animations/Magicians/LV4-1/attack_back_09.png" id="16_qdnei"]
+[ext_resource type="Texture2D" uid="uid://f8msa23ab126" path="res://Assets/Animations/Magicians/LV4-1/attack_back_10.png" id="17_stmkd"]
+[ext_resource type="Texture2D" uid="uid://cx16yheq25gkr" path="res://Assets/Animations/Magicians/LV4-1/attack_back_11.png" id="18_5pssb"]
+[ext_resource type="Texture2D" uid="uid://cmnw8l2y18ilr" path="res://Assets/Animations/Magicians/LV4-1/attack_back_12.png" id="19_grtcl"]
+[ext_resource type="Texture2D" uid="uid://du21c7ywakv5a" path="res://Assets/Animations/Magicians/LV4-1/attack_01.png" id="20_qnr3c"]
+[ext_resource type="Texture2D" uid="uid://dchiofilcxgyh" path="res://Assets/Animations/Magicians/LV4-1/attack_02.png" id="21_xn2b8"]
+[ext_resource type="Texture2D" uid="uid://g4rfr3eit7k2" path="res://Assets/Animations/Magicians/LV4-1/attack_03.png" id="22_brno5"]
+[ext_resource type="Texture2D" uid="uid://bfshu2ynh88lg" path="res://Assets/Animations/Magicians/LV4-1/attack_04.png" id="23_p20a5"]
+[ext_resource type="Texture2D" uid="uid://dpswwep5vbvc5" path="res://Assets/Animations/Magicians/LV4-1/attack_05.png" id="24_loubw"]
+[ext_resource type="Texture2D" uid="uid://d1gi6hx6hwyuh" path="res://Assets/Animations/Magicians/LV4-1/attack_06.png" id="25_vvemt"]
+[ext_resource type="Texture2D" uid="uid://bdejrs13fgvsp" path="res://Assets/Animations/Magicians/LV4-1/attack_07.png" id="26_c46s1"]
+[ext_resource type="Texture2D" uid="uid://c7htjb58ceqvs" path="res://Assets/Animations/Magicians/LV4-1/attack_08.png" id="27_xa6cv"]
+[ext_resource type="Texture2D" uid="uid://i11yya0jxc5w" path="res://Assets/Animations/Magicians/LV4-1/attack_09.png" id="28_6xyck"]
+[ext_resource type="Texture2D" uid="uid://cwta13h6asens" path="res://Assets/Animations/Magicians/LV4-1/attack_10.png" id="29_33ceh"]
+[ext_resource type="Texture2D" uid="uid://behalxsa18igo" path="res://Assets/Animations/Magicians/LV4-1/attack_11.png" id="30_71cv0"]
+[ext_resource type="Texture2D" uid="uid://mmfy2emwnvlc" path="res://Assets/Animations/Magicians/LV4-1/attack_12.png" id="31_demhm"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/MagicTowers/wizard.gd" id="42_5h38e"]
+[ext_resource type="Texture2D" uid="uid://fg1y0i3ubnh4" path="res://Assets/Images/DefenceTowers/UI/集结范围.png" id="44_fpec7"]
+[ext_resource type="AudioStream" uid="uid://fr2csv8b0ofi" path="res://Assets/Sounds/FXs/DefenceTowers/ProtectorChurch/Ray1.wav" id="45_evpj8"]
+[ext_resource type="AudioStream" uid="uid://dt6x3iyeqcmqd" path="res://Assets/Sounds/FXs/DefenceTowers/ProtectorChurch/RayElec.wav" id="46_x0l7f"]
+[ext_resource type="AudioStream" uid="uid://bvpy5tyclm5n1" path="res://Assets/Sounds/FXs/DefenceTowers/ProtectorChurch/法阵.wav" id="47_wvvm6"]
+
+[sub_resource type="Resource" id="Resource_4ifho"]
+resource_local_to_scene = true
+script = ExtResource("3_n74to")
+damage_low = 3
+damage_high = 6
+
+[sub_resource type="Resource" id="Resource_rsprm"]
+resource_local_to_scene = true
+script = ExtResource("3_n74to")
+damage_low = 8
+damage_high = 15
+
+[sub_resource type="Resource" id="Resource_m5q5l"]
+resource_local_to_scene = true
+script = ExtResource("3_n74to")
+damage_low = 13
+damage_high = 24
+
+[sub_resource type="Resource" id="Resource_hc411"]
+script = ExtResource("3_n74to")
+damage_low = 18
+damage_high = 33
+
+[sub_resource type="Resource" id="Resource_852nd"]
+resource_local_to_scene = true
+script = ExtResource("3_n74to")
+damage_low = 23
+damage_high = 42
+
+[sub_resource type="Resource" id="Resource_0hacb"]
+resource_local_to_scene = true
+script = ExtResource("3_n74to")
+damage_low = 28
+damage_high = 51
+
+[sub_resource type="Resource" id="Resource_hwtnj"]
+script = ExtResource("2_g36jg")
+damage_low = 3
+damage_high = 6
+attack_speed = 3.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pk37i"]
+atlas = ExtResource("5_6vsfd")
+region = Rect2(6, 5, 85, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_51vb0"]
+atlas = ExtResource("7_va8ct")
+region = Rect2(6, 5, 85, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4jtq"]
+atlas = ExtResource("8_q1w1h")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8c6xc"]
+atlas = ExtResource("10_0ikjs")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxihw"]
+atlas = ExtResource("11_2v0hw")
+region = Rect2(17, 18, 62, 61)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hhuct"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_g03sn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mt0kn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_sjbti")
+}],
+"loop": false,
+"name": &"idle_front",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_gdu5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ammva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_rk86w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0o2sq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_kq0ee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_uemny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_48kpu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_0wb62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_drh16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_qdnei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_stmkd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_5pssb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_grtcl")
+}],
+"loop": false,
+"name": &"shoot_back",
+"speed": 45.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_sjbti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_qnr3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_xn2b8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_brno5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_p20a5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_loubw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_vvemt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_c46s1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_xa6cv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_6xyck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_33ceh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_71cv0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_demhm")
+}],
+"loop": false,
+"name": &"shoot_front",
+"speed": 45.0
+}]
+
+[sub_resource type="Animation" id="Animation_l8ytr"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MagicHeart:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_q7tsy"]
+resource_name = "Rotate"
+loop_mode = 1
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MagicHeart:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(1, 1),
+"points": PackedFloat32Array(0, 0, 0, 0, 0, 6.28319, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i3pef"]
+_data = {
+"RESET": SubResource("Animation_l8ytr"),
+"Rotate": SubResource("Animation_q7tsy")
+}
+
+[sub_resource type="Gradient" id="Gradient_ygr8u"]
+offsets = PackedFloat32Array(0.00181818, 1)
+colors = PackedColorArray(1, 0.533333, 1, 1, 1, 0.560784, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_x1k1b"]
+gradient = SubResource("Gradient_ygr8u")
+fill = 1
+fill_from = Vector2(0.487179, 0.521368)
+fill_to = Vector2(0.730769, 0.273504)
+
+[sub_resource type="Animation" id="Animation_w714g"]
+resource_name = "Magic"
+loop_mode = 1
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-35.3768, -0.25, 0, 0.25, 0, -43.0674, -0.25, 0, 0.25, 0, -35.3768, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+
+[sub_resource type="Animation" id="Animation_umvui"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-75, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_d40ft"]
+_data = {
+"Magic": SubResource("Animation_w714g"),
+"RESET": SubResource("Animation_umvui")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n48k0"]
+radius = 73.9444
+
+[node name="ProtectorChurch" node_paths=PackedStringArray("magician") instance=ExtResource("1_8jdpb")]
+y_sort_enabled = false
+script = ExtResource("2_ganok")
+level_damage_list = Array[ExtResource("3_n74to")]([SubResource("Resource_4ifho"), SubResource("Resource_rsprm"), SubResource("Resource_m5q5l"), SubResource("Resource_hc411"), SubResource("Resource_852nd"), SubResource("Resource_0hacb")])
+dust_kill_waiting_time_list = Array[float]([22.0, 21.0, 20.0])
+start_data = SubResource("Resource_hwtnj")
+magician = NodePath("Wizard")
+tower_name = "守卫者教堂"
+tower_texture = ExtResource("2_dl6qr")
+tower_id = 4
+tower_level = 4
+tower_value = 830
+start_tower_range = 400
+tower_skill_levels = Array[int]([0, 0])
+
+[node name="TowerButton" parent="." index="2"]
+offset_top = -75.0
+
+[node name="Circle" parent="TowerUI" index="4"]
+position = Vector2(0, -32)
+
+[node name="TowerSkillButton" parent="TowerUI/Circle" index="1" node_paths=PackedStringArray("linked_tower") instance=ExtResource("4_rckvb")]
+offset_left = -140.001
+offset_top = -139.999
+offset_right = -55.001
+offset_bottom = -54.9993
+texture_normal = SubResource("AtlasTexture_pk37i")
+texture_pressed = SubResource("AtlasTexture_pk37i")
+texture_hover = ExtResource("6_whfuf")
+texture_disabled = SubResource("AtlasTexture_51vb0")
+linked_tower = NodePath("../../..")
+skill_name = "铁傀儡"
+skill_prices = Array[int]([300, 200, 200])
+skill_intro = PackedStringArray("召唤一个强韧的铁傀儡，拦截并伤害敌人。", "提高铁傀儡的最大生命，攻击力与护甲。", "进一步提高铁傀儡的最大生命，攻击力与护甲。")
+skill_words = "铁质熨斗，绝妙好词！"
+
+[node name="TowerSkillButton2" parent="TowerUI/Circle" index="2" node_paths=PackedStringArray("linked_tower") instance=ExtResource("4_rckvb")]
+offset_left = 53.7494
+offset_top = -140.0
+offset_right = 138.749
+offset_bottom = -55.0002
+texture_normal = SubResource("AtlasTexture_u4jtq")
+texture_pressed = SubResource("AtlasTexture_u4jtq")
+texture_hover = ExtResource("9_8tddd")
+texture_disabled = SubResource("AtlasTexture_8c6xc")
+linked_tower = NodePath("../../..")
+skill_name = "尘解"
+skill_id = 1
+skill_prices = Array[int]([350, 175, 175])
+skill_intro = PackedStringArray("释放一个小型法阵，尘解小范围内的敌人，并对无法秒杀的敌人造成400点魔法伤害。", "释放一个小型法阵，尘解小范围内的敌人，并对无法秒杀的敌人造成600点魔法伤害。", "释放一个小型法阵，尘解小范围内的敌人，并对无法秒杀的敌人造成800点魔法伤害。")
+skill_words = "尘归尘，土归土"
+
+[node name="FlagButton" type="TextureButton" parent="TowerUI/Circle" index="3"]
+offset_left = 70.0001
+offset_top = 13.7497
+offset_right = 132.0
+offset_bottom = 74.7497
+focus_mode = 0
+texture_normal = SubResource("AtlasTexture_uxihw")
+texture_pressed = SubResource("AtlasTexture_uxihw")
+texture_hover = ExtResource("12_2pu2t")
+stretch_mode = 3
+
+[node name="TowerSprite" parent="." index="7"]
+position = Vector2(0, -32)
+scale = Vector2(1.21038, 1.21038)
+sprite_frames = SubResource("SpriteFrames_hhuct")
+
+[node name="Wizard" type="AnimatedSprite2D" parent="." index="9" node_paths=PackedStringArray("tower")]
+position = Vector2(1, -72)
+sprite_frames = SubResource("SpriteFrames_mt0kn")
+animation = &"idle_front"
+script = ExtResource("42_5h38e")
+tower = NodePath("..")
+summon_frame = 31
+
+[node name="MagicAnimationPlayer" type="AnimationPlayer" parent="Wizard" index="0"]
+libraries = {
+"": SubResource("AnimationLibrary_i3pef")
+}
+autoplay = "Rotate"
+
+[node name="MagicHeart" type="Sprite2D" parent="Wizard" index="1"]
+position = Vector2(-1, -75)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("6_cpoqd")
+region_enabled = true
+region_rect = Rect2(377, 116, 116, 113)
+
+[node name="RayLight" type="Sprite2D" parent="Wizard/MagicHeart" index="0"]
+scale = Vector2(1.83423, 1.83423)
+texture = SubResource("GradientTexture2D_x1k1b")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Wizard/MagicHeart" index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_d40ft")
+}
+autoplay = "Magic"
+speed_scale = 0.8
+
+[node name="UnitMoveArea" type="Area2D" parent="." index="10"]
+z_index = 100
+scale = Vector2(3.4, 3.4)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitMoveArea" index="0"]
+scale = Vector2(1, 0.7)
+shape = SubResource("CircleShape2D_n48k0")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="UnitMoveArea" index="1"]
+scale = Vector2(0.386533, 0.270573)
+texture = ExtResource("44_fpec7")
+
+[node name="FirstMoveRays" type="Node2D" parent="." index="11"]
+scale = Vector2(3.4, 3.4)
+
+[node name="RayCast2D" type="RayCast2D" parent="FirstMoveRays" index="0"]
+target_position = Vector2(0, 52)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D2" type="RayCast2D" parent="FirstMoveRays" index="1"]
+target_position = Vector2(54, 35)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D3" type="RayCast2D" parent="FirstMoveRays" index="2"]
+target_position = Vector2(75, 0)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D4" type="RayCast2D" parent="FirstMoveRays" index="3"]
+target_position = Vector2(54, -35)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D5" type="RayCast2D" parent="FirstMoveRays" index="4"]
+target_position = Vector2(0, -52)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D6" type="RayCast2D" parent="FirstMoveRays" index="5"]
+target_position = Vector2(-54, -35)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D7" type="RayCast2D" parent="FirstMoveRays" index="6"]
+target_position = Vector2(-75, 0)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D8" type="RayCast2D" parent="FirstMoveRays" index="7"]
+target_position = Vector2(-54, 35)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="ReadyAttackTimer" type="Timer" parent="." index="12"]
+wait_time = 0.5
+one_shot = true
+
+[node name="ShotTimer" type="Timer" parent="." index="13"]
+wait_time = 0.25
+
+[node name="SecurityTimer" type="Timer" parent="." index="14"]
+wait_time = 10.0
+one_shot = true
+
+[node name="RayAudio" type="AudioStreamPlayer" parent="." index="15"]
+stream = ExtResource("45_evpj8")
+bus = &"Sound"
+
+[node name="RayAudio2" type="AudioStreamPlayer" parent="." index="16"]
+stream = ExtResource("46_x0l7f")
+bus = &"Sound"
+
+[node name="DustKillTimer" type="Timer" parent="." index="17"]
+one_shot = true
+
+[node name="DustKillAudio" type="AudioStreamPlayer" parent="." index="18"]
+stream = ExtResource("47_wvvm6")
+volume_db = -4.0
+bus = &"Sound"
+
+[connection signal="pressed" from="TowerUI/Circle/FlagButton" to="." method="_on_flag_button_pressed"]
+[connection signal="input_event" from="UnitMoveArea" to="." method="_on_unit_move_area_input_event"]
+[connection signal="timeout" from="ShotTimer" to="." method="_on_shot_timer_timeout"]
+[connection signal="timeout" from="SecurityTimer" to="." method="_on_security_timer_timeout"]

@@ -1,0 +1,253 @@
+[gd_scene load_steps=50 format=3 uid="uid://cihuaqvavsqr6"]
+
+[ext_resource type="PackedScene" uid="uid://dtyu2t5hq40nc" path="res://Scenes/DefenceTowers/ArcherTowers/archer_tower.tscn" id="1_nncpl"]
+[ext_resource type="PackedScene" uid="uid://drjvqvw33m3ab" path="res://Scenes/DefenceTowers/tower_button.tscn" id="2_6cxji"]
+[ext_resource type="Script" path="res://Scripts/Datas/TowerData.gd" id="2_b0cf1"]
+[ext_resource type="Texture2D" uid="uid://3uq00njsms0m" path="res://Assets/Images/DefenceTowers/Archers/Towers/LV1.png" id="4_crlbw"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/ArcherTowers/shooter.gd" id="5_h7i1c"]
+[ext_resource type="Texture2D" uid="uid://d4bkrkv6metmq" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Front_00.png" id="5_rp6in"]
+[ext_resource type="Texture2D" uid="uid://cokhgycd43edm" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Back_00.png" id="6_q6h80"]
+[ext_resource type="Texture2D" uid="uid://cl5yscqugtmdg" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Back_01.png" id="7_bndtb"]
+[ext_resource type="Texture2D" uid="uid://bsrlt14x5g23d" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Back_02.png" id="8_v86ds"]
+[ext_resource type="Texture2D" uid="uid://bucgt8ixu2sil" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Back_03.png" id="9_c24uv"]
+[ext_resource type="Texture2D" uid="uid://cwxp2pabaomeh" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Back_04.png" id="10_v1w2m"]
+[ext_resource type="Texture2D" uid="uid://dutcema3b2w7k" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Back_05.png" id="11_ag504"]
+[ext_resource type="Texture2D" uid="uid://kj4l51pf52g" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Back_06.png" id="12_vj8t0"]
+[ext_resource type="Texture2D" uid="uid://cui86ea4uu1ar" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Back_07.png" id="13_vivr2"]
+[ext_resource type="Texture2D" uid="uid://cdmonyeppbe5a" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Back_08.png" id="14_1knqh"]
+[ext_resource type="Texture2D" uid="uid://bwtik221fteey" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Back_09.png" id="15_xlxqw"]
+[ext_resource type="Texture2D" uid="uid://bakrqrfg6v3mh" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Back_10.png" id="16_lfqvj"]
+[ext_resource type="Texture2D" uid="uid://qmg36h62e0kl" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Back_11.png" id="17_ro0hv"]
+[ext_resource type="Texture2D" uid="uid://o0f2dgtu0s5l" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Back_12.png" id="18_3flxu"]
+[ext_resource type="Texture2D" uid="uid://dxgsipmqidp75" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Back_13.png" id="19_k7srs"]
+[ext_resource type="Texture2D" uid="uid://buav1kuv0ifvf" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Back_14.png" id="20_kn84j"]
+[ext_resource type="Texture2D" uid="uid://d3ahthivmbt0g" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Back_15.png" id="21_ffom2"]
+[ext_resource type="Texture2D" uid="uid://dsiv0lgv3n6is" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Back_16.png" id="22_jdhm0"]
+[ext_resource type="Texture2D" uid="uid://cklqht68ex8rl" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Back_17.png" id="23_ibn1a"]
+[ext_resource type="Texture2D" uid="uid://bluqgb6aqaop0" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Back_18.png" id="24_h1237"]
+[ext_resource type="Texture2D" uid="uid://rm7u1rmp3xkt" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Back_19.png" id="25_4as3x"]
+[ext_resource type="Texture2D" uid="uid://x3vyyp0v2srl" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Back_20.png" id="26_5psd2"]
+[ext_resource type="Texture2D" uid="uid://b44hjo6fexyg4" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Front_01.png" id="27_p7b26"]
+[ext_resource type="Texture2D" uid="uid://6xkai6do0ky3" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Front_02.png" id="28_mhnfs"]
+[ext_resource type="Texture2D" uid="uid://jm1j8crf0bi2" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Front_03.png" id="29_sf6a5"]
+[ext_resource type="Texture2D" uid="uid://cscvjl7hxhp8y" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Front_04.png" id="30_5v07x"]
+[ext_resource type="Texture2D" uid="uid://b2r0eoilxul6y" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Front_05.png" id="31_ki4qq"]
+[ext_resource type="Texture2D" uid="uid://dsclthlf01ysp" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Front_06.png" id="32_h1vgh"]
+[ext_resource type="Texture2D" uid="uid://b6r2jg2dye3e" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Front_07.png" id="33_ommgd"]
+[ext_resource type="Texture2D" uid="uid://d4kgi2v3k2ihl" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Front_08.png" id="34_i7btp"]
+[ext_resource type="Texture2D" uid="uid://krsr5d5fo0db" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Front_09.png" id="35_pakkj"]
+[ext_resource type="Texture2D" uid="uid://dlliwcpyodu5f" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Front_10.png" id="36_xxspo"]
+[ext_resource type="Texture2D" uid="uid://d0i61a7sphgx4" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Front_11.png" id="37_wtvo7"]
+[ext_resource type="Texture2D" uid="uid://dpskbfy2g1yh0" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Front_12.png" id="38_4sc5t"]
+[ext_resource type="Texture2D" uid="uid://dnsss13vvie06" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Front_13.png" id="39_x7yc2"]
+[ext_resource type="Texture2D" uid="uid://bs6xasra67ein" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Front_14.png" id="40_1e8gd"]
+[ext_resource type="Texture2D" uid="uid://dguv2iq6ao2yb" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Front_15.png" id="41_tsske"]
+[ext_resource type="Texture2D" uid="uid://c2jaw2pqijjkm" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Front_16.png" id="42_lc7bk"]
+[ext_resource type="Texture2D" uid="uid://c42v1xbt1i6d" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Front_17.png" id="43_y5y30"]
+[ext_resource type="Texture2D" uid="uid://bds7eyqmraj0" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Front_18.png" id="44_oeoij"]
+[ext_resource type="Texture2D" uid="uid://b8ipup0ywcwoa" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Front_19.png" id="45_jxtm0"]
+[ext_resource type="Texture2D" uid="uid://doq454pdpvy00" path="res://Assets/Animations/Archers/LV1/ArcherLV1-Front_20.png" id="46_a2dyq"]
+
+[sub_resource type="Resource" id="Resource_v4qj0"]
+script = ExtResource("2_b0cf1")
+damage_low = 4
+damage_high = 6
+attack_speed = 0.8
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v7f48"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_rp6in")
+}],
+"loop": true,
+"name": &"idle_front",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_q6h80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bndtb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_v86ds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_c24uv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_v1w2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ag504")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_vj8t0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vivr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_1knqh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_xlxqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_lfqvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ro0hv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_3flxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_k7srs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_kn84j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ffom2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_jdhm0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ibn1a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_h1237")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_4as3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_5psd2")
+}],
+"loop": false,
+"name": &"shoot_back",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_rp6in")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_p7b26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_mhnfs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_sf6a5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_5v07x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_ki4qq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_h1vgh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_ommgd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_i7btp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_pakkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_xxspo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_wtvo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_4sc5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_x7yc2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_1e8gd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_tsske")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_lc7bk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_y5y30")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_oeoij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_jxtm0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_a2dyq")
+}],
+"loop": false,
+"name": &"shoot_front",
+"speed": 30.0
+}]
+
+[node name="ArcherTowerLV1" node_paths=PackedStringArray("shooter_list") instance=ExtResource("1_nncpl")]
+start_data = SubResource("Resource_v4qj0")
+shooter_list = [NodePath("TowerSprite/Shooter")]
+tower_name = "射手高台"
+tower_level = 1
+tower_value = 70
+start_tower_range = 280
+
+[node name="TowerButton" parent="." index="2"]
+offset_top = -55.0
+
+[node name="Circle" parent="TowerUI" index="4"]
+position = Vector2(0, -27)
+
+[node name="TowerButton" parent="TowerUI/Circle" index="1" node_paths=PackedStringArray("tower") instance=ExtResource("2_6cxji")]
+offset_left = -31.0006
+offset_top = -132.0
+offset_right = 30.9994
+offset_bottom = -70.9999
+tower = NodePath("../../..")
+id = 2
+price = 110
+unlocked_level = 2
+
+[node name="TowerSprite" parent="." index="7"]
+position = Vector2(0, 18)
+texture = ExtResource("4_crlbw")
+offset = Vector2(-1.19209e-07, -40)
+
+[node name="Shooter" type="AnimatedSprite2D" parent="TowerSprite" index="0" node_paths=PackedStringArray("tower")]
+position = Vector2(3, -80)
+sprite_frames = SubResource("SpriteFrames_v7f48")
+animation = &"shoot_front"
+autoplay = "idle_front"
+frame = 20
+script = ExtResource("5_h7i1c")
+tower = NodePath("../..")
+summon_frame = 16
+
+[node name="FrontNoFlip" type="Marker2D" parent="TowerSprite/Shooter" index="0"]
+position = Vector2(8, -11)
+
+[node name="FrontFlip" type="Marker2D" parent="TowerSprite/Shooter" index="1"]
+position = Vector2(-8, -11)
+
+[node name="BackFlip" type="Marker2D" parent="TowerSprite/Shooter" index="2"]
+position = Vector2(-4, -16)
+
+[node name="BackNoFlip" type="Marker2D" parent="TowerSprite/Shooter" index="3"]
+position = Vector2(3, -16)

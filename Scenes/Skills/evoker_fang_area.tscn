@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bv12u4d07j015"]
+
+[ext_resource type="Script" path="res://Scripts/Skills/evoker_fang_area.gd" id="1_ol8me"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_08kku"]
+radius = 73.9444
+
+[node name="EvokerFangArea" type="Area2D"]
+scale = Vector2(0.4, 0.4)
+collision_layer = 0
+collision_mask = 8
+script = ExtResource("1_ol8me")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 0.7)
+shape = SubResource("CircleShape2D_08kku")
+debug_color = Color(0, 0.6, 0.701961, 0)

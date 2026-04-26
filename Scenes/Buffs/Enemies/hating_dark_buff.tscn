@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://bs6di8bd3aqqc"]
+
+[ext_resource type="PackedScene" uid="uid://bjfa3t67tpsbr" path="res://Scenes/Buffs/property_buff.tscn" id="1_cnjsr"]
+[ext_resource type="Script" path="res://Scripts/Buffs/property_buff_block.gd" id="2_tqbiw"]
+[ext_resource type="Script" path="res://Scripts/Classes/potion_particle_leader.gd" id="3_r0q3o"]
+
+[sub_resource type="Resource" id="Resource_6gsy8"]
+script = ExtResource("2_tqbiw")
+property_type = 1
+operation_type = 1
+operation_data = 0.5
+
+[sub_resource type="Resource" id="Resource_afy8g"]
+script = ExtResource("2_tqbiw")
+property_type = 2
+operation_type = 1
+operation_data = 0.5
+
+[node name="HatingDarkBuff" instance=ExtResource("1_cnjsr")]
+buff_blocks = Array[ExtResource("2_tqbiw")]([SubResource("Resource_6gsy8"), SubResource("Resource_afy8g")])
+buff_type = 1
+duration = 8.0
+buff_tag = "HatingDarkBuff"
+immune_groups = Array[String](["god"])
+
+[node name="PotionParticleLeader" type="Node2D" parent="." index="0" node_paths=PackedStringArray("buff_vehicle")]
+script = ExtResource("3_r0q3o")
+potion_color = Color(0, 0, 0, 1)
+buff_vehicle = NodePath("..")

@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://csh7higjurisu"]
+
+[ext_resource type="PackedScene" uid="uid://caufauw6v502y" path="res://Scenes/Classes/bullet_class.tscn" id="1_md6qt"]
+[ext_resource type="Script" path="res://Scripts/Bullets/physics_stone.gd" id="2_e02e0"]
+[ext_resource type="Texture2D" uid="uid://cofnlv67wb2sc" path="res://Assets/Images/Bullets/stone.png" id="3_t1jh6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o5n3q"]
+radius = 11.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cqnpu"]
+radius = 44.0114
+
+[sub_resource type="Curve" id="Curve_3es4e"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 2.99159, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_mnl6y"]
+colors = PackedColorArray(1, 1, 1, 0.717647, 1, 1, 1, 0)
+
+[node name="PhysicsStone" instance=ExtResource("1_md6qt")]
+script = ExtResource("2_e02e0")
+tail_max_length = 20
+bullet_speed = 0.8
+
+[node name="BulletSprite" parent="." index="0"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_t1jh6")
+
+[node name="HitBox" parent="." index="1"]
+collision_mask = 96
+monitorable = false
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+shape = SubResource("CircleShape2D_o5n3q")
+
+[node name="ExplosionHitArea" type="Area2D" parent="." index="2"]
+collision_layer = 0
+collision_mask = 96
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExplosionHitArea" index="0"]
+shape = SubResource("CircleShape2D_cqnpu")
+
+[node name="Tail" type="Line2D" parent="." index="4"]
+top_level = true
+width_curve = SubResource("Curve_3es4e")
+gradient = SubResource("Gradient_mnl6y")
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 16
+
+[node name="TailTimer" type="Timer" parent="Tail" index="0"]
+wait_time = 0.05
+autostart = true

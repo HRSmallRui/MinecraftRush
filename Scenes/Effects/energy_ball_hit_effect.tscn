@@ -1,0 +1,102 @@
+[gd_scene load_steps=21 format=3 uid="uid://b3btjp6015gu2"]
+
+[ext_resource type="Texture2D" uid="uid://bhsy08md8oagl" path="res://Assets/Images/Effects/OperatorAOE/0001.png" id="1_ehn03"]
+[ext_resource type="Script" path="res://Scripts/Effects/normal_effect.gd" id="1_jwoq5"]
+[ext_resource type="Texture2D" uid="uid://bij1scdhmltfj" path="res://Assets/Images/Effects/OperatorAOE/0002.png" id="2_p37mw"]
+[ext_resource type="Texture2D" uid="uid://blo7d3aw24syx" path="res://Assets/Images/Effects/OperatorAOE/0003.png" id="3_ylayu"]
+[ext_resource type="Texture2D" uid="uid://hcvydas1ao1x" path="res://Assets/Images/Effects/OperatorAOE/0004.png" id="4_6pmrm"]
+[ext_resource type="Texture2D" uid="uid://ba318ils50gl7" path="res://Assets/Images/Effects/OperatorAOE/0005.png" id="5_fry6w"]
+[ext_resource type="Texture2D" uid="uid://367cmukymfpc" path="res://Assets/Images/Effects/OperatorAOE/0006.png" id="6_pry0s"]
+[ext_resource type="Texture2D" uid="uid://cuk7uxjrwqvhk" path="res://Assets/Images/Effects/OperatorAOE/0007.png" id="7_npedu"]
+[ext_resource type="Texture2D" uid="uid://o5fdlfko4hkt" path="res://Assets/Images/Effects/OperatorAOE/0008.png" id="8_nq7ph"]
+[ext_resource type="Texture2D" uid="uid://b10sd74fa7dfr" path="res://Assets/Images/Effects/OperatorAOE/0009.png" id="9_sy7ub"]
+[ext_resource type="Texture2D" uid="uid://dh0qudl2cw3ns" path="res://Assets/Images/Effects/OperatorAOE/0010.png" id="10_bsnla"]
+[ext_resource type="Texture2D" uid="uid://cd3cp405viwlc" path="res://Assets/Images/Effects/OperatorAOE/0011.png" id="11_g0hre"]
+[ext_resource type="Texture2D" uid="uid://b7kwjpudg8i8b" path="res://Assets/Images/Effects/OperatorAOE/0012.png" id="12_tosh8"]
+[ext_resource type="Texture2D" uid="uid://deu2xws6d81xn" path="res://Assets/Images/Effects/OperatorAOE/0013.png" id="13_53xct"]
+[ext_resource type="Texture2D" uid="uid://byale58140av0" path="res://Assets/Images/Effects/OperatorAOE/0014.png" id="14_gl53t"]
+[ext_resource type="Texture2D" uid="uid://dbjib1mtwilvl" path="res://Assets/Images/Effects/OperatorAOE/0015.png" id="15_uo16m"]
+[ext_resource type="AudioStream" uid="uid://c04tyxjpf7v7a" path="res://Assets/Sounds/FXs/DefenceTowers/OperatorTurret/演算者AOE.wav" id="17_4p10k"]
+[ext_resource type="Script" path="res://Scripts/Bullets/operator_hit_area.gd" id="18_b3r3u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6wcjj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ehn03")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_p37mw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ylayu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6pmrm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fry6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pry0s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_npedu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nq7ph")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_sy7ub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_bsnla")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_g0hre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_tosh8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_53xct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_gl53t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_uo16m")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 24.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q7mui"]
+radius = 43.1045
+
+[node name="EnergyBallHitEffect" type="AnimatedSprite2D"]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_6wcjj")
+autoplay = "default"
+frame = 15
+frame_progress = 1.0
+script = ExtResource("1_jwoq5")
+
+[node name="AOEAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_4p10k")
+volume_db = -16.0
+autoplay = true
+bus = &"Sound"
+
+[node name="OperatorHitArea" type="Area2D" parent="."]
+scale = Vector2(0.5, 0.5)
+collision_layer = 0
+collision_mask = 96
+script = ExtResource("18_b3r3u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OperatorHitArea"]
+shape = SubResource("CircleShape2D_q7mui")

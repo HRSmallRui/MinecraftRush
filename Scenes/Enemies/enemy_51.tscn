@@ -1,0 +1,621 @@
+[gd_scene load_steps=141 format=3 uid="uid://civkk3fm2ol6"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_pexjh"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_51.gd" id="2_l62ly"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="3_65nke"]
+[ext_resource type="Texture2D" uid="uid://elwoin4xdtf3" path="res://Assets/Images/UI/InformationBar/EnemyChapter6/荆棘射手.png" id="3_ca21u"]
+[ext_resource type="AudioStream" uid="uid://bx2lxbf0mlaqx" path="res://Assets/Sounds/FXs/Enemies/骨裂.wav" id="4_5r5ci"]
+[ext_resource type="PackedScene" uid="uid://cmg4q04xfhhcu" path="res://Scenes/Bullets/skeletion_physics_arrow.tscn" id="4_fvt4j"]
+[ext_resource type="Texture2D" uid="uid://dmbln18ghqyvx" path="res://Assets/Animations/Enemies/51荆棘射手/attack_00.png" id="4_mhrfk"]
+[ext_resource type="Texture2D" uid="uid://ctdn2tgu7glkk" path="res://Assets/Animations/Enemies/51荆棘射手/attack_01.png" id="5_royr2"]
+[ext_resource type="AudioStream" uid="uid://cy21paby5onde" path="res://Assets/Sounds/FXs/Enemies/骷髅死亡.wav" id="5_wdqcg"]
+[ext_resource type="Texture2D" uid="uid://drb67j0w5hpk8" path="res://Assets/Animations/Enemies/51荆棘射手/attack_02.png" id="6_lrq7p"]
+[ext_resource type="Texture2D" uid="uid://bhv3c68iwbxkp" path="res://Assets/Animations/Enemies/51荆棘射手/attack_03.png" id="7_si7w3"]
+[ext_resource type="Texture2D" uid="uid://cu2ag2daj3ric" path="res://Assets/Animations/Enemies/51荆棘射手/attack_04.png" id="8_ygo36"]
+[ext_resource type="Texture2D" uid="uid://bdjqen6dg3r1y" path="res://Assets/Animations/Enemies/51荆棘射手/attack_05.png" id="9_itltn"]
+[ext_resource type="Texture2D" uid="uid://xgl7bslmsg2l" path="res://Assets/Animations/Enemies/51荆棘射手/attack_06.png" id="10_erhpr"]
+[ext_resource type="Texture2D" uid="uid://6nysx5hhtq8w" path="res://Assets/Animations/Enemies/51荆棘射手/attack_07.png" id="11_njtew"]
+[ext_resource type="Texture2D" uid="uid://cfaba0bs73ekg" path="res://Assets/Animations/Enemies/51荆棘射手/attack_08.png" id="12_cc5lf"]
+[ext_resource type="Texture2D" uid="uid://bu5rhmilah4ke" path="res://Assets/Animations/Enemies/51荆棘射手/attack_09.png" id="13_jbwlv"]
+[ext_resource type="Texture2D" uid="uid://ba5k4hnfs66wp" path="res://Assets/Animations/Enemies/51荆棘射手/attack_10.png" id="14_kmc1k"]
+[ext_resource type="Texture2D" uid="uid://dw6tv02pjds73" path="res://Assets/Animations/Enemies/51荆棘射手/attack_11.png" id="15_peert"]
+[ext_resource type="Texture2D" uid="uid://b1xtt0n71k76a" path="res://Assets/Animations/Enemies/51荆棘射手/attack_12.png" id="16_utu76"]
+[ext_resource type="Texture2D" uid="uid://cvc2e3jb8sjce" path="res://Assets/Animations/Enemies/51荆棘射手/attack_13.png" id="17_esvms"]
+[ext_resource type="Texture2D" uid="uid://xsgxkggopi75" path="res://Assets/Animations/Enemies/51荆棘射手/attack_14.png" id="18_iq0is"]
+[ext_resource type="Texture2D" uid="uid://cw0t22buhhy52" path="res://Assets/Animations/Enemies/51荆棘射手/attack_15.png" id="19_75e7j"]
+[ext_resource type="Texture2D" uid="uid://c0gboohdk0ei5" path="res://Assets/Animations/Enemies/51荆棘射手/attack_16.png" id="20_6u76v"]
+[ext_resource type="Texture2D" uid="uid://cutc2up6851tr" path="res://Assets/Animations/Enemies/51荆棘射手/attack_17.png" id="21_cm2vq"]
+[ext_resource type="Texture2D" uid="uid://dn0i6eut5yshj" path="res://Assets/Animations/Enemies/51荆棘射手/attack_18.png" id="22_whf6s"]
+[ext_resource type="Texture2D" uid="uid://cvis6r6xib40k" path="res://Assets/Animations/Enemies/51荆棘射手/attack_19.png" id="23_dfocb"]
+[ext_resource type="Texture2D" uid="uid://dtb1auyygm12" path="res://Assets/Animations/Enemies/51荆棘射手/attack_20.png" id="24_j8nps"]
+[ext_resource type="Texture2D" uid="uid://dni680y3tb2uy" path="res://Assets/Animations/Enemies/51荆棘射手/attack_21.png" id="25_cehru"]
+[ext_resource type="Texture2D" uid="uid://baivgehjugciw" path="res://Assets/Animations/Enemies/51荆棘射手/attack_22.png" id="26_7x43m"]
+[ext_resource type="Texture2D" uid="uid://dclbek2ubqjpy" path="res://Assets/Animations/Enemies/51荆棘射手/attack_23.png" id="27_6ki6w"]
+[ext_resource type="Texture2D" uid="uid://cm10tf7pvct8n" path="res://Assets/Animations/Enemies/51荆棘射手/attack_24.png" id="28_782jd"]
+[ext_resource type="Texture2D" uid="uid://c83neoie51f8n" path="res://Assets/Animations/Enemies/51荆棘射手/die_00.png" id="29_lo4ir"]
+[ext_resource type="Texture2D" uid="uid://oa0htl5er3us" path="res://Assets/Animations/Enemies/51荆棘射手/die_01.png" id="30_63pdx"]
+[ext_resource type="Texture2D" uid="uid://c6ec8b3qwlhub" path="res://Assets/Animations/Enemies/51荆棘射手/die_02.png" id="31_rf4qv"]
+[ext_resource type="Texture2D" uid="uid://3ydpt4e1miah" path="res://Assets/Animations/Enemies/51荆棘射手/die_03.png" id="32_kfiyt"]
+[ext_resource type="Texture2D" uid="uid://chlhcfr6ony5m" path="res://Assets/Animations/Enemies/51荆棘射手/die_04.png" id="33_asioo"]
+[ext_resource type="Texture2D" uid="uid://sl0bwf5abtk8" path="res://Assets/Animations/Enemies/51荆棘射手/die_05.png" id="34_3vx18"]
+[ext_resource type="Texture2D" uid="uid://8gfdd05ctnmb" path="res://Assets/Animations/Enemies/51荆棘射手/die_06.png" id="35_optb0"]
+[ext_resource type="Texture2D" uid="uid://dh1ce66njtax7" path="res://Assets/Animations/Enemies/51荆棘射手/die_07.png" id="36_im0rq"]
+[ext_resource type="Texture2D" uid="uid://cbq7y3327m8kn" path="res://Assets/Animations/Enemies/51荆棘射手/die_08.png" id="37_e62ms"]
+[ext_resource type="Texture2D" uid="uid://cfio4owo5k156" path="res://Assets/Animations/Enemies/51荆棘射手/die_09.png" id="38_n3xpn"]
+[ext_resource type="Texture2D" uid="uid://cq0qgewbpntdf" path="res://Assets/Animations/Enemies/51荆棘射手/die_10.png" id="39_hodqu"]
+[ext_resource type="Texture2D" uid="uid://bqiy1xo42bx3n" path="res://Assets/Animations/Enemies/51荆棘射手/die_11.png" id="40_5bp5j"]
+[ext_resource type="Texture2D" uid="uid://c1gc3onkgxnyq" path="res://Assets/Animations/Enemies/51荆棘射手/die_12.png" id="41_lyq0d"]
+[ext_resource type="Texture2D" uid="uid://cxcu0is0bmh64" path="res://Assets/Animations/Enemies/51荆棘射手/far_attack_00.png" id="42_ojk7k"]
+[ext_resource type="Texture2D" uid="uid://inb38c0eniph" path="res://Assets/Animations/Enemies/51荆棘射手/far_attack_01.png" id="43_0m6f6"]
+[ext_resource type="Texture2D" uid="uid://8cmldys6w817" path="res://Assets/Animations/Enemies/51荆棘射手/far_attack_02.png" id="44_3lq8d"]
+[ext_resource type="Texture2D" uid="uid://bplliv6g17yex" path="res://Assets/Animations/Enemies/51荆棘射手/far_attack_03.png" id="45_03jjj"]
+[ext_resource type="Texture2D" uid="uid://dfximnekijrc5" path="res://Assets/Animations/Enemies/51荆棘射手/far_attack_04.png" id="46_i56gl"]
+[ext_resource type="Texture2D" uid="uid://bd2lhk4y5r51w" path="res://Assets/Animations/Enemies/51荆棘射手/far_attack_05.png" id="47_2vyfh"]
+[ext_resource type="Texture2D" uid="uid://bb3p701e84b0l" path="res://Assets/Animations/Enemies/51荆棘射手/far_attack_06.png" id="48_nak87"]
+[ext_resource type="Texture2D" uid="uid://dn51w4ito7g8o" path="res://Assets/Animations/Enemies/51荆棘射手/far_attack_07.png" id="49_pccl8"]
+[ext_resource type="Texture2D" uid="uid://ckupw2fvojmg3" path="res://Assets/Animations/Enemies/51荆棘射手/far_attack_08.png" id="50_csfye"]
+[ext_resource type="Texture2D" uid="uid://lrucx2v2qe5g" path="res://Assets/Animations/Enemies/51荆棘射手/far_attack_09.png" id="51_a7r1a"]
+[ext_resource type="Texture2D" uid="uid://ut88w5ajyif0" path="res://Assets/Animations/Enemies/51荆棘射手/far_attack_10.png" id="52_1v3b3"]
+[ext_resource type="Texture2D" uid="uid://bmw0tqb3mbses" path="res://Assets/Animations/Enemies/51荆棘射手/far_attack_11.png" id="53_mujl0"]
+[ext_resource type="Texture2D" uid="uid://bq71fk54gkk0d" path="res://Assets/Animations/Enemies/51荆棘射手/far_attack_12.png" id="54_iwisu"]
+[ext_resource type="Texture2D" uid="uid://da2eh2wyn2t10" path="res://Assets/Animations/Enemies/51荆棘射手/far_attack_13.png" id="55_v3ah7"]
+[ext_resource type="Texture2D" uid="uid://b85ib8ejt0jbh" path="res://Assets/Animations/Enemies/51荆棘射手/far_attack_14.png" id="56_wqvka"]
+[ext_resource type="Texture2D" uid="uid://dhnih8u7sa2h0" path="res://Assets/Animations/Enemies/51荆棘射手/far_attack_15.png" id="57_qjspa"]
+[ext_resource type="Texture2D" uid="uid://5pwya13ph02l" path="res://Assets/Animations/Enemies/51荆棘射手/far_attack_16.png" id="58_bi8ag"]
+[ext_resource type="Texture2D" uid="uid://cgey6g80p5s3t" path="res://Assets/Animations/Enemies/51荆棘射手/far_attack_17.png" id="59_yvk38"]
+[ext_resource type="Texture2D" uid="uid://3god231sjvqx" path="res://Assets/Animations/Enemies/51荆棘射手/far_attack_18.png" id="60_3nqhi"]
+[ext_resource type="Texture2D" uid="uid://cbrf7lw0qv6jp" path="res://Assets/Animations/Enemies/51荆棘射手/far_attack_19.png" id="61_41f00"]
+[ext_resource type="Texture2D" uid="uid://de8vdejbuuinc" path="res://Assets/Animations/Enemies/51荆棘射手/far_attack_20.png" id="62_w55su"]
+[ext_resource type="Texture2D" uid="uid://bgtp8wfxg4t7d" path="res://Assets/Animations/Enemies/51荆棘射手/move_back_00.png" id="63_ljxl0"]
+[ext_resource type="Texture2D" uid="uid://ywn3frly56yj" path="res://Assets/Animations/Enemies/51荆棘射手/move_back_01.png" id="64_rd7g0"]
+[ext_resource type="Texture2D" uid="uid://di8ei6k2ql5f6" path="res://Assets/Animations/Enemies/51荆棘射手/move_back_02.png" id="65_ax3rn"]
+[ext_resource type="Texture2D" uid="uid://bfqkbqqysocjf" path="res://Assets/Animations/Enemies/51荆棘射手/move_back_03.png" id="66_a07is"]
+[ext_resource type="Texture2D" uid="uid://iqnbyhrreftp" path="res://Assets/Animations/Enemies/51荆棘射手/move_back_04.png" id="67_haevq"]
+[ext_resource type="Texture2D" uid="uid://db1737q8vtnua" path="res://Assets/Animations/Enemies/51荆棘射手/move_back_05.png" id="68_x61gn"]
+[ext_resource type="Texture2D" uid="uid://2r2yl22kqb64" path="res://Assets/Animations/Enemies/51荆棘射手/move_back_06.png" id="69_eneku"]
+[ext_resource type="Texture2D" uid="uid://b7ec2qraeobrh" path="res://Assets/Animations/Enemies/51荆棘射手/move_back_07.png" id="70_f6qlu"]
+[ext_resource type="Texture2D" uid="uid://coarpvyfef68" path="res://Assets/Animations/Enemies/51荆棘射手/move_back_08.png" id="71_k2b0k"]
+[ext_resource type="Texture2D" uid="uid://dt7cik5tyo2gh" path="res://Assets/Animations/Enemies/51荆棘射手/move_back_09.png" id="72_qujbj"]
+[ext_resource type="Texture2D" uid="uid://bki8vm1kjp0a0" path="res://Assets/Animations/Enemies/51荆棘射手/move_back_10.png" id="73_tw4tj"]
+[ext_resource type="Texture2D" uid="uid://b25ct5lqxqq6i" path="res://Assets/Animations/Enemies/51荆棘射手/move_back_11.png" id="74_sfimr"]
+[ext_resource type="Texture2D" uid="uid://b71v1sw1e5pe0" path="res://Assets/Animations/Enemies/51荆棘射手/move_back_12.png" id="75_wdrth"]
+[ext_resource type="Texture2D" uid="uid://cyelog1fhwxel" path="res://Assets/Animations/Enemies/51荆棘射手/move_back_13.png" id="76_ytnnl"]
+[ext_resource type="Texture2D" uid="uid://cjtg233cc1aro" path="res://Assets/Animations/Enemies/51荆棘射手/move_back_14.png" id="77_31c5v"]
+[ext_resource type="Texture2D" uid="uid://nmk6ju7c7eve" path="res://Assets/Animations/Enemies/51荆棘射手/move_back_15.png" id="78_gxsy0"]
+[ext_resource type="Texture2D" uid="uid://c7no66rheadmp" path="res://Assets/Animations/Enemies/51荆棘射手/move_back_16.png" id="79_i7wn3"]
+[ext_resource type="Texture2D" uid="uid://bx5d3cnc4voiv" path="res://Assets/Animations/Enemies/51荆棘射手/move_back_17.png" id="80_lyfjp"]
+[ext_resource type="Texture2D" uid="uid://b8ootky066vxp" path="res://Assets/Animations/Enemies/51荆棘射手/move_back_18.png" id="81_uq4we"]
+[ext_resource type="Texture2D" uid="uid://cmbhg6rpmfha2" path="res://Assets/Animations/Enemies/51荆棘射手/move_back_19.png" id="82_5bu4k"]
+[ext_resource type="Texture2D" uid="uid://bqcr6ynib1t5p" path="res://Assets/Animations/Enemies/51荆棘射手/move_back_20.png" id="83_cknh5"]
+[ext_resource type="Texture2D" uid="uid://bwtidfqw5mawk" path="res://Assets/Animations/Enemies/51荆棘射手/move_back_21.png" id="84_paxd0"]
+[ext_resource type="Texture2D" uid="uid://csakr61lhbbv3" path="res://Assets/Animations/Enemies/51荆棘射手/move_back_22.png" id="85_iel0u"]
+[ext_resource type="Texture2D" uid="uid://vtces7ih7aka" path="res://Assets/Animations/Enemies/51荆棘射手/move_back_23.png" id="86_s02qi"]
+[ext_resource type="Texture2D" uid="uid://bays00ynwd2j5" path="res://Assets/Animations/Enemies/51荆棘射手/move_front_00.png" id="87_l3qnt"]
+[ext_resource type="Texture2D" uid="uid://becvjrt1hq60s" path="res://Assets/Animations/Enemies/51荆棘射手/move_front_01.png" id="88_w8puq"]
+[ext_resource type="Texture2D" uid="uid://chfjvu1w1kh7u" path="res://Assets/Animations/Enemies/51荆棘射手/move_front_02.png" id="89_3dyki"]
+[ext_resource type="Texture2D" uid="uid://bp0rf2uneqg6y" path="res://Assets/Animations/Enemies/51荆棘射手/move_front_03.png" id="90_sy1ud"]
+[ext_resource type="Texture2D" uid="uid://cocu48uxqxme2" path="res://Assets/Animations/Enemies/51荆棘射手/move_front_04.png" id="91_2ppve"]
+[ext_resource type="Texture2D" uid="uid://ctmvt8wn18y7y" path="res://Assets/Animations/Enemies/51荆棘射手/move_front_05.png" id="92_jfqgn"]
+[ext_resource type="Texture2D" uid="uid://csi10asv3hg3w" path="res://Assets/Animations/Enemies/51荆棘射手/move_front_06.png" id="93_3t6f6"]
+[ext_resource type="Texture2D" uid="uid://cay48r7v4mlx7" path="res://Assets/Animations/Enemies/51荆棘射手/move_front_07.png" id="94_be7nj"]
+[ext_resource type="Texture2D" uid="uid://clswa5crrmiox" path="res://Assets/Animations/Enemies/51荆棘射手/move_front_08.png" id="95_jw3xm"]
+[ext_resource type="Texture2D" uid="uid://y2euwpvur0hk" path="res://Assets/Animations/Enemies/51荆棘射手/move_front_09.png" id="96_pr3tm"]
+[ext_resource type="Texture2D" uid="uid://bglue2a8dmpp4" path="res://Assets/Animations/Enemies/51荆棘射手/move_front_10.png" id="97_0xfri"]
+[ext_resource type="Texture2D" uid="uid://fwnv08uk6ty4" path="res://Assets/Animations/Enemies/51荆棘射手/move_front_11.png" id="98_ebojx"]
+[ext_resource type="Texture2D" uid="uid://cwqqq3frs7r05" path="res://Assets/Animations/Enemies/51荆棘射手/move_front_12.png" id="99_x56r0"]
+[ext_resource type="Texture2D" uid="uid://bm4bverinkjd5" path="res://Assets/Animations/Enemies/51荆棘射手/move_front_13.png" id="100_yagj4"]
+[ext_resource type="Texture2D" uid="uid://cpvg2n2g8gqys" path="res://Assets/Animations/Enemies/51荆棘射手/move_front_14.png" id="101_q3lj8"]
+[ext_resource type="Texture2D" uid="uid://cywuj51ni1pxr" path="res://Assets/Animations/Enemies/51荆棘射手/move_front_15.png" id="102_l8ldm"]
+[ext_resource type="Texture2D" uid="uid://dcu10jmes2ych" path="res://Assets/Animations/Enemies/51荆棘射手/move_front_16.png" id="103_em1iv"]
+[ext_resource type="Texture2D" uid="uid://d1cg63yceiqe3" path="res://Assets/Animations/Enemies/51荆棘射手/move_front_17.png" id="104_ob2pb"]
+[ext_resource type="Texture2D" uid="uid://dxi80t8dmub3r" path="res://Assets/Animations/Enemies/51荆棘射手/move_front_18.png" id="105_wfkd1"]
+[ext_resource type="Texture2D" uid="uid://clrewmuoj62fo" path="res://Assets/Animations/Enemies/51荆棘射手/move_front_19.png" id="106_y50wi"]
+[ext_resource type="Texture2D" uid="uid://cxvgts3fgn21i" path="res://Assets/Animations/Enemies/51荆棘射手/move_front_20.png" id="107_6jkps"]
+[ext_resource type="Texture2D" uid="uid://dss3v1ncd538j" path="res://Assets/Animations/Enemies/51荆棘射手/move_front_21.png" id="108_4ii8h"]
+[ext_resource type="Texture2D" uid="uid://bqpklyr21hqhv" path="res://Assets/Animations/Enemies/51荆棘射手/move_front_22.png" id="109_s0ji7"]
+[ext_resource type="Texture2D" uid="uid://codudaw0qd4fq" path="res://Assets/Animations/Enemies/51荆棘射手/move_front_23.png" id="110_v04sk"]
+[ext_resource type="Texture2D" uid="uid://dpj2a5f8nbd7k" path="res://Assets/Animations/Enemies/51荆棘射手/move_normal_00.png" id="111_tmtk3"]
+[ext_resource type="Texture2D" uid="uid://savrotgwtkej" path="res://Assets/Animations/Enemies/51荆棘射手/move_normal_01.png" id="112_nvuuk"]
+[ext_resource type="Texture2D" uid="uid://rbv42u80ot1w" path="res://Assets/Animations/Enemies/51荆棘射手/move_normal_02.png" id="113_mcq6b"]
+[ext_resource type="Texture2D" uid="uid://df2ct40jhm26c" path="res://Assets/Animations/Enemies/51荆棘射手/move_normal_03.png" id="114_d7els"]
+[ext_resource type="Texture2D" uid="uid://7r85lej2o417" path="res://Assets/Animations/Enemies/51荆棘射手/move_normal_04.png" id="115_nphqo"]
+[ext_resource type="Texture2D" uid="uid://cr5l5xix50g7x" path="res://Assets/Animations/Enemies/51荆棘射手/move_normal_05.png" id="116_vclax"]
+[ext_resource type="Texture2D" uid="uid://m00d3gu2yst7" path="res://Assets/Animations/Enemies/51荆棘射手/move_normal_06.png" id="117_bm7je"]
+[ext_resource type="Texture2D" uid="uid://bpame3d73co4j" path="res://Assets/Animations/Enemies/51荆棘射手/move_normal_07.png" id="118_3vudc"]
+[ext_resource type="Texture2D" uid="uid://d1s5kf7vsgxih" path="res://Assets/Animations/Enemies/51荆棘射手/move_normal_08.png" id="119_1203y"]
+[ext_resource type="Texture2D" uid="uid://ctngyhbwhgemn" path="res://Assets/Animations/Enemies/51荆棘射手/move_normal_09.png" id="120_uwtun"]
+[ext_resource type="Texture2D" uid="uid://caovguljjntp5" path="res://Assets/Animations/Enemies/51荆棘射手/move_normal_10.png" id="121_4txl7"]
+[ext_resource type="Texture2D" uid="uid://i3hdglhlf2u2" path="res://Assets/Animations/Enemies/51荆棘射手/move_normal_11.png" id="122_lgc6i"]
+[ext_resource type="Texture2D" uid="uid://d1nduouesm5o1" path="res://Assets/Animations/Enemies/51荆棘射手/move_normal_12.png" id="123_eb0po"]
+[ext_resource type="Texture2D" uid="uid://cjukx6ys100lc" path="res://Assets/Animations/Enemies/51荆棘射手/move_normal_13.png" id="124_qt07r"]
+[ext_resource type="Texture2D" uid="uid://c42ts2dsf1l5t" path="res://Assets/Animations/Enemies/51荆棘射手/move_normal_14.png" id="125_38tho"]
+[ext_resource type="Texture2D" uid="uid://bsw7kkeh0f3rq" path="res://Assets/Animations/Enemies/51荆棘射手/move_normal_15.png" id="126_1wkll"]
+[ext_resource type="Texture2D" uid="uid://dbj62pu8ugayj" path="res://Assets/Animations/Enemies/51荆棘射手/move_normal_16.png" id="127_aqtik"]
+[ext_resource type="Texture2D" uid="uid://dcpdf6l2wbchp" path="res://Assets/Animations/Enemies/51荆棘射手/move_normal_17.png" id="128_pnwn0"]
+[ext_resource type="Texture2D" uid="uid://demxll7gwo7u0" path="res://Assets/Animations/Enemies/51荆棘射手/move_normal_18.png" id="129_hym47"]
+[ext_resource type="Texture2D" uid="uid://cejulvrpvfq56" path="res://Assets/Animations/Enemies/51荆棘射手/move_normal_19.png" id="130_6j2of"]
+[ext_resource type="Texture2D" uid="uid://b1a58xtsi5diy" path="res://Assets/Animations/Enemies/51荆棘射手/move_normal_20.png" id="131_kbqay"]
+[ext_resource type="Texture2D" uid="uid://cm0701xtb45vi" path="res://Assets/Animations/Enemies/51荆棘射手/move_normal_21.png" id="132_oy2ww"]
+[ext_resource type="Texture2D" uid="uid://duauybroa1eyl" path="res://Assets/Animations/Enemies/51荆棘射手/move_normal_22.png" id="133_1ccmq"]
+[ext_resource type="Texture2D" uid="uid://icayy2q146ud" path="res://Assets/Animations/Enemies/51荆棘射手/move_normal_23.png" id="134_tmwyn"]
+
+[sub_resource type="Resource" id="Resource_4xfns"]
+script = ExtResource("3_65nke")
+health = 800
+dodge_rate = 0.0
+near_damage_low = 10
+near_damage_high = 30
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 20
+far_damage_high = 40
+far_attack_speed = 1.6
+far_damage_range = 320
+armor = 0.4
+physic_immune = false
+magic_defence = 0.8
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 1.1
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1wmik"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_mhrfk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_royr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lrq7p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_si7w3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ygo36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_itltn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_erhpr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_njtew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_cc5lf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jbwlv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_kmc1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_peert")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_utu76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_esvms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_iq0is")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_75e7j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_6u76v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_cm2vq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_whf6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_dfocb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_j8nps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_cehru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_7x43m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_6ki6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_782jd")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_lo4ir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_63pdx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_rf4qv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_kfiyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_asioo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_3vx18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_optb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_im0rq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_e62ms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_n3xpn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_hodqu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_5bp5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_lyq0d")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("42_ojk7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_0m6f6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_3lq8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_03jjj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_i56gl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_2vyfh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_nak87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_pccl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_csfye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_a7r1a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_1v3b3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_mujl0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_iwisu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_v3ah7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_wqvka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_qjspa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_bi8ag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_yvk38")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_3nqhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_41f00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_w55su")
+}],
+"loop": false,
+"name": &"far_attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_mhrfk")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("63_ljxl0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_rd7g0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_ax3rn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_a07is")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_haevq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_x61gn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_eneku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_f6qlu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_k2b0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_qujbj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_tw4tj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_sfimr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_wdrth")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_ytnnl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_31c5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_gxsy0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_i7wn3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_lyfjp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_uq4we")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_5bu4k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_cknh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_paxd0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_iel0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_s02qi")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("87_l3qnt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_w8puq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_3dyki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_sy1ud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_2ppve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_jfqgn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_3t6f6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_be7nj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_jw3xm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_pr3tm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_0xfri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_ebojx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_x56r0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_yagj4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_q3lj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_l8ldm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_em1iv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_ob2pb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_wfkd1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_y50wi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_6jkps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_4ii8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_s0ji7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_v04sk")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("111_tmtk3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_nvuuk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_mcq6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_d7els")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_nphqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_vclax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_bm7je")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_3vudc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_1203y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_uwtun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_4txl7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_lgc6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_eb0po")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_qt07r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_38tho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_1wkll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_aqtik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_pnwn0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_hym47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_6j2of")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_kbqay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_oy2ww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_1ccmq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_tmwyn")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 30.0
+}]
+
+[node name="Enemy51" groups=["skeleton"] instance=ExtResource("1_pexjh")]
+script = ExtResource("2_l62ly")
+enemy_name = "荆棘射手"
+enemy_id = 51
+enemy_texture = ExtResource("3_ca21u")
+enemy_type = 1
+start_data = SubResource("Resource_4xfns")
+far_attack_bullet_scene = ExtResource("4_fvt4j")
+bounty = 30
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(-20, -105)
+sprite_frames = SubResource("SpriteFrames_1wmik")
+animation = &"far_attack"
+autoplay = "idle"
+
+[node name="SkeletonAudio" type="AudioStreamPlayer" parent="." index="5"]
+stream = ExtResource("4_5r5ci")
+volume_db = -12.0
+bus = &"Sound"
+
+[node name="SkeletonExplosionAudio" type="AudioStreamPlayer" parent="." index="6"]
+stream = ExtResource("5_wdqcg")
+volume_db = -8.0
+bus = &"Sound"

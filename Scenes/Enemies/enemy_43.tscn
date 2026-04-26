@@ -1,0 +1,108 @@
+[gd_scene load_steps=15 format=3 uid="uid://cwe0lexv3xqbi"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_earkp"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_43.gd" id="2_htsm8"]
+[ext_resource type="Texture2D" uid="uid://hkgd1hvbg3i4" path="res://Assets/Images/UI/InformationBar/EnemyChapter4/泰坦威克斯.png" id="3_mwn4h"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="4_4al5v"]
+[ext_resource type="AudioStream" uid="uid://dafjjdtfhpobl" path="res://Assets/Sounds/FXs/Enemies/恼鬼/恼鬼die1.wav" id="5_hnh0g"]
+[ext_resource type="AudioStream" uid="uid://debk0vkxpfccc" path="res://Assets/Sounds/FXs/Enemies/恼鬼/恼鬼die2.wav" id="6_tn5en"]
+[ext_resource type="PackedScene" uid="uid://dcjuved17hj6j" path="res://Scenes/Enemies/EnemyComponents/appear_audio_component.tscn" id="7_efmrq"]
+[ext_resource type="SpriteFrames" uid="uid://cmpqwg4lthjos" path="res://Assets/Animations/Enemies/43泰坦威克斯/SpriteFrames/landing_animation.res" id="7_xlm58"]
+[ext_resource type="AudioStream" uid="uid://dj2yrmwtrtvdp" path="res://Assets/Sounds/FXs/Enemies/恼鬼/恼鬼appear1.wav" id="8_vdlgq"]
+[ext_resource type="AudioStream" uid="uid://woufbpcy1h8q" path="res://Assets/Sounds/FXs/Enemies/恼鬼/恼鬼appear2.wav" id="9_5yqkj"]
+[ext_resource type="AudioStream" uid="uid://ola80h162jgu" path="res://Assets/Sounds/FXs/Enemies/恼鬼/恼鬼appear3.wav" id="10_46rvm"]
+[ext_resource type="AudioStream" uid="uid://cwg7yw6h3elsl" path="res://Assets/Sounds/FXs/Enemies/恼鬼/恼鬼appear4.wav" id="11_tms5y"]
+
+[sub_resource type="Resource" id="Resource_bm40n"]
+script = ExtResource("4_4al5v")
+health = 1600
+dodge_rate = 0.0
+near_damage_low = 35
+near_damage_high = 60
+near_attack_speed = 2.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.0
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 0.6
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bfvu0"]
+size = Vector2(110, 100)
+
+[node name="Enemy43" instance=ExtResource("1_earkp")]
+script = ExtResource("2_htsm8")
+enemy_name = "泰坦威克斯"
+enemy_id = 43
+enemy_texture = ExtResource("3_mwn4h")
+enemy_type = 2
+start_data = SubResource("Resource_bm40n")
+lives_taken = 3
+bounty = 80
+die_audio_stream_list = Array[AudioStream]([ExtResource("5_hnh0g"), ExtResource("6_tn5en")])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(-60, -195)
+sprite_frames = ExtResource("7_xlm58")
+animation = &"move_normal"
+autoplay = "idle"
+
+[node name="BodyCollision" parent="UnitBody" index="1"]
+position = Vector2(0, -45)
+shape = SubResource("RectangleShape2D_bfvu0")
+
+[node name="HurtBox" parent="UnitBody" index="2"]
+position = Vector2(0, -110)
+scale = Vector2(7.19957, 7.19957)
+
+[node name="SelectSprite" parent="UnitBody" index="3"]
+scale = Vector2(4.44275, 4.44275)
+
+[node name="EnemyButton" parent="UnitBody" index="4"]
+offset_left = -63.0
+offset_top = -220.0
+offset_right = 65.0
+
+[node name="EnemyButton2" type="Button" parent="UnitBody" index="5"]
+visible = false
+offset_left = -68.0
+offset_top = -360.0
+offset_right = 70.0
+offset_bottom = -110.0
+focus_mode = 0
+
+[node name="HealthBar" parent="UnitBody" index="6"]
+offset_left = -100.0
+offset_top = -250.0
+offset_right = 200.0
+offset_bottom = -241.0
+scale = Vector2(0.6829, 1.88085)
+
+[node name="DieAudio" parent="." index="3"]
+pitch_scale = 0.6
+
+[node name="AppearAudioComponent" parent="." index="5" instance=ExtResource("7_efmrq")]
+appear_audio_list = Array[AudioStream]([ExtResource("8_vdlgq"), ExtResource("9_5yqkj"), ExtResource("10_46rvm"), ExtResource("11_tms5y")])
+
+[node name="AppearAudioPlayer" parent="AppearAudioComponent" index="0"]
+pitch_scale = 0.6
+
+[node name="FlyCDTimer" type="Timer" parent="." index="6"]
+wait_time = 16.0
+one_shot = true
+
+[node name="FlyDuringTimer" type="Timer" parent="." index="7"]
+wait_time = 4.0
+one_shot = true
+
+[connection signal="pressed" from="UnitBody/EnemyButton2" to="." method="_on_enemy_button_pressed"]
+[connection signal="timeout" from="FlyDuringTimer" to="." method="_on_fly_during_timer_timeout"]
+
+[editable path="AppearAudioComponent"]

@@ -1,0 +1,101 @@
+[gd_scene load_steps=10 format=3 uid="uid://i17sy4bx2dfh"]
+
+[ext_resource type="PackedScene" uid="uid://b1245qux56fh4" path="res://Scenes/Classes/defence_tower_class.tscn" id="1_x5psu"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/BarrackTowers/barrack_tower.gd" id="2_1jlu3"]
+[ext_resource type="Texture2D" uid="uid://bsrop5coppykb" path="res://Assets/Images/UI/InformationBar/barrack-id-1.png" id="3_h60bx"]
+[ext_resource type="Texture2D" uid="uid://bo4q5wo18lqp1" path="res://Assets/Images/DefenceTowers/Based/royal-build.png" id="4_6sdlv"]
+[ext_resource type="Texture2D" uid="uid://c5ux4kta4lhxy" path="res://Assets/Images/DefenceTowers/Based/royal-build-select.png" id="5_f2h52"]
+[ext_resource type="Texture2D" uid="uid://fg1y0i3ubnh4" path="res://Assets/Images/DefenceTowers/UI/集结范围.png" id="6_o8hwe"]
+[ext_resource type="Texture2D" uid="uid://di244pjtyyl2a" path="res://Assets/Images/DefenceTowers/UI/flag_button.png" id="7_fqaeo"]
+[ext_resource type="Texture2D" uid="uid://7xl2wnc5nk41" path="res://Assets/Images/DefenceTowers/UI/flag_button_select.png" id="8_jyx1h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0nwss"]
+atlas = ExtResource("7_fqaeo")
+region = Rect2(17, 18, 62, 61)
+
+[node name="BarrackTower" instance=ExtResource("1_x5psu")]
+y_sort_enabled = false
+script = ExtResource("2_1jlu3")
+barrack_data = null
+unit_count = 3
+soldier_scene = null
+is_new_tower = true
+tower_type = 1
+tower_texture = ExtResource("3_h60bx")
+start_tower_range = 300
+tower_skill_levels = Array[int]([0, 0, 0])
+
+[node name="BasedSprite" parent="Based" index="0"]
+texture = ExtResource("4_6sdlv")
+
+[node name="BasedSpriteSelect" parent="Based" index="1"]
+texture = ExtResource("5_f2h52")
+
+[node name="TowerRange" parent="TowerUI" index="1"]
+visible = false
+
+[node name="Sprite2D" parent="TowerUI/TowerRange" index="0"]
+texture = ExtResource("6_o8hwe")
+
+[node name="FlagButton" type="TextureButton" parent="TowerUI/Circle" index="1"]
+offset_left = 68.7501
+offset_top = 14.9997
+offset_right = 130.75
+offset_bottom = 75.9997
+focus_mode = 0
+texture_normal = SubResource("AtlasTexture_0nwss")
+texture_pressed = SubResource("AtlasTexture_0nwss")
+texture_hover = ExtResource("8_jyx1h")
+stretch_mode = 3
+
+[node name="TowerArea" parent="." index="6"]
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="TowerArea" index="1"]
+scale = Vector2(0.386533, 0.270573)
+texture = ExtResource("6_o8hwe")
+
+[node name="FirstMoveRays" type="Node2D" parent="." index="7"]
+scale = Vector2(2.8, 2.8)
+
+[node name="RayCast2D" type="RayCast2D" parent="FirstMoveRays" index="0"]
+target_position = Vector2(0, 52)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D2" type="RayCast2D" parent="FirstMoveRays" index="1"]
+target_position = Vector2(54, 35)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D3" type="RayCast2D" parent="FirstMoveRays" index="2"]
+target_position = Vector2(75, 0)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D4" type="RayCast2D" parent="FirstMoveRays" index="3"]
+target_position = Vector2(54, -35)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D5" type="RayCast2D" parent="FirstMoveRays" index="4"]
+target_position = Vector2(0, -52)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D6" type="RayCast2D" parent="FirstMoveRays" index="5"]
+target_position = Vector2(-54, -35)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D7" type="RayCast2D" parent="FirstMoveRays" index="6"]
+target_position = Vector2(-75, 0)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D8" type="RayCast2D" parent="FirstMoveRays" index="7"]
+target_position = Vector2(-54, 35)
+collide_with_areas = true
+collide_with_bodies = false
+
+[connection signal="input_event" from="TowerArea" to="." method="_on_tower_area_input_event"]

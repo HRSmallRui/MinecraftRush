@@ -1,0 +1,28 @@
+[gd_scene load_steps=7 format=3 uid="uid://qwnk5rwkpjxx"]
+
+[ext_resource type="PackedScene" uid="uid://bjfa3t67tpsbr" path="res://Scenes/Buffs/property_buff.tscn" id="1_814wb"]
+[ext_resource type="Script" path="res://Scripts/Buffs/property_buff_block.gd" id="2_nh7ki"]
+[ext_resource type="Shader" path="res://Assets/Shaders/hue_color.gdshader" id="3_2u1qb"]
+[ext_resource type="Texture2D" uid="uid://f0e5qhu3dxxu" path="res://Assets/Animations/Heroes/Fuchen/sheild.png" id="4_n14un"]
+
+[sub_resource type="Resource" id="Resource_ilwhl"]
+script = ExtResource("2_nh7ki")
+property_type = 5
+operation_type = 0
+operation_data = 0.8
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fkoyh"]
+shader = ExtResource("3_2u1qb")
+shader_parameter/hue_shift = 0.2
+
+[node name="HatingSheildBuff" instance=ExtResource("1_814wb")]
+buff_blocks = Array[ExtResource("2_nh7ki")]([SubResource("Resource_ilwhl")])
+duration = 10.0
+buff_tag = "HatingSheild"
+immune_groups = Array[String](["god"])
+
+[node name="Sheild" type="Sprite2D" parent="." index="0"]
+material = SubResource("ShaderMaterial_fkoyh")
+position = Vector2(0, -20)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_n14un")

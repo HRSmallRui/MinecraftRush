@@ -1,0 +1,153 @@
+[gd_scene load_steps=29 format=3 uid="uid://1xdpsrqa5nu7"]
+
+[ext_resource type="Script" path="res://Scripts/Skills/desert_wolf.gd" id="1_esti5"]
+[ext_resource type="Texture2D" uid="uid://d0gybrx72po1d" path="res://Assets/Animations/Archers/DesertWolf/move_back_00.png" id="2_73bcp"]
+[ext_resource type="AudioStream" uid="uid://ce2uayknwiuym" path="res://Assets/Sounds/FXs/DefenceTowers/DesertSentryTower/狗叫.wav" id="2_mrt7e"]
+[ext_resource type="Texture2D" uid="uid://cgvr8wyuwmjo2" path="res://Assets/Animations/Archers/DesertWolf/move_back_02.png" id="4_6f1l1"]
+[ext_resource type="Texture2D" uid="uid://1yf6ti0xhj0h" path="res://Assets/Animations/Archers/DesertWolf/move_back_03.png" id="5_awaxi"]
+[ext_resource type="Texture2D" uid="uid://cuk6ploe60yrj" path="res://Assets/Animations/Archers/DesertWolf/move_back_05.png" id="7_inrre"]
+[ext_resource type="Texture2D" uid="uid://dtrvmtqt2p1hm" path="res://Assets/Animations/Archers/DesertWolf/move_back_06.png" id="8_a7yrq"]
+[ext_resource type="Texture2D" uid="uid://3fwtxv04dfxc" path="res://Assets/Animations/Archers/DesertWolf/move_back_08.png" id="10_4upto"]
+[ext_resource type="Texture2D" uid="uid://et8qch5w71yi" path="res://Assets/Animations/Archers/DesertWolf/move_back_09.png" id="11_2kvsu"]
+[ext_resource type="Texture2D" uid="uid://v5r7826ac58q" path="res://Assets/Animations/Archers/DesertWolf/move_back_11.png" id="13_jswyq"]
+[ext_resource type="Texture2D" uid="uid://b123tn15elp12" path="res://Assets/Animations/Archers/DesertWolf/move_front_00.png" id="14_jbmiy"]
+[ext_resource type="Texture2D" uid="uid://rx2ujev31bcn" path="res://Assets/Animations/Archers/DesertWolf/move_front_02.png" id="16_0vruk"]
+[ext_resource type="Texture2D" uid="uid://b8u6rrdx4qkct" path="res://Assets/Animations/Archers/DesertWolf/move_front_03.png" id="17_0558g"]
+[ext_resource type="Texture2D" uid="uid://m4iappx41xxu" path="res://Assets/Animations/Archers/DesertWolf/move_front_05.png" id="19_t852t"]
+[ext_resource type="Texture2D" uid="uid://dwfaj83lqwu3e" path="res://Assets/Animations/Archers/DesertWolf/move_front_06.png" id="20_hvw23"]
+[ext_resource type="Texture2D" uid="uid://sxtim5hdstmm" path="res://Assets/Animations/Archers/DesertWolf/move_front_08.png" id="22_i4ig3"]
+[ext_resource type="Texture2D" uid="uid://bclay0ju1k6j1" path="res://Assets/Animations/Archers/DesertWolf/move_front_09.png" id="23_xisf6"]
+[ext_resource type="Texture2D" uid="uid://b8cglqqq8uwil" path="res://Assets/Animations/Archers/DesertWolf/move_front_11.png" id="25_ltifj"]
+[ext_resource type="Texture2D" uid="uid://cvof75axkim4k" path="res://Assets/Animations/Archers/DesertWolf/move_normal_00.png" id="26_jcq3x"]
+[ext_resource type="Texture2D" uid="uid://dlo6s5inemycj" path="res://Assets/Animations/Archers/DesertWolf/move_normal_02.png" id="28_icvso"]
+[ext_resource type="Texture2D" uid="uid://b4fh8ktwym5ks" path="res://Assets/Animations/Archers/DesertWolf/move_normal_03.png" id="29_w8rrk"]
+[ext_resource type="Texture2D" uid="uid://wpqt4kplkwv7" path="res://Assets/Animations/Archers/DesertWolf/move_normal_05.png" id="31_qygbs"]
+[ext_resource type="Texture2D" uid="uid://djhskq7cpprs4" path="res://Assets/Animations/Archers/DesertWolf/move_normal_06.png" id="32_xq4ih"]
+[ext_resource type="Texture2D" uid="uid://bns12oq3bchky" path="res://Assets/Animations/Archers/DesertWolf/move_normal_08.png" id="34_5nado"]
+[ext_resource type="Texture2D" uid="uid://drog8ykmvh6wu" path="res://Assets/Animations/Archers/DesertWolf/move_normal_09.png" id="35_s7jjo"]
+[ext_resource type="Texture2D" uid="uid://75byfjtvus86" path="res://Assets/Animations/Archers/DesertWolf/move_normal_11.png" id="37_pl4g3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kuwcx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_73bcp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6f1l1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_awaxi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_inrre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_a7yrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4upto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_2kvsu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jswyq")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_jbmiy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_0vruk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_0558g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_t852t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_hvw23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_i4ig3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_xisf6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ltifj")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_jcq3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_icvso")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_w8rrk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_qygbs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_xq4ih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_5nado")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_s7jjo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_pl4g3")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 30.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s0s7q"]
+radius = 180.069
+
+[node name="DesertWolf" type="Node2D"]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_esti5")
+
+[node name="WolfAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_mrt7e")
+volume_db = -12.0
+bus = &"Sound"
+
+[node name="WolfAnim" type="AnimatedSprite2D" parent="."]
+position = Vector2(-10, -40)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_kuwcx")
+animation = &"move_back"
+frame_progress = 0.0424119
+
+[node name="DurationTimer" type="Timer" parent="."]
+wait_time = 1.7
+one_shot = true
+
+[node name="HitArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 32
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea"]
+position = Vector2(0, -25)
+shape = SubResource("CircleShape2D_s0s7q")
+
+[connection signal="timeout" from="DurationTimer" to="." method="_on_duration_timer_timeout"]
+[connection signal="body_entered" from="HitArea" to="." method="_on_hit_area_body_entered"]

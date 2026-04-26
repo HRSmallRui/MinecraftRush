@@ -1,0 +1,88 @@
+[gd_scene load_steps=16 format=3 uid="uid://d20lg48d4560c"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_n5v27"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_40.gd" id="2_dlm1n"]
+[ext_resource type="Texture2D" uid="uid://bubqd55hoh0oi" path="res://Assets/Images/UI/InformationBar/EnemyChapter4/幻翼.png" id="3_6hba4"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="4_2sede"]
+[ext_resource type="AudioStream" uid="uid://j7kmm4vm60yn" path="res://Assets/Sounds/FXs/Enemies/幻翼/死亡1.wav" id="5_lxiug"]
+[ext_resource type="AudioStream" uid="uid://cfl0v76sh3diq" path="res://Assets/Sounds/FXs/Enemies/幻翼/死亡2.wav" id="6_c13nl"]
+[ext_resource type="AudioStream" uid="uid://7ycvqfpunupy" path="res://Assets/Sounds/FXs/Enemies/幻翼/死亡3.wav" id="7_bgjm0"]
+[ext_resource type="PackedScene" uid="uid://dcjuved17hj6j" path="res://Scenes/Enemies/EnemyComponents/appear_audio_component.tscn" id="8_3m2u4"]
+[ext_resource type="SpriteFrames" uid="uid://bwbs21mlfvq7p" path="res://Assets/Animations/Enemies/40幻翼/enemy_40_animation.res" id="8_vrhap"]
+[ext_resource type="AudioStream" uid="uid://q6oaa4vsaqek" path="res://Assets/Sounds/FXs/Enemies/幻翼/入场1.wav" id="9_k535s"]
+[ext_resource type="AudioStream" uid="uid://yy17mq8r5f1u" path="res://Assets/Sounds/FXs/Enemies/幻翼/入场2.wav" id="10_0f2cd"]
+[ext_resource type="AudioStream" uid="uid://cgscidknfw3qn" path="res://Assets/Sounds/FXs/Enemies/幻翼/入场3.wav" id="11_4blag"]
+[ext_resource type="AudioStream" uid="uid://cxwiq6op2qy88" path="res://Assets/Sounds/FXs/Enemies/幻翼/入场4.wav" id="12_hbexm"]
+[ext_resource type="Texture2D" uid="uid://djqnwtl1embrg" path="res://Assets/Animations/Enemies/Shadow.png" id="18_2b75c"]
+
+[sub_resource type="Resource" id="Resource_n055r"]
+script = ExtResource("4_2sede")
+health = 400
+dodge_rate = 0.0
+near_damage_low = 0
+near_damage_high = 0
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.0
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 1.0
+
+[node name="Enemy40" instance=ExtResource("1_n5v27")]
+script = ExtResource("2_dlm1n")
+enemy_name = "幻翼"
+enemy_id = 40
+enemy_texture = ExtResource("3_6hba4")
+enemy_type = 2
+is_flying = true
+start_data = SubResource("Resource_n055r")
+interceptable = false
+bounty = 22
+die_audio_stream_list = Array[AudioStream]([ExtResource("5_lxiug"), ExtResource("6_c13nl"), ExtResource("7_bgjm0")])
+
+[node name="UnitBody" parent="." index="0"]
+collision_layer = 64
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(5, -355)
+sprite_frames = ExtResource("8_vrhap")
+autoplay = "idle"
+
+[node name="HurtBox" parent="UnitBody" index="2"]
+position = Vector2(0, -355)
+scale = Vector2(10.1348, 10.1348)
+collision_layer = 64
+
+[node name="EnemyButton" parent="UnitBody" index="4"]
+offset_left = -123.0
+offset_top = -465.0
+offset_right = 125.0
+offset_bottom = -265.0
+
+[node name="HealthBar" parent="UnitBody" index="5"]
+offset_left = -130.0
+offset_top = -485.0
+offset_right = 170.0
+offset_bottom = -476.0
+scale = Vector2(0.882894, 1.88085)
+
+[node name="Shadow" type="Sprite2D" parent="UnitBody" index="11"]
+position = Vector2(0, -5)
+scale = Vector2(0.638128, 0.638128)
+texture = ExtResource("18_2b75c")
+region_enabled = true
+region_rect = Rect2(194, 273, 174, 61)
+
+[node name="DieAudio" parent="." index="3"]
+volume_db = -8.0
+
+[node name="AppearAudioComponent" parent="." index="5" instance=ExtResource("8_3m2u4")]
+appear_audio_list = Array[AudioStream]([ExtResource("9_k535s"), ExtResource("10_0f2cd"), ExtResource("11_4blag"), ExtResource("12_hbexm")])

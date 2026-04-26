@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dq1pv414xk0v6"]
+
+[ext_resource type="PackedScene" uid="uid://bmr7x0vo1n3ky" path="res://Scenes/Buffs/heal_buff.tscn" id="1_llmj8"]
+[ext_resource type="Script" path="res://Scripts/Classes/potion_particle_leader.gd" id="2_q6203"]
+
+[node name="MedicalSkillHealBuff" instance=ExtResource("1_llmj8")]
+heal_datas = Array[int]([3, 4, 5])
+duration = 4.0
+buff_tag = "MedicalSkillHealBuff"
+
+[node name="Timer" parent="." index="0"]
+wait_time = 0.2
+
+[node name="PotionParticleLeader" type="Node2D" parent="." index="1" node_paths=PackedStringArray("buff_vehicle")]
+script = ExtResource("2_q6203")
+potion_color = Color(1, 0, 0, 1)
+buff_vehicle = NodePath("..")

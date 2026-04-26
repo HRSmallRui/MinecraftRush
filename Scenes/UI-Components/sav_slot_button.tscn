@@ -1,0 +1,154 @@
+[gd_scene load_steps=12 format=3 uid="uid://bt2skbnfg6gs0"]
+
+[ext_resource type="StyleBox" uid="uid://cctssacfd8ywa" path="res://Assets/Resources/sav_slot_style1.tres" id="1_mb7if"]
+[ext_resource type="StyleBox" uid="uid://cbj60wlp16eef" path="res://Assets/Resources/sav_slot_style2.tres" id="1_t50g7"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/sav_slot_button.gd" id="1_vuvhs"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="4_0coix"]
+[ext_resource type="AudioStream" uid="uid://i0to3f5pe1rc" path="res://Assets/Sounds/FXs/UIs/MC_Click.mp3" id="5_t6tjx"]
+[ext_resource type="Texture2D" uid="uid://d1sjkrxoq5ldk" path="res://Assets/Images/UI/star.png" id="6_56om4"]
+[ext_resource type="Texture2D" uid="uid://6ncyrkyxjmaj" path="res://Assets/Images/UI/diamond.png" id="7_f4p16"]
+[ext_resource type="Texture2D" uid="uid://ysppdv5idu1w" path="res://Assets/Images/UI/bedrock.png" id="8_qwkgm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ggiqu"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c1ihm"]
+bg_color = Color(0.351563, 0.351563, 0.351563, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kaotc"]
+bg_color = Color(0.737193, 0.737193, 0.737193, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="SavSlotButton" type="Button"]
+offset_right = 329.0
+offset_bottom = 113.0
+focus_mode = 0
+mouse_filter = 2
+theme_override_styles/hover = ExtResource("1_t50g7")
+theme_override_styles/pressed = ExtResource("1_mb7if")
+theme_override_styles/normal = ExtResource("1_mb7if")
+script = ExtResource("1_vuvhs")
+
+[node name="NewSav" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NewSavLabel" type="Label" parent="NewSav"]
+layout_mode = 0
+offset_right = 1039.0
+offset_bottom = 360.0
+scale = Vector2(0.316642, 0.316642)
+theme_override_fonts/font = ExtResource("4_0coix")
+theme_override_font_sizes/font_size = 96
+text = "空档位"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PastSav" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SlotNumberLabel" type="Label" parent="PastSav"]
+layout_mode = 0
+offset_right = 1039.0
+offset_bottom = 360.0
+scale = Vector2(0.316642, 0.316642)
+theme_override_fonts/font = ExtResource("4_0coix")
+theme_override_font_sizes/font_size = 96
+text = "档位 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DeleteButton" type="Button" parent="PastSav"]
+layout_mode = 0
+offset_left = 361.0
+offset_top = 27.0
+offset_right = 407.0
+offset_bottom = 72.0
+focus_mode = 0
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_ggiqu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_c1ihm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kaotc")
+text = "X"
+
+[node name="ClickAudio" type="AudioStreamPlayer" parent="PastSav"]
+stream = ExtResource("5_t6tjx")
+volume_db = 4.0
+bus = &"Sound"
+
+[node name="LabelList" type="HBoxContainer" parent="PastSav"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 97.0
+offset_right = 1570.0
+offset_bottom = 169.0
+scale = Vector2(0.190866, 0.190866)
+theme_override_constants/separation = 310
+
+[node name="StarLabel" type="Label" parent="PastSav/LabelList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_0coix")
+theme_override_font_sizes/font_size = 72
+text = "0 / 100"
+vertical_alignment = 1
+
+[node name="DiamondLabel" type="Label" parent="PastSav/LabelList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_0coix")
+theme_override_font_sizes/font_size = 72
+text = "0 / 100"
+vertical_alignment = 1
+
+[node name="BedrockLabel" type="Label" parent="PastSav/LabelList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_0coix")
+theme_override_font_sizes/font_size = 72
+text = "0 / 100"
+vertical_alignment = 1
+
+[node name="Star" type="TextureRect" parent="PastSav"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 92.0
+offset_right = 135.0
+offset_bottom = 220.0
+scale = Vector2(0.179649, 0.179649)
+texture = ExtResource("6_56om4")
+
+[node name="Diamond" type="TextureRect" parent="PastSav"]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 92.0
+offset_right = 252.0
+offset_bottom = 220.0
+scale = Vector2(0.179516, 0.179516)
+texture = ExtResource("7_f4p16")
+
+[node name="Bedrock" type="TextureRect" parent="PastSav"]
+layout_mode = 0
+offset_left = 241.0
+offset_top = 94.0
+offset_right = 369.0
+offset_bottom = 222.0
+scale = Vector2(0.161649, 0.161649)
+texture = ExtResource("8_qwkgm")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="pressed" from="PastSav/DeleteButton" to="." method="_on_delete_button_pressed"]

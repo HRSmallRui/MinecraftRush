@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://23kxdn0pix0h"]
+
+[ext_resource type="PackedScene" uid="uid://bu12mu4ubv04k" path="res://Scenes/Classes/tower_buff.tscn" id="1_flqbk"]
+[ext_resource type="Script" path="res://Scripts/TowerBuffs/tower_property_buff_block.gd" id="2_xjd6i"]
+
+[sub_resource type="Resource" id="Resource_854up"]
+script = ExtResource("2_xjd6i")
+tower_property_type = 1
+operation_type = 1
+operation_data = 1.16
+
+[sub_resource type="Resource" id="Resource_k27wt"]
+script = ExtResource("2_xjd6i")
+tower_property_type = 0
+operation_type = 1
+operation_data = 1.2
+
+[node name="GDExtraTowerBuff" instance=ExtResource("1_flqbk")]
+buff_blocks = Array[ExtResource("2_xjd6i")]([SubResource("Resource_854up"), SubResource("Resource_k27wt")])
+can_be_overlay = true
+buff_tag = "GDExtraTowerBuff"

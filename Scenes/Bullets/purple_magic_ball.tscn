@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://c063ssypuf6my"]
+
+[ext_resource type="PackedScene" uid="uid://caufauw6v502y" path="res://Scenes/Classes/bullet_class.tscn" id="1_84vxm"]
+[ext_resource type="Script" path="res://Scripts/Bullets/magic_ball.gd" id="2_e5x1v"]
+[ext_resource type="PackedScene" uid="uid://d3ljd2wofm34l" path="res://Scenes/Effects/purple_magic_ball_tail.tscn" id="3_qnrup"]
+[ext_resource type="Texture2D" uid="uid://xm8yhq55odwi" path="res://Assets/Images/Bullets/magic_bullet2.png" id="4_e8dc7"]
+[ext_resource type="PackedScene" uid="uid://chwm7kf60y1ka" path="res://Scenes/Effects/purple_magic_ball_hit.tscn" id="4_lvt5u"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u8x6c"]
+radius = 17.0
+
+[node name="MagicBall" instance=ExtResource("1_84vxm")]
+z_index = 2
+script = ExtResource("2_e5x1v")
+magic_ball_tail_scene = ExtResource("3_qnrup")
+hit_effect_scene = ExtResource("4_lvt5u")
+damage_type = 1
+move_type = 1
+bullet_speed = 750.0
+damage_source = "MagicBall"
+
+[node name="BulletSprite" parent="." index="0"]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_e8dc7")
+
+[node name="HitBox" parent="." index="1"]
+collision_mask = 96
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+shape = SubResource("CircleShape2D_u8x6c")

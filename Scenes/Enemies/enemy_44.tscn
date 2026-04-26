@@ -1,0 +1,354 @@
+[gd_scene load_steps=36 format=3 uid="uid://xi5fkhf0l7je"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_vhgxp"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_44.gd" id="2_fqqol"]
+[ext_resource type="AudioStream" uid="uid://l3f2wp7juib8" path="res://Assets/Sounds/FXs/Enemies/守卫者/守卫者die1.wav" id="3_m23pd"]
+[ext_resource type="Texture2D" uid="uid://ddpaailx4w8gd" path="res://Assets/Images/UI/InformationBar/EnemyChapter4/守卫者.png" id="3_twgnn"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="3_xid2r"]
+[ext_resource type="AudioStream" uid="uid://vs7p3ngpo24u" path="res://Assets/Sounds/FXs/Enemies/守卫者/守卫者die2.wav" id="4_2ntrs"]
+[ext_resource type="PackedScene" uid="uid://dcjuved17hj6j" path="res://Scenes/Enemies/EnemyComponents/appear_audio_component.tscn" id="5_umgue"]
+[ext_resource type="AudioStream" uid="uid://dh7w6iaiutj77" path="res://Assets/Sounds/FXs/Enemies/守卫者/守卫者jump1.wav" id="5_voja1"]
+[ext_resource type="AudioStream" uid="uid://bhlds5wke321t" path="res://Assets/Sounds/FXs/Enemies/守卫者/守卫者jump2.wav" id="6_emc5q"]
+[ext_resource type="AudioStream" uid="uid://jplfyn7kecj2" path="res://Assets/Sounds/FXs/Enemies/守卫者/守卫者appear1.wav" id="6_gui3t"]
+[ext_resource type="AudioStream" uid="uid://dwb2hingt6l4u" path="res://Assets/Sounds/FXs/Enemies/守卫者/守卫者jump3.wav" id="7_5l2k6"]
+[ext_resource type="AudioStream" uid="uid://buoykq2ngewhj" path="res://Assets/Sounds/FXs/Enemies/守卫者/守卫者appear2.wav" id="7_675rq"]
+[ext_resource type="AudioStream" uid="uid://cn2mcf2yc7n62" path="res://Assets/Sounds/FXs/Enemies/守卫者/守卫者appear3.wav" id="8_gn6yr"]
+[ext_resource type="AudioStream" uid="uid://degaom383fk1m" path="res://Assets/Sounds/FXs/Enemies/守卫者/守卫者jump4.wav" id="8_jxhh0"]
+[ext_resource type="AudioStream" uid="uid://clcg0o8pih8t7" path="res://Assets/Sounds/FXs/Enemies/守卫者/守卫者appear4.wav" id="9_owbut"]
+[ext_resource type="SpriteFrames" uid="uid://sar00g7112py" path="res://Assets/Animations/Enemies/44守卫者/SpriteFrames/land.res" id="11_gcraj"]
+[ext_resource type="AudioStream" uid="uid://bpemphv5uttol" path="res://Assets/Sounds/FXs/Enemies/守卫者/尖刺.wav" id="17_eg433"]
+[ext_resource type="Shader" path="res://Assets/Shaders/guardian_ray.gdshader" id="18_5xcx3"]
+[ext_resource type="Texture2D" uid="uid://bfypq5d241fn8" path="res://Assets/Images/DefenceTowers/Magics/Towers/LV4-1/LV4-1-RAY.png" id="18_se55v"]
+[ext_resource type="AudioStream" uid="uid://m21pow8kiekh" path="res://Assets/Sounds/FXs/Enemies/守卫者/守卫者激光.wav" id="20_ron0o"]
+
+[sub_resource type="Gradient" id="Gradient_07idd"]
+offsets = PackedFloat32Array(0.298182, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.533333, 0, 1, 0)
+
+[sub_resource type="Gradient" id="Gradient_bosfn"]
+offsets = PackedFloat32Array(0, 0.303636)
+colors = PackedColorArray(1, 1, 1, 1, 0.533333, 0, 1, 0)
+
+[sub_resource type="Resource" id="Resource_2whcu"]
+script = ExtResource("3_xid2r")
+health = 1800
+dodge_rate = 0.0
+near_damage_low = 35
+near_damage_high = 60
+near_attack_speed = 2.0
+near_hit_rate = 1.0
+far_damage_low = 120
+far_damage_high = 170
+far_attack_speed = 8.0
+far_damage_range = 360
+armor = 0.0
+physic_immune = false
+magic_defence = 0.5
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 0.7
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w6u7l"]
+size = Vector2(380, 115)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7mxxu"]
+radius = 73.9444
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rgb4k"]
+radius = 35.3553
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tvw1o"]
+shader = ExtResource("18_5xcx3")
+shader_parameter/speed = 1.0
+shader_parameter/white_threshold = 0.92
+shader_parameter/orange_color = Color(1, 0.55, 0, 1)
+shader_parameter/mix_power = 0.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0tu2c"]
+atlas = ExtResource("18_se55v")
+region = Rect2(0, 2, 340, 38)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2pw5f"]
+particle_flag_disable_z = true
+radial_velocity_min = 178.45
+radial_velocity_max = 178.45
+gravity = Vector3(0, 0, 0)
+radial_accel_min = 42.38
+radial_accel_max = 75.83
+scale_min = 0.4
+scale_max = 0.6
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_25irx"]
+gradient = SubResource("Gradient_bosfn")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.495726, 0.512821)
+fill_to = Vector2(0.82906, 0.260684)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gyo7s"]
+gradient = SubResource("Gradient_07idd")
+fill = 1
+fill_from = Vector2(0.487179, 0.512821)
+fill_to = Vector2(0.782051, 0.222222)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mtxge"]
+radius = 8.24621
+
+[sub_resource type="Animation" id="Animation_s7n4s"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ray:width")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:mix_power")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("EndPointParticle:texture:gradient:colors")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedColorArray(1, 1, 1, 1, 0.533333, 0, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("EndPointParticle/EndPointSprite:texture:gradient:colors")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedColorArray(1, 1, 1, 1, 0.533333, 0, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_uxrmv"]
+resource_name = "anim"
+length = 0.7
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ray:width")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 10, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:mix_power")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.2, 0.7)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("EndPointParticle:texture:gradient:colors")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.2, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [PackedColorArray(1, 1, 1, 1, 0.533333, 0, 1, 0), PackedColorArray(1, 1, 1, 1, 1, 0.54902, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("EndPointParticle/EndPointSprite:texture:gradient:colors")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [PackedColorArray(1, 1, 1, 1, 0.533333, 0, 1, 0), PackedColorArray(1, 1, 1, 1, 1, 0.54902, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_osr0s"]
+_data = {
+"RESET": SubResource("Animation_s7n4s"),
+"anim": SubResource("Animation_uxrmv")
+}
+
+[node name="Enemy44" instance=ExtResource("1_vhgxp")]
+script = ExtResource("2_fqqol")
+die_audio_water = ExtResource("3_m23pd")
+die_audio_land = ExtResource("4_2ntrs")
+jump_audio_list = Array[AudioStream]([ExtResource("5_voja1"), ExtResource("6_emc5q"), ExtResource("7_5l2k6"), ExtResource("8_jxhh0")])
+end_point_sprite_gradient = SubResource("Gradient_07idd")
+end_point_particle_gradient = SubResource("Gradient_bosfn")
+step_1_color = Color(0.533333, 0, 1, 0)
+step_2_color = Color(1, 0.54902, 0, 0)
+mix_power = 0.0
+enemy_name = "守卫者"
+enemy_id = 44
+enemy_texture = ExtResource("3_twgnn")
+enemy_type = 3
+start_data = SubResource("Resource_2whcu")
+lives_taken = 5
+bounty = 60
+die_audio_stream_list = Array[AudioStream]([null])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(-15, -125)
+sprite_frames = ExtResource("11_gcraj")
+animation = &"far_attack"
+autoplay = "idle"
+flip_h = true
+
+[node name="BodyCollision" parent="UnitBody" index="1"]
+position = Vector2(0, -25)
+shape = SubResource("RectangleShape2D_w6u7l")
+
+[node name="HurtBox" parent="UnitBody" index="2"]
+position = Vector2(0, -90)
+scale = Vector2(9.92104, 9.92104)
+
+[node name="SelectSprite" parent="UnitBody" index="3"]
+scale = Vector2(13.2236, 13.2236)
+
+[node name="EnemyButton" parent="UnitBody" index="4"]
+offset_left = -160.0
+offset_top = -160.0
+offset_right = 145.0
+
+[node name="HealthBar" parent="UnitBody" index="5"]
+offset_left = -190.0
+offset_top = -225.0
+offset_right = 110.0
+offset_bottom = -216.0
+scale = Vector2(1.2829, 1.88085)
+
+[node name="InterceptingMarker" parent="UnitBody" index="6"]
+position = Vector2(230, 0)
+
+[node name="AttackArea" type="Area2D" parent="UnitBody" index="8"]
+scale = Vector2(0.9, 0.9)
+collision_layer = 0
+collision_mask = 24
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/AttackArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_7mxxu")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="FarAttackMarker" parent="UnitBody" index="9"]
+position = Vector2(160, -95)
+
+[node name="FarAttackMarkerFlip" parent="UnitBody" index="10"]
+position = Vector2(-160, -95)
+
+[node name="FarAttackMarkerFlipWater" type="Marker2D" parent="UnitBody" index="11"]
+position = Vector2(-150, -40)
+
+[node name="FarAttackMarkerWater" type="Marker2D" parent="UnitBody" index="12"]
+position = Vector2(150, -40)
+
+[node name="WaterConditionArea" type="Area2D" parent="UnitBody" index="14"]
+collision_layer = 0
+collision_mask = 512
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/WaterConditionArea" index="0"]
+shape = SubResource("CircleShape2D_rgb4k")
+
+[node name="AppearAudioComponent" parent="." index="5" instance=ExtResource("5_umgue")]
+appear_audio_list = Array[AudioStream]([ExtResource("6_gui3t"), ExtResource("7_675rq"), ExtResource("8_gn6yr"), ExtResource("9_owbut")])
+
+[node name="JumpAudio" type="AudioStreamPlayer" parent="." index="6"]
+bus = &"Sound"
+
+[node name="AttackAudio" type="AudioStreamPlayer" parent="." index="7"]
+stream = ExtResource("17_eg433")
+volume_db = -8.0
+bus = &"Sound"
+
+[node name="WaterMarker" type="Marker2D" parent="." index="8"]
+position = Vector2(-27, 0)
+
+[node name="WaterTimer" type="Timer" parent="." index="9"]
+wait_time = 0.1
+
+[node name="Ray" type="Line2D" parent="." index="10"]
+top_level = true
+material = SubResource("ShaderMaterial_tvw1o")
+points = PackedVector2Array(-24, -13, -162, 5)
+width = 0.0
+texture = SubResource("AtlasTexture_0tu2c")
+texture_mode = 1
+
+[node name="EndPointParticle" type="GPUParticles2D" parent="." index="11"]
+top_level = true
+z_index = 1
+position = Vector2(-67, -11)
+process_material = SubResource("ParticleProcessMaterial_2pw5f")
+texture = SubResource("GradientTexture2D_25irx")
+lifetime = 0.2
+
+[node name="EndPointSprite" type="Sprite2D" parent="EndPointParticle" index="0"]
+scale = Vector2(0.312077, 0.312077)
+texture = SubResource("GradientTexture2D_gyo7s")
+
+[node name="StartPointParticle" type="GPUParticles2D" parent="." index="12"]
+top_level = true
+z_index = 1
+position = Vector2(1, 0)
+process_material = SubResource("ParticleProcessMaterial_2pw5f")
+texture = SubResource("GradientTexture2D_25irx")
+lifetime = 0.2
+
+[node name="Sprite2D" type="Sprite2D" parent="StartPointParticle" index="0"]
+scale = Vector2(0.312077, 0.312077)
+texture = SubResource("GradientTexture2D_gyo7s")
+
+[node name="FarAttackHitArea" type="Area2D" parent="." index="13"]
+show_behind_parent = true
+position = Vector2(-99, 0)
+collision_layer = 0
+collision_mask = 24
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FarAttackHitArea" index="0"]
+shape = SubResource("CircleShape2D_mtxge")
+
+[node name="RayAnimationPlayer" type="AnimationPlayer" parent="." index="14"]
+libraries = {
+"": SubResource("AnimationLibrary_osr0s")
+}
+speed_scale = 2.5
+
+[node name="RayAudio" type="AudioStreamPlayer" parent="." index="15"]
+stream = ExtResource("20_ron0o")
+volume_db = -4.0
+bus = &"Sound"

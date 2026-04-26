@@ -1,0 +1,1065 @@
+[gd_scene load_steps=244 format=3 uid="uid://ceg4ixysmvsx"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_l0ags"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_48.gd" id="2_clr87"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="3_0jdx4"]
+[ext_resource type="Texture2D" uid="uid://chwc6xmvkks8t" path="res://Assets/Images/UI/InformationBar/EnemyChapter5/白眼傀儡.png" id="3_cfb34"]
+[ext_resource type="Texture2D" uid="uid://1ubo4ur4yl2h" path="res://Assets/Animations/Enemies/48白眼傀儡/attack_00.png" id="3_tsacq"]
+[ext_resource type="AudioStream" uid="uid://b1qce1o4ia1m1" path="res://Assets/Sounds/FXs/Battles/aoe_hit.wav" id="4_4inhr"]
+[ext_resource type="Texture2D" uid="uid://ch1f50v0vbv4h" path="res://Assets/Animations/Enemies/48白眼傀儡/attack_01.png" id="4_7h2cf"]
+[ext_resource type="Texture2D" uid="uid://bfl0gj6xo5esy" path="res://Assets/Animations/Enemies/48白眼傀儡/attack_02.png" id="5_r3lw2"]
+[ext_resource type="Texture2D" uid="uid://cq4gto6okimvk" path="res://Assets/Animations/Enemies/48白眼傀儡/attack_03.png" id="6_r32kj"]
+[ext_resource type="Texture2D" uid="uid://cj2fd75mg0h76" path="res://Assets/Animations/Enemies/48白眼傀儡/attack_04.png" id="7_wbn5f"]
+[ext_resource type="Texture2D" uid="uid://d183g6f0yc0ym" path="res://Assets/Animations/Enemies/48白眼傀儡/attack_05.png" id="8_dmta1"]
+[ext_resource type="Texture2D" uid="uid://db3oy1m6h7yr6" path="res://Assets/Animations/Enemies/48白眼傀儡/attack_06.png" id="9_ii75d"]
+[ext_resource type="Texture2D" uid="uid://bkogklgcjqjlc" path="res://Assets/Animations/Enemies/48白眼傀儡/attack_07.png" id="10_g3a14"]
+[ext_resource type="Texture2D" uid="uid://u01rebe1shkh" path="res://Assets/Animations/Enemies/48白眼傀儡/attack_08.png" id="11_idnn4"]
+[ext_resource type="Texture2D" uid="uid://by2nm8mggob0d" path="res://Assets/Animations/Enemies/48白眼傀儡/attack_09.png" id="12_me3q3"]
+[ext_resource type="Texture2D" uid="uid://cbo8fy58kavwb" path="res://Assets/Animations/Enemies/48白眼傀儡/attack_10.png" id="13_al6g2"]
+[ext_resource type="Texture2D" uid="uid://ckqimeuvwakdf" path="res://Assets/Animations/Enemies/48白眼傀儡/attack_11.png" id="14_tmbt6"]
+[ext_resource type="Texture2D" uid="uid://c2y7plsbtfli6" path="res://Assets/Animations/Enemies/48白眼傀儡/attack_12.png" id="15_k35mi"]
+[ext_resource type="Texture2D" uid="uid://dk4vm5w8fl1at" path="res://Assets/Animations/Enemies/48白眼傀儡/attack_13.png" id="16_7ym7x"]
+[ext_resource type="Texture2D" uid="uid://v78lgrw46l2l" path="res://Assets/Animations/Enemies/48白眼傀儡/attack_14.png" id="17_lre8k"]
+[ext_resource type="Texture2D" uid="uid://dywa0u5cpdtyp" path="res://Assets/Animations/Enemies/48白眼傀儡/attack_15.png" id="18_himq3"]
+[ext_resource type="Texture2D" uid="uid://4qwa025fcc24" path="res://Assets/Animations/Enemies/48白眼傀儡/attack_16.png" id="19_garuv"]
+[ext_resource type="Texture2D" uid="uid://bjlevf36ht06q" path="res://Assets/Animations/Enemies/48白眼傀儡/attack_17.png" id="20_sl6uf"]
+[ext_resource type="Texture2D" uid="uid://b8dcncuaxcvaa" path="res://Assets/Animations/Enemies/48白眼傀儡/attack_18.png" id="21_pudia"]
+[ext_resource type="Texture2D" uid="uid://jn5ok8f51krb" path="res://Assets/Animations/Enemies/48白眼傀儡/attack_19.png" id="22_4ysld"]
+[ext_resource type="Texture2D" uid="uid://7mm38j8j47vd" path="res://Assets/Animations/Enemies/48白眼傀儡/attack_20.png" id="23_suaws"]
+[ext_resource type="Texture2D" uid="uid://b3thd0qk20vni" path="res://Assets/Animations/Enemies/48白眼傀儡/attack_21.png" id="24_1i60b"]
+[ext_resource type="Texture2D" uid="uid://bll04chp66ene" path="res://Assets/Animations/Enemies/48白眼傀儡/attack_22.png" id="25_he5oc"]
+[ext_resource type="Texture2D" uid="uid://dc4yip6nten0t" path="res://Assets/Animations/Enemies/48白眼傀儡/attack_23.png" id="26_mj6pf"]
+[ext_resource type="Texture2D" uid="uid://clqal3pgqim65" path="res://Assets/Animations/Enemies/48白眼傀儡/attack_24.png" id="27_50lmp"]
+[ext_resource type="Texture2D" uid="uid://doow06mx2v7ue" path="res://Assets/Animations/Enemies/48白眼傀儡/die_00.png" id="28_uaohd"]
+[ext_resource type="Texture2D" uid="uid://dh3qh7fu1k435" path="res://Assets/Animations/Enemies/48白眼傀儡/die_01.png" id="29_qra2l"]
+[ext_resource type="Texture2D" uid="uid://cirfnyrrjboy3" path="res://Assets/Animations/Enemies/48白眼傀儡/die_02.png" id="30_ruu0s"]
+[ext_resource type="Texture2D" uid="uid://cuk2k53216hf7" path="res://Assets/Animations/Enemies/48白眼傀儡/die_03.png" id="31_j8olq"]
+[ext_resource type="Texture2D" uid="uid://camd0m8mpus1m" path="res://Assets/Animations/Enemies/48白眼傀儡/die_04.png" id="32_rx5a6"]
+[ext_resource type="Texture2D" uid="uid://bvaqgwm7028fk" path="res://Assets/Animations/Enemies/48白眼傀儡/die_05.png" id="33_tsu3a"]
+[ext_resource type="Texture2D" uid="uid://bva6tf1um4iwr" path="res://Assets/Animations/Enemies/48白眼傀儡/die_06.png" id="34_cy3bv"]
+[ext_resource type="Texture2D" uid="uid://c8mw7l1r5c3ue" path="res://Assets/Animations/Enemies/48白眼傀儡/die_07.png" id="35_iu2j8"]
+[ext_resource type="Texture2D" uid="uid://beege2krdqxkn" path="res://Assets/Animations/Enemies/48白眼傀儡/die_08.png" id="36_gvtq4"]
+[ext_resource type="Texture2D" uid="uid://dm033rko0p7a" path="res://Assets/Animations/Enemies/48白眼傀儡/die_09.png" id="37_svivx"]
+[ext_resource type="Texture2D" uid="uid://dqwxq1mvlu7l0" path="res://Assets/Animations/Enemies/48白眼傀儡/die_10.png" id="38_ci3kb"]
+[ext_resource type="Texture2D" uid="uid://d14xejbgv6mjd" path="res://Assets/Animations/Enemies/48白眼傀儡/die_11.png" id="39_yacfm"]
+[ext_resource type="Texture2D" uid="uid://dced5ivahd5ub" path="res://Assets/Animations/Enemies/48白眼傀儡/die_12.png" id="40_62i0t"]
+[ext_resource type="Texture2D" uid="uid://doh3lopalrq6j" path="res://Assets/Animations/Enemies/48白眼傀儡/die_13.png" id="41_auvtb"]
+[ext_resource type="Texture2D" uid="uid://ci2aq4d13ipou" path="res://Assets/Animations/Enemies/48白眼傀儡/die_14.png" id="42_u8hoq"]
+[ext_resource type="Texture2D" uid="uid://dg65jtokbl00a" path="res://Assets/Animations/Enemies/48白眼傀儡/die_15.png" id="43_gfesi"]
+[ext_resource type="Texture2D" uid="uid://dnbtwhpneab4h" path="res://Assets/Animations/Enemies/48白眼傀儡/die_16.png" id="44_2lxly"]
+[ext_resource type="Texture2D" uid="uid://b0aa4nfxfga7g" path="res://Assets/Animations/Enemies/48白眼傀儡/die_17.png" id="45_vbbb2"]
+[ext_resource type="Texture2D" uid="uid://cj03br1vqi50e" path="res://Assets/Animations/Enemies/48白眼傀儡/die_18.png" id="46_g54gd"]
+[ext_resource type="Texture2D" uid="uid://1dw8q488hiak" path="res://Assets/Animations/Enemies/48白眼傀儡/die_19.png" id="47_cl1do"]
+[ext_resource type="Texture2D" uid="uid://d0rdpjvipugk8" path="res://Assets/Animations/Enemies/48白眼傀儡/die_20.png" id="48_in1qp"]
+[ext_resource type="Texture2D" uid="uid://dgkf7bvlt0mkj" path="res://Assets/Animations/Enemies/48白眼傀儡/die_21.png" id="49_ilu55"]
+[ext_resource type="Texture2D" uid="uid://dbb2lki88q6t5" path="res://Assets/Animations/Enemies/48白眼傀儡/die_22.png" id="50_bmfa8"]
+[ext_resource type="Texture2D" uid="uid://dnlnjbdgcs4yr" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_00.png" id="51_iqady"]
+[ext_resource type="Texture2D" uid="uid://cf50ym12ft2dk" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_01.png" id="52_34a2x"]
+[ext_resource type="Texture2D" uid="uid://bxpxmyi7so4xm" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_02.png" id="53_f6c7i"]
+[ext_resource type="Texture2D" uid="uid://c4hh3p5vojuyb" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_03.png" id="54_k230x"]
+[ext_resource type="Texture2D" uid="uid://bpv3xt3rgv000" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_04.png" id="55_ml01b"]
+[ext_resource type="Texture2D" uid="uid://dtqdev17ew4st" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_05.png" id="56_7qors"]
+[ext_resource type="Texture2D" uid="uid://68x6kki08umn" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_06.png" id="57_5ajyp"]
+[ext_resource type="Texture2D" uid="uid://c2jv6xv61x2h1" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_07.png" id="58_e4hfp"]
+[ext_resource type="Texture2D" uid="uid://cp0e4grnp30jx" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_08.png" id="59_cqi3m"]
+[ext_resource type="Texture2D" uid="uid://bw25t62eipfja" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_09.png" id="60_ym8ub"]
+[ext_resource type="Texture2D" uid="uid://7ckdfh5hw8t" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_10.png" id="61_ybajp"]
+[ext_resource type="Texture2D" uid="uid://eemk4u46pfdx" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_11.png" id="62_s3emh"]
+[ext_resource type="Texture2D" uid="uid://bka65qflf5qir" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_12.png" id="63_dh2q6"]
+[ext_resource type="Texture2D" uid="uid://dinoivrvfpxjb" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_13.png" id="64_glsua"]
+[ext_resource type="Texture2D" uid="uid://bx2w70a4u138r" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_14.png" id="65_63vsh"]
+[ext_resource type="Texture2D" uid="uid://djbslckrwk14n" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_15.png" id="66_qwhfa"]
+[ext_resource type="Texture2D" uid="uid://toqepb11xnh8" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_16.png" id="67_acs4a"]
+[ext_resource type="Texture2D" uid="uid://b5ku3pcnhaysy" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_17.png" id="68_l33jn"]
+[ext_resource type="Texture2D" uid="uid://c8co3hbm0ap6v" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_18.png" id="69_qhsda"]
+[ext_resource type="Texture2D" uid="uid://dbeli83fo2ugk" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_19.png" id="70_sqxwy"]
+[ext_resource type="Texture2D" uid="uid://d0ik6736th7pt" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_20.png" id="71_vrorg"]
+[ext_resource type="Texture2D" uid="uid://boo7hat753ain" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_21.png" id="72_y73ba"]
+[ext_resource type="Texture2D" uid="uid://b8obau0hjxkdt" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_22.png" id="73_nghic"]
+[ext_resource type="Texture2D" uid="uid://cufwaxoh0aylx" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_23.png" id="74_7fuyo"]
+[ext_resource type="Texture2D" uid="uid://bk3ujcwanv3fi" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_24.png" id="75_yj266"]
+[ext_resource type="Texture2D" uid="uid://dv6vhp4skfks" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_25.png" id="76_ky7ak"]
+[ext_resource type="Texture2D" uid="uid://dsna5nbsy0g57" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_26.png" id="77_857wa"]
+[ext_resource type="Texture2D" uid="uid://byc4lebknexnh" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_27.png" id="78_slqcy"]
+[ext_resource type="Texture2D" uid="uid://bg1hyp43wc6bw" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_28.png" id="79_yj13s"]
+[ext_resource type="Texture2D" uid="uid://4r6jybx41oev" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_29.png" id="80_erduc"]
+[ext_resource type="Texture2D" uid="uid://c12cg0ye07qd6" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_30.png" id="81_p1e5a"]
+[ext_resource type="Texture2D" uid="uid://c6ltc35o0rrlb" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_31.png" id="82_3ugfh"]
+[ext_resource type="Texture2D" uid="uid://c36mftaxincss" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_32.png" id="83_igtkl"]
+[ext_resource type="Texture2D" uid="uid://3g4177t1sve6" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_33.png" id="84_b4jqq"]
+[ext_resource type="Texture2D" uid="uid://cl2v6b7k6ntli" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_34.png" id="85_sypni"]
+[ext_resource type="Texture2D" uid="uid://c758r0k22f02b" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_35.png" id="86_m8ikv"]
+[ext_resource type="Texture2D" uid="uid://b8a8psbgdgns8" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_36.png" id="87_e5k7b"]
+[ext_resource type="Texture2D" uid="uid://fax0tlqe1488" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_37.png" id="88_nls7c"]
+[ext_resource type="Texture2D" uid="uid://c0b6mj6lbqmam" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_38.png" id="89_rw17r"]
+[ext_resource type="Texture2D" uid="uid://bpl5730dr3gnx" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_39.png" id="90_52ak4"]
+[ext_resource type="Texture2D" uid="uid://drawmuq3jj5im" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_40.png" id="91_mndqn"]
+[ext_resource type="Texture2D" uid="uid://dbsw5ykkk7wrd" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_41.png" id="92_krenl"]
+[ext_resource type="Texture2D" uid="uid://jufi77deatjp" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_42.png" id="93_hfdwy"]
+[ext_resource type="Texture2D" uid="uid://ba3j04ddug55m" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_43.png" id="94_soank"]
+[ext_resource type="Texture2D" uid="uid://l6cbt1vaucj1" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_44.png" id="95_3nmp7"]
+[ext_resource type="Texture2D" uid="uid://ce4c8b15pyjpr" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_45.png" id="96_py8d6"]
+[ext_resource type="Texture2D" uid="uid://c2gqlv42x3u7b" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_46.png" id="97_wpu18"]
+[ext_resource type="Texture2D" uid="uid://dxkbuqlll4kjy" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_47.png" id="98_kgnj2"]
+[ext_resource type="Texture2D" uid="uid://xtxguoxfeeg0" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_48.png" id="99_yw182"]
+[ext_resource type="Texture2D" uid="uid://bhmledfttrbom" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_49.png" id="100_voipe"]
+[ext_resource type="Texture2D" uid="uid://mw2yeey4j40r" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_50.png" id="101_3adbq"]
+[ext_resource type="Texture2D" uid="uid://d0qv024n2unvq" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_51.png" id="102_0s4ya"]
+[ext_resource type="Texture2D" uid="uid://h5rs0icnnya1" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_52.png" id="103_dyrrn"]
+[ext_resource type="Texture2D" uid="uid://b31v1b5501kwy" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_53.png" id="104_nyxx7"]
+[ext_resource type="Texture2D" uid="uid://bqt6gvbvlmkbg" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_54.png" id="105_42vi5"]
+[ext_resource type="Texture2D" uid="uid://cakcil3y3qpf1" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_55.png" id="106_7l5g5"]
+[ext_resource type="Texture2D" uid="uid://gemehrji3cb6" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_56.png" id="107_74g6y"]
+[ext_resource type="Texture2D" uid="uid://cevxa463upe6d" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_57.png" id="108_dlmwc"]
+[ext_resource type="Texture2D" uid="uid://bbed2irykr7g4" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_58.png" id="109_orfk8"]
+[ext_resource type="Texture2D" uid="uid://braokmfjpksri" path="res://Assets/Animations/Enemies/48白眼傀儡/move_back_59.png" id="110_hai0w"]
+[ext_resource type="Texture2D" uid="uid://v5h056wupva0" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_00.png" id="111_ip54c"]
+[ext_resource type="Texture2D" uid="uid://h821wnu7xdql" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_01.png" id="112_8qj4y"]
+[ext_resource type="Texture2D" uid="uid://cfkx05hh4ythp" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_02.png" id="113_xroir"]
+[ext_resource type="Texture2D" uid="uid://bf6gxy6hw1o3f" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_03.png" id="114_irv4j"]
+[ext_resource type="Texture2D" uid="uid://clo8q31f5d48h" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_04.png" id="115_78y1d"]
+[ext_resource type="Texture2D" uid="uid://brupv5h6rspng" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_05.png" id="116_5sja2"]
+[ext_resource type="Texture2D" uid="uid://bmokpseisck8" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_06.png" id="117_xlagl"]
+[ext_resource type="Texture2D" uid="uid://cc844bshcn7ts" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_07.png" id="118_q1lq4"]
+[ext_resource type="Texture2D" uid="uid://dog76u4wxegi4" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_08.png" id="119_6dppg"]
+[ext_resource type="Texture2D" uid="uid://bq06qm3g1dim6" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_09.png" id="120_6ocjt"]
+[ext_resource type="Texture2D" uid="uid://8f0sivavkpn" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_10.png" id="121_7s7kt"]
+[ext_resource type="Texture2D" uid="uid://bwbxqcyryaps3" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_11.png" id="122_kbn71"]
+[ext_resource type="Texture2D" uid="uid://by2bj4ng8o7wp" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_12.png" id="123_q237q"]
+[ext_resource type="Texture2D" uid="uid://cqciowposqavj" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_13.png" id="124_8254q"]
+[ext_resource type="Texture2D" uid="uid://b3pajqi0oc762" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_14.png" id="125_1ptua"]
+[ext_resource type="Texture2D" uid="uid://cjtb5mlorqgpt" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_15.png" id="126_o2gcs"]
+[ext_resource type="Texture2D" uid="uid://iypvjhot25p6" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_16.png" id="127_udram"]
+[ext_resource type="Texture2D" uid="uid://des8ilnn8is02" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_17.png" id="128_ek43a"]
+[ext_resource type="Texture2D" uid="uid://q0e7liu4ibfd" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_18.png" id="129_bsktt"]
+[ext_resource type="Texture2D" uid="uid://b54vkd0f4kid4" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_19.png" id="130_xxkcs"]
+[ext_resource type="Texture2D" uid="uid://cfkaa3ltyhsfq" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_20.png" id="131_0k284"]
+[ext_resource type="Texture2D" uid="uid://dlhrg0yg8mlc7" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_21.png" id="132_5f5yu"]
+[ext_resource type="Texture2D" uid="uid://dqocgcyji8b62" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_22.png" id="133_bv1wv"]
+[ext_resource type="Texture2D" uid="uid://ck3fi0ji6lh41" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_23.png" id="134_18ir7"]
+[ext_resource type="Texture2D" uid="uid://fgusylce80na" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_24.png" id="135_7q52a"]
+[ext_resource type="Texture2D" uid="uid://bbaon4jq6p2i8" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_25.png" id="136_34ej1"]
+[ext_resource type="Texture2D" uid="uid://c44xq4xf5h02v" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_26.png" id="137_uaud6"]
+[ext_resource type="Texture2D" uid="uid://dwfvsllmrtm7a" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_27.png" id="138_gcmxo"]
+[ext_resource type="Texture2D" uid="uid://vx80woq2hura" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_28.png" id="139_sdqod"]
+[ext_resource type="Texture2D" uid="uid://bavtqcedpp1rl" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_29.png" id="140_x46wd"]
+[ext_resource type="Texture2D" uid="uid://cmbuiahfviq0w" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_30.png" id="141_jorw6"]
+[ext_resource type="Texture2D" uid="uid://dyewi5u6foh4l" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_31.png" id="142_qidj3"]
+[ext_resource type="Texture2D" uid="uid://bm1lgelceqcrm" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_32.png" id="143_q0i20"]
+[ext_resource type="Texture2D" uid="uid://46xbxok85cwc" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_33.png" id="144_s2e2o"]
+[ext_resource type="Texture2D" uid="uid://dy8i7f5qvigmd" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_34.png" id="145_sfmi8"]
+[ext_resource type="Texture2D" uid="uid://yu4rbqpbpcn7" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_35.png" id="146_61ji7"]
+[ext_resource type="Texture2D" uid="uid://2wfbm63fqwnc" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_36.png" id="147_oy6e0"]
+[ext_resource type="Texture2D" uid="uid://df151oogf14np" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_37.png" id="148_gxyeq"]
+[ext_resource type="Texture2D" uid="uid://w2mbrqv58utp" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_38.png" id="149_xt2qt"]
+[ext_resource type="Texture2D" uid="uid://rrxq7yolcjut" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_39.png" id="150_dhiyb"]
+[ext_resource type="Texture2D" uid="uid://degmmutyee16k" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_40.png" id="151_bgstf"]
+[ext_resource type="Texture2D" uid="uid://bp3qaurjhpgcg" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_41.png" id="152_hpttq"]
+[ext_resource type="Texture2D" uid="uid://gcapuudc30un" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_42.png" id="153_xn8qc"]
+[ext_resource type="Texture2D" uid="uid://bxsj8tq6mscl" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_43.png" id="154_kv1wi"]
+[ext_resource type="Texture2D" uid="uid://cey1tpx1m8y7a" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_44.png" id="155_sksiu"]
+[ext_resource type="Texture2D" uid="uid://2hnwylqoy7j" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_45.png" id="156_y3p3f"]
+[ext_resource type="Texture2D" uid="uid://b50w0b54dx6g8" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_46.png" id="157_isw6t"]
+[ext_resource type="Texture2D" uid="uid://d4kpfo5yne0kr" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_47.png" id="158_co4rf"]
+[ext_resource type="Texture2D" uid="uid://dt7x7vk0jxhpp" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_48.png" id="159_7llsq"]
+[ext_resource type="Texture2D" uid="uid://b6p2flbnvmddg" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_49.png" id="160_s0bbb"]
+[ext_resource type="Texture2D" uid="uid://cs6xobbcbqdnv" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_50.png" id="161_rtlva"]
+[ext_resource type="Texture2D" uid="uid://db5c1jqraera7" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_51.png" id="162_4hovs"]
+[ext_resource type="Texture2D" uid="uid://bat1g63fddg52" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_52.png" id="163_uk5m8"]
+[ext_resource type="Texture2D" uid="uid://b7xoyqgvoscaq" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_53.png" id="164_nfrq7"]
+[ext_resource type="Texture2D" uid="uid://cyxh6u3mbsm2a" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_54.png" id="165_0uhgj"]
+[ext_resource type="Texture2D" uid="uid://d0tp0dgd4mqfg" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_55.png" id="166_6v54h"]
+[ext_resource type="Texture2D" uid="uid://v2fdrc24vxa1" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_56.png" id="167_1qhrf"]
+[ext_resource type="Texture2D" uid="uid://cmn0i0yls786v" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_57.png" id="168_dosdl"]
+[ext_resource type="Texture2D" uid="uid://dcjax0f33pjlt" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_58.png" id="169_723ay"]
+[ext_resource type="Texture2D" uid="uid://bq4s0vn1cyke8" path="res://Assets/Animations/Enemies/48白眼傀儡/move_front_59.png" id="170_opxi4"]
+[ext_resource type="Texture2D" uid="uid://b10dvnqtl3747" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_00.png" id="171_ojtba"]
+[ext_resource type="Texture2D" uid="uid://jab8x5ctshxd" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_01.png" id="172_5f4pp"]
+[ext_resource type="Texture2D" uid="uid://kp8pb7fc4jj2" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_02.png" id="173_csv31"]
+[ext_resource type="Texture2D" uid="uid://dldqxod77634s" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_03.png" id="174_4g3pl"]
+[ext_resource type="Texture2D" uid="uid://ckbra45ae0rct" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_04.png" id="175_trusw"]
+[ext_resource type="Texture2D" uid="uid://bof8d3qb7q4ch" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_05.png" id="176_57feu"]
+[ext_resource type="Texture2D" uid="uid://xqtpk2u4n7u4" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_06.png" id="177_ermdf"]
+[ext_resource type="Texture2D" uid="uid://ctx65sh8ff27v" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_07.png" id="178_a2bt5"]
+[ext_resource type="Texture2D" uid="uid://e4ktk38cm8n2" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_08.png" id="179_jtb58"]
+[ext_resource type="Texture2D" uid="uid://dxf826uhftvkt" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_09.png" id="180_lkrrb"]
+[ext_resource type="Texture2D" uid="uid://eyhavibxtpaj" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_10.png" id="181_k07pj"]
+[ext_resource type="Texture2D" uid="uid://bfq61u4bp6tia" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_11.png" id="182_lelq1"]
+[ext_resource type="Texture2D" uid="uid://bqql7ntytcqfk" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_12.png" id="183_laab4"]
+[ext_resource type="Texture2D" uid="uid://dnm1mcjt6ux7x" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_13.png" id="184_ywwhy"]
+[ext_resource type="Texture2D" uid="uid://clxxxufsmwr1q" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_14.png" id="185_wlmwg"]
+[ext_resource type="Texture2D" uid="uid://c637judseivpv" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_15.png" id="186_43h40"]
+[ext_resource type="Texture2D" uid="uid://bfm7mecrab8ji" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_16.png" id="187_jx4cp"]
+[ext_resource type="Texture2D" uid="uid://kt1rnbrej5n3" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_17.png" id="188_g66vy"]
+[ext_resource type="Texture2D" uid="uid://ckfud7j1io01p" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_18.png" id="189_l4l0x"]
+[ext_resource type="Texture2D" uid="uid://bp0m73pmq87ck" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_19.png" id="190_8exa7"]
+[ext_resource type="Texture2D" uid="uid://b0owgt44tbs52" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_20.png" id="191_abq6o"]
+[ext_resource type="Texture2D" uid="uid://c58oorkbu52vc" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_21.png" id="192_ty1qs"]
+[ext_resource type="Texture2D" uid="uid://di5bl1ttc2d47" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_22.png" id="193_ufoa3"]
+[ext_resource type="Texture2D" uid="uid://dqgwsuivo118h" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_23.png" id="194_eiavx"]
+[ext_resource type="Texture2D" uid="uid://dwbci1b021u1v" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_24.png" id="195_xotoh"]
+[ext_resource type="Texture2D" uid="uid://c368ws6poqs26" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_25.png" id="196_w744m"]
+[ext_resource type="Texture2D" uid="uid://cxlroxaj6lj4" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_26.png" id="197_1dl8k"]
+[ext_resource type="Texture2D" uid="uid://dd0elxbf16w7n" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_27.png" id="198_ky1k3"]
+[ext_resource type="Texture2D" uid="uid://bshp03eej7w54" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_28.png" id="199_xo0bm"]
+[ext_resource type="Texture2D" uid="uid://ddl3oxm54qsq2" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_29.png" id="200_yv8uk"]
+[ext_resource type="Texture2D" uid="uid://cl4pu1j7ogjx0" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_30.png" id="201_7ipb5"]
+[ext_resource type="Texture2D" uid="uid://c26188fofor5f" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_31.png" id="202_0xykc"]
+[ext_resource type="Texture2D" uid="uid://bvglaed8q5afl" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_32.png" id="203_xma6c"]
+[ext_resource type="Texture2D" uid="uid://c3erqemmat346" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_33.png" id="204_x77d4"]
+[ext_resource type="Texture2D" uid="uid://bpu76xd317ul8" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_34.png" id="205_6rao1"]
+[ext_resource type="Texture2D" uid="uid://bjctvchdu6xmu" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_35.png" id="206_60kjk"]
+[ext_resource type="Texture2D" uid="uid://crjv17k7ri5oc" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_36.png" id="207_heh54"]
+[ext_resource type="Texture2D" uid="uid://bhdahoe3m7kdc" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_37.png" id="208_mpe5b"]
+[ext_resource type="Texture2D" uid="uid://bcqilbl01ygsx" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_38.png" id="209_c80mn"]
+[ext_resource type="Texture2D" uid="uid://bbrxm25tdfqu8" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_39.png" id="210_0pgw1"]
+[ext_resource type="Texture2D" uid="uid://c5atfnsg1ceu2" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_40.png" id="211_tyyi0"]
+[ext_resource type="Texture2D" uid="uid://cnw2q0sf4rnmt" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_41.png" id="212_uj02p"]
+[ext_resource type="Texture2D" uid="uid://cwb7chlklw4wq" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_42.png" id="213_nvfxk"]
+[ext_resource type="Texture2D" uid="uid://3sw5plawbf3x" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_43.png" id="214_wayd7"]
+[ext_resource type="Texture2D" uid="uid://iie7up7lvu0v" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_44.png" id="215_tf07s"]
+[ext_resource type="Texture2D" uid="uid://xb7hpuu0i5p" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_45.png" id="216_mipo7"]
+[ext_resource type="Texture2D" uid="uid://cfn2ulemr6e5l" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_46.png" id="217_pftk1"]
+[ext_resource type="Texture2D" uid="uid://fek67tsvc761" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_47.png" id="218_xhfe1"]
+[ext_resource type="Texture2D" uid="uid://bck44t5is7v4p" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_48.png" id="219_hhw8b"]
+[ext_resource type="Texture2D" uid="uid://cc8w7ohhvoc6j" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_49.png" id="220_y8ghj"]
+[ext_resource type="Texture2D" uid="uid://fmrf8c1gvvrf" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_50.png" id="221_mnq5w"]
+[ext_resource type="Texture2D" uid="uid://vhyeal6hqiev" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_51.png" id="222_iss8g"]
+[ext_resource type="Texture2D" uid="uid://cxvnmv67386a5" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_52.png" id="223_q13rj"]
+[ext_resource type="Texture2D" uid="uid://d21lbtulvv5ph" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_53.png" id="224_a0ccy"]
+[ext_resource type="Texture2D" uid="uid://b111dn5bmda0e" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_54.png" id="225_7vx0x"]
+[ext_resource type="Texture2D" uid="uid://caxvtgr5lso8i" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_55.png" id="226_l5fqg"]
+[ext_resource type="Texture2D" uid="uid://c8joh76hn0do3" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_56.png" id="227_dnn6j"]
+[ext_resource type="Texture2D" uid="uid://bv1kc8mdy0r6g" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_57.png" id="228_t7dhm"]
+[ext_resource type="Texture2D" uid="uid://c212lm4op6fle" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_58.png" id="229_5terf"]
+[ext_resource type="Texture2D" uid="uid://ikoenulpqyrs" path="res://Assets/Animations/Enemies/48白眼傀儡/move_normal_59.png" id="230_4gvjc"]
+[ext_resource type="PackedScene" uid="uid://dcjuved17hj6j" path="res://Scenes/Enemies/EnemyComponents/appear_audio_component.tscn" id="232_7mbjh"]
+[ext_resource type="AudioStream" uid="uid://d2k6q4yv5upde" path="res://Assets/Sounds/FXs/Enemies/扭曲末影人/死亡.wav" id="232_ksmh7"]
+[ext_resource type="AudioStream" uid="uid://cwt2rga6wmbip" path="res://Assets/Sounds/FXs/Enemies/尸壳/尸壳出现1.wav" id="233_i878a"]
+[ext_resource type="AudioStream" uid="uid://ddwrkohhv4ma2" path="res://Assets/Sounds/FXs/Enemies/尸壳/尸壳出现2.wav" id="234_bepsc"]
+[ext_resource type="AudioStream" uid="uid://cdlnobqdkucyt" path="res://Assets/Sounds/FXs/Enemies/尸壳/尸壳出现3.wav" id="235_tk88h"]
+[ext_resource type="AudioStream" uid="uid://tj2qdr0snm0b" path="res://Assets/Sounds/FXs/Enemies/人偶/人偶.wav" id="239_vkovr"]
+
+[sub_resource type="Resource" id="Resource_8t2x1"]
+script = ExtResource("3_0jdx4")
+health = 1000
+dodge_rate = 0.0
+near_damage_low = 50
+near_damage_high = 100
+near_attack_speed = 2.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.0
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 0.5
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mmp18"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_tsacq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7h2cf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_r3lw2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_r32kj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wbn5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_dmta1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ii75d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_g3a14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_idnn4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_me3q3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_al6g2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_tmbt6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_k35mi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_7ym7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_lre8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_himq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_garuv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_sl6uf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_pudia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_4ysld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_suaws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_1i60b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_he5oc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_mj6pf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_50lmp")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_uaohd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_qra2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_ruu0s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_j8olq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_rx5a6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_tsu3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_cy3bv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_iu2j8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_gvtq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_svivx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_ci3kb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_yacfm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_62i0t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_auvtb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_u8hoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_gfesi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_2lxly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_vbbb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_g54gd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_cl1do")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_in1qp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_ilu55")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_bmfa8")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_tsacq")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("51_iqady")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_34a2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_f6c7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_k230x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_ml01b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_7qors")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_5ajyp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_e4hfp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_cqi3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_ym8ub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_ybajp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_s3emh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_dh2q6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_glsua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_63vsh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_qwhfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_acs4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_l33jn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_qhsda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_sqxwy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_vrorg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_y73ba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_nghic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_7fuyo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_yj266")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_ky7ak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_857wa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_slqcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_yj13s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_erduc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_p1e5a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_3ugfh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_igtkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_b4jqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_sypni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_m8ikv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_e5k7b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_nls7c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_rw17r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_52ak4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_mndqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_krenl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_hfdwy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_soank")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_3nmp7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_py8d6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_wpu18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_kgnj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_yw182")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_voipe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_3adbq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_0s4ya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_dyrrn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_nyxx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_42vi5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_7l5g5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_74g6y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_dlmwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_orfk8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_hai0w")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("111_ip54c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_8qj4y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_xroir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_irv4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_78y1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_5sja2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_xlagl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_q1lq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_6dppg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_6ocjt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_7s7kt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_kbn71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_q237q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_8254q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_1ptua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_o2gcs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_udram")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_ek43a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_bsktt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_xxkcs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_0k284")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_5f5yu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_bv1wv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_18ir7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_7q52a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_34ej1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_uaud6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_gcmxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_sdqod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_x46wd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_jorw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_qidj3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_q0i20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_s2e2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_sfmi8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_61ji7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_oy6e0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_gxyeq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_xt2qt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_dhiyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_bgstf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_hpttq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_xn8qc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_kv1wi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_sksiu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_y3p3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_isw6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("158_co4rf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_7llsq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_s0bbb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_rtlva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_4hovs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_uk5m8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_nfrq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_0uhgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("166_6v54h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("167_1qhrf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("168_dosdl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("169_723ay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("170_opxi4")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("171_ojtba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_5f4pp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("173_csv31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_4g3pl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("175_trusw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("176_57feu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("177_ermdf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("178_a2bt5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("179_jtb58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("180_lkrrb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("181_k07pj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("182_lelq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("183_laab4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("184_ywwhy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("185_wlmwg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("186_43h40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("187_jx4cp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("188_g66vy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("189_l4l0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("190_8exa7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("191_abq6o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("192_ty1qs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("193_ufoa3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("194_eiavx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("195_xotoh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("196_w744m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("197_1dl8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("198_ky1k3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("199_xo0bm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("200_yv8uk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("201_7ipb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("202_0xykc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("203_xma6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("204_x77d4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("205_6rao1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("206_60kjk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("207_heh54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("208_mpe5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("209_c80mn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("210_0pgw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("211_tyyi0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("212_uj02p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("213_nvfxk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("214_wayd7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("215_tf07s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("216_mipo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("217_pftk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("218_xhfe1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("219_hhw8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("220_y8ghj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("221_mnq5w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("222_iss8g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("223_q13rj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("224_a0ccy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("225_7vx0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("226_l5fqg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("227_dnn6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("228_t7dhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("229_5terf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("230_4gvjc")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 30.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cry1k"]
+size = Vector2(140, 77.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7mxxu"]
+radius = 73.9444
+
+[node name="Enemy48" groups=["super_unit"] instance=ExtResource("1_l0ags")]
+script = ExtResource("2_clr87")
+enemy_name = "白眼傀儡"
+enemy_id = 48
+enemy_texture = ExtResource("3_cfb34")
+enemy_type = 2
+start_data = SubResource("Resource_8t2x1")
+lives_taken = 2
+bounty = 50
+die_audio_stream_list = Array[AudioStream]([ExtResource("232_ksmh7")])
+
+[node name="AoeHitAudio" type="AudioStreamPlayer" parent="." index="0"]
+stream = ExtResource("4_4inhr")
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(-10, -110)
+sprite_frames = SubResource("SpriteFrames_mmp18")
+animation = &"attack"
+autoplay = "idle"
+
+[node name="BodyCollision" parent="UnitBody" index="1"]
+position = Vector2(0, -20)
+shape = SubResource("RectangleShape2D_cry1k")
+
+[node name="HurtBox" parent="UnitBody" index="2"]
+position = Vector2(0, -130)
+scale = Vector2(7.67681, 7.67681)
+
+[node name="SelectSprite" parent="UnitBody" index="3"]
+scale = Vector2(5.57194, 5.57194)
+
+[node name="EnemyButton" parent="UnitBody" index="4"]
+offset_left = -73.0
+offset_top = -245.0
+offset_right = 75.0
+
+[node name="HealthBar" parent="UnitBody" index="5"]
+offset_left = -100.0
+offset_top = -275.0
+offset_right = 200.0
+offset_bottom = -266.0
+scale = Vector2(0.682894, 1.88085)
+
+[node name="AttackArea" type="Area2D" parent="UnitBody" index="8"]
+scale = Vector2(0.5, 0.5)
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/AttackArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_7mxxu")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="DieAudio" parent="." index="4"]
+stream = ExtResource("232_ksmh7")
+volume_db = -8.0
+pitch_scale = 0.7
+
+[node name="AppearAudioComponent" parent="." index="6" instance=ExtResource("232_7mbjh")]
+appear_audio_list = Array[AudioStream]([ExtResource("233_i878a"), ExtResource("234_bepsc")])
+
+[node name="AppearAudioPlayer" parent="AppearAudioComponent" index="0"]
+stream = ExtResource("235_tk88h")
+volume_db = -4.0
+pitch_scale = 0.7
+
+[node name="AppearAudioComponent2" parent="." index="7" instance=ExtResource("232_7mbjh")]
+appear_audio_list = Array[AudioStream]([ExtResource("239_vkovr")])
+
+[node name="AppearAudioPlayer" parent="AppearAudioComponent2" index="0"]
+stream = ExtResource("239_vkovr")
+volume_db = -12.0
+pitch_scale = 0.8
+
+[editable path="AppearAudioComponent"]
+[editable path="AppearAudioComponent2"]

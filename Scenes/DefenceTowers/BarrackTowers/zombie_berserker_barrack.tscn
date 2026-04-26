@@ -1,0 +1,123 @@
+[gd_scene load_steps=23 format=3 uid="uid://crvf6uhgs2gu8"]
+
+[ext_resource type="PackedScene" uid="uid://i17sy4bx2dfh" path="res://Scenes/DefenceTowers/BarrackTowers/barrack_tower.tscn" id="1_clvat"]
+[ext_resource type="Script" path="res://Scripts/Datas/BarrackData.gd" id="2_pqb7l"]
+[ext_resource type="Texture2D" uid="uid://tli7gvyo5tao" path="res://Assets/Images/UI/InformationBar/Towers/barrack-zombie-big.png" id="3_22lvk"]
+[ext_resource type="PackedScene" uid="uid://bmocy4l6eg7yy" path="res://Scenes/Allys/Soldiers/zombie_soldier_big.tscn" id="3_jtx4e"]
+[ext_resource type="PackedScene" uid="uid://cjpn07gcbekr1" path="res://Scenes/DefenceTowers/tower_skill_button.tscn" id="3_rukec"]
+[ext_resource type="Texture2D" uid="uid://c8xyu3oh5w0g6" path="res://Assets/Images/DefenceTowers/Barracks/UI/Zombie2/震荡剑法.png" id="5_v7ghe"]
+[ext_resource type="Texture2D" uid="uid://ccvvu8ci4mvng" path="res://Assets/Images/DefenceTowers/Barracks/UI/Zombie2/震荡剑法select.png" id="6_od7uu"]
+[ext_resource type="Texture2D" uid="uid://er46052iwf68" path="res://Assets/Images/DefenceTowers/Barracks/UI/Zombie2/震荡剑法disabled.png" id="7_3tsna"]
+[ext_resource type="Texture2D" uid="uid://co4qrsojxmwa3" path="res://Assets/Images/DefenceTowers/Barracks/UI/Zombie2/血月剑法.png" id="8_ts1bs"]
+[ext_resource type="Texture2D" uid="uid://dsgvdpobbqyhj" path="res://Assets/Images/DefenceTowers/Barracks/UI/Zombie2/血月剑法select.png" id="9_yinvl"]
+[ext_resource type="Texture2D" uid="uid://biwvh58rgwej0" path="res://Assets/Images/DefenceTowers/Barracks/UI/Zombie2/血月剑法disabled.png" id="10_0gj6g"]
+[ext_resource type="Texture2D" uid="uid://dplcy7qpuma2d" path="res://Assets/Images/DefenceTowers/Barracks/UI/Zombie2/寒铁剑法.png" id="11_dc0x4"]
+[ext_resource type="Texture2D" uid="uid://j4cso57ma7k" path="res://Assets/Images/DefenceTowers/Barracks/UI/Zombie2/寒铁剑法select.png" id="12_avomg"]
+[ext_resource type="Texture2D" uid="uid://1q53oidr2i5s" path="res://Assets/Images/DefenceTowers/Barracks/UI/Zombie2/寒铁剑法disabled.png" id="13_x2wds"]
+[ext_resource type="Texture2D" uid="uid://btvr6yh37rqhp" path="res://Assets/Images/DefenceTowers/Barracks/Towers/尸国斗剑士营地.png" id="14_imkq2"]
+
+[sub_resource type="Resource" id="Resource_ychb4"]
+script = ExtResource("2_pqb7l")
+soldier_health = 450
+damage_low = 30
+damage_high = 46
+armor = 0.3
+rebirth_time = 14
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gkgc5"]
+atlas = ExtResource("5_v7ghe")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yde7e"]
+atlas = ExtResource("7_3tsna")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_151q1"]
+atlas = ExtResource("8_ts1bs")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrpdv"]
+atlas = ExtResource("10_0gj6g")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_flu6k"]
+atlas = ExtResource("11_dc0x4")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1gfql"]
+atlas = ExtResource("13_x2wds")
+region = Rect2(6, 6, 85, 85)
+
+[node name="ZombieBerserkerBarrack" instance=ExtResource("1_clvat")]
+barrack_data = SubResource("Resource_ychb4")
+unit_count = 2
+soldier_scene = ExtResource("3_jtx4e")
+tower_name = "尸国斗剑士营地"
+tower_texture = ExtResource("3_22lvk")
+tower_id = 6
+tower_level = 4
+start_tower_range = 280
+
+[node name="TowerButton" parent="." index="2"]
+offset_left = -74.0
+offset_top = -107.0
+offset_right = 73.0
+
+[node name="TowerPanelUI" parent="TowerUI" index="3"]
+z_index = 0
+
+[node name="Circle" parent="TowerUI" index="4"]
+position = Vector2(0, -57)
+
+[node name="SellButton" parent="TowerUI/Circle" index="0"]
+visible = false
+
+[node name="TowerSkillButton" parent="TowerUI/Circle" index="2" node_paths=PackedStringArray("linked_tower") instance=ExtResource("3_rukec")]
+offset_top = -98.7494
+offset_bottom = -13.7493
+texture_normal = SubResource("AtlasTexture_gkgc5")
+texture_pressed = SubResource("AtlasTexture_gkgc5")
+texture_hover = ExtResource("6_od7uu")
+texture_disabled = SubResource("AtlasTexture_yde7e")
+linked_tower = NodePath("../../..")
+skill_name = "震荡剑法"
+skill_prices = Array[int]([250, 200, 200])
+skill_intro = PackedStringArray("每次攻击对周围敌人溅射，造成15-23点物理伤害，并有10%概率眩晕命中敌人1.5秒。", "每次攻击对周围敌人溅射，造成18-28点物理伤害，并有20%概率眩晕命中敌人1.5秒。", "每次攻击对周围敌人溅射，造成21-33点物理伤害，并有30%概率眩晕命中敌人1.5秒。")
+skill_words = "口区！"
+
+[node name="TowerSkillButton2" parent="TowerUI/Circle" index="3" node_paths=PackedStringArray("linked_tower") instance=ExtResource("3_rukec")]
+offset_left = -42.5007
+offset_top = -147.5
+offset_right = 42.4989
+offset_bottom = -62.4998
+texture_normal = SubResource("AtlasTexture_151q1")
+texture_pressed = SubResource("AtlasTexture_151q1")
+texture_hover = ExtResource("9_yinvl")
+texture_disabled = SubResource("AtlasTexture_vrpdv")
+linked_tower = NodePath("../../..")
+skill_name = "血月剑法"
+skill_id = 1
+skill_prices = Array[int]([225, 200])
+skill_intro = PackedStringArray("对面前敌人发动强力斩击，造成150点真实伤害，并恢复自身40点生命。", "对面前敌人发动强力斩击，造成210点真实伤害，并恢复自身70点生命。")
+skill_words = "给您拜年咯！"
+
+[node name="TowerSkillButton3" parent="TowerUI/Circle" index="4" node_paths=PackedStringArray("linked_tower") instance=ExtResource("3_rukec")]
+offset_left = 57.4995
+offset_top = -98.7503
+offset_right = 142.499
+offset_bottom = -13.7502
+texture_normal = SubResource("AtlasTexture_flu6k")
+texture_pressed = SubResource("AtlasTexture_flu6k")
+texture_hover = ExtResource("12_avomg")
+texture_disabled = SubResource("AtlasTexture_1gfql")
+linked_tower = NodePath("../../..")
+skill_name = "寒铁剑法"
+skill_id = 2
+skill_prices = Array[int]([200, 150, 150])
+skill_intro = PackedStringArray("受到近战攻击时有20%概率举剑格挡，免疫此次伤害的50%，并反弹原伤害量的20%。", "受到近战攻击时有30%概率举剑格挡，免疫此次伤害的70%，并反弹原伤害量的40%。", "受到近战攻击时有40%概率举剑格挡，免疫此次伤害的90%，并反弹原伤害量的60%。")
+skill_words = "犹豫就会败北"
+
+[node name="TowerSprite" type="Sprite2D" parent="." index="10"]
+position = Vector2(0, 23)
+texture = ExtResource("14_imkq2")
+offset = Vector2(1, -80)

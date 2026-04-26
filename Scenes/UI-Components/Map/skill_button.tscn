@@ -1,0 +1,72 @@
+[gd_scene load_steps=12 format=3 uid="uid://d1y1nllu68fr7"]
+
+[ext_resource type="Texture2D" uid="uid://bcnmx75i6cm4f" path="res://Assets/Images/UI/Upgrade/Archers/青龙之眼.png" id="1_a57ct"]
+[ext_resource type="Texture2D" uid="uid://bem46s3jen3g1" path="res://Assets/Images/UI/Upgrade/Archers/青龙之眼no.png" id="2_n38uc"]
+[ext_resource type="Texture2D" uid="uid://bmn1uiwts01oc" path="res://Assets/Images/UI/Upgrade/light.png" id="3_8kaxh"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Map/skill_button.gd" id="3_53jwq"]
+[ext_resource type="Texture2D" uid="uid://mexi6bfj3rg4" path="res://Assets/Images/UI/show_star_bar.png" id="4_6vx4a"]
+[ext_resource type="Texture2D" uid="uid://yjsj8n6yj105" path="res://Assets/Images/UI/nether-star.png" id="5_ffmyp"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="6_rrfmk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bpsk4"]
+atlas = ExtResource("1_a57ct")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eb3qy"]
+atlas = ExtResource("2_n38uc")
+region = Rect2(30, 33, 69, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7113s"]
+atlas = ExtResource("4_6vx4a")
+region = Rect2(19, 179, 487, 125)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5rlvo"]
+texture = SubResource("AtlasTexture_7113s")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+
+[node name="SkillButton" type="TextureButton"]
+focus_mode = 0
+texture_normal = SubResource("AtlasTexture_bpsk4")
+texture_pressed = SubResource("AtlasTexture_bpsk4")
+texture_hover = SubResource("AtlasTexture_bpsk4")
+texture_disabled = SubResource("AtlasTexture_eb3qy")
+script = ExtResource("3_53jwq")
+
+[node name="Light" type="Sprite2D" parent="."]
+texture = ExtResource("3_8kaxh")
+centered = false
+region_enabled = true
+region_rect = Rect2(30, 33, 69, 68)
+
+[node name="Bar" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 60.0
+offset_right = 371.0
+offset_bottom = 185.0
+scale = Vector2(0.111786, 0.111786)
+theme_override_styles/panel = SubResource("StyleBoxTexture_5rlvo")
+
+[node name="Star" type="Sprite2D" parent="Bar"]
+position = Vector2(89.4567, 62.6196)
+scale = Vector2(0.286117, 0.286117)
+texture = ExtResource("5_ffmyp")
+
+[node name="PriceLabel" type="Label" parent="Bar"]
+layout_mode = 0
+offset_left = 152.076
+offset_top = 26.837
+offset_right = 293.076
+offset_bottom = 97.837
+scale = Vector2(1.08243, 1.08243)
+theme_override_fonts/font = ExtResource("6_rrfmk")
+theme_override_font_sizes/font_size = 70
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

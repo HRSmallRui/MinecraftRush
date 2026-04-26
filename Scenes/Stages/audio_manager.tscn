@@ -1,0 +1,190 @@
+[gd_scene load_steps=29 format=3 uid="uid://qb21t1op36gk"]
+
+[ext_resource type="Script" path="res://Scripts/Stages/audio_manager.gd" id="1_3caxy"]
+[ext_resource type="AudioStream" uid="uid://cehdcelhfrho6" path="res://Assets/Sounds/FXs/Heroes/Alex/投掷三叉戟1.wav" id="2_gomxu"]
+[ext_resource type="AudioStream" uid="uid://cjp2q8guovx4j" path="res://Assets/Sounds/FXs/UIs/进家.wav" id="2_veenc"]
+[ext_resource type="AudioStream" uid="uid://dt3sajrv2kop1" path="res://Assets/Sounds/FXs/GlobalFight/new wave.wav" id="3_0qgcb"]
+[ext_resource type="AudioStream" uid="uid://d08uecir0xpev" path="res://Assets/Sounds/FXs/Heroes/Alex/投掷三叉戟2.wav" id="3_1pg5e"]
+[ext_resource type="AudioStream" uid="uid://kj8fljldk8jp" path="res://Assets/Sounds/FXs/GlobalFight/wave_coming.wav" id="4_bjhg6"]
+[ext_resource type="AudioStream" uid="uid://nkakh3a2gwmr" path="res://Assets/Sounds/FXs/Bullets/Shoot1.wav" id="5_s1axa"]
+[ext_resource type="AudioStream" uid="uid://53pnilrnhh7f" path="res://Assets/Sounds/FXs/Bullets/ArrowHit1.wav" id="6_3eofg"]
+[ext_resource type="AudioStream" uid="uid://boybwom3ktwli" path="res://Assets/Sounds/FXs/Bullets/ArrowHit3.wav" id="7_iea01"]
+[ext_resource type="AudioStream" uid="uid://crpj12unhdwd0" path="res://Assets/Sounds/FXs/Bullets/Shoot2.wav" id="8_2ojs8"]
+[ext_resource type="AudioStream" uid="uid://bto7afjir2bfa" path="res://Assets/Sounds/FXs/Bullets/hero_nivus_magicmissile_hit.ogg" id="12_0r6fa"]
+[ext_resource type="AudioStream" uid="uid://by88n6ursy80p" path="res://Assets/Sounds/FXs/Bullets/Sound_MageShot.ogg" id="12_fearg"]
+[ext_resource type="AudioStream" uid="uid://bad8d87bga3p4" path="res://Assets/Sounds/FXs/Enemies/Sound_EnemyExplode1.wav" id="13_0qvfr"]
+[ext_resource type="AudioStream" uid="uid://bpdm5ennvbhst" path="res://Assets/Sounds/FXs/DefenceTowers/archmage_attack.ogg" id="13_e1ech"]
+[ext_resource type="AudioStream" uid="uid://cflucwboymhk4" path="res://Assets/Sounds/FXs/Bullets/BombardShoot1.wav" id="14_163vy"]
+[ext_resource type="AudioStream" uid="uid://dr5qgxl7vhlbb" path="res://Assets/Sounds/FXs/Bullets/boom1.wav" id="15_dfoxk"]
+[ext_resource type="AudioStream" uid="uid://c182f405rfuje" path="res://Assets/Sounds/FXs/Bullets/boom2.wav" id="16_tglul"]
+[ext_resource type="AudioStream" uid="uid://y7nig7q24tdh" path="res://Assets/Sounds/FXs/Bullets/boom3.wav" id="17_i3l25"]
+[ext_resource type="AudioStream" uid="uid://c0jmp680aoq6b" path="res://Assets/Sounds/FXs/Bullets/boom4.wav" id="18_857gk"]
+[ext_resource type="AudioStream" uid="uid://wiaohly42hij" path="res://Assets/Sounds/FXs/DefenceTowers/Sound_TowerSell.ogg" id="19_ti8d2"]
+[ext_resource type="AudioStream" uid="uid://cldl1o03dvea1" path="res://Assets/Sounds/FXs/mc levelup.mp3" id="20_mdyof"]
+[ext_resource type="AudioStream" uid="uid://ceobfta1x632r" path="res://Assets/Sounds/FXs/Battles/Battle1.mp3" id="21_hxbn2"]
+[ext_resource type="AudioStream" uid="uid://4pyjvpbc2os8" path="res://Assets/Sounds/FXs/DefenceTowers/StoneTower/碎石.wav" id="22_f5vn3"]
+[ext_resource type="AudioStream" uid="uid://dxga3c5ktdnqx" path="res://Assets/Sounds/FXs/Battles/Battle4.mp3" id="23_3s1mq"]
+[ext_resource type="AudioStream" uid="uid://cm0n2ypip5qts" path="res://Assets/Sounds/FXs/DefenceTowers/StoneTower/投石高塔一技能.wav" id="23_uhk1x"]
+[ext_resource type="AudioStream" uid="uid://d0oblpl2alamf" path="res://Assets/Sounds/FXs/Enemies/溺尸/出水1.wav" id="24_lm0kv"]
+[ext_resource type="AudioStream" uid="uid://b73ls3vepbbsy" path="res://Assets/Sounds/FXs/Enemies/溺尸/出水2.wav" id="25_6edtb"]
+[ext_resource type="AudioStream" uid="uid://dxilndkao53qw" path="res://Assets/Sounds/FXs/Enemies/溺尸/出水3.wav" id="26_55xl4"]
+
+[node name="AudioManager" type="Node"]
+script = ExtResource("1_3caxy")
+
+[node name="ForkThrow1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_gomxu")
+bus = &"Sound"
+
+[node name="ForkThrow2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_1pg5e")
+volume_db = 2.0
+bus = &"Sound"
+
+[node name="LoseHeartAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_veenc")
+max_polyphony = 5
+bus = &"Sound"
+
+[node name="WaveComingAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_0qgcb")
+max_polyphony = 5
+bus = &"Sound"
+
+[node name="WaveSummonAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_bjhg6")
+max_polyphony = 5
+bus = &"Sound"
+
+[node name="ShootAudio1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_s1axa")
+volume_db = -12.0
+max_polyphony = 100
+bus = &"Sound"
+
+[node name="ShootAudio2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_2ojs8")
+volume_db = -2.0
+max_polyphony = 100
+bus = &"Sound"
+
+[node name="ArrowHit1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_3eofg")
+volume_db = -13.0
+max_polyphony = 100
+bus = &"Sound"
+
+[node name="ArrowHit2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_iea01")
+volume_db = -14.0
+max_polyphony = 100
+bus = &"Sound"
+
+[node name="MagicShotAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_fearg")
+volume_db = -5.0
+max_polyphony = 100
+bus = &"Sound"
+
+[node name="WitchShotAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_0r6fa")
+volume_db = -5.0
+max_polyphony = 100
+bus = &"Sound"
+
+[node name="MagicShootHeavyAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_e1ech")
+volume_db = -5.0
+max_polyphony = 100
+bus = &"Sound"
+
+[node name="DeadBodyExplosionAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_0qvfr")
+max_polyphony = 100
+bus = &"Sound"
+
+[node name="BombardShoot1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_163vy")
+max_polyphony = 100
+bus = &"Sound"
+
+[node name="ExplosionShell" type="Node" parent="."]
+
+[node name="Boom1" type="AudioStreamPlayer" parent="ExplosionShell"]
+stream = ExtResource("15_dfoxk")
+volume_db = -4.0
+max_polyphony = 100
+bus = &"Sound"
+
+[node name="Boom2" type="AudioStreamPlayer" parent="ExplosionShell"]
+stream = ExtResource("16_tglul")
+volume_db = -4.0
+max_polyphony = 100
+bus = &"Sound"
+
+[node name="Boom3" type="AudioStreamPlayer" parent="ExplosionShell"]
+stream = ExtResource("17_i3l25")
+volume_db = -5.0
+max_polyphony = 100
+bus = &"Sound"
+
+[node name="Boom4" type="AudioStreamPlayer" parent="ExplosionShell"]
+stream = ExtResource("18_857gk")
+volume_db = -4.0
+max_polyphony = 100
+bus = &"Sound"
+
+[node name="TowerSellAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_ti8d2")
+max_polyphony = 40
+bus = &"Sound"
+
+[node name="Hero" type="Node" parent="."]
+
+[node name="LevelUpAudio" type="AudioStreamPlayer" parent="Hero"]
+stream = ExtResource("20_mdyof")
+volume_db = 5.0
+bus = &"Sound"
+
+[node name="Battle" type="Node" parent="."]
+
+[node name="Battle1" type="AudioStreamPlayer" parent="Battle"]
+stream = ExtResource("21_hxbn2")
+volume_db = -20.0
+max_polyphony = 50
+bus = &"Sound"
+
+[node name="Battle4" type="AudioStreamPlayer" parent="Battle"]
+stream = ExtResource("23_3s1mq")
+volume_db = -6.0
+max_polyphony = 50
+bus = &"Sound"
+
+[node name="StoneExplosionAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("22_f5vn3")
+volume_db = 4.0
+max_polyphony = 100
+bus = &"Sound"
+
+[node name="BlackStoneHitAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("23_uhk1x")
+volume_db = 5.0
+max_polyphony = 100
+bus = &"Sound"
+
+[node name="WaterAudio" type="Node" parent="."]
+
+[node name="WaterAudio1" type="AudioStreamPlayer" parent="WaterAudio"]
+stream = ExtResource("24_lm0kv")
+max_polyphony = 20
+bus = &"Sound"
+
+[node name="WaterAudio2" type="AudioStreamPlayer" parent="WaterAudio"]
+stream = ExtResource("25_6edtb")
+max_polyphony = 20
+bus = &"Sound"
+
+[node name="WaterAudio3" type="AudioStreamPlayer" parent="WaterAudio"]
+stream = ExtResource("26_55xl4")
+max_polyphony = 20
+bus = &"Sound"

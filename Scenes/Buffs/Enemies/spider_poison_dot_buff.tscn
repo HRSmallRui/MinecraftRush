@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1qgghva22eut"]
+
+[ext_resource type="PackedScene" uid="uid://bwifge7de0uys" path="res://Scenes/Buffs/dot_buff.tscn" id="1_t12ha"]
+[ext_resource type="Script" path="res://Scripts/Classes/potion_particle_leader.gd" id="2_mmhkd"]
+
+[node name="SpiderPoisonDotBuff" instance=ExtResource("1_t12ha")]
+dot_damage = Array[int]([6])
+can_be_dead = false
+duration = 5.0
+buff_tag = "spider_poison"
+immune_groups = Array[String](["god", "no_live"])
+
+[node name="DotTimer" parent="." index="0"]
+wait_time = 0.25
+
+[node name="PotionParticleLeader" type="Node2D" parent="." index="1" node_paths=PackedStringArray("buff_vehicle")]
+script = ExtResource("2_mmhkd")
+potion_color = Color(0, 0.39123, 3.85046e-07, 1)
+buff_vehicle = NodePath("..")

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b14n0vxjtpqoq"]
+
+[ext_resource type="PackedScene" uid="uid://bmr7x0vo1n3ky" path="res://Scenes/Buffs/heal_buff.tscn" id="1_25txu"]
+[ext_resource type="Script" path="res://Scripts/Classes/potion_particle_leader.gd" id="2_vlm52"]
+
+[node name="SuperHealBuff" instance=ExtResource("1_25txu")]
+heal_datas = Array[int]([10])
+duration = 6.0
+buff_tag = "steve_super_heal"
+immune_groups = Array[String](["undead"])
+
+[node name="Timer" parent="." index="0"]
+wait_time = 0.5
+
+[node name="PotionParticleLeader" type="Node2D" parent="." index="1" node_paths=PackedStringArray("buff_vehicle")]
+script = ExtResource("2_vlm52")
+potion_color = Color(0.954458, 3.60981e-06, 1.34766e-06, 1)
+buff_vehicle = NodePath("..")

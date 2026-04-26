@@ -1,0 +1,193 @@
+[gd_scene load_steps=20 format=3 uid="uid://hkgfiaarh4s6"]
+
+[ext_resource type="PackedScene" uid="uid://bdp6vlymmmpu3" path="res://Scenes/Allys/SummonAllys/summon_ally_class.tscn" id="1_g7h1q"]
+[ext_resource type="Script" path="res://Scripts/Allys/SummonAllys/gd_golem.gd" id="2_2swd8"]
+[ext_resource type="PackedScene" uid="uid://b76b7g5n6efop" path="res://Scenes/Buffs/dizness_buff.tscn" id="3_xmwib"]
+[ext_resource type="PackedScene" uid="uid://blf6tdqaj673m" path="res://Scenes/Effects/bullet_explosion_effect.tscn" id="4_60b76"]
+[ext_resource type="PackedScene" uid="uid://bf25ajrac2ijx" path="res://Scenes/Effects/smoke_effect.tscn" id="5_y2f3t"]
+[ext_resource type="Script" path="res://Library/Heroes/damage_block.gd" id="6_oocpy"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="7_7el32"]
+[ext_resource type="Texture2D" uid="uid://t5pqp5yq2rrn" path="res://Assets/Images/UI/InformationBar/Allys/GDGolem2.png" id="8_3kcio"]
+[ext_resource type="SpriteFrames" uid="uid://g3n3wwagwm78" path="res://Assets/Animations/SummonAllys/GDGolem/gd_golem_frames.tres" id="8_tmq4o"]
+[ext_resource type="Shader" path="res://Assets/Shaders/hue_color.gdshader" id="9_xkwhn"]
+[ext_resource type="Texture2D" uid="uid://ccglhhifm554s" path="res://Assets/Images/Effects/鼓舞光环.png" id="10_c2bju"]
+[ext_resource type="Texture2D" uid="uid://cqml6idiuqh86" path="res://Assets/Images/Effects/扑克花色.png" id="11_keuqd"]
+
+[sub_resource type="Resource" id="Resource_tnlst"]
+script = ExtResource("6_oocpy")
+damage_low = 40
+damage_high = 60
+
+[sub_resource type="Resource" id="Resource_m7hhr"]
+script = ExtResource("7_7el32")
+health = 120
+dodge_rate = 0.0
+near_damage_low = 2
+near_damage_high = 4
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.3
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 2.2
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_307yl"]
+radius = 73.9444
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_onqam"]
+shader = ExtResource("9_xkwhn")
+shader_parameter/hue_shift = 0.0
+
+[sub_resource type="Animation" id="Animation_acelt"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-20, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_s6cev"]
+resource_name = "appear"
+length = 1.3
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-20, -0.25, 0, 0.25, 0, -85, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c200w"]
+_data = {
+"RESET": SubResource("Animation_acelt"),
+"appear": SubResource("Animation_s6cev")
+}
+
+[node name="GDGolem2" groups=["no_live"] instance=ExtResource("1_g7h1q")]
+script = ExtResource("2_2swd8")
+poke_type = 1
+dizness_buff_scene = ExtResource("3_xmwib")
+explosion_effect_scene = ExtResource("4_60b76")
+smoke_effect_scene = ExtResource("5_y2f3t")
+die_explosion_damage = SubResource("Resource_tnlst")
+unit_list = Array[ExtResource("7_7el32")]([SubResource("Resource_m7hhr")])
+heal_speed_list = Array[int]([9])
+ally_name = "红心傀儡"
+ally_texture = ExtResource("8_3kcio")
+intercepting_range = 150
+rebirth_time = 0
+
+[node name="AllySprite" parent="UnitBody" index="0"]
+modulate = Color(1, 0.346577, 0.280009, 1)
+position = Vector2(0, -85)
+sprite_frames = ExtResource("8_tmq4o")
+animation = &"attack"
+autoplay = "idle"
+
+[node name="ExplosionAttackArea" type="Area2D" parent="UnitBody" index="8"]
+scale = Vector2(2, 2)
+collision_layer = 0
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/ExplosionAttackArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_307yl")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="HealArea" type="Area2D" parent="UnitBody" index="9"]
+scale = Vector2(1.6, 1.6)
+collision_layer = 0
+collision_mask = 24
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/HealArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_307yl")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="Light" type="Sprite2D" parent="UnitBody" index="13"]
+z_index = -1
+material = SubResource("ShaderMaterial_onqam")
+scale = Vector2(1.80574, 1.80574)
+texture = ExtResource("10_c2bju")
+region_enabled = true
+region_rect = Rect2(20, 24, 110, 63)
+
+[node name="Poke" type="Sprite2D" parent="UnitBody" index="14"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0.768627)
+position = Vector2(0, -20)
+scale = Vector2(2.3097, 2.3097)
+texture = ExtResource("11_keuqd")
+region_enabled = true
+region_rect = Rect2(13, 14, 51, 46)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UnitBody/Poke" index="0"]
+libraries = {
+"": SubResource("AnimationLibrary_c200w")
+}
+autoplay = "appear"
+
+[node name="ExistingTimer" type="Timer" parent="." index="6"]
+wait_time = 10.0
+one_shot = true
+
+[node name="HealShotTimer" type="Timer" parent="." index="7"]
+wait_time = 0.2
+
+[connection signal="timeout" from="ExistingTimer" to="." method="_on_existing_timer_timeout"]
+[connection signal="timeout" from="HealShotTimer" to="." method="_on_heal_shot_timer_timeout"]

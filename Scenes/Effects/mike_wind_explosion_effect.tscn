@@ -1,0 +1,86 @@
+[gd_scene load_steps=20 format=3 uid="uid://cv284adejyl6u"]
+
+[ext_resource type="Shader" path="res://Assets/Shaders/hue_color.gdshader" id="1_btame"]
+[ext_resource type="Texture2D" uid="uid://bhsy08md8oagl" path="res://Assets/Images/Effects/OperatorAOE/0001.png" id="2_jokqg"]
+[ext_resource type="Texture2D" uid="uid://bij1scdhmltfj" path="res://Assets/Images/Effects/OperatorAOE/0002.png" id="3_0sd5g"]
+[ext_resource type="Texture2D" uid="uid://blo7d3aw24syx" path="res://Assets/Images/Effects/OperatorAOE/0003.png" id="4_1i7a0"]
+[ext_resource type="Texture2D" uid="uid://hcvydas1ao1x" path="res://Assets/Images/Effects/OperatorAOE/0004.png" id="5_7m1t2"]
+[ext_resource type="Texture2D" uid="uid://ba318ils50gl7" path="res://Assets/Images/Effects/OperatorAOE/0005.png" id="6_kid5n"]
+[ext_resource type="Texture2D" uid="uid://367cmukymfpc" path="res://Assets/Images/Effects/OperatorAOE/0006.png" id="7_upkdr"]
+[ext_resource type="Texture2D" uid="uid://cuk7uxjrwqvhk" path="res://Assets/Images/Effects/OperatorAOE/0007.png" id="8_78h0r"]
+[ext_resource type="Texture2D" uid="uid://o5fdlfko4hkt" path="res://Assets/Images/Effects/OperatorAOE/0008.png" id="9_4wbqf"]
+[ext_resource type="Texture2D" uid="uid://b10sd74fa7dfr" path="res://Assets/Images/Effects/OperatorAOE/0009.png" id="10_6hrrf"]
+[ext_resource type="Texture2D" uid="uid://dh0qudl2cw3ns" path="res://Assets/Images/Effects/OperatorAOE/0010.png" id="11_dixjr"]
+[ext_resource type="Texture2D" uid="uid://cd3cp405viwlc" path="res://Assets/Images/Effects/OperatorAOE/0011.png" id="12_swxpx"]
+[ext_resource type="Texture2D" uid="uid://b7kwjpudg8i8b" path="res://Assets/Images/Effects/OperatorAOE/0012.png" id="13_2onyb"]
+[ext_resource type="Texture2D" uid="uid://deu2xws6d81xn" path="res://Assets/Images/Effects/OperatorAOE/0013.png" id="14_8f2uo"]
+[ext_resource type="Texture2D" uid="uid://byale58140av0" path="res://Assets/Images/Effects/OperatorAOE/0014.png" id="15_jt0vw"]
+[ext_resource type="Texture2D" uid="uid://dbjib1mtwilvl" path="res://Assets/Images/Effects/OperatorAOE/0015.png" id="16_uj4cm"]
+[ext_resource type="Script" path="res://Scripts/Effects/normal_effect.gd" id="17_xhsfa"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kiskr"]
+shader = ExtResource("1_btame")
+shader_parameter/hue_shift = 0.8
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6wcjj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jokqg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0sd5g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1i7a0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7m1t2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kid5n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_upkdr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_78h0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4wbqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_6hrrf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_dixjr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_swxpx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_2onyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_8f2uo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_jt0vw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_uj4cm")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 24.0
+}]
+
+[node name="MikeWindExplosionEffect" type="AnimatedSprite2D"]
+material = SubResource("ShaderMaterial_kiskr")
+sprite_frames = SubResource("SpriteFrames_6wcjj")
+frame = 15
+frame_progress = 1.0
+script = ExtResource("17_xhsfa")

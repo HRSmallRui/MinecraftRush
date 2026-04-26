@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dc6hiv6auiwwy"]
+
+[ext_resource type="PackedScene" uid="uid://bjfa3t67tpsbr" path="res://Scenes/Buffs/property_buff.tscn" id="1_yce5y"]
+[ext_resource type="Script" path="res://Scripts/Buffs/property_buff_block.gd" id="2_y1s7m"]
+[ext_resource type="Script" path="res://Scripts/Classes/potion_particle_leader.gd" id="3_8yluq"]
+
+[sub_resource type="Resource" id="Resource_hvhar"]
+script = ExtResource("2_y1s7m")
+property_type = 11
+operation_type = 0
+operation_data = 0.5
+
+[node name="SkeletonGeneHurtRateDebuff" instance=ExtResource("1_yce5y")]
+buff_blocks = Array[ExtResource("2_y1s7m")]([SubResource("Resource_hvhar")])
+buff_type = 1
+duration = 6.0
+buff_tag = "SkeletonGeneHurtRateDebuff"
+immune_groups = Array[String](["super_unit", "god"])
+
+[node name="PotionParticleLeader" type="Node2D" parent="." index="0" node_paths=PackedStringArray("buff_vehicle")]
+script = ExtResource("3_8yluq")
+potion_color = Color(1, 1, 0, 1)
+buff_vehicle = NodePath("..")

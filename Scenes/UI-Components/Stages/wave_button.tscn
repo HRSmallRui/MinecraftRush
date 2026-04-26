@@ -1,0 +1,154 @@
+[gd_scene load_steps=14 format=3 uid="uid://4j747edyffkd"]
+
+[ext_resource type="Script" path="res://Scripts/UI-Components/Stages/wave_button.gd" id="1_7pa2y"]
+[ext_resource type="Texture2D" uid="uid://da82fg5nj0ajt" path="res://Assets/Images/UI/wave.png" id="1_o1kvr"]
+[ext_resource type="Texture2D" uid="uid://cpp10bpxlk5y8" path="res://Assets/Images/UI/wave-hover.png" id="2_lygix"]
+[ext_resource type="Texture2D" uid="uid://cu023vxrjm0no" path="res://Assets/Images/UI/wave-process.png" id="3_c32um"]
+[ext_resource type="AudioStream" uid="uid://tigcnyfhwo1j" path="res://Assets/Sounds/FXs/UIs/MouseOver.ogg" id="5_1xoyb"]
+[ext_resource type="Texture2D" uid="uid://dwvhpx83gymml" path="res://Assets/Images/UI/wave-button-over.png" id="6_cbh16"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oqak8"]
+atlas = ExtResource("1_o1kvr")
+region = Rect2(35, 33, 62, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d47rs"]
+atlas = ExtResource("2_lygix")
+region = Rect2(26, 26, 78, 76)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_akeg0"]
+atlas = ExtResource("3_c32um")
+region = Rect2(36, 34, 60, 60)
+
+[sub_resource type="Animation" id="Animation_nbytr"]
+resource_name = "Loop"
+length = 0.6
+loop_mode = 2
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.9, -0.25, 0, 0.25, 0, 1.1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.9, -0.25, 0, 0.25, 0, 1.1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+
+[sub_resource type="Animation" id="Animation_4sb00"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.8, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.8, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bjegf"]
+_data = {
+"Loop": SubResource("Animation_nbytr"),
+"RESET": SubResource("Animation_4sb00")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ata2"]
+atlas = ExtResource("6_cbh16")
+region = Rect2(42, 40, 48, 48)
+
+[node name="WaveButton" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_7pa2y")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = -31.0
+offset_right = 31.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+texture_normal = SubResource("AtlasTexture_oqak8")
+texture_pressed = SubResource("AtlasTexture_oqak8")
+texture_hover = SubResource("AtlasTexture_d47rs")
+stretch_mode = 3
+
+[node name="WaveProgressBar" type="TextureProgressBar" parent="TextureButton"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 61.0
+offset_bottom = 61.0
+mouse_filter = 2
+max_value = 1.0
+step = 0.0
+value = 1.0
+fill_mode = 4
+texture_progress = SubResource("AtlasTexture_akeg0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_bjegf")
+}
+autoplay = "Loop"
+
+[node name="MouseOverAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_1xoyb")
+max_polyphony = 2
+bus = &"Sound"
+
+[node name="WaveOverScreenLayer" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="BackButton" type="TextureButton" parent="WaveOverScreenLayer"]
+visible = false
+offset_left = 1872.0
+offset_top = 1032.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+focus_mode = 0
+texture_normal = SubResource("AtlasTexture_1ata2")
+stretch_mode = 3
+
+[node name="ScreenVisibleNode" type="VisibleOnScreenNotifier2D" parent="."]
+scale = Vector2(3.125, 3)
+
+[connection signal="mouse_entered" from="TextureButton" to="." method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_exited" from="TextureButton" to="." method="_on_texture_button_mouse_exited"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="WaveOverScreenLayer/BackButton" to="." method="_on_back_button_pressed"]

@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://46o2npu3sf2m"]
+
+[ext_resource type="PackedScene" uid="uid://bjfa3t67tpsbr" path="res://Scenes/Buffs/property_buff.tscn" id="1_jpewh"]
+[ext_resource type="Script" path="res://Scripts/Buffs/property_buff_block.gd" id="2_abk3t"]
+[ext_resource type="Script" path="res://Scripts/Classes/potion_particle_leader.gd" id="3_stc3q"]
+
+[sub_resource type="Resource" id="Resource_qelc3"]
+script = ExtResource("2_abk3t")
+property_type = 1
+operation_type = 1
+operation_data = 1.4
+
+[sub_resource type="Resource" id="Resource_bbl5o"]
+script = ExtResource("2_abk3t")
+property_type = 2
+operation_type = 1
+operation_data = 1.4
+
+[node name="SteveStrngthBuffLV2" instance=ExtResource("1_jpewh")]
+buff_blocks = Array[ExtResource("2_abk3t")]([SubResource("Resource_qelc3"), SubResource("Resource_bbl5o")])
+buff_level = 2
+buff_tag = "steve_strength"
+
+[node name="PotionParticleLeader" type="Node2D" parent="." index="0" node_paths=PackedStringArray("buff_vehicle")]
+script = ExtResource("3_stc3q")
+potion_color = Color(1, 0, 0, 1)
+buff_vehicle = NodePath("..")

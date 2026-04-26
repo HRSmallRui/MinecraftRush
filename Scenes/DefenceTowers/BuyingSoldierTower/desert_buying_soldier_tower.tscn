@@ -1,0 +1,71 @@
+[gd_scene load_steps=14 format=3 uid="uid://b5igiqxa7xk0"]
+
+[ext_resource type="PackedScene" uid="uid://bt1fb5p0tpyur" path="res://Scenes/DefenceTowers/BuyingSoldierTower/buying_soldier_tower.tscn" id="1_auaqg"]
+[ext_resource type="Texture2D" uid="uid://b3of2t7ltq33e" path="res://Assets/Images/UI/InformationBar/desert_soldier.png" id="2_u8vrq"]
+[ext_resource type="Texture2D" uid="uid://qmeadeojdlud" path="res://Assets/Images/DefenceTowers/Based/desert-build.png" id="3_gfhau"]
+[ext_resource type="Texture2D" uid="uid://cda3m04eqknuk" path="res://Assets/Images/DefenceTowers/Based/desert-build-select.png" id="4_6bcpw"]
+[ext_resource type="Texture2D" uid="uid://bctu4iubsi4na" path="res://Assets/Images/DefenceTowers/Specials/沙漠雇佣兵营地.png" id="5_8627l"]
+[ext_resource type="PackedScene" uid="uid://1rsgbwfy6qr4" path="res://Scenes/DefenceTowers/buying_soldier_button.tscn" id="5_w0puk"]
+[ext_resource type="PackedScene" uid="uid://21joql2txk3j" path="res://Scenes/Allys/BuyingSoldiers/desert_soldier_1.tscn" id="6_jicii"]
+[ext_resource type="Texture2D" uid="uid://doi0r1f0vpyb6" path="res://Assets/Images/DefenceTowers/Specials/BuyingButtons/desert2.png" id="7_6px7i"]
+[ext_resource type="Texture2D" uid="uid://cfl3pp4sqi7rm" path="res://Assets/Images/DefenceTowers/Specials/BuyingButtons/desert2-select.png" id="8_4gy8d"]
+[ext_resource type="Texture2D" uid="uid://dca65wpv1h1yx" path="res://Assets/Images/DefenceTowers/Specials/BuyingButtons/desert2-no.png" id="9_yj8tj"]
+[ext_resource type="PackedScene" uid="uid://c8jcai3xbjkuc" path="res://Scenes/Allys/BuyingSoldiers/desert_soldier_2.tscn" id="10_1wwa7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p1p2m"]
+atlas = ExtResource("7_6px7i")
+region = Rect2(17, 18, 62, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3yqe"]
+atlas = ExtResource("9_yj8tj")
+region = Rect2(17, 18, 62, 61)
+
+[node name="DesertBuyingSoldierTower" instance=ExtResource("1_auaqg")]
+tower_intro = "只要给够赏钱这帮亡命之徒可以为你赴汤蹈火。"
+soldier_count_limit = 4
+tower_name = "沙漠雇佣兵营地"
+tower_texture = ExtResource("2_u8vrq")
+based_skin = 2
+
+[node name="BasedSprite" parent="Based" index="0"]
+texture = ExtResource("3_gfhau")
+
+[node name="BasedSpriteSelect" parent="Based" index="1"]
+texture = ExtResource("4_6bcpw")
+
+[node name="TowerButton" parent="." index="2"]
+offset_top = -48.0
+
+[node name="Circle" parent="TowerUI" index="4"]
+position = Vector2(0, -31)
+
+[node name="BuyingSoldierButton" parent="TowerUI/Circle" index="2" node_paths=PackedStringArray("linked_tower") instance=ExtResource("5_w0puk")]
+offset_left = -126.251
+offset_top = -127.499
+offset_right = -64.2506
+offset_bottom = -66.4994
+linked_tower = NodePath("../../..")
+button_key = "DesertSoldier1"
+price = 75
+soldier_scene = ExtResource("6_jicii")
+
+[node name="BuyingSoldierButton2" parent="TowerUI/Circle" index="3" node_paths=PackedStringArray("linked_tower") instance=ExtResource("5_w0puk")]
+offset_left = 63.7494
+offset_top = -127.5
+offset_right = 125.75
+offset_bottom = -66.4998
+texture_normal = SubResource("AtlasTexture_p1p2m")
+texture_pressed = SubResource("AtlasTexture_p1p2m")
+texture_hover = ExtResource("8_4gy8d")
+texture_disabled = SubResource("AtlasTexture_c3yqe")
+linked_tower = NodePath("../../..")
+button_key = "DesertSoldier2"
+price = 200
+soldier_scene = ExtResource("10_1wwa7")
+
+[node name="TowerSprite" type="Sprite2D" parent="." index="8"]
+position = Vector2(0, 22)
+texture = ExtResource("5_8627l")
+offset = Vector2(0, -38)
+region_enabled = true
+region_rect = Rect2(92, 126, 116, 80)

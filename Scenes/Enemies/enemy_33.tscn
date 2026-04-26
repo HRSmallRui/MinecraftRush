@@ -1,0 +1,666 @@
+[gd_scene load_steps=157 format=3 uid="uid://c0i5mwbqr4fdj"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_pdifr"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_33.gd" id="2_rdrqd"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="3_lsnj1"]
+[ext_resource type="Texture2D" uid="uid://brno8j03ca1un" path="res://Assets/Images/UI/InformationBar/EnemyChapter4/劫掠者.png" id="3_mm78w"]
+[ext_resource type="PackedScene" uid="uid://dgreu184bd5ej" path="res://Scenes/Bullets/enemy_straight_arrow.tscn" id="4_qr8ka"]
+[ext_resource type="AudioStream" uid="uid://bq1em7lmtufui" path="res://Assets/Sounds/FXs/Enemies/劫掠者/劫掠者死亡1.wav" id="5_f7ixw"]
+[ext_resource type="AudioStream" uid="uid://cmn5ipgam6pgr" path="res://Assets/Sounds/FXs/Enemies/劫掠者/劫掠者死亡2.wav" id="6_y2a7v"]
+[ext_resource type="AudioStream" uid="uid://6kd7eaek86y8" path="res://Assets/Sounds/FXs/Enemies/劫掠者/劫掠者死亡3.wav" id="7_yjwlt"]
+[ext_resource type="Texture2D" uid="uid://b3emcc184o7sa" path="res://Assets/Animations/Enemies/33劫掠者/attack_00.png" id="8_lsxg6"]
+[ext_resource type="Texture2D" uid="uid://c51xj8eyhfqnb" path="res://Assets/Animations/Enemies/33劫掠者/attack_01.png" id="9_obu85"]
+[ext_resource type="Texture2D" uid="uid://c1rsdyext3toa" path="res://Assets/Animations/Enemies/33劫掠者/attack_02.png" id="10_d8wcu"]
+[ext_resource type="Texture2D" uid="uid://d4mewlapj6u60" path="res://Assets/Animations/Enemies/33劫掠者/attack_03.png" id="11_2gf17"]
+[ext_resource type="Texture2D" uid="uid://dqv4whxxnsi5l" path="res://Assets/Animations/Enemies/33劫掠者/attack_04.png" id="12_72blr"]
+[ext_resource type="Texture2D" uid="uid://cahespjlykmsw" path="res://Assets/Animations/Enemies/33劫掠者/attack_05.png" id="13_bmwbi"]
+[ext_resource type="Texture2D" uid="uid://cmrs4akg5dnfv" path="res://Assets/Animations/Enemies/33劫掠者/attack_06.png" id="14_h7ulp"]
+[ext_resource type="Texture2D" uid="uid://v13apbyhqt6w" path="res://Assets/Animations/Enemies/33劫掠者/attack_07.png" id="15_t1s1m"]
+[ext_resource type="Texture2D" uid="uid://b1dechm6i6pk0" path="res://Assets/Animations/Enemies/33劫掠者/attack_08.png" id="16_2rboq"]
+[ext_resource type="Texture2D" uid="uid://bynfk6dep0hub" path="res://Assets/Animations/Enemies/33劫掠者/attack_09.png" id="17_arj7j"]
+[ext_resource type="Texture2D" uid="uid://vi1dm00vragm" path="res://Assets/Animations/Enemies/33劫掠者/attack_10.png" id="18_a10l4"]
+[ext_resource type="Texture2D" uid="uid://bfx4inichh1tr" path="res://Assets/Animations/Enemies/33劫掠者/attack_11.png" id="19_niovn"]
+[ext_resource type="Texture2D" uid="uid://36wf5cp68tjf" path="res://Assets/Animations/Enemies/33劫掠者/attack_12.png" id="20_ilrdr"]
+[ext_resource type="Texture2D" uid="uid://clqlaymiw6o4n" path="res://Assets/Animations/Enemies/33劫掠者/attack_13.png" id="21_yot2w"]
+[ext_resource type="Texture2D" uid="uid://djwtd2n2ob37r" path="res://Assets/Animations/Enemies/33劫掠者/attack_14.png" id="22_qjldf"]
+[ext_resource type="Texture2D" uid="uid://8ghx1uha1mmb" path="res://Assets/Animations/Enemies/33劫掠者/attack_15.png" id="23_l600o"]
+[ext_resource type="Texture2D" uid="uid://cf40otnmbofdm" path="res://Assets/Animations/Enemies/33劫掠者/attack_16.png" id="24_3s3em"]
+[ext_resource type="Texture2D" uid="uid://bk7w0kh4vbwvl" path="res://Assets/Animations/Enemies/33劫掠者/attack_17.png" id="25_8nut2"]
+[ext_resource type="Texture2D" uid="uid://7huer2te5dkd" path="res://Assets/Animations/Enemies/33劫掠者/attack_18.png" id="26_3h14c"]
+[ext_resource type="Texture2D" uid="uid://clntccwi512ww" path="res://Assets/Animations/Enemies/33劫掠者/attack_19.png" id="27_askd4"]
+[ext_resource type="Texture2D" uid="uid://cvvn2bvw2dsfi" path="res://Assets/Animations/Enemies/33劫掠者/attack_20.png" id="28_rj8rh"]
+[ext_resource type="Texture2D" uid="uid://d21on77g7pc0h" path="res://Assets/Animations/Enemies/33劫掠者/die_00.png" id="29_ptsrq"]
+[ext_resource type="Texture2D" uid="uid://c504lxdi1h4n0" path="res://Assets/Animations/Enemies/33劫掠者/die_01.png" id="30_e5u8t"]
+[ext_resource type="Texture2D" uid="uid://ugtv6hhs6in2" path="res://Assets/Animations/Enemies/33劫掠者/die_02.png" id="31_jkhfg"]
+[ext_resource type="Texture2D" uid="uid://de7ycwp3ilmmj" path="res://Assets/Animations/Enemies/33劫掠者/die_03.png" id="32_pwj45"]
+[ext_resource type="Texture2D" uid="uid://n7flrewibcwb" path="res://Assets/Animations/Enemies/33劫掠者/die_04.png" id="33_sdspe"]
+[ext_resource type="Texture2D" uid="uid://cj6p7wkoy1lk3" path="res://Assets/Animations/Enemies/33劫掠者/die_05.png" id="34_76kve"]
+[ext_resource type="Texture2D" uid="uid://3a1tnqa1jrit" path="res://Assets/Animations/Enemies/33劫掠者/die_06.png" id="35_iwixl"]
+[ext_resource type="Texture2D" uid="uid://bj5isxka3rvyy" path="res://Assets/Animations/Enemies/33劫掠者/die_07.png" id="36_kdimn"]
+[ext_resource type="Texture2D" uid="uid://d1wf4cqii38j4" path="res://Assets/Animations/Enemies/33劫掠者/die_08.png" id="37_huxt4"]
+[ext_resource type="Texture2D" uid="uid://bo4iac75vxuyh" path="res://Assets/Animations/Enemies/33劫掠者/die_09.png" id="38_pvvcf"]
+[ext_resource type="Texture2D" uid="uid://c42bhlgkgx3pr" path="res://Assets/Animations/Enemies/33劫掠者/die_10.png" id="39_wmpix"]
+[ext_resource type="Texture2D" uid="uid://bjg6vpmknke5h" path="res://Assets/Animations/Enemies/33劫掠者/die_11.png" id="40_w7hf6"]
+[ext_resource type="Texture2D" uid="uid://dwjd1qt1qrsj" path="res://Assets/Animations/Enemies/33劫掠者/die_12.png" id="41_fn72h"]
+[ext_resource type="Texture2D" uid="uid://coh15k8t2jc8i" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_00.png" id="42_rbwhn"]
+[ext_resource type="Texture2D" uid="uid://dbuu7gr55r3i4" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_01.png" id="43_8f8oo"]
+[ext_resource type="Texture2D" uid="uid://b65txi1gqgvjg" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_02.png" id="44_rr6wa"]
+[ext_resource type="Texture2D" uid="uid://dit7t5j8cmfwn" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_03.png" id="45_ke4ga"]
+[ext_resource type="Texture2D" uid="uid://b6elj2u7o14bf" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_04.png" id="46_3f27m"]
+[ext_resource type="Texture2D" uid="uid://tfc88s5mp6t4" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_05.png" id="47_swfky"]
+[ext_resource type="Texture2D" uid="uid://c3p8oqujm7fc" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_06.png" id="48_4yvbx"]
+[ext_resource type="Texture2D" uid="uid://dk6ngumo7t4uk" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_07.png" id="49_jxmqw"]
+[ext_resource type="Texture2D" uid="uid://5q0bhpsy0xm5" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_08.png" id="50_35lym"]
+[ext_resource type="Texture2D" uid="uid://b005sggrdrmvm" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_09.png" id="51_uh4fv"]
+[ext_resource type="Texture2D" uid="uid://b8cgbluu0gdx1" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_10.png" id="52_caeer"]
+[ext_resource type="Texture2D" uid="uid://usft6onkdeom" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_11.png" id="53_e870u"]
+[ext_resource type="Texture2D" uid="uid://svsr2e5oauxj" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_12.png" id="54_1h67s"]
+[ext_resource type="Texture2D" uid="uid://c5v8d6sopcqhp" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_13.png" id="55_vwdmt"]
+[ext_resource type="Texture2D" uid="uid://dgsa5vu4b4smi" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_14.png" id="56_1wr5q"]
+[ext_resource type="Texture2D" uid="uid://dp6myq2lrvrrw" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_15.png" id="57_3oqoh"]
+[ext_resource type="Texture2D" uid="uid://db72eib2afkct" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_16.png" id="58_6p14x"]
+[ext_resource type="Texture2D" uid="uid://d0qbc0xg6bkub" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_17.png" id="59_6h8hu"]
+[ext_resource type="Texture2D" uid="uid://dg7331x6617hy" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_18.png" id="60_be8mh"]
+[ext_resource type="Texture2D" uid="uid://8a4l3aoba6wy" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_19.png" id="61_7xwed"]
+[ext_resource type="Texture2D" uid="uid://8bhqheq6lql1" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_20.png" id="62_e07wx"]
+[ext_resource type="Texture2D" uid="uid://gocmj03me7nd" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_21.png" id="63_a41qk"]
+[ext_resource type="Texture2D" uid="uid://cywt585vyf7sj" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_22.png" id="64_yebmy"]
+[ext_resource type="Texture2D" uid="uid://b4l4klm1p3or2" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_23.png" id="65_1cu8o"]
+[ext_resource type="Texture2D" uid="uid://bon4uq71id72e" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_24.png" id="66_hl5vv"]
+[ext_resource type="Texture2D" uid="uid://61vkovy8xoxq" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_25.png" id="67_2gmrq"]
+[ext_resource type="Texture2D" uid="uid://dmmpb1x0mjfo0" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_26.png" id="68_4w8dm"]
+[ext_resource type="Texture2D" uid="uid://1xdgqkws31jc" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_27.png" id="69_owi1w"]
+[ext_resource type="Texture2D" uid="uid://j4jknrlk1w02" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_28.png" id="70_yvrra"]
+[ext_resource type="Texture2D" uid="uid://cgcf68lhwrude" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_29.png" id="71_d8w6l"]
+[ext_resource type="Texture2D" uid="uid://n324g37ikkb5" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_30.png" id="72_ebbjb"]
+[ext_resource type="Texture2D" uid="uid://dhg0ytysprx4k" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_31.png" id="73_bevw5"]
+[ext_resource type="Texture2D" uid="uid://fbqtglqc05ls" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_32.png" id="74_wqbrg"]
+[ext_resource type="Texture2D" uid="uid://ckbvwmrr6dm5f" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_33.png" id="75_yeot0"]
+[ext_resource type="Texture2D" uid="uid://ct4breb45l3u5" path="res://Assets/Animations/Enemies/33劫掠者/far_attack_34.png" id="76_uqsys"]
+[ext_resource type="Texture2D" uid="uid://ckune73tmqbri" path="res://Assets/Animations/Enemies/33劫掠者/move_back_00.png" id="77_1t1do"]
+[ext_resource type="Texture2D" uid="uid://d3tvmfqja62tk" path="res://Assets/Animations/Enemies/33劫掠者/move_back_01.png" id="78_3lv75"]
+[ext_resource type="Texture2D" uid="uid://dn2g3qwqpeojt" path="res://Assets/Animations/Enemies/33劫掠者/move_back_02.png" id="79_e10ps"]
+[ext_resource type="Texture2D" uid="uid://hvl2uk4me4xs" path="res://Assets/Animations/Enemies/33劫掠者/move_back_03.png" id="80_44xfa"]
+[ext_resource type="Texture2D" uid="uid://3mh02j5kkcod" path="res://Assets/Animations/Enemies/33劫掠者/move_back_04.png" id="81_j1gw7"]
+[ext_resource type="Texture2D" uid="uid://5748k63lwq21" path="res://Assets/Animations/Enemies/33劫掠者/move_back_05.png" id="82_38w8j"]
+[ext_resource type="Texture2D" uid="uid://c04beqvcxkpnw" path="res://Assets/Animations/Enemies/33劫掠者/move_back_06.png" id="83_yx23m"]
+[ext_resource type="Texture2D" uid="uid://bhywfqtbxe1gw" path="res://Assets/Animations/Enemies/33劫掠者/move_back_07.png" id="84_se8hw"]
+[ext_resource type="Texture2D" uid="uid://db7hadqm1lhjx" path="res://Assets/Animations/Enemies/33劫掠者/move_back_08.png" id="85_vkekq"]
+[ext_resource type="Texture2D" uid="uid://c8w75ye5kkoyn" path="res://Assets/Animations/Enemies/33劫掠者/move_back_09.png" id="86_giwgr"]
+[ext_resource type="Texture2D" uid="uid://dye8327cf3yuc" path="res://Assets/Animations/Enemies/33劫掠者/move_back_10.png" id="87_0l1dg"]
+[ext_resource type="Texture2D" uid="uid://5pf1xgiv62x2" path="res://Assets/Animations/Enemies/33劫掠者/move_back_11.png" id="88_0ohxi"]
+[ext_resource type="Texture2D" uid="uid://cgi1uh57nb8we" path="res://Assets/Animations/Enemies/33劫掠者/move_back_12.png" id="89_g3eer"]
+[ext_resource type="Texture2D" uid="uid://dswjmcb4i4n1f" path="res://Assets/Animations/Enemies/33劫掠者/move_back_13.png" id="90_jwcbi"]
+[ext_resource type="Texture2D" uid="uid://74ghyntns8r1" path="res://Assets/Animations/Enemies/33劫掠者/move_back_14.png" id="91_cwj6l"]
+[ext_resource type="Texture2D" uid="uid://do5wewbvsbf17" path="res://Assets/Animations/Enemies/33劫掠者/move_back_15.png" id="92_m515l"]
+[ext_resource type="Texture2D" uid="uid://d4ftxtfcu2dac" path="res://Assets/Animations/Enemies/33劫掠者/move_back_16.png" id="93_cv87n"]
+[ext_resource type="Texture2D" uid="uid://lnrq2o5iqg1a" path="res://Assets/Animations/Enemies/33劫掠者/move_back_17.png" id="94_jmsf8"]
+[ext_resource type="Texture2D" uid="uid://uvg2hdsqvssa" path="res://Assets/Animations/Enemies/33劫掠者/move_back_18.png" id="95_v4ejw"]
+[ext_resource type="Texture2D" uid="uid://s3qogj377t1s" path="res://Assets/Animations/Enemies/33劫掠者/move_back_19.png" id="96_vxb4r"]
+[ext_resource type="Texture2D" uid="uid://daxuouyre0oji" path="res://Assets/Animations/Enemies/33劫掠者/move_back_20.png" id="97_m62pv"]
+[ext_resource type="Texture2D" uid="uid://dxlnv7mqbqn7k" path="res://Assets/Animations/Enemies/33劫掠者/move_back_21.png" id="98_anvjt"]
+[ext_resource type="Texture2D" uid="uid://c0u75obm1rq5o" path="res://Assets/Animations/Enemies/33劫掠者/move_back_22.png" id="99_d0hwf"]
+[ext_resource type="Texture2D" uid="uid://dgbu6h3btkqrf" path="res://Assets/Animations/Enemies/33劫掠者/move_back_23.png" id="100_8ruk7"]
+[ext_resource type="Texture2D" uid="uid://muodhaw2ck02" path="res://Assets/Animations/Enemies/33劫掠者/move_front_00.png" id="101_6dxor"]
+[ext_resource type="Texture2D" uid="uid://dmj2s3qedsj5l" path="res://Assets/Animations/Enemies/33劫掠者/move_front_01.png" id="102_tnibj"]
+[ext_resource type="Texture2D" uid="uid://b8gu68rmqlh03" path="res://Assets/Animations/Enemies/33劫掠者/move_front_02.png" id="103_fhi6t"]
+[ext_resource type="Texture2D" uid="uid://biemm3bb6o3e0" path="res://Assets/Animations/Enemies/33劫掠者/move_front_03.png" id="104_3b3u1"]
+[ext_resource type="Texture2D" uid="uid://cgr4sqk3pt6ex" path="res://Assets/Animations/Enemies/33劫掠者/move_front_04.png" id="105_03foq"]
+[ext_resource type="Texture2D" uid="uid://g5vr1i84so42" path="res://Assets/Animations/Enemies/33劫掠者/move_front_05.png" id="106_62y4x"]
+[ext_resource type="Texture2D" uid="uid://cdcxrgh58qvo5" path="res://Assets/Animations/Enemies/33劫掠者/move_front_06.png" id="107_xekb2"]
+[ext_resource type="Texture2D" uid="uid://cve72r107xpf2" path="res://Assets/Animations/Enemies/33劫掠者/move_front_07.png" id="108_rtnpa"]
+[ext_resource type="Texture2D" uid="uid://bbys40j80abio" path="res://Assets/Animations/Enemies/33劫掠者/move_front_08.png" id="109_1eyxh"]
+[ext_resource type="Texture2D" uid="uid://4rksh733l4ny" path="res://Assets/Animations/Enemies/33劫掠者/move_front_09.png" id="110_spftf"]
+[ext_resource type="Texture2D" uid="uid://b5jlwta5mcx6n" path="res://Assets/Animations/Enemies/33劫掠者/move_front_10.png" id="111_vn4xn"]
+[ext_resource type="Texture2D" uid="uid://bo33k0d6gxsov" path="res://Assets/Animations/Enemies/33劫掠者/move_front_11.png" id="112_5pxce"]
+[ext_resource type="Texture2D" uid="uid://ru0v5tck261t" path="res://Assets/Animations/Enemies/33劫掠者/move_front_12.png" id="113_2bnhg"]
+[ext_resource type="Texture2D" uid="uid://cf2ao5fpiatmw" path="res://Assets/Animations/Enemies/33劫掠者/move_front_13.png" id="114_jdvec"]
+[ext_resource type="Texture2D" uid="uid://bw0lqowi478o4" path="res://Assets/Animations/Enemies/33劫掠者/move_front_14.png" id="115_pghqs"]
+[ext_resource type="Texture2D" uid="uid://2c3cam3p0770" path="res://Assets/Animations/Enemies/33劫掠者/move_front_15.png" id="116_xjni3"]
+[ext_resource type="Texture2D" uid="uid://ml3h4cjlcwuc" path="res://Assets/Animations/Enemies/33劫掠者/move_front_16.png" id="117_bxn8t"]
+[ext_resource type="Texture2D" uid="uid://c3vurwisqlnwy" path="res://Assets/Animations/Enemies/33劫掠者/move_front_17.png" id="118_laruq"]
+[ext_resource type="Texture2D" uid="uid://dt8t0myl8yfxs" path="res://Assets/Animations/Enemies/33劫掠者/move_front_18.png" id="119_o0sbf"]
+[ext_resource type="Texture2D" uid="uid://bt3jmbqm3pwq6" path="res://Assets/Animations/Enemies/33劫掠者/move_front_19.png" id="120_he216"]
+[ext_resource type="Texture2D" uid="uid://dhsnwm5eihpql" path="res://Assets/Animations/Enemies/33劫掠者/move_front_20.png" id="121_0tfy7"]
+[ext_resource type="Texture2D" uid="uid://bw55ohm0b34xj" path="res://Assets/Animations/Enemies/33劫掠者/move_front_21.png" id="122_15tje"]
+[ext_resource type="Texture2D" uid="uid://b6ud2p3b4yx7v" path="res://Assets/Animations/Enemies/33劫掠者/move_front_22.png" id="123_usu1r"]
+[ext_resource type="Texture2D" uid="uid://dpj7wbh3g6qq8" path="res://Assets/Animations/Enemies/33劫掠者/move_front_23.png" id="124_b0q43"]
+[ext_resource type="Texture2D" uid="uid://bpyqa43akbhca" path="res://Assets/Animations/Enemies/33劫掠者/move_normal_00.png" id="125_cb77t"]
+[ext_resource type="Texture2D" uid="uid://bbkr0n8ig5i1i" path="res://Assets/Animations/Enemies/33劫掠者/move_normal_01.png" id="126_bk8at"]
+[ext_resource type="Texture2D" uid="uid://bk0llbsknov8a" path="res://Assets/Animations/Enemies/33劫掠者/move_normal_02.png" id="127_moh08"]
+[ext_resource type="Texture2D" uid="uid://b26p3nvf4a6k0" path="res://Assets/Animations/Enemies/33劫掠者/move_normal_03.png" id="128_lebxt"]
+[ext_resource type="Texture2D" uid="uid://bpjnar3ig2cbw" path="res://Assets/Animations/Enemies/33劫掠者/move_normal_04.png" id="129_ipp1w"]
+[ext_resource type="Texture2D" uid="uid://cfdyf6qs2fswb" path="res://Assets/Animations/Enemies/33劫掠者/move_normal_05.png" id="130_xv8po"]
+[ext_resource type="Texture2D" uid="uid://c8lis8wwxm21l" path="res://Assets/Animations/Enemies/33劫掠者/move_normal_06.png" id="131_82s2q"]
+[ext_resource type="Texture2D" uid="uid://dryyf24ne3n8e" path="res://Assets/Animations/Enemies/33劫掠者/move_normal_07.png" id="132_6lk2v"]
+[ext_resource type="Texture2D" uid="uid://dmlio83ybyr1d" path="res://Assets/Animations/Enemies/33劫掠者/move_normal_08.png" id="133_0u2eu"]
+[ext_resource type="Texture2D" uid="uid://dq7q0ttaofim5" path="res://Assets/Animations/Enemies/33劫掠者/move_normal_09.png" id="134_wcyqw"]
+[ext_resource type="Texture2D" uid="uid://husp0rcmobvq" path="res://Assets/Animations/Enemies/33劫掠者/move_normal_10.png" id="135_6tcgn"]
+[ext_resource type="Texture2D" uid="uid://dapfworcflbxy" path="res://Assets/Animations/Enemies/33劫掠者/move_normal_11.png" id="136_776xi"]
+[ext_resource type="Texture2D" uid="uid://bjipwbxu8ou4e" path="res://Assets/Animations/Enemies/33劫掠者/move_normal_12.png" id="137_dj5x0"]
+[ext_resource type="Texture2D" uid="uid://coden3cs7sq81" path="res://Assets/Animations/Enemies/33劫掠者/move_normal_13.png" id="138_slaof"]
+[ext_resource type="Texture2D" uid="uid://drru28vvxgu6j" path="res://Assets/Animations/Enemies/33劫掠者/move_normal_14.png" id="139_v5dg6"]
+[ext_resource type="Texture2D" uid="uid://da84dbpclj2kw" path="res://Assets/Animations/Enemies/33劫掠者/move_normal_15.png" id="140_s5kuj"]
+[ext_resource type="Texture2D" uid="uid://dms8iyq5l1588" path="res://Assets/Animations/Enemies/33劫掠者/move_normal_16.png" id="141_4orfc"]
+[ext_resource type="Texture2D" uid="uid://bm66wmnel08wm" path="res://Assets/Animations/Enemies/33劫掠者/move_normal_17.png" id="142_h2q30"]
+[ext_resource type="Texture2D" uid="uid://bdjec5gpc5b2o" path="res://Assets/Animations/Enemies/33劫掠者/move_normal_18.png" id="143_hy8bp"]
+[ext_resource type="Texture2D" uid="uid://whmp2qnta4rh" path="res://Assets/Animations/Enemies/33劫掠者/move_normal_19.png" id="144_pctje"]
+[ext_resource type="Texture2D" uid="uid://cc7xvkkfkuyep" path="res://Assets/Animations/Enemies/33劫掠者/move_normal_20.png" id="145_ibhtp"]
+[ext_resource type="Texture2D" uid="uid://oy7u24cjklyi" path="res://Assets/Animations/Enemies/33劫掠者/move_normal_21.png" id="146_ta6c2"]
+[ext_resource type="Texture2D" uid="uid://bv8q8lsd2ucog" path="res://Assets/Animations/Enemies/33劫掠者/move_normal_22.png" id="147_pl8pr"]
+[ext_resource type="Texture2D" uid="uid://3qckgxqyq26n" path="res://Assets/Animations/Enemies/33劫掠者/move_normal_23.png" id="148_4deeh"]
+[ext_resource type="PackedScene" uid="uid://dcjuved17hj6j" path="res://Scenes/Enemies/EnemyComponents/appear_audio_component.tscn" id="149_c0li4"]
+[ext_resource type="AudioStream" uid="uid://cveemqk1i3ilk" path="res://Assets/Sounds/FXs/Enemies/劫掠者/劫掠者appear1.wav" id="150_phf50"]
+[ext_resource type="AudioStream" uid="uid://bo56e3rx53ouq" path="res://Assets/Sounds/FXs/Enemies/劫掠者/劫掠者appear2.wav" id="151_kauyo"]
+[ext_resource type="AudioStream" uid="uid://cnvinu2hv6itl" path="res://Assets/Sounds/FXs/Enemies/劫掠者/劫掠者appear3.wav" id="152_kn7mw"]
+[ext_resource type="AudioStream" uid="uid://djab33j5ea07n" path="res://Assets/Sounds/FXs/Enemies/劫掠者/劫掠者appear4.wav" id="153_2jrnq"]
+
+[sub_resource type="Resource" id="Resource_kkjmq"]
+script = ExtResource("3_lsnj1")
+health = 350
+dodge_rate = 0.0
+near_damage_low = 6
+near_damage_high = 14
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 50
+far_damage_high = 60
+far_attack_speed = 2.0
+far_damage_range = 360
+armor = 0.2
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 1.2
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_txox2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_lsxg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_obu85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_d8wcu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_2gf17")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_72blr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_bmwbi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_h7ulp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_t1s1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_2rboq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_arj7j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_a10l4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_niovn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ilrdr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_yot2w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_qjldf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_l600o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_3s3em")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_8nut2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_3h14c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_askd4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_rj8rh")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_ptsrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_e5u8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_jkhfg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_pwj45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_sdspe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_76kve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_iwixl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_kdimn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_huxt4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_pvvcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_wmpix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_w7hf6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_fn72h")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("42_rbwhn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_8f8oo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_rr6wa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_ke4ga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_3f27m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_swfky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_4yvbx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_jxmqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_35lym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_uh4fv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_caeer")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_e870u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_1h67s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_vwdmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_1wr5q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_3oqoh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_6p14x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_6h8hu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_be8mh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_7xwed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_e07wx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_a41qk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_yebmy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_1cu8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_hl5vv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_2gmrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_4w8dm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_owi1w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_yvrra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_d8w6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_ebbjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_bevw5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_wqbrg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_yeot0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_uqsys")
+}],
+"loop": false,
+"name": &"far_attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_lsxg6")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("77_1t1do")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_3lv75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_e10ps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_44xfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_j1gw7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_38w8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_yx23m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_se8hw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_vkekq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_giwgr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_0l1dg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_0ohxi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_g3eer")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_jwcbi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_cwj6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_m515l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_cv87n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_jmsf8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_v4ejw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_vxb4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_m62pv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_anvjt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_d0hwf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_8ruk7")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("101_6dxor")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_tnibj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_fhi6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_3b3u1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_03foq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_62y4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_xekb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_rtnpa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_1eyxh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_spftf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_vn4xn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_5pxce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_2bnhg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_jdvec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_pghqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_xjni3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_bxn8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_laruq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_o0sbf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_he216")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_0tfy7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_15tje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_usu1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_b0q43")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("125_cb77t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_bk8at")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_moh08")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_lebxt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_ipp1w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_xv8po")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_82s2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_6lk2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_0u2eu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_wcyqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_6tcgn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_776xi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_dj5x0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_slaof")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_v5dg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_s5kuj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_4orfc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_h2q30")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_hy8bp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_pctje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_ibhtp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_ta6c2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_pl8pr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_4deeh")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 30.0
+}]
+
+[node name="Enemy33" groups=["illager"] instance=ExtResource("1_pdifr")]
+script = ExtResource("2_rdrqd")
+enemy_name = "劫掠者"
+enemy_id = 33
+enemy_texture = ExtResource("3_mm78w")
+start_data = SubResource("Resource_kkjmq")
+far_attack_bullet_scene = ExtResource("4_qr8ka")
+bounty = 18
+die_audio_stream_list = Array[AudioStream]([ExtResource("5_f7ixw"), ExtResource("6_y2a7v"), ExtResource("7_yjwlt")])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(-5, -90)
+sprite_frames = SubResource("SpriteFrames_txox2")
+animation = &"far_attack"
+autoplay = "idle"
+
+[node name="FarAttackMarker" parent="UnitBody" index="8"]
+position = Vector2(45, -100)
+
+[node name="FarAttackMarkerFlip" parent="UnitBody" index="9"]
+position = Vector2(-45, -100)
+
+[node name="AppearAudioComponent" parent="." index="5" instance=ExtResource("149_c0li4")]
+appear_audio_list = Array[AudioStream]([ExtResource("150_phf50"), ExtResource("151_kauyo"), ExtResource("152_kn7mw"), ExtResource("153_2jrnq")])

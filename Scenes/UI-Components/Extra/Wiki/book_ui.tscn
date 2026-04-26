@@ -1,0 +1,647 @@
+[gd_scene load_steps=48 format=3 uid="uid://d0qpojuqd2xb7"]
+
+[ext_resource type="Script" path="res://Scripts/UI-Components/Extra/book_ui.gd" id="1_7g2fm"]
+[ext_resource type="FontFile" uid="uid://drfv8ak22g1rm" path="res://Assets/Fonts/simhei.ttf" id="2_ph2hg"]
+[ext_resource type="PackedScene" uid="uid://b1nkti7tvksuo" path="res://Scenes/UI-Components/Extra/Wiki/extra_book_button.tscn" id="2_qm0j8"]
+[ext_resource type="Resource" uid="uid://cextkxnpg3xcp" path="res://Library/ExtraLibrary/Areas/wild_area1.tres" id="3_dkxwd"]
+[ext_resource type="Resource" uid="uid://d1aggshp2ouix" path="res://Library/ExtraLibrary/Areas/wild_area2.tres" id="3_rq3wc"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="3_wtac4"]
+[ext_resource type="Resource" uid="uid://byth3kh5b1rdo" path="res://Library/ExtraLibrary/Areas/wild_area3.tres" id="4_r37y5"]
+[ext_resource type="Resource" uid="uid://csp8nmesm1beo" path="res://Library/ExtraLibrary/Areas/wild_area4.tres" id="5_o41s1"]
+[ext_resource type="Resource" uid="uid://b2cjpfvp1rnur" path="res://Library/ExtraLibrary/Families/hating_family1.tres" id="6_538ii"]
+[ext_resource type="Resource" uid="uid://bn2qo85bbk1ur" path="res://Library/ExtraLibrary/Arts/stage1.tres" id="6_h4ero"]
+[ext_resource type="Resource" uid="uid://b51tvlr1myr4i" path="res://Library/ExtraLibrary/Arts/stage2.tres" id="7_aqg2d"]
+[ext_resource type="Resource" uid="uid://gebr24u0gm70" path="res://Library/ExtraLibrary/Families/hating_family2.tres" id="7_jrg0e"]
+[ext_resource type="Resource" uid="uid://u00gfu5ouwqm" path="res://Library/ExtraLibrary/Others/wild_monster1.tres" id="8_5rooy"]
+[ext_resource type="Resource" uid="uid://bds5s4iwhiois" path="res://Library/ExtraLibrary/Arts/stage3.tres" id="8_qxoc0"]
+[ext_resource type="Resource" uid="uid://boboookvqbkry" path="res://Library/ExtraLibrary/Others/wild_monster2.tres" id="9_f6xej"]
+[ext_resource type="Resource" uid="uid://cmyuxyarhkjbe" path="res://Library/ExtraLibrary/Arts/stage4.tres" id="13_j7qx2"]
+[ext_resource type="Resource" uid="uid://fory46cqybnu" path="res://Library/ExtraLibrary/Arts/stage6.tres" id="13_j836e"]
+[ext_resource type="Resource" uid="uid://b0oxh2c82lgyq" path="res://Library/ExtraLibrary/Arts/stage5.tres" id="13_oeqn1"]
+[ext_resource type="Resource" uid="uid://ceohevi0j5mdj" path="res://Library/ExtraLibrary/Arts/stage7.tres" id="16_fe5km"]
+[ext_resource type="Script" path="res://Library/ExtraLibrary/extra_book_config.gd" id="17_4ej8h"]
+[ext_resource type="Resource" uid="uid://b8qkrbma0000a" path="res://Library/ExtraLibrary/Arts/stage9.tres" id="18_blscc"]
+[ext_resource type="Resource" uid="uid://ck3io25g7s7c8" path="res://Library/ExtraLibrary/Arts/stage10.tres" id="19_eq1na"]
+[ext_resource type="Resource" uid="uid://7y5chcwdpvuj" path="res://Library/ExtraLibrary/Arts/stage11.tres" id="20_geuqa"]
+[ext_resource type="Resource" uid="uid://6qq7jf3a0f84" path="res://Library/ExtraLibrary/Arts/stage12.tres" id="21_7ybug"]
+[ext_resource type="Resource" uid="uid://cl27d6jwxgh2p" path="res://Library/ExtraLibrary/Arts/stage16.tres" id="25_heolc"]
+[ext_resource type="Resource" uid="uid://cp53nh711xd8" path="res://Library/ExtraLibrary/Arts/stage17.tres" id="26_huqlx"]
+[ext_resource type="Resource" uid="uid://b6iuouqo1r2le" path="res://Library/ExtraLibrary/Arts/stage18.tres" id="27_5kmgh"]
+[ext_resource type="Resource" uid="uid://mathotaofxff" path="res://Library/ExtraLibrary/Arts/stage19.tres" id="28_28rn5"]
+[ext_resource type="Resource" uid="uid://rfqh3mbxcj85" path="res://Library/ExtraLibrary/Arts/stage20.tres" id="29_bc2kj"]
+[ext_resource type="Texture2D" uid="uid://hpwte73flst2" path="res://Assets/Images/UI/Extra/ExtraBookButtons/area.png" id="30_v67xr"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Extra/extra_book_tag_button.gd" id="31_rx6k8"]
+[ext_resource type="Texture2D" uid="uid://7yxtsuxsn4qa" path="res://Assets/Images/UI/Extra/ExtraBookButtons/country.png" id="32_myeqy"]
+[ext_resource type="Texture2D" uid="uid://d4lgfuhqfcp48" path="res://Assets/Images/UI/Extra/ExtraBookButtons/family.png" id="33_ye25w"]
+[ext_resource type="Texture2D" uid="uid://dnlepcyk0njyw" path="res://Assets/Images/UI/Extra/ExtraBookButtons/others.png" id="34_bv5n8"]
+[ext_resource type="Texture2D" uid="uid://dcv0ppccia6hf" path="res://Assets/Images/UI/Extra/ExtraBookButtons/arts.png" id="35_b4u5w"]
+
+[sub_resource type="Animation" id="Animation_h2p8j"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_qj23v"]
+resource_name = "appear"
+length = 0.4
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.2, 0, 0.2, 0, 1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xycoe"]
+_data = {
+"RESET": SubResource("Animation_h2p8j"),
+"appear": SubResource("Animation_qj23v")
+}
+
+[sub_resource type="Resource" id="Resource_vu4np"]
+script = ExtResource("17_4ej8h")
+title = "卡瓦拉沙漠"
+content = ""
+background_texture_path = "res://Assets/Images/Stages/Stage8/stage8-view.png"
+texture_alpha = 1.0
+unlock_tag = "normal"
+
+[sub_resource type="Resource" id="Resource_30ucq"]
+script = ExtResource("17_4ej8h")
+title = "粘液沼泽"
+content = ""
+background_texture_path = "res://Assets/Images/Stages/Stage13/stage13.png"
+texture_alpha = 1.0
+unlock_tag = "normal"
+
+[sub_resource type="Resource" id="Resource_gm54t"]
+script = ExtResource("17_4ej8h")
+title = "林地府邸"
+content = ""
+background_texture_path = "res://Assets/Images/Stages/Stage14/stage14.png"
+texture_alpha = 1.0
+unlock_tag = "normal"
+
+[sub_resource type="Resource" id="Resource_5t00b"]
+script = ExtResource("17_4ej8h")
+title = "海底神殿"
+content = ""
+background_texture_path = "res://Assets/Images/Stages/Stage15/stage15.png"
+texture_alpha = 1.0
+unlock_tag = "normal"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dkiph"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8j7gh"]
+bg_color = Color(0, 0, 0, 0.427451)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a52yc"]
+bg_color = Color(0.147672, 0.147672, 0.147672, 0.376471)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ve83"]
+bg_color = Color(0, 0, 0, 0.505882)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jf2mw"]
+bg_color = Color(0, 0, 0, 0.376471)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[node name="BookUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7g2fm")
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0.627451)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xycoe")
+}
+autoplay = "appear"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 33.0
+offset_top = 187.0
+offset_right = -33.0
+offset_bottom = -53.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 55
+
+[node name="TagSlot" type="Control" parent="HBoxContainer"]
+custom_minimum_size = Vector2(540, 0)
+layout_mode = 2
+
+[node name="AreaSlot" type="ScrollContainer" parent="HBoxContainer/TagSlot"]
+layout_mode = 0
+offset_right = 570.0
+offset_bottom = 850.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/TagSlot/AreaSlot"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TagSlot/AreaSlot/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/TagSlot/AreaSlot/HBoxContainer"]
+custom_minimum_size = Vector2(540, 850)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TagSlot/AreaSlot/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ExtraBookButton" parent="HBoxContainer/TagSlot/AreaSlot/HBoxContainer/VBoxContainer" instance=ExtResource("2_qm0j8")]
+layout_mode = 2
+book_config = ExtResource("3_dkxwd")
+
+[node name="ExtraBookButton2" parent="HBoxContainer/TagSlot/AreaSlot/HBoxContainer/VBoxContainer" instance=ExtResource("2_qm0j8")]
+layout_mode = 2
+book_config = ExtResource("3_rq3wc")
+
+[node name="ExtraBookButton3" parent="HBoxContainer/TagSlot/AreaSlot/HBoxContainer/VBoxContainer" instance=ExtResource("2_qm0j8")]
+layout_mode = 2
+book_config = ExtResource("4_r37y5")
+
+[node name="ExtraBookButton4" parent="HBoxContainer/TagSlot/AreaSlot/HBoxContainer/VBoxContainer" instance=ExtResource("2_qm0j8")]
+layout_mode = 2
+book_config = ExtResource("5_o41s1")
+
+[node name="CountrySlot" type="ScrollContainer" parent="HBoxContainer/TagSlot"]
+visible = false
+layout_mode = 0
+offset_right = 570.0
+offset_bottom = 850.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/TagSlot/CountrySlot"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TagSlot/CountrySlot/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/TagSlot/CountrySlot/HBoxContainer"]
+custom_minimum_size = Vector2(540, 850)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TagSlot/CountrySlot/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="FamilySlot" type="ScrollContainer" parent="HBoxContainer/TagSlot"]
+visible = false
+layout_mode = 0
+offset_right = 570.0
+offset_bottom = 850.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/TagSlot/FamilySlot"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TagSlot/FamilySlot/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/TagSlot/FamilySlot/HBoxContainer"]
+custom_minimum_size = Vector2(540, 850)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TagSlot/FamilySlot/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ExtraBookButton8" parent="HBoxContainer/TagSlot/FamilySlot/HBoxContainer/VBoxContainer" instance=ExtResource("2_qm0j8")]
+layout_mode = 2
+book_config = ExtResource("6_538ii")
+
+[node name="ExtraBookButton9" parent="HBoxContainer/TagSlot/FamilySlot/HBoxContainer/VBoxContainer" instance=ExtResource("2_qm0j8")]
+layout_mode = 2
+book_config = ExtResource("7_jrg0e")
+
+[node name="OtehrSlot" type="ScrollContainer" parent="HBoxContainer/TagSlot"]
+visible = false
+layout_mode = 0
+offset_right = 570.0
+offset_bottom = 850.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/TagSlot/OtehrSlot"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TagSlot/OtehrSlot/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/TagSlot/OtehrSlot/HBoxContainer"]
+custom_minimum_size = Vector2(540, 850)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TagSlot/OtehrSlot/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ExtraBookButton10" parent="HBoxContainer/TagSlot/OtehrSlot/HBoxContainer/VBoxContainer" instance=ExtResource("2_qm0j8")]
+layout_mode = 2
+book_config = ExtResource("8_5rooy")
+
+[node name="ExtraBookButton11" parent="HBoxContainer/TagSlot/OtehrSlot/HBoxContainer/VBoxContainer" instance=ExtResource("2_qm0j8")]
+layout_mode = 2
+book_config = ExtResource("9_f6xej")
+
+[node name="ArtSlot" type="ScrollContainer" parent="HBoxContainer/TagSlot"]
+visible = false
+layout_mode = 0
+offset_right = 570.0
+offset_bottom = 850.0
+horizontal_scroll_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/TagSlot/ArtSlot"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TagSlot/ArtSlot/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/TagSlot/ArtSlot/HBoxContainer"]
+custom_minimum_size = Vector2(540, 850)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TagSlot/ArtSlot/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="StageView" parent="HBoxContainer/TagSlot/ArtSlot/HBoxContainer/VBoxContainer" instance=ExtResource("2_qm0j8")]
+layout_mode = 2
+book_config = ExtResource("6_h4ero")
+
+[node name="StageView2" parent="HBoxContainer/TagSlot/ArtSlot/HBoxContainer/VBoxContainer" instance=ExtResource("2_qm0j8")]
+layout_mode = 2
+book_config = ExtResource("7_aqg2d")
+
+[node name="StageView3" parent="HBoxContainer/TagSlot/ArtSlot/HBoxContainer/VBoxContainer" instance=ExtResource("2_qm0j8")]
+layout_mode = 2
+book_config = ExtResource("8_qxoc0")
+
+[node name="StageView4" parent="HBoxContainer/TagSlot/ArtSlot/HBoxContainer/VBoxContainer" instance=ExtResource("2_qm0j8")]
+layout_mode = 2
+book_config = ExtResource("13_j7qx2")
+
+[node name="StageView5" parent="HBoxContainer/TagSlot/ArtSlot/HBoxContainer/VBoxContainer" instance=ExtResource("2_qm0j8")]
+layout_mode = 2
+book_config = ExtResource("13_oeqn1")
+
+[node name="StageView6" parent="HBoxContainer/TagSlot/ArtSlot/HBoxContainer/VBoxContainer" instance=ExtResource("2_qm0j8")]
+layout_mode = 2
+book_config = ExtResource("13_j836e")
+
+[node name="StageView7" parent="HBoxContainer/TagSlot/ArtSlot/HBoxContainer/VBoxContainer" instance=ExtResource("2_qm0j8")]
+layout_mode = 2
+book_config = ExtResource("16_fe5km")
+
+[node name="StageView8" parent="HBoxContainer/TagSlot/ArtSlot/HBoxContainer/VBoxContainer" instance=ExtResource("2_qm0j8")]
+layout_mode = 2
+book_config = SubResource("Resource_vu4np")
+
+[node name="StageView9" parent="HBoxContainer/TagSlot/ArtSlot/HBoxContainer/VBoxContainer" instance=ExtResource("2_qm0j8")]
+layout_mode = 2
+book_config = ExtResource("18_blscc")
+
+[node name="StageView10" parent="HBoxContainer/TagSlot/ArtSlot/HBoxContainer/VBoxContainer" instance=ExtResource("2_qm0j8")]
+layout_mode = 2
+book_config = ExtResource("19_eq1na")
+
+[node name="StageView11" parent="HBoxContainer/TagSlot/ArtSlot/HBoxContainer/VBoxContainer" instance=ExtResource("2_qm0j8")]
+layout_mode = 2
+book_config = ExtResource("20_geuqa")
+
+[node name="StageView12" parent="HBoxContainer/TagSlot/ArtSlot/HBoxContainer/VBoxContainer" instance=ExtResource("2_qm0j8")]
+layout_mode = 2
+book_config = ExtResource("21_7ybug")
+
+[node name="StageView13" parent="HBoxContainer/TagSlot/ArtSlot/HBoxContainer/VBoxContainer" instance=ExtResource("2_qm0j8")]
+layout_mode = 2
+book_config = SubResource("Resource_30ucq")
+
+[node name="StageView14" parent="HBoxContainer/TagSlot/ArtSlot/HBoxContainer/VBoxContainer" instance=ExtResource("2_qm0j8")]
+layout_mode = 2
+book_config = SubResource("Resource_gm54t")
+
+[node name="StageView15" parent="HBoxContainer/TagSlot/ArtSlot/HBoxContainer/VBoxContainer" instance=ExtResource("2_qm0j8")]
+layout_mode = 2
+book_config = SubResource("Resource_5t00b")
+
+[node name="StageView16" parent="HBoxContainer/TagSlot/ArtSlot/HBoxContainer/VBoxContainer" instance=ExtResource("2_qm0j8")]
+layout_mode = 2
+book_config = ExtResource("25_heolc")
+
+[node name="StageView17" parent="HBoxContainer/TagSlot/ArtSlot/HBoxContainer/VBoxContainer" instance=ExtResource("2_qm0j8")]
+layout_mode = 2
+book_config = ExtResource("26_huqlx")
+
+[node name="StageView18" parent="HBoxContainer/TagSlot/ArtSlot/HBoxContainer/VBoxContainer" instance=ExtResource("2_qm0j8")]
+layout_mode = 2
+book_config = ExtResource("27_5kmgh")
+
+[node name="StageView19" parent="HBoxContainer/TagSlot/ArtSlot/HBoxContainer/VBoxContainer" instance=ExtResource("2_qm0j8")]
+layout_mode = 2
+book_config = ExtResource("28_28rn5")
+
+[node name="StageView20" parent="HBoxContainer/TagSlot/ArtSlot/HBoxContainer/VBoxContainer" instance=ExtResource("2_qm0j8")]
+layout_mode = 2
+book_config = ExtResource("29_bc2kj")
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_dkiph")
+
+[node name="IntroPanel" type="Panel" parent="HBoxContainer"]
+custom_minimum_size = Vector2(1200, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8j7gh")
+
+[node name="ShowTexture" type="TextureRect" parent="HBoxContainer/IntroPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 51.0
+offset_top = 116.0
+offset_right = -51.0
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/IntroPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_right = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/IntroPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="HBoxContainer/IntroPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("2_ph2hg")
+theme_override_font_sizes/font_size = 64
+text = "野区其一"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/IntroPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 20
+
+[node name="ContentScrollContainer" type="ScrollContainer" parent="HBoxContainer/IntroPanel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 650)
+layout_mode = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="ContentLabel" type="Label" parent="HBoxContainer/IntroPanel/VBoxContainer/ContentScrollContainer"]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 30
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("3_wtac4")
+theme_override_font_sizes/font_size = 36
+text = "野区起源于几百年前的一颗流星，在那颗流星坠毁到帝国的南部无人区丛林地带之后，整片丛林便化作了一片黑暗森林，源源不断地从中冒出不死的亡灵生物。自此，人类与野区怪物的战斗拉开帷幕，持续了有一百多年。由于对怪物的研究不足，在开始的抗衡中人类的损失也相当惨重。
+ 
+关于怪物是如何出现的，至今仍是个谜。有学者认为，怪物的起源之地可能位于丛林最深处的中心地带，但至今仍没有人能到达那里，也无人能验证假说的真伪。不过值得一提的是，如果将人类的尸体埋葬在靠近野区深处的地方，那具尸体有极大的概率会转化成野区怪物，同时在丛林偏深处不同的位置埋葬的尸体转化的野区怪物也不尽相同，我们至今仍无从得知血肉之躯是怎么转化成火药（腐化爬行者自爆的主要能量来源）的。"
+autowrap_mode = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 102.0
+offset_top = -515.0
+offset_right = -102.0
+offset_bottom = -423.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 73.0
+offset_right = 442.0
+offset_bottom = 145.0
+theme_override_constants/outline_size = 24
+theme_override_fonts/font = ExtResource("3_wtac4")
+theme_override_font_sizes/font_size = 72
+text = "智库百科"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 778.0
+offset_top = 31.0
+offset_right = 2810.0
+offset_bottom = 287.0
+scale = Vector2(0.479184, 0.479184)
+theme_override_constants/separation = 185
+
+[node name="ExtraBookTagButton" type="Button" parent="HBoxContainer3"]
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 2
+focus_mode = 0
+theme_override_icons/icon = ExtResource("30_v67xr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_a52yc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4ve83")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jf2mw")
+icon = ExtResource("30_v67xr")
+icon_alignment = 1
+script = ExtResource("31_rx6k8")
+
+[node name="TextLabel" type="Label" parent="HBoxContainer3/ExtraBookTagButton"]
+layout_mode = 0
+offset_top = 260.86
+offset_right = 250.0
+offset_bottom = 297.86
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_wtac4")
+theme_override_font_sizes/font_size = 48
+text = "区域"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExtraBookTagButton2" type="Button" parent="HBoxContainer3"]
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 2
+focus_mode = 0
+theme_override_icons/icon = ExtResource("30_v67xr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_a52yc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4ve83")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jf2mw")
+icon = ExtResource("32_myeqy")
+icon_alignment = 1
+script = ExtResource("31_rx6k8")
+tag_type = 2
+
+[node name="TextLabel" type="Label" parent="HBoxContainer3/ExtraBookTagButton2"]
+layout_mode = 0
+offset_top = 260.86
+offset_right = 250.0
+offset_bottom = 297.86
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_wtac4")
+theme_override_font_sizes/font_size = 48
+text = "国家/势力"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExtraBookTagButton3" type="Button" parent="HBoxContainer3"]
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 2
+focus_mode = 0
+theme_override_icons/icon = ExtResource("30_v67xr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_a52yc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4ve83")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jf2mw")
+icon = ExtResource("33_ye25w")
+icon_alignment = 1
+script = ExtResource("31_rx6k8")
+tag_type = 3
+
+[node name="TextLabel" type="Label" parent="HBoxContainer3/ExtraBookTagButton3"]
+layout_mode = 0
+offset_top = 260.86
+offset_right = 250.0
+offset_bottom = 297.86
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_wtac4")
+theme_override_font_sizes/font_size = 48
+text = "家族/英雄史"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExtraBookTagButton4" type="Button" parent="HBoxContainer3"]
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 2
+focus_mode = 0
+theme_override_icons/icon = ExtResource("30_v67xr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_a52yc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4ve83")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jf2mw")
+icon = ExtResource("34_bv5n8")
+icon_alignment = 1
+script = ExtResource("31_rx6k8")
+tag_type = 4
+
+[node name="TextLabel" type="Label" parent="HBoxContainer3/ExtraBookTagButton4"]
+layout_mode = 0
+offset_top = 260.86
+offset_right = 250.0
+offset_bottom = 297.86
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_wtac4")
+theme_override_font_sizes/font_size = 48
+text = "博物志"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExtraBookTagButton5" type="Button" parent="HBoxContainer3"]
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 2
+focus_mode = 0
+theme_override_icons/icon = ExtResource("30_v67xr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_a52yc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4ve83")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jf2mw")
+icon = ExtResource("35_b4u5w")
+icon_alignment = 1
+script = ExtResource("31_rx6k8")
+tag_type = 1
+
+[node name="TextLabel" type="Label" parent="HBoxContainer3/ExtraBookTagButton5"]
+layout_mode = 0
+offset_top = 260.86
+offset_right = 250.0
+offset_bottom = 297.86
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_wtac4")
+theme_override_font_sizes/font_size = 48
+text = "概念"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1727.0
+offset_top = 988.0
+offset_right = 2041.0
+offset_bottom = 1134.0
+scale = Vector2(0.563487, 0.563487)
+focus_mode = 0
+theme_override_fonts/font = ExtResource("3_wtac4")
+theme_override_font_sizes/font_size = 72
+theme_override_styles/hover = SubResource("StyleBoxFlat_a52yc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4ve83")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jf2mw")
+text = "返回"
+
+[connection signal="update_tag_list" from="." to="." method="_on_update_tag_list"]
+[connection signal="pressed" from="HBoxContainer3/ExtraBookTagButton" to="HBoxContainer3/ExtraBookTagButton" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer3/ExtraBookTagButton2" to="HBoxContainer3/ExtraBookTagButton2" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer3/ExtraBookTagButton3" to="HBoxContainer3/ExtraBookTagButton3" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer3/ExtraBookTagButton4" to="HBoxContainer3/ExtraBookTagButton4" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer3/ExtraBookTagButton5" to="HBoxContainer3/ExtraBookTagButton5" method="_on_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

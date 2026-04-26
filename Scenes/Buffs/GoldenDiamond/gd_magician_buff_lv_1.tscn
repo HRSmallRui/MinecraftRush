@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://drmi3p80y2o5r"]
+
+[ext_resource type="PackedScene" uid="uid://bjfa3t67tpsbr" path="res://Scenes/Buffs/property_buff.tscn" id="1_wfbhu"]
+[ext_resource type="Script" path="res://Scripts/Buffs/property_buff_block.gd" id="2_22347"]
+[ext_resource type="Script" path="res://Scripts/Classes/potion_particle_leader.gd" id="3_ppn6t"]
+
+[sub_resource type="Resource" id="Resource_3kb2r"]
+script = ExtResource("2_22347")
+property_type = 1
+operation_type = 1
+operation_data = 1.4
+
+[sub_resource type="Resource" id="Resource_rd1qa"]
+script = ExtResource("2_22347")
+property_type = 2
+operation_type = 1
+operation_data = 1.4
+
+[node name="GDMagicianBuffLV1" instance=ExtResource("1_wfbhu")]
+buff_blocks = Array[ExtResource("2_22347")]([SubResource("Resource_3kb2r"), SubResource("Resource_rd1qa")])
+buff_tag = "GDMagicianBuff"
+
+[node name="PotionParticleLeader" type="Node2D" parent="." index="0" node_paths=PackedStringArray("buff_vehicle")]
+script = ExtResource("3_ppn6t")
+potion_color = Color(0.330714, 1, 0.881662, 1)
+buff_vehicle = NodePath("..")

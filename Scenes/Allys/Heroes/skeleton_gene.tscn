@@ -1,0 +1,1049 @@
+[gd_scene load_steps=222 format=3 uid="uid://cx72kwhmtfcet"]
+
+[ext_resource type="PackedScene" uid="uid://58cc8ohjp6pd" path="res://Scenes/Allys/Heroes/hero_class.tscn" id="1_k3knr"]
+[ext_resource type="Texture2D" uid="uid://cueimboq7cqjc" path="res://Assets/Images/UI/HeroHall/HeadTexs/撒图恩·古斯奇.png" id="2_eqca5"]
+[ext_resource type="Script" path="res://Scripts/Allys/Heroes/skeleton_gene.gd" id="2_ps6cs"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="2_swhgu"]
+[ext_resource type="Texture2D" uid="uid://barw3ustc0nmi" path="res://Assets/Images/UI/InformationBar/Allys/Saturn.png" id="3_ghpq0"]
+[ext_resource type="PackedScene" uid="uid://fdyuorcvxm5a" path="res://Scenes/Bullets/skeleton_gene_special_arrow.tscn" id="3_te00p"]
+[ext_resource type="PackedScene" uid="uid://c1rmis5jlhvqk" path="res://Scenes/Bullets/physics_arrow.tscn" id="3_v2y0w"]
+[ext_resource type="PackedScene" uid="uid://dwaokbtnrpbwn" path="res://Scenes/Bullets/straight_arrow.tscn" id="4_4us64"]
+[ext_resource type="Script" path="res://Library/Heroes/damage_block.gd" id="5_ck056"]
+[ext_resource type="Texture2D" uid="uid://dd8brntg8f4ft" path="res://Assets/Animations/Heroes/SkeletonGene/attack_00.png" id="6_iuetk"]
+[ext_resource type="Texture2D" uid="uid://dbfwrw6grv0np" path="res://Assets/Animations/Heroes/SkeletonGene/attack_01.png" id="7_66p5q"]
+[ext_resource type="Texture2D" uid="uid://drnlixj6lk5tk" path="res://Assets/Animations/Heroes/SkeletonGene/attack_02.png" id="8_jxrj1"]
+[ext_resource type="Texture2D" uid="uid://dafn6kbat0bo7" path="res://Assets/Animations/Heroes/SkeletonGene/attack_03.png" id="9_tejdi"]
+[ext_resource type="Texture2D" uid="uid://s44kwu1unyl0" path="res://Assets/Animations/Heroes/SkeletonGene/attack_04.png" id="10_cxili"]
+[ext_resource type="Texture2D" uid="uid://coiv7odyr808v" path="res://Assets/Animations/Heroes/SkeletonGene/attack_05.png" id="11_bqcb7"]
+[ext_resource type="Texture2D" uid="uid://cl5rcohctl8i" path="res://Assets/Animations/Heroes/SkeletonGene/attack_06.png" id="12_hu503"]
+[ext_resource type="Texture2D" uid="uid://dm8lv12nr046g" path="res://Assets/Animations/Heroes/SkeletonGene/attack_07.png" id="13_sf1hs"]
+[ext_resource type="Texture2D" uid="uid://d2y75fqsrgwty" path="res://Assets/Animations/Heroes/SkeletonGene/attack_08.png" id="14_4cgw3"]
+[ext_resource type="Texture2D" uid="uid://b578ei443hd2g" path="res://Assets/Animations/Heroes/SkeletonGene/attack_09.png" id="15_efbyu"]
+[ext_resource type="Texture2D" uid="uid://dk1htrobpjjnu" path="res://Assets/Animations/Heroes/SkeletonGene/attack_10.png" id="16_jr21a"]
+[ext_resource type="Texture2D" uid="uid://bofcnfo1i7xgp" path="res://Assets/Animations/Heroes/SkeletonGene/attack_11.png" id="17_b6xbl"]
+[ext_resource type="Texture2D" uid="uid://ctga8mcgpj8ce" path="res://Assets/Animations/Heroes/SkeletonGene/attack_12.png" id="18_fly2h"]
+[ext_resource type="Texture2D" uid="uid://bcol068u4liu3" path="res://Assets/Animations/Heroes/SkeletonGene/attack_13.png" id="19_qk3bu"]
+[ext_resource type="Texture2D" uid="uid://vdym441mlx2l" path="res://Assets/Animations/Heroes/SkeletonGene/attack_14.png" id="20_73bd4"]
+[ext_resource type="Texture2D" uid="uid://ck0d6afhwrpca" path="res://Assets/Animations/Heroes/SkeletonGene/attack_15.png" id="21_ahnwo"]
+[ext_resource type="Texture2D" uid="uid://cics7seejox7n" path="res://Assets/Animations/Heroes/SkeletonGene/attack_16.png" id="22_mul0a"]
+[ext_resource type="Texture2D" uid="uid://j6qp5erdgh10" path="res://Assets/Animations/Heroes/SkeletonGene/attack_17.png" id="23_5y47t"]
+[ext_resource type="Texture2D" uid="uid://r76js7b8hu21" path="res://Assets/Animations/Heroes/SkeletonGene/attack_18.png" id="24_lqn16"]
+[ext_resource type="Texture2D" uid="uid://dxgvpc2wrh0j6" path="res://Assets/Animations/Heroes/SkeletonGene/attack_19.png" id="25_ywslc"]
+[ext_resource type="Texture2D" uid="uid://bj3imnptc7npg" path="res://Assets/Animations/Heroes/SkeletonGene/attack_20.png" id="26_sv68k"]
+[ext_resource type="Texture2D" uid="uid://rbpkrv70yq1i" path="res://Assets/Animations/Heroes/SkeletonGene/attack_21.png" id="27_c4o75"]
+[ext_resource type="Texture2D" uid="uid://i4ij5dypl0v8" path="res://Assets/Animations/Heroes/SkeletonGene/attack_22.png" id="28_5pwpw"]
+[ext_resource type="Texture2D" uid="uid://diw5qgfjows1h" path="res://Assets/Animations/Heroes/SkeletonGene/attack_23.png" id="29_oq80b"]
+[ext_resource type="Texture2D" uid="uid://cw8yh3h1lvbu3" path="res://Assets/Animations/Heroes/SkeletonGene/attack_24.png" id="30_jinav"]
+[ext_resource type="Texture2D" uid="uid://yoiqs1og1kgd" path="res://Assets/Animations/Heroes/SkeletonGene/die_00.png" id="31_25b15"]
+[ext_resource type="Texture2D" uid="uid://cfbvkmgnkcsfj" path="res://Assets/Animations/Heroes/SkeletonGene/die_01.png" id="32_v844j"]
+[ext_resource type="Texture2D" uid="uid://dvs0xw8o512fe" path="res://Assets/Animations/Heroes/SkeletonGene/die_02.png" id="33_e53bp"]
+[ext_resource type="Texture2D" uid="uid://nqxnhvrkl3bo" path="res://Assets/Animations/Heroes/SkeletonGene/die_03.png" id="34_c0yd5"]
+[ext_resource type="Texture2D" uid="uid://6sfyyv72e6r8" path="res://Assets/Animations/Heroes/SkeletonGene/die_04.png" id="35_sdc4m"]
+[ext_resource type="Texture2D" uid="uid://csxoke7ssqcgy" path="res://Assets/Animations/Heroes/SkeletonGene/die_05.png" id="36_7a5ei"]
+[ext_resource type="Texture2D" uid="uid://l4f0woi1acwa" path="res://Assets/Animations/Heroes/SkeletonGene/die_06.png" id="37_wsjqw"]
+[ext_resource type="Texture2D" uid="uid://b3b2g2eoxh4wo" path="res://Assets/Animations/Heroes/SkeletonGene/die_07.png" id="38_bna5h"]
+[ext_resource type="Texture2D" uid="uid://cw28p6fioqywq" path="res://Assets/Animations/Heroes/SkeletonGene/die_08.png" id="39_e1rfj"]
+[ext_resource type="Texture2D" uid="uid://37nds6q1tbxv" path="res://Assets/Animations/Heroes/SkeletonGene/die_09.png" id="40_poxpi"]
+[ext_resource type="Texture2D" uid="uid://c7wgst78jmht7" path="res://Assets/Animations/Heroes/SkeletonGene/die_10.png" id="41_tlqmf"]
+[ext_resource type="Texture2D" uid="uid://bc2xq1xm707km" path="res://Assets/Animations/Heroes/SkeletonGene/die_11.png" id="42_bi4vt"]
+[ext_resource type="Texture2D" uid="uid://50udlqpyfe1" path="res://Assets/Animations/Heroes/SkeletonGene/die_12.png" id="43_f6uii"]
+[ext_resource type="Texture2D" uid="uid://cx74e1altocsh" path="res://Assets/Animations/Heroes/SkeletonGene/far_attack_00.png" id="44_4fjbm"]
+[ext_resource type="Texture2D" uid="uid://u3geib05oxjj" path="res://Assets/Animations/Heroes/SkeletonGene/far_attack_01.png" id="45_xhxpe"]
+[ext_resource type="Texture2D" uid="uid://cbwq8aeds2f5q" path="res://Assets/Animations/Heroes/SkeletonGene/far_attack_02.png" id="46_3fhux"]
+[ext_resource type="Texture2D" uid="uid://bnabqaardbss2" path="res://Assets/Animations/Heroes/SkeletonGene/far_attack_03.png" id="47_oxocy"]
+[ext_resource type="Texture2D" uid="uid://prvb81kihj4u" path="res://Assets/Animations/Heroes/SkeletonGene/far_attack_04.png" id="48_w4i4j"]
+[ext_resource type="Texture2D" uid="uid://bq8l0mddf40od" path="res://Assets/Animations/Heroes/SkeletonGene/far_attack_05.png" id="49_beakb"]
+[ext_resource type="Texture2D" uid="uid://jgm1enw0ghy0" path="res://Assets/Animations/Heroes/SkeletonGene/far_attack_06.png" id="50_h0do7"]
+[ext_resource type="Texture2D" uid="uid://dqyulkwrsc8x0" path="res://Assets/Animations/Heroes/SkeletonGene/far_attack_07.png" id="51_75vne"]
+[ext_resource type="Texture2D" uid="uid://btvuncdmae8il" path="res://Assets/Animations/Heroes/SkeletonGene/far_attack_08.png" id="52_46o83"]
+[ext_resource type="Texture2D" uid="uid://dxnwku24vcaeh" path="res://Assets/Animations/Heroes/SkeletonGene/far_attack_09.png" id="53_nl1nm"]
+[ext_resource type="Texture2D" uid="uid://bkuekqc8h65uj" path="res://Assets/Animations/Heroes/SkeletonGene/far_attack_10.png" id="54_qn7vi"]
+[ext_resource type="Texture2D" uid="uid://x3f0duq7swij" path="res://Assets/Animations/Heroes/SkeletonGene/far_attack_11.png" id="55_8bbhj"]
+[ext_resource type="Texture2D" uid="uid://caa7akjcr6vpx" path="res://Assets/Animations/Heroes/SkeletonGene/far_attack_12.png" id="56_ewxnm"]
+[ext_resource type="Texture2D" uid="uid://d1xfolpj0ur0u" path="res://Assets/Animations/Heroes/SkeletonGene/far_attack_13.png" id="57_e58xh"]
+[ext_resource type="Texture2D" uid="uid://d0t3e56xi2cnk" path="res://Assets/Animations/Heroes/SkeletonGene/far_attack_14.png" id="58_xfsjt"]
+[ext_resource type="Texture2D" uid="uid://dyhm5aq605kiy" path="res://Assets/Animations/Heroes/SkeletonGene/far_attack_15.png" id="59_gxgi6"]
+[ext_resource type="Texture2D" uid="uid://j2ficecafl0r" path="res://Assets/Animations/Heroes/SkeletonGene/far_attack_16.png" id="60_u0gv4"]
+[ext_resource type="Texture2D" uid="uid://dehkf1mhypfuq" path="res://Assets/Animations/Heroes/SkeletonGene/far_attack_17.png" id="61_ratet"]
+[ext_resource type="Texture2D" uid="uid://bkkjbvddukmh3" path="res://Assets/Animations/Heroes/SkeletonGene/far_attack_18.png" id="62_d8gv1"]
+[ext_resource type="Texture2D" uid="uid://bj16dxniy3mf2" path="res://Assets/Animations/Heroes/SkeletonGene/far_attack_19.png" id="63_dheeo"]
+[ext_resource type="Texture2D" uid="uid://dm47j2qho1au4" path="res://Assets/Animations/Heroes/SkeletonGene/far_attack_20.png" id="64_fyhh6"]
+[ext_resource type="Texture2D" uid="uid://btlr2nf2v6ns5" path="res://Assets/Animations/Heroes/SkeletonGene/move_00.png" id="65_hwuqf"]
+[ext_resource type="Texture2D" uid="uid://btcnvkmv1i5ci" path="res://Assets/Animations/Heroes/SkeletonGene/move_02.png" id="66_307ix"]
+[ext_resource type="Texture2D" uid="uid://cliuj3oh12e7t" path="res://Assets/Animations/Heroes/SkeletonGene/move_04.png" id="67_w8qlh"]
+[ext_resource type="Texture2D" uid="uid://xkcks7xrjswj" path="res://Assets/Animations/Heroes/SkeletonGene/move_06.png" id="68_vub2e"]
+[ext_resource type="Texture2D" uid="uid://8rcman80yw0n" path="res://Assets/Animations/Heroes/SkeletonGene/move_08.png" id="69_r8dwc"]
+[ext_resource type="Texture2D" uid="uid://bri0xsjst3eko" path="res://Assets/Animations/Heroes/SkeletonGene/move_10.png" id="70_3knyf"]
+[ext_resource type="Texture2D" uid="uid://gg7f08u7aupp" path="res://Assets/Animations/Heroes/SkeletonGene/move_12.png" id="71_dbirl"]
+[ext_resource type="Texture2D" uid="uid://b8ivenitl66yo" path="res://Assets/Animations/Heroes/SkeletonGene/move_14.png" id="72_mttwc"]
+[ext_resource type="Texture2D" uid="uid://dhyb5kyfgpxha" path="res://Assets/Animations/Heroes/SkeletonGene/move_16.png" id="73_v2fy0"]
+[ext_resource type="Texture2D" uid="uid://bw4f825nowbq2" path="res://Assets/Animations/Heroes/SkeletonGene/move_18.png" id="74_lsckb"]
+[ext_resource type="Texture2D" uid="uid://b3l8y5qp2b3sq" path="res://Assets/Animations/Heroes/SkeletonGene/move_20.png" id="75_vwns8"]
+[ext_resource type="Texture2D" uid="uid://b18m8xpd2w6ap" path="res://Assets/Animations/Heroes/SkeletonGene/move_22.png" id="76_et8ph"]
+[ext_resource type="Texture2D" uid="uid://ccwnia28km5w8" path="res://Assets/Animations/Heroes/SkeletonGene/skill1_00.png" id="77_dognj"]
+[ext_resource type="Texture2D" uid="uid://cweccc50kgt45" path="res://Assets/Animations/Heroes/SkeletonGene/rebirth_00.png" id="78_fv83p"]
+[ext_resource type="Texture2D" uid="uid://bxxblsdasu2ae" path="res://Assets/Animations/Heroes/SkeletonGene/skill1_01.png" id="78_h7qr0"]
+[ext_resource type="Texture2D" uid="uid://bh2tfq4oi2u6a" path="res://Assets/Animations/Heroes/SkeletonGene/rebirth_01.png" id="79_nxxrc"]
+[ext_resource type="Texture2D" uid="uid://d0mkuacqhmshq" path="res://Assets/Animations/Heroes/SkeletonGene/skill1_02.png" id="79_vg5ti"]
+[ext_resource type="Texture2D" uid="uid://drvaxi2ipe5dl" path="res://Assets/Animations/Heroes/SkeletonGene/rebirth_02.png" id="80_dkoem"]
+[ext_resource type="Texture2D" uid="uid://8u6rhvjkfpc2" path="res://Assets/Animations/Heroes/SkeletonGene/skill1_03.png" id="80_w0gae"]
+[ext_resource type="Texture2D" uid="uid://d1yy8yhg76r86" path="res://Assets/Animations/Heroes/SkeletonGene/rebirth_03.png" id="81_1m5yc"]
+[ext_resource type="Texture2D" uid="uid://bjsa0j0ujfq2" path="res://Assets/Animations/Heroes/SkeletonGene/skill1_04.png" id="81_xc4hr"]
+[ext_resource type="Texture2D" uid="uid://refeounjqi03" path="res://Assets/Animations/Heroes/SkeletonGene/rebirth_04.png" id="82_c6gon"]
+[ext_resource type="Texture2D" uid="uid://ni8s7um30mbq" path="res://Assets/Animations/Heroes/SkeletonGene/skill1_05.png" id="82_m1vnr"]
+[ext_resource type="Texture2D" uid="uid://bkeupvdr6qs7f" path="res://Assets/Animations/Heroes/SkeletonGene/skill1_06.png" id="83_83lhx"]
+[ext_resource type="Texture2D" uid="uid://cs3rqs3j8nd5w" path="res://Assets/Animations/Heroes/SkeletonGene/rebirth_05.png" id="83_c4csq"]
+[ext_resource type="Texture2D" uid="uid://cf2wwhtb1k7ri" path="res://Assets/Animations/Heroes/SkeletonGene/skill1_07.png" id="84_obri2"]
+[ext_resource type="Texture2D" uid="uid://bu5jp1aeq7sc1" path="res://Assets/Animations/Heroes/SkeletonGene/rebirth_06.png" id="84_rfyy3"]
+[ext_resource type="Texture2D" uid="uid://b2k7wwghdwm8i" path="res://Assets/Animations/Heroes/SkeletonGene/rebirth_07.png" id="85_1vu6b"]
+[ext_resource type="Texture2D" uid="uid://dj6um63adecp4" path="res://Assets/Animations/Heroes/SkeletonGene/skill1_08.png" id="85_l28we"]
+[ext_resource type="Texture2D" uid="uid://ctj1od84g8cin" path="res://Assets/Animations/Heroes/SkeletonGene/skill1_09.png" id="86_2slh3"]
+[ext_resource type="Texture2D" uid="uid://w5n5i67adhp4" path="res://Assets/Animations/Heroes/SkeletonGene/rebirth_08.png" id="86_w8p4q"]
+[ext_resource type="Texture2D" uid="uid://buatsvfhad5xw" path="res://Assets/Animations/Heroes/SkeletonGene/skill1_10.png" id="87_dw40u"]
+[ext_resource type="Texture2D" uid="uid://dw55j3r7qmmc7" path="res://Assets/Animations/Heroes/SkeletonGene/rebirth_09.png" id="87_r1175"]
+[ext_resource type="Texture2D" uid="uid://cpo2mnb3epucy" path="res://Assets/Animations/Heroes/SkeletonGene/skill1_11.png" id="88_7niqn"]
+[ext_resource type="Texture2D" uid="uid://cphnxj26ncmaa" path="res://Assets/Animations/Heroes/SkeletonGene/rebirth_10.png" id="88_onux3"]
+[ext_resource type="Texture2D" uid="uid://bq3l6471l4pvp" path="res://Assets/Animations/Heroes/SkeletonGene/skill1_12.png" id="89_0s8cu"]
+[ext_resource type="Texture2D" uid="uid://65ih0vrrgley" path="res://Assets/Animations/Heroes/SkeletonGene/rebirth_11.png" id="89_al3po"]
+[ext_resource type="Texture2D" uid="uid://ca85v8ijadq5r" path="res://Assets/Animations/Heroes/SkeletonGene/rebirth_12.png" id="90_3k7cm"]
+[ext_resource type="Texture2D" uid="uid://db7ylsnwytf43" path="res://Assets/Animations/Heroes/SkeletonGene/skill1_13.png" id="90_4who2"]
+[ext_resource type="Texture2D" uid="uid://bkrtisuoy4vyr" path="res://Assets/Animations/Heroes/SkeletonGene/skill1_14.png" id="91_quh18"]
+[ext_resource type="Texture2D" uid="uid://cur5a0hudxk7l" path="res://Assets/Animations/Heroes/SkeletonGene/rebirth_13.png" id="91_tyrxx"]
+[ext_resource type="Texture2D" uid="uid://2sm5m0sb63ff" path="res://Assets/Animations/Heroes/SkeletonGene/skill1_15.png" id="92_dntvf"]
+[ext_resource type="Texture2D" uid="uid://xn3wlyi2u81h" path="res://Assets/Animations/Heroes/SkeletonGene/rebirth_14.png" id="92_h3kih"]
+[ext_resource type="Texture2D" uid="uid://dqorb76p52ekn" path="res://Assets/Animations/Heroes/SkeletonGene/rebirth_15.png" id="93_87j4u"]
+[ext_resource type="Texture2D" uid="uid://dugw4s00tubvo" path="res://Assets/Animations/Heroes/SkeletonGene/skill1_16.png" id="93_p62vr"]
+[ext_resource type="Texture2D" uid="uid://c1jk1wa3x1l17" path="res://Assets/Animations/Heroes/SkeletonGene/skill1_17.png" id="94_ln7b4"]
+[ext_resource type="Texture2D" uid="uid://cpihvlsrhqa12" path="res://Assets/Animations/Heroes/SkeletonGene/rebirth_16.png" id="94_sr5cj"]
+[ext_resource type="Texture2D" uid="uid://bs3qqeqnmedmc" path="res://Assets/Animations/Heroes/SkeletonGene/rebirth_17.png" id="95_2dwup"]
+[ext_resource type="Texture2D" uid="uid://ckehmprgla7vb" path="res://Assets/Animations/Heroes/SkeletonGene/skill1_18.png" id="95_5f6jv"]
+[ext_resource type="Texture2D" uid="uid://dukqoay0aoeqn" path="res://Assets/Animations/Heroes/SkeletonGene/skill1_19.png" id="96_fc02l"]
+[ext_resource type="Texture2D" uid="uid://btqbjskbokoow" path="res://Assets/Animations/Heroes/SkeletonGene/rebirth_18.png" id="96_olhxy"]
+[ext_resource type="Texture2D" uid="uid://dcaxmvm0cjcaj" path="res://Assets/Animations/Heroes/SkeletonGene/skill1_20.png" id="97_aoubc"]
+[ext_resource type="Texture2D" uid="uid://bnvwgpw5x654e" path="res://Assets/Animations/Heroes/SkeletonGene/rebirth_19.png" id="97_fhvqy"]
+[ext_resource type="Texture2D" uid="uid://cedutbn3qw8yd" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_00.png" id="98_bwwst"]
+[ext_resource type="Texture2D" uid="uid://ch7mhhi72m371" path="res://Assets/Animations/Heroes/SkeletonGene/rebirth_20.png" id="98_wtxw7"]
+[ext_resource type="Texture2D" uid="uid://cvgup8oqw8k75" path="res://Assets/Animations/Heroes/SkeletonGene/rebirth_21.png" id="99_44imw"]
+[ext_resource type="Texture2D" uid="uid://bydnh0nti0icr" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_01.png" id="99_rkp3y"]
+[ext_resource type="Texture2D" uid="uid://cyskse6g7keg" path="res://Assets/Animations/Heroes/SkeletonGene/rebirth_22.png" id="100_80or6"]
+[ext_resource type="Texture2D" uid="uid://djar5m2rchnk" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_02.png" id="100_xemoo"]
+[ext_resource type="Texture2D" uid="uid://nwpis87ng2d2" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_03.png" id="101_e44mk"]
+[ext_resource type="Texture2D" uid="uid://b78j03uy78d5d" path="res://Assets/Animations/Heroes/SkeletonGene/rebirth_23.png" id="101_eim82"]
+[ext_resource type="Texture2D" uid="uid://dvtffuy8fw3vy" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_04.png" id="102_1mqb7"]
+[ext_resource type="Texture2D" uid="uid://by24lay2fvsrk" path="res://Assets/Animations/Heroes/SkeletonGene/rebirth_24.png" id="102_s47dg"]
+[ext_resource type="Texture2D" uid="uid://bgr18h1o550i2" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_05.png" id="103_sn5hv"]
+[ext_resource type="Texture2D" uid="uid://gn0hbjcri73a" path="res://Assets/Animations/Heroes/SkeletonGene/rebirth_25.png" id="103_x5tc1"]
+[ext_resource type="Texture2D" uid="uid://c6cceahs066yx" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_06.png" id="104_ckdo6"]
+[ext_resource type="Texture2D" uid="uid://dy77j5jkbkb4l" path="res://Assets/Animations/Heroes/SkeletonGene/rebirth_26.png" id="104_pep84"]
+[ext_resource type="Texture2D" uid="uid://wioa128djhhx" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_07.png" id="105_3gxk5"]
+[ext_resource type="Texture2D" uid="uid://drme4h8oympcm" path="res://Assets/Animations/Heroes/SkeletonGene/rebirth_27.png" id="105_ivyf5"]
+[ext_resource type="Texture2D" uid="uid://bnimt6ampsmwq" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_08.png" id="106_enmo4"]
+[ext_resource type="Texture2D" uid="uid://br5prquyr0sly" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_09.png" id="107_6ciec"]
+[ext_resource type="Texture2D" uid="uid://3tdn824ga4ea" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_10.png" id="108_ji1kj"]
+[ext_resource type="Texture2D" uid="uid://c2iqompnjuh3c" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_11.png" id="109_rkxeg"]
+[ext_resource type="Texture2D" uid="uid://dtbugwqw2vd6b" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_12.png" id="110_a3usw"]
+[ext_resource type="Texture2D" uid="uid://8l0ri3443shl" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_13.png" id="111_5y6d6"]
+[ext_resource type="Texture2D" uid="uid://dxy8je4nmncve" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_14.png" id="112_ibx0w"]
+[ext_resource type="Texture2D" uid="uid://dcrj4h733hxsc" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_15.png" id="113_6il64"]
+[ext_resource type="Texture2D" uid="uid://c3h6pc83fvsxl" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_16.png" id="114_e4yyn"]
+[ext_resource type="Texture2D" uid="uid://cjn1ged5oqurt" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_17.png" id="115_6pxe1"]
+[ext_resource type="Texture2D" uid="uid://xyuunkx01nqk" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_18.png" id="116_g5e6i"]
+[ext_resource type="Texture2D" uid="uid://u0037hl1fj6p" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_19.png" id="117_nq0c0"]
+[ext_resource type="Texture2D" uid="uid://bijy1xnobqqb2" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_20.png" id="118_33eq2"]
+[ext_resource type="Texture2D" uid="uid://c8fj4mkq4lvjd" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_21.png" id="119_btbh1"]
+[ext_resource type="Texture2D" uid="uid://comcg3367kr5x" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_22.png" id="120_ntbbv"]
+[ext_resource type="Texture2D" uid="uid://dsp2e1dsfqrya" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_23.png" id="121_8al2t"]
+[ext_resource type="Texture2D" uid="uid://5ynn4fbxp3rf" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_24.png" id="122_xpdv6"]
+[ext_resource type="Texture2D" uid="uid://crr7n04vgnpi" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_25.png" id="123_gyfqn"]
+[ext_resource type="Texture2D" uid="uid://co1563rspfw64" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_26.png" id="124_enngt"]
+[ext_resource type="Texture2D" uid="uid://dwegh57jdr1lf" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_27.png" id="125_hv2i0"]
+[ext_resource type="Texture2D" uid="uid://db4qijvbbr3t1" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_28.png" id="126_vane3"]
+[ext_resource type="Texture2D" uid="uid://d0rn7rjgocakm" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_29.png" id="127_8ioj7"]
+[ext_resource type="Texture2D" uid="uid://cgd0chrpbbyta" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_30.png" id="128_oh637"]
+[ext_resource type="Texture2D" uid="uid://cblo83dkgp5kc" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_31.png" id="129_ib1a5"]
+[ext_resource type="Texture2D" uid="uid://bmpa4xgqtye8" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_32.png" id="130_s51nu"]
+[ext_resource type="Texture2D" uid="uid://bmmdfo24tg7ws" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_33.png" id="131_7bmeh"]
+[ext_resource type="Texture2D" uid="uid://cf0ojw6jn1fod" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_34.png" id="132_ainyc"]
+[ext_resource type="Texture2D" uid="uid://byq2nxy8raodw" path="res://Assets/Animations/Heroes/SkeletonGene/skill2_35.png" id="133_2yt7n"]
+[ext_resource type="Texture2D" uid="uid://dah1w0slmmmgl" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_00.png" id="134_iy7vt"]
+[ext_resource type="Texture2D" uid="uid://df4ra1yr4a63t" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_01.png" id="135_mab7u"]
+[ext_resource type="Texture2D" uid="uid://jp01jktgj0hb" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_02.png" id="136_yqcwn"]
+[ext_resource type="Texture2D" uid="uid://6lwrwwel0j83" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_03.png" id="137_ix7lq"]
+[ext_resource type="Texture2D" uid="uid://bbajbpyl6odo7" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_04.png" id="138_3a06f"]
+[ext_resource type="Texture2D" uid="uid://bvd55xp7jxc31" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_05.png" id="139_m0074"]
+[ext_resource type="Texture2D" uid="uid://ctp78477elwdb" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_06.png" id="140_rety3"]
+[ext_resource type="Texture2D" uid="uid://bo17b3pbcq84w" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_07.png" id="141_bdfp5"]
+[ext_resource type="Texture2D" uid="uid://b6vxpn2ynwdf1" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_08.png" id="142_2fy7d"]
+[ext_resource type="Texture2D" uid="uid://bebytouojq1f4" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_09.png" id="143_8k6ov"]
+[ext_resource type="Texture2D" uid="uid://crf3v3yf65c6o" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_10.png" id="144_kmfwe"]
+[ext_resource type="Texture2D" uid="uid://g6ck7nytvauw" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_11.png" id="145_7c5le"]
+[ext_resource type="Texture2D" uid="uid://c5aghrm6q7d1y" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_12.png" id="146_jkjyo"]
+[ext_resource type="Texture2D" uid="uid://ccdg1q5b7susy" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_13.png" id="147_mtmhv"]
+[ext_resource type="Texture2D" uid="uid://d3oka30dt1p2t" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_14.png" id="148_bx2fy"]
+[ext_resource type="Texture2D" uid="uid://b7vfpiyq2tlih" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_15.png" id="149_kwt3t"]
+[ext_resource type="Texture2D" uid="uid://dmcpe10njjo6n" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_16.png" id="150_kmfoa"]
+[ext_resource type="Texture2D" uid="uid://bbvtbpqg34hw2" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_17.png" id="151_3nii6"]
+[ext_resource type="Texture2D" uid="uid://b1yggcumrh2yb" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_18.png" id="152_fowqm"]
+[ext_resource type="Texture2D" uid="uid://bik4goxok51en" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_19.png" id="153_ohhve"]
+[ext_resource type="Texture2D" uid="uid://dam75pbfivyiu" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_20.png" id="154_rxvi3"]
+[ext_resource type="Texture2D" uid="uid://dyhliiopck7tb" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_21.png" id="155_ccel5"]
+[ext_resource type="Texture2D" uid="uid://dhqx28htoy0pc" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_22.png" id="156_qkkdb"]
+[ext_resource type="Texture2D" uid="uid://um624nd4s52x" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_23.png" id="157_x7mxs"]
+[ext_resource type="Texture2D" uid="uid://ctrqawhuumqmo" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_24.png" id="158_c78sq"]
+[ext_resource type="Texture2D" uid="uid://ccoxmytunf7e6" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_25.png" id="159_qdnjd"]
+[ext_resource type="Texture2D" uid="uid://ddle62mxnxxk1" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_26.png" id="160_i3r5q"]
+[ext_resource type="Texture2D" uid="uid://jelil3slpk1c" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_27.png" id="161_vncdx"]
+[ext_resource type="Texture2D" uid="uid://wi4y27cicfk0" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_28.png" id="162_i1cb6"]
+[ext_resource type="Texture2D" uid="uid://cfooui0wkrlv" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_29.png" id="163_pwt5r"]
+[ext_resource type="Texture2D" uid="uid://cjn0l071xn3cp" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_30.png" id="164_teeg0"]
+[ext_resource type="Texture2D" uid="uid://b4veg1kj7ekqk" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_31.png" id="165_11grg"]
+[ext_resource type="Texture2D" uid="uid://c6bqo0pes54qd" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_32.png" id="166_w4s66"]
+[ext_resource type="Texture2D" uid="uid://oim5v20un4p7" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_33.png" id="167_aj6kp"]
+[ext_resource type="Texture2D" uid="uid://3asw87pcyhhl" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_34.png" id="168_ynsib"]
+[ext_resource type="Texture2D" uid="uid://3473e633yqsw" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_35.png" id="169_3dmal"]
+[ext_resource type="Texture2D" uid="uid://fca2xb6awqj5" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_36.png" id="170_hxyth"]
+[ext_resource type="Texture2D" uid="uid://dg8uamt5dh168" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_37.png" id="171_oss5l"]
+[ext_resource type="Texture2D" uid="uid://0vee6i4rlpvv" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_38.png" id="172_3w70r"]
+[ext_resource type="Texture2D" uid="uid://bgpdbja5xqyfn" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_39.png" id="173_xcifo"]
+[ext_resource type="Texture2D" uid="uid://borhmkxuf6u6c" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_40.png" id="174_j3r4h"]
+[ext_resource type="Texture2D" uid="uid://cbueys61dcxr4" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_41.png" id="175_4xugp"]
+[ext_resource type="Texture2D" uid="uid://crdgyxp5pgqcv" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_42.png" id="176_k0h66"]
+[ext_resource type="Texture2D" uid="uid://cdbd3m082hndd" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_43.png" id="177_qayjg"]
+[ext_resource type="Texture2D" uid="uid://bdnsnofjm8db4" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_44.png" id="178_k80rb"]
+[ext_resource type="Texture2D" uid="uid://brdbtwsf2rvct" path="res://Assets/Animations/Heroes/SkeletonGene/skill3_45.png" id="179_jlugt"]
+[ext_resource type="Texture2D" uid="uid://fdl34csjxid" path="res://Assets/Images/Effects/skeleton_seckill_effect.png" id="181_wjcb8"]
+[ext_resource type="AudioStream" uid="uid://bvniuiao8th54" path="res://Assets/Sounds/FXs/Heroes/Talzin/秒杀准备.mp3" id="182_2hqmp"]
+[ext_resource type="AudioStream" uid="uid://dbtgg1fvplh1g" path="res://Assets/Sounds/FXs/Enemies/尸国统帅/尸国统帅死亡.wav" id="183_16ms7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_307yl"]
+radius = 73.9444
+
+[sub_resource type="Resource" id="Resource_hg0j3"]
+script = ExtResource("5_ck056")
+damage_low = 180
+damage_high = 260
+
+[sub_resource type="Resource" id="Resource_ul1ii"]
+script = ExtResource("2_swhgu")
+health = 320
+dodge_rate = 0.0
+near_damage_low = 15
+near_damage_high = 20
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 30
+far_damage_high = 46
+far_attack_speed = 1.5
+far_damage_range = 380
+armor = 0.3
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 2.8
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ptnkk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_iuetk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_66p5q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jxrj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_tejdi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_cxili")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_bqcb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_hu503")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_sf1hs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4cgw3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_efbyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_jr21a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_b6xbl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_fly2h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_qk3bu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_73bd4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ahnwo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_mul0a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_5y47t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_lqn16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ywslc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_sv68k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_c4o75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_5pwpw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_oq80b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_jinav")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_25b15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_v844j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_e53bp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_c0yd5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_sdc4m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_7a5ei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_wsjqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_bna5h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_e1rfj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_poxpi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_tlqmf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_bi4vt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_f6uii")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("44_4fjbm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_xhxpe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_3fhux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_oxocy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_w4i4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_beakb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_h0do7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_75vne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_46o83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_nl1nm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_qn7vi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_8bbhj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_ewxnm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_e58xh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_xfsjt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_gxgi6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_u0gv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_ratet")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_d8gv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_dheeo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_fyhh6")
+}],
+"loop": false,
+"name": &"far_attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_iuetk")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("65_hwuqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_307ix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_w8qlh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_vub2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_r8dwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_3knyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_dbirl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_mttwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_v2fy0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_lsckb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_vwns8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_et8ph")
+}],
+"loop": true,
+"name": &"move",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("78_fv83p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_nxxrc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_dkoem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_1m5yc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_c6gon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_c4csq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_rfyy3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_1vu6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_w8p4q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_r1175")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_onux3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_al3po")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_3k7cm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_tyrxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_h3kih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_87j4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_sr5cj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_2dwup")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_olhxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_fhvqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_wtxw7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_44imw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_80or6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_eim82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_s47dg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_x5tc1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_pep84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_ivyf5")
+}],
+"loop": false,
+"name": &"rebirth",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("77_dognj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_h7qr0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_vg5ti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_w0gae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_xc4hr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_m1vnr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_83lhx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_obri2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_l28we")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_2slh3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_dw40u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_7niqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_0s8cu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_4who2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_quh18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_dntvf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_p62vr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_ln7b4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_5f6jv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_fc02l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_aoubc")
+}],
+"loop": false,
+"name": &"skill1",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("98_bwwst")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_rkp3y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_xemoo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_e44mk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_1mqb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_sn5hv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_ckdo6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_3gxk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_enmo4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_6ciec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_ji1kj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_rkxeg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_a3usw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_5y6d6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_ibx0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_6il64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_e4yyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_6pxe1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_g5e6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_nq0c0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_33eq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_btbh1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_ntbbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_8al2t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_xpdv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_gyfqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_enngt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_hv2i0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_vane3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_8ioj7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_oh637")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_ib1a5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_s51nu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_7bmeh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_ainyc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_2yt7n")
+}],
+"loop": false,
+"name": &"skill2",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("134_iy7vt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_mab7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_yqcwn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_ix7lq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_3a06f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_m0074")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_rety3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_bdfp5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_2fy7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_8k6ov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_kmfwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_7c5le")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_jkjyo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_mtmhv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_bx2fy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_kwt3t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_kmfoa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_3nii6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_fowqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_ohhve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_rxvi3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_ccel5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_qkkdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_x7mxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("158_c78sq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_qdnjd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_i3r5q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_vncdx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_i1cb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_pwt5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_teeg0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_11grg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("166_w4s66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("167_aj6kp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("168_ynsib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("169_3dmal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("170_hxyth")
+}, {
+"duration": 1.0,
+"texture": ExtResource("171_oss5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_3w70r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("173_xcifo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_j3r4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("175_4xugp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("176_k0h66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("177_qayjg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("178_k80rb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("179_jlugt")
+}],
+"loop": false,
+"name": &"skill3",
+"speed": 30.0
+}]
+
+[sub_resource type="Animation" id="Animation_87odr"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_uqdcl"]
+resource_name = "loop"
+loop_mode = 1
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(1, 1),
+"points": PackedFloat32Array(0, 0, 0, 0, 0, 6.28319, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nttoq"]
+_data = {
+"RESET": SubResource("Animation_87odr"),
+"loop": SubResource("Animation_uqdcl")
+}
+
+[node name="SkeletonGene" instance=ExtResource("1_k3knr")]
+script = ExtResource("2_ps6cs")
+skill1_damage = 92
+skill1_bullet_scene = ExtResource("3_te00p")
+skill1_dizness_time = 1.0
+skill2_attack_effect_scene = ExtResource("4_4us64")
+circle_shape = SubResource("CircleShape2D_307yl")
+skill2_damage_block = SubResource("Resource_hg0j3")
+skill3_damage = 420
+hero_level = 10
+ally_id = -1
+ally_name = "萨图恩・骨斯奇"
+ally_level = 10
+ally_texture = ExtResource("3_ghpq0")
+ally_group = 1
+start_data = SubResource("Resource_ul1ii")
+far_attack_bullet_scene = ExtResource("3_v2y0w")
+intercepting_range = 70
+heal_speed = 32
+rebirth_time = 28
+metadata/_edit_vertical_guides_ = [-222.0]
+
+[node name="AllySprite" parent="UnitBody" index="0"]
+position = Vector2(-15, -115)
+sprite_frames = SubResource("SpriteFrames_ptnkk")
+animation = &"rebirth"
+autoplay = "idle"
+frame = 27
+frame_progress = 1.0
+
+[node name="Skill3ConditionArea" type="Area2D" parent="UnitBody" index="8"]
+scale = Vector2(6.8, 6.8)
+collision_layer = 0
+collision_mask = 96
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/Skill3ConditionArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_307yl")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="Skill2ConditionArea" type="Area2D" parent="UnitBody" index="9"]
+scale = Vector2(3, 3)
+collision_layer = 0
+collision_mask = 96
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/Skill2ConditionArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_307yl")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="Skill2AttackArea" type="Area2D" parent="UnitBody" index="10"]
+top_level = true
+scale = Vector2(3, 3)
+collision_layer = 0
+collision_mask = 96
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/Skill2AttackArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_307yl")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="FarAttackMarker" parent="UnitBody" index="11"]
+position = Vector2(45, -150)
+
+[node name="FarAttackMarkerFlip" parent="UnitBody" index="12"]
+position = Vector2(-45, -150)
+
+[node name="HeroUnitButton" parent="HeroUI" index="0"]
+offset_left = 1755.0
+offset_right = 1962.0
+
+[node name="HeroTexture" parent="HeroUI/HeroUnitButton" index="1"]
+texture = ExtResource("2_eqca5")
+
+[node name="Skill1Timer" type="Timer" parent="." index="8"]
+wait_time = 14.0
+one_shot = true
+
+[node name="Skill2Timer" type="Timer" parent="." index="9"]
+wait_time = 20.0
+one_shot = true
+
+[node name="Skill3Timer" type="Timer" parent="." index="10"]
+wait_time = 32.0
+one_shot = true
+
+[node name="SecKillSprite" type="Sprite2D" parent="." index="11"]
+visible = false
+z_index = 1
+scale = Vector2(2, 2)
+texture = ExtResource("181_wjcb8")
+region_enabled = true
+region_rect = Rect2(10, 7, 143, 143)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SecKillSprite" index="0"]
+libraries = {
+"": SubResource("AnimationLibrary_nttoq")
+}
+autoplay = "loop"
+speed_scale = 1.5
+
+[node name="PreparationAudio" type="AudioStreamPlayer" parent="." index="12"]
+stream = ExtResource("182_2hqmp")
+volume_db = 4.0
+bus = &"Sound"
+
+[node name="SecKillAudio" type="AudioStreamPlayer" parent="." index="13"]
+stream = ExtResource("183_16ms7")
+volume_db = -4.0
+bus = &"Sound"

@@ -1,0 +1,131 @@
+[gd_scene load_steps=10 format=3 uid="uid://wxct3woeilia"]
+
+[ext_resource type="Script" path="res://Scripts/UI-Components/Extra/big_map_ui.gd" id="1_8cbj3"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="2_5vtxn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fxoh8"]
+bg_color = Color(0, 0, 0, 0.513726)
+
+[sub_resource type="Animation" id="Animation_h2p8j"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_qj23v"]
+resource_name = "appear"
+length = 0.4
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.2, 0, 0.2, 0, 1, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xycoe"]
+_data = {
+"RESET": SubResource("Animation_h2p8j"),
+"appear": SubResource("Animation_qj23v")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fcp1e"]
+bg_color = Color(0.147672, 0.147672, 0.147672, 0.376471)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5uyfa"]
+bg_color = Color(0, 0, 0, 0.505882)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cfmwp"]
+bg_color = Color(0, 0, 0, 0.376471)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[node name="DeskUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8cbj3")
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0.627451)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fxoh8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xycoe")
+}
+autoplay = "appear"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -954.0
+offset_top = 51.0
+offset_right = 954.0
+offset_bottom = 123.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 24
+theme_override_fonts/font = ExtResource("2_5vtxn")
+theme_override_font_sizes/font_size = 72
+text = "棋盘乱斗"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -801.0
+offset_top = 176.0
+offset_right = 801.0
+offset_bottom = 916.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("2_5vtxn")
+theme_override_font_sizes/font_size = 48
+text = "智者布子，勇者冲锋。在这方寸棋盘上，运筹帷幄即是胜利。
+ 
+从凡人史诗到神战乱斗，固定数值，纯粹策略。四人小队，下到凡人间数十秒的深度思考，上到神战乱斗的狂轰滥炸，棋逢对手，将遇良才。邀一位好友，或挑战AI，来一场公平的对决。
+ 
+棋盘已备，静候对弈者……"
+autowrap_mode = 3
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1710.0
+offset_top = 977.0
+offset_right = 2024.0
+offset_bottom = 1123.0
+scale = Vector2(0.563487, 0.563487)
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_5vtxn")
+theme_override_font_sizes/font_size = 72
+theme_override_styles/hover = SubResource("StyleBoxFlat_fcp1e")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5uyfa")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cfmwp")
+text = "返回"
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

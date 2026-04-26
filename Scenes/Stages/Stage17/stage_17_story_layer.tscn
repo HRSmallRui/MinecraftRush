@@ -1,0 +1,248 @@
+[gd_scene load_steps=21 format=3 uid="uid://n2k0f4xb848p"]
+
+[ext_resource type="Script" path="res://Scripts/UI-Components/Stages/stage_17_story_layer.gd" id="1_v4vnn"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Stages/dialog_block.gd" id="2_0l5r3"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Stages/cg_texture_block.gd" id="2_br0ty"]
+[ext_resource type="AudioStream" uid="uid://0i7b5rn6cyiv" path="res://Assets/Sounds/FXs/Stages/Rains/小中雨2.mp3" id="2_qjuu8"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="2_vn61v"]
+[ext_resource type="Texture2D" uid="uid://kv1hna2s4uvl" path="res://Assets/Images/CGs/Stage17CG.png" id="3_ruhtc"]
+
+[sub_resource type="Resource" id="Resource_ctram"]
+script = ExtResource("2_0l5r3")
+dialog_text = "逃走了？倒是有些本事"
+text_color = Color(1, 1, 1, 1)
+text_exist_time = 0.6
+
+[sub_resource type="Resource" id="Resource_n2kbf"]
+script = ExtResource("2_0l5r3")
+dialog_text = "守家国，赴死局，拼尽一切也要回去……倒真有几分当年朕的影子"
+text_color = Color(1, 1, 1, 1)
+text_exist_time = 4.0
+
+[sub_resource type="Resource" id="Resource_vjwjj"]
+script = ExtResource("2_0l5r3")
+dialog_text = ""
+text_color = Color(1, 1, 1, 1)
+text_exist_time = 9.0
+
+[sub_resource type="Resource" id="Resource_6vi0q"]
+script = ExtResource("2_0l5r3")
+dialog_text = "呼呼呼……"
+text_color = Color(0, 0, 1, 1)
+text_exist_time = 10.0
+
+[sub_resource type="Resource" id="Resource_10bmg"]
+script = ExtResource("2_0l5r3")
+dialog_text = "罢了，LIVER"
+text_color = Color(1, 1, 1, 1)
+text_exist_time = 12.0
+
+[sub_resource type="Resource" id="Resource_gr5be"]
+script = ExtResource("2_0l5r3")
+dialog_text = "你的剑是护这白夕疆土，不是斩奔途勇者，让他们走吧"
+text_color = Color(1, 1, 1, 1)
+text_exist_time = 14.0
+
+[sub_resource type="Resource" id="Resource_jgw3r"]
+script = ExtResource("2_0l5r3")
+dialog_text = ""
+text_color = Color(1, 1, 1, 1)
+text_exist_time = 18.0
+
+[sub_resource type="Resource" id="Resource_udvya"]
+script = ExtResource("2_0l5r3")
+dialog_text = "雨还没停，这故国残景，便陪我再多看一些时间吧……"
+text_color = Color(1, 1, 1, 1)
+text_exist_time = 20.0
+
+[sub_resource type="Resource" id="Resource_0tgv1"]
+script = ExtResource("2_br0ty")
+cg_texture = ExtResource("3_ruhtc")
+cg_appear_time = 1.0
+cg_during_time = 22.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0slav"]
+bg_color = Color(0.273873, 0.273873, 0.273873, 0.443137)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_svrl0"]
+bg_color = Color(0.0980392, 0.0980392, 0.0980392, 0.443137)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="Animation" id="Animation_vqlaj"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ColorRect:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_fxo87"]
+resource_name = "color"
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ColorRect:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mbnja"]
+_data = {
+"RESET": SubResource("Animation_vqlaj"),
+"color": SubResource("Animation_fxo87")
+}
+
+[node name="Stage17StoryLayer" type="CanvasLayer" node_paths=PackedStringArray("subtitle", "skip_button", "cg_player")]
+process_mode = 3
+layer = 11
+script = ExtResource("1_v4vnn")
+ending_time = 25.0
+dialog_list = Array[ExtResource("2_0l5r3")]([SubResource("Resource_ctram"), SubResource("Resource_n2kbf"), SubResource("Resource_vjwjj"), SubResource("Resource_6vi0q"), SubResource("Resource_10bmg"), SubResource("Resource_gr5be"), SubResource("Resource_jgw3r"), SubResource("Resource_udvya")])
+cg_list = Array[ExtResource("2_br0ty")]([SubResource("Resource_0tgv1")])
+subtitle = NodePath("Subtitle")
+skip_button = NodePath("SkipButton")
+cg_player = NodePath("CGPlayer")
+
+[node name="小中雨2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_qjuu8")
+volume_db = 4.0
+autoplay = true
+bus = &"Sound"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CGPlayer" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+
+[node name="Subtitle" type="Label" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -586.0
+offset_top = -177.0
+offset_right = 586.0
+offset_bottom = -89.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("2_vn61v")
+theme_override_font_sizes/font_size = 48
+text = "焦土终会复生，但伤疤永不弥合"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="SkipButton" type="Button" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -254.0
+offset_top = 41.0
+offset_right = -122.0
+offset_bottom = 148.0
+grow_horizontal = 0
+scale = Vector2(1.54343, 1.54343)
+theme_override_font_sizes/font_size = 72
+theme_override_styles/hover = SubResource("StyleBoxFlat_0slav")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_svrl0")
+theme_override_styles/normal = SubResource("StyleBoxFlat_svrl0")
+text = ">>"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_mbnja")
+}
+autoplay = "color"

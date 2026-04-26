@@ -1,0 +1,896 @@
+[gd_scene load_steps=202 format=3 uid="uid://esqxnl1cqlby"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_oww28"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_26.gd" id="2_efx3v"]
+[ext_resource type="Texture2D" uid="uid://wcs871wbxl4u" path="res://Assets/Images/UI/InformationBar/黄金傀儡.png" id="3_xiook"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="4_lquy0"]
+[ext_resource type="AudioStream" uid="uid://b1qce1o4ia1m1" path="res://Assets/Sounds/FXs/Battles/aoe_hit.wav" id="5_om60h"]
+[ext_resource type="AudioStream" uid="uid://dm824q146kchv" path="res://Assets/Sounds/FXs/Allys/铁傀儡/死亡.wav" id="5_uhgjl"]
+[ext_resource type="Texture2D" uid="uid://dqd4f2mncgov4" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_00.png" id="6_58brm"]
+[ext_resource type="Texture2D" uid="uid://dj6gb6xoyvrov" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_01.png" id="7_un8k0"]
+[ext_resource type="Texture2D" uid="uid://ckfq1gj1niwj4" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_02.png" id="8_2rhg8"]
+[ext_resource type="Texture2D" uid="uid://d34chhallseq7" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_03.png" id="9_42yuk"]
+[ext_resource type="Texture2D" uid="uid://dj1o6pnity6ba" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_04.png" id="10_nihuk"]
+[ext_resource type="Texture2D" uid="uid://chfklu35u7e1s" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_05.png" id="11_fev2t"]
+[ext_resource type="Texture2D" uid="uid://bik2vg3pyxyjp" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_06.png" id="12_nojby"]
+[ext_resource type="Texture2D" uid="uid://cny2r2i8vur5e" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_07.png" id="13_1o8sy"]
+[ext_resource type="Texture2D" uid="uid://desovaq0gnh21" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_08.png" id="14_eathh"]
+[ext_resource type="Texture2D" uid="uid://cbd5bac31ra8j" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_09.png" id="15_r0wbn"]
+[ext_resource type="Texture2D" uid="uid://bl3yh7ehysm1w" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_10.png" id="16_p8v06"]
+[ext_resource type="Texture2D" uid="uid://dnvctihndhpcs" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_11.png" id="17_cyya7"]
+[ext_resource type="Texture2D" uid="uid://brcdqeu44iyx2" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_12.png" id="18_572o4"]
+[ext_resource type="Texture2D" uid="uid://ty3ir0ylcwxe" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_13.png" id="19_xprqq"]
+[ext_resource type="Texture2D" uid="uid://cpflp3sw12ol0" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_14.png" id="20_piqxd"]
+[ext_resource type="Texture2D" uid="uid://d3teehvtwr2rc" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_15.png" id="21_osfgp"]
+[ext_resource type="Texture2D" uid="uid://d1o4ta4k7c6ug" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_16.png" id="22_d2w2j"]
+[ext_resource type="Texture2D" uid="uid://xthgbnxdfo0j" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_17.png" id="23_hw0cx"]
+[ext_resource type="Texture2D" uid="uid://cety7t52ntdtq" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_18.png" id="24_jly2w"]
+[ext_resource type="Texture2D" uid="uid://ccgh1uvxduod2" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_19.png" id="25_8523c"]
+[ext_resource type="Texture2D" uid="uid://ynwjpbgecnuk" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_20.png" id="26_ewho0"]
+[ext_resource type="Texture2D" uid="uid://bu05a3wliaypy" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_21.png" id="27_3ckay"]
+[ext_resource type="Texture2D" uid="uid://t3tka42b41lh" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_22.png" id="28_hbmu8"]
+[ext_resource type="Texture2D" uid="uid://dqye8nptpramo" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_23.png" id="29_qejw6"]
+[ext_resource type="Texture2D" uid="uid://r8aher366kb3" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_24.png" id="30_b1eqj"]
+[ext_resource type="Texture2D" uid="uid://bxc5nx11sxkff" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_25.png" id="31_bf6o3"]
+[ext_resource type="Texture2D" uid="uid://b88c1j78vq50y" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_26.png" id="32_rvmnd"]
+[ext_resource type="Texture2D" uid="uid://ccnivac2w7sjw" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_27.png" id="33_586po"]
+[ext_resource type="Texture2D" uid="uid://dsqmlb8kyi4t2" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_28.png" id="34_53ifv"]
+[ext_resource type="Texture2D" uid="uid://dklcaff312yly" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_29.png" id="35_e3rfq"]
+[ext_resource type="Texture2D" uid="uid://cxytfkdk01c8l" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_30.png" id="36_a0ac3"]
+[ext_resource type="Texture2D" uid="uid://10yn1ulvb40i" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_31.png" id="37_nkmkv"]
+[ext_resource type="Texture2D" uid="uid://dltgiyxdov5dg" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_32.png" id="38_orwx0"]
+[ext_resource type="Texture2D" uid="uid://fey8enpi7kfa" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_33.png" id="39_f3irm"]
+[ext_resource type="Texture2D" uid="uid://cky7hif1ahgnw" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_34.png" id="40_cssby"]
+[ext_resource type="Texture2D" uid="uid://cl7e1xy1bof6q" path="res://Assets/Animations/Enemies/26黄金傀儡/attack_35.png" id="41_hnn3c"]
+[ext_resource type="Texture2D" uid="uid://baf58r1qjjvw7" path="res://Assets/Animations/Enemies/26黄金傀儡/die_00.png" id="42_ti76p"]
+[ext_resource type="Texture2D" uid="uid://cb07kliyxykq4" path="res://Assets/Animations/Enemies/26黄金傀儡/die_01.png" id="43_vsp7e"]
+[ext_resource type="Texture2D" uid="uid://baj7mrkeqcvtn" path="res://Assets/Animations/Enemies/26黄金傀儡/die_02.png" id="44_y7efl"]
+[ext_resource type="Texture2D" uid="uid://b2ppidtujv403" path="res://Assets/Animations/Enemies/26黄金傀儡/die_03.png" id="45_jstob"]
+[ext_resource type="Texture2D" uid="uid://csxxeft8qlckr" path="res://Assets/Animations/Enemies/26黄金傀儡/die_04.png" id="46_87vq6"]
+[ext_resource type="Texture2D" uid="uid://cqywn2u0mk6jg" path="res://Assets/Animations/Enemies/26黄金傀儡/die_05.png" id="47_jo3s8"]
+[ext_resource type="Texture2D" uid="uid://c6x4tkknyaift" path="res://Assets/Animations/Enemies/26黄金傀儡/die_06.png" id="48_jbqbw"]
+[ext_resource type="Texture2D" uid="uid://df1i7hr4w6ayg" path="res://Assets/Animations/Enemies/26黄金傀儡/die_07.png" id="49_0fo1k"]
+[ext_resource type="Texture2D" uid="uid://ccucqdv1rmyqj" path="res://Assets/Animations/Enemies/26黄金傀儡/die_08.png" id="50_hh3e3"]
+[ext_resource type="Texture2D" uid="uid://dqxmhwl5v4eq1" path="res://Assets/Animations/Enemies/26黄金傀儡/die_09.png" id="51_kq1u5"]
+[ext_resource type="Texture2D" uid="uid://bf4e7qrn027bw" path="res://Assets/Animations/Enemies/26黄金傀儡/die_10.png" id="52_4rxc5"]
+[ext_resource type="Texture2D" uid="uid://cdt3b4v7oxlms" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_00.png" id="53_w0x7i"]
+[ext_resource type="Texture2D" uid="uid://ckc1oo3w82dnn" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_01.png" id="54_eauwt"]
+[ext_resource type="Texture2D" uid="uid://va7iti3vk5sm" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_02.png" id="55_7p2hc"]
+[ext_resource type="Texture2D" uid="uid://c7f4q2qhdek4g" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_03.png" id="56_u6a7h"]
+[ext_resource type="Texture2D" uid="uid://y446j85ano0x" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_04.png" id="57_78h7n"]
+[ext_resource type="Texture2D" uid="uid://dngyvl8lguwii" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_05.png" id="58_bjres"]
+[ext_resource type="Texture2D" uid="uid://baeib6frlu84q" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_06.png" id="59_eh0bv"]
+[ext_resource type="Texture2D" uid="uid://dteorbk5d3fqs" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_07.png" id="60_ndogt"]
+[ext_resource type="Texture2D" uid="uid://bmrorr3oteuyy" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_08.png" id="61_l8vi7"]
+[ext_resource type="Texture2D" uid="uid://0wpjmg1p0a22" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_09.png" id="62_kbnln"]
+[ext_resource type="Texture2D" uid="uid://cxndn823i7fv" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_10.png" id="63_d3tif"]
+[ext_resource type="Texture2D" uid="uid://dduswk1ywxk8x" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_11.png" id="64_s6tlo"]
+[ext_resource type="Texture2D" uid="uid://u5gtquy42xb0" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_12.png" id="65_diooy"]
+[ext_resource type="Texture2D" uid="uid://cde4sl018x388" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_13.png" id="66_dhkto"]
+[ext_resource type="Texture2D" uid="uid://pnm04rcngrvu" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_14.png" id="67_bvrg5"]
+[ext_resource type="Texture2D" uid="uid://ckjilt2bma5pi" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_15.png" id="68_5oi5y"]
+[ext_resource type="Texture2D" uid="uid://60tj1k8nrb1h" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_16.png" id="69_wmkp8"]
+[ext_resource type="Texture2D" uid="uid://fvyhgx288l73" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_17.png" id="70_3m2ap"]
+[ext_resource type="Texture2D" uid="uid://djo66np66spi7" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_18.png" id="71_fesf5"]
+[ext_resource type="Texture2D" uid="uid://c43rqa6ewtcgs" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_19.png" id="72_xeeyd"]
+[ext_resource type="Texture2D" uid="uid://kxmlf77gvtgv" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_20.png" id="73_kkhja"]
+[ext_resource type="Texture2D" uid="uid://dir3iqyqlaxpx" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_21.png" id="74_stlxu"]
+[ext_resource type="Texture2D" uid="uid://beocc3412bxsr" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_22.png" id="75_5ckjs"]
+[ext_resource type="Texture2D" uid="uid://diiyc718pr74j" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_23.png" id="76_37gjl"]
+[ext_resource type="Texture2D" uid="uid://cpqweotfhnev7" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_24.png" id="77_ecos5"]
+[ext_resource type="Texture2D" uid="uid://y8jaj21a3wwo" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_25.png" id="78_kf623"]
+[ext_resource type="Texture2D" uid="uid://cxdciwrdgtemj" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_26.png" id="79_84gbx"]
+[ext_resource type="Texture2D" uid="uid://4k8aonv62msu" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_27.png" id="80_eyo0r"]
+[ext_resource type="Texture2D" uid="uid://b3ggqfhpri73s" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_28.png" id="81_xfqvd"]
+[ext_resource type="Texture2D" uid="uid://dvgsinin3xbf4" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_29.png" id="82_lh7b5"]
+[ext_resource type="Texture2D" uid="uid://ctok67kry24fu" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_30.png" id="83_mh6o5"]
+[ext_resource type="Texture2D" uid="uid://bimhcn3aqfja7" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_31.png" id="84_woltf"]
+[ext_resource type="Texture2D" uid="uid://d0wbpkdwsj55n" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_32.png" id="85_4uwrk"]
+[ext_resource type="Texture2D" uid="uid://h27qui7wp6yx" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_33.png" id="86_hbagx"]
+[ext_resource type="Texture2D" uid="uid://b3fpyrtmvhtt6" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_34.png" id="87_22kpf"]
+[ext_resource type="Texture2D" uid="uid://chcxc5f0b0vof" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_35.png" id="88_13ak0"]
+[ext_resource type="Texture2D" uid="uid://c0g3kl6dwhs4p" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_36.png" id="89_5mfle"]
+[ext_resource type="Texture2D" uid="uid://cnsbw328wxyuy" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_37.png" id="90_6crwr"]
+[ext_resource type="Texture2D" uid="uid://cmiuqklhnvgmh" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_38.png" id="91_k2gmr"]
+[ext_resource type="Texture2D" uid="uid://cervuuiynw4a1" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_39.png" id="92_k2cei"]
+[ext_resource type="Texture2D" uid="uid://dn22hffnywuld" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_40.png" id="93_yho4k"]
+[ext_resource type="Texture2D" uid="uid://msuqmwvogu8p" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_41.png" id="94_eyala"]
+[ext_resource type="Texture2D" uid="uid://b8vke4wuiyepi" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_42.png" id="95_4lb6d"]
+[ext_resource type="Texture2D" uid="uid://bhhvhgofstrsp" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_43.png" id="96_70hok"]
+[ext_resource type="Texture2D" uid="uid://cyqs4uaydr6fj" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_44.png" id="97_yn4ya"]
+[ext_resource type="Texture2D" uid="uid://cmj8oedi2co0a" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_45.png" id="98_j8tcn"]
+[ext_resource type="Texture2D" uid="uid://b7eihve2roeuh" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_46.png" id="99_cdutb"]
+[ext_resource type="Texture2D" uid="uid://b3bynua1xb4uu" path="res://Assets/Animations/Enemies/26黄金傀儡/move_back_47.png" id="100_0m5dg"]
+[ext_resource type="Texture2D" uid="uid://br7lbvkj3yuy0" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_00.png" id="101_liwke"]
+[ext_resource type="Texture2D" uid="uid://bjpq17gm40881" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_01.png" id="102_y0dke"]
+[ext_resource type="Texture2D" uid="uid://bp27n0n5yhhng" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_02.png" id="103_bp1xg"]
+[ext_resource type="Texture2D" uid="uid://uepacscypeq1" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_03.png" id="104_t8iah"]
+[ext_resource type="Texture2D" uid="uid://mtrw4pwwidmq" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_04.png" id="105_0l0ug"]
+[ext_resource type="Texture2D" uid="uid://rffy5c82pkvn" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_05.png" id="106_8k5ch"]
+[ext_resource type="Texture2D" uid="uid://0dqsqd5eurtm" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_06.png" id="107_7rlvy"]
+[ext_resource type="Texture2D" uid="uid://rhvs3ce2b78u" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_07.png" id="108_gy0ok"]
+[ext_resource type="Texture2D" uid="uid://dosqgh4h4nhlk" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_08.png" id="109_j8rme"]
+[ext_resource type="Texture2D" uid="uid://dbx505tp44epc" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_09.png" id="110_lf70g"]
+[ext_resource type="Texture2D" uid="uid://bu5e1rubux6oc" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_10.png" id="111_xwerf"]
+[ext_resource type="Texture2D" uid="uid://r2n6khf7lw6u" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_11.png" id="112_00c4v"]
+[ext_resource type="Texture2D" uid="uid://npfpxafw32xt" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_12.png" id="113_pllwc"]
+[ext_resource type="Texture2D" uid="uid://chf4akvbjf7je" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_13.png" id="114_vepuo"]
+[ext_resource type="Texture2D" uid="uid://dhx58goi4x6jp" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_14.png" id="115_070g0"]
+[ext_resource type="Texture2D" uid="uid://seu4r1yhe360" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_15.png" id="116_x6kby"]
+[ext_resource type="Texture2D" uid="uid://bqoy4yn3l0nov" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_16.png" id="117_33xjt"]
+[ext_resource type="Texture2D" uid="uid://c6fslgswe17nw" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_17.png" id="118_k1h2q"]
+[ext_resource type="Texture2D" uid="uid://bxs31tnaaqa8" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_18.png" id="119_qewmn"]
+[ext_resource type="Texture2D" uid="uid://c8e72vh8162p1" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_19.png" id="120_2nr0m"]
+[ext_resource type="Texture2D" uid="uid://ca00b81sur4mr" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_20.png" id="121_a2lu6"]
+[ext_resource type="Texture2D" uid="uid://c5sundd6pbbix" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_21.png" id="122_37oah"]
+[ext_resource type="Texture2D" uid="uid://dabrkv74kkaqj" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_22.png" id="123_8mayc"]
+[ext_resource type="Texture2D" uid="uid://d01mkhqkb2deg" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_23.png" id="124_0542e"]
+[ext_resource type="Texture2D" uid="uid://cs3rajiyk7rdc" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_24.png" id="125_p501c"]
+[ext_resource type="Texture2D" uid="uid://vikgf2jhoq1w" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_25.png" id="126_6tsva"]
+[ext_resource type="Texture2D" uid="uid://ujcafkqvynrq" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_26.png" id="127_m30ne"]
+[ext_resource type="Texture2D" uid="uid://dt2ua4djuj8xb" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_27.png" id="128_wdwob"]
+[ext_resource type="Texture2D" uid="uid://bfxu11j8bbhpr" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_28.png" id="129_bso1v"]
+[ext_resource type="Texture2D" uid="uid://bibsfj07fc7j6" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_29.png" id="130_j7k3i"]
+[ext_resource type="Texture2D" uid="uid://w8xwrdingu4q" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_30.png" id="131_r3i01"]
+[ext_resource type="Texture2D" uid="uid://b2uxtge477war" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_31.png" id="132_qfgtr"]
+[ext_resource type="Texture2D" uid="uid://rtsuaka5jklm" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_32.png" id="133_an2r5"]
+[ext_resource type="Texture2D" uid="uid://bu3sy74btkkyx" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_33.png" id="134_hj36n"]
+[ext_resource type="Texture2D" uid="uid://bfslgymvwerbv" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_34.png" id="135_kwklr"]
+[ext_resource type="Texture2D" uid="uid://b8emim166841f" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_35.png" id="136_vi2je"]
+[ext_resource type="Texture2D" uid="uid://f3vg5sh47s7c" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_36.png" id="137_4or0a"]
+[ext_resource type="Texture2D" uid="uid://bv24om5cbxbmy" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_37.png" id="138_ww4bp"]
+[ext_resource type="Texture2D" uid="uid://h7xt530kywfa" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_38.png" id="139_4lxbw"]
+[ext_resource type="Texture2D" uid="uid://h4cpbcxn6c3w" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_39.png" id="140_8setv"]
+[ext_resource type="Texture2D" uid="uid://dcp60lay73pmw" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_40.png" id="141_nqbwq"]
+[ext_resource type="Texture2D" uid="uid://c8wl5v1lbf3v3" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_41.png" id="142_4llsj"]
+[ext_resource type="Texture2D" uid="uid://cal6j14thfjcs" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_42.png" id="143_8s80x"]
+[ext_resource type="Texture2D" uid="uid://bftm510mue7bl" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_43.png" id="144_u6bs4"]
+[ext_resource type="Texture2D" uid="uid://dvleedasjp67j" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_44.png" id="145_yqoqb"]
+[ext_resource type="Texture2D" uid="uid://cr1xb3s6mf5cy" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_45.png" id="146_6jggt"]
+[ext_resource type="Texture2D" uid="uid://djiqgc0ex71mp" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_46.png" id="147_hsebd"]
+[ext_resource type="Texture2D" uid="uid://cer6o66exycvr" path="res://Assets/Animations/Enemies/26黄金傀儡/move_front_47.png" id="148_qyqhv"]
+[ext_resource type="Texture2D" uid="uid://c8tlggwc1xdcq" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_00.png" id="149_43t7j"]
+[ext_resource type="Texture2D" uid="uid://bfdakeullbcal" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_01.png" id="150_lcq0x"]
+[ext_resource type="Texture2D" uid="uid://57c32hmepktj" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_02.png" id="151_sgpv3"]
+[ext_resource type="Texture2D" uid="uid://fvmy5lmyu3fq" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_03.png" id="152_uftri"]
+[ext_resource type="Texture2D" uid="uid://bjhxuaayjglmp" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_04.png" id="153_3sgpf"]
+[ext_resource type="Texture2D" uid="uid://k0kpc70ttsmp" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_05.png" id="154_bjmd4"]
+[ext_resource type="Texture2D" uid="uid://dwembxtudmci" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_06.png" id="155_kpfme"]
+[ext_resource type="Texture2D" uid="uid://h28yrubjf38f" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_07.png" id="156_rsxm0"]
+[ext_resource type="Texture2D" uid="uid://bsgsovmmdcbf" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_08.png" id="157_l7xxx"]
+[ext_resource type="Texture2D" uid="uid://cfb7kqaliv23j" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_09.png" id="158_p1akq"]
+[ext_resource type="Texture2D" uid="uid://cbcdp5fdh2xi6" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_10.png" id="159_7d1bg"]
+[ext_resource type="Texture2D" uid="uid://c08bhb071qusq" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_11.png" id="160_dh1r0"]
+[ext_resource type="Texture2D" uid="uid://bcgu707p0cb0f" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_12.png" id="161_1fs6q"]
+[ext_resource type="Texture2D" uid="uid://fr5fgxhu853n" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_13.png" id="162_2ej1x"]
+[ext_resource type="Texture2D" uid="uid://dx4x8satp3k0y" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_14.png" id="163_blmox"]
+[ext_resource type="Texture2D" uid="uid://cc14xgqlpdtuq" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_15.png" id="164_6q8ek"]
+[ext_resource type="Texture2D" uid="uid://dvnx7i3116iqb" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_16.png" id="165_tutd4"]
+[ext_resource type="Texture2D" uid="uid://bmmtfrajysjj" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_17.png" id="166_df8vi"]
+[ext_resource type="Texture2D" uid="uid://cgkuuf8imk6nd" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_18.png" id="167_eypa6"]
+[ext_resource type="Texture2D" uid="uid://b247sj7sbkq02" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_19.png" id="168_g127e"]
+[ext_resource type="Texture2D" uid="uid://bnhgksb3tddmb" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_20.png" id="169_585de"]
+[ext_resource type="Texture2D" uid="uid://d4f0rf5gxxdgt" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_21.png" id="170_3430b"]
+[ext_resource type="Texture2D" uid="uid://byssrq8xowjww" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_22.png" id="171_8dppn"]
+[ext_resource type="Texture2D" uid="uid://d2i0tnlbtwqqk" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_23.png" id="172_e3kg5"]
+[ext_resource type="Texture2D" uid="uid://daghm5rd04pxi" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_24.png" id="173_eld2q"]
+[ext_resource type="Texture2D" uid="uid://c0ddbj4j0jsl4" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_25.png" id="174_u4y2x"]
+[ext_resource type="Texture2D" uid="uid://by3kl40t8q1bj" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_26.png" id="175_wnchd"]
+[ext_resource type="Texture2D" uid="uid://3tivhguwwq2o" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_27.png" id="176_g8io2"]
+[ext_resource type="Texture2D" uid="uid://bui5es0rj0ywi" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_28.png" id="177_pddk7"]
+[ext_resource type="Texture2D" uid="uid://csdllfurt2jcj" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_29.png" id="178_vdfx8"]
+[ext_resource type="Texture2D" uid="uid://hklga2sihmpk" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_30.png" id="179_umx8u"]
+[ext_resource type="Texture2D" uid="uid://ce1iwkmcl87ym" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_31.png" id="180_tsxfj"]
+[ext_resource type="Texture2D" uid="uid://da6dbjlkv80lo" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_32.png" id="181_xbiv8"]
+[ext_resource type="Texture2D" uid="uid://b42lye6ngf7f7" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_33.png" id="182_gwuno"]
+[ext_resource type="Texture2D" uid="uid://dttv488gevsut" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_34.png" id="183_3jyqd"]
+[ext_resource type="Texture2D" uid="uid://bp3q168b5ayco" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_35.png" id="184_opi1p"]
+[ext_resource type="Texture2D" uid="uid://dpcpvr8gtvnjo" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_36.png" id="185_gba13"]
+[ext_resource type="Texture2D" uid="uid://nd4bqvtjco4" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_37.png" id="186_gyhgu"]
+[ext_resource type="Texture2D" uid="uid://cb4lgan72g7v7" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_38.png" id="187_hj581"]
+[ext_resource type="Texture2D" uid="uid://sp8w5r21klgy" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_39.png" id="188_fj7ux"]
+[ext_resource type="Texture2D" uid="uid://c1ppkw26yk58m" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_40.png" id="189_txi7b"]
+[ext_resource type="Texture2D" uid="uid://bg315yywa7731" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_41.png" id="190_7mfc3"]
+[ext_resource type="Texture2D" uid="uid://mcg4d2ys5bst" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_42.png" id="191_5p33a"]
+[ext_resource type="Texture2D" uid="uid://dwg254gm5t6rq" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_43.png" id="192_68ki4"]
+[ext_resource type="Texture2D" uid="uid://cv7mkds8abgcs" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_44.png" id="193_fsu0c"]
+[ext_resource type="Texture2D" uid="uid://ca5yd7ocyrtfo" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_45.png" id="194_elsg1"]
+[ext_resource type="Texture2D" uid="uid://c6kkqe6kyqp6h" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_46.png" id="195_xulle"]
+[ext_resource type="Texture2D" uid="uid://6ku1mjdjj7w6" path="res://Assets/Animations/Enemies/26黄金傀儡/move_normal_47.png" id="196_goa8t"]
+
+[sub_resource type="Resource" id="Resource_u4fwf"]
+script = ExtResource("4_lquy0")
+health = 1800
+dodge_rate = 0.0
+near_damage_low = 50
+near_damage_high = 100
+near_attack_speed = 2.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.4
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 0.5
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3lptp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_58brm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_un8k0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2rhg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_42yuk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_nihuk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_fev2t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nojby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_1o8sy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_eathh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_r0wbn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_p8v06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_cyya7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_572o4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_xprqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_piqxd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_osfgp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_d2w2j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_hw0cx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_jly2w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_8523c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ewho0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_3ckay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_hbmu8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_qejw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_b1eqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_bf6o3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_rvmnd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_586po")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_53ifv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_e3rfq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_a0ac3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_nkmkv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_orwx0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_f3irm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_cssby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_hnn3c")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("42_ti76p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_vsp7e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_y7efl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_jstob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_87vq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_jo3s8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_jbqbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_0fo1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_hh3e3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_kq1u5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_4rxc5")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_58brm")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("53_w0x7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_eauwt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_7p2hc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_u6a7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_78h7n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_bjres")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_eh0bv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_ndogt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_l8vi7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_kbnln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_d3tif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_s6tlo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_diooy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_dhkto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_bvrg5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_5oi5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_wmkp8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_3m2ap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_fesf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_xeeyd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_kkhja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_stlxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_5ckjs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_37gjl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_ecos5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_kf623")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_84gbx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_eyo0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_xfqvd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_lh7b5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_mh6o5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_woltf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_4uwrk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_hbagx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_22kpf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_13ak0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_5mfle")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_6crwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_k2gmr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_k2cei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_yho4k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_eyala")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_4lb6d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_70hok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_yn4ya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_j8tcn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_cdutb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_0m5dg")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("101_liwke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_y0dke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_bp1xg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_t8iah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_0l0ug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_8k5ch")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_7rlvy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_gy0ok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_j8rme")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_lf70g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_xwerf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_00c4v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_pllwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_vepuo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_070g0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_x6kby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_33xjt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_k1h2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_qewmn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_2nr0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_a2lu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_37oah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_8mayc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_0542e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_p501c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_6tsva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_m30ne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_wdwob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_bso1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_j7k3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_r3i01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_qfgtr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_an2r5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_hj36n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_kwklr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_vi2je")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_4or0a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_ww4bp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_4lxbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_8setv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_nqbwq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_4llsj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_8s80x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_u6bs4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_yqoqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_6jggt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_hsebd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_qyqhv")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("149_43t7j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_lcq0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_sgpv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_uftri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_3sgpf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_bjmd4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_kpfme")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_rsxm0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_l7xxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("158_p1akq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_7d1bg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_dh1r0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_1fs6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_2ej1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_blmox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_6q8ek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_tutd4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("166_df8vi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("167_eypa6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("168_g127e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("169_585de")
+}, {
+"duration": 1.0,
+"texture": ExtResource("170_3430b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("171_8dppn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_e3kg5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("173_eld2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_u4y2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("175_wnchd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("176_g8io2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("177_pddk7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("178_vdfx8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("179_umx8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("180_tsxfj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("181_xbiv8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("182_gwuno")
+}, {
+"duration": 1.0,
+"texture": ExtResource("183_3jyqd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("184_opi1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("185_gba13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("186_gyhgu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("187_hj581")
+}, {
+"duration": 1.0,
+"texture": ExtResource("188_fj7ux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("189_txi7b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("190_7mfc3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("191_5p33a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("192_68ki4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("193_fsu0c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("194_elsg1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("195_xulle")
+}, {
+"duration": 1.0,
+"texture": ExtResource("196_goa8t")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 24.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_se2e4"]
+size = Vector2(130, 90)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7mxxu"]
+radius = 73.9444
+
+[node name="Enemy26" groups=["no_live"] instance=ExtResource("1_oww28")]
+script = ExtResource("2_efx3v")
+enemy_name = "黄金傀儡"
+enemy_id = 26
+enemy_texture = ExtResource("3_xiook")
+enemy_type = 2
+start_data = SubResource("Resource_u4fwf")
+lives_taken = 5
+bounty = 120
+die_audio_stream_list = Array[AudioStream]([ExtResource("5_uhgjl")])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(-15, -145)
+sprite_frames = SubResource("SpriteFrames_3lptp")
+animation = &"attack"
+autoplay = "idle"
+frame = 35
+frame_progress = 1.0
+
+[node name="BodyCollision" parent="UnitBody" index="1"]
+position = Vector2(0, -35)
+shape = SubResource("RectangleShape2D_se2e4")
+
+[node name="HurtBox" parent="UnitBody" index="2"]
+position = Vector2(0, -110)
+scale = Vector2(7.31462, 7.31462)
+
+[node name="SelectSprite" parent="UnitBody" index="3"]
+scale = Vector2(5.8, 5.8)
+
+[node name="EnemyButton" parent="UnitBody" index="4"]
+offset_left = -83.0
+offset_top = -235.0
+offset_right = 85.0
+
+[node name="HealthBar" parent="UnitBody" index="5"]
+offset_left = -105.0
+offset_top = -255.0
+offset_right = 195.0
+offset_bottom = -246.0
+scale = Vector2(0.682899, 1.88085)
+
+[node name="HitArea" type="Area2D" parent="UnitBody" index="8"]
+scale = Vector2(0.6, 0.6)
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/HitArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_7mxxu")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="DieAudio" parent="." index="3"]
+stream = ExtResource("5_uhgjl")
+pitch_scale = 0.8
+
+[node name="AoeHitAudio" type="AudioStreamPlayer" parent="." index="5"]
+stream = ExtResource("5_om60h")
+volume_db = -2.0
+bus = &"Sound"

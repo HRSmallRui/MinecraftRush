@@ -1,0 +1,810 @@
+[gd_scene load_steps=177 format=3 uid="uid://bmocy4l6eg7yy"]
+
+[ext_resource type="PackedScene" uid="uid://bgi3ibffayb11" path="res://Scenes/Allys/Soldiers/soldier_class.tscn" id="1_dkcch"]
+[ext_resource type="Script" path="res://Scripts/Allys/Soldiers/zombie_soldier_big.gd" id="2_hcx0g"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="3_6nny5"]
+[ext_resource type="Texture2D" uid="uid://d25f66qwik0uy" path="res://Assets/Images/UI/InformationBar/EnemyChapter6/尸国斗剑士.png" id="3_axmdt"]
+[ext_resource type="Script" path="res://Library/Heroes/damage_block.gd" id="3_p110m"]
+[ext_resource type="Texture2D" uid="uid://c2hrpasmf3sue" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_00.png" id="5_sd77p"]
+[ext_resource type="Texture2D" uid="uid://ctnqcknpr7qaw" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_01.png" id="6_qfag1"]
+[ext_resource type="Texture2D" uid="uid://b0j5dx7067ick" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_02.png" id="7_sr5ol"]
+[ext_resource type="Texture2D" uid="uid://bj1far3tvxdur" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_03.png" id="8_vu34v"]
+[ext_resource type="Texture2D" uid="uid://dyc47ojy1x2cv" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_04.png" id="9_33ncp"]
+[ext_resource type="Texture2D" uid="uid://dk7apr4qd2ys" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_05.png" id="10_oibt1"]
+[ext_resource type="Texture2D" uid="uid://ce71w2lam2ih0" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_06.png" id="11_wlfr4"]
+[ext_resource type="Texture2D" uid="uid://c428ofs65gvfq" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_07.png" id="12_s58jp"]
+[ext_resource type="Texture2D" uid="uid://byaop57hdm1kj" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_08.png" id="13_hob4h"]
+[ext_resource type="Texture2D" uid="uid://basxxtpaw3s2r" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_09.png" id="14_r6d3n"]
+[ext_resource type="Texture2D" uid="uid://bcnkivby038qo" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_10.png" id="15_dcide"]
+[ext_resource type="Texture2D" uid="uid://b8qg0wf4r3juh" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_11.png" id="16_dluyl"]
+[ext_resource type="Texture2D" uid="uid://gbpsexs0m60m" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_12.png" id="17_82a01"]
+[ext_resource type="Texture2D" uid="uid://b0yu56itmug2r" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_13.png" id="18_554a0"]
+[ext_resource type="Texture2D" uid="uid://da37u4fkv57ib" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_14.png" id="19_chd2v"]
+[ext_resource type="Texture2D" uid="uid://dswds7fw0f2sk" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_15.png" id="20_cwy13"]
+[ext_resource type="Texture2D" uid="uid://8i4vjce4nkeh" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_16.png" id="21_24vv8"]
+[ext_resource type="Texture2D" uid="uid://c6btyw5vgfdae" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_17.png" id="22_u5fo5"]
+[ext_resource type="Texture2D" uid="uid://dkrycq5knsew7" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_18.png" id="23_x6imw"]
+[ext_resource type="Texture2D" uid="uid://cpfq0w2ockv5q" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_19.png" id="24_ebf8e"]
+[ext_resource type="Texture2D" uid="uid://nq4ihc4bx7vp" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_20.png" id="25_3nw1g"]
+[ext_resource type="Texture2D" uid="uid://30w5xtmsb3ru" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_21.png" id="26_gfrlx"]
+[ext_resource type="Texture2D" uid="uid://b518j5idolewj" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_22.png" id="27_5kwd7"]
+[ext_resource type="Texture2D" uid="uid://bx1qboo1xehho" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_23.png" id="28_fnk5y"]
+[ext_resource type="Texture2D" uid="uid://bntb7l4lw36qq" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_24.png" id="29_y3mii"]
+[ext_resource type="Texture2D" uid="uid://idl07ti3o4rb" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_25.png" id="30_w3atu"]
+[ext_resource type="Texture2D" uid="uid://dvj135hdslb2w" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_26.png" id="31_0uf8m"]
+[ext_resource type="Texture2D" uid="uid://cxn64nvah6wpf" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_27.png" id="32_dsc7j"]
+[ext_resource type="Texture2D" uid="uid://ck45jjnc2m8u7" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_28.png" id="33_72bfc"]
+[ext_resource type="Texture2D" uid="uid://wdyydimoscsm" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_29.png" id="34_tuini"]
+[ext_resource type="Texture2D" uid="uid://dr33f8bodj51k" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_30.png" id="35_2eym2"]
+[ext_resource type="Texture2D" uid="uid://bjvxg7jy0befe" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_31.png" id="36_5odeg"]
+[ext_resource type="Texture2D" uid="uid://b73q1ai55rp0r" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_32.png" id="37_1wxum"]
+[ext_resource type="Texture2D" uid="uid://dqft0tj7s8p0" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_33.png" id="38_klljt"]
+[ext_resource type="Texture2D" uid="uid://bqiwnlpmbseon" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_34.png" id="39_euwld"]
+[ext_resource type="Texture2D" uid="uid://d0127x1tk0ymo" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_35.png" id="40_36wmk"]
+[ext_resource type="Texture2D" uid="uid://cmvwa7mrtpxbt" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_36.png" id="41_pg2vk"]
+[ext_resource type="Texture2D" uid="uid://ckouidlou07xw" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_37.png" id="42_fg2yn"]
+[ext_resource type="Texture2D" uid="uid://b0m5xxamv132c" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_38.png" id="43_kgms4"]
+[ext_resource type="Texture2D" uid="uid://yskt20es7jqo" path="res://Assets/Animations/Enemies/49尸国斗剑士/attack_39.png" id="44_bix37"]
+[ext_resource type="Texture2D" uid="uid://bmhn0dhbrpymn" path="res://Assets/Animations/Enemies/49尸国斗剑士/die_00.png" id="45_hsw6q"]
+[ext_resource type="Texture2D" uid="uid://bfe7xc72cck4v" path="res://Assets/Animations/Enemies/49尸国斗剑士/defence_00.png" id="46_0ged2"]
+[ext_resource type="Texture2D" uid="uid://dwh3xo4xodakx" path="res://Assets/Animations/Enemies/49尸国斗剑士/die_01.png" id="46_ahn8g"]
+[ext_resource type="Texture2D" uid="uid://co3mp81voplvv" path="res://Assets/Animations/Enemies/49尸国斗剑士/die_02.png" id="47_625xy"]
+[ext_resource type="Texture2D" uid="uid://b4vxy2b67xpuo" path="res://Assets/Animations/Enemies/49尸国斗剑士/defence_01.png" id="47_vgcr5"]
+[ext_resource type="Texture2D" uid="uid://cm3nlhh27gdu2" path="res://Assets/Animations/Enemies/49尸国斗剑士/die_03.png" id="48_31lno"]
+[ext_resource type="Texture2D" uid="uid://dunb00cee7nrd" path="res://Assets/Animations/Enemies/49尸国斗剑士/defence_02.png" id="48_58u8t"]
+[ext_resource type="Texture2D" uid="uid://bf3fvabs4xubm" path="res://Assets/Animations/Enemies/49尸国斗剑士/defence_03.png" id="49_kilnq"]
+[ext_resource type="Texture2D" uid="uid://dba4r6qymnfo7" path="res://Assets/Animations/Enemies/49尸国斗剑士/die_04.png" id="49_ub00m"]
+[ext_resource type="Texture2D" uid="uid://7lyvghi6hjl2" path="res://Assets/Animations/Enemies/49尸国斗剑士/defence_04.png" id="50_i12i6"]
+[ext_resource type="Texture2D" uid="uid://c252wyp4pc5d2" path="res://Assets/Animations/Enemies/49尸国斗剑士/die_05.png" id="50_wvi0u"]
+[ext_resource type="Texture2D" uid="uid://dhbelr12vx77e" path="res://Assets/Animations/Enemies/49尸国斗剑士/die_06.png" id="51_dkf1a"]
+[ext_resource type="Texture2D" uid="uid://dle4ai0mpd774" path="res://Assets/Animations/Enemies/49尸国斗剑士/defence_05.png" id="51_wwlgs"]
+[ext_resource type="Texture2D" uid="uid://cvtwe6x251ok2" path="res://Assets/Animations/Enemies/49尸国斗剑士/defence_06.png" id="52_0chum"]
+[ext_resource type="Texture2D" uid="uid://7k6q5p0lc2w0" path="res://Assets/Animations/Enemies/49尸国斗剑士/die_07.png" id="52_shh5u"]
+[ext_resource type="Texture2D" uid="uid://cunlvlhl85syr" path="res://Assets/Animations/Enemies/49尸国斗剑士/defence_07.png" id="53_3fdct"]
+[ext_resource type="Texture2D" uid="uid://c5sdjeg54xd18" path="res://Assets/Animations/Enemies/49尸国斗剑士/die_08.png" id="53_ivrnj"]
+[ext_resource type="Texture2D" uid="uid://dndf7n6n0ajaq" path="res://Assets/Animations/Enemies/49尸国斗剑士/defence_08.png" id="54_43oyv"]
+[ext_resource type="Texture2D" uid="uid://ugvllppp0b6g" path="res://Assets/Animations/Enemies/49尸国斗剑士/die_09.png" id="54_d84vh"]
+[ext_resource type="Texture2D" uid="uid://wxlb07l728f7" path="res://Assets/Animations/Enemies/49尸国斗剑士/die_10.png" id="55_gwv1k"]
+[ext_resource type="Texture2D" uid="uid://deb4mwoab8rte" path="res://Assets/Animations/Enemies/49尸国斗剑士/defence_09.png" id="55_ibltm"]
+[ext_resource type="Texture2D" uid="uid://d2kg6guojfvlg" path="res://Assets/Animations/Enemies/49尸国斗剑士/die_11.png" id="56_6hdg8"]
+[ext_resource type="Texture2D" uid="uid://bu75d5kd7jepu" path="res://Assets/Animations/Enemies/49尸国斗剑士/defence_10.png" id="56_hkr3n"]
+[ext_resource type="Texture2D" uid="uid://dogolmww2xd" path="res://Assets/Animations/Enemies/49尸国斗剑士/defence_11.png" id="57_djgmn"]
+[ext_resource type="Texture2D" uid="uid://bf0dwwbouffq4" path="res://Assets/Animations/Enemies/49尸国斗剑士/die_12.png" id="57_q7vdm"]
+[ext_resource type="Texture2D" uid="uid://di3ef1cwfy4wi" path="res://Assets/Animations/Enemies/49尸国斗剑士/defence_12.png" id="58_amkld"]
+[ext_resource type="Texture2D" uid="uid://byflgh2apf4ue" path="res://Assets/Animations/Enemies/49尸国斗剑士/die_13.png" id="58_tcsi2"]
+[ext_resource type="Texture2D" uid="uid://domiyjqolgcnl" path="res://Assets/Animations/Enemies/49尸国斗剑士/defence_13.png" id="59_4ql5o"]
+[ext_resource type="Texture2D" uid="uid://272gov0pnroj" path="res://Assets/Animations/Enemies/49尸国斗剑士/die_14.png" id="59_bxg0s"]
+[ext_resource type="Texture2D" uid="uid://t7jkvqxsc6qh" path="res://Assets/Animations/Enemies/49尸国斗剑士/defence_14.png" id="60_7mc8n"]
+[ext_resource type="Texture2D" uid="uid://ckgehg47awu77" path="res://Assets/Animations/Enemies/49尸国斗剑士/die_15.png" id="60_c42lt"]
+[ext_resource type="Texture2D" uid="uid://du2km54tv0beu" path="res://Assets/Animations/Enemies/49尸国斗剑士/die_16.png" id="61_cipb2"]
+[ext_resource type="Texture2D" uid="uid://vq2brkndw607" path="res://Assets/Animations/Enemies/49尸国斗剑士/defence_15.png" id="61_mlh2u"]
+[ext_resource type="Texture2D" uid="uid://chyxc801vv5fu" path="res://Assets/Animations/Enemies/49尸国斗剑士/defence_16.png" id="62_hkxrf"]
+[ext_resource type="Texture2D" uid="uid://beb66hobb63h5" path="res://Assets/Animations/Enemies/49尸国斗剑士/die_17.png" id="62_i25rt"]
+[ext_resource type="Texture2D" uid="uid://c67kun53alerb" path="res://Assets/Animations/Enemies/49尸国斗剑士/defence_17.png" id="63_3ecsv"]
+[ext_resource type="Texture2D" uid="uid://cqh82tcovwexj" path="res://Assets/Animations/Enemies/49尸国斗剑士/die_18.png" id="63_pyotf"]
+[ext_resource type="Texture2D" uid="uid://ciafcooq2a05j" path="res://Assets/Animations/Enemies/49尸国斗剑士/die_19.png" id="64_teist"]
+[ext_resource type="Texture2D" uid="uid://c1xuqopua3gbq" path="res://Assets/Animations/Enemies/49尸国斗剑士/defence_18.png" id="64_w00a7"]
+[ext_resource type="Texture2D" uid="uid://jdmuevcluk0d" path="res://Assets/Animations/Enemies/49尸国斗剑士/defence_19.png" id="65_heed7"]
+[ext_resource type="Texture2D" uid="uid://dyfaskbpt0nej" path="res://Assets/Animations/Enemies/49尸国斗剑士/die_20.png" id="65_hkffy"]
+[ext_resource type="Texture2D" uid="uid://b237eh31h1ywe" path="res://Assets/Animations/Enemies/49尸国斗剑士/defence_20.png" id="66_5f7mk"]
+[ext_resource type="Texture2D" uid="uid://co2nm3fbuxqlx" path="res://Assets/Animations/Enemies/49尸国斗剑士/die_21.png" id="66_a8bur"]
+[ext_resource type="Texture2D" uid="uid://duxw60fwaceiq" path="res://Assets/Animations/Enemies/49尸国斗剑士/defence_21.png" id="67_b0yf8"]
+[ext_resource type="Texture2D" uid="uid://b8bhp43c2oeew" path="res://Assets/Animations/Enemies/49尸国斗剑士/die_22.png" id="67_ndqsv"]
+[ext_resource type="Texture2D" uid="uid://4dmi06f0ommu" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_00.png" id="68_6vhom"]
+[ext_resource type="Texture2D" uid="uid://dft2nd8dfaw7n" path="res://Assets/Animations/Enemies/49尸国斗剑士/defence_22.png" id="68_eixmb"]
+[ext_resource type="Texture2D" uid="uid://cnnjsqv56n7px" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_01.png" id="69_jij11"]
+[ext_resource type="Texture2D" uid="uid://bseh35vw7kxh0" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_03.png" id="70_lrgs8"]
+[ext_resource type="Texture2D" uid="uid://1pwm3af271mb" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_04.png" id="71_6d7ni"]
+[ext_resource type="Texture2D" uid="uid://bdn67frt5ihvv" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_06.png" id="72_u7ruf"]
+[ext_resource type="Texture2D" uid="uid://pnlg04ubxyxp" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_07.png" id="73_2n8ie"]
+[ext_resource type="Texture2D" uid="uid://c7kxcbqov5x3p" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_09.png" id="74_0ptfu"]
+[ext_resource type="Texture2D" uid="uid://dhbvr0ort2jyc" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_10.png" id="75_7m10a"]
+[ext_resource type="Texture2D" uid="uid://w2ix82eoahb8" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_12.png" id="76_juk82"]
+[ext_resource type="Texture2D" uid="uid://cdoeskjyyg2q5" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_13.png" id="77_521ql"]
+[ext_resource type="Texture2D" uid="uid://n7l7fe2pldv1" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_15.png" id="78_aq2rx"]
+[ext_resource type="Texture2D" uid="uid://doeh6qfl60cyy" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_16.png" id="79_f1csl"]
+[ext_resource type="Texture2D" uid="uid://ci6b6aewqa15k" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_18.png" id="80_dnf0g"]
+[ext_resource type="Texture2D" uid="uid://d2bs66xj8psde" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_19.png" id="81_pns0c"]
+[ext_resource type="Texture2D" uid="uid://cmgg10tb3mnto" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_21.png" id="82_4v3dx"]
+[ext_resource type="Texture2D" uid="uid://jclt28206sxl" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_22.png" id="83_wyxjd"]
+[ext_resource type="Texture2D" uid="uid://bt0fhb4whhyyk" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_24.png" id="84_qtcu2"]
+[ext_resource type="Texture2D" uid="uid://b1npb7spbug8l" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_25.png" id="85_v8ytr"]
+[ext_resource type="Texture2D" uid="uid://c4a81km6slcgc" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_27.png" id="86_yjhya"]
+[ext_resource type="Texture2D" uid="uid://cf4xix4mij8rd" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_28.png" id="87_01rwk"]
+[ext_resource type="Texture2D" uid="uid://dahnaowjt8yjj" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_30.png" id="88_2hj0j"]
+[ext_resource type="Texture2D" uid="uid://bnu1yx1u0nxob" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_31.png" id="89_qr8eg"]
+[ext_resource type="Texture2D" uid="uid://b2b1tt0r4ygry" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_33.png" id="90_cjm6b"]
+[ext_resource type="Texture2D" uid="uid://b38fvudoj7qwo" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_34.png" id="91_m6a76"]
+[ext_resource type="Texture2D" uid="uid://dg1on22sjaoo0" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_36.png" id="92_jvy2s"]
+[ext_resource type="Texture2D" uid="uid://j4x1k7uim248" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_37.png" id="93_qau2i"]
+[ext_resource type="Texture2D" uid="uid://b5ogm2cfdc584" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_39.png" id="94_qhqwl"]
+[ext_resource type="Texture2D" uid="uid://bsbberyk7r3ve" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_40.png" id="95_ev3ss"]
+[ext_resource type="Texture2D" uid="uid://d2ysrqpn11lhr" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_42.png" id="96_uuxju"]
+[ext_resource type="Texture2D" uid="uid://ccoswsxrbp0p6" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_43.png" id="97_114if"]
+[ext_resource type="Texture2D" uid="uid://heglpbklcoyw" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_45.png" id="98_26nrt"]
+[ext_resource type="Texture2D" uid="uid://b2k3jvuim3h6y" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_46.png" id="99_r7vl0"]
+[ext_resource type="Texture2D" uid="uid://duk8lk54cayrv" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_48.png" id="100_k8som"]
+[ext_resource type="Texture2D" uid="uid://c5knuw8i07j67" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_49.png" id="101_swfe1"]
+[ext_resource type="Texture2D" uid="uid://bmytvwwmu7ugm" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_51.png" id="102_jx0r2"]
+[ext_resource type="Texture2D" uid="uid://dfobqnft30fne" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_52.png" id="103_ev1xr"]
+[ext_resource type="Texture2D" uid="uid://2uxnh4q8adud" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_54.png" id="104_2tnx6"]
+[ext_resource type="Texture2D" uid="uid://dxnqou8ewvbb8" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_55.png" id="105_d4fob"]
+[ext_resource type="Texture2D" uid="uid://kelkrb4we3hf" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_57.png" id="106_gpqts"]
+[ext_resource type="Texture2D" uid="uid://bn620shens206" path="res://Assets/Animations/Enemies/49尸国斗剑士/move_normal_58.png" id="107_5ifr7"]
+[ext_resource type="AudioStream" uid="uid://b1qce1o4ia1m1" path="res://Assets/Sounds/FXs/Battles/aoe_hit.wav" id="108_n8h40"]
+[ext_resource type="Texture2D" uid="uid://cvb6lepmrnw6h" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_00.png" id="132_uhybe"]
+[ext_resource type="Texture2D" uid="uid://ckbiuubbxahv1" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_01.png" id="133_jul8h"]
+[ext_resource type="Texture2D" uid="uid://bt6bo7atthupj" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_02.png" id="134_cptfl"]
+[ext_resource type="Texture2D" uid="uid://c6d1niialpbk4" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_03.png" id="135_bo6vh"]
+[ext_resource type="Texture2D" uid="uid://bu2uphi7mdmh5" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_04.png" id="136_vam7g"]
+[ext_resource type="Texture2D" uid="uid://dur7n6fu0mr5y" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_05.png" id="137_4l3cm"]
+[ext_resource type="Texture2D" uid="uid://bwt24ueuaan5a" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_06.png" id="138_8ietb"]
+[ext_resource type="Texture2D" uid="uid://cspw2oj58j7cd" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_07.png" id="139_bulqa"]
+[ext_resource type="Texture2D" uid="uid://bm3dfc64w1hso" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_08.png" id="140_4dgxe"]
+[ext_resource type="Texture2D" uid="uid://rndnbbyvnxye" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_09.png" id="141_rr7s2"]
+[ext_resource type="Texture2D" uid="uid://06aqnyii32uy" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_10.png" id="142_qvo5x"]
+[ext_resource type="Texture2D" uid="uid://dbiolj84expj" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_11.png" id="143_q5lmn"]
+[ext_resource type="Texture2D" uid="uid://cvp03crlihrxq" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_12.png" id="144_c2kni"]
+[ext_resource type="Texture2D" uid="uid://bhs1c6174ypog" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_13.png" id="145_57nhs"]
+[ext_resource type="Texture2D" uid="uid://dfqu1jsibvcy" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_14.png" id="146_khc3j"]
+[ext_resource type="Texture2D" uid="uid://62wx0j0jaxsp" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_15.png" id="147_c43vf"]
+[ext_resource type="Texture2D" uid="uid://c8qdfg080tlpg" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_16.png" id="148_fwgag"]
+[ext_resource type="Texture2D" uid="uid://bby6i8botxdp1" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_17.png" id="149_5olyh"]
+[ext_resource type="Texture2D" uid="uid://dccqytwshruta" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_18.png" id="150_r2p2g"]
+[ext_resource type="Texture2D" uid="uid://cgut7j0gda33x" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_19.png" id="151_7itkd"]
+[ext_resource type="Texture2D" uid="uid://bxrem4md40h7q" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_20.png" id="152_5dlk4"]
+[ext_resource type="Texture2D" uid="uid://gsvr6lklee8i" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_21.png" id="153_dwv8u"]
+[ext_resource type="Texture2D" uid="uid://bsjg28x7amu7j" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_22.png" id="154_gwyav"]
+[ext_resource type="Texture2D" uid="uid://bya73fwgd3x6x" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_23.png" id="155_txe7y"]
+[ext_resource type="Texture2D" uid="uid://b4wevfbf2d0ie" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_24.png" id="156_1ihud"]
+[ext_resource type="Texture2D" uid="uid://bueo8kkgdxp1v" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_25.png" id="157_te3sl"]
+[ext_resource type="Texture2D" uid="uid://8tkocapyyat4" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_26.png" id="158_1txqu"]
+[ext_resource type="Texture2D" uid="uid://bn5bddklxbtbv" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_27.png" id="159_t4do8"]
+[ext_resource type="Texture2D" uid="uid://10ahj06wh5od" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_28.png" id="160_8khxs"]
+[ext_resource type="Texture2D" uid="uid://c33mo0vxrieaw" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_29.png" id="161_uxwfl"]
+[ext_resource type="Texture2D" uid="uid://dgm1ihe2jgft0" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_30.png" id="162_8mago"]
+[ext_resource type="Texture2D" uid="uid://g82mtjbicetc" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_31.png" id="163_0mst2"]
+[ext_resource type="Texture2D" uid="uid://iqgnu1bflr4n" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_32.png" id="164_u8bna"]
+[ext_resource type="Texture2D" uid="uid://baoiuajvk0yek" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_33.png" id="165_s06sl"]
+[ext_resource type="Texture2D" uid="uid://cwqcbnv1fum4p" path="res://Assets/Animations/Enemies/49尸国斗剑士/super_attack_34.png" id="166_j8dvm"]
+[ext_resource type="AudioStream" uid="uid://crlkuw7dwgl3j" path="res://Assets/Sounds/FXs/DefenceTowers/Defence.mp3" id="168_4lysr"]
+[ext_resource type="AudioStream" uid="uid://bake0o2gadmk8" path="res://Assets/Sounds/FXs/DefenceTowers/EpeeChurch/强力斩击.mp3" id="169_fw8a1"]
+
+[sub_resource type="Resource" id="Resource_lh3a3"]
+script = ExtResource("3_p110m")
+damage_low = 15
+damage_high = 23
+
+[sub_resource type="Resource" id="Resource_aie6y"]
+script = ExtResource("3_p110m")
+damage_low = 18
+damage_high = 28
+
+[sub_resource type="Resource" id="Resource_x0ows"]
+script = ExtResource("3_p110m")
+damage_low = 21
+damage_high = 33
+
+[sub_resource type="Resource" id="Resource_gq0gh"]
+script = ExtResource("3_6nny5")
+health = 450
+dodge_rate = 0.0
+near_damage_low = 30
+near_damage_high = 46
+near_attack_speed = 2.0
+near_hit_rate = 1.5
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.3
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 1.8
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1jokk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_sd77p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qfag1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_sr5ol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vu34v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_33ncp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_oibt1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_wlfr4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_s58jp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_hob4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_r6d3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_dcide")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_dluyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_82a01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_554a0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_chd2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_cwy13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_24vv8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_u5fo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_x6imw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ebf8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_3nw1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_gfrlx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_5kwd7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_fnk5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_y3mii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_w3atu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_0uf8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_dsc7j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_72bfc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_tuini")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_2eym2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_5odeg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_1wxum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_klljt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_euwld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_36wmk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_pg2vk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_fg2yn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_kgms4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_bix37")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("46_0ged2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_vgcr5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_58u8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_kilnq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_i12i6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_wwlgs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_0chum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_3fdct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_43oyv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_ibltm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_hkr3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_djgmn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_amkld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_4ql5o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_7mc8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_mlh2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_hkxrf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_3ecsv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_w00a7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_heed7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_5f7mk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_b0yf8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_eixmb")
+}],
+"loop": false,
+"name": &"defence",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("45_hsw6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_ahn8g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_625xy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_31lno")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_ub00m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_wvi0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_dkf1a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_shh5u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_ivrnj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_d84vh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_gwv1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_6hdg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_q7vdm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_tcsi2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_bxg0s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_c42lt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_cipb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_i25rt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_pyotf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_teist")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_hkffy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_a8bur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_ndqsv")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_sd77p")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("68_6vhom")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_jij11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_lrgs8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_6d7ni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_u7ruf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_2n8ie")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_0ptfu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_7m10a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_juk82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_521ql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_aq2rx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_f1csl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_dnf0g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_pns0c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_4v3dx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_wyxjd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_qtcu2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_v8ytr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_yjhya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_01rwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_2hj0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_qr8eg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_cjm6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_m6a76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_jvy2s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_qau2i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_qhqwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_ev3ss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_uuxju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_114if")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_26nrt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_r7vl0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_k8som")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_swfe1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_jx0r2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_ev1xr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_2tnx6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_d4fob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_gpqts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_5ifr7")
+}],
+"loop": true,
+"name": &"move",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("132_uhybe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_jul8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_cptfl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_bo6vh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_vam7g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_4l3cm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_8ietb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_bulqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_4dgxe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_rr7s2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_qvo5x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_q5lmn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_c2kni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_57nhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_khc3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_c43vf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_fwgag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_5olyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_r2p2g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_7itkd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_5dlk4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_dwv8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_gwyav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_txe7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_1ihud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_te3sl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("158_1txqu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_t4do8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_8khxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_uxwfl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_8mago")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_0mst2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_u8bna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_s06sl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("166_j8dvm")
+}],
+"loop": false,
+"name": &"super_attack",
+"speed": 30.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jb7yu"]
+size = Vector2(210, 100)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_307yl"]
+radius = 73.9444
+
+[node name="ZombieSoldierBig" instance=ExtResource("1_dkcch")]
+script = ExtResource("2_hcx0g")
+dizness_possible_list = Array[float]([0.1, 0.2, 0.3])
+aoe_damage_list = Array[ExtResource("3_p110m")]([SubResource("Resource_lh3a3"), SubResource("Resource_aie6y"), SubResource("Resource_x0ows")])
+super_attack_damage_list = Array[int]([150, 210])
+super_attack_heal_list = Array[int]([40, 70])
+immune_rate_list = Array[float]([0.5, 0.7, 0.9])
+return_damage_rate_list = Array[float]([0.1, 0.2, 0.3])
+defence_possible_list = Array[float]([0.2, 0.3, 0.4])
+soldier_name_list = Array[String](["燧岩燎", "峪烬炘", "烽赭烨", "炻燃昆", "岩妁煊", "烬垣朗", "燧野焜", "峪烽阳", "赭岩明", "燃炻光", "光禾柠"])
+ally_name = "尸国斗剑士"
+ally_level = 4
+ally_texture = ExtResource("3_axmdt")
+ally_type = 1
+start_data = SubResource("Resource_gq0gh")
+intercepting_range = 150
+heal_speed = 40
+rebirth_time = 14
+
+[node name="AllySprite" parent="UnitBody" index="0"]
+position = Vector2(60, -185)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_1jokk")
+animation = &"super_attack"
+autoplay = "idle"
+
+[node name="BodyCollision" parent="UnitBody" index="1"]
+position = Vector2(0, -40)
+shape = SubResource("RectangleShape2D_jb7yu")
+
+[node name="HurtBox" parent="UnitBody" index="2"]
+position = Vector2(0, -165)
+scale = Vector2(10.5192, 10.5192)
+
+[node name="SelectSprite" parent="UnitBody" index="3"]
+position = Vector2(-1.19209e-07, 0)
+scale = Vector2(6.9687, 6.9687)
+
+[node name="AllyButton" parent="UnitBody" index="4"]
+offset_left = -90.0
+offset_top = -305.0
+offset_right = 92.0
+
+[node name="HealthBar" parent="UnitBody" index="5"]
+offset_left = -130.0
+offset_top = -315.0
+offset_right = 170.0
+offset_bottom = -306.0
+scale = Vector2(0.882892, 1.88085)
+
+[node name="AoeAttackArea" type="Area2D" parent="UnitBody" index="8"]
+collision_layer = 0
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/AoeAttackArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_307yl")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="AoeHitAudio" type="AudioStreamPlayer" parent="." index="7"]
+stream = ExtResource("108_n8h40")
+volume_db = -4.0
+bus = &"Sound"
+
+[node name="DefenceAudio" type="AudioStreamPlayer" parent="." index="8"]
+stream = ExtResource("168_4lysr")
+volume_db = -4.0
+bus = &"Sound"
+
+[node name="SuperAttackAudio" type="AudioStreamPlayer" parent="." index="9"]
+stream = ExtResource("169_fw8a1")
+volume_db = -5.0
+bus = &"Sound"
+
+[node name="Skill2Timer" type="Timer" parent="." index="10"]
+wait_time = 10.0
+one_shot = true

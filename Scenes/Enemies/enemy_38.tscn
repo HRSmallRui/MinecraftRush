@@ -1,0 +1,190 @@
+[gd_scene load_steps=30 format=3 uid="uid://g8kevs3lebju"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_vakjy"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_38.gd" id="2_482d8"]
+[ext_resource type="AudioStream" uid="uid://ddeuqoefk5tj8" path="res://Assets/Sounds/FXs/Enemies/劫掠兽/劫掠兽咆哮1.wav" id="3_c5m2d"]
+[ext_resource type="Texture2D" uid="uid://d0vg4u1nic3da" path="res://Assets/Images/UI/InformationBar/EnemyChapter4/劫掠兽.png" id="3_rhm51"]
+[ext_resource type="AudioStream" uid="uid://c8o34uvt6l850" path="res://Assets/Sounds/FXs/Enemies/劫掠兽/劫掠兽咆哮2.wav" id="4_1up2j"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="4_qg6yc"]
+[ext_resource type="AudioStream" uid="uid://c2kiriyogw7ue" path="res://Assets/Sounds/FXs/Enemies/劫掠兽/劫掠兽死亡1.wav" id="5_6eb1a"]
+[ext_resource type="AudioStream" uid="uid://db5klmt0h81gm" path="res://Assets/Sounds/FXs/Enemies/劫掠兽/劫掠兽咆哮3.wav" id="5_extpe"]
+[ext_resource type="SpriteFrames" uid="uid://g7hx4kquiwy5" path="res://Assets/Animations/Enemies/38劫掠兽/SpriteFrames/walk_state_animation.res" id="5_qjdhu"]
+[ext_resource type="AudioStream" uid="uid://d1tt240wen32x" path="res://Assets/Sounds/FXs/Enemies/劫掠兽/劫掠兽死亡2.wav" id="6_c3udr"]
+[ext_resource type="AudioStream" uid="uid://dcr7we3spif3v" path="res://Assets/Sounds/FXs/Enemies/劫掠兽/劫掠兽咆哮4.wav" id="6_q4ux4"]
+[ext_resource type="AudioStream" uid="uid://mwxoxkb3l03d" path="res://Assets/Sounds/FXs/Enemies/劫掠兽/劫掠兽死亡3.wav" id="7_mnl8n"]
+[ext_resource type="AudioStream" uid="uid://2ecuhh2s1p8v" path="res://Assets/Sounds/FXs/Enemies/劫掠兽/劫掠兽攻击1.wav" id="7_reixs"]
+[ext_resource type="AudioStream" uid="uid://cotm7yq8y7x3h" path="res://Assets/Sounds/FXs/Enemies/劫掠兽/劫掠兽攻击2.wav" id="8_t0cgt"]
+[ext_resource type="AudioStream" uid="uid://d3t4akx754i41" path="res://Assets/Sounds/FXs/Enemies/劫掠兽/劫掠兽攻击3.wav" id="9_g1jxm"]
+[ext_resource type="PackedScene" uid="uid://dcjuved17hj6j" path="res://Scenes/Enemies/EnemyComponents/appear_audio_component.tscn" id="9_mip18"]
+[ext_resource type="AudioStream" uid="uid://doybc4o07rn78" path="res://Assets/Sounds/FXs/Enemies/劫掠兽/劫掠兽出现1.wav" id="10_y5tco"]
+[ext_resource type="AudioStream" uid="uid://l2ydkq0xjujc" path="res://Assets/Sounds/FXs/Enemies/劫掠兽/劫掠兽出现2.wav" id="11_kt6ex"]
+[ext_resource type="AudioStream" uid="uid://clifbf3raixqm" path="res://Assets/Sounds/FXs/Enemies/劫掠兽/劫掠兽出现3.wav" id="12_qpm5v"]
+[ext_resource type="AudioStream" uid="uid://d3xkn1bcam2wp" path="res://Assets/Sounds/FXs/Enemies/劫掠兽/劫掠兽出现4.wav" id="13_5ak63"]
+[ext_resource type="AudioStream" uid="uid://52rr1sy2qa2v" path="res://Assets/Sounds/FXs/Enemies/劫掠兽/劫掠兽出现5.wav" id="14_kqnxa"]
+[ext_resource type="AudioStream" uid="uid://j8bl3mudlswm" path="res://Assets/Sounds/FXs/Enemies/劫掠兽/劫掠兽行走1.wav" id="15_3pwiu"]
+[ext_resource type="AudioStream" uid="uid://mbbpl4ftphgd" path="res://Assets/Sounds/FXs/Enemies/劫掠兽/劫掠兽行走2.wav" id="16_saudn"]
+[ext_resource type="AudioStream" uid="uid://54kjtb4b8via" path="res://Assets/Sounds/FXs/Enemies/劫掠兽/劫掠兽行走3.wav" id="17_vyx5b"]
+[ext_resource type="AudioStream" uid="uid://ckoejvukfwuc4" path="res://Assets/Sounds/FXs/Enemies/劫掠兽/劫掠兽行走4.wav" id="18_psv2g"]
+[ext_resource type="AudioStream" uid="uid://butrxqk6uve06" path="res://Assets/Sounds/FXs/Enemies/劫掠兽/劫掠兽行走5.wav" id="19_bxo3p"]
+
+[sub_resource type="Resource" id="Resource_7onlf"]
+script = ExtResource("4_qg6yc")
+health = 2200
+dodge_rate = 0.0
+near_damage_low = 60
+near_damage_high = 120
+near_attack_speed = 2.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.0
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 0.4
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1yw5"]
+size = Vector2(310, 110)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7mxxu"]
+radius = 73.9444
+
+[node name="Enemy38" node_paths=PackedStringArray("move_audio_list") groups=["illager"] instance=ExtResource("1_vakjy")]
+script = ExtResource("2_482d8")
+roar_audio_list = Array[AudioStream]([ExtResource("3_c5m2d"), ExtResource("4_1up2j"), ExtResource("5_extpe"), ExtResource("6_q4ux4")])
+attack_audio_list = Array[AudioStream]([ExtResource("7_reixs"), ExtResource("8_t0cgt"), ExtResource("9_g1jxm")])
+move_audio_list = [NodePath("WalkAudios/WalkAudio1"), NodePath("WalkAudios/WalkAudio2"), NodePath("WalkAudios/WalkAudio3"), NodePath("WalkAudios/WalkAudio4"), NodePath("WalkAudios/WalkAudio5")]
+enemy_name = "劫掠兽"
+enemy_id = 38
+enemy_texture = ExtResource("3_rhm51")
+enemy_type = 2
+start_data = SubResource("Resource_7onlf")
+lives_taken = 4
+bounty = 180
+die_audio_stream_list = Array[AudioStream]([ExtResource("5_6eb1a"), ExtResource("6_c3udr"), ExtResource("7_mnl8n")])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(50, -115)
+sprite_frames = ExtResource("5_qjdhu")
+animation = &"attack"
+autoplay = "idle"
+frame = 10
+
+[node name="BodyCollision" parent="UnitBody" index="1"]
+position = Vector2(0, -40)
+shape = SubResource("RectangleShape2D_r1yw5")
+
+[node name="HurtBox" parent="UnitBody" index="2"]
+position = Vector2(0, -120)
+scale = Vector2(11.02, 11.02)
+
+[node name="SelectSprite" parent="UnitBody" index="3"]
+scale = Vector2(11.8045, 11.8045)
+
+[node name="EnemyButton" parent="UnitBody" index="4"]
+offset_left = -108.0
+offset_top = -210.0
+offset_right = 110.0
+
+[node name="HealthBar" parent="UnitBody" index="5"]
+offset_left = -160.0
+offset_top = -260.0
+offset_right = 140.0
+offset_bottom = -251.0
+scale = Vector2(1.08289, 1.88085)
+
+[node name="InterceptingMarker" parent="UnitBody" index="6"]
+position = Vector2(200, 0)
+
+[node name="AttackArea" type="Area2D" parent="UnitBody" index="8"]
+position = Vector2(150, 0)
+scale = Vector2(0.4, 0.4)
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/AttackArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_7mxxu")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="SkillConditionArea" type="Area2D" parent="UnitBody" index="9"]
+scale = Vector2(2, 2)
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/SkillConditionArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_7mxxu")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="RunHitArea" type="Area2D" parent="UnitBody" index="10"]
+scale = Vector2(0.8, 0.8)
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/RunHitArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_7mxxu")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="AppearAudioComponent" parent="." index="5" instance=ExtResource("9_mip18")]
+appear_audio_list = Array[AudioStream]([ExtResource("10_y5tco"), ExtResource("11_kt6ex"), ExtResource("12_qpm5v"), ExtResource("13_5ak63"), ExtResource("14_kqnxa")])
+
+[node name="WalkAudios" type="Node" parent="." index="6"]
+
+[node name="WalkAudio1" type="AudioStreamPlayer" parent="WalkAudios" index="0"]
+stream = ExtResource("15_3pwiu")
+volume_db = -10.0
+max_polyphony = 10
+bus = &"Sound"
+
+[node name="WalkAudio2" type="AudioStreamPlayer" parent="WalkAudios" index="1"]
+stream = ExtResource("16_saudn")
+volume_db = -10.0
+max_polyphony = 10
+bus = &"Sound"
+
+[node name="WalkAudio3" type="AudioStreamPlayer" parent="WalkAudios" index="2"]
+stream = ExtResource("17_vyx5b")
+volume_db = -10.0
+max_polyphony = 10
+bus = &"Sound"
+
+[node name="WalkAudio4" type="AudioStreamPlayer" parent="WalkAudios" index="3"]
+stream = ExtResource("18_psv2g")
+volume_db = -10.0
+max_polyphony = 10
+bus = &"Sound"
+
+[node name="WalkAudio5" type="AudioStreamPlayer" parent="WalkAudios" index="4"]
+stream = ExtResource("19_bxo3p")
+volume_db = -10.0
+max_polyphony = 10
+bus = &"Sound"
+
+[node name="AttackAudio" type="AudioStreamPlayer" parent="." index="7"]
+bus = &"Sound"
+
+[node name="RunTimer" type="Timer" parent="." index="8"]
+wait_time = 10.0
+one_shot = true
+
+[node name="RoarAudio" type="AudioStreamPlayer" parent="." index="9"]
+bus = &"Sound"
+
+[node name="RunDurationTimer" type="Timer" parent="." index="10"]
+wait_time = 3.0
+one_shot = true
+
+[node name="RunningPrepareTimer" type="Timer" parent="." index="11"]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[connection signal="area_entered" from="UnitBody/RunHitArea" to="." method="_on_run_hit_area_area_entered"]
+[connection signal="timeout" from="RunDurationTimer" to="." method="_on_run_duration_timer_timeout"]

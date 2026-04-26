@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://cib7agsqbo0aw"]
+
+[ext_resource type="Script" path="res://Scripts/Skills/potion_area.gd" id="1_5s4xp"]
+[ext_resource type="AudioStream" uid="uid://dv2qekrqjyyjt" path="res://Assets/Sounds/FXs/Skills/splash1.wav" id="2_jie5j"]
+[ext_resource type="AudioStream" uid="uid://28wyvuelh0ah" path="res://Assets/Sounds/FXs/Skills/splash2.wav" id="3_edyw1"]
+[ext_resource type="AudioStream" uid="uid://ex5wm8d4mv2r" path="res://Assets/Sounds/FXs/Skills/splash3.wav" id="4_o5ifs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mwtg4"]
+radius = 73.9444
+
+[node name="PotionArea" type="Area2D"]
+scale = Vector2(0.8, 0.8)
+collision_layer = 0
+collision_mask = 96
+script = ExtResource("1_5s4xp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 0.7)
+shape = SubResource("CircleShape2D_mwtg4")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="Splash1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_jie5j")
+bus = &"Sound"
+
+[node name="Splash2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_edyw1")
+bus = &"Sound"
+
+[node name="Splash3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_o5ifs")
+bus = &"Sound"

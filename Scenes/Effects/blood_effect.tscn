@@ -1,0 +1,81 @@
+[gd_scene load_steps=15 format=3 uid="uid://dkeksgvtmfa18"]
+
+[ext_resource type="Texture2D" uid="uid://bf26mndb3xwlw" path="res://Assets/Images/Effects/BloodBuff/0001.png" id="1_8yves"]
+[ext_resource type="Texture2D" uid="uid://511ukiv1ttbk" path="res://Assets/Images/Effects/BloodBuff/0002.png" id="2_ny4vx"]
+[ext_resource type="Texture2D" uid="uid://btj632r5nv5ho" path="res://Assets/Images/Effects/BloodBuff/0003.png" id="3_fs1ao"]
+[ext_resource type="Texture2D" uid="uid://dy3b33r2v1tmp" path="res://Assets/Images/Effects/BloodBuff/0004.png" id="4_bu2cb"]
+[ext_resource type="Texture2D" uid="uid://cj3ifyudjcjim" path="res://Assets/Images/Effects/BloodBuff/0005.png" id="5_w2sr5"]
+[ext_resource type="Texture2D" uid="uid://3ox8o77rci0q" path="res://Assets/Images/Effects/BloodBuff/0006.png" id="6_2mk7d"]
+[ext_resource type="Texture2D" uid="uid://c35m3emevjdj4" path="res://Assets/Images/Effects/BloodBuff/0007.png" id="7_3flgd"]
+[ext_resource type="Texture2D" uid="uid://dtu5ixhir3bun" path="res://Assets/Images/Effects/BloodBuff/0008.png" id="8_7vtc7"]
+[ext_resource type="Texture2D" uid="uid://kupx6y4ia8lw" path="res://Assets/Images/Effects/BloodBuff/0009.png" id="9_ex3fx"]
+[ext_resource type="Texture2D" uid="uid://chkbfnoksug0q" path="res://Assets/Images/Effects/BloodBuff/0010.png" id="10_enay5"]
+[ext_resource type="Texture2D" uid="uid://866qa1dgqjhk" path="res://Assets/Images/Effects/BloodBuff/0011.png" id="11_gkhtq"]
+[ext_resource type="Texture2D" uid="uid://1vsa2x5anv01" path="res://Assets/Images/Effects/BloodBuff/0012.png" id="12_lr3x4"]
+[ext_resource type="Script" path="res://Scripts/Effects/normal_effect.gd" id="13_xkoco"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cdt2e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8yves")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ny4vx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fs1ao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bu2cb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_w2sr5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2mk7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3flgd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7vtc7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ex3fx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_enay5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_gkhtq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_lr3x4")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 24.0
+}]
+
+[node name="BloodEffect" type="AnimatedSprite2D"]
+z_index = 1
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_cdt2e")
+autoplay = "default"
+script = ExtResource("13_xkoco")

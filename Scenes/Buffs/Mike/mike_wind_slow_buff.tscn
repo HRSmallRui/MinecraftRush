@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://di8ngpy70nphk"]
+
+[ext_resource type="PackedScene" uid="uid://bjfa3t67tpsbr" path="res://Scenes/Buffs/property_buff.tscn" id="1_2ixvo"]
+[ext_resource type="Script" path="res://Scripts/Buffs/property_buff_block.gd" id="2_72dws"]
+
+[sub_resource type="Resource" id="Resource_mchk5"]
+script = ExtResource("2_72dws")
+property_type = 9
+operation_type = 1
+operation_data = 0.4
+
+[node name="MikeWindSlowBuff" instance=ExtResource("1_2ixvo")]
+buff_blocks = Array[ExtResource("2_72dws")]([SubResource("Resource_mchk5")])
+buff_type = 1
+buff_tag = "MikeWindSlow"
+immune_groups = Array[String](["god", "boss"])

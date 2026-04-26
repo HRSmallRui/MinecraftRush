@@ -1,0 +1,213 @@
+[gd_scene load_steps=35 format=3 uid="uid://dhdnu8gyxuw6m"]
+
+[ext_resource type="PackedScene" uid="uid://dtyu2t5hq40nc" path="res://Scenes/DefenceTowers/ArcherTowers/archer_tower.tscn" id="1_gkbq5"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/ArcherTowers/red_stone_archer_tower.gd" id="2_fw01g"]
+[ext_resource type="Script" path="res://Scripts/Datas/TowerData.gd" id="2_pqfd6"]
+[ext_resource type="Texture2D" uid="uid://t6dk88dh1jil" path="res://Assets/Images/DefenceTowers/Archers/Towers/redstone_arrow.png" id="2_udxib"]
+[ext_resource type="PackedScene" uid="uid://dtkr2cjfagvqw" path="res://Scenes/Bullets/shell_lv3.tscn" id="3_73r40"]
+[ext_resource type="Texture2D" uid="uid://ctmvdw8ycgx8b" path="res://Assets/Images/UI/InformationBar/Towers/arrow-redstone.png" id="3_h4rkr"]
+[ext_resource type="PackedScene" uid="uid://cjpn07gcbekr1" path="res://Scenes/DefenceTowers/tower_skill_button.tscn" id="4_pu0eg"]
+[ext_resource type="Texture2D" uid="uid://bhm1vwnkgov17" path="res://Assets/Animations/Archers/RedStone/shoot_front0001.png" id="5_lfsta"]
+[ext_resource type="Texture2D" uid="uid://csmm2b2k30xdo" path="res://Assets/Images/DefenceTowers/Archers/UI/破甲箭头.png" id="5_q7jnq"]
+[ext_resource type="Texture2D" uid="uid://dk5cyfhvubgdm" path="res://Assets/Animations/Archers/RedStone/shoot_back0001.png" id="6_1wgit"]
+[ext_resource type="Texture2D" uid="uid://bghqwtjg7a8i6" path="res://Assets/Images/DefenceTowers/Archers/UI/破甲箭头select.png" id="6_p3470"]
+[ext_resource type="Texture2D" uid="uid://dktesag2ykh6n" path="res://Assets/Images/DefenceTowers/Archers/UI/破甲箭头disabled.png" id="7_vyyib"]
+[ext_resource type="Texture2D" uid="uid://ch8f3vruuwn0w" path="res://Assets/Animations/Archers/RedStone/shoot_back0002.png" id="7_y03xv"]
+[ext_resource type="Texture2D" uid="uid://ureir3urr3cq" path="res://Assets/Images/DefenceTowers/Archers/UI/脉冲轰炸.png" id="8_3vxpc"]
+[ext_resource type="Texture2D" uid="uid://dhgoa1a0kqjwf" path="res://Assets/Animations/Archers/RedStone/shoot_back0003.png" id="8_5dx8n"]
+[ext_resource type="Texture2D" uid="uid://7qj50581rapx" path="res://Assets/Images/DefenceTowers/Archers/UI/脉冲轰炸select.png" id="9_iyyq3"]
+[ext_resource type="Texture2D" uid="uid://dik7dobpdnwox" path="res://Assets/Animations/Archers/RedStone/shoot_back0004.png" id="9_np1ft"]
+[ext_resource type="Texture2D" uid="uid://cp44xjdv1xsy7" path="res://Assets/Animations/Archers/RedStone/shoot_back0005.png" id="10_3ctd7"]
+[ext_resource type="Texture2D" uid="uid://cf8lgxa5gsrqh" path="res://Assets/Images/DefenceTowers/Archers/UI/脉冲轰炸disabled.png" id="10_qjb5y"]
+[ext_resource type="Texture2D" uid="uid://lmai58yk645l" path="res://Assets/Animations/Archers/RedStone/shoot_back0006.png" id="11_wir0j"]
+[ext_resource type="Texture2D" uid="uid://dlsnfmc5plipe" path="res://Assets/Animations/Archers/RedStone/shoot_front0002.png" id="12_518i8"]
+[ext_resource type="Texture2D" uid="uid://b23k86m3h3lcr" path="res://Assets/Animations/Archers/RedStone/shoot_front0003.png" id="13_s2yw1"]
+[ext_resource type="Texture2D" uid="uid://c1wt2uom0taeb" path="res://Assets/Animations/Archers/RedStone/shoot_front0004.png" id="14_1ck1g"]
+[ext_resource type="Texture2D" uid="uid://lymkg67v7n6o" path="res://Assets/Animations/Archers/RedStone/shoot_front0005.png" id="15_aj2vb"]
+[ext_resource type="Texture2D" uid="uid://caf8a3gm2vwhk" path="res://Assets/Animations/Archers/RedStone/shoot_front0006.png" id="16_yyxvm"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/ArcherTowers/red_stone_shooter.gd" id="24_jntd0"]
+[ext_resource type="PackedScene" uid="uid://cle5kt8453oka" path="res://Scenes/Bullets/redstone_straight_arrow.tscn" id="25_bij0p"]
+
+[sub_resource type="Resource" id="Resource_q7jrg"]
+script = ExtResource("2_pqfd6")
+damage_low = 8
+damage_high = 12
+attack_speed = 0.25
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10r5y"]
+atlas = ExtResource("5_q7jnq")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmaed"]
+atlas = ExtResource("7_vyyib")
+region = Rect2(1, 1, 94, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5wsp"]
+atlas = ExtResource("8_3vxpc")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdh1j"]
+atlas = ExtResource("10_qjb5y")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n3ykp"]
+radius = 73.9444
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_km327"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_lfsta")
+}],
+"loop": true,
+"name": &"idle_front",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_1wgit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_y03xv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5dx8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_np1ft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_3ctd7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_wir0j")
+}],
+"loop": false,
+"name": &"shoot_back",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_lfsta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_518i8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_s2yw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_1ck1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_aj2vb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_yyxvm")
+}],
+"loop": false,
+"name": &"shoot_front",
+"speed": 30.0
+}]
+
+[node name="RedStoneArcherTower" node_paths=PackedStringArray("shooter_list", "linked_areas") instance=ExtResource("1_gkbq5")]
+script = ExtResource("2_fw01g")
+shell_scene = ExtResource("3_73r40")
+start_data = SubResource("Resource_q7jrg")
+shooter_list = [NodePath("TowerSprite/RedStoneShooter")]
+tower_name = "脉冲发射台"
+tower_texture = ExtResource("3_h4rkr")
+tower_id = 6
+tower_level = 4
+start_tower_range = 360
+linked_areas = [NodePath("TowerArea"), NodePath("Skill2Area")]
+
+[node name="TowerButton" parent="." index="2"]
+offset_left = -39.0
+offset_top = -111.0
+offset_right = 39.0
+offset_bottom = 18.0
+
+[node name="Circle" parent="TowerUI" index="4"]
+position = Vector2(0, -49)
+
+[node name="SellButton" parent="TowerUI/Circle" index="0"]
+visible = false
+
+[node name="TowerSkillButton" parent="TowerUI/Circle" index="1" node_paths=PackedStringArray("linked_tower") instance=ExtResource("4_pu0eg")]
+offset_left = -140.001
+offset_top = -139.999
+offset_right = -55.001
+offset_bottom = -54.9993
+texture_normal = SubResource("AtlasTexture_10r5y")
+texture_pressed = SubResource("AtlasTexture_10r5y")
+texture_hover = ExtResource("6_p3470")
+texture_disabled = SubResource("AtlasTexture_rmaed")
+linked_tower = NodePath("../../..")
+skill_name = "破甲箭头"
+skill_prices = Array[int]([180, 180])
+skill_intro = PackedStringArray("每次攻击有较低概率破坏敌人4点护甲。", "每次攻击有较低概率破坏敌人8点护甲。")
+skill_words = "这箭头可是特制的"
+
+[node name="TowerSkillButton2" parent="TowerUI/Circle" index="2" node_paths=PackedStringArray("linked_tower") instance=ExtResource("4_pu0eg")]
+offset_left = 53.7494
+offset_top = -140.0
+offset_right = 138.749
+offset_bottom = -55.0002
+texture_normal = SubResource("AtlasTexture_f5wsp")
+texture_pressed = SubResource("AtlasTexture_f5wsp")
+texture_hover = ExtResource("9_iyyq3")
+texture_disabled = SubResource("AtlasTexture_mdh1j")
+linked_tower = NodePath("../../..")
+skill_name = "脉冲轰炸"
+skill_id = 1
+skill_prices = Array[int]([300, 200, 200])
+skill_intro = PackedStringArray("沿路径扔出5颗炸弹，每颗炸弹对一定范围内的地面敌人造成100-200点范围伤害。", "沿路径扔出5颗炸弹，每颗炸弹对一定范围内的地面敌人造成150-300点范围伤害。", "沿路径扔出5颗炸弹，每颗炸弹对一定范围内的地面敌人造成200-400点范围伤害。")
+skill_words = "你老冯上天咯！"
+
+[node name="Skill2Area" type="Area2D" parent="." index="7"]
+z_index = 100
+scale = Vector2(3.6, 3.6)
+collision_layer = 0
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skill2Area" index="0"]
+scale = Vector2(1, 0.7)
+shape = SubResource("CircleShape2D_n3ykp")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="TowerSprite" parent="." index="8"]
+position = Vector2(0, 9)
+texture = ExtResource("2_udxib")
+offset = Vector2(1, -84)
+
+[node name="RedStoneShooter" type="AnimatedSprite2D" parent="TowerSprite" index="0" node_paths=PackedStringArray("tower")]
+position = Vector2(0, -115)
+scale = Vector2(0.418298, 0.418298)
+sprite_frames = SubResource("SpriteFrames_km327")
+animation = &"shoot_front"
+autoplay = "idle_front"
+flip_h = true
+script = ExtResource("24_jntd0")
+tower = NodePath("../..")
+summon_frame = 4
+arrow_scene = ExtResource("25_bij0p")
+
+[node name="FrontNoFlip" type="Marker2D" parent="TowerSprite/RedStoneShooter" index="0"]
+position = Vector2(9.56255, 9.56256)
+
+[node name="FrontFlip" type="Marker2D" parent="TowerSprite/RedStoneShooter" index="1"]
+position = Vector2(-9.56255, 9.56256)
+
+[node name="BackFlip" type="Marker2D" parent="TowerSprite/RedStoneShooter" index="2"]
+position = Vector2(9.56255, -2.39063)
+
+[node name="BackNoFlip" type="Marker2D" parent="TowerSprite/RedStoneShooter" index="3"]
+position = Vector2(-9.56255, -2.39063)
+
+[node name="ShellMarker" type="Marker2D" parent="TowerSprite" index="1"]
+position = Vector2(0, -110)
+
+[node name="Skill2Timer" type="Timer" parent="." index="12"]
+wait_time = 18.0
+one_shot = true

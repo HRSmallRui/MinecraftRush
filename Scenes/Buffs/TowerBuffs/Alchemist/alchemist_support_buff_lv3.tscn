@@ -1,0 +1,48 @@
+[gd_scene load_steps=10 format=3 uid="uid://6dimxilkrk5x"]
+
+[ext_resource type="PackedScene" uid="uid://bjfa3t67tpsbr" path="res://Scenes/Buffs/property_buff.tscn" id="1_7ad7d"]
+[ext_resource type="Script" path="res://Scripts/Buffs/alchemist_support_buff.gd" id="2_tr173"]
+[ext_resource type="Script" path="res://Scripts/Buffs/property_buff_block.gd" id="3_1rg01"]
+[ext_resource type="Script" path="res://Scripts/Classes/potion_particle_leader.gd" id="4_60ckf"]
+
+[sub_resource type="Resource" id="Resource_7almo"]
+script = ExtResource("3_1rg01")
+property_type = 1
+operation_type = 1
+operation_data = 1.25
+
+[sub_resource type="Resource" id="Resource_r1f6e"]
+script = ExtResource("3_1rg01")
+property_type = 2
+operation_type = 1
+operation_data = 1.25
+
+[sub_resource type="Resource" id="Resource_q8uv7"]
+script = ExtResource("3_1rg01")
+property_type = 9
+operation_type = 1
+operation_data = 1.6
+
+[sub_resource type="Resource" id="Resource_01vjy"]
+script = ExtResource("3_1rg01")
+property_type = 3
+operation_type = 1
+operation_data = 0.8
+
+[sub_resource type="Resource" id="Resource_fwugg"]
+script = ExtResource("3_1rg01")
+property_type = 4
+operation_type = 1
+operation_data = 0.8
+
+[node name="AlchemistSupportBuffLV1" instance=ExtResource("1_7ad7d")]
+script = ExtResource("2_tr173")
+buff_blocks = Array[ExtResource("3_1rg01")]([SubResource("Resource_7almo"), SubResource("Resource_r1f6e"), SubResource("Resource_q8uv7"), SubResource("Resource_01vjy"), SubResource("Resource_fwugg")])
+duration = 1.0
+buff_level = 3
+buff_tag = "AlchemistSupportBuff"
+
+[node name="PotionParticleLeader" type="Node2D" parent="." index="0" node_paths=PackedStringArray("buff_vehicle")]
+script = ExtResource("4_60ckf")
+potion_color = Color(0.98275, 6.08854e-06, 1.54018e-06, 1)
+buff_vehicle = NodePath("..")

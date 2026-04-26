@@ -1,0 +1,781 @@
+[gd_scene load_steps=23 format=3 uid="uid://cxx03a6cdmthp"]
+
+[ext_resource type="Script" path="res://Scripts/Stages/information_bar.gd" id="1_8g1cu"]
+[ext_resource type="Texture2D" uid="uid://cqx34wicbeheb" path="res://Assets/Images/UI/InformationBar/arrow-id-1.png" id="2_d50ro"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="3_jjxfd"]
+[ext_resource type="Texture2D" uid="uid://bhe2i0ciou46g" path="res://Assets/Images/UI/DataUIs/timer.res" id="5_80eae"]
+[ext_resource type="Texture2D" uid="uid://q8p0gwed57be" path="res://Assets/Images/UI/DataUIs/range.res" id="6_xroi5"]
+[ext_resource type="Texture2D" uid="uid://cmcwqpp82dvp0" path="res://Assets/Images/UI/DataUIs/health.res" id="7_0dmby"]
+[ext_resource type="Texture2D" uid="uid://0ei3o4fr7bgx" path="res://Assets/Images/UI/DataUIs/damage_magic.res" id="7_syyu2"]
+[ext_resource type="Texture2D" uid="uid://c388b88iloc1r" path="res://Assets/Images/UI/DataUIs/damage_physics_hero.res" id="8_07s6f"]
+[ext_resource type="Texture2D" uid="uid://6ufqcro4277b" path="res://Assets/Images/UI/DataUIs/damage_bombard.res" id="8_dsbl4"]
+[ext_resource type="Texture2D" uid="uid://c8vp5eiamfg0f" path="res://Assets/Images/UI/DataUIs/armor.res" id="9_at5ah"]
+[ext_resource type="Texture2D" uid="uid://dpj3fnem0wc6f" path="res://Assets/Images/UI/DataUIs/rebirth.res" id="10_i5cjg"]
+[ext_resource type="Texture2D" uid="uid://clij1qykbt2b4" path="res://Assets/Images/UI/InformationBar/血条.png" id="13_8q2ps"]
+[ext_resource type="Texture2D" uid="uid://kelw0hee61lg" path="res://Assets/Images/UI/DataUIs/magic_defence.res" id="14_w6hqr"]
+[ext_resource type="Texture2D" uid="uid://dw1icid5xvbj3" path="res://Assets/Images/UI/DataUIs/lives_taken.res" id="15_foqs8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0b4wp"]
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tu5n3"]
+bg_color = Color(0, 0, 0, 0.568627)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ei81r"]
+atlas = ExtResource("13_8q2ps")
+region = Rect2(24, 168, 208, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_os12f"]
+atlas = ExtResource("13_8q2ps")
+region = Rect2(24, 95, 208, 28)
+
+[sub_resource type="Animation" id="Animation_fgr10"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-287, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_nly28"]
+resource_name = "hide"
+length = 0.3
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-287, -0.15, 0, 0.15, 0, -287, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-133, -0.15, 0, 0.15, 0, 0, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+
+[sub_resource type="Animation" id="Animation_wog00"]
+resource_name = "show"
+length = 0.3
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-287, -0.15, 0, 0.15, 0, -287, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0, -133, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6in7r"]
+_data = {
+"RESET": SubResource("Animation_fgr10"),
+"hide": SubResource("Animation_nly28"),
+"show": SubResource("Animation_wog00")
+}
+
+[node name="InformationBar" type="Control"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+script = ExtResource("1_8g1cu")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(0, 108)
+layout_mode = 0
+offset_left = -287.0
+offset_right = 443.0
+offset_bottom = 108.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0b4wp")
+
+[node name="PanelContainer" type="PanelContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = -37.0
+offset_right = 144.0
+offset_bottom = 91.0
+grow_vertical = 2
+scale = Vector2(0.562265, 0.562265)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tu5n3")
+
+[node name="HeadTexture" type="TextureRect" parent="Panel/PanelContainer"]
+layout_mode = 2
+texture = ExtResource("2_d50ro")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 15.0
+offset_right = 677.0
+offset_bottom = 125.0
+scale = Vector2(0.789356, 0.789356)
+mouse_filter = 2
+theme_override_constants/separation = 25
+
+[node name="NameLabel" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_jjxfd")
+theme_override_font_sizes/font_size = 32
+text = "  射手高台"
+
+[node name="Slots" type="Control" parent="Panel/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="ArcherSlot" type="HBoxContainer" parent="Panel/VBoxContainer/Slots"]
+layout_mode = 2
+offset_left = 3.80057
+offset_top = -6.2584
+offset_right = 635.801
+offset_bottom = 41.7416
+mouse_filter = 2
+theme_override_constants/separation = 260
+
+[node name="Damage" type="TextureRect" parent="Panel/VBoxContainer/Slots/ArcherSlot"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("8_07s6f")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Slots/ArcherSlot/Damage"]
+layout_mode = 0
+offset_left = 49.4074
+offset_top = 15.2782
+offset_right = 181.407
+offset_bottom = 63.2782
+scale = Vector2(0.423322, 0.423322)
+theme_override_fonts/font = ExtResource("3_jjxfd")
+theme_override_font_sizes/font_size = 48
+text = "4 - 6"
+vertical_alignment = 1
+
+[node name="CD" type="TextureRect" parent="Panel/VBoxContainer/Slots/ArcherSlot"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("5_80eae")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Slots/ArcherSlot/CD"]
+layout_mode = 0
+offset_left = 42.9048
+offset_top = 10.2108
+offset_right = 174.905
+offset_bottom = 74.2108
+scale = Vector2(0.423322, 0.423322)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_jjxfd")
+theme_override_font_sizes/font_size = 64
+text = "中"
+vertical_alignment = 1
+
+[node name="Range" type="TextureRect" parent="Panel/VBoxContainer/Slots/ArcherSlot"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("6_xroi5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Slots/ArcherSlot/Range"]
+layout_mode = 0
+offset_left = 42.905
+offset_top = 10.2108
+offset_right = 174.905
+offset_bottom = 74.2108
+scale = Vector2(0.423322, 0.423322)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_jjxfd")
+theme_override_font_sizes/font_size = 64
+text = "中"
+vertical_alignment = 1
+
+[node name="BarrackSlot" type="HBoxContainer" parent="Panel/VBoxContainer/Slots"]
+visible = false
+layout_mode = 2
+offset_left = 3.80057
+offset_top = -6.2584
+offset_right = 635.801
+offset_bottom = 41.7416
+mouse_filter = 2
+theme_override_constants/separation = 170
+
+[node name="Health" type="TextureRect" parent="Panel/VBoxContainer/Slots/BarrackSlot"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("7_0dmby")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Slots/BarrackSlot/Health"]
+layout_mode = 0
+offset_left = 59.5422
+offset_top = 15.2782
+offset_right = 191.542
+offset_bottom = 63.2782
+scale = Vector2(0.423322, 0.423322)
+theme_override_fonts/font = ExtResource("3_jjxfd")
+theme_override_font_sizes/font_size = 48
+text = "4 - 6"
+vertical_alignment = 1
+
+[node name="Damage" type="TextureRect" parent="Panel/VBoxContainer/Slots/BarrackSlot"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("8_07s6f")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Slots/BarrackSlot/Damage"]
+layout_mode = 0
+offset_left = 42.9048
+offset_top = 10.2108
+offset_right = 174.905
+offset_bottom = 74.2108
+scale = Vector2(0.423322, 0.423322)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_jjxfd")
+theme_override_font_sizes/font_size = 48
+text = "中"
+vertical_alignment = 1
+
+[node name="Armor" type="TextureRect" parent="Panel/VBoxContainer/Slots/BarrackSlot"]
+custom_minimum_size = Vector2(36, 32)
+layout_mode = 2
+texture = ExtResource("9_at5ah")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Slots/BarrackSlot/Armor"]
+layout_mode = 0
+offset_left = 46.2028
+offset_top = 10.1349
+offset_right = 178.203
+offset_bottom = 74.1349
+scale = Vector2(0.423322, 0.423322)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_jjxfd")
+theme_override_font_sizes/font_size = 48
+text = "中"
+vertical_alignment = 1
+
+[node name="Rebirth" type="TextureRect" parent="Panel/VBoxContainer/Slots/BarrackSlot"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("10_i5cjg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Slots/BarrackSlot/Rebirth"]
+layout_mode = 0
+offset_left = 44.1719
+offset_top = 14.0114
+offset_right = 188.172
+offset_bottom = 78.0114
+scale = Vector2(0.423322, 0.423322)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_jjxfd")
+theme_override_font_sizes/font_size = 48
+text = "10s"
+vertical_alignment = 1
+
+[node name="MagicSlot" type="HBoxContainer" parent="Panel/VBoxContainer/Slots"]
+visible = false
+layout_mode = 2
+offset_left = 3.80057
+offset_top = -6.2584
+offset_right = 635.801
+offset_bottom = 41.7416
+mouse_filter = 2
+theme_override_constants/separation = 260
+
+[node name="Damage" type="TextureRect" parent="Panel/VBoxContainer/Slots/MagicSlot"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("7_syyu2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Slots/MagicSlot/Damage"]
+layout_mode = 0
+offset_left = 58.2754
+offset_top = 15.2782
+offset_right = 190.275
+offset_bottom = 63.2782
+scale = Vector2(0.423322, 0.423322)
+theme_override_fonts/font = ExtResource("3_jjxfd")
+theme_override_font_sizes/font_size = 48
+text = "4 - 6"
+vertical_alignment = 1
+
+[node name="CD" type="TextureRect" parent="Panel/VBoxContainer/Slots/MagicSlot"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("5_80eae")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Slots/MagicSlot/CD"]
+layout_mode = 0
+offset_left = 42.9048
+offset_top = 10.2108
+offset_right = 174.905
+offset_bottom = 74.2108
+scale = Vector2(0.423322, 0.423322)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_jjxfd")
+theme_override_font_sizes/font_size = 64
+text = "中"
+vertical_alignment = 1
+
+[node name="Range" type="TextureRect" parent="Panel/VBoxContainer/Slots/MagicSlot"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("6_xroi5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Slots/MagicSlot/Range"]
+layout_mode = 0
+offset_left = 42.905
+offset_top = 10.2108
+offset_right = 174.905
+offset_bottom = 74.2108
+scale = Vector2(0.423322, 0.423322)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_jjxfd")
+theme_override_font_sizes/font_size = 64
+text = "中"
+vertical_alignment = 1
+
+[node name="BombardSlot" type="HBoxContainer" parent="Panel/VBoxContainer/Slots"]
+visible = false
+layout_mode = 2
+offset_left = 3.80054
+offset_top = -6.2583
+offset_right = 635.801
+offset_bottom = 41.7417
+mouse_filter = 2
+theme_override_constants/separation = 260
+
+[node name="Damage" type="TextureRect" parent="Panel/VBoxContainer/Slots/BombardSlot"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("8_dsbl4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Slots/BombardSlot/Damage"]
+layout_mode = 0
+offset_left = 57.0084
+offset_top = 15.2782
+offset_right = 189.008
+offset_bottom = 63.2782
+scale = Vector2(0.423322, 0.423322)
+theme_override_fonts/font = ExtResource("3_jjxfd")
+theme_override_font_sizes/font_size = 48
+text = "4 - 6"
+vertical_alignment = 1
+
+[node name="CD" type="TextureRect" parent="Panel/VBoxContainer/Slots/BombardSlot"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("5_80eae")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Slots/BombardSlot/CD"]
+layout_mode = 0
+offset_left = 42.9048
+offset_top = 10.2108
+offset_right = 174.905
+offset_bottom = 74.2108
+scale = Vector2(0.423322, 0.423322)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_jjxfd")
+theme_override_font_sizes/font_size = 64
+text = "中"
+vertical_alignment = 1
+
+[node name="Range" type="TextureRect" parent="Panel/VBoxContainer/Slots/BombardSlot"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("6_xroi5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Slots/BombardSlot/Range"]
+layout_mode = 0
+offset_left = 42.905
+offset_top = 10.2108
+offset_right = 174.905
+offset_bottom = 74.2108
+scale = Vector2(0.423322, 0.423322)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_jjxfd")
+theme_override_font_sizes/font_size = 64
+text = "中"
+vertical_alignment = 1
+
+[node name="AllySlot" type="HBoxContainer" parent="Panel/VBoxContainer/Slots"]
+visible = false
+layout_mode = 2
+offset_left = 3.8006
+offset_top = -6.2583
+offset_right = 661.801
+offset_bottom = 41.7417
+mouse_filter = 2
+theme_override_constants/separation = 140
+
+[node name="Health" type="Control" parent="Panel/VBoxContainer/Slots/AllySlot"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="HealthBar" type="TextureProgressBar" parent="Panel/VBoxContainer/Slots/AllySlot/Health"]
+layout_mode = 0
+offset_left = 16.4691
+offset_top = 7.60113
+offset_right = 225.469
+offset_bottom = 35.6011
+scale = Vector2(1.15594, 1.15594)
+mouse_filter = 2
+max_value = 1.0
+step = 0.0
+value = 0.71
+texture_under = SubResource("AtlasTexture_ei81r")
+texture_progress = SubResource("AtlasTexture_os12f")
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Slots/AllySlot/Health"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 362.0
+offset_bottom = 57.0
+scale = Vector2(0.694128, 0.694128)
+theme_override_fonts/font = ExtResource("3_jjxfd")
+theme_override_font_sizes/font_size = 32
+text = "10000 / 10000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/VBoxContainer/Slots/AllySlot"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Damage" type="TextureRect" parent="Panel/VBoxContainer/Slots/AllySlot"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("8_07s6f")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Slots/AllySlot/Damage"]
+layout_mode = 0
+offset_left = 42.9048
+offset_top = 10.2108
+offset_right = 174.905
+offset_bottom = 74.2108
+scale = Vector2(0.423322, 0.423322)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_jjxfd")
+theme_override_font_sizes/font_size = 48
+text = "中"
+vertical_alignment = 1
+
+[node name="Defence" type="VBoxContainer" parent="Panel/VBoxContainer/Slots/AllySlot"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = -115
+
+[node name="MagicDefence" type="TextureRect" parent="Panel/VBoxContainer/Slots/AllySlot/Defence"]
+custom_minimum_size = Vector2(36, 56)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("14_w6hqr")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Slots/AllySlot/Defence/MagicDefence"]
+layout_mode = 0
+offset_left = 46.2028
+offset_top = 10.1349
+offset_right = 178.203
+offset_bottom = 74.1349
+scale = Vector2(0.423322, 0.423322)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_jjxfd")
+theme_override_font_sizes/font_size = 48
+text = "中"
+vertical_alignment = 1
+
+[node name="Armor" type="TextureRect" parent="Panel/VBoxContainer/Slots/AllySlot/Defence"]
+custom_minimum_size = Vector2(36, 56)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("9_at5ah")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Slots/AllySlot/Defence/Armor"]
+layout_mode = 0
+offset_left = 46.2028
+offset_top = 10.1349
+offset_right = 178.203
+offset_bottom = 74.1349
+scale = Vector2(0.423322, 0.423322)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_jjxfd")
+theme_override_font_sizes/font_size = 48
+text = "中"
+vertical_alignment = 1
+
+[node name="Rebirth" type="TextureRect" parent="Panel/VBoxContainer/Slots/AllySlot"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("10_i5cjg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Slots/AllySlot/Rebirth"]
+layout_mode = 0
+offset_left = 44.1719
+offset_top = 14.0114
+offset_right = 188.172
+offset_bottom = 78.0114
+scale = Vector2(0.423322, 0.423322)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_jjxfd")
+theme_override_font_sizes/font_size = 48
+text = "10s"
+vertical_alignment = 1
+
+[node name="EnemySlot" type="HBoxContainer" parent="Panel/VBoxContainer/Slots"]
+visible = false
+layout_mode = 2
+offset_left = 3.8006
+offset_top = -6.2583
+offset_right = 661.801
+offset_bottom = 41.7417
+mouse_filter = 2
+theme_override_constants/separation = 140
+
+[node name="Health" type="Control" parent="Panel/VBoxContainer/Slots/EnemySlot"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="HealthBar" type="TextureProgressBar" parent="Panel/VBoxContainer/Slots/EnemySlot/Health"]
+layout_mode = 0
+offset_left = 16.4691
+offset_top = 7.60113
+offset_right = 225.469
+offset_bottom = 35.6011
+scale = Vector2(1.15594, 1.15594)
+mouse_filter = 2
+max_value = 1.0
+step = 0.0
+value = 0.71
+texture_under = SubResource("AtlasTexture_ei81r")
+texture_progress = SubResource("AtlasTexture_os12f")
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Slots/EnemySlot/Health"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 362.0
+offset_bottom = 57.0
+scale = Vector2(0.694128, 0.694128)
+theme_override_fonts/font = ExtResource("3_jjxfd")
+theme_override_font_sizes/font_size = 32
+text = "10000 / 10000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/VBoxContainer/Slots/EnemySlot"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Damage" type="TextureRect" parent="Panel/VBoxContainer/Slots/EnemySlot"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("8_07s6f")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Slots/EnemySlot/Damage"]
+layout_mode = 0
+offset_left = 44.315
+offset_top = 12.6012
+offset_right = 176.315
+offset_bottom = 76.6012
+scale = Vector2(0.423322, 0.423322)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("3_jjxfd")
+theme_override_font_sizes/font_size = 48
+text = "中"
+vertical_alignment = 1
+
+[node name="Defence" type="VBoxContainer" parent="Panel/VBoxContainer/Slots/EnemySlot"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = -115
+
+[node name="MagicDefence" type="TextureRect" parent="Panel/VBoxContainer/Slots/EnemySlot/Defence"]
+custom_minimum_size = Vector2(36, 56)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("14_w6hqr")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Slots/EnemySlot/Defence/MagicDefence"]
+layout_mode = 0
+offset_left = 46.2028
+offset_top = 10.1349
+offset_right = 178.203
+offset_bottom = 74.1349
+scale = Vector2(0.423322, 0.423322)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_jjxfd")
+theme_override_font_sizes/font_size = 48
+text = "中"
+vertical_alignment = 1
+
+[node name="Armor" type="TextureRect" parent="Panel/VBoxContainer/Slots/EnemySlot/Defence"]
+custom_minimum_size = Vector2(36, 56)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("9_at5ah")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Slots/EnemySlot/Defence/Armor"]
+layout_mode = 0
+offset_left = 46.2028
+offset_top = 10.1349
+offset_right = 178.203
+offset_bottom = 74.1349
+scale = Vector2(0.423322, 0.423322)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_jjxfd")
+theme_override_font_sizes/font_size = 48
+text = "中"
+vertical_alignment = 1
+
+[node name="LivesTaken" type="TextureRect" parent="Panel/VBoxContainer/Slots/EnemySlot"]
+custom_minimum_size = Vector2(36, 54)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("15_foqs8")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Slots/EnemySlot/LivesTaken"]
+layout_mode = 0
+offset_left = 49.7677
+offset_top = 15.1349
+offset_right = 193.768
+offset_bottom = 79.1349
+scale = Vector2(0.423322, 0.423322)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_jjxfd")
+theme_override_font_sizes/font_size = 48
+text = "10s"
+vertical_alignment = 1
+
+[node name="IntroLabel" type="Label" parent="Panel/VBoxContainer/Slots"]
+visible = false
+modulate = Color(1, 0.588235, 0, 1)
+layout_mode = 0
+offset_left = 18.0
+offset_top = -1.25842
+offset_right = 836.0
+offset_bottom = 69.7416
+scale = Vector2(0.623516, 0.623516)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_jjxfd")
+theme_override_font_sizes/font_size = 48
+text = "在此建造防御塔"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6in7r")
+}

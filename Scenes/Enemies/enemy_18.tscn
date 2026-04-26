@@ -1,0 +1,689 @@
+[gd_scene load_steps=114 format=3 uid="uid://dcjvqgkc5u8ik"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_np6ke"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_18.gd" id="2_4ddhu"]
+[ext_resource type="Texture2D" uid="uid://d0ynougpqcoe" path="res://Assets/Images/UI/InformationBar/腐朽.png" id="3_rnffh"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="4_422dl"]
+[ext_resource type="AudioStream" uid="uid://d2k6q4yv5upde" path="res://Assets/Sounds/FXs/Enemies/扭曲末影人/死亡.wav" id="5_xkku0"]
+[ext_resource type="PackedScene" uid="uid://dcjuved17hj6j" path="res://Scenes/Enemies/EnemyComponents/appear_audio_component.tscn" id="6_403me"]
+[ext_resource type="Texture2D" uid="uid://b4chuxvgyqmwq" path="res://Assets/Animations/Enemies/18腐朽/attack_00.png" id="6_y8uj3"]
+[ext_resource type="Texture2D" uid="uid://dqqmxx4dnwsyo" path="res://Assets/Animations/Enemies/18腐朽/attack_01.png" id="7_5fmil"]
+[ext_resource type="AudioStream" uid="uid://dx2qtmb8re5k4" path="res://Assets/Sounds/FXs/Enemies/野区丧尸/入场1.wav" id="7_fimd4"]
+[ext_resource type="Texture2D" uid="uid://c36isbhoy26k1" path="res://Assets/Animations/Enemies/18腐朽/attack_02.png" id="8_0n0e1"]
+[ext_resource type="AudioStream" uid="uid://1ihcphm08y0k" path="res://Assets/Sounds/FXs/Enemies/野区丧尸/入场2.wav" id="8_kluq8"]
+[ext_resource type="Texture2D" uid="uid://xj3rf47cao5h" path="res://Assets/Animations/Enemies/18腐朽/attack_03.png" id="9_bmw6d"]
+[ext_resource type="AudioStream" uid="uid://djlcgm8lo1k27" path="res://Assets/Sounds/FXs/Enemies/野区丧尸/入场3.wav" id="9_q0gay"]
+[ext_resource type="Texture2D" uid="uid://0ef1xiljf3d8" path="res://Assets/Animations/Enemies/18腐朽/attack_04.png" id="10_kn1xf"]
+[ext_resource type="Texture2D" uid="uid://c2pu8olhujuee" path="res://Assets/Animations/Enemies/18腐朽/attack_05.png" id="11_3ub3t"]
+[ext_resource type="AudioStream" uid="uid://dualeb4jn8x2f" path="res://Assets/Sounds/FXs/Enemies/野区丧尸/啃咬.ogg" id="11_puh2b"]
+[ext_resource type="Texture2D" uid="uid://78wsmoajmn2b" path="res://Assets/Animations/Enemies/18腐朽/attack_06.png" id="12_h2x23"]
+[ext_resource type="Texture2D" uid="uid://bdxrbqdsav0c3" path="res://Assets/Animations/Enemies/18腐朽/attack_07.png" id="13_qgdr5"]
+[ext_resource type="Texture2D" uid="uid://bpma5wex2uqqi" path="res://Assets/Animations/Enemies/18腐朽/attack_08.png" id="14_cp28y"]
+[ext_resource type="Texture2D" uid="uid://b1l5v7h3o4bnv" path="res://Assets/Animations/Enemies/18腐朽/attack_09.png" id="15_h4hfw"]
+[ext_resource type="Texture2D" uid="uid://lohbkduk5lhj" path="res://Assets/Animations/Enemies/18腐朽/attack_10.png" id="16_uwqn5"]
+[ext_resource type="Texture2D" uid="uid://tqt4a4pd15rh" path="res://Assets/Animations/Enemies/18腐朽/attack_11.png" id="17_l16sf"]
+[ext_resource type="Texture2D" uid="uid://cff1op0jutk0g" path="res://Assets/Animations/Enemies/18腐朽/attack_12.png" id="18_6teoj"]
+[ext_resource type="Texture2D" uid="uid://bwaf73m1404gv" path="res://Assets/Animations/Enemies/18腐朽/attack_13.png" id="19_7hj50"]
+[ext_resource type="Texture2D" uid="uid://bh8ili226rrdw" path="res://Assets/Animations/Enemies/18腐朽/attack_14.png" id="20_wwvu8"]
+[ext_resource type="Texture2D" uid="uid://bqermho0y2k58" path="res://Assets/Animations/Enemies/18腐朽/attack_15.png" id="21_trf6r"]
+[ext_resource type="Texture2D" uid="uid://cx366ddj1bdmb" path="res://Assets/Animations/Enemies/18腐朽/attack_16.png" id="22_gw7wb"]
+[ext_resource type="Texture2D" uid="uid://bueqhodejlyv2" path="res://Assets/Animations/Enemies/18腐朽/attack_17.png" id="23_8y6xd"]
+[ext_resource type="Texture2D" uid="uid://b3frqpkjdesba" path="res://Assets/Animations/Enemies/18腐朽/attack_18.png" id="24_i282b"]
+[ext_resource type="Texture2D" uid="uid://da3cti5h86ges" path="res://Assets/Animations/Enemies/18腐朽/attack_19.png" id="25_fk8dr"]
+[ext_resource type="Texture2D" uid="uid://d2dc1cm4ky21y" path="res://Assets/Animations/Enemies/18腐朽/attack_20.png" id="26_ogbkx"]
+[ext_resource type="Texture2D" uid="uid://ck1pp2o6cgd7v" path="res://Assets/Animations/Enemies/18腐朽/attack_21.png" id="27_5hvev"]
+[ext_resource type="Texture2D" uid="uid://dibwmkgg6w50w" path="res://Assets/Animations/Enemies/18腐朽/attack_22.png" id="28_sqoeg"]
+[ext_resource type="Texture2D" uid="uid://dcirxenjib20a" path="res://Assets/Animations/Enemies/18腐朽/attack_23.png" id="29_fsi4e"]
+[ext_resource type="Texture2D" uid="uid://cbbqns4ntj6pr" path="res://Assets/Animations/Enemies/18腐朽/attack_24.png" id="30_60m1p"]
+[ext_resource type="Texture2D" uid="uid://ctkj685tvgwo3" path="res://Assets/Animations/Enemies/18腐朽/attack_25.png" id="31_miybd"]
+[ext_resource type="Texture2D" uid="uid://bl48cqovd8fia" path="res://Assets/Animations/Enemies/18腐朽/attack_26.png" id="32_05v2o"]
+[ext_resource type="Texture2D" uid="uid://8itdwo0oxdyk" path="res://Assets/Animations/Enemies/18腐朽/attack_27.png" id="33_ql3ad"]
+[ext_resource type="Texture2D" uid="uid://cjeurjq8jjkxa" path="res://Assets/Animations/Enemies/18腐朽/attack_28.png" id="34_omnf0"]
+[ext_resource type="Texture2D" uid="uid://djrrcncsmhbqf" path="res://Assets/Animations/Enemies/18腐朽/attack_29.png" id="35_toc0a"]
+[ext_resource type="Texture2D" uid="uid://bu8fdpm6giqun" path="res://Assets/Animations/Enemies/18腐朽/attack_30.png" id="36_8anxt"]
+[ext_resource type="Texture2D" uid="uid://b2rskq1e68l25" path="res://Assets/Animations/Enemies/18腐朽/die_00.png" id="37_7jfix"]
+[ext_resource type="Texture2D" uid="uid://dnfo2724s7v73" path="res://Assets/Animations/Enemies/18腐朽/die_01.png" id="38_3swg5"]
+[ext_resource type="Texture2D" uid="uid://b4s1qcthp1uky" path="res://Assets/Animations/Enemies/18腐朽/die_02.png" id="39_qk6yq"]
+[ext_resource type="Texture2D" uid="uid://dd14qh5j0njre" path="res://Assets/Animations/Enemies/18腐朽/die_03.png" id="40_r17tb"]
+[ext_resource type="Texture2D" uid="uid://bnymb6jn4g8cv" path="res://Assets/Animations/Enemies/18腐朽/die_04.png" id="41_1xi4t"]
+[ext_resource type="Texture2D" uid="uid://dprg8u3f10vpk" path="res://Assets/Animations/Enemies/18腐朽/die_05.png" id="42_jbclc"]
+[ext_resource type="Texture2D" uid="uid://71jqtl1u7ri0" path="res://Assets/Animations/Enemies/18腐朽/die_06.png" id="43_8dlvv"]
+[ext_resource type="Texture2D" uid="uid://tuugj2iel6v6" path="res://Assets/Animations/Enemies/18腐朽/die_07.png" id="44_emx1i"]
+[ext_resource type="Texture2D" uid="uid://cgdd5u3mjf5e8" path="res://Assets/Animations/Enemies/18腐朽/die_08.png" id="45_2v7n6"]
+[ext_resource type="Texture2D" uid="uid://db3tq8tv8njtf" path="res://Assets/Animations/Enemies/18腐朽/die_09.png" id="46_c0rjh"]
+[ext_resource type="Texture2D" uid="uid://ds1jnxhg8ypwy" path="res://Assets/Animations/Enemies/18腐朽/die_10.png" id="47_ou6m1"]
+[ext_resource type="Texture2D" uid="uid://dk8jhme6h38tg" path="res://Assets/Animations/Enemies/18腐朽/die_11.png" id="48_g8hs0"]
+[ext_resource type="Texture2D" uid="uid://o56kcp6ywoqs" path="res://Assets/Animations/Enemies/18腐朽/die_12.png" id="49_5pneh"]
+[ext_resource type="Texture2D" uid="uid://c7pvpr0djh8yx" path="res://Assets/Animations/Enemies/18腐朽/die_13.png" id="50_dfoug"]
+[ext_resource type="Texture2D" uid="uid://dbkta5gpj4xlx" path="res://Assets/Animations/Enemies/18腐朽/die_14.png" id="51_bj5eo"]
+[ext_resource type="Texture2D" uid="uid://br4p745ta0wqb" path="res://Assets/Animations/Enemies/18腐朽/die_15.png" id="52_peqtx"]
+[ext_resource type="Texture2D" uid="uid://7k002ajbomqx" path="res://Assets/Animations/Enemies/18腐朽/die_16.png" id="53_xlgqv"]
+[ext_resource type="Texture2D" uid="uid://plg3k3ffdttt" path="res://Assets/Animations/Enemies/18腐朽/die_17.png" id="54_tbdsr"]
+[ext_resource type="Texture2D" uid="uid://d3x04a05c4gl2" path="res://Assets/Animations/Enemies/18腐朽/die_18.png" id="55_02rsd"]
+[ext_resource type="Texture2D" uid="uid://ei0r8r17o6iq" path="res://Assets/Animations/Enemies/18腐朽/die_19.png" id="56_6oys6"]
+[ext_resource type="Texture2D" uid="uid://s5ysqey317ul" path="res://Assets/Animations/Enemies/18腐朽/die_20.png" id="57_4r3y1"]
+[ext_resource type="Texture2D" uid="uid://cqwcv0hikjf6x" path="res://Assets/Animations/Enemies/18腐朽/die_21.png" id="58_ue3pi"]
+[ext_resource type="Texture2D" uid="uid://cbff4r50wmhq3" path="res://Assets/Animations/Enemies/18腐朽/die_22.png" id="59_tfib6"]
+[ext_resource type="Texture2D" uid="uid://c1k07q4t0i8wl" path="res://Assets/Animations/Enemies/18腐朽/mvoe_00.png" id="60_hjpi4"]
+[ext_resource type="Texture2D" uid="uid://cgdctn6oj2k6i" path="res://Assets/Animations/Enemies/18腐朽/mvoe_01.png" id="61_j3jxr"]
+[ext_resource type="Texture2D" uid="uid://smtpnucopwp" path="res://Assets/Animations/Enemies/18腐朽/mvoe_02.png" id="62_5gmgs"]
+[ext_resource type="Texture2D" uid="uid://daigedke8rv7v" path="res://Assets/Animations/Enemies/18腐朽/mvoe_03.png" id="63_ngvp1"]
+[ext_resource type="Texture2D" uid="uid://bjdfn4y1dpjev" path="res://Assets/Animations/Enemies/18腐朽/mvoe_04.png" id="64_8ctqm"]
+[ext_resource type="Texture2D" uid="uid://cxsjj4ygww5mp" path="res://Assets/Animations/Enemies/18腐朽/mvoe_05.png" id="65_4dji0"]
+[ext_resource type="Texture2D" uid="uid://now0aoj0thg4" path="res://Assets/Animations/Enemies/18腐朽/mvoe_06.png" id="66_87lps"]
+[ext_resource type="Texture2D" uid="uid://bwmo7twolf0ct" path="res://Assets/Animations/Enemies/18腐朽/mvoe_07.png" id="67_kv7jx"]
+[ext_resource type="Texture2D" uid="uid://dajahenu20lai" path="res://Assets/Animations/Enemies/18腐朽/mvoe_08.png" id="68_5p8og"]
+[ext_resource type="Texture2D" uid="uid://23davcuu36hu" path="res://Assets/Animations/Enemies/18腐朽/mvoe_09.png" id="69_toyyt"]
+[ext_resource type="Texture2D" uid="uid://dbx5wtwosh2kk" path="res://Assets/Animations/Enemies/18腐朽/mvoe_10.png" id="70_tjlii"]
+[ext_resource type="Texture2D" uid="uid://c5txi1vynqdii" path="res://Assets/Animations/Enemies/18腐朽/mvoe_11.png" id="71_kkici"]
+[ext_resource type="Texture2D" uid="uid://dyc6qxuqyk1td" path="res://Assets/Animations/Enemies/18腐朽/mvoe_12.png" id="72_3k0e5"]
+[ext_resource type="Texture2D" uid="uid://cc7hi8fcbhyb1" path="res://Assets/Animations/Enemies/18腐朽/mvoe_13.png" id="73_reog2"]
+[ext_resource type="Texture2D" uid="uid://n4xj4bud57ft" path="res://Assets/Animations/Enemies/18腐朽/mvoe_14.png" id="74_bplhb"]
+[ext_resource type="Texture2D" uid="uid://dppolr2b7r0oo" path="res://Assets/Animations/Enemies/18腐朽/mvoe_15.png" id="75_h3a7u"]
+[ext_resource type="Texture2D" uid="uid://dsd83uxie3lkp" path="res://Assets/Animations/Enemies/18腐朽/mvoe_16.png" id="76_6lpt0"]
+[ext_resource type="Texture2D" uid="uid://badeped3qqntt" path="res://Assets/Animations/Enemies/18腐朽/mvoe_17.png" id="77_nkeff"]
+[ext_resource type="Texture2D" uid="uid://cr1aanamdcg2i" path="res://Assets/Animations/Enemies/18腐朽/mvoe_18.png" id="78_6byhc"]
+[ext_resource type="Texture2D" uid="uid://bbsayedllkyi4" path="res://Assets/Animations/Enemies/18腐朽/mvoe_19.png" id="79_5tjuo"]
+[ext_resource type="Texture2D" uid="uid://knyr84cdn7c6" path="res://Assets/Animations/Enemies/18腐朽/pounce_front_00.png" id="80_gg13k"]
+[ext_resource type="Texture2D" uid="uid://bemc80e4mek6v" path="res://Assets/Animations/Enemies/18腐朽/pounce_front_01.png" id="81_68pfd"]
+[ext_resource type="Texture2D" uid="uid://e75popg0p7cm" path="res://Assets/Animations/Enemies/18腐朽/pounce_front_02.png" id="82_pyre7"]
+[ext_resource type="Texture2D" uid="uid://bdrm2gtj0mxdd" path="res://Assets/Animations/Enemies/18腐朽/pounce_front_03.png" id="83_ak7y8"]
+[ext_resource type="Texture2D" uid="uid://dm7ocfhil0jr3" path="res://Assets/Animations/Enemies/18腐朽/pounce_front_04.png" id="84_rgym4"]
+[ext_resource type="Texture2D" uid="uid://c2oilba8u501o" path="res://Assets/Animations/Enemies/18腐朽/pounce_front_05.png" id="85_yljl6"]
+[ext_resource type="Texture2D" uid="uid://b7ia8i7ahwxqh" path="res://Assets/Animations/Enemies/18腐朽/pounce_front_06.png" id="86_6q5cn"]
+[ext_resource type="Texture2D" uid="uid://c517e4t0xpet7" path="res://Assets/Animations/Enemies/18腐朽/pounce_front_07.png" id="87_v35tw"]
+[ext_resource type="Texture2D" uid="uid://qasdx1lja086" path="res://Assets/Animations/Enemies/18腐朽/pounce_front_08.png" id="88_o2lfo"]
+[ext_resource type="Texture2D" uid="uid://b6v3fbh75olo5" path="res://Assets/Animations/Enemies/18腐朽/pounce_front_09.png" id="89_11hqd"]
+[ext_resource type="Texture2D" uid="uid://b120e7o66m83n" path="res://Assets/Animations/Enemies/18腐朽/pounce_front_10.png" id="90_86yq7"]
+[ext_resource type="Texture2D" uid="uid://dpedxhvtj60qn" path="res://Assets/Animations/Enemies/18腐朽/pounce_latter_00.png" id="91_tu3bm"]
+[ext_resource type="Texture2D" uid="uid://bdwlnh36w2m8l" path="res://Assets/Animations/Enemies/18腐朽/pounce_latter_01.png" id="92_6mjom"]
+[ext_resource type="Texture2D" uid="uid://dvct2swdlm6e4" path="res://Assets/Animations/Enemies/18腐朽/pounce_latter_02.png" id="93_fy3q2"]
+[ext_resource type="Texture2D" uid="uid://cu3ddfxj2gtue" path="res://Assets/Animations/Enemies/18腐朽/pounce_latter_03.png" id="94_crd1t"]
+[ext_resource type="Texture2D" uid="uid://c2etnwxj0utpj" path="res://Assets/Animations/Enemies/18腐朽/pounce_latter_04.png" id="95_10t4n"]
+[ext_resource type="Texture2D" uid="uid://che251t2777su" path="res://Assets/Animations/Enemies/18腐朽/pounce_latter_05.png" id="96_xcscl"]
+[ext_resource type="Texture2D" uid="uid://cxhdfpu3nhjb5" path="res://Assets/Animations/Enemies/18腐朽/pounce_latter_06.png" id="97_ctk6h"]
+[ext_resource type="Texture2D" uid="uid://6mkhdalfsrss" path="res://Assets/Animations/Enemies/18腐朽/pounce_latter_07.png" id="98_xmyg2"]
+[ext_resource type="Texture2D" uid="uid://c4hbqtdasvl13" path="res://Assets/Animations/Enemies/18腐朽/pounce_latter_08.png" id="99_25ecv"]
+[ext_resource type="Texture2D" uid="uid://b8uj2l3vw18qr" path="res://Assets/Animations/Enemies/18腐朽/pounce_latter_09.png" id="100_0bt5n"]
+[ext_resource type="Texture2D" uid="uid://l2bpqwmq56fu" path="res://Assets/Animations/Enemies/18腐朽/pounce_latter_10.png" id="101_pjbub"]
+[ext_resource type="Texture2D" uid="uid://bgn0l05cyo0kd" path="res://Assets/Animations/Enemies/18腐朽/pounce_latter_11.png" id="102_sepbd"]
+[ext_resource type="Texture2D" uid="uid://bmwr0m80g73oa" path="res://Assets/Animations/Enemies/18腐朽/pounce_latter_12.png" id="103_aibir"]
+[ext_resource type="Texture2D" uid="uid://ck7x4ynlr5rm4" path="res://Assets/Animations/Enemies/18腐朽/pounce_latter_13.png" id="104_wjllr"]
+
+[sub_resource type="Resource" id="Resource_s2yay"]
+script = ExtResource("4_422dl")
+health = 140
+dodge_rate = 0.0
+near_damage_low = 10
+near_damage_high = 20
+near_attack_speed = 1.2
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.0
+physic_immune = false
+magic_defence = 0.3
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 0.5
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2rwxt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_y8uj3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5fmil")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0n0e1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_bmw6d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_kn1xf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_3ub3t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_h2x23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_qgdr5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_cp28y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_h4hfw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_uwqn5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_l16sf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_6teoj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7hj50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_wwvu8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_trf6r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_gw7wb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_8y6xd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_i282b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_fk8dr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ogbkx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_5hvev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_sqoeg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_fsi4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_60m1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_miybd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_05v2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_ql3ad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_omnf0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_toc0a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_8anxt")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_7jfix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_3swg5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_qk6yq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_r17tb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_1xi4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_jbclc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_8dlvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_emx1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_2v7n6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_c0rjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_ou6m1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_g8hs0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_5pneh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_dfoug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_bj5eo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_peqtx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_xlgqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_tbdsr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_02rsd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_6oys6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_4r3y1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_ue3pi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_tfib6")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_y8uj3")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("60_hjpi4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_j3jxr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_5gmgs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_ngvp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_8ctqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_4dji0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_87lps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_kv7jx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_5p8og")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_toyyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_tjlii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_kkici")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_3k0e5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_reog2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_bplhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_h3a7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_6lpt0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_nkeff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_6byhc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_5tjuo")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 18.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("60_hjpi4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_j3jxr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_5gmgs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_ngvp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_8ctqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_4dji0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_87lps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_kv7jx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_5p8og")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_toyyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_tjlii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_kkici")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_3k0e5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_reog2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_bplhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_h3a7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_6lpt0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_nkeff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_6byhc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_5tjuo")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 18.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("60_hjpi4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_j3jxr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_5gmgs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_ngvp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_8ctqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_4dji0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_87lps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_kv7jx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_5p8og")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_toyyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_tjlii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_kkici")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_3k0e5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_reog2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_bplhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_h3a7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_6lpt0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_nkeff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_6byhc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_5tjuo")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 18.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("80_gg13k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_68pfd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_pyre7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_ak7y8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_rgym4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_yljl6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_6q5cn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_v35tw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_o2lfo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_11hqd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_86yq7")
+}],
+"loop": false,
+"name": &"pounce1",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("90_86yq7")
+}],
+"loop": true,
+"name": &"pounce2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("91_tu3bm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_6mjom")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_fy3q2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_crd1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_10t4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_xcscl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_ctk6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_xmyg2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_25ecv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_0bt5n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_pjbub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_sepbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_aibir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_wjllr")
+}],
+"loop": false,
+"name": &"pounce3",
+"speed": 24.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n6lpa"]
+size = Vector2(100, 97.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7mxxu"]
+radius = 73.9444
+
+[node name="Enemy18" groups=["undead"] instance=ExtResource("1_np6ke")]
+script = ExtResource("2_4ddhu")
+enemy_name = "腐朽"
+enemy_id = 18
+enemy_texture = ExtResource("3_rnffh")
+enemy_type = 1
+start_data = SubResource("Resource_s2yay")
+bounty = 1
+die_audio_stream_list = Array[AudioStream]([ExtResource("5_xkku0")])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(30, -70)
+sprite_frames = SubResource("SpriteFrames_2rwxt")
+animation = &"attack"
+autoplay = "idle"
+
+[node name="BodyCollision" parent="UnitBody" index="1"]
+shape = SubResource("RectangleShape2D_n6lpa")
+
+[node name="HurtBox" parent="UnitBody" index="2"]
+position = Vector2(0, -65)
+scale = Vector2(5.48958, 5.48958)
+
+[node name="EnemyButton" parent="UnitBody" index="4"]
+offset_left = -53.0
+offset_top = -135.0
+offset_right = 55.0
+
+[node name="HealthBar" parent="UnitBody" index="5"]
+offset_top = -165.0
+offset_bottom = -156.0
+
+[node name="FarAttackArea" parent="UnitBody" index="7"]
+visible = false
+
+[node name="PounceHitArea" type="Area2D" parent="UnitBody" index="8"]
+scale = Vector2(0.8, 0.8)
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/PounceHitArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_7mxxu")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="PounceConditionArea" type="Area2D" parent="UnitBody" index="9"]
+scale = Vector2(3, 3)
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/PounceConditionArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_7mxxu")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="DieAudio" parent="." index="3"]
+stream = ExtResource("5_xkku0")
+pitch_scale = 0.7
+
+[node name="AppearAudioComponent" parent="." index="5" instance=ExtResource("6_403me")]
+appear_audio_list = Array[AudioStream]([ExtResource("7_fimd4"), ExtResource("8_kluq8"), ExtResource("9_q0gay")])
+
+[node name="AppearAudioPlayer" parent="AppearAudioComponent" index="0"]
+stream = ExtResource("8_kluq8")
+pitch_scale = 0.8
+
+[node name="AttackAudio" type="AudioStreamPlayer" parent="." index="6"]
+stream = ExtResource("11_puh2b")
+pitch_scale = 0.8
+bus = &"Sound"
+
+[node name="PounceTimer" type="Timer" parent="." index="7"]
+wait_time = 8.0
+one_shot = true
+
+[connection signal="body_entered" from="UnitBody/PounceConditionArea" to="." method="_on_pounce_condition_area_body_entered"]
+[connection signal="body_exited" from="UnitBody/PounceConditionArea" to="." method="_on_pounce_condition_area_body_exited"]
+
+[editable path="AppearAudioComponent"]

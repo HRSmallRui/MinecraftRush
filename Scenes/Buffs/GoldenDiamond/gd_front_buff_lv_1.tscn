@@ -1,0 +1,83 @@
+[gd_scene load_steps=13 format=3 uid="uid://bj75b5dlceirl"]
+
+[ext_resource type="PackedScene" uid="uid://bjfa3t67tpsbr" path="res://Scenes/Buffs/property_buff.tscn" id="1_emvhj"]
+[ext_resource type="Script" path="res://Scripts/Buffs/gd_front_buff_lv_1.gd" id="2_006pn"]
+[ext_resource type="Shader" path="res://Assets/Shaders/hue_color.gdshader" id="2_nsd2q"]
+[ext_resource type="Script" path="res://Scripts/Buffs/property_buff_block.gd" id="3_4yeai"]
+[ext_resource type="Texture2D" uid="uid://bqdije0cnh2r5" path="res://Assets/Images/Effects/plugin_effect.png" id="3_woo1i"]
+
+[sub_resource type="Resource" id="Resource_wqntk"]
+script = ExtResource("3_4yeai")
+property_type = 1
+operation_type = 1
+operation_data = 0.7
+
+[sub_resource type="Resource" id="Resource_5w1h0"]
+script = ExtResource("3_4yeai")
+property_type = 2
+operation_type = 1
+operation_data = 0.7
+
+[sub_resource type="Resource" id="Resource_l8qcx"]
+script = ExtResource("3_4yeai")
+property_type = 10
+operation_type = 0
+operation_data = -0.2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kp1u2"]
+shader = ExtResource("2_nsd2q")
+shader_parameter/hue_shift = 0.1
+
+[sub_resource type="Animation" id="Animation_bjvy8"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SoulEffect:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_mxl1e"]
+resource_name = "loop"
+loop_mode = 1
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SoulEffect:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(1, 1),
+"points": PackedFloat32Array(0, 0, 0, 0, 0, -6.28319, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yn6cp"]
+_data = {
+"RESET": SubResource("Animation_bjvy8"),
+"loop": SubResource("Animation_mxl1e")
+}
+
+[node name="GDFrontBuffLV1" instance=ExtResource("1_emvhj")]
+script = ExtResource("2_006pn")
+buff_blocks = Array[ExtResource("3_4yeai")]([SubResource("Resource_wqntk"), SubResource("Resource_5w1h0"), SubResource("Resource_l8qcx")])
+buff_type = 1
+buff_tag = "GDFrontBuff"
+immune_groups = Array[String](["god", "super_unit", "boss"])
+
+[node name="SoulEffect" type="Sprite2D" parent="." index="0"]
+material = SubResource("ShaderMaterial_kp1u2")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_woo1i")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_yn6cp")
+}
+autoplay = "loop"

@@ -1,0 +1,50 @@
+[gd_scene load_steps=11 format=3 uid="uid://cqfu0ujjo5rbd"]
+
+[ext_resource type="PackedScene" uid="uid://f1vaqnehc211" path="res://Scenes/Allys/Reinforcements/reinforcement_class.tscn" id="1_u8ts4"]
+[ext_resource type="Script" path="res://Scripts/Allys/Reinfrocements/reinforcement_lv_0.gd" id="2_00ep5"]
+[ext_resource type="SpriteFrames" uid="uid://dcfdul67010mb" path="res://Assets/Animations/Reinforcer/LV0,1/reinforcer1.tres" id="2_3hx18"]
+[ext_resource type="SpriteFrames" uid="uid://c8xeg31xqv0bp" path="res://Assets/Animations/Reinforcer/LV0,1/reinforcer2.tres" id="3_aiso4"]
+[ext_resource type="SpriteFrames" uid="uid://b6hrrbmh7pohd" path="res://Assets/Animations/Reinforcer/LV0,1/reinforcer3.tres" id="4_4514e"]
+[ext_resource type="Texture2D" uid="uid://p174alw30bl3" path="res://Assets/Images/UI/InformationBar/0级援军1.png" id="6_w2w2p"]
+[ext_resource type="Texture2D" uid="uid://d2e1supkulvof" path="res://Assets/Images/UI/InformationBar/0级援军2.png" id="7_thcpt"]
+[ext_resource type="Texture2D" uid="uid://c1fi0vibrxppd" path="res://Assets/Images/UI/InformationBar/0级援军3.png" id="8_t02lf"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="9_w6lno"]
+
+[sub_resource type="Resource" id="Resource_e40j0"]
+script = ExtResource("9_w6lno")
+health = 20
+dodge_rate = 0.0
+near_damage_low = 1
+near_damage_high = 2
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.0
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 2.4
+
+[node name="ReinforcementLV0" instance=ExtResource("1_u8ts4")]
+script = ExtResource("2_00ep5")
+reinforce_animation_list = Array[SpriteFrames]([ExtResource("2_3hx18"), ExtResource("3_aiso4"), ExtResource("4_4514e")])
+reinforce_headtex_list = Array[Texture]([ExtResource("6_w2w2p"), ExtResource("7_thcpt"), ExtResource("8_t02lf")])
+reinforce_name_list = Array[PackedStringArray]([PackedStringArray("王田根", "张土娃", "李锄禾", "赵耙子", "郑老栓", "陈荒年", "刘茬子"), PackedStringArray("孙杀猪", "赵屠户", "李一刀", "陈血肠", "刘一刀", "周剁骨", "吴庖丁"), PackedStringArray("赵铁柱", "刘铁锤", "陈铁狗", "张炉灰", "孙铁蛋", "冯铁拐", "王铁锁")])
+ally_name = "援军"
+ally_level = 0
+ally_texture = ExtResource("6_w2w2p")
+start_data = SubResource("Resource_e40j0")
+heal_speed = 4
+rebirth_time = 12
+
+[node name="AllySprite" parent="UnitBody" index="0"]
+position = Vector2(-10, -120)
+sprite_frames = ExtResource("2_3hx18")
+animation = &"move"
+frame_progress = 0.623945

@@ -1,0 +1,1383 @@
+[gd_scene load_steps=323 format=3 uid="uid://5ukpvpcb74dj"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_q4osr"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_28.gd" id="2_jb0u8"]
+[ext_resource type="Texture2D" uid="uid://chk1g3h8op8q1" path="res://Assets/Images/UI/InformationBar/军火商.png" id="3_25270"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="4_7lhgr"]
+[ext_resource type="AudioStream" uid="uid://chrerlm5in3oy" path="res://Assets/Sounds/FXs/Enemies/军火商/流浪商人技能3.wav" id="4_w53yj"]
+[ext_resource type="AudioStream" uid="uid://00ykofb88jvx" path="res://Assets/Sounds/FXs/Enemies/军火商/流浪商人死亡1.wav" id="5_n0idp"]
+[ext_resource type="AudioStream" uid="uid://thbu8pftp6pr" path="res://Assets/Sounds/FXs/Enemies/军火商/流浪商人死亡2.wav" id="6_m12kd"]
+[ext_resource type="PackedScene" uid="uid://dcjuved17hj6j" path="res://Scenes/Enemies/EnemyComponents/appear_audio_component.tscn" id="7_appeb"]
+[ext_resource type="Texture2D" uid="uid://bnqx1k1ggbomq" path="res://Assets/Animations/Enemies/28军火商/attack_00.png" id="7_q4trw"]
+[ext_resource type="Texture2D" uid="uid://b3g8ylkvra0ub" path="res://Assets/Animations/Enemies/28军火商/attack_01.png" id="8_3fxvu"]
+[ext_resource type="AudioStream" uid="uid://cf7gct6hmnbsm" path="res://Assets/Sounds/FXs/Enemies/军火商/流浪商人出现1.wav" id="8_ip505"]
+[ext_resource type="Texture2D" uid="uid://dv0hyk0sommn7" path="res://Assets/Animations/Enemies/28军火商/attack_02.png" id="9_gnaii"]
+[ext_resource type="AudioStream" uid="uid://d0ttx7kpm70ax" path="res://Assets/Sounds/FXs/Enemies/军火商/流浪商人出现2.wav" id="9_xsps7"]
+[ext_resource type="Texture2D" uid="uid://co7qiukxj7cfu" path="res://Assets/Animations/Enemies/28军火商/attack_03.png" id="10_w2kvd"]
+[ext_resource type="AudioStream" uid="uid://ffh15nup7wtp" path="res://Assets/Sounds/FXs/Enemies/军火商/流浪商人出现3.wav" id="10_xbedl"]
+[ext_resource type="Texture2D" uid="uid://g1oqwf00f2ka" path="res://Assets/Animations/Enemies/28军火商/attack_04.png" id="11_cjtjk"]
+[ext_resource type="Texture2D" uid="uid://br3qgps8e7xj8" path="res://Assets/Animations/Enemies/28军火商/attack_05.png" id="12_5rcre"]
+[ext_resource type="Texture2D" uid="uid://dlok2ne3bc7ph" path="res://Assets/Animations/Enemies/28军火商/attack_06.png" id="13_0ygxc"]
+[ext_resource type="Texture2D" uid="uid://cqi4qlcluyi8m" path="res://Assets/Animations/Enemies/28军火商/attack_07.png" id="14_6iv2c"]
+[ext_resource type="Texture2D" uid="uid://c2d5wl53sc4kw" path="res://Assets/Animations/Enemies/28军火商/attack_08.png" id="15_fjvrk"]
+[ext_resource type="Texture2D" uid="uid://byuxugofk6wjv" path="res://Assets/Animations/Enemies/28军火商/attack_09.png" id="16_cbv1q"]
+[ext_resource type="Texture2D" uid="uid://caw0sbopf8don" path="res://Assets/Animations/Enemies/28军火商/attack_10.png" id="17_wb2ra"]
+[ext_resource type="Texture2D" uid="uid://lxevepsheg3n" path="res://Assets/Animations/Enemies/28军火商/attack_11.png" id="18_te1aj"]
+[ext_resource type="Texture2D" uid="uid://k72kk2tmu1iy" path="res://Assets/Animations/Enemies/28军火商/attack_12.png" id="19_x5esm"]
+[ext_resource type="Texture2D" uid="uid://dvltefdfrieor" path="res://Assets/Animations/Enemies/28军火商/attack_13.png" id="20_nctf5"]
+[ext_resource type="Texture2D" uid="uid://cjfat75dgxarg" path="res://Assets/Animations/Enemies/28军火商/attack_14.png" id="21_3xk8r"]
+[ext_resource type="Texture2D" uid="uid://co5skdgjty25b" path="res://Assets/Animations/Enemies/28军火商/attack_15.png" id="22_akdcs"]
+[ext_resource type="Texture2D" uid="uid://bome5awofg30f" path="res://Assets/Animations/Enemies/28军火商/attack_16.png" id="23_eciwl"]
+[ext_resource type="Texture2D" uid="uid://ccv6ey8y6ffga" path="res://Assets/Animations/Enemies/28军火商/attack_17.png" id="24_1uv6n"]
+[ext_resource type="Texture2D" uid="uid://tfd7x0p8rlck" path="res://Assets/Animations/Enemies/28军火商/attack_18.png" id="25_rex3f"]
+[ext_resource type="Texture2D" uid="uid://bp0c7t4dhmsd" path="res://Assets/Animations/Enemies/28军火商/attack_19.png" id="26_ssxdu"]
+[ext_resource type="Texture2D" uid="uid://c8y0yq3fsj1h7" path="res://Assets/Animations/Enemies/28军火商/attack_20.png" id="27_5kehc"]
+[ext_resource type="Texture2D" uid="uid://c042sclbytqfp" path="res://Assets/Animations/Enemies/28军火商/buy_00.png" id="28_ijyx0"]
+[ext_resource type="Texture2D" uid="uid://d4cuhsvmityfg" path="res://Assets/Animations/Enemies/28军火商/buy_01.png" id="29_0vnbi"]
+[ext_resource type="Texture2D" uid="uid://bxyn0fvy608iv" path="res://Assets/Animations/Enemies/28军火商/buy_02.png" id="30_vmwxl"]
+[ext_resource type="Texture2D" uid="uid://mkjlegqn2kr2" path="res://Assets/Animations/Enemies/28军火商/buy_03.png" id="31_8fb23"]
+[ext_resource type="Texture2D" uid="uid://fk3i8shfjvxq" path="res://Assets/Animations/Enemies/28军火商/buy_04.png" id="32_slk4t"]
+[ext_resource type="Texture2D" uid="uid://bbws32clbt7ij" path="res://Assets/Animations/Enemies/28军火商/buy_05.png" id="33_ual2v"]
+[ext_resource type="Texture2D" uid="uid://cwqpv0vdcue4t" path="res://Assets/Animations/Enemies/28军火商/buy_06.png" id="34_gta64"]
+[ext_resource type="Texture2D" uid="uid://dh5muy63nhafg" path="res://Assets/Animations/Enemies/28军火商/buy_07.png" id="35_6er7l"]
+[ext_resource type="Texture2D" uid="uid://bol3kbg2v81oi" path="res://Assets/Animations/Enemies/28军火商/buy_08.png" id="36_kun00"]
+[ext_resource type="Texture2D" uid="uid://yvngof2njtev" path="res://Assets/Animations/Enemies/28军火商/buy_09.png" id="37_hvs5e"]
+[ext_resource type="Texture2D" uid="uid://bnjs45mdwpybw" path="res://Assets/Animations/Enemies/28军火商/buy_10.png" id="38_qa0tp"]
+[ext_resource type="Texture2D" uid="uid://c2ixnpdctpckc" path="res://Assets/Animations/Enemies/28军火商/buy_11.png" id="39_jew41"]
+[ext_resource type="Texture2D" uid="uid://cgbwy3822lfrp" path="res://Assets/Animations/Enemies/28军火商/buy_12.png" id="40_kmx1h"]
+[ext_resource type="Texture2D" uid="uid://q7r4svvggh5a" path="res://Assets/Animations/Enemies/28军火商/buy_13.png" id="41_gsgtn"]
+[ext_resource type="Texture2D" uid="uid://degq42efe0kgt" path="res://Assets/Animations/Enemies/28军火商/buy_14.png" id="42_w5tgf"]
+[ext_resource type="Texture2D" uid="uid://cppqit2yhpram" path="res://Assets/Animations/Enemies/28军火商/buy_15.png" id="43_o2kap"]
+[ext_resource type="Texture2D" uid="uid://cem4qpbdg7hwi" path="res://Assets/Animations/Enemies/28军火商/buy_16.png" id="44_tbqyh"]
+[ext_resource type="Texture2D" uid="uid://yr8fhikab333" path="res://Assets/Animations/Enemies/28军火商/buy_17.png" id="45_2w7j2"]
+[ext_resource type="Texture2D" uid="uid://ti75gdrafgfl" path="res://Assets/Animations/Enemies/28军火商/buy_18.png" id="46_cylcg"]
+[ext_resource type="Texture2D" uid="uid://cfn7pg6nmpcss" path="res://Assets/Animations/Enemies/28军火商/buy_19.png" id="47_u5u3o"]
+[ext_resource type="Texture2D" uid="uid://dyj76ovs1pos6" path="res://Assets/Animations/Enemies/28军火商/buy_20.png" id="48_s7hbh"]
+[ext_resource type="Texture2D" uid="uid://v4nb3pt3unfk" path="res://Assets/Animations/Enemies/28军火商/buy_21.png" id="49_8i7wy"]
+[ext_resource type="Texture2D" uid="uid://dkv7y8km62wws" path="res://Assets/Animations/Enemies/28军火商/buy_22.png" id="50_7uxhh"]
+[ext_resource type="Texture2D" uid="uid://bb5x2jwec2yr6" path="res://Assets/Animations/Enemies/28军火商/buy_23.png" id="51_10kp5"]
+[ext_resource type="Texture2D" uid="uid://lyi5ba05dsc8" path="res://Assets/Animations/Enemies/28军火商/buy_24.png" id="52_hbe3f"]
+[ext_resource type="Texture2D" uid="uid://cgonamxfkekfk" path="res://Assets/Animations/Enemies/28军火商/buy_25.png" id="53_hkopa"]
+[ext_resource type="Texture2D" uid="uid://ni20w0qw4vrh" path="res://Assets/Animations/Enemies/28军火商/buy_26.png" id="54_ic6lv"]
+[ext_resource type="Texture2D" uid="uid://smx1k6m23ucu" path="res://Assets/Animations/Enemies/28军火商/buy_27.png" id="55_shdds"]
+[ext_resource type="Texture2D" uid="uid://ctjbuht6p6j26" path="res://Assets/Animations/Enemies/28军火商/buy_28.png" id="56_k2wm4"]
+[ext_resource type="Texture2D" uid="uid://c3h7314hpy6j" path="res://Assets/Animations/Enemies/28军火商/buy_29.png" id="57_lcex2"]
+[ext_resource type="Texture2D" uid="uid://bbn1lbj3h70xh" path="res://Assets/Animations/Enemies/28军火商/buy_30.png" id="58_g43xc"]
+[ext_resource type="Texture2D" uid="uid://bd2qmcr2rk4k4" path="res://Assets/Animations/Enemies/28军火商/buy_31.png" id="59_kxafy"]
+[ext_resource type="Texture2D" uid="uid://bgspy2p25kj6v" path="res://Assets/Animations/Enemies/28军火商/buy_32.png" id="60_u8v4n"]
+[ext_resource type="Texture2D" uid="uid://ic8yf2g6bsw1" path="res://Assets/Animations/Enemies/28军火商/buy_33.png" id="61_7otjp"]
+[ext_resource type="Texture2D" uid="uid://c4wjrsjobhh5e" path="res://Assets/Animations/Enemies/28军火商/buy_34.png" id="62_883su"]
+[ext_resource type="Texture2D" uid="uid://curh5idphfxqs" path="res://Assets/Animations/Enemies/28军火商/buy_35.png" id="63_oa6as"]
+[ext_resource type="Texture2D" uid="uid://bjk88ie12joxd" path="res://Assets/Animations/Enemies/28军火商/buy_36.png" id="64_28ayx"]
+[ext_resource type="Texture2D" uid="uid://cv8sm4h4u0fmq" path="res://Assets/Animations/Enemies/28军火商/buy_37.png" id="65_ksj77"]
+[ext_resource type="Texture2D" uid="uid://dib88x2wym8mh" path="res://Assets/Animations/Enemies/28军火商/buy_38.png" id="66_6xcvi"]
+[ext_resource type="Texture2D" uid="uid://d13pnd327s6t4" path="res://Assets/Animations/Enemies/28军火商/buy_39.png" id="67_8hx4j"]
+[ext_resource type="Texture2D" uid="uid://beav5xwckfm7t" path="res://Assets/Animations/Enemies/28军火商/buy_40.png" id="68_k6nq1"]
+[ext_resource type="Texture2D" uid="uid://lv34agfru7qg" path="res://Assets/Animations/Enemies/28军火商/buy_41.png" id="69_pq426"]
+[ext_resource type="Texture2D" uid="uid://c1vp62rushmgi" path="res://Assets/Animations/Enemies/28军火商/buy_42.png" id="70_bd67r"]
+[ext_resource type="Texture2D" uid="uid://dwq1jtsn61v8c" path="res://Assets/Animations/Enemies/28军火商/buy_43.png" id="71_23lo5"]
+[ext_resource type="Texture2D" uid="uid://bgd1romecpxh5" path="res://Assets/Animations/Enemies/28军火商/buy_44.png" id="72_kooda"]
+[ext_resource type="Texture2D" uid="uid://dny7wogymj5s2" path="res://Assets/Animations/Enemies/28军火商/buy_45.png" id="73_gtfl4"]
+[ext_resource type="Texture2D" uid="uid://d3mi07qoxw07g" path="res://Assets/Animations/Enemies/28军火商/buy_46.png" id="74_6yard"]
+[ext_resource type="Texture2D" uid="uid://vqe78p17fqs6" path="res://Assets/Animations/Enemies/28军火商/buy_47.png" id="75_mr6u1"]
+[ext_resource type="Texture2D" uid="uid://d1igkgys1xogt" path="res://Assets/Animations/Enemies/28军火商/buy_48.png" id="76_driyk"]
+[ext_resource type="Texture2D" uid="uid://c6rqc63als6pg" path="res://Assets/Animations/Enemies/28军火商/buy_49.png" id="77_vw0q8"]
+[ext_resource type="Texture2D" uid="uid://btkyb63nfar68" path="res://Assets/Animations/Enemies/28军火商/buy_50.png" id="78_hjqhu"]
+[ext_resource type="Texture2D" uid="uid://4blomlrkexqn" path="res://Assets/Animations/Enemies/28军火商/buy_51.png" id="79_c5cmf"]
+[ext_resource type="Texture2D" uid="uid://dmgxtynhc5y6b" path="res://Assets/Animations/Enemies/28军火商/buy_52.png" id="80_pbhpq"]
+[ext_resource type="Texture2D" uid="uid://charnp2dft4dp" path="res://Assets/Animations/Enemies/28军火商/buy_53.png" id="81_ihhro"]
+[ext_resource type="Texture2D" uid="uid://bi3kixc13sov3" path="res://Assets/Animations/Enemies/28军火商/buy_54.png" id="82_u3dt0"]
+[ext_resource type="Texture2D" uid="uid://du3l6swhkowsw" path="res://Assets/Animations/Enemies/28军火商/buy_55.png" id="83_uvldj"]
+[ext_resource type="Texture2D" uid="uid://jhg5a3yj0pt8" path="res://Assets/Animations/Enemies/28军火商/buy_56.png" id="84_15uih"]
+[ext_resource type="Texture2D" uid="uid://bgbex51diwonq" path="res://Assets/Animations/Enemies/28军火商/buy_57.png" id="85_d8l4d"]
+[ext_resource type="Texture2D" uid="uid://c12xg2xy5g7h2" path="res://Assets/Animations/Enemies/28军火商/call_00.png" id="86_yqki7"]
+[ext_resource type="Texture2D" uid="uid://c1amu60lxydhm" path="res://Assets/Animations/Enemies/28军火商/call_01.png" id="87_8t1i0"]
+[ext_resource type="Texture2D" uid="uid://c84dnbj4jc1bq" path="res://Assets/Animations/Enemies/28军火商/call_02.png" id="88_ehjql"]
+[ext_resource type="Texture2D" uid="uid://cp3nldgkbjuvu" path="res://Assets/Animations/Enemies/28军火商/call_03.png" id="89_cnvge"]
+[ext_resource type="Texture2D" uid="uid://bi8emut3lhcrv" path="res://Assets/Animations/Enemies/28军火商/call_04.png" id="90_yo3h8"]
+[ext_resource type="Texture2D" uid="uid://ccptpw1t3ay3y" path="res://Assets/Animations/Enemies/28军火商/call_05.png" id="91_aw64p"]
+[ext_resource type="Texture2D" uid="uid://dn8pqci2vrwb7" path="res://Assets/Animations/Enemies/28军火商/call_06.png" id="92_d4axw"]
+[ext_resource type="Texture2D" uid="uid://cs8tj1n781x6n" path="res://Assets/Animations/Enemies/28军火商/call_07.png" id="93_q1fk7"]
+[ext_resource type="Texture2D" uid="uid://m47cw2cg4yvb" path="res://Assets/Animations/Enemies/28军火商/call_08.png" id="94_uhcik"]
+[ext_resource type="Texture2D" uid="uid://cr2ulyyvwr3c5" path="res://Assets/Animations/Enemies/28军火商/call_09.png" id="95_ici72"]
+[ext_resource type="Texture2D" uid="uid://dwbqj4ukx48aw" path="res://Assets/Animations/Enemies/28军火商/call_10.png" id="96_d11m5"]
+[ext_resource type="Texture2D" uid="uid://cowdauknjm84l" path="res://Assets/Animations/Enemies/28军火商/call_11.png" id="97_lfxqc"]
+[ext_resource type="Texture2D" uid="uid://vny7a55ajh63" path="res://Assets/Animations/Enemies/28军火商/call_12.png" id="98_ge4dw"]
+[ext_resource type="Texture2D" uid="uid://dsqes86xu605p" path="res://Assets/Animations/Enemies/28军火商/call_13.png" id="99_pd0ct"]
+[ext_resource type="Texture2D" uid="uid://bpq3vdgtmy887" path="res://Assets/Animations/Enemies/28军火商/call_14.png" id="100_y13p6"]
+[ext_resource type="Texture2D" uid="uid://codr4svob2pdv" path="res://Assets/Animations/Enemies/28军火商/call_15.png" id="101_kwtrq"]
+[ext_resource type="Texture2D" uid="uid://cxp5uth2gqwwj" path="res://Assets/Animations/Enemies/28军火商/call_16.png" id="102_4bydj"]
+[ext_resource type="Texture2D" uid="uid://bgomadv72k6jd" path="res://Assets/Animations/Enemies/28军火商/call_17.png" id="103_kh4uo"]
+[ext_resource type="Texture2D" uid="uid://gitlw4yf4mfp" path="res://Assets/Animations/Enemies/28军火商/call_18.png" id="104_7p7hn"]
+[ext_resource type="Texture2D" uid="uid://xe84d2tdwvhv" path="res://Assets/Animations/Enemies/28军火商/call_19.png" id="105_afwje"]
+[ext_resource type="Texture2D" uid="uid://sou5bi4g43cx" path="res://Assets/Animations/Enemies/28军火商/call_20.png" id="106_nabtt"]
+[ext_resource type="Texture2D" uid="uid://b56y1pd05a1q6" path="res://Assets/Animations/Enemies/28军火商/call_21.png" id="107_ai8bw"]
+[ext_resource type="Texture2D" uid="uid://be1drgy5vxfmr" path="res://Assets/Animations/Enemies/28军火商/call_22.png" id="108_r5yge"]
+[ext_resource type="Texture2D" uid="uid://cvm45ebs76t5g" path="res://Assets/Animations/Enemies/28军火商/call_23.png" id="109_uiinm"]
+[ext_resource type="Texture2D" uid="uid://c65mrp8g6dnll" path="res://Assets/Animations/Enemies/28军火商/call_24.png" id="110_7vca5"]
+[ext_resource type="Texture2D" uid="uid://jhro155js0r4" path="res://Assets/Animations/Enemies/28军火商/call_25.png" id="111_6kjuf"]
+[ext_resource type="Texture2D" uid="uid://687cswnkjqei" path="res://Assets/Animations/Enemies/28军火商/call_26.png" id="112_8qodi"]
+[ext_resource type="Texture2D" uid="uid://5tgopuoo42o7" path="res://Assets/Animations/Enemies/28军火商/call_27.png" id="113_tul21"]
+[ext_resource type="Texture2D" uid="uid://cvxcmmuyntccp" path="res://Assets/Animations/Enemies/28军火商/call_28.png" id="114_i3c6u"]
+[ext_resource type="Texture2D" uid="uid://dsrwp4epuc4mx" path="res://Assets/Animations/Enemies/28军火商/call_29.png" id="115_4omc4"]
+[ext_resource type="Texture2D" uid="uid://b81yrxctcqmeq" path="res://Assets/Animations/Enemies/28军火商/call_30.png" id="116_pn6pl"]
+[ext_resource type="Texture2D" uid="uid://q2vs1s2qvyv2" path="res://Assets/Animations/Enemies/28军火商/call_31.png" id="117_xjkj8"]
+[ext_resource type="Texture2D" uid="uid://crgmc8j766p2v" path="res://Assets/Animations/Enemies/28军火商/call_32.png" id="118_xwcim"]
+[ext_resource type="Texture2D" uid="uid://bakcu51phcitu" path="res://Assets/Animations/Enemies/28军火商/call_33.png" id="119_s0nmm"]
+[ext_resource type="Texture2D" uid="uid://ci57hbtkyr7bc" path="res://Assets/Animations/Enemies/28军火商/call_34.png" id="120_xqk4i"]
+[ext_resource type="Texture2D" uid="uid://lgcuwdgdkjb" path="res://Assets/Animations/Enemies/28军火商/call_35.png" id="121_8mei1"]
+[ext_resource type="Texture2D" uid="uid://b7pxgn26aavvu" path="res://Assets/Animations/Enemies/28军火商/call_36.png" id="122_gf7as"]
+[ext_resource type="Texture2D" uid="uid://reed6dky63js" path="res://Assets/Animations/Enemies/28军火商/call_37.png" id="123_uklrm"]
+[ext_resource type="Texture2D" uid="uid://bsi8wpgtbvadk" path="res://Assets/Animations/Enemies/28军火商/call_38.png" id="124_w167g"]
+[ext_resource type="Texture2D" uid="uid://dfu6dchcoxftq" path="res://Assets/Animations/Enemies/28军火商/die_00.png" id="125_5meh0"]
+[ext_resource type="Texture2D" uid="uid://5qcdrhvxdcwg" path="res://Assets/Animations/Enemies/28军火商/die_01.png" id="126_kyv62"]
+[ext_resource type="Texture2D" uid="uid://v34bhj1fthmb" path="res://Assets/Animations/Enemies/28军火商/die_02.png" id="127_ep48m"]
+[ext_resource type="Texture2D" uid="uid://b0701vuyongt5" path="res://Assets/Animations/Enemies/28军火商/die_03.png" id="128_eu87y"]
+[ext_resource type="Texture2D" uid="uid://23y22n7bfq85" path="res://Assets/Animations/Enemies/28军火商/die_04.png" id="129_g2f5i"]
+[ext_resource type="Texture2D" uid="uid://b4ic2cxpqcjch" path="res://Assets/Animations/Enemies/28军火商/die_05.png" id="130_fsfxa"]
+[ext_resource type="Texture2D" uid="uid://0qssw84geetf" path="res://Assets/Animations/Enemies/28军火商/die_06.png" id="131_v2kxg"]
+[ext_resource type="Texture2D" uid="uid://bg1shxbw2pwj5" path="res://Assets/Animations/Enemies/28军火商/die_07.png" id="132_k2egu"]
+[ext_resource type="Texture2D" uid="uid://cycnbtg1p3t3q" path="res://Assets/Animations/Enemies/28军火商/die_08.png" id="133_wfba8"]
+[ext_resource type="Texture2D" uid="uid://n5cuf3regcmy" path="res://Assets/Animations/Enemies/28军火商/die_09.png" id="134_b281w"]
+[ext_resource type="Texture2D" uid="uid://dsxr51mgxuai6" path="res://Assets/Animations/Enemies/28军火商/die_10.png" id="135_yq640"]
+[ext_resource type="Texture2D" uid="uid://jqavet5boa8" path="res://Assets/Animations/Enemies/28军火商/die_11.png" id="136_a17as"]
+[ext_resource type="Texture2D" uid="uid://klr8ls6shkfk" path="res://Assets/Animations/Enemies/28军火商/die_12.png" id="137_7obm5"]
+[ext_resource type="Texture2D" uid="uid://fh4qta7w6a4b" path="res://Assets/Animations/Enemies/28军火商/die_13.png" id="138_lkxa2"]
+[ext_resource type="Texture2D" uid="uid://s6in8lc0i6m2" path="res://Assets/Animations/Enemies/28军火商/die_14.png" id="139_1gt4a"]
+[ext_resource type="Texture2D" uid="uid://oluxn4wv1guh" path="res://Assets/Animations/Enemies/28军火商/die_15.png" id="140_6pxbj"]
+[ext_resource type="Texture2D" uid="uid://r4k3kr2tbnn" path="res://Assets/Animations/Enemies/28军火商/die_16.png" id="141_th2ca"]
+[ext_resource type="Texture2D" uid="uid://dnamsja2e0mgj" path="res://Assets/Animations/Enemies/28军火商/die_17.png" id="142_hl63e"]
+[ext_resource type="Texture2D" uid="uid://b748bgrwqob8m" path="res://Assets/Animations/Enemies/28军火商/die_18.png" id="143_5j61x"]
+[ext_resource type="Texture2D" uid="uid://v5ichbmg1v4k" path="res://Assets/Animations/Enemies/28军火商/die_19.png" id="144_hfwvk"]
+[ext_resource type="Texture2D" uid="uid://cxl5y4fbh6t2i" path="res://Assets/Animations/Enemies/28军火商/die_20.png" id="145_7gk05"]
+[ext_resource type="Texture2D" uid="uid://com4n3d3j5tim" path="res://Assets/Animations/Enemies/28军火商/die_21.png" id="146_1mehn"]
+[ext_resource type="Texture2D" uid="uid://bud2shaa7ycxg" path="res://Assets/Animations/Enemies/28军火商/die_22.png" id="147_an07e"]
+[ext_resource type="Texture2D" uid="uid://cjfibgqspfkk3" path="res://Assets/Animations/Enemies/28军火商/die_23.png" id="148_w7uln"]
+[ext_resource type="Texture2D" uid="uid://22hom4ajblyn" path="res://Assets/Animations/Enemies/28军火商/die_24.png" id="149_k2bn8"]
+[ext_resource type="Texture2D" uid="uid://b8yujteo2f6ti" path="res://Assets/Animations/Enemies/28军火商/die_25.png" id="150_0ax8h"]
+[ext_resource type="Texture2D" uid="uid://e73vbd2i2x6a" path="res://Assets/Animations/Enemies/28军火商/die_26.png" id="151_di1vo"]
+[ext_resource type="Texture2D" uid="uid://drm2lbyapjhrq" path="res://Assets/Animations/Enemies/28军火商/die_27.png" id="152_6ls36"]
+[ext_resource type="Texture2D" uid="uid://c1yp35wbs2836" path="res://Assets/Animations/Enemies/28军火商/die_28.png" id="153_byfny"]
+[ext_resource type="Texture2D" uid="uid://dwxv0a231et40" path="res://Assets/Animations/Enemies/28军火商/die_29.png" id="154_wo3qg"]
+[ext_resource type="Texture2D" uid="uid://bpu86lacw2q8y" path="res://Assets/Animations/Enemies/28军火商/die_30.png" id="155_lj5ps"]
+[ext_resource type="Texture2D" uid="uid://crfcxq507koju" path="res://Assets/Animations/Enemies/28军火商/die_31.png" id="156_1itje"]
+[ext_resource type="Texture2D" uid="uid://bfxj8hr33njge" path="res://Assets/Animations/Enemies/28军火商/die_32.png" id="157_g6hsg"]
+[ext_resource type="Texture2D" uid="uid://bdwmcvdx87t3f" path="res://Assets/Animations/Enemies/28军火商/die_33.png" id="158_oafuu"]
+[ext_resource type="Texture2D" uid="uid://ck27p2k7hxm8m" path="res://Assets/Animations/Enemies/28军火商/die_34.png" id="159_7mvy5"]
+[ext_resource type="Texture2D" uid="uid://bwbud4ulplyj8" path="res://Assets/Animations/Enemies/28军火商/die_35.png" id="160_22cbf"]
+[ext_resource type="Texture2D" uid="uid://blw5tlkfg4iid" path="res://Assets/Animations/Enemies/28军火商/die_36.png" id="161_0ib46"]
+[ext_resource type="Texture2D" uid="uid://dytp5q576xonk" path="res://Assets/Animations/Enemies/28军火商/die_37.png" id="162_2quqj"]
+[ext_resource type="Texture2D" uid="uid://deg4oin7koflb" path="res://Assets/Animations/Enemies/28军火商/die_38.png" id="163_whobp"]
+[ext_resource type="Texture2D" uid="uid://dxl12aa4xv00j" path="res://Assets/Animations/Enemies/28军火商/die_39.png" id="164_or1xu"]
+[ext_resource type="Texture2D" uid="uid://bv3uo1ksgc0kh" path="res://Assets/Animations/Enemies/28军火商/die_40.png" id="165_gfpk2"]
+[ext_resource type="Texture2D" uid="uid://08vy78y7ws85" path="res://Assets/Animations/Enemies/28军火商/die_41.png" id="166_iwiu4"]
+[ext_resource type="Texture2D" uid="uid://gqt68us42kbh" path="res://Assets/Animations/Enemies/28军火商/die_42.png" id="167_3ypjr"]
+[ext_resource type="Texture2D" uid="uid://c61p53qf1wpee" path="res://Assets/Animations/Enemies/28军火商/die_43.png" id="168_6yt5e"]
+[ext_resource type="Texture2D" uid="uid://duev8u58g66pj" path="res://Assets/Animations/Enemies/28军火商/die_44.png" id="169_h7o1j"]
+[ext_resource type="Texture2D" uid="uid://dtbdlmb1leuym" path="res://Assets/Animations/Enemies/28军火商/move_back_00.png" id="170_t8tqp"]
+[ext_resource type="Texture2D" uid="uid://d0f4qu8r7qkhq" path="res://Assets/Animations/Enemies/28军火商/move_back_01.png" id="171_cogod"]
+[ext_resource type="Texture2D" uid="uid://cbiouu4d5ipfr" path="res://Assets/Animations/Enemies/28军火商/move_back_02.png" id="172_7rvam"]
+[ext_resource type="Texture2D" uid="uid://bp66h311ibma4" path="res://Assets/Animations/Enemies/28军火商/move_back_03.png" id="173_7rk3k"]
+[ext_resource type="Texture2D" uid="uid://d8xss0mqqv35" path="res://Assets/Animations/Enemies/28军火商/move_back_04.png" id="174_j3fhd"]
+[ext_resource type="Texture2D" uid="uid://byrxnrbw278su" path="res://Assets/Animations/Enemies/28军火商/move_back_05.png" id="175_1guv3"]
+[ext_resource type="Texture2D" uid="uid://crfcjw3h3naa3" path="res://Assets/Animations/Enemies/28军火商/move_back_06.png" id="176_7jdaf"]
+[ext_resource type="Texture2D" uid="uid://bwpy5b4l5oepv" path="res://Assets/Animations/Enemies/28军火商/move_back_07.png" id="177_r7v8j"]
+[ext_resource type="Texture2D" uid="uid://cjqr6bx73e83t" path="res://Assets/Animations/Enemies/28军火商/move_back_08.png" id="178_gppld"]
+[ext_resource type="Texture2D" uid="uid://bwgymfoxh65ra" path="res://Assets/Animations/Enemies/28军火商/move_back_09.png" id="179_rr5km"]
+[ext_resource type="Texture2D" uid="uid://g04gdw8jedx6" path="res://Assets/Animations/Enemies/28军火商/move_back_10.png" id="180_b35dp"]
+[ext_resource type="Texture2D" uid="uid://ykg6dqhsn34i" path="res://Assets/Animations/Enemies/28军火商/move_back_11.png" id="181_s18ux"]
+[ext_resource type="Texture2D" uid="uid://62dk4x7vku6x" path="res://Assets/Animations/Enemies/28军火商/move_back_12.png" id="182_qv4k4"]
+[ext_resource type="Texture2D" uid="uid://c53iqrv1s5xyb" path="res://Assets/Animations/Enemies/28军火商/move_back_13.png" id="183_pp6bd"]
+[ext_resource type="Texture2D" uid="uid://dd8l8shrd8rl0" path="res://Assets/Animations/Enemies/28军火商/move_back_14.png" id="184_r6neg"]
+[ext_resource type="Texture2D" uid="uid://vr4qbs2lguds" path="res://Assets/Animations/Enemies/28军火商/move_back_15.png" id="185_pua2m"]
+[ext_resource type="Texture2D" uid="uid://bbddevgsjyiu" path="res://Assets/Animations/Enemies/28军火商/move_back_16.png" id="186_xwgsf"]
+[ext_resource type="Texture2D" uid="uid://bscw61agxntfx" path="res://Assets/Animations/Enemies/28军火商/move_back_17.png" id="187_guaw4"]
+[ext_resource type="Texture2D" uid="uid://bdsfhoeyjdbte" path="res://Assets/Animations/Enemies/28军火商/move_back_18.png" id="188_eks0l"]
+[ext_resource type="Texture2D" uid="uid://bpnk4qk377rms" path="res://Assets/Animations/Enemies/28军火商/move_back_19.png" id="189_w0y27"]
+[ext_resource type="Texture2D" uid="uid://mdf1ixvqfvm5" path="res://Assets/Animations/Enemies/28军火商/move_back_20.png" id="190_mqfyq"]
+[ext_resource type="Texture2D" uid="uid://cpyebuhlrvird" path="res://Assets/Animations/Enemies/28军火商/move_back_21.png" id="191_l00so"]
+[ext_resource type="Texture2D" uid="uid://cenedibsq026r" path="res://Assets/Animations/Enemies/28军火商/move_back_22.png" id="192_5pfss"]
+[ext_resource type="Texture2D" uid="uid://cah1a6uo2ikxe" path="res://Assets/Animations/Enemies/28军火商/move_back_23.png" id="193_mhwm5"]
+[ext_resource type="Texture2D" uid="uid://brdfe66jx06fl" path="res://Assets/Animations/Enemies/28军火商/move_back_24.png" id="194_ftw5q"]
+[ext_resource type="Texture2D" uid="uid://bxg0jtcvwgbym" path="res://Assets/Animations/Enemies/28军火商/move_back_25.png" id="195_rkxwd"]
+[ext_resource type="Texture2D" uid="uid://b6mt8kgaiwv1i" path="res://Assets/Animations/Enemies/28军火商/move_back_26.png" id="196_7c1c1"]
+[ext_resource type="Texture2D" uid="uid://dlgc5aw0brbgo" path="res://Assets/Animations/Enemies/28军火商/move_back_27.png" id="197_man0n"]
+[ext_resource type="Texture2D" uid="uid://tpi86v8i6xbj" path="res://Assets/Animations/Enemies/28军火商/move_back_28.png" id="198_k3r4o"]
+[ext_resource type="Texture2D" uid="uid://enssnq6ruhnd" path="res://Assets/Animations/Enemies/28军火商/move_back_29.png" id="199_t3bvx"]
+[ext_resource type="Texture2D" uid="uid://0h0fk05fwyuw" path="res://Assets/Animations/Enemies/28军火商/move_back_30.png" id="200_vg84i"]
+[ext_resource type="Texture2D" uid="uid://be3o7iyq4ksqv" path="res://Assets/Animations/Enemies/28军火商/move_back_31.png" id="201_idkt2"]
+[ext_resource type="Texture2D" uid="uid://bi4d7honhb8pq" path="res://Assets/Animations/Enemies/28军火商/move_back_32.png" id="202_icgjk"]
+[ext_resource type="Texture2D" uid="uid://by7sne4ib2ocs" path="res://Assets/Animations/Enemies/28军火商/move_back_33.png" id="203_wj5wm"]
+[ext_resource type="Texture2D" uid="uid://vxfrvsqv5htq" path="res://Assets/Animations/Enemies/28军火商/move_back_34.png" id="204_cifvy"]
+[ext_resource type="Texture2D" uid="uid://bwy7bkx33r1um" path="res://Assets/Animations/Enemies/28军火商/move_back_35.png" id="205_ba87j"]
+[ext_resource type="Texture2D" uid="uid://cd3cwuk41p0k" path="res://Assets/Animations/Enemies/28军火商/move_back_36.png" id="206_m2lkw"]
+[ext_resource type="Texture2D" uid="uid://dml0fe0wna1qe" path="res://Assets/Animations/Enemies/28军火商/move_back_37.png" id="207_ps3l3"]
+[ext_resource type="Texture2D" uid="uid://e3tegcb4yene" path="res://Assets/Animations/Enemies/28军火商/move_back_38.png" id="208_d638g"]
+[ext_resource type="Texture2D" uid="uid://f1buvt7hg0by" path="res://Assets/Animations/Enemies/28军火商/move_back_39.png" id="209_h20vm"]
+[ext_resource type="Texture2D" uid="uid://t66mw4ewehxc" path="res://Assets/Animations/Enemies/28军火商/move_back_40.png" id="210_ksruk"]
+[ext_resource type="Texture2D" uid="uid://ck2vfsy4rodhc" path="res://Assets/Animations/Enemies/28军火商/move_back_41.png" id="211_4wlbs"]
+[ext_resource type="Texture2D" uid="uid://dr4tymkg4l6vc" path="res://Assets/Animations/Enemies/28军火商/move_back_42.png" id="212_wemj5"]
+[ext_resource type="Texture2D" uid="uid://dxrf4otnhb510" path="res://Assets/Animations/Enemies/28军火商/move_back_43.png" id="213_076si"]
+[ext_resource type="Texture2D" uid="uid://bsiyxjt03rmm" path="res://Assets/Animations/Enemies/28军火商/move_back_44.png" id="214_ginq0"]
+[ext_resource type="Texture2D" uid="uid://bnyb0x2dfudso" path="res://Assets/Animations/Enemies/28军火商/move_back_45.png" id="215_8yk76"]
+[ext_resource type="Texture2D" uid="uid://bw6d155ar5wng" path="res://Assets/Animations/Enemies/28军火商/move_back_46.png" id="216_vn7iq"]
+[ext_resource type="Texture2D" uid="uid://bffc5fm2tnf15" path="res://Assets/Animations/Enemies/28军火商/move_back_47.png" id="217_3imfd"]
+[ext_resource type="Texture2D" uid="uid://bcnm0b05ecgel" path="res://Assets/Animations/Enemies/28军火商/move_front_00.png" id="218_8yfmk"]
+[ext_resource type="Texture2D" uid="uid://dg25iu3o062qv" path="res://Assets/Animations/Enemies/28军火商/move_front_01.png" id="219_m17eo"]
+[ext_resource type="Texture2D" uid="uid://dp1w30iuufx72" path="res://Assets/Animations/Enemies/28军火商/move_front_02.png" id="220_t6xaq"]
+[ext_resource type="Texture2D" uid="uid://656mn8sghq6t" path="res://Assets/Animations/Enemies/28军火商/move_front_03.png" id="221_llyu7"]
+[ext_resource type="Texture2D" uid="uid://b1n8p8v0qpqcg" path="res://Assets/Animations/Enemies/28军火商/move_front_04.png" id="222_b0hu6"]
+[ext_resource type="Texture2D" uid="uid://csm4hf4mrra2x" path="res://Assets/Animations/Enemies/28军火商/move_front_05.png" id="223_0ujii"]
+[ext_resource type="Texture2D" uid="uid://c5y18l7dbqhee" path="res://Assets/Animations/Enemies/28军火商/move_front_06.png" id="224_p3j7i"]
+[ext_resource type="Texture2D" uid="uid://chkpae7kp4ele" path="res://Assets/Animations/Enemies/28军火商/move_front_07.png" id="225_w0y6b"]
+[ext_resource type="Texture2D" uid="uid://cxk5o2bu0c2vj" path="res://Assets/Animations/Enemies/28军火商/move_front_08.png" id="226_4tbc6"]
+[ext_resource type="Texture2D" uid="uid://dqal3rph5022s" path="res://Assets/Animations/Enemies/28军火商/move_front_09.png" id="227_40t0w"]
+[ext_resource type="Texture2D" uid="uid://bqjvdygt5lm5r" path="res://Assets/Animations/Enemies/28军火商/move_front_10.png" id="228_edl5a"]
+[ext_resource type="Texture2D" uid="uid://duy0vj14xofxv" path="res://Assets/Animations/Enemies/28军火商/move_front_11.png" id="229_dendt"]
+[ext_resource type="Texture2D" uid="uid://ceylbxkd3uqw7" path="res://Assets/Animations/Enemies/28军火商/move_front_12.png" id="230_6ip0v"]
+[ext_resource type="Texture2D" uid="uid://3gwdvatugrot" path="res://Assets/Animations/Enemies/28军火商/move_front_13.png" id="231_5xc5l"]
+[ext_resource type="Texture2D" uid="uid://cg338ajc4d5u6" path="res://Assets/Animations/Enemies/28军火商/move_front_14.png" id="232_nuh4p"]
+[ext_resource type="Texture2D" uid="uid://358lom8s8itt" path="res://Assets/Animations/Enemies/28军火商/move_front_15.png" id="233_vib74"]
+[ext_resource type="Texture2D" uid="uid://bd1vfvs8m7mbq" path="res://Assets/Animations/Enemies/28军火商/move_front_16.png" id="234_3srnp"]
+[ext_resource type="Texture2D" uid="uid://d1ei8m4mm8tph" path="res://Assets/Animations/Enemies/28军火商/move_front_17.png" id="235_pcktj"]
+[ext_resource type="Texture2D" uid="uid://doyq4plt2gkvg" path="res://Assets/Animations/Enemies/28军火商/move_front_18.png" id="236_a1ng5"]
+[ext_resource type="Texture2D" uid="uid://qi5c5f8wjcxa" path="res://Assets/Animations/Enemies/28军火商/move_front_19.png" id="237_bsm25"]
+[ext_resource type="Texture2D" uid="uid://ckfn4yv5fpyod" path="res://Assets/Animations/Enemies/28军火商/move_front_20.png" id="238_cqwtg"]
+[ext_resource type="Texture2D" uid="uid://c7rajvip64w6j" path="res://Assets/Animations/Enemies/28军火商/move_front_21.png" id="239_1hms4"]
+[ext_resource type="Texture2D" uid="uid://clu7v6fdliptr" path="res://Assets/Animations/Enemies/28军火商/move_front_22.png" id="240_c70y5"]
+[ext_resource type="Texture2D" uid="uid://cbvac8w416vvb" path="res://Assets/Animations/Enemies/28军火商/move_front_23.png" id="241_j83lg"]
+[ext_resource type="Texture2D" uid="uid://b8q731e4skwny" path="res://Assets/Animations/Enemies/28军火商/move_front_24.png" id="242_crgs0"]
+[ext_resource type="Texture2D" uid="uid://catbdrqlqvqgr" path="res://Assets/Animations/Enemies/28军火商/move_front_25.png" id="243_drvmw"]
+[ext_resource type="Texture2D" uid="uid://dsue5xwr7tdxb" path="res://Assets/Animations/Enemies/28军火商/move_front_26.png" id="244_ikqcd"]
+[ext_resource type="Texture2D" uid="uid://dw1mnn5ubgv3i" path="res://Assets/Animations/Enemies/28军火商/move_front_27.png" id="245_ogeaq"]
+[ext_resource type="Texture2D" uid="uid://cbthdhr6xcah0" path="res://Assets/Animations/Enemies/28军火商/move_front_28.png" id="246_ptby6"]
+[ext_resource type="Texture2D" uid="uid://djov2jecbe384" path="res://Assets/Animations/Enemies/28军火商/move_front_29.png" id="247_i6vks"]
+[ext_resource type="Texture2D" uid="uid://fgvfpuetts8p" path="res://Assets/Animations/Enemies/28军火商/move_front_30.png" id="248_1lmrj"]
+[ext_resource type="Texture2D" uid="uid://dcntigj8fe3f5" path="res://Assets/Animations/Enemies/28军火商/move_front_31.png" id="249_mgkxg"]
+[ext_resource type="Texture2D" uid="uid://bhgxndscsrqpu" path="res://Assets/Animations/Enemies/28军火商/move_front_32.png" id="250_kr5r5"]
+[ext_resource type="Texture2D" uid="uid://dmpbxoxpqf66q" path="res://Assets/Animations/Enemies/28军火商/move_front_33.png" id="251_t5tfv"]
+[ext_resource type="Texture2D" uid="uid://ceeay2d6wwd2l" path="res://Assets/Animations/Enemies/28军火商/move_front_34.png" id="252_giblh"]
+[ext_resource type="Texture2D" uid="uid://dk7fna23n5vvx" path="res://Assets/Animations/Enemies/28军火商/move_front_35.png" id="253_bpcy2"]
+[ext_resource type="Texture2D" uid="uid://ce0s1aq30qtfc" path="res://Assets/Animations/Enemies/28军火商/move_front_36.png" id="254_tac2g"]
+[ext_resource type="Texture2D" uid="uid://r0qpv8g3ixit" path="res://Assets/Animations/Enemies/28军火商/move_front_37.png" id="255_n3l5k"]
+[ext_resource type="Texture2D" uid="uid://cymta3x6tcehn" path="res://Assets/Animations/Enemies/28军火商/move_front_38.png" id="256_kafmk"]
+[ext_resource type="Texture2D" uid="uid://68jnc8batups" path="res://Assets/Animations/Enemies/28军火商/move_front_39.png" id="257_j08e0"]
+[ext_resource type="Texture2D" uid="uid://dlia21jyyeoi5" path="res://Assets/Animations/Enemies/28军火商/move_front_40.png" id="258_mwaht"]
+[ext_resource type="Texture2D" uid="uid://bvofaun4x0w4i" path="res://Assets/Animations/Enemies/28军火商/move_front_41.png" id="259_5jwya"]
+[ext_resource type="Texture2D" uid="uid://dgm36r5pmxbdo" path="res://Assets/Animations/Enemies/28军火商/move_front_42.png" id="260_27r8s"]
+[ext_resource type="Texture2D" uid="uid://cx0h6to75qxcn" path="res://Assets/Animations/Enemies/28军火商/move_front_43.png" id="261_1hex4"]
+[ext_resource type="Texture2D" uid="uid://buysw43o7yqe4" path="res://Assets/Animations/Enemies/28军火商/move_front_44.png" id="262_sm0w5"]
+[ext_resource type="Texture2D" uid="uid://c288o4v1levqa" path="res://Assets/Animations/Enemies/28军火商/move_front_45.png" id="263_qi3hi"]
+[ext_resource type="Texture2D" uid="uid://bolfaj15dac88" path="res://Assets/Animations/Enemies/28军火商/move_front_46.png" id="264_rntwm"]
+[ext_resource type="Texture2D" uid="uid://dbspl0my8vluh" path="res://Assets/Animations/Enemies/28军火商/move_front_47.png" id="265_axodk"]
+[ext_resource type="Texture2D" uid="uid://cppt5pels0635" path="res://Assets/Animations/Enemies/28军火商/move_normal_00.png" id="266_k2677"]
+[ext_resource type="Texture2D" uid="uid://cw1j2neymxo2g" path="res://Assets/Animations/Enemies/28军火商/move_normal_01.png" id="267_agk67"]
+[ext_resource type="Texture2D" uid="uid://bv4tvpjc47y2s" path="res://Assets/Animations/Enemies/28军火商/move_normal_02.png" id="268_1w7bg"]
+[ext_resource type="Texture2D" uid="uid://bm6swpc4nk30h" path="res://Assets/Animations/Enemies/28军火商/move_normal_03.png" id="269_mojfg"]
+[ext_resource type="Texture2D" uid="uid://co7073lgoaonj" path="res://Assets/Animations/Enemies/28军火商/move_normal_04.png" id="270_2ota6"]
+[ext_resource type="Texture2D" uid="uid://cngo0mi55nq6v" path="res://Assets/Animations/Enemies/28军火商/move_normal_05.png" id="271_dmkkv"]
+[ext_resource type="Texture2D" uid="uid://kiws5nqpjqkm" path="res://Assets/Animations/Enemies/28军火商/move_normal_06.png" id="272_amwv5"]
+[ext_resource type="Texture2D" uid="uid://c3o7oamq087jb" path="res://Assets/Animations/Enemies/28军火商/move_normal_07.png" id="273_og84i"]
+[ext_resource type="Texture2D" uid="uid://86g8gfg3y5yi" path="res://Assets/Animations/Enemies/28军火商/move_normal_08.png" id="274_k71oq"]
+[ext_resource type="Texture2D" uid="uid://da5as8afe85jv" path="res://Assets/Animations/Enemies/28军火商/move_normal_09.png" id="275_hranh"]
+[ext_resource type="Texture2D" uid="uid://c86hch1vg00f7" path="res://Assets/Animations/Enemies/28军火商/move_normal_10.png" id="276_mtu31"]
+[ext_resource type="Texture2D" uid="uid://dufh7dd5ngdop" path="res://Assets/Animations/Enemies/28军火商/move_normal_11.png" id="277_0cxjt"]
+[ext_resource type="Texture2D" uid="uid://dt6q38ywjj8u8" path="res://Assets/Animations/Enemies/28军火商/move_normal_12.png" id="278_4am2b"]
+[ext_resource type="Texture2D" uid="uid://bxbx5xprxdtrr" path="res://Assets/Animations/Enemies/28军火商/move_normal_13.png" id="279_v0rq4"]
+[ext_resource type="Texture2D" uid="uid://dgv4nag42d5cq" path="res://Assets/Animations/Enemies/28军火商/move_normal_14.png" id="280_ie2r5"]
+[ext_resource type="Texture2D" uid="uid://dcudjt4twpe5k" path="res://Assets/Animations/Enemies/28军火商/move_normal_15.png" id="281_c8x4l"]
+[ext_resource type="Texture2D" uid="uid://vqh2bnfc62gb" path="res://Assets/Animations/Enemies/28军火商/move_normal_16.png" id="282_llo2f"]
+[ext_resource type="Texture2D" uid="uid://duicisdqrviwb" path="res://Assets/Animations/Enemies/28军火商/move_normal_17.png" id="283_2ewal"]
+[ext_resource type="Texture2D" uid="uid://dsytduqjon4oc" path="res://Assets/Animations/Enemies/28军火商/move_normal_18.png" id="284_qi1us"]
+[ext_resource type="Texture2D" uid="uid://cptafkb8r4n4x" path="res://Assets/Animations/Enemies/28军火商/move_normal_19.png" id="285_okbg5"]
+[ext_resource type="Texture2D" uid="uid://cu3ek1ulggceg" path="res://Assets/Animations/Enemies/28军火商/move_normal_20.png" id="286_xh1pc"]
+[ext_resource type="Texture2D" uid="uid://dyb1sa284mg2j" path="res://Assets/Animations/Enemies/28军火商/move_normal_21.png" id="287_0gddj"]
+[ext_resource type="Texture2D" uid="uid://bn8qmt8p77ywo" path="res://Assets/Animations/Enemies/28军火商/move_normal_22.png" id="288_wuqdy"]
+[ext_resource type="Texture2D" uid="uid://ckae708dvf2cv" path="res://Assets/Animations/Enemies/28军火商/move_normal_23.png" id="289_5ud42"]
+[ext_resource type="Texture2D" uid="uid://dyd66ngrfydu" path="res://Assets/Animations/Enemies/28军火商/move_normal_24.png" id="290_337jr"]
+[ext_resource type="Texture2D" uid="uid://d0vbnkva0cs1q" path="res://Assets/Animations/Enemies/28军火商/move_normal_25.png" id="291_g2vkq"]
+[ext_resource type="Texture2D" uid="uid://bsejlye6lo5fs" path="res://Assets/Animations/Enemies/28军火商/move_normal_26.png" id="292_jo37e"]
+[ext_resource type="Texture2D" uid="uid://dhh7j7jibnwcs" path="res://Assets/Animations/Enemies/28军火商/move_normal_27.png" id="293_6j171"]
+[ext_resource type="Texture2D" uid="uid://dh8kh1afdhtw0" path="res://Assets/Animations/Enemies/28军火商/move_normal_28.png" id="294_ccn5v"]
+[ext_resource type="Texture2D" uid="uid://cuhhs6jamij5c" path="res://Assets/Animations/Enemies/28军火商/move_normal_29.png" id="295_mi5l3"]
+[ext_resource type="Texture2D" uid="uid://dgodsjub21tu0" path="res://Assets/Animations/Enemies/28军火商/move_normal_30.png" id="296_smnu0"]
+[ext_resource type="Texture2D" uid="uid://c12pnibgu3j1u" path="res://Assets/Animations/Enemies/28军火商/move_normal_31.png" id="297_hr0ih"]
+[ext_resource type="Texture2D" uid="uid://ewrmcrfxi0nt" path="res://Assets/Animations/Enemies/28军火商/move_normal_32.png" id="298_0m164"]
+[ext_resource type="Texture2D" uid="uid://bpkyr12te84s1" path="res://Assets/Animations/Enemies/28军火商/move_normal_33.png" id="299_71m3e"]
+[ext_resource type="Texture2D" uid="uid://cnroen7r0v3de" path="res://Assets/Animations/Enemies/28军火商/move_normal_34.png" id="300_vjh3b"]
+[ext_resource type="Texture2D" uid="uid://1537x5flyh0a" path="res://Assets/Animations/Enemies/28军火商/move_normal_35.png" id="301_gqw1r"]
+[ext_resource type="Texture2D" uid="uid://y7fgjl4gog7h" path="res://Assets/Animations/Enemies/28军火商/move_normal_36.png" id="302_4o27q"]
+[ext_resource type="Texture2D" uid="uid://bujijdow0pake" path="res://Assets/Animations/Enemies/28军火商/move_normal_37.png" id="303_b7myg"]
+[ext_resource type="Texture2D" uid="uid://c1h07cweu25g0" path="res://Assets/Animations/Enemies/28军火商/move_normal_38.png" id="304_5u765"]
+[ext_resource type="Texture2D" uid="uid://cajlkr74ser3i" path="res://Assets/Animations/Enemies/28军火商/move_normal_39.png" id="305_3qp6j"]
+[ext_resource type="Texture2D" uid="uid://wcunfmrdvdec" path="res://Assets/Animations/Enemies/28军火商/move_normal_40.png" id="306_2soqa"]
+[ext_resource type="Texture2D" uid="uid://b56te8yxy7l0y" path="res://Assets/Animations/Enemies/28军火商/move_normal_41.png" id="307_uj1g8"]
+[ext_resource type="Texture2D" uid="uid://r0xqfldkqgoo" path="res://Assets/Animations/Enemies/28军火商/move_normal_42.png" id="308_4x405"]
+[ext_resource type="Texture2D" uid="uid://ck6vncu630vba" path="res://Assets/Animations/Enemies/28军火商/move_normal_43.png" id="309_4tkqm"]
+[ext_resource type="Texture2D" uid="uid://csdarpjbic8na" path="res://Assets/Animations/Enemies/28军火商/move_normal_44.png" id="310_nabe1"]
+[ext_resource type="Texture2D" uid="uid://cstw42e7ru8ek" path="res://Assets/Animations/Enemies/28军火商/move_normal_45.png" id="311_m3x5c"]
+[ext_resource type="Texture2D" uid="uid://ciclrf3t72xfk" path="res://Assets/Animations/Enemies/28军火商/move_normal_46.png" id="312_lkicm"]
+[ext_resource type="Texture2D" uid="uid://da4nevqq6qx5k" path="res://Assets/Animations/Enemies/28军火商/move_normal_47.png" id="313_a8rf6"]
+[ext_resource type="AudioStream" uid="uid://cq8syj0jgau6u" path="res://Assets/Sounds/FXs/Enemies/军火商/流浪商人技能2.wav" id="318_ysy7n"]
+
+[sub_resource type="Resource" id="Resource_ckl18"]
+script = ExtResource("4_7lhgr")
+health = 400
+dodge_rate = 0.0
+near_damage_low = 2
+near_damage_high = 4
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.0
+physic_immune = false
+magic_defence = 0.7
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 0.5
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fx5ra"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_q4trw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_3fxvu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_gnaii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_w2kvd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cjtjk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_5rcre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_0ygxc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_6iv2c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_fjvrk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_cbv1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_wb2ra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_te1aj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_x5esm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_nctf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_3xk8r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_akdcs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_eciwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_1uv6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_rex3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ssxdu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_5kehc")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_ijyx0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_0vnbi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_vmwxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_8fb23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_slk4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_ual2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_gta64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_6er7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_kun00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_hvs5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_qa0tp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_jew41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_kmx1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_gsgtn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_w5tgf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_o2kap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_tbqyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_2w7j2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_cylcg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_u5u3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_s7hbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_8i7wy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_7uxhh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_10kp5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_hbe3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_hkopa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_ic6lv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_shdds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_k2wm4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_lcex2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_g43xc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_kxafy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_u8v4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_7otjp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_883su")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_oa6as")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_28ayx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_ksj77")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_6xcvi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_8hx4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_k6nq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_pq426")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_bd67r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_23lo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_kooda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_gtfl4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_6yard")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_mr6u1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_driyk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_vw0q8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_hjqhu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_c5cmf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_pbhpq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_ihhro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_u3dt0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_uvldj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_15uih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_d8l4d")
+}],
+"loop": false,
+"name": &"buy",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("86_yqki7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_8t1i0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_ehjql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_cnvge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_yo3h8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_aw64p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_d4axw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_q1fk7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_uhcik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_ici72")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_d11m5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_lfxqc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_ge4dw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_pd0ct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_y13p6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_kwtrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_4bydj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_kh4uo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_7p7hn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_afwje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_nabtt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_ai8bw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_r5yge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_uiinm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_7vca5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_6kjuf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_8qodi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_tul21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_i3c6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_4omc4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_pn6pl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_xjkj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_xwcim")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_s0nmm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_xqk4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_8mei1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_gf7as")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_uklrm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_w167g")
+}],
+"loop": false,
+"name": &"call",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("125_5meh0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_kyv62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_ep48m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_eu87y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_g2f5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_fsfxa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_v2kxg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_k2egu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_wfba8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_b281w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_yq640")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_a17as")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_7obm5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_lkxa2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_1gt4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_6pxbj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_th2ca")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_hl63e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_5j61x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_hfwvk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_7gk05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_1mehn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_an07e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_w7uln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_k2bn8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_0ax8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_di1vo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_6ls36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_byfny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_wo3qg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_lj5ps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_1itje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_g6hsg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("158_oafuu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_7mvy5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_22cbf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_0ib46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_2quqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_whobp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_or1xu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_gfpk2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("166_iwiu4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("167_3ypjr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("168_6yt5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("169_h7o1j")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_q4trw")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("170_t8tqp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("171_cogod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_7rvam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("173_7rk3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_j3fhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("175_1guv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("176_7jdaf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("177_r7v8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("178_gppld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("179_rr5km")
+}, {
+"duration": 1.0,
+"texture": ExtResource("180_b35dp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("181_s18ux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("182_qv4k4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("183_pp6bd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("184_r6neg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("185_pua2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("186_xwgsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("187_guaw4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("188_eks0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("189_w0y27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("190_mqfyq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("191_l00so")
+}, {
+"duration": 1.0,
+"texture": ExtResource("192_5pfss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("193_mhwm5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("194_ftw5q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("195_rkxwd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("196_7c1c1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("197_man0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("198_k3r4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("199_t3bvx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("200_vg84i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("201_idkt2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("202_icgjk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("203_wj5wm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("204_cifvy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("205_ba87j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("206_m2lkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("207_ps3l3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("208_d638g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("209_h20vm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("210_ksruk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("211_4wlbs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("212_wemj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("213_076si")
+}, {
+"duration": 1.0,
+"texture": ExtResource("214_ginq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("215_8yk76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("216_vn7iq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("217_3imfd")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("218_8yfmk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("219_m17eo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("220_t6xaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("221_llyu7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("222_b0hu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("223_0ujii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("224_p3j7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("225_w0y6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("226_4tbc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("227_40t0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("228_edl5a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("229_dendt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("230_6ip0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("231_5xc5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("232_nuh4p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("233_vib74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("234_3srnp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("235_pcktj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("236_a1ng5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("237_bsm25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("238_cqwtg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("239_1hms4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("240_c70y5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("241_j83lg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("242_crgs0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("243_drvmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("244_ikqcd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("245_ogeaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("246_ptby6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("247_i6vks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("248_1lmrj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("249_mgkxg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("250_kr5r5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("251_t5tfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("252_giblh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("253_bpcy2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("254_tac2g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("255_n3l5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("256_kafmk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("257_j08e0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("258_mwaht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("259_5jwya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("260_27r8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("261_1hex4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("262_sm0w5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("263_qi3hi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("264_rntwm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("265_axodk")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("266_k2677")
+}, {
+"duration": 1.0,
+"texture": ExtResource("267_agk67")
+}, {
+"duration": 1.0,
+"texture": ExtResource("268_1w7bg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("269_mojfg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("270_2ota6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("271_dmkkv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("272_amwv5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("273_og84i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("274_k71oq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("275_hranh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("276_mtu31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("277_0cxjt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("278_4am2b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("279_v0rq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("280_ie2r5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("281_c8x4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("282_llo2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("283_2ewal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("284_qi1us")
+}, {
+"duration": 1.0,
+"texture": ExtResource("285_okbg5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("286_xh1pc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("287_0gddj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("288_wuqdy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("289_5ud42")
+}, {
+"duration": 1.0,
+"texture": ExtResource("290_337jr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("291_g2vkq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("292_jo37e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("293_6j171")
+}, {
+"duration": 1.0,
+"texture": ExtResource("294_ccn5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("295_mi5l3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("296_smnu0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("297_hr0ih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("298_0m164")
+}, {
+"duration": 1.0,
+"texture": ExtResource("299_71m3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("300_vjh3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("301_gqw1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("302_4o27q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("303_b7myg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("304_5u765")
+}, {
+"duration": 1.0,
+"texture": ExtResource("305_3qp6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("306_2soqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("307_uj1g8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("308_4x405")
+}, {
+"duration": 1.0,
+"texture": ExtResource("309_4tkqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("310_nabe1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("311_m3x5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("312_lkicm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("313_a8rf6")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 24.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v36ro"]
+radius = 5.0
+
+[node name="Enemy28" instance=ExtResource("1_q4osr")]
+script = ExtResource("2_jb0u8")
+skill_audio_list = Array[AudioStream]([ExtResource("318_ysy7n"), ExtResource("4_w53yj")])
+enemy_name = "军火商"
+enemy_id = 28
+enemy_texture = ExtResource("3_25270")
+start_data = SubResource("Resource_ckl18")
+lives_taken = 3
+bounty = 40
+die_audio_stream_list = Array[AudioStream]([ExtResource("5_n0idp"), ExtResource("6_m12kd")])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(3.8147e-06, -85)
+sprite_frames = SubResource("SpriteFrames_fx5ra")
+autoplay = "idle"
+
+[node name="DieAudio" parent="." index="3"]
+stream = ExtResource("5_n0idp")
+pitch_scale = 0.7
+
+[node name="AppearAudioComponent" parent="." index="5" instance=ExtResource("7_appeb")]
+appear_audio_list = Array[AudioStream]([ExtResource("8_ip505"), ExtResource("9_xsps7"), ExtResource("10_xbedl")])
+
+[node name="AppearAudioPlayer" parent="AppearAudioComponent" index="0"]
+stream = ExtResource("10_xbedl")
+pitch_scale = 0.7
+
+[node name="SummonArea1" type="Area2D" parent="." index="6"]
+position = Vector2(-28, 0)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SummonArea1" index="0"]
+shape = SubResource("CircleShape2D_v36ro")
+
+[node name="SummonArea2" type="Area2D" parent="." index="7"]
+position = Vector2(28, 0)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SummonArea2" index="0"]
+shape = SubResource("CircleShape2D_v36ro")
+
+[node name="SummonArea3" type="Area2D" parent="." index="8"]
+position = Vector2(0, 30)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SummonArea3" index="0"]
+shape = SubResource("CircleShape2D_v36ro")
+
+[node name="SummonArea4" type="Area2D" parent="." index="9"]
+position = Vector2(0, -30)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SummonArea4" index="0"]
+shape = SubResource("CircleShape2D_v36ro")
+
+[node name="SummonTimer" type="Timer" parent="." index="10"]
+wait_time = 16.0
+one_shot = true
+autostart = true
+
+[node name="BuyTimer" type="Timer" parent="." index="11"]
+wait_time = 2.0
+one_shot = true
+
+[node name="SkillAudio" type="AudioStreamPlayer" parent="." index="12"]
+stream = ExtResource("318_ysy7n")
+pitch_scale = 0.8
+bus = &"Sound"
+
+[editable path="AppearAudioComponent"]

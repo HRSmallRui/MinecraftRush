@@ -1,0 +1,100 @@
+[gd_scene load_steps=11 format=3 uid="uid://b6l5ggsar3vu"]
+
+[ext_resource type="PackedScene" uid="uid://f1vaqnehc211" path="res://Scenes/Allys/Reinforcements/reinforcement_class.tscn" id="1_qf1xv"]
+[ext_resource type="Script" path="res://Scripts/Allys/Reinfrocements/destroyer.gd" id="2_77r56"]
+[ext_resource type="Texture2D" uid="uid://cp7odh63hbkj8" path="res://Assets/Images/UI/InformationBar/破灭者.png" id="3_37yd0"]
+[ext_resource type="SpriteFrames" uid="uid://debo54ykls2n7" path="res://Assets/Animations/Reinforcer/destroyer.tres" id="3_v8qhe"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="4_d5akq"]
+[ext_resource type="AudioStream" uid="uid://4rynle0uq7dy" path="res://Assets/Sounds/FXs/落地.wav" id="6_cfpf0"]
+[ext_resource type="AudioStream" uid="uid://b1qce1o4ia1m1" path="res://Assets/Sounds/FXs/Battles/aoe_hit.wav" id="7_hoqyf"]
+
+[sub_resource type="Resource" id="Resource_a17tj"]
+script = ExtResource("4_d5akq")
+health = 300
+dodge_rate = 0.0
+near_damage_low = 20
+near_damage_high = 25
+near_attack_speed = 2.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.4
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 1.5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yg13w"]
+size = Vector2(120, 155)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1kar6"]
+radius = 73.9444
+
+[node name="Destroyer" instance=ExtResource("1_qf1xv")]
+script = ExtResource("2_77r56")
+reinforce_level = 5
+reinforce_animation_list = Array[SpriteFrames]([ExtResource("3_v8qhe")])
+reinforce_headtex_list = Array[Texture]([ExtResource("3_37yd0")])
+reinforce_name_list = Array[PackedStringArray]([PackedStringArray("破灭者")])
+ally_id = 1
+ally_name = "破灭者"
+ally_texture = ExtResource("3_37yd0")
+ally_type = 1
+start_data = SubResource("Resource_a17tj")
+intercepting_range = 200
+heal_speed = 20
+rebirth_time = 15
+
+[node name="AllySprite" parent="UnitBody" index="0"]
+position = Vector2(10, -180)
+sprite_frames = ExtResource("3_v8qhe")
+animation = &"attack"
+autoplay = "idle"
+
+[node name="CollisionShape2D" parent="UnitBody" index="1"]
+position = Vector2(0, -67.5)
+shape = SubResource("RectangleShape2D_yg13w")
+
+[node name="HurtBox" parent="UnitBody" index="2"]
+position = Vector2(0, -100)
+scale = Vector2(9.41955, 9.41955)
+
+[node name="SelectSprite" parent="UnitBody" index="3"]
+scale = Vector2(5.04044, 5.04044)
+
+[node name="AllyButton" parent="UnitBody" index="4"]
+offset_left = -73.0
+offset_top = -220.0
+offset_right = 75.0
+
+[node name="HealthBar" parent="UnitBody" index="5"]
+offset_left = -130.0
+offset_top = -255.0
+offset_right = 170.0
+offset_bottom = -246.0
+scale = Vector2(0.882891, 1.88085)
+
+[node name="AttackArea" type="Area2D" parent="UnitBody" index="10"]
+position = Vector2(160, 0)
+scale = Vector2(0.5, 0.5)
+collision_layer = 0
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/AttackArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_1kar6")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="AppearAudio" type="AudioStreamPlayer" parent="." index="6"]
+stream = ExtResource("6_cfpf0")
+bus = &"Sound"
+
+[node name="AoeHitAudio" type="AudioStreamPlayer" parent="." index="7"]
+stream = ExtResource("7_hoqyf")
+volume_db = -2.0
+bus = &"Sound"

@@ -1,0 +1,535 @@
+[gd_scene load_steps=121 format=3 uid="uid://cmwosu03bhpc3"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_acn15"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_24.gd" id="2_q2y7q"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="3_1q88t"]
+[ext_resource type="Texture2D" uid="uid://jkm6ac457ngq" path="res://Assets/Images/UI/InformationBar/沙漠守卫.png" id="3_f0o8v"]
+[ext_resource type="Texture2D" uid="uid://c10cx6856ihpq" path="res://Assets/Animations/Enemies/24沙漠守卫/attack_00.png" id="5_aed35"]
+[ext_resource type="Texture2D" uid="uid://bk0xp3r1l6pxk" path="res://Assets/Animations/Enemies/24沙漠守卫/attack_01.png" id="6_unaje"]
+[ext_resource type="Texture2D" uid="uid://4efloo860ip" path="res://Assets/Animations/Enemies/24沙漠守卫/attack_02.png" id="7_pnqqp"]
+[ext_resource type="Texture2D" uid="uid://u2ff631a0k37" path="res://Assets/Animations/Enemies/24沙漠守卫/attack_03.png" id="8_r1mv0"]
+[ext_resource type="Texture2D" uid="uid://c0lo45vjfk8be" path="res://Assets/Animations/Enemies/24沙漠守卫/attack_04.png" id="9_5u178"]
+[ext_resource type="Texture2D" uid="uid://c8ygqjvqlglvn" path="res://Assets/Animations/Enemies/24沙漠守卫/attack_05.png" id="10_w41r2"]
+[ext_resource type="Texture2D" uid="uid://e1umkpdy1rmc" path="res://Assets/Animations/Enemies/24沙漠守卫/attack_06.png" id="11_qegc7"]
+[ext_resource type="Texture2D" uid="uid://rqdjwn3oajlq" path="res://Assets/Animations/Enemies/24沙漠守卫/attack_07.png" id="12_4uygy"]
+[ext_resource type="Texture2D" uid="uid://dbv7qbcing0bv" path="res://Assets/Animations/Enemies/24沙漠守卫/attack_08.png" id="13_jhgwo"]
+[ext_resource type="Texture2D" uid="uid://brl8tetpb280o" path="res://Assets/Animations/Enemies/24沙漠守卫/attack_09.png" id="14_qxys0"]
+[ext_resource type="Texture2D" uid="uid://cllmjfbr75pq2" path="res://Assets/Animations/Enemies/24沙漠守卫/attack_10.png" id="15_g86sq"]
+[ext_resource type="Texture2D" uid="uid://damu8dko4k8ao" path="res://Assets/Animations/Enemies/24沙漠守卫/attack_11.png" id="16_bxnqx"]
+[ext_resource type="Texture2D" uid="uid://crbrcba21nvq0" path="res://Assets/Animations/Enemies/24沙漠守卫/attack_12.png" id="17_c0ad5"]
+[ext_resource type="Texture2D" uid="uid://caseacdkw2xn4" path="res://Assets/Animations/Enemies/24沙漠守卫/attack_13.png" id="18_ex5dr"]
+[ext_resource type="Texture2D" uid="uid://b1pfxwacbctci" path="res://Assets/Animations/Enemies/24沙漠守卫/attack_14.png" id="19_drfkl"]
+[ext_resource type="Texture2D" uid="uid://bpxfiem0c22sf" path="res://Assets/Animations/Enemies/24沙漠守卫/attack_15.png" id="20_ymxea"]
+[ext_resource type="Texture2D" uid="uid://bul4ba2gmdirv" path="res://Assets/Animations/Enemies/24沙漠守卫/attack_16.png" id="21_xdham"]
+[ext_resource type="Texture2D" uid="uid://do2c042lktuua" path="res://Assets/Animations/Enemies/24沙漠守卫/attack_17.png" id="22_jqd8s"]
+[ext_resource type="Texture2D" uid="uid://cwpswntmflnfi" path="res://Assets/Animations/Enemies/24沙漠守卫/attack_18.png" id="23_1s16a"]
+[ext_resource type="Texture2D" uid="uid://bdbwsobknmqgt" path="res://Assets/Animations/Enemies/24沙漠守卫/attack_19.png" id="24_541xq"]
+[ext_resource type="Texture2D" uid="uid://dvujahju6kbwp" path="res://Assets/Animations/Enemies/24沙漠守卫/attack_20.png" id="25_otjlg"]
+[ext_resource type="Texture2D" uid="uid://brqpqt1xc3nl0" path="res://Assets/Animations/Enemies/24沙漠守卫/die_00.png" id="26_p7s76"]
+[ext_resource type="Texture2D" uid="uid://cpkrqpl3dqef6" path="res://Assets/Animations/Enemies/24沙漠守卫/die_01.png" id="27_p57s1"]
+[ext_resource type="Texture2D" uid="uid://bbjug66vw5jh0" path="res://Assets/Animations/Enemies/24沙漠守卫/die_02.png" id="28_r2i8k"]
+[ext_resource type="Texture2D" uid="uid://c7hqmqekjyoi7" path="res://Assets/Animations/Enemies/24沙漠守卫/die_03.png" id="29_v2gj0"]
+[ext_resource type="Texture2D" uid="uid://bdjr1wbpu4far" path="res://Assets/Animations/Enemies/24沙漠守卫/die_04.png" id="30_jb2g1"]
+[ext_resource type="Texture2D" uid="uid://d0nv4ifqrg2r0" path="res://Assets/Animations/Enemies/24沙漠守卫/die_05.png" id="31_tp0tg"]
+[ext_resource type="Texture2D" uid="uid://dfw0xio3dm58f" path="res://Assets/Animations/Enemies/24沙漠守卫/die_06.png" id="32_d28qi"]
+[ext_resource type="Texture2D" uid="uid://bj02gao1r8fr4" path="res://Assets/Animations/Enemies/24沙漠守卫/die_07.png" id="33_u07aa"]
+[ext_resource type="Texture2D" uid="uid://voymf2tgj417" path="res://Assets/Animations/Enemies/24沙漠守卫/die_08.png" id="34_2xagu"]
+[ext_resource type="Texture2D" uid="uid://b4o35qeu5qk6i" path="res://Assets/Animations/Enemies/24沙漠守卫/die_09.png" id="35_vktvh"]
+[ext_resource type="Texture2D" uid="uid://5r77eg1jchbq" path="res://Assets/Animations/Enemies/24沙漠守卫/die_10.png" id="36_twj4y"]
+[ext_resource type="Texture2D" uid="uid://cg8ckmhdyd2xa" path="res://Assets/Animations/Enemies/24沙漠守卫/die_11.png" id="37_643tt"]
+[ext_resource type="Texture2D" uid="uid://clvoafwu3yftn" path="res://Assets/Animations/Enemies/24沙漠守卫/die_12.png" id="38_bhilw"]
+[ext_resource type="Texture2D" uid="uid://y2a5h0nic5be" path="res://Assets/Animations/Enemies/24沙漠守卫/die_13.png" id="39_mtoj1"]
+[ext_resource type="Texture2D" uid="uid://d3buewudqfg0m" path="res://Assets/Animations/Enemies/24沙漠守卫/die_14.png" id="40_i1wml"]
+[ext_resource type="Texture2D" uid="uid://bjd48f8wjl27s" path="res://Assets/Animations/Enemies/24沙漠守卫/die_15.png" id="41_40ec5"]
+[ext_resource type="Texture2D" uid="uid://cgl11jigix3gw" path="res://Assets/Animations/Enemies/24沙漠守卫/die_16.png" id="42_7ai8e"]
+[ext_resource type="Texture2D" uid="uid://cw5ubnboeg3iy" path="res://Assets/Animations/Enemies/24沙漠守卫/die_17.png" id="43_cu3ys"]
+[ext_resource type="Texture2D" uid="uid://daxhtjhnlvrk" path="res://Assets/Animations/Enemies/24沙漠守卫/die_18.png" id="44_06cht"]
+[ext_resource type="Texture2D" uid="uid://jo8elxfexqhk" path="res://Assets/Animations/Enemies/24沙漠守卫/die_19.png" id="45_sx6k4"]
+[ext_resource type="Texture2D" uid="uid://by1mncjde4rn7" path="res://Assets/Animations/Enemies/24沙漠守卫/move_back_00.png" id="46_fw7xd"]
+[ext_resource type="Texture2D" uid="uid://dwa6g77tf5pbr" path="res://Assets/Animations/Enemies/24沙漠守卫/move_back_01.png" id="47_mq4k8"]
+[ext_resource type="Texture2D" uid="uid://bn8mcqp0l4wxo" path="res://Assets/Animations/Enemies/24沙漠守卫/move_back_02.png" id="48_euuff"]
+[ext_resource type="Texture2D" uid="uid://cbibbpiw4un3g" path="res://Assets/Animations/Enemies/24沙漠守卫/move_back_03.png" id="49_1v424"]
+[ext_resource type="Texture2D" uid="uid://bltrrlevhlbai" path="res://Assets/Animations/Enemies/24沙漠守卫/move_back_04.png" id="50_ojkxj"]
+[ext_resource type="Texture2D" uid="uid://ivo7fqu2kcn8" path="res://Assets/Animations/Enemies/24沙漠守卫/move_back_05.png" id="51_dou52"]
+[ext_resource type="Texture2D" uid="uid://c8b7n35pens28" path="res://Assets/Animations/Enemies/24沙漠守卫/move_back_06.png" id="52_ctppp"]
+[ext_resource type="Texture2D" uid="uid://dtb1nycp2gdgw" path="res://Assets/Animations/Enemies/24沙漠守卫/move_back_07.png" id="53_cch4f"]
+[ext_resource type="Texture2D" uid="uid://cglq3fimxlx6x" path="res://Assets/Animations/Enemies/24沙漠守卫/move_back_08.png" id="54_g3cwe"]
+[ext_resource type="Texture2D" uid="uid://dxqb6nq4se6t6" path="res://Assets/Animations/Enemies/24沙漠守卫/move_back_09.png" id="55_lfpap"]
+[ext_resource type="Texture2D" uid="uid://b3kawi6tb7ppq" path="res://Assets/Animations/Enemies/24沙漠守卫/move_back_10.png" id="56_210hw"]
+[ext_resource type="Texture2D" uid="uid://ca1dtlx8u41l" path="res://Assets/Animations/Enemies/24沙漠守卫/move_back_11.png" id="57_4vtqf"]
+[ext_resource type="Texture2D" uid="uid://bn8eycxi56che" path="res://Assets/Animations/Enemies/24沙漠守卫/move_back_12.png" id="58_7erdp"]
+[ext_resource type="Texture2D" uid="uid://bcnfdj3b8bqyp" path="res://Assets/Animations/Enemies/24沙漠守卫/move_back_13.png" id="59_u5kkk"]
+[ext_resource type="Texture2D" uid="uid://cm1nualg7tcs4" path="res://Assets/Animations/Enemies/24沙漠守卫/move_back_14.png" id="60_wo04d"]
+[ext_resource type="Texture2D" uid="uid://cqcf81uwg07jf" path="res://Assets/Animations/Enemies/24沙漠守卫/move_back_15.png" id="61_3gt60"]
+[ext_resource type="Texture2D" uid="uid://b85u6e8267wwy" path="res://Assets/Animations/Enemies/24沙漠守卫/move_back_16.png" id="62_miv6q"]
+[ext_resource type="Texture2D" uid="uid://bkfcwrvwcwjvx" path="res://Assets/Animations/Enemies/24沙漠守卫/move_back_17.png" id="63_7rgf0"]
+[ext_resource type="Texture2D" uid="uid://cvumkkjh7y4pu" path="res://Assets/Animations/Enemies/24沙漠守卫/move_back_18.png" id="64_e13xk"]
+[ext_resource type="Texture2D" uid="uid://gpi8y5jghlq8" path="res://Assets/Animations/Enemies/24沙漠守卫/move_back_19.png" id="65_ngu6g"]
+[ext_resource type="Texture2D" uid="uid://btxmp1ybqqmhc" path="res://Assets/Animations/Enemies/24沙漠守卫/move_back_20.png" id="66_ppvtv"]
+[ext_resource type="Texture2D" uid="uid://s4tey2gm57j4" path="res://Assets/Animations/Enemies/24沙漠守卫/move_back_21.png" id="67_s2grd"]
+[ext_resource type="Texture2D" uid="uid://8k8fr6psn71f" path="res://Assets/Animations/Enemies/24沙漠守卫/move_back_22.png" id="68_xl03s"]
+[ext_resource type="Texture2D" uid="uid://drryqlcjbrhq2" path="res://Assets/Animations/Enemies/24沙漠守卫/move_back_23.png" id="69_acg4k"]
+[ext_resource type="Texture2D" uid="uid://cqeqgf8l6vf3n" path="res://Assets/Animations/Enemies/24沙漠守卫/move_front_00.png" id="70_mfiao"]
+[ext_resource type="Texture2D" uid="uid://mmfh7gv50pun" path="res://Assets/Animations/Enemies/24沙漠守卫/move_front_01.png" id="71_krhtm"]
+[ext_resource type="Texture2D" uid="uid://bjo4hjl0k6am2" path="res://Assets/Animations/Enemies/24沙漠守卫/move_front_02.png" id="72_cg5ku"]
+[ext_resource type="Texture2D" uid="uid://4kytcnr2iwfg" path="res://Assets/Animations/Enemies/24沙漠守卫/move_front_03.png" id="73_qkq5r"]
+[ext_resource type="Texture2D" uid="uid://bw3wfkaqys8yq" path="res://Assets/Animations/Enemies/24沙漠守卫/move_front_04.png" id="74_dsdar"]
+[ext_resource type="Texture2D" uid="uid://bumm5f6dlflj1" path="res://Assets/Animations/Enemies/24沙漠守卫/move_front_05.png" id="75_cl2l7"]
+[ext_resource type="Texture2D" uid="uid://l5p3bgaom7dj" path="res://Assets/Animations/Enemies/24沙漠守卫/move_front_06.png" id="76_dyw62"]
+[ext_resource type="Texture2D" uid="uid://dg2ceav2qrnug" path="res://Assets/Animations/Enemies/24沙漠守卫/move_front_07.png" id="77_m54gg"]
+[ext_resource type="Texture2D" uid="uid://dsixkma6sl340" path="res://Assets/Animations/Enemies/24沙漠守卫/move_front_08.png" id="78_gduy3"]
+[ext_resource type="Texture2D" uid="uid://dpn3xhihemu0u" path="res://Assets/Animations/Enemies/24沙漠守卫/move_front_09.png" id="79_chxs2"]
+[ext_resource type="Texture2D" uid="uid://4ff4gtsudk8p" path="res://Assets/Animations/Enemies/24沙漠守卫/move_front_10.png" id="80_2kib0"]
+[ext_resource type="Texture2D" uid="uid://b3lccl6fbir8k" path="res://Assets/Animations/Enemies/24沙漠守卫/move_front_11.png" id="81_kufkg"]
+[ext_resource type="Texture2D" uid="uid://xd55boehlw7f" path="res://Assets/Animations/Enemies/24沙漠守卫/move_front_12.png" id="82_5v7f8"]
+[ext_resource type="Texture2D" uid="uid://oeqmuvbxt24f" path="res://Assets/Animations/Enemies/24沙漠守卫/move_front_13.png" id="83_xvj31"]
+[ext_resource type="Texture2D" uid="uid://7ylmgp76j2vh" path="res://Assets/Animations/Enemies/24沙漠守卫/move_front_14.png" id="84_k2j0i"]
+[ext_resource type="Texture2D" uid="uid://0oc1vtncraq4" path="res://Assets/Animations/Enemies/24沙漠守卫/move_front_15.png" id="85_s8y2f"]
+[ext_resource type="Texture2D" uid="uid://bssty3go8c6f0" path="res://Assets/Animations/Enemies/24沙漠守卫/move_front_16.png" id="86_nbf5l"]
+[ext_resource type="Texture2D" uid="uid://u28h67kegerb" path="res://Assets/Animations/Enemies/24沙漠守卫/move_front_17.png" id="87_31mou"]
+[ext_resource type="Texture2D" uid="uid://dsrivu5declkx" path="res://Assets/Animations/Enemies/24沙漠守卫/move_front_18.png" id="88_med7o"]
+[ext_resource type="Texture2D" uid="uid://bi1ge08upex8e" path="res://Assets/Animations/Enemies/24沙漠守卫/move_front_19.png" id="89_vdqkk"]
+[ext_resource type="Texture2D" uid="uid://bvt4jv22scnuw" path="res://Assets/Animations/Enemies/24沙漠守卫/move_front_20.png" id="90_tufdv"]
+[ext_resource type="Texture2D" uid="uid://b4nwyj57w0iey" path="res://Assets/Animations/Enemies/24沙漠守卫/move_front_21.png" id="91_nphq2"]
+[ext_resource type="Texture2D" uid="uid://c2ck0chercdjo" path="res://Assets/Animations/Enemies/24沙漠守卫/move_front_22.png" id="92_1ujvm"]
+[ext_resource type="Texture2D" uid="uid://esy1sg5uivs4" path="res://Assets/Animations/Enemies/24沙漠守卫/move_front_23.png" id="93_w18ip"]
+[ext_resource type="Texture2D" uid="uid://nr30wlul8tbm" path="res://Assets/Animations/Enemies/24沙漠守卫/move_normal_00.png" id="94_rp8m5"]
+[ext_resource type="Texture2D" uid="uid://bjm8sc2o877nu" path="res://Assets/Animations/Enemies/24沙漠守卫/move_normal_01.png" id="95_ce5hs"]
+[ext_resource type="Texture2D" uid="uid://bvy723b5pj5d7" path="res://Assets/Animations/Enemies/24沙漠守卫/move_normal_02.png" id="96_8rlwi"]
+[ext_resource type="Texture2D" uid="uid://dmkanbbk3wqye" path="res://Assets/Animations/Enemies/24沙漠守卫/move_normal_03.png" id="97_rvxhx"]
+[ext_resource type="Texture2D" uid="uid://cdbucryeknvhd" path="res://Assets/Animations/Enemies/24沙漠守卫/move_normal_04.png" id="98_2uptf"]
+[ext_resource type="Texture2D" uid="uid://0vbn840jmwyt" path="res://Assets/Animations/Enemies/24沙漠守卫/move_normal_05.png" id="99_c1u1j"]
+[ext_resource type="Texture2D" uid="uid://cltrvgd6dprrp" path="res://Assets/Animations/Enemies/24沙漠守卫/move_normal_06.png" id="100_h16lc"]
+[ext_resource type="Texture2D" uid="uid://c8xyuycnyjvky" path="res://Assets/Animations/Enemies/24沙漠守卫/move_normal_07.png" id="101_ir3vf"]
+[ext_resource type="Texture2D" uid="uid://dyp1ekmk68qgi" path="res://Assets/Animations/Enemies/24沙漠守卫/move_normal_08.png" id="102_rht0m"]
+[ext_resource type="Texture2D" uid="uid://c8qoau6alosc7" path="res://Assets/Animations/Enemies/24沙漠守卫/move_normal_09.png" id="103_77jbe"]
+[ext_resource type="Texture2D" uid="uid://bplvphp8m5faq" path="res://Assets/Animations/Enemies/24沙漠守卫/move_normal_10.png" id="104_npp6v"]
+[ext_resource type="Texture2D" uid="uid://drdndseqxabow" path="res://Assets/Animations/Enemies/24沙漠守卫/move_normal_11.png" id="105_nrgi5"]
+[ext_resource type="Texture2D" uid="uid://c3hvv8jkaktue" path="res://Assets/Animations/Enemies/24沙漠守卫/move_normal_12.png" id="106_tp3mv"]
+[ext_resource type="Texture2D" uid="uid://cuqn5mh5nl27w" path="res://Assets/Animations/Enemies/24沙漠守卫/move_normal_13.png" id="107_7gnfn"]
+[ext_resource type="Texture2D" uid="uid://c5gkebmw17hem" path="res://Assets/Animations/Enemies/24沙漠守卫/move_normal_14.png" id="108_jomq6"]
+[ext_resource type="Texture2D" uid="uid://deglbenfp6ifs" path="res://Assets/Animations/Enemies/24沙漠守卫/move_normal_15.png" id="109_fue6t"]
+[ext_resource type="Texture2D" uid="uid://rt5ohtkj0h7u" path="res://Assets/Animations/Enemies/24沙漠守卫/move_normal_16.png" id="110_idoya"]
+[ext_resource type="Texture2D" uid="uid://chk05qlkpsk1l" path="res://Assets/Animations/Enemies/24沙漠守卫/move_normal_17.png" id="111_5lsj5"]
+[ext_resource type="Texture2D" uid="uid://5qq8sakyyb8r" path="res://Assets/Animations/Enemies/24沙漠守卫/move_normal_18.png" id="112_h42pi"]
+[ext_resource type="Texture2D" uid="uid://bufxeiw6lspvx" path="res://Assets/Animations/Enemies/24沙漠守卫/move_normal_19.png" id="113_wqvj5"]
+[ext_resource type="Texture2D" uid="uid://l5v5onrvxnqe" path="res://Assets/Animations/Enemies/24沙漠守卫/move_normal_20.png" id="114_5endn"]
+[ext_resource type="Texture2D" uid="uid://cu1wg4hd2jf2r" path="res://Assets/Animations/Enemies/24沙漠守卫/move_normal_21.png" id="115_ub2g5"]
+[ext_resource type="Texture2D" uid="uid://cjig8hb4d3wym" path="res://Assets/Animations/Enemies/24沙漠守卫/move_normal_22.png" id="116_h4fro"]
+[ext_resource type="Texture2D" uid="uid://7rcpmkqwlmla" path="res://Assets/Animations/Enemies/24沙漠守卫/move_normal_23.png" id="117_aam3g"]
+[ext_resource type="AudioStream" uid="uid://csuw2h1ql0whd" path="res://Assets/Sounds/FXs/Heroes/Alex/破土.wav" id="118_gso5r"]
+
+[sub_resource type="Resource" id="Resource_grsgt"]
+script = ExtResource("3_1q88t")
+health = 230
+dodge_rate = 0.0
+near_damage_low = 10
+near_damage_high = 15
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.5
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 1.1
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k142g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_aed35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_unaje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pnqqp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_r1mv0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5u178")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_w41r2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qegc7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4uygy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jhgwo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qxys0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_g86sq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_bxnqx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_c0ad5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ex5dr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_drfkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ymxea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_xdham")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_jqd8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_1s16a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_541xq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_otjlg")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_p7s76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_p57s1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_r2i8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_v2gj0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_jb2g1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_tp0tg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_d28qi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_u07aa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_2xagu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_vktvh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_twj4y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_643tt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_bhilw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_mtoj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_i1wml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_40ec5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_7ai8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_cu3ys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_06cht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_sx6k4")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_aed35")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("46_fw7xd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_mq4k8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_euuff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_1v424")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_ojkxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_dou52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_ctppp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_cch4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_g3cwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_lfpap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_210hw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_4vtqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_7erdp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_u5kkk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_wo04d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_3gt60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_miv6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_7rgf0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_e13xk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_ngu6g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_ppvtv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_s2grd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_xl03s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_acg4k")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("70_mfiao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_krhtm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_cg5ku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_qkq5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_dsdar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_cl2l7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_dyw62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_m54gg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_gduy3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_chxs2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_2kib0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_kufkg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_5v7f8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_xvj31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_k2j0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_s8y2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_nbf5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_31mou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_med7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_vdqkk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_tufdv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_nphq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_1ujvm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_w18ip")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("94_rp8m5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_ce5hs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_8rlwi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_rvxhx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_2uptf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_c1u1j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_h16lc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_ir3vf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_rht0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_77jbe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_npp6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_nrgi5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_tp3mv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_7gnfn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_jomq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_fue6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_idoya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_5lsj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_h42pi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_wqvj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_5endn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_ub2g5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_h4fro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_aam3g")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 24.0
+}]
+
+[node name="Enemy24" groups=["desert", "no_live"] instance=ExtResource("1_acn15")]
+script = ExtResource("2_q2y7q")
+enemy_name = "沙漠守卫"
+enemy_id = 24
+enemy_texture = ExtResource("3_f0o8v")
+start_data = SubResource("Resource_grsgt")
+bounty = 12
+die_audio_stream_list = Array[AudioStream]([])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(10, -90)
+sprite_frames = SubResource("SpriteFrames_k142g")
+animation = &"die"
+autoplay = "idle"
+
+[node name="DirtAudio" type="AudioStreamPlayer" parent="." index="5"]
+stream = ExtResource("118_gso5r")
+bus = &"Sound"

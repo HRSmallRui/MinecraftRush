@@ -1,0 +1,343 @@
+[gd_scene load_steps=36 format=3 uid="uid://b6semrq10485e"]
+
+[ext_resource type="PackedScene" uid="uid://bbhe3d6c7dhtc" path="res://Scenes/DefenceTowers/BombardTowers/bombard_tower.tscn" id="1_nsok0"]
+[ext_resource type="Script" path="res://Scripts/Datas/TowerData.gd" id="2_7c1bu"]
+[ext_resource type="Texture2D" uid="uid://blknslx4kpdor" path="res://Assets/Images/UI/InformationBar/bombard-id-6.png" id="2_7rt1n"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/BombardTowers/stone_machine.gd" id="2_o6g3m"]
+[ext_resource type="PackedScene" uid="uid://dexsgbjv18ono" path="res://Scenes/Bullets/shell_plane.tscn" id="3_l876v"]
+[ext_resource type="Texture2D" uid="uid://bkyrc3m2xedn" path="res://Assets/Images/DefenceTowers/Bombards/Towers/LV4-3/无人机控制平台-based.png" id="4_5kaqi"]
+[ext_resource type="Texture2D" uid="uid://fg1y0i3ubnh4" path="res://Assets/Images/DefenceTowers/UI/集结范围.png" id="4_o4dwq"]
+[ext_resource type="PackedScene" uid="uid://dbhfcarsc2d65" path="res://Scenes/Bullets/plane_super_shell.tscn" id="4_q3n61"]
+[ext_resource type="Texture2D" uid="uid://dyyiqccbfgn4h" path="res://Assets/Animations/Bombards/LV4-2/Dadar/底座.png" id="5_1c6rm"]
+[ext_resource type="Texture2D" uid="uid://di244pjtyyl2a" path="res://Assets/Images/DefenceTowers/UI/flag_button.png" id="5_8vvnx"]
+[ext_resource type="Texture2D" uid="uid://56fiob4r12eu" path="res://Assets/Animations/Bombards/LV4-2/Dadar/旋转轴.png" id="6_5caeu"]
+[ext_resource type="Texture2D" uid="uid://7xl2wnc5nk41" path="res://Assets/Images/DefenceTowers/UI/flag_button_select.png" id="6_nc4er"]
+[ext_resource type="PackedScene" uid="uid://cjpn07gcbekr1" path="res://Scenes/DefenceTowers/tower_skill_button.tscn" id="7_3ik68"]
+[ext_resource type="Texture2D" uid="uid://bg3vghkru33x2" path="res://Assets/Animations/Bombards/LV4-2/Dadar/盆子.png" id="7_xpm8c"]
+[ext_resource type="Texture2D" uid="uid://ivqbk4oikdkx" path="res://Assets/Images/DefenceTowers/Bombards/UI/烟幕掩护.png" id="8_3gcej"]
+[ext_resource type="Texture2D" uid="uid://d0ad4xtwp7x7t" path="res://Assets/Images/DefenceTowers/Bombards/UI/烟幕掩护select.png" id="9_8w5hf"]
+[ext_resource type="Texture2D" uid="uid://bsvb6uilfht26" path="res://Assets/Images/DefenceTowers/Bombards/UI/烟幕掩护no.png" id="10_v02wr"]
+[ext_resource type="Texture2D" uid="uid://5jy18vecpo27" path="res://Assets/Images/DefenceTowers/Bombards/UI/高能雷管.png" id="11_la4xc"]
+[ext_resource type="Texture2D" uid="uid://ctpuq4wangnm0" path="res://Assets/Images/DefenceTowers/Bombards/UI/高能雷管select.png" id="12_qlfyw"]
+[ext_resource type="Texture2D" uid="uid://ca3amg46onxkx" path="res://Assets/Images/DefenceTowers/Bombards/UI/高能雷管no.png" id="13_xjvqh"]
+[ext_resource type="Texture2D" uid="uid://djqnwtl1embrg" path="res://Assets/Animations/Enemies/Shadow.png" id="19_5am4k"]
+[ext_resource type="Texture2D" uid="uid://1rskxqsxln01" path="res://Assets/Images/DefenceTowers/Bombards/Towers/LV4-3/无人机2.png" id="19_u7del"]
+[ext_resource type="AudioStream" uid="uid://djew332ofk6su" path="res://Assets/Sounds/FXs/DefenceTowers/PlaneController/plane.mp3" id="21_vvu06"]
+[ext_resource type="Texture2D" uid="uid://13pxqroo72xu" path="res://Assets/Images/UI/unit-select.png" id="23_rlda2"]
+
+[sub_resource type="Resource" id="Resource_n6640"]
+script = ExtResource("2_7c1bu")
+damage_low = 24
+damage_high = 48
+attack_speed = 1.2
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5b1o"]
+atlas = ExtResource("5_8vvnx")
+region = Rect2(17, 18, 62, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5p4ot"]
+atlas = ExtResource("8_3gcej")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_to5e7"]
+atlas = ExtResource("11_la4xc")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="Animation" id="Animation_1e72w"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D3:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_681f2"]
+resource_name = "rotate"
+loop_mode = 2
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D3:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-0.785398, -0.25, 0, 0.25, 0, 0.785398, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_guqvy"]
+_data = {
+"RESET": SubResource("Animation_1e72w"),
+"rotate": SubResource("Animation_681f2")
+}
+
+[sub_resource type="Animation" id="Animation_r0u54"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlaneSprite:offset:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_18vft"]
+resource_name = "loop"
+loop_mode = 2
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlaneSprite:offset:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-10, -0.25, 0, 0.25, 0, 10, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g51yr"]
+_data = {
+"RESET": SubResource("Animation_r0u54"),
+"loop": SubResource("Animation_18vft")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n3ykp"]
+radius = 73.9444
+
+[node name="PlaneController" instance=ExtResource("1_nsok0")]
+script = ExtResource("2_o6g3m")
+plane_shell_scene = ExtResource("3_l876v")
+plane_kill_shell_scene = ExtResource("4_q3n61")
+start_data = SubResource("Resource_n6640")
+tower_name = "无人机控制平台"
+tower_texture = ExtResource("2_7rt1n")
+tower_id = 6
+tower_level = 4
+tower_value = 1065
+start_tower_range = 360
+tower_skill_levels = Array[int]([0, 0])
+
+[node name="TowerButton" parent="." index="2"]
+offset_top = -60.0
+
+[node name="Sprite2D" parent="TowerUI/TowerRange" index="0"]
+texture = null
+
+[node name="Circle" parent="TowerUI" index="4"]
+position = Vector2(0, -28)
+
+[node name="FlagButton" type="TextureButton" parent="TowerUI/Circle" index="1"]
+offset_left = 68.7501
+offset_top = 14.9997
+offset_right = 130.75
+offset_bottom = 75.9997
+focus_mode = 0
+texture_normal = SubResource("AtlasTexture_c5b1o")
+texture_pressed = SubResource("AtlasTexture_c5b1o")
+texture_hover = ExtResource("6_nc4er")
+stretch_mode = 3
+
+[node name="TowerSkillButton" parent="TowerUI/Circle" index="2" node_paths=PackedStringArray("linked_tower") instance=ExtResource("7_3ik68")]
+offset_left = -140.001
+offset_top = -139.999
+offset_right = -55.001
+offset_bottom = -54.9993
+texture_normal = SubResource("AtlasTexture_5p4ot")
+texture_pressed = SubResource("AtlasTexture_5p4ot")
+texture_hover = ExtResource("9_8w5hf")
+texture_disabled = ExtResource("10_v02wr")
+linked_tower = NodePath("../../..")
+skill_name = "烟幕掩护"
+skill_prices = Array[int]([250, 180, 180])
+skill_intro = PackedStringArray("无人机在下方释放一片持续3秒的烟雾，减速烟雾中的敌人，大幅降低目标命中率和射程。", "无人机在下方释放一片持续4秒的烟雾，减速烟雾中的敌人，大幅降低目标命中率和射程。", "无人机在下方释放一片持续5秒的烟雾，减速烟雾中的敌人，大幅降低目标命中率和射程。")
+skill_words = "蜂巢科技，震撼人心。"
+
+[node name="TowerSkillButton2" parent="TowerUI/Circle" index="3" node_paths=PackedStringArray("linked_tower") instance=ExtResource("7_3ik68")]
+offset_left = 53.7494
+offset_top = -140.0
+offset_right = 138.749
+offset_bottom = -55.0002
+texture_normal = SubResource("AtlasTexture_to5e7")
+texture_pressed = SubResource("AtlasTexture_to5e7")
+texture_hover = ExtResource("12_qlfyw")
+texture_disabled = ExtResource("13_xjvqh")
+linked_tower = NodePath("../../..")
+skill_name = "高能雷管"
+skill_id = 1
+skill_prices = Array[int]([300, 125, 125])
+skill_intro = PackedStringArray("对射程内生命最高的敌人发射一枚高能雷管，在1.5秒后引爆，立即秒杀目标，或造成400点伤害，并对周围敌人造成80-120点范围伤害。", "对射程内生命最高的敌人发射一枚高能雷管，在1.5秒后引爆，立即秒杀目标，或造成600点伤害，并对周围敌人造成100-150点范围伤害。", "对射程内生命最高的敌人发射一枚高能雷管，在1.5秒后引爆，立即秒杀目标，或造成800点伤害，并对周围敌人造成120-180点范围伤害。")
+skill_words = "Hasta la vista"
+
+[node name="TowerArea" parent="." index="6"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="UnitRangeSprite" type="Node2D" parent="TowerArea" index="1"]
+
+[node name="Sprite2D" type="Sprite2D" parent="TowerArea/UnitRangeSprite" index="0"]
+scale = Vector2(0.4, 0.28)
+texture = ExtResource("4_o4dwq")
+
+[node name="BasedSprite" type="Sprite2D" parent="." index="10"]
+texture = ExtResource("4_5kaqi")
+offset = Vector2(-6, -23)
+
+[node name="Radar" type="Node2D" parent="." index="11"]
+position = Vector2(-36, -3)
+scale = Vector2(0.619774, 0.619774)
+
+[node name="Sprite2D" type="Sprite2D" parent="Radar" index="0"]
+texture = ExtResource("5_1c6rm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Radar" index="1"]
+position = Vector2(0, -10.6523)
+texture = ExtResource("6_5caeu")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Radar" index="2"]
+position = Vector2(0, -11.899)
+texture = ExtResource("7_xpm8c")
+offset = Vector2(0, -18.4192)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Radar" index="3"]
+libraries = {
+"": SubResource("AnimationLibrary_guqvy")
+}
+autoplay = "rotate"
+
+[node name="Plane" type="Node2D" parent="." index="12"]
+
+[node name="PlaneSprite" type="Sprite2D" parent="Plane" index="0"]
+texture_filter = 1
+position = Vector2(0, -100)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("19_u7del")
+
+[node name="Shadow" type="Sprite2D" parent="Plane" index="1"]
+z_index = -1
+scale = Vector2(0.251072, 0.251072)
+texture = ExtResource("19_5am4k")
+region_enabled = true
+region_rect = Rect2(194, 273, 174, 61)
+
+[node name="SelectSprite" type="Sprite2D" parent="Plane" index="2"]
+visible = false
+position = Vector2(0, 3)
+scale = Vector2(1.42898, 1.42898)
+texture = ExtResource("23_rlda2")
+region_enabled = true
+region_rect = Rect2(47, 65, 34, 11)
+
+[node name="PlaneOffsetAnimationPlayer" type="AnimationPlayer" parent="Plane" index="3"]
+libraries = {
+"": SubResource("AnimationLibrary_g51yr")
+}
+
+[node name="PlaneAudio" type="AudioStreamPlayer" parent="Plane" index="4"]
+stream = ExtResource("21_vvu06")
+volume_db = -20.0
+bus = &"Sound"
+
+[node name="PlaneAttackArea" type="Area2D" parent="." index="13"]
+top_level = true
+z_index = 100
+scale = Vector2(2.5, 2.5)
+collision_layer = 0
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlaneAttackArea" index="0"]
+scale = Vector2(1, 0.7)
+shape = SubResource("CircleShape2D_n3ykp")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="PlaneKillArea" type="Area2D" parent="." index="14"]
+top_level = true
+z_index = 100
+scale = Vector2(2.5, 2.5)
+collision_layer = 0
+collision_mask = 96
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlaneKillArea" index="0"]
+scale = Vector2(1, 0.7)
+shape = SubResource("CircleShape2D_n3ykp")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="SmokeConditionArea" type="Area2D" parent="." index="15"]
+top_level = true
+z_index = 100
+scale = Vector2(1.2, 1.2)
+collision_layer = 0
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SmokeConditionArea" index="0"]
+scale = Vector2(1, 0.7)
+shape = SubResource("CircleShape2D_n3ykp")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="FirstMoveRays" type="Node2D" parent="." index="16"]
+scale = Vector2(3.6, 3.6)
+
+[node name="RayCast2D" type="RayCast2D" parent="FirstMoveRays" index="0"]
+target_position = Vector2(0, 52)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D2" type="RayCast2D" parent="FirstMoveRays" index="1"]
+target_position = Vector2(54, 35)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D3" type="RayCast2D" parent="FirstMoveRays" index="2"]
+target_position = Vector2(75, 0)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D4" type="RayCast2D" parent="FirstMoveRays" index="3"]
+target_position = Vector2(54, -35)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D5" type="RayCast2D" parent="FirstMoveRays" index="4"]
+target_position = Vector2(0, -52)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D6" type="RayCast2D" parent="FirstMoveRays" index="5"]
+target_position = Vector2(-54, -35)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D7" type="RayCast2D" parent="FirstMoveRays" index="6"]
+target_position = Vector2(-75, 0)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCast2D8" type="RayCast2D" parent="FirstMoveRays" index="7"]
+target_position = Vector2(-54, 35)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="Skill1Timer" type="Timer" parent="." index="17"]
+wait_time = 13.0
+one_shot = true
+
+[node name="Skill2Timer" type="Timer" parent="." index="18"]
+one_shot = true
+
+[connection signal="input_event" from="TowerArea" to="." method="_on_tower_area_input_event"]
+[connection signal="input_event" from="PlaneAttackArea" to="." method="_on_tower_area_input_event"]
+[connection signal="input_event" from="PlaneKillArea" to="." method="_on_tower_area_input_event"]
+[connection signal="input_event" from="SmokeConditionArea" to="." method="_on_tower_area_input_event"]

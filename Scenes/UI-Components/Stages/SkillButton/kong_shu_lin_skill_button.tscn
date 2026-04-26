@@ -1,0 +1,17 @@
+[gd_scene load_steps=6 format=3 uid="uid://jytboikw0lnf"]
+
+[ext_resource type="PackedScene" uid="uid://dakq012d6gh6m" path="res://Scenes/UI-Components/Stages/skill_button.tscn" id="1_56ra8"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Stages/SkillButtons/kong_shu_lin_skill_button.gd" id="2_ceisw"]
+[ext_resource type="PackedScene" uid="uid://8xgj1goqei34" path="res://Scenes/Skills/kong_shu_lin_skill_area.tscn" id="3_j2e66"]
+[ext_resource type="Texture2D" uid="uid://g8ci1vyx2rbp" path="res://Assets/Images/UI/SkillButton/Heroskill/KongShuLin/kongshulin_skill.png" id="3_tepx0"]
+[ext_resource type="Texture2D" uid="uid://dchtx4ra4en5q" path="res://Assets/Images/UI/SkillButton/Heroskill/KongShuLin/kongshulin_skill_using.png" id="4_hq78t"]
+
+[node name="KongShuLinSkillButton" instance=ExtResource("1_56ra8")]
+script = ExtResource("2_ceisw")
+release_scene = ExtResource("3_j2e66")
+skill_type = 2
+texture_normal = ExtResource("3_tepx0")
+texture_select = ExtResource("4_hq78t")
+skill_name = "索命・死亡空间"
+skill_intro = "召唤一片时停领域，结束后落下大量飞刀造成伤害。"
+cooling_time = 40.0

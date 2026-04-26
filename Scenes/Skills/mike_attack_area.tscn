@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://cb7n71app7bnx"]
+
+[ext_resource type="Script" path="res://Scripts/Skills/mike_attack_area.gd" id="1_gvqjl"]
+[ext_resource type="Resource" uid="uid://b4sh8nyqw2hrp" path="res://Library/Heroes/HeroPropertyBlocks/MikeSmith.tres" id="2_u526i"]
+[ext_resource type="Texture2D" uid="uid://cdsje18xm8t37" path="res://Assets/Images/Effects/光矛.png" id="3_ptvci"]
+[ext_resource type="AudioStream" uid="uid://k4kkpxmp52ii" path="res://Assets/Sounds/FXs/Enemies/尸国统帅/统帅攻击.wav" id="4_8i1jo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g3fp3"]
+radius = 73.9444
+
+[node name="MikeAttackArea" type="Area2D"]
+scale = Vector2(1.5, 1.5)
+collision_layer = 0
+collision_mask = 96
+script = ExtResource("1_gvqjl")
+mike_block = ExtResource("2_u526i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.5, 0.35)
+shape = SubResource("CircleShape2D_g3fp3")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="StingShooter1" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+scale = Vector2(0.2, 0.2)
+
+[node name="Sting" type="Sprite2D" parent="StingShooter1"]
+texture = ExtResource("3_ptvci")
+
+[node name="StingShooter2" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+scale = Vector2(0.2, 0.2)
+
+[node name="Sting" type="Sprite2D" parent="StingShooter2"]
+texture = ExtResource("3_ptvci")
+
+[node name="StingShooter3" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+scale = Vector2(0.2, 0.2)
+
+[node name="Sting" type="Sprite2D" parent="StingShooter3"]
+texture = ExtResource("3_ptvci")
+
+[node name="StingShooter4" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+scale = Vector2(0.2, 0.2)
+
+[node name="Sting" type="Sprite2D" parent="StingShooter4"]
+texture = ExtResource("3_ptvci")
+
+[node name="StingShooter5" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+scale = Vector2(0.2, 0.2)
+
+[node name="Sting" type="Sprite2D" parent="StingShooter5"]
+texture = ExtResource("3_ptvci")
+
+[node name="AttackAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_8i1jo")
+volume_db = -4.0
+pitch_scale = 1.5
+max_polyphony = 5
+bus = &"Sound"

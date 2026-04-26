@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwut370axv31c"]
+
+[ext_resource type="Script" path="res://Scripts/Effects/destroy_wall_effect.gd" id="1_byj81"]
+[ext_resource type="Texture2D" uid="uid://l28307nifl11" path="res://Assets/Images/Bullets/炮弹LV3.png" id="2_mg5gb"]
+
+[sub_resource type="Curve" id="Curve_84ech"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_1wmxa"]
+colors = PackedColorArray(1, 1, 1, 0.741176, 1, 1, 1, 0)
+
+[node name="DestroyWallEffect" type="Node2D"]
+z_index = 1
+script = ExtResource("1_byj81")
+
+[node name="TNTSprite" type="Sprite2D" parent="."]
+rotation = -0.785398
+scale = Vector2(1.68442, 1.68442)
+texture = ExtResource("2_mg5gb")
+
+[node name="Tail" type="Line2D" parent="."]
+top_level = true
+points = PackedVector2Array(429, -235, -2, -3)
+width = 20.0
+width_curve = SubResource("Curve_84ech")
+gradient = SubResource("Gradient_1wmxa")

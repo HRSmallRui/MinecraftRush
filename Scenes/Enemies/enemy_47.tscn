@@ -1,0 +1,1105 @@
+[gd_scene load_steps=257 format=3 uid="uid://dp25g8s5is0j"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_cv5kg"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_47.gd" id="2_x2k1e"]
+[ext_resource type="Texture2D" uid="uid://dkekou4fb0yiu" path="res://Assets/Images/UI/InformationBar/EnemyChapter5/白眼法师.png" id="3_ahkfd"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="3_r5yqo"]
+[ext_resource type="Texture2D" uid="uid://7kga7y4yv63r" path="res://Assets/Animations/Enemies/47白眼法师/attack_00.png" id="4_go1yv"]
+[ext_resource type="AudioStream" uid="uid://mdc5281gfyfh" path="res://Assets/Sounds/FXs/Enemies/人偶/脉冲.wav" id="5_6vngg"]
+[ext_resource type="Texture2D" uid="uid://dm75s16cbakxk" path="res://Assets/Animations/Enemies/47白眼法师/attack_01.png" id="5_lreu4"]
+[ext_resource type="PackedScene" uid="uid://dfmugu6n3q1tt" path="res://Scenes/Bullets/whie_witch_magic_ball.tscn" id="5_ynof4"]
+[ext_resource type="Texture2D" uid="uid://dg87xkogr24t7" path="res://Assets/Animations/Enemies/47白眼法师/attack_02.png" id="6_8ee48"]
+[ext_resource type="Texture2D" uid="uid://ct40cyna4k0c0" path="res://Assets/Animations/Enemies/47白眼法师/attack_03.png" id="7_ra5uk"]
+[ext_resource type="Texture2D" uid="uid://fhiqnln6id41" path="res://Assets/Animations/Enemies/47白眼法师/attack_04.png" id="8_fgl57"]
+[ext_resource type="Texture2D" uid="uid://b78lqv27yf33b" path="res://Assets/Animations/Enemies/47白眼法师/attack_05.png" id="9_f5rrx"]
+[ext_resource type="Texture2D" uid="uid://cdqeb1k3dtqrq" path="res://Assets/Animations/Enemies/47白眼法师/attack_06.png" id="10_a1ady"]
+[ext_resource type="Texture2D" uid="uid://bi5pitjlgqynl" path="res://Assets/Animations/Enemies/47白眼法师/attack_07.png" id="11_woqmu"]
+[ext_resource type="Texture2D" uid="uid://ber18tkpxjlbp" path="res://Assets/Animations/Enemies/47白眼法师/attack_08.png" id="12_34ybd"]
+[ext_resource type="Texture2D" uid="uid://cvwofqywaumbm" path="res://Assets/Animations/Enemies/47白眼法师/attack_09.png" id="13_r3w3o"]
+[ext_resource type="Texture2D" uid="uid://edatuuxtqxh1" path="res://Assets/Animations/Enemies/47白眼法师/attack_10.png" id="14_hlgmo"]
+[ext_resource type="Texture2D" uid="uid://57glqkeio52k" path="res://Assets/Animations/Enemies/47白眼法师/attack_11.png" id="15_fdekf"]
+[ext_resource type="Texture2D" uid="uid://h27dgrsxt6ip" path="res://Assets/Animations/Enemies/47白眼法师/attack_12.png" id="16_41yh5"]
+[ext_resource type="Texture2D" uid="uid://33p2jdxc3wry" path="res://Assets/Animations/Enemies/47白眼法师/attack_13.png" id="17_t0pmi"]
+[ext_resource type="Texture2D" uid="uid://b4em6aiwfi4hr" path="res://Assets/Animations/Enemies/47白眼法师/attack_14.png" id="18_avbfb"]
+[ext_resource type="Texture2D" uid="uid://dq6d7pc8gdfts" path="res://Assets/Animations/Enemies/47白眼法师/attack_15.png" id="19_431cq"]
+[ext_resource type="Texture2D" uid="uid://2d755x0hh5hy" path="res://Assets/Animations/Enemies/47白眼法师/attack_16.png" id="20_srcuj"]
+[ext_resource type="Texture2D" uid="uid://brku00w8xfc8b" path="res://Assets/Animations/Enemies/47白眼法师/attack_17.png" id="21_5uehi"]
+[ext_resource type="Texture2D" uid="uid://cl3xltrtunqnb" path="res://Assets/Animations/Enemies/47白眼法师/attack_18.png" id="22_ukwpa"]
+[ext_resource type="Texture2D" uid="uid://clwdgrjdb1ae7" path="res://Assets/Animations/Enemies/47白眼法师/attack_19.png" id="23_5v5ix"]
+[ext_resource type="Texture2D" uid="uid://blvpgdxfuwuxm" path="res://Assets/Animations/Enemies/47白眼法师/attack_20.png" id="24_v1thq"]
+[ext_resource type="Texture2D" uid="uid://oujerq0mvkm3" path="res://Assets/Animations/Enemies/47白眼法师/die_00.png" id="25_eauvm"]
+[ext_resource type="Texture2D" uid="uid://dgbr2bbcgqvif" path="res://Assets/Animations/Enemies/47白眼法师/die_01.png" id="26_1yuf4"]
+[ext_resource type="Texture2D" uid="uid://b0i6hdwh6eu2k" path="res://Assets/Animations/Enemies/47白眼法师/die_02.png" id="27_i0x6t"]
+[ext_resource type="Texture2D" uid="uid://b3ko0tfxsnjeh" path="res://Assets/Animations/Enemies/47白眼法师/die_03.png" id="28_q3rw5"]
+[ext_resource type="Texture2D" uid="uid://bm8gicdn3qv25" path="res://Assets/Animations/Enemies/47白眼法师/die_04.png" id="29_ubudk"]
+[ext_resource type="Texture2D" uid="uid://caibjdhcyavsb" path="res://Assets/Animations/Enemies/47白眼法师/die_05.png" id="30_qcblb"]
+[ext_resource type="Texture2D" uid="uid://dg84b8xmvmlt1" path="res://Assets/Animations/Enemies/47白眼法师/die_06.png" id="31_g1i5b"]
+[ext_resource type="Texture2D" uid="uid://b2w6mk8bydg05" path="res://Assets/Animations/Enemies/47白眼法师/die_07.png" id="32_il4qt"]
+[ext_resource type="Texture2D" uid="uid://dxhm47d27grb7" path="res://Assets/Animations/Enemies/47白眼法师/die_08.png" id="33_0ppgs"]
+[ext_resource type="Texture2D" uid="uid://gydtk8ifc1ry" path="res://Assets/Animations/Enemies/47白眼法师/die_09.png" id="34_77ixw"]
+[ext_resource type="Texture2D" uid="uid://cckpy3s2qjdd" path="res://Assets/Animations/Enemies/47白眼法师/die_10.png" id="35_6vwia"]
+[ext_resource type="Texture2D" uid="uid://drwm14s1520sw" path="res://Assets/Animations/Enemies/47白眼法师/die_11.png" id="36_dackq"]
+[ext_resource type="Texture2D" uid="uid://csmbi2xay82m" path="res://Assets/Animations/Enemies/47白眼法师/die_12.png" id="37_uqnb2"]
+[ext_resource type="Texture2D" uid="uid://d3u64u1fydowr" path="res://Assets/Animations/Enemies/47白眼法师/die_13.png" id="38_no0qv"]
+[ext_resource type="Texture2D" uid="uid://babn33g6nqjg1" path="res://Assets/Animations/Enemies/47白眼法师/die_14.png" id="39_8m0el"]
+[ext_resource type="Texture2D" uid="uid://b884unel73gcb" path="res://Assets/Animations/Enemies/47白眼法师/die_15.png" id="40_tiq02"]
+[ext_resource type="Texture2D" uid="uid://cmpilqmet526p" path="res://Assets/Animations/Enemies/47白眼法师/die_16.png" id="41_sv0x5"]
+[ext_resource type="Texture2D" uid="uid://cnw0gd6mc8od6" path="res://Assets/Animations/Enemies/47白眼法师/die_17.png" id="42_vgkgk"]
+[ext_resource type="Texture2D" uid="uid://bjtmoar5f8a20" path="res://Assets/Animations/Enemies/47白眼法师/die_18.png" id="43_lkssy"]
+[ext_resource type="Texture2D" uid="uid://8qcgu6ucra73" path="res://Assets/Animations/Enemies/47白眼法师/die_19.png" id="44_u8wsm"]
+[ext_resource type="Texture2D" uid="uid://bico3voc1w14h" path="res://Assets/Animations/Enemies/47白眼法师/die_20.png" id="45_dvf2i"]
+[ext_resource type="Texture2D" uid="uid://cloldx34mkegx" path="res://Assets/Animations/Enemies/47白眼法师/far_attack_00.png" id="46_ijwh4"]
+[ext_resource type="Texture2D" uid="uid://qa7p4ba33q5t" path="res://Assets/Animations/Enemies/47白眼法师/far_attack_01.png" id="47_xchjy"]
+[ext_resource type="Texture2D" uid="uid://c7urfk47l2jsm" path="res://Assets/Animations/Enemies/47白眼法师/far_attack_02.png" id="48_ty2iv"]
+[ext_resource type="Texture2D" uid="uid://dtduxpy63s15h" path="res://Assets/Animations/Enemies/47白眼法师/far_attack_03.png" id="49_b2hq0"]
+[ext_resource type="Texture2D" uid="uid://d2dechjmsnvkg" path="res://Assets/Animations/Enemies/47白眼法师/far_attack_04.png" id="50_cm07x"]
+[ext_resource type="Texture2D" uid="uid://dx55s81qaf11x" path="res://Assets/Animations/Enemies/47白眼法师/far_attack_05.png" id="51_t5jsh"]
+[ext_resource type="Texture2D" uid="uid://bj4c5b6oeeiqu" path="res://Assets/Animations/Enemies/47白眼法师/far_attack_06.png" id="52_3k5jc"]
+[ext_resource type="Texture2D" uid="uid://1rkfl6h66tbv" path="res://Assets/Animations/Enemies/47白眼法师/far_attack_07.png" id="53_e5ixl"]
+[ext_resource type="Texture2D" uid="uid://dbu7nmw1iq58" path="res://Assets/Animations/Enemies/47白眼法师/far_attack_08.png" id="54_dfe36"]
+[ext_resource type="Texture2D" uid="uid://cnu00y805d7qc" path="res://Assets/Animations/Enemies/47白眼法师/far_attack_09.png" id="55_a1wr1"]
+[ext_resource type="Texture2D" uid="uid://c8gnd42sge25y" path="res://Assets/Animations/Enemies/47白眼法师/far_attack_10.png" id="56_leflw"]
+[ext_resource type="Texture2D" uid="uid://ba8sj1k6ryjfr" path="res://Assets/Animations/Enemies/47白眼法师/far_attack_11.png" id="57_6b1db"]
+[ext_resource type="Texture2D" uid="uid://bolav4uxqfs24" path="res://Assets/Animations/Enemies/47白眼法师/far_attack_12.png" id="58_enwsg"]
+[ext_resource type="Texture2D" uid="uid://omuywqahg23i" path="res://Assets/Animations/Enemies/47白眼法师/far_attack_13.png" id="59_vcc4h"]
+[ext_resource type="Texture2D" uid="uid://dkeo1ik7cd143" path="res://Assets/Animations/Enemies/47白眼法师/far_attack_14.png" id="60_kw23n"]
+[ext_resource type="Texture2D" uid="uid://cjsb7s1xg083p" path="res://Assets/Animations/Enemies/47白眼法师/far_attack_15.png" id="61_0lvy1"]
+[ext_resource type="Texture2D" uid="uid://daa2jkhklajbd" path="res://Assets/Animations/Enemies/47白眼法师/far_attack_16.png" id="62_kvq0y"]
+[ext_resource type="Texture2D" uid="uid://bxg1pra13uaw8" path="res://Assets/Animations/Enemies/47白眼法师/far_attack_17.png" id="63_6qrtl"]
+[ext_resource type="Texture2D" uid="uid://ck7ycnikcbpui" path="res://Assets/Animations/Enemies/47白眼法师/far_attack_18.png" id="64_kc1b2"]
+[ext_resource type="Texture2D" uid="uid://b5ax6s8dchqrk" path="res://Assets/Animations/Enemies/47白眼法师/far_attack_19.png" id="65_v63n5"]
+[ext_resource type="Texture2D" uid="uid://bjfqyraav6wcq" path="res://Assets/Animations/Enemies/47白眼法师/far_attack_20.png" id="66_m53eo"]
+[ext_resource type="Texture2D" uid="uid://dmb0ms4i6hgx0" path="res://Assets/Animations/Enemies/47白眼法师/far_attack_21.png" id="67_a3wjh"]
+[ext_resource type="Texture2D" uid="uid://b3sth4rlefjme" path="res://Assets/Animations/Enemies/47白眼法师/far_attack_22.png" id="68_a2vo3"]
+[ext_resource type="Texture2D" uid="uid://dw6huf4yo4s3s" path="res://Assets/Animations/Enemies/47白眼法师/far_attack_23.png" id="69_enrye"]
+[ext_resource type="Texture2D" uid="uid://cpky3sko400ox" path="res://Assets/Animations/Enemies/47白眼法师/far_attack_24.png" id="70_wdruy"]
+[ext_resource type="Texture2D" uid="uid://5j50i04mll34" path="res://Assets/Animations/Enemies/47白眼法师/far_attack_25.png" id="71_mflgs"]
+[ext_resource type="Texture2D" uid="uid://c2heny3rwdylu" path="res://Assets/Animations/Enemies/47白眼法师/far_attack_26.png" id="72_52f60"]
+[ext_resource type="Texture2D" uid="uid://ds7f1lklmq81u" path="res://Assets/Animations/Enemies/47白眼法师/heal_00.png" id="73_lueko"]
+[ext_resource type="Texture2D" uid="uid://dv8g6ggng5s2u" path="res://Assets/Animations/Enemies/47白眼法师/heal_01.png" id="74_vhr88"]
+[ext_resource type="Texture2D" uid="uid://dls64bwu7d6sp" path="res://Assets/Animations/Enemies/47白眼法师/heal_02.png" id="75_7kitj"]
+[ext_resource type="Texture2D" uid="uid://cjesryegub7fr" path="res://Assets/Animations/Enemies/47白眼法师/heal_03.png" id="76_qcrgv"]
+[ext_resource type="Texture2D" uid="uid://be1re133bwutg" path="res://Assets/Animations/Enemies/47白眼法师/heal_04.png" id="77_jij7g"]
+[ext_resource type="Texture2D" uid="uid://dwxxftlgruvu4" path="res://Assets/Animations/Enemies/47白眼法师/heal_05.png" id="78_08sg4"]
+[ext_resource type="Texture2D" uid="uid://c5bvru5ci4mkk" path="res://Assets/Animations/Enemies/47白眼法师/heal_06.png" id="79_cbew5"]
+[ext_resource type="Texture2D" uid="uid://bj3qbhnnvoxti" path="res://Assets/Animations/Enemies/47白眼法师/heal_07.png" id="80_i3wy3"]
+[ext_resource type="Texture2D" uid="uid://bh2ksrn8d038e" path="res://Assets/Animations/Enemies/47白眼法师/heal_08.png" id="81_luo2x"]
+[ext_resource type="Texture2D" uid="uid://m5r3q3himkyy" path="res://Assets/Animations/Enemies/47白眼法师/heal_09.png" id="82_vqj3i"]
+[ext_resource type="Texture2D" uid="uid://bwm8wfmh1pqgp" path="res://Assets/Animations/Enemies/47白眼法师/heal_10.png" id="83_e4087"]
+[ext_resource type="Texture2D" uid="uid://mjlqjff0axqb" path="res://Assets/Animations/Enemies/47白眼法师/heal_11.png" id="84_jyg60"]
+[ext_resource type="Texture2D" uid="uid://c21uvi2o6nhgl" path="res://Assets/Animations/Enemies/47白眼法师/heal_12.png" id="85_ae1gp"]
+[ext_resource type="Texture2D" uid="uid://btjs3ok6xnf2k" path="res://Assets/Animations/Enemies/47白眼法师/heal_13.png" id="86_sl64d"]
+[ext_resource type="Texture2D" uid="uid://csisq4wkrcsb0" path="res://Assets/Animations/Enemies/47白眼法师/heal_14.png" id="87_kt1j2"]
+[ext_resource type="Texture2D" uid="uid://dmcv5b1uu16fd" path="res://Assets/Animations/Enemies/47白眼法师/heal_15.png" id="88_5rf73"]
+[ext_resource type="Texture2D" uid="uid://d1c45t8c0i3yg" path="res://Assets/Animations/Enemies/47白眼法师/heal_16.png" id="89_hj645"]
+[ext_resource type="Texture2D" uid="uid://f14fjntaynpm" path="res://Assets/Animations/Enemies/47白眼法师/heal_17.png" id="90_jf4sb"]
+[ext_resource type="Texture2D" uid="uid://dsafngw5pwt6w" path="res://Assets/Animations/Enemies/47白眼法师/heal_18.png" id="91_50dcb"]
+[ext_resource type="Texture2D" uid="uid://xq3qylfsew3e" path="res://Assets/Animations/Enemies/47白眼法师/heal_19.png" id="92_ihcp2"]
+[ext_resource type="Texture2D" uid="uid://j0f6vmch3gi1" path="res://Assets/Animations/Enemies/47白眼法师/heal_20.png" id="93_7xa8l"]
+[ext_resource type="Texture2D" uid="uid://drvi8l4msl4gy" path="res://Assets/Animations/Enemies/47白眼法师/heal_21.png" id="94_5dbby"]
+[ext_resource type="Texture2D" uid="uid://chhdm8s2otyx" path="res://Assets/Animations/Enemies/47白眼法师/heal_22.png" id="95_pt1gl"]
+[ext_resource type="Texture2D" uid="uid://d4lxevjrdb6q1" path="res://Assets/Animations/Enemies/47白眼法师/heal_23.png" id="96_7ii0d"]
+[ext_resource type="Texture2D" uid="uid://cfxxyo54h7v4o" path="res://Assets/Animations/Enemies/47白眼法师/heal_24.png" id="97_rl12k"]
+[ext_resource type="Texture2D" uid="uid://dtyfjo25iq256" path="res://Assets/Animations/Enemies/47白眼法师/heal_25.png" id="98_fkyup"]
+[ext_resource type="Texture2D" uid="uid://cqbt8acssurar" path="res://Assets/Animations/Enemies/47白眼法师/heal_26.png" id="99_ijwe0"]
+[ext_resource type="Texture2D" uid="uid://b26s4ne245ji2" path="res://Assets/Animations/Enemies/47白眼法师/heal_27.png" id="100_pjtob"]
+[ext_resource type="Texture2D" uid="uid://c3kfmos2h46ow" path="res://Assets/Animations/Enemies/47白眼法师/move_back_00.png" id="101_fuc4x"]
+[ext_resource type="Texture2D" uid="uid://gv3hutfck88u" path="res://Assets/Animations/Enemies/47白眼法师/move_back_01.png" id="102_vwr1q"]
+[ext_resource type="Texture2D" uid="uid://b4vpn681h7w4b" path="res://Assets/Animations/Enemies/47白眼法师/move_back_02.png" id="103_feyay"]
+[ext_resource type="Texture2D" uid="uid://ccfxqy5725pm3" path="res://Assets/Animations/Enemies/47白眼法师/move_back_03.png" id="104_3hj4n"]
+[ext_resource type="Texture2D" uid="uid://b2r21f0aibvwk" path="res://Assets/Animations/Enemies/47白眼法师/move_back_04.png" id="105_8r3kk"]
+[ext_resource type="Texture2D" uid="uid://bjocokdxg4rp0" path="res://Assets/Animations/Enemies/47白眼法师/move_back_05.png" id="106_gbrwx"]
+[ext_resource type="Texture2D" uid="uid://ds8rln8omo8dm" path="res://Assets/Animations/Enemies/47白眼法师/move_back_06.png" id="107_x5acm"]
+[ext_resource type="Texture2D" uid="uid://dtwmxvpaialdy" path="res://Assets/Animations/Enemies/47白眼法师/move_back_07.png" id="108_mivon"]
+[ext_resource type="Texture2D" uid="uid://juxjlsawnf11" path="res://Assets/Animations/Enemies/47白眼法师/move_back_08.png" id="109_t8c68"]
+[ext_resource type="Texture2D" uid="uid://n7tla1p4npop" path="res://Assets/Animations/Enemies/47白眼法师/move_back_09.png" id="110_2d2vd"]
+[ext_resource type="Texture2D" uid="uid://phef55fiy1g7" path="res://Assets/Animations/Enemies/47白眼法师/move_back_10.png" id="111_hhjbd"]
+[ext_resource type="Texture2D" uid="uid://bn0i6hrkex03" path="res://Assets/Animations/Enemies/47白眼法师/move_back_11.png" id="112_18uuq"]
+[ext_resource type="Texture2D" uid="uid://cbgwkgc5k0wij" path="res://Assets/Animations/Enemies/47白眼法师/move_back_12.png" id="113_xx25p"]
+[ext_resource type="Texture2D" uid="uid://bom8kkk3x60d8" path="res://Assets/Animations/Enemies/47白眼法师/move_back_13.png" id="114_0r86t"]
+[ext_resource type="Texture2D" uid="uid://cavw1haioyanx" path="res://Assets/Animations/Enemies/47白眼法师/move_back_14.png" id="115_ueky0"]
+[ext_resource type="Texture2D" uid="uid://ceaubbq028vno" path="res://Assets/Animations/Enemies/47白眼法师/move_back_15.png" id="116_byvrf"]
+[ext_resource type="Texture2D" uid="uid://ctoiok0dm0ysp" path="res://Assets/Animations/Enemies/47白眼法师/move_back_16.png" id="117_wa1ni"]
+[ext_resource type="Texture2D" uid="uid://cpihhxj1lrayg" path="res://Assets/Animations/Enemies/47白眼法师/move_back_17.png" id="118_3vk3c"]
+[ext_resource type="Texture2D" uid="uid://b0kulrqfopm73" path="res://Assets/Animations/Enemies/47白眼法师/move_back_18.png" id="119_kpqtr"]
+[ext_resource type="Texture2D" uid="uid://dcpdf5kff8bvn" path="res://Assets/Animations/Enemies/47白眼法师/move_back_19.png" id="120_bwg24"]
+[ext_resource type="Texture2D" uid="uid://c6uy3ymadf0j0" path="res://Assets/Animations/Enemies/47白眼法师/move_back_20.png" id="121_omuwl"]
+[ext_resource type="Texture2D" uid="uid://b2dnir68tsv0j" path="res://Assets/Animations/Enemies/47白眼法师/move_back_21.png" id="122_g2iuj"]
+[ext_resource type="Texture2D" uid="uid://duf2i7hibhavi" path="res://Assets/Animations/Enemies/47白眼法师/move_back_22.png" id="123_em6ej"]
+[ext_resource type="Texture2D" uid="uid://ucfe18ioee7e" path="res://Assets/Animations/Enemies/47白眼法师/move_back_23.png" id="124_2yd1v"]
+[ext_resource type="Texture2D" uid="uid://d0eyuug7yde7s" path="res://Assets/Animations/Enemies/47白眼法师/move_back_24.png" id="125_iq6h6"]
+[ext_resource type="Texture2D" uid="uid://k3cs2bwgaphb" path="res://Assets/Animations/Enemies/47白眼法师/move_back_25.png" id="126_ng2x6"]
+[ext_resource type="Texture2D" uid="uid://dw433usjot04v" path="res://Assets/Animations/Enemies/47白眼法师/move_back_26.png" id="127_3wtm1"]
+[ext_resource type="Texture2D" uid="uid://xqs2dufc3olf" path="res://Assets/Animations/Enemies/47白眼法师/move_back_27.png" id="128_ixipr"]
+[ext_resource type="Texture2D" uid="uid://duj2euoslymax" path="res://Assets/Animations/Enemies/47白眼法师/move_back_28.png" id="129_nhnc3"]
+[ext_resource type="Texture2D" uid="uid://bv3crray5b4u8" path="res://Assets/Animations/Enemies/47白眼法师/move_back_29.png" id="130_13vkj"]
+[ext_resource type="Texture2D" uid="uid://pawed2vnovjr" path="res://Assets/Animations/Enemies/47白眼法师/move_back_30.png" id="131_14wex"]
+[ext_resource type="Texture2D" uid="uid://dl67ylywpwk4q" path="res://Assets/Animations/Enemies/47白眼法师/move_back_31.png" id="132_cve0e"]
+[ext_resource type="Texture2D" uid="uid://dfp8syxq5bwrr" path="res://Assets/Animations/Enemies/47白眼法师/move_back_32.png" id="133_xsmna"]
+[ext_resource type="Texture2D" uid="uid://bysyqplsaso53" path="res://Assets/Animations/Enemies/47白眼法师/move_back_33.png" id="134_spvcf"]
+[ext_resource type="Texture2D" uid="uid://buqiuru4m5st8" path="res://Assets/Animations/Enemies/47白眼法师/move_back_34.png" id="135_0u3mi"]
+[ext_resource type="Texture2D" uid="uid://ddc5er8vap5kg" path="res://Assets/Animations/Enemies/47白眼法师/move_back_35.png" id="136_o7wx8"]
+[ext_resource type="Texture2D" uid="uid://bpamnjqyjqvfd" path="res://Assets/Animations/Enemies/47白眼法师/move_back_36.png" id="137_3ej1j"]
+[ext_resource type="Texture2D" uid="uid://b6167mpf2can7" path="res://Assets/Animations/Enemies/47白眼法师/move_back_37.png" id="138_sq2we"]
+[ext_resource type="Texture2D" uid="uid://dpaasd4p7gm6s" path="res://Assets/Animations/Enemies/47白眼法师/move_back_38.png" id="139_a0v5l"]
+[ext_resource type="Texture2D" uid="uid://3s3spli6qkyk" path="res://Assets/Animations/Enemies/47白眼法师/move_back_39.png" id="140_pfsy1"]
+[ext_resource type="Texture2D" uid="uid://ct8v40jagu5sm" path="res://Assets/Animations/Enemies/47白眼法师/move_back_40.png" id="141_w22s7"]
+[ext_resource type="Texture2D" uid="uid://dbegnjgcpgwd6" path="res://Assets/Animations/Enemies/47白眼法师/move_back_41.png" id="142_iw604"]
+[ext_resource type="Texture2D" uid="uid://dd4503d3xie4m" path="res://Assets/Animations/Enemies/47白眼法师/move_back_42.png" id="143_mseua"]
+[ext_resource type="Texture2D" uid="uid://by4dsscso0i5t" path="res://Assets/Animations/Enemies/47白眼法师/move_back_43.png" id="144_wioq5"]
+[ext_resource type="Texture2D" uid="uid://bfo5anybt5ekh" path="res://Assets/Animations/Enemies/47白眼法师/move_back_44.png" id="145_ii1yj"]
+[ext_resource type="Texture2D" uid="uid://b33lnd5ouilj5" path="res://Assets/Animations/Enemies/47白眼法师/move_back_45.png" id="146_o5g2e"]
+[ext_resource type="Texture2D" uid="uid://cyocesejiospa" path="res://Assets/Animations/Enemies/47白眼法师/move_back_46.png" id="147_1hpya"]
+[ext_resource type="Texture2D" uid="uid://cjpjsxqdtmeo5" path="res://Assets/Animations/Enemies/47白眼法师/move_back_47.png" id="148_hjm6n"]
+[ext_resource type="Texture2D" uid="uid://j8pm3lh4yesf" path="res://Assets/Animations/Enemies/47白眼法师/move_front_00.png" id="149_ngig5"]
+[ext_resource type="Texture2D" uid="uid://cmv3jjom0mytc" path="res://Assets/Animations/Enemies/47白眼法师/move_front_01.png" id="150_cpndd"]
+[ext_resource type="Texture2D" uid="uid://bpwrd8phx2lta" path="res://Assets/Animations/Enemies/47白眼法师/move_front_02.png" id="151_rfunu"]
+[ext_resource type="Texture2D" uid="uid://bs00wlpm644n8" path="res://Assets/Animations/Enemies/47白眼法师/move_front_03.png" id="152_bqxor"]
+[ext_resource type="Texture2D" uid="uid://bcg8lij1821bp" path="res://Assets/Animations/Enemies/47白眼法师/move_front_04.png" id="153_x57fs"]
+[ext_resource type="Texture2D" uid="uid://baty5qibljmno" path="res://Assets/Animations/Enemies/47白眼法师/move_front_05.png" id="154_g0m2b"]
+[ext_resource type="Texture2D" uid="uid://c361ijgx8gmtr" path="res://Assets/Animations/Enemies/47白眼法师/move_front_06.png" id="155_qfq26"]
+[ext_resource type="Texture2D" uid="uid://dhhs1npg1esf2" path="res://Assets/Animations/Enemies/47白眼法师/move_front_07.png" id="156_4eyvu"]
+[ext_resource type="Texture2D" uid="uid://d0sgg4jrvmch5" path="res://Assets/Animations/Enemies/47白眼法师/move_front_08.png" id="157_4tvkv"]
+[ext_resource type="Texture2D" uid="uid://d3lw7vs8kydt5" path="res://Assets/Animations/Enemies/47白眼法师/move_front_09.png" id="158_qacbs"]
+[ext_resource type="Texture2D" uid="uid://o8talu0e75n4" path="res://Assets/Animations/Enemies/47白眼法师/move_front_10.png" id="159_wou0g"]
+[ext_resource type="Texture2D" uid="uid://dva2wfucecoqd" path="res://Assets/Animations/Enemies/47白眼法师/move_front_11.png" id="160_o7fl1"]
+[ext_resource type="Texture2D" uid="uid://b4xt4bns1jcow" path="res://Assets/Animations/Enemies/47白眼法师/move_front_12.png" id="161_3ad7x"]
+[ext_resource type="Texture2D" uid="uid://dofc1jkc0rxp3" path="res://Assets/Animations/Enemies/47白眼法师/move_front_13.png" id="162_58miv"]
+[ext_resource type="Texture2D" uid="uid://dmnqhd7batjaj" path="res://Assets/Animations/Enemies/47白眼法师/move_front_14.png" id="163_4qtih"]
+[ext_resource type="Texture2D" uid="uid://cyfad8pliai26" path="res://Assets/Animations/Enemies/47白眼法师/move_front_15.png" id="164_o47mh"]
+[ext_resource type="Texture2D" uid="uid://cyure0kf3bj4b" path="res://Assets/Animations/Enemies/47白眼法师/move_front_16.png" id="165_lhmiy"]
+[ext_resource type="Texture2D" uid="uid://krivryvadwt7" path="res://Assets/Animations/Enemies/47白眼法师/move_front_17.png" id="166_ekucb"]
+[ext_resource type="Texture2D" uid="uid://bxem6pf28qgk8" path="res://Assets/Animations/Enemies/47白眼法师/move_front_18.png" id="167_twcf4"]
+[ext_resource type="Texture2D" uid="uid://c83gjn81u6bnk" path="res://Assets/Animations/Enemies/47白眼法师/move_front_19.png" id="168_3rhlb"]
+[ext_resource type="Texture2D" uid="uid://b0st0ab12e0bm" path="res://Assets/Animations/Enemies/47白眼法师/move_front_20.png" id="169_fudvj"]
+[ext_resource type="Texture2D" uid="uid://bplu7lwelvj1d" path="res://Assets/Animations/Enemies/47白眼法师/move_front_21.png" id="170_fxg6s"]
+[ext_resource type="Texture2D" uid="uid://dj4ye3a7eqpqr" path="res://Assets/Animations/Enemies/47白眼法师/move_front_22.png" id="171_p6se7"]
+[ext_resource type="Texture2D" uid="uid://s56lhqg6o1om" path="res://Assets/Animations/Enemies/47白眼法师/move_front_23.png" id="172_4rlmo"]
+[ext_resource type="Texture2D" uid="uid://b6ywe0ymnibme" path="res://Assets/Animations/Enemies/47白眼法师/move_front_24.png" id="173_kjr8b"]
+[ext_resource type="Texture2D" uid="uid://ek4x2fsmfbu3" path="res://Assets/Animations/Enemies/47白眼法师/move_front_25.png" id="174_ivxuw"]
+[ext_resource type="Texture2D" uid="uid://ci78t4hcdonds" path="res://Assets/Animations/Enemies/47白眼法师/move_front_26.png" id="175_2uykr"]
+[ext_resource type="Texture2D" uid="uid://ce7p0anbfemr4" path="res://Assets/Animations/Enemies/47白眼法师/move_front_27.png" id="176_58hih"]
+[ext_resource type="Texture2D" uid="uid://cduujsfb70i8u" path="res://Assets/Animations/Enemies/47白眼法师/move_front_28.png" id="177_ysd2x"]
+[ext_resource type="Texture2D" uid="uid://d0nao2v4rbmdj" path="res://Assets/Animations/Enemies/47白眼法师/move_front_29.png" id="178_eat76"]
+[ext_resource type="Texture2D" uid="uid://bxjwupn5w5bo4" path="res://Assets/Animations/Enemies/47白眼法师/move_front_30.png" id="179_5rhvy"]
+[ext_resource type="Texture2D" uid="uid://b7mj70ofg5m6m" path="res://Assets/Animations/Enemies/47白眼法师/move_front_31.png" id="180_fii3q"]
+[ext_resource type="Texture2D" uid="uid://b2gl3hjox8e30" path="res://Assets/Animations/Enemies/47白眼法师/move_front_32.png" id="181_jgbtk"]
+[ext_resource type="Texture2D" uid="uid://domrf30cncmbq" path="res://Assets/Animations/Enemies/47白眼法师/move_front_33.png" id="182_1vhfj"]
+[ext_resource type="Texture2D" uid="uid://ddla6xx4f346" path="res://Assets/Animations/Enemies/47白眼法师/move_front_34.png" id="183_xkwov"]
+[ext_resource type="Texture2D" uid="uid://2hpfodvs2qyh" path="res://Assets/Animations/Enemies/47白眼法师/move_front_35.png" id="184_bse8x"]
+[ext_resource type="Texture2D" uid="uid://o5fmfyyun2oo" path="res://Assets/Animations/Enemies/47白眼法师/move_front_36.png" id="185_dhhbi"]
+[ext_resource type="Texture2D" uid="uid://dpx1fv2fan1sh" path="res://Assets/Animations/Enemies/47白眼法师/move_front_37.png" id="186_mkhu5"]
+[ext_resource type="Texture2D" uid="uid://dmbo63wepseh6" path="res://Assets/Animations/Enemies/47白眼法师/move_front_38.png" id="187_g5a51"]
+[ext_resource type="Texture2D" uid="uid://c52r8yv83n2se" path="res://Assets/Animations/Enemies/47白眼法师/move_front_39.png" id="188_vwde7"]
+[ext_resource type="Texture2D" uid="uid://d0omim1r74j07" path="res://Assets/Animations/Enemies/47白眼法师/move_front_40.png" id="189_yrnba"]
+[ext_resource type="Texture2D" uid="uid://c64dkgtsoxi5g" path="res://Assets/Animations/Enemies/47白眼法师/move_front_41.png" id="190_60xvw"]
+[ext_resource type="Texture2D" uid="uid://wvgqtllxh6pc" path="res://Assets/Animations/Enemies/47白眼法师/move_front_42.png" id="191_cx0p3"]
+[ext_resource type="Texture2D" uid="uid://bram7flj5qa3" path="res://Assets/Animations/Enemies/47白眼法师/move_front_43.png" id="192_nnqjk"]
+[ext_resource type="Texture2D" uid="uid://b6q8c4vgsnx3t" path="res://Assets/Animations/Enemies/47白眼法师/move_front_44.png" id="193_is183"]
+[ext_resource type="Texture2D" uid="uid://y27gav25vter" path="res://Assets/Animations/Enemies/47白眼法师/move_front_45.png" id="194_id3an"]
+[ext_resource type="Texture2D" uid="uid://b2bgyv7fa2qvj" path="res://Assets/Animations/Enemies/47白眼法师/move_front_46.png" id="195_hxp3c"]
+[ext_resource type="Texture2D" uid="uid://brj5vgpdgphlm" path="res://Assets/Animations/Enemies/47白眼法师/move_front_47.png" id="196_c0b0s"]
+[ext_resource type="Texture2D" uid="uid://dxakoi0xlckxl" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_00.png" id="197_aibdm"]
+[ext_resource type="Texture2D" uid="uid://cue7fjjjq852n" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_01.png" id="198_3jnrb"]
+[ext_resource type="Texture2D" uid="uid://dfhovyhdefv6i" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_02.png" id="199_fe7ld"]
+[ext_resource type="Texture2D" uid="uid://bqdu44i7tm2e4" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_03.png" id="200_sa68g"]
+[ext_resource type="Texture2D" uid="uid://du73jyxtqhnqa" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_04.png" id="201_g7tii"]
+[ext_resource type="Texture2D" uid="uid://l23pbjhjsrnw" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_05.png" id="202_mlbed"]
+[ext_resource type="Texture2D" uid="uid://c76oxdw5mkk8o" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_06.png" id="203_6f1l3"]
+[ext_resource type="Texture2D" uid="uid://csnssvt8jhkpd" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_07.png" id="204_c1qjb"]
+[ext_resource type="Texture2D" uid="uid://caw40rnl1sxsx" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_08.png" id="205_ospg3"]
+[ext_resource type="Texture2D" uid="uid://8ryb7bywsi20" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_09.png" id="206_7rp8d"]
+[ext_resource type="Texture2D" uid="uid://dpg3dy5e1dnj5" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_10.png" id="207_lqm3h"]
+[ext_resource type="Texture2D" uid="uid://cgsi62shtq286" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_11.png" id="208_d6ppm"]
+[ext_resource type="Texture2D" uid="uid://b1jx10tcp57xp" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_12.png" id="209_dhsrw"]
+[ext_resource type="Texture2D" uid="uid://crwfwpnsmd35x" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_13.png" id="210_plpbb"]
+[ext_resource type="Texture2D" uid="uid://cjmpuq0armyqf" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_14.png" id="211_cmi57"]
+[ext_resource type="Texture2D" uid="uid://chde76g6q34i" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_15.png" id="212_2hmyy"]
+[ext_resource type="Texture2D" uid="uid://cb8ok23ruvov0" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_16.png" id="213_doobh"]
+[ext_resource type="Texture2D" uid="uid://dsgjlwgl8pkp6" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_17.png" id="214_p81vb"]
+[ext_resource type="Texture2D" uid="uid://d33wt44ppypur" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_18.png" id="215_er6ne"]
+[ext_resource type="Texture2D" uid="uid://b386n0e82lp87" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_19.png" id="216_5yygt"]
+[ext_resource type="Texture2D" uid="uid://dtl2hhvd73d1u" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_20.png" id="217_l8n8j"]
+[ext_resource type="Texture2D" uid="uid://ds6p58x68um8t" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_21.png" id="218_gpa5o"]
+[ext_resource type="Texture2D" uid="uid://ct0s2m15dt0hq" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_22.png" id="219_vq7jl"]
+[ext_resource type="Texture2D" uid="uid://dpakprx8ie7nf" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_23.png" id="220_u1fj3"]
+[ext_resource type="Texture2D" uid="uid://mo2mjlw7y4i" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_24.png" id="221_q3177"]
+[ext_resource type="Texture2D" uid="uid://cpifi3jaq4475" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_25.png" id="222_xt4w0"]
+[ext_resource type="Texture2D" uid="uid://diamq1l7u32hy" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_26.png" id="223_iq5xx"]
+[ext_resource type="Texture2D" uid="uid://boa631fis7l18" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_27.png" id="224_t52x3"]
+[ext_resource type="Texture2D" uid="uid://cyow5dhfjhoom" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_28.png" id="225_o6g76"]
+[ext_resource type="Texture2D" uid="uid://cp35t75yr48hx" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_29.png" id="226_sbg2y"]
+[ext_resource type="Texture2D" uid="uid://bwuvbieijgkm0" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_30.png" id="227_jmi6w"]
+[ext_resource type="Texture2D" uid="uid://6ml2ly1y1ktc" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_31.png" id="228_fxsks"]
+[ext_resource type="Texture2D" uid="uid://dbumkncm4m4i4" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_32.png" id="229_k60ui"]
+[ext_resource type="Texture2D" uid="uid://dw6346j63exgp" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_33.png" id="230_bisw7"]
+[ext_resource type="Texture2D" uid="uid://c7iy8uee30v5u" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_34.png" id="231_nobwh"]
+[ext_resource type="Texture2D" uid="uid://f7016j8bvmg4" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_35.png" id="232_ra1ex"]
+[ext_resource type="Texture2D" uid="uid://dgx5bw54qdbo6" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_36.png" id="233_8sv6b"]
+[ext_resource type="Texture2D" uid="uid://cyexkx1ib87re" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_37.png" id="234_wov36"]
+[ext_resource type="Texture2D" uid="uid://d1yaipitd1ot6" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_38.png" id="235_5vdgu"]
+[ext_resource type="Texture2D" uid="uid://berp3jj8uc615" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_39.png" id="236_5oqhc"]
+[ext_resource type="Texture2D" uid="uid://dr1kf1ggaorhg" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_40.png" id="237_lgcgs"]
+[ext_resource type="Texture2D" uid="uid://deeuhapvsn7l5" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_41.png" id="238_fh8ib"]
+[ext_resource type="Texture2D" uid="uid://nrs1uovo5b7e" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_42.png" id="239_cxvwf"]
+[ext_resource type="Texture2D" uid="uid://b7rfuabktjgae" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_43.png" id="240_t1cko"]
+[ext_resource type="Texture2D" uid="uid://rmikw3iurmgu" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_44.png" id="241_w4sru"]
+[ext_resource type="Texture2D" uid="uid://bu2tdl3nd750p" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_45.png" id="242_f5yao"]
+[ext_resource type="Texture2D" uid="uid://dpge3oqjikbnr" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_46.png" id="243_adfwq"]
+[ext_resource type="Texture2D" uid="uid://bjq4jmmfey0le" path="res://Assets/Animations/Enemies/47白眼法师/move_normal_47.png" id="244_jcmpx"]
+[ext_resource type="PackedScene" uid="uid://dcjuved17hj6j" path="res://Scenes/Enemies/EnemyComponents/appear_audio_component.tscn" id="247_0tpe5"]
+[ext_resource type="AudioStream" uid="uid://tj2qdr0snm0b" path="res://Assets/Sounds/FXs/Enemies/人偶/人偶.wav" id="248_1l7id"]
+[ext_resource type="Shader" path="res://Assets/Shaders/hue_color.gdshader" id="248_lt686"]
+[ext_resource type="Texture2D" uid="uid://ccglhhifm554s" path="res://Assets/Images/Effects/鼓舞光环.png" id="248_uvyvl"]
+[ext_resource type="AudioStream" uid="uid://cq0hmmp6grfpw" path="res://Assets/Sounds/FXs/Battles/魔法拳.wav" id="250_255bw"]
+
+[sub_resource type="Resource" id="Resource_j73c3"]
+script = ExtResource("3_r5yqo")
+health = 760
+dodge_rate = 0.0
+near_damage_low = 10
+near_damage_high = 12
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 70
+far_damage_high = 80
+far_attack_speed = 1.5
+far_damage_range = 280
+armor = 0.0
+physic_immune = false
+magic_defence = 0.7
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 0.5
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vha5u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_go1yv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lreu4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8ee48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ra5uk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_fgl57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_f5rrx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_a1ady")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_woqmu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_34ybd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_r3w3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_hlgmo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_fdekf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_41yh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_t0pmi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_avbfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_431cq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_srcuj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_5uehi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ukwpa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_5v5ix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_v1thq")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_eauvm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_1yuf4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_i0x6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_q3rw5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_ubudk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_qcblb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_g1i5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_il4qt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_0ppgs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_77ixw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_6vwia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_dackq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_uqnb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_no0qv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_8m0el")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_tiq02")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_sv0x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_vgkgk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_lkssy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_u8wsm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_dvf2i")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("46_ijwh4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_xchjy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_ty2iv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_b2hq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_cm07x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_t5jsh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_3k5jc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_e5ixl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_dfe36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_a1wr1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_leflw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_6b1db")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_enwsg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_vcc4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_kw23n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_0lvy1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_kvq0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_6qrtl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_kc1b2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_v63n5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_m53eo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_a3wjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_a2vo3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_enrye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_wdruy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_mflgs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_52f60")
+}],
+"loop": false,
+"name": &"far_attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("73_lueko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_vhr88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_7kitj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_qcrgv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_jij7g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_08sg4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_cbew5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_i3wy3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_luo2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_vqj3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_e4087")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_jyg60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_ae1gp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_sl64d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_kt1j2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_5rf73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_hj645")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_jf4sb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_50dcb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_ihcp2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_7xa8l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_5dbby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_pt1gl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_7ii0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_rl12k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_fkyup")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_ijwe0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_pjtob")
+}],
+"loop": false,
+"name": &"heal",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_go1yv")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("101_fuc4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_vwr1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_feyay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_3hj4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_8r3kk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_gbrwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_x5acm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_mivon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_t8c68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_2d2vd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_hhjbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_18uuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_xx25p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_0r86t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_ueky0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_byvrf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_wa1ni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_3vk3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_kpqtr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_bwg24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_omuwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_g2iuj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_em6ej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_2yd1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_iq6h6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_ng2x6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_3wtm1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_ixipr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_nhnc3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_13vkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_14wex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_cve0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_xsmna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_spvcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_0u3mi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_o7wx8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_3ej1j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_sq2we")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_a0v5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_pfsy1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_w22s7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_iw604")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_mseua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_wioq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_ii1yj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_o5g2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_1hpya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_hjm6n")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("149_ngig5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_cpndd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_rfunu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_bqxor")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_x57fs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_g0m2b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_qfq26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_4eyvu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_4tvkv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("158_qacbs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_wou0g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_o7fl1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_3ad7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_58miv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_4qtih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_o47mh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_lhmiy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("166_ekucb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("167_twcf4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("168_3rhlb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("169_fudvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("170_fxg6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("171_p6se7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_4rlmo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("173_kjr8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_ivxuw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("175_2uykr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("176_58hih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("177_ysd2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("178_eat76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("179_5rhvy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("180_fii3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("181_jgbtk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("182_1vhfj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("183_xkwov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("184_bse8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("185_dhhbi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("186_mkhu5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("187_g5a51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("188_vwde7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("189_yrnba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("190_60xvw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("191_cx0p3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("192_nnqjk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("193_is183")
+}, {
+"duration": 1.0,
+"texture": ExtResource("194_id3an")
+}, {
+"duration": 1.0,
+"texture": ExtResource("195_hxp3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("196_c0b0s")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("197_aibdm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("198_3jnrb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("199_fe7ld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("200_sa68g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("201_g7tii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("202_mlbed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("203_6f1l3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("204_c1qjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("205_ospg3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("206_7rp8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("207_lqm3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("208_d6ppm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("209_dhsrw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("210_plpbb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("211_cmi57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("212_2hmyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("213_doobh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("214_p81vb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("215_er6ne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("216_5yygt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("217_l8n8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("218_gpa5o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("219_vq7jl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("220_u1fj3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("221_q3177")
+}, {
+"duration": 1.0,
+"texture": ExtResource("222_xt4w0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("223_iq5xx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("224_t52x3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("225_o6g76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("226_sbg2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("227_jmi6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("228_fxsks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("229_k60ui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("230_bisw7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("231_nobwh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("232_ra1ex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("233_8sv6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("234_wov36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("235_5vdgu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("236_5oqhc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("237_lgcgs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("238_fh8ib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("239_cxvwf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("240_t1cko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("241_w4sru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("242_f5yao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("243_adfwq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("244_jcmpx")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 30.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7mxxu"]
+radius = 73.9444
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rswp7"]
+shader = ExtResource("248_lt686")
+shader_parameter/hue_shift = 0.32
+
+[node name="Enemy47" groups=["super_unit"] instance=ExtResource("1_cv5kg")]
+script = ExtResource("2_x2k1e")
+enemy_name = "白眼法师"
+enemy_id = 47
+enemy_texture = ExtResource("3_ahkfd")
+enemy_type = 2
+start_data = SubResource("Resource_j73c3")
+far_attack_bullet_scene = ExtResource("5_ynof4")
+bounty = 32
+die_audio_stream_list = Array[AudioStream]([ExtResource("5_6vngg")])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(0, -85)
+sprite_frames = SubResource("SpriteFrames_vha5u")
+animation = &"far_attack"
+autoplay = "idle"
+
+[node name="HealArea" type="Area2D" parent="UnitBody" index="8"]
+scale = Vector2(2, 2)
+collision_layer = 0
+collision_mask = 96
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/HealArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_7mxxu")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="LightSprite" type="Sprite2D" parent="UnitBody" index="12"]
+z_index = -1
+material = SubResource("ShaderMaterial_rswp7")
+position = Vector2(0, -15)
+scale = Vector2(1.42627, 1.42627)
+texture = ExtResource("248_uvyvl")
+
+[node name="AppearAudioComponent" parent="." index="5" instance=ExtResource("247_0tpe5")]
+appear_audio_list = Array[AudioStream]([ExtResource("248_1l7id")])
+
+[node name="AppearAudioPlayer" parent="AppearAudioComponent" index="0"]
+stream = ExtResource("248_1l7id")
+volume_db = -15.0
+
+[node name="NormalAttackAudio" type="AudioStreamPlayer" parent="." index="6"]
+stream = ExtResource("250_255bw")
+volume_db = -8.0
+bus = &"Sound"
+
+[node name="HealTimer" type="Timer" parent="." index="7"]
+wait_time = 8.0
+autostart = true
+
+[connection signal="timeout" from="HealTimer" to="." method="_on_heal_timer_timeout"]
+
+[editable path="AppearAudioComponent"]

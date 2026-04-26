@@ -1,0 +1,142 @@
+[gd_scene load_steps=12 format=3 uid="uid://cqyt0huygl0sb"]
+
+[ext_resource type="Script" path="res://Scripts/UI-Components/enemy_tip_button.gd" id="1_1j114"]
+[ext_resource type="Texture2D" uid="uid://rab1rboe2m4l" path="res://Assets/Images/UI/TipIcons/enemy-0.png" id="1_f8abd"]
+[ext_resource type="Texture2D" uid="uid://dmd5kvni7oahk" path="res://Assets/Images/UI/TipIcons/enemy-0-hover.png" id="2_08ko3"]
+[ext_resource type="PackedScene" uid="uid://0grmhf3aqil4" path="res://Scenes/TipUI/enemy_ui.tscn" id="2_vbp3v"]
+[ext_resource type="AudioStream" uid="uid://b640v5uvqdn61" path="res://Assets/Sounds/FXs/UIs/TipAppear.wav" id="4_in0rs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4m1qf"]
+atlas = ExtResource("1_f8abd")
+region = Rect2(10, 9, 106, 108)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hnrp"]
+atlas = ExtResource("2_08ko3")
+region = Rect2(4, 4, 118, 118)
+
+[sub_resource type="Animation" id="Animation_h7hdy"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.660136, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Button:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.660136, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_i0jk7"]
+resource_name = "loop"
+length = 0.8
+loop_mode = 1
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(1, 1, 1, 1),
+"points": PackedFloat32Array(0.660136, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 0.7, 0, 0, 0, 0, 0.66, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.2, 0.6, 0.8)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Button:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(1, 1, 1, 1),
+"points": PackedFloat32Array(0.660136, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 0.7, 0, 0, 0, 0, 0.66, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.2, 0.6, 0.8)
+}
+
+[sub_resource type="Animation" id="Animation_oul22"]
+resource_name = "show"
+length = 0.3
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 0.660136, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Button:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 0.660136, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jkh8q"]
+_data = {
+"RESET": SubResource("Animation_h7hdy"),
+"loop": SubResource("Animation_i0jk7"),
+"show": SubResource("Animation_oul22")
+}
+
+[node name="EnemyTipButton" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_1j114")
+open_tip_scene = ExtResource("2_vbp3v")
+
+[node name="Button" type="Control" parent="."]
+anchors_preset = 0
+scale = Vector2(0.660136, 0.660136)
+
+[node name="TextureButton" type="TextureButton" parent="Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -53.0
+offset_top = -54.0
+offset_right = 53.0
+offset_bottom = 54.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+texture_normal = SubResource("AtlasTexture_4m1qf")
+texture_pressed = SubResource("AtlasTexture_4m1qf")
+texture_hover = SubResource("AtlasTexture_7hnrp")
+stretch_mode = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_jkh8q")
+}
+autoplay = "show"
+
+[node name="TipAppearAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_in0rs")
+autoplay = true
+bus = &"Sound"

@@ -1,0 +1,65 @@
+[gd_scene load_steps=14 format=3 uid="uid://xi5f3uaxml5h"]
+
+[ext_resource type="Texture2D" uid="uid://b82yb8thoh6l1" path="res://Assets/Images/Effects/FireParticle/fire_effect0001.png" id="1_2yg4m"]
+[ext_resource type="Script" path="res://Scripts/Effects/normal_effect.gd" id="1_s6l63"]
+[ext_resource type="Texture2D" uid="uid://c0sj7a1w5hr5w" path="res://Assets/Images/Effects/FireParticle/fire_effect0002.png" id="2_6s4v5"]
+[ext_resource type="Texture2D" uid="uid://vcmsq35wrm5u" path="res://Assets/Images/Effects/FireParticle/fire_effect0003.png" id="3_srb5k"]
+[ext_resource type="Texture2D" uid="uid://bno5f04wbhcxj" path="res://Assets/Images/Effects/FireParticle/fire_effect0004.png" id="4_oafi6"]
+[ext_resource type="Texture2D" uid="uid://bse1mbmjnr3o" path="res://Assets/Images/Effects/FireParticle/fire_effect0005.png" id="5_525uc"]
+[ext_resource type="Texture2D" uid="uid://dnb6qsapwdy4" path="res://Assets/Images/Effects/FireParticle/fire_effect0006.png" id="6_rqttk"]
+[ext_resource type="Texture2D" uid="uid://wiikyfmpw88p" path="res://Assets/Images/Effects/FireParticle/fire_effect0007.png" id="7_jvfp0"]
+[ext_resource type="Texture2D" uid="uid://b135vgj24on1m" path="res://Assets/Images/Effects/FireParticle/fire_effect0008.png" id="8_7upau"]
+[ext_resource type="Texture2D" uid="uid://dkhkew0uy13mi" path="res://Assets/Images/Effects/FireParticle/fire_effect0009.png" id="9_wvps7"]
+[ext_resource type="Texture2D" uid="uid://cefdjgeuqlfab" path="res://Assets/Images/Effects/FireParticle/fire_effect0010.png" id="10_ufwap"]
+[ext_resource type="Texture2D" uid="uid://bad81dvwcuo43" path="res://Assets/Images/Effects/FireParticle/fire_effect0011.png" id="11_guoan"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fql2r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2yg4m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6s4v5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_srb5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_oafi6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_525uc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_rqttk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jvfp0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7upau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wvps7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ufwap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_guoan")
+}],
+"loop": false,
+"name": &"default",
+"speed": 24.0
+}]
+
+[node name="FireParticle" type="AnimatedSprite2D"]
+z_index = 10
+y_sort_enabled = true
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_fql2r")
+autoplay = "default"
+frame = 10
+frame_progress = 1.0
+script = ExtResource("1_s6l63")

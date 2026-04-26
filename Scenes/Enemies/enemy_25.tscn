@@ -1,0 +1,786 @@
+[gd_scene load_steps=186 format=3 uid="uid://bogv4dflqaoej"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_vm7jm"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_25.gd" id="2_eooqg"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="3_8fxy8"]
+[ext_resource type="Texture2D" uid="uid://dqe11qgojee6a" path="res://Assets/Images/UI/InformationBar/木乃伊.png" id="3_xop8w"]
+[ext_resource type="AudioStream" uid="uid://dw1xc50um8dws" path="res://Assets/Sounds/FXs/Enemies/尸壳/尸壳死亡1.wav" id="4_frdox"]
+[ext_resource type="AudioStream" uid="uid://dpppdrj6vx40o" path="res://Assets/Sounds/FXs/Enemies/尸壳/尸壳死亡2.wav" id="5_mt6n1"]
+[ext_resource type="AudioStream" uid="uid://d0pnofrboijy" path="res://Assets/Sounds/FXs/Enemies/尸壳/尸壳死亡3.wav" id="6_3hpc8"]
+[ext_resource type="PackedScene" uid="uid://dcjuved17hj6j" path="res://Scenes/Enemies/EnemyComponents/appear_audio_component.tscn" id="7_ddcyd"]
+[ext_resource type="Texture2D" uid="uid://b3l0bu7psvq8g" path="res://Assets/Animations/Enemies/25木乃伊/attack_00.png" id="8_nsklg"]
+[ext_resource type="AudioStream" uid="uid://cwt2rga6wmbip" path="res://Assets/Sounds/FXs/Enemies/尸壳/尸壳出现1.wav" id="8_yeo40"]
+[ext_resource type="AudioStream" uid="uid://ddwrkohhv4ma2" path="res://Assets/Sounds/FXs/Enemies/尸壳/尸壳出现2.wav" id="9_nvd3f"]
+[ext_resource type="Texture2D" uid="uid://chem1pglemn7o" path="res://Assets/Animations/Enemies/25木乃伊/attack_01.png" id="9_xhjvg"]
+[ext_resource type="Texture2D" uid="uid://b1y2jlnm1egls" path="res://Assets/Animations/Enemies/25木乃伊/attack_02.png" id="10_brweo"]
+[ext_resource type="AudioStream" uid="uid://cdlnobqdkucyt" path="res://Assets/Sounds/FXs/Enemies/尸壳/尸壳出现3.wav" id="10_cemec"]
+[ext_resource type="Texture2D" uid="uid://c8fcbswqgh6gh" path="res://Assets/Animations/Enemies/25木乃伊/attack_03.png" id="11_xp24u"]
+[ext_resource type="Texture2D" uid="uid://bsdvqj17g152e" path="res://Assets/Animations/Enemies/25木乃伊/attack_04.png" id="12_conw0"]
+[ext_resource type="Texture2D" uid="uid://88awp8fddvxb" path="res://Assets/Animations/Enemies/25木乃伊/attack_05.png" id="13_hxypr"]
+[ext_resource type="Texture2D" uid="uid://bun7uctt6t7b4" path="res://Assets/Animations/Enemies/25木乃伊/attack_06.png" id="14_muvkp"]
+[ext_resource type="Texture2D" uid="uid://burokhagbusg8" path="res://Assets/Animations/Enemies/25木乃伊/attack_07.png" id="15_wcwyd"]
+[ext_resource type="Texture2D" uid="uid://kcghvjqdroyk" path="res://Assets/Animations/Enemies/25木乃伊/attack_08.png" id="16_0jyy1"]
+[ext_resource type="Texture2D" uid="uid://8h6uwl0uvv23" path="res://Assets/Animations/Enemies/25木乃伊/attack_09.png" id="17_rpwic"]
+[ext_resource type="Texture2D" uid="uid://delb4gq2qrjkc" path="res://Assets/Animations/Enemies/25木乃伊/attack_10.png" id="18_13w35"]
+[ext_resource type="Texture2D" uid="uid://81kdfdif4ct2" path="res://Assets/Animations/Enemies/25木乃伊/attack_11.png" id="19_snj5d"]
+[ext_resource type="Texture2D" uid="uid://d374mtev2r6vb" path="res://Assets/Animations/Enemies/25木乃伊/attack_12.png" id="20_yisot"]
+[ext_resource type="Texture2D" uid="uid://cjqfmbow5wclg" path="res://Assets/Animations/Enemies/25木乃伊/attack_13.png" id="21_80otw"]
+[ext_resource type="Texture2D" uid="uid://b7fmsc5tiudfx" path="res://Assets/Animations/Enemies/25木乃伊/attack_14.png" id="22_0nvot"]
+[ext_resource type="Texture2D" uid="uid://dhjl3nfa4xelo" path="res://Assets/Animations/Enemies/25木乃伊/attack_15.png" id="23_kymcm"]
+[ext_resource type="Texture2D" uid="uid://bh756wknn4b7p" path="res://Assets/Animations/Enemies/25木乃伊/attack_16.png" id="24_rdgjk"]
+[ext_resource type="Texture2D" uid="uid://clfuesjtcxd1r" path="res://Assets/Animations/Enemies/25木乃伊/attack_17.png" id="25_3jak3"]
+[ext_resource type="Texture2D" uid="uid://ba58esjprrh3w" path="res://Assets/Animations/Enemies/25木乃伊/attack_18.png" id="26_44mjn"]
+[ext_resource type="Texture2D" uid="uid://tdtek83elc2m" path="res://Assets/Animations/Enemies/25木乃伊/attack_19.png" id="27_a3liq"]
+[ext_resource type="Texture2D" uid="uid://b8egwpra61fkw" path="res://Assets/Animations/Enemies/25木乃伊/attack_20.png" id="28_ehb7b"]
+[ext_resource type="Texture2D" uid="uid://b8peotljg0n1f" path="res://Assets/Animations/Enemies/25木乃伊/attack_21.png" id="29_08h6h"]
+[ext_resource type="Texture2D" uid="uid://wssmr5jxcqly" path="res://Assets/Animations/Enemies/25木乃伊/attack_22.png" id="30_mnlaw"]
+[ext_resource type="Texture2D" uid="uid://rkv5kanm7cn4" path="res://Assets/Animations/Enemies/25木乃伊/attack_23.png" id="31_2ooph"]
+[ext_resource type="Texture2D" uid="uid://b2xohmo81aj5j" path="res://Assets/Animations/Enemies/25木乃伊/attack_24.png" id="32_175cf"]
+[ext_resource type="Texture2D" uid="uid://dhq5bygcjlrl5" path="res://Assets/Animations/Enemies/25木乃伊/attack_25.png" id="33_kjcb7"]
+[ext_resource type="Texture2D" uid="uid://b2eclsfgkoiwk" path="res://Assets/Animations/Enemies/25木乃伊/attack_26.png" id="34_j6l5r"]
+[ext_resource type="Texture2D" uid="uid://uab0antr5u1y" path="res://Assets/Animations/Enemies/25木乃伊/attack_27.png" id="35_fwggr"]
+[ext_resource type="Texture2D" uid="uid://degwpgfe3tsnp" path="res://Assets/Animations/Enemies/25木乃伊/attack_28.png" id="36_3mi24"]
+[ext_resource type="Texture2D" uid="uid://bo15gca66vgiw" path="res://Assets/Animations/Enemies/25木乃伊/attack_29.png" id="37_87u0y"]
+[ext_resource type="Texture2D" uid="uid://dwfeoen4alsrt" path="res://Assets/Animations/Enemies/25木乃伊/attack_30.png" id="38_xtvgw"]
+[ext_resource type="Texture2D" uid="uid://dqmu5jkhq8yip" path="res://Assets/Animations/Enemies/25木乃伊/die_00.png" id="39_2lwbf"]
+[ext_resource type="Texture2D" uid="uid://8mhu8p815o33" path="res://Assets/Animations/Enemies/25木乃伊/die_01.png" id="40_cpg1s"]
+[ext_resource type="Texture2D" uid="uid://cmikvbigemlbh" path="res://Assets/Animations/Enemies/25木乃伊/die_02.png" id="41_a0qm6"]
+[ext_resource type="Texture2D" uid="uid://bg88c4smyjxng" path="res://Assets/Animations/Enemies/25木乃伊/die_03.png" id="42_4cg3t"]
+[ext_resource type="Texture2D" uid="uid://bmc77cdk2gal3" path="res://Assets/Animations/Enemies/25木乃伊/die_04.png" id="43_54ede"]
+[ext_resource type="Texture2D" uid="uid://cqvp4dq25bqeb" path="res://Assets/Animations/Enemies/25木乃伊/die_05.png" id="44_j0l0w"]
+[ext_resource type="Texture2D" uid="uid://cwunuxae0owl7" path="res://Assets/Animations/Enemies/25木乃伊/die_06.png" id="45_vay00"]
+[ext_resource type="Texture2D" uid="uid://tu0yfsviur4q" path="res://Assets/Animations/Enemies/25木乃伊/die_07.png" id="46_sr23n"]
+[ext_resource type="Texture2D" uid="uid://c4i2xy1vnkgiv" path="res://Assets/Animations/Enemies/25木乃伊/die_08.png" id="47_uirr2"]
+[ext_resource type="Texture2D" uid="uid://cw32vlsyd3dr0" path="res://Assets/Animations/Enemies/25木乃伊/die_09.png" id="48_i7hhy"]
+[ext_resource type="Texture2D" uid="uid://df3bngglniwki" path="res://Assets/Animations/Enemies/25木乃伊/die_10.png" id="49_wjcyb"]
+[ext_resource type="Texture2D" uid="uid://h56j4ip36yoh" path="res://Assets/Animations/Enemies/25木乃伊/die_11.png" id="50_vnloi"]
+[ext_resource type="Texture2D" uid="uid://d0jxrik16dwgb" path="res://Assets/Animations/Enemies/25木乃伊/die_12.png" id="51_b8xxb"]
+[ext_resource type="Texture2D" uid="uid://tlxoka4v31xl" path="res://Assets/Animations/Enemies/25木乃伊/die_13.png" id="52_gj2ps"]
+[ext_resource type="Texture2D" uid="uid://cf2otxdab32jt" path="res://Assets/Animations/Enemies/25木乃伊/die_14.png" id="53_x5cpd"]
+[ext_resource type="Texture2D" uid="uid://f2frpfew5avo" path="res://Assets/Animations/Enemies/25木乃伊/die_15.png" id="54_x55s8"]
+[ext_resource type="Texture2D" uid="uid://xnb4yaxvi0uf" path="res://Assets/Animations/Enemies/25木乃伊/die_16.png" id="55_bckp8"]
+[ext_resource type="Texture2D" uid="uid://tgcwfqd1kvo3" path="res://Assets/Animations/Enemies/25木乃伊/die_17.png" id="56_468ms"]
+[ext_resource type="Texture2D" uid="uid://4v7c0dmlbl1j" path="res://Assets/Animations/Enemies/25木乃伊/die_18.png" id="57_ji2gk"]
+[ext_resource type="Texture2D" uid="uid://bdcidw3o88ss1" path="res://Assets/Animations/Enemies/25木乃伊/die_19.png" id="58_1mhhm"]
+[ext_resource type="Texture2D" uid="uid://p1ejihqs5ws" path="res://Assets/Animations/Enemies/25木乃伊/die_20.png" id="59_4lh0j"]
+[ext_resource type="Texture2D" uid="uid://na2wjx4gv2rt" path="res://Assets/Animations/Enemies/25木乃伊/move_back_00.png" id="60_ugf1y"]
+[ext_resource type="Texture2D" uid="uid://dpaiulpyabutf" path="res://Assets/Animations/Enemies/25木乃伊/move_back_01.png" id="61_ea6f4"]
+[ext_resource type="Texture2D" uid="uid://cwek2o2oo6mwi" path="res://Assets/Animations/Enemies/25木乃伊/move_back_02.png" id="62_0x4u0"]
+[ext_resource type="Texture2D" uid="uid://o70aqws7576f" path="res://Assets/Animations/Enemies/25木乃伊/move_back_03.png" id="63_lqepk"]
+[ext_resource type="Texture2D" uid="uid://tyntn6d16oe2" path="res://Assets/Animations/Enemies/25木乃伊/move_back_04.png" id="64_xe5qo"]
+[ext_resource type="Texture2D" uid="uid://ctokrtkywcsed" path="res://Assets/Animations/Enemies/25木乃伊/move_back_05.png" id="65_s67dh"]
+[ext_resource type="Texture2D" uid="uid://cvcbn8fcfc38q" path="res://Assets/Animations/Enemies/25木乃伊/move_back_06.png" id="66_qwu7k"]
+[ext_resource type="Texture2D" uid="uid://b8gle35pqo632" path="res://Assets/Animations/Enemies/25木乃伊/move_back_07.png" id="67_o5qss"]
+[ext_resource type="Texture2D" uid="uid://bv58m5qrf5kiq" path="res://Assets/Animations/Enemies/25木乃伊/move_back_08.png" id="68_mcs7a"]
+[ext_resource type="Texture2D" uid="uid://c62jper8ylrw6" path="res://Assets/Animations/Enemies/25木乃伊/move_back_09.png" id="69_rmrpf"]
+[ext_resource type="Texture2D" uid="uid://d00juaxiexmm4" path="res://Assets/Animations/Enemies/25木乃伊/move_back_10.png" id="70_y7ycn"]
+[ext_resource type="Texture2D" uid="uid://70iijhfmq5o0" path="res://Assets/Animations/Enemies/25木乃伊/move_back_11.png" id="71_bm3ib"]
+[ext_resource type="Texture2D" uid="uid://d25cm2r4w62r7" path="res://Assets/Animations/Enemies/25木乃伊/move_back_12.png" id="72_q56g5"]
+[ext_resource type="Texture2D" uid="uid://23xtrdmvokqb" path="res://Assets/Animations/Enemies/25木乃伊/move_back_13.png" id="73_35f7l"]
+[ext_resource type="Texture2D" uid="uid://kg8qwxmbxy4k" path="res://Assets/Animations/Enemies/25木乃伊/move_back_14.png" id="74_pl51s"]
+[ext_resource type="Texture2D" uid="uid://ck72rbbc16fc8" path="res://Assets/Animations/Enemies/25木乃伊/move_back_15.png" id="75_c1myn"]
+[ext_resource type="Texture2D" uid="uid://c8ifemi5a8hpa" path="res://Assets/Animations/Enemies/25木乃伊/move_back_16.png" id="76_xox3e"]
+[ext_resource type="Texture2D" uid="uid://biyy8aye5iyjo" path="res://Assets/Animations/Enemies/25木乃伊/move_back_17.png" id="77_hgshy"]
+[ext_resource type="Texture2D" uid="uid://cp633p8ovux3v" path="res://Assets/Animations/Enemies/25木乃伊/move_back_18.png" id="78_ig2da"]
+[ext_resource type="Texture2D" uid="uid://cjcerx5a5xqna" path="res://Assets/Animations/Enemies/25木乃伊/move_back_19.png" id="79_owqwb"]
+[ext_resource type="Texture2D" uid="uid://d060ymhfonphs" path="res://Assets/Animations/Enemies/25木乃伊/move_back_20.png" id="80_rdpl1"]
+[ext_resource type="Texture2D" uid="uid://ugr72s60lejh" path="res://Assets/Animations/Enemies/25木乃伊/move_back_21.png" id="81_b8faq"]
+[ext_resource type="Texture2D" uid="uid://n5iwkhxrww58" path="res://Assets/Animations/Enemies/25木乃伊/move_back_22.png" id="82_1fvhk"]
+[ext_resource type="Texture2D" uid="uid://c4sgsp020nxos" path="res://Assets/Animations/Enemies/25木乃伊/move_back_23.png" id="83_aayy7"]
+[ext_resource type="Texture2D" uid="uid://75q6lwq0u3wk" path="res://Assets/Animations/Enemies/25木乃伊/move_back_24.png" id="84_ao6jd"]
+[ext_resource type="Texture2D" uid="uid://ck5ji53wnpbq6" path="res://Assets/Animations/Enemies/25木乃伊/move_back_25.png" id="85_ed40v"]
+[ext_resource type="Texture2D" uid="uid://qyfm62lhvbr7" path="res://Assets/Animations/Enemies/25木乃伊/move_back_26.png" id="86_fsrkt"]
+[ext_resource type="Texture2D" uid="uid://dxm2kh0je5etu" path="res://Assets/Animations/Enemies/25木乃伊/move_back_27.png" id="87_vr3wk"]
+[ext_resource type="Texture2D" uid="uid://bj6fyltlq4m65" path="res://Assets/Animations/Enemies/25木乃伊/move_back_28.png" id="88_yxgu1"]
+[ext_resource type="Texture2D" uid="uid://c36le7tp0ykol" path="res://Assets/Animations/Enemies/25木乃伊/move_back_29.png" id="89_7tikf"]
+[ext_resource type="Texture2D" uid="uid://t6ld83bu4eue" path="res://Assets/Animations/Enemies/25木乃伊/move_back_30.png" id="90_r1iwq"]
+[ext_resource type="Texture2D" uid="uid://b3kr21o8r7vs3" path="res://Assets/Animations/Enemies/25木乃伊/move_back_31.png" id="91_dpptc"]
+[ext_resource type="Texture2D" uid="uid://bjj1x4qjqup47" path="res://Assets/Animations/Enemies/25木乃伊/move_back_32.png" id="92_tlnbj"]
+[ext_resource type="Texture2D" uid="uid://bnpxochs2gdvr" path="res://Assets/Animations/Enemies/25木乃伊/move_back_33.png" id="93_8rkk8"]
+[ext_resource type="Texture2D" uid="uid://oqnmifk1283e" path="res://Assets/Animations/Enemies/25木乃伊/move_back_34.png" id="94_d63h0"]
+[ext_resource type="Texture2D" uid="uid://cf85dn6b2lh6q" path="res://Assets/Animations/Enemies/25木乃伊/move_back_35.png" id="95_0rnnc"]
+[ext_resource type="Texture2D" uid="uid://dcff5nvkhf56o" path="res://Assets/Animations/Enemies/25木乃伊/move_back_36.png" id="96_vp1vt"]
+[ext_resource type="Texture2D" uid="uid://cfxo4ogwg5hfu" path="res://Assets/Animations/Enemies/25木乃伊/move_back_37.png" id="97_4dec4"]
+[ext_resource type="Texture2D" uid="uid://dt1o42j1ypovp" path="res://Assets/Animations/Enemies/25木乃伊/move_back_38.png" id="98_2ujdp"]
+[ext_resource type="Texture2D" uid="uid://dnxaexv40b14n" path="res://Assets/Animations/Enemies/25木乃伊/move_back_39.png" id="99_bbors"]
+[ext_resource type="Texture2D" uid="uid://b6ifcoi2j4r20" path="res://Assets/Animations/Enemies/25木乃伊/move_front_00.png" id="100_14eos"]
+[ext_resource type="Texture2D" uid="uid://c862tqae6usnh" path="res://Assets/Animations/Enemies/25木乃伊/move_front_01.png" id="101_vaj5i"]
+[ext_resource type="Texture2D" uid="uid://dbbxqftowtq8g" path="res://Assets/Animations/Enemies/25木乃伊/move_front_02.png" id="102_6t768"]
+[ext_resource type="Texture2D" uid="uid://cgiplrm42bdb2" path="res://Assets/Animations/Enemies/25木乃伊/move_front_03.png" id="103_aqje5"]
+[ext_resource type="Texture2D" uid="uid://ce7idbmgecn4" path="res://Assets/Animations/Enemies/25木乃伊/move_front_04.png" id="104_nfyj4"]
+[ext_resource type="Texture2D" uid="uid://c0wbqn3ru5h1g" path="res://Assets/Animations/Enemies/25木乃伊/move_front_05.png" id="105_2sll1"]
+[ext_resource type="Texture2D" uid="uid://ce7ippmc4gs7a" path="res://Assets/Animations/Enemies/25木乃伊/move_front_06.png" id="106_wkfnw"]
+[ext_resource type="Texture2D" uid="uid://bjynn3b5i8rgt" path="res://Assets/Animations/Enemies/25木乃伊/move_front_07.png" id="107_m515d"]
+[ext_resource type="Texture2D" uid="uid://7eg3o4j64683" path="res://Assets/Animations/Enemies/25木乃伊/move_front_08.png" id="108_bkjp8"]
+[ext_resource type="Texture2D" uid="uid://dwy0bkfts6xig" path="res://Assets/Animations/Enemies/25木乃伊/move_front_09.png" id="109_ajx3q"]
+[ext_resource type="Texture2D" uid="uid://cckscl0vh1lgl" path="res://Assets/Animations/Enemies/25木乃伊/move_front_10.png" id="110_rn3o5"]
+[ext_resource type="Texture2D" uid="uid://bmjm2ykcu0h2p" path="res://Assets/Animations/Enemies/25木乃伊/move_front_11.png" id="111_p5fes"]
+[ext_resource type="Texture2D" uid="uid://47bru8wo4pyh" path="res://Assets/Animations/Enemies/25木乃伊/move_front_12.png" id="112_w448x"]
+[ext_resource type="Texture2D" uid="uid://de5r7wh8ugxab" path="res://Assets/Animations/Enemies/25木乃伊/move_front_13.png" id="113_x8q32"]
+[ext_resource type="Texture2D" uid="uid://b4yffle6wvuxq" path="res://Assets/Animations/Enemies/25木乃伊/move_front_14.png" id="114_j6jlr"]
+[ext_resource type="Texture2D" uid="uid://7umffpsfojnt" path="res://Assets/Animations/Enemies/25木乃伊/move_front_15.png" id="115_j1w8n"]
+[ext_resource type="Texture2D" uid="uid://b6imiuopw5qov" path="res://Assets/Animations/Enemies/25木乃伊/move_front_16.png" id="116_ujirg"]
+[ext_resource type="Texture2D" uid="uid://n0l3nsh182mo" path="res://Assets/Animations/Enemies/25木乃伊/move_front_17.png" id="117_j23l8"]
+[ext_resource type="Texture2D" uid="uid://ba2ywc85m730q" path="res://Assets/Animations/Enemies/25木乃伊/move_front_18.png" id="118_7reab"]
+[ext_resource type="Texture2D" uid="uid://b7khfitiqlm0j" path="res://Assets/Animations/Enemies/25木乃伊/move_front_19.png" id="119_8fxpk"]
+[ext_resource type="Texture2D" uid="uid://b4exjik4pe7xo" path="res://Assets/Animations/Enemies/25木乃伊/move_front_20.png" id="120_agcdp"]
+[ext_resource type="Texture2D" uid="uid://bg1d01rd2xyee" path="res://Assets/Animations/Enemies/25木乃伊/move_front_21.png" id="121_gjpl1"]
+[ext_resource type="Texture2D" uid="uid://kf00d0u60fdi" path="res://Assets/Animations/Enemies/25木乃伊/move_front_22.png" id="122_xaf7q"]
+[ext_resource type="Texture2D" uid="uid://byl14reqibygm" path="res://Assets/Animations/Enemies/25木乃伊/move_front_23.png" id="123_p0ao0"]
+[ext_resource type="Texture2D" uid="uid://cxv6d8p2qc1u4" path="res://Assets/Animations/Enemies/25木乃伊/move_front_24.png" id="124_qoggq"]
+[ext_resource type="Texture2D" uid="uid://ywiixo517g24" path="res://Assets/Animations/Enemies/25木乃伊/move_front_25.png" id="125_vv4sq"]
+[ext_resource type="Texture2D" uid="uid://cv45rw86fjmyr" path="res://Assets/Animations/Enemies/25木乃伊/move_front_26.png" id="126_sctds"]
+[ext_resource type="Texture2D" uid="uid://hsx65t6fbrlo" path="res://Assets/Animations/Enemies/25木乃伊/move_front_27.png" id="127_65gqb"]
+[ext_resource type="Texture2D" uid="uid://bywkgprpufqre" path="res://Assets/Animations/Enemies/25木乃伊/move_front_28.png" id="128_suykr"]
+[ext_resource type="Texture2D" uid="uid://c6sthjsr80col" path="res://Assets/Animations/Enemies/25木乃伊/move_front_29.png" id="129_3bm3h"]
+[ext_resource type="Texture2D" uid="uid://c5h81ptwew8jd" path="res://Assets/Animations/Enemies/25木乃伊/move_front_30.png" id="130_5r61a"]
+[ext_resource type="Texture2D" uid="uid://cwhkch0x6us0t" path="res://Assets/Animations/Enemies/25木乃伊/move_front_31.png" id="131_spnxb"]
+[ext_resource type="Texture2D" uid="uid://byvq83bfe81pa" path="res://Assets/Animations/Enemies/25木乃伊/move_front_32.png" id="132_3yyts"]
+[ext_resource type="Texture2D" uid="uid://bcpvgfhdv7qix" path="res://Assets/Animations/Enemies/25木乃伊/move_front_33.png" id="133_nfnq5"]
+[ext_resource type="Texture2D" uid="uid://vddxuogi4ai7" path="res://Assets/Animations/Enemies/25木乃伊/move_front_34.png" id="134_2pkak"]
+[ext_resource type="Texture2D" uid="uid://bryli71l4y2ow" path="res://Assets/Animations/Enemies/25木乃伊/move_front_35.png" id="135_3at5p"]
+[ext_resource type="Texture2D" uid="uid://bsjhveh6njn6" path="res://Assets/Animations/Enemies/25木乃伊/move_front_36.png" id="136_h2xsx"]
+[ext_resource type="Texture2D" uid="uid://gimxp8am8wp4" path="res://Assets/Animations/Enemies/25木乃伊/move_front_37.png" id="137_a2ig7"]
+[ext_resource type="Texture2D" uid="uid://cr0b5fndck6rh" path="res://Assets/Animations/Enemies/25木乃伊/move_front_38.png" id="138_ol0ow"]
+[ext_resource type="Texture2D" uid="uid://cy7otakkl22ye" path="res://Assets/Animations/Enemies/25木乃伊/move_front_39.png" id="139_jttna"]
+[ext_resource type="Texture2D" uid="uid://dvlridpr5fas" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_00.png" id="140_76u31"]
+[ext_resource type="Texture2D" uid="uid://rjxyldlpvckr" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_01.png" id="141_qt64v"]
+[ext_resource type="Texture2D" uid="uid://bjq1sbshq7c8g" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_02.png" id="142_l6p8y"]
+[ext_resource type="Texture2D" uid="uid://ci13bug31tyh7" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_03.png" id="143_sg4vh"]
+[ext_resource type="Texture2D" uid="uid://vlxrd7y03uy1" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_04.png" id="144_5bsb4"]
+[ext_resource type="Texture2D" uid="uid://b7uypltt1g2o3" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_05.png" id="145_whcp5"]
+[ext_resource type="Texture2D" uid="uid://c8346v2qxfkbs" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_06.png" id="146_pkjuu"]
+[ext_resource type="Texture2D" uid="uid://b8o0msf1qr2jb" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_07.png" id="147_k1mqj"]
+[ext_resource type="Texture2D" uid="uid://d12u8bcx3yfy5" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_08.png" id="148_lxlqx"]
+[ext_resource type="Texture2D" uid="uid://bpqgo8c3xh066" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_09.png" id="149_wvngw"]
+[ext_resource type="Texture2D" uid="uid://d13swpjtg3ye3" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_10.png" id="150_negbv"]
+[ext_resource type="Texture2D" uid="uid://w3apsppw268g" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_11.png" id="151_jqmoj"]
+[ext_resource type="Texture2D" uid="uid://b512v02l5l0py" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_12.png" id="152_pwcdo"]
+[ext_resource type="Texture2D" uid="uid://b8bdjo0rqerdd" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_13.png" id="153_7g0gj"]
+[ext_resource type="Texture2D" uid="uid://ovjen6lt81f6" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_14.png" id="154_u25n8"]
+[ext_resource type="Texture2D" uid="uid://c6xrn1fhrk38r" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_15.png" id="155_sukjy"]
+[ext_resource type="Texture2D" uid="uid://d2tti5nxthrnj" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_16.png" id="156_5pful"]
+[ext_resource type="Texture2D" uid="uid://cd3belhc0o42h" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_17.png" id="157_d5k5k"]
+[ext_resource type="Texture2D" uid="uid://yew0jo4allk8" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_18.png" id="158_3kxje"]
+[ext_resource type="Texture2D" uid="uid://cmdvn7bu2xg3" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_19.png" id="159_o8job"]
+[ext_resource type="Texture2D" uid="uid://b2y3yrm24ftv1" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_20.png" id="160_hun70"]
+[ext_resource type="Texture2D" uid="uid://bowwpurok5hp0" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_21.png" id="161_bw0bc"]
+[ext_resource type="Texture2D" uid="uid://b0a7eisdnp54g" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_22.png" id="162_2saqp"]
+[ext_resource type="Texture2D" uid="uid://r4hoehuwkos3" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_23.png" id="163_48ca4"]
+[ext_resource type="Texture2D" uid="uid://vbw2db6sxsik" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_24.png" id="164_w0yx0"]
+[ext_resource type="Texture2D" uid="uid://saj5i2v3l4to" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_25.png" id="165_oyuke"]
+[ext_resource type="Texture2D" uid="uid://d3q4idhswpxo1" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_26.png" id="166_eumny"]
+[ext_resource type="Texture2D" uid="uid://bs0rxd3qphsll" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_27.png" id="167_yto3v"]
+[ext_resource type="Texture2D" uid="uid://bsty1t0ddutwt" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_28.png" id="168_ngqu0"]
+[ext_resource type="Texture2D" uid="uid://dm7uvhytkokks" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_29.png" id="169_joynr"]
+[ext_resource type="Texture2D" uid="uid://bwu5pyp5gknms" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_30.png" id="170_yiojh"]
+[ext_resource type="Texture2D" uid="uid://crf7toekonmym" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_31.png" id="171_0fx73"]
+[ext_resource type="Texture2D" uid="uid://cugayjfawpd7g" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_32.png" id="172_87q82"]
+[ext_resource type="Texture2D" uid="uid://c3lylwektmi6g" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_33.png" id="173_osofe"]
+[ext_resource type="Texture2D" uid="uid://dh6nsgwr2j55c" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_34.png" id="174_i07f6"]
+[ext_resource type="Texture2D" uid="uid://cibmghwxta8xs" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_35.png" id="175_pucbu"]
+[ext_resource type="Texture2D" uid="uid://dyatei5261qeh" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_36.png" id="176_l7br0"]
+[ext_resource type="Texture2D" uid="uid://bkm4qhymbn1e1" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_37.png" id="177_jcfae"]
+[ext_resource type="Texture2D" uid="uid://bcw217mto6uda" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_38.png" id="178_sct54"]
+[ext_resource type="Texture2D" uid="uid://bogsvr747eijp" path="res://Assets/Animations/Enemies/25木乃伊/move_normal_39.png" id="179_w1rsj"]
+
+[sub_resource type="Resource" id="Resource_5ldkb"]
+script = ExtResource("3_8fxy8")
+health = 400
+dodge_rate = 0.0
+near_damage_low = 12
+near_damage_high = 18
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.0
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 0.7
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ih4bc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_nsklg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xhjvg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_brweo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_xp24u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_conw0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_hxypr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_muvkp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_wcwyd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_0jyy1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_rpwic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_13w35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_snj5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_yisot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_80otw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_0nvot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_kymcm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_rdgjk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_3jak3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_44mjn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_a3liq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_ehb7b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_08h6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_mnlaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_2ooph")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_175cf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_kjcb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_j6l5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_fwggr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_3mi24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_87u0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_xtvgw")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("39_2lwbf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_cpg1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_a0qm6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_4cg3t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_54ede")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_j0l0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_vay00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_sr23n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_uirr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_i7hhy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_wjcyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_vnloi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_b8xxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_gj2ps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_x5cpd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_x55s8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_bckp8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_468ms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_ji2gk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_1mhhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_4lh0j")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_nsklg")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("60_ugf1y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_ea6f4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_0x4u0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_lqepk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_xe5qo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_s67dh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_qwu7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_o5qss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_mcs7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_rmrpf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_y7ycn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_bm3ib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_q56g5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_35f7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_pl51s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_c1myn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_xox3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_hgshy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_ig2da")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_owqwb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_rdpl1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_b8faq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_1fvhk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_aayy7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_ao6jd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_ed40v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_fsrkt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_vr3wk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_yxgu1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_7tikf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_r1iwq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_dpptc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_tlnbj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_8rkk8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_d63h0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_0rnnc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_vp1vt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_4dec4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_2ujdp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_bbors")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("100_14eos")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_vaj5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_6t768")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_aqje5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_nfyj4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_2sll1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_wkfnw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_m515d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_bkjp8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_ajx3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_rn3o5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_p5fes")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_w448x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_x8q32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_j6jlr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_j1w8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_ujirg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_j23l8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_7reab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_8fxpk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_agcdp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_gjpl1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_xaf7q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_p0ao0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_qoggq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_vv4sq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_sctds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_65gqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_suykr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_3bm3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_5r61a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_spnxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_3yyts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_nfnq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_2pkak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_3at5p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_h2xsx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_a2ig7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_ol0ow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_jttna")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("140_76u31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_qt64v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_l6p8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_sg4vh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_5bsb4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_whcp5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_pkjuu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_k1mqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_lxlqx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_wvngw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_negbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_jqmoj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_pwcdo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_7g0gj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_u25n8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_sukjy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_5pful")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_d5k5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("158_3kxje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_o8job")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_hun70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_bw0bc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_2saqp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_48ca4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_w0yx0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_oyuke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("166_eumny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("167_yto3v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("168_ngqu0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("169_joynr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("170_yiojh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("171_0fx73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_87q82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("173_osofe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_i07f6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("175_pucbu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("176_l7br0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("177_jcfae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("178_sct54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("179_w1rsj")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 24.0
+}]
+
+[node name="Enemy25" groups=["desert", "no_live", "undead"] instance=ExtResource("1_vm7jm")]
+script = ExtResource("2_eooqg")
+enemy_name = "木乃伊"
+enemy_id = 25
+enemy_texture = ExtResource("3_xop8w")
+start_data = SubResource("Resource_5ldkb")
+bounty = 10
+die_audio_stream_list = Array[AudioStream]([ExtResource("4_frdox"), ExtResource("5_mt6n1"), ExtResource("6_3hpc8")])
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(25, -85)
+sprite_frames = SubResource("SpriteFrames_ih4bc")
+animation = &"attack"
+autoplay = "idle"
+
+[node name="DieAudio" parent="." index="3"]
+stream = ExtResource("4_frdox")
+pitch_scale = 0.8
+
+[node name="AppearAudioComponent" parent="." index="5" instance=ExtResource("7_ddcyd")]
+appear_audio_list = Array[AudioStream]([ExtResource("8_yeo40"), ExtResource("9_nvd3f"), ExtResource("10_cemec")])
+
+[node name="AppearAudioPlayer" parent="AppearAudioComponent" index="0"]
+stream = ExtResource("8_yeo40")
+pitch_scale = 0.8
+
+[editable path="AppearAudioComponent"]

@@ -1,0 +1,575 @@
+[gd_scene load_steps=21 format=3 uid="uid://7ko2tomqtfcl"]
+
+[ext_resource type="Script" path="res://Scripts/UI-Components/Map/ready_to_fight_ui.gd" id="1_elwal"]
+[ext_resource type="Texture2D" uid="uid://dolbfq1gbu5al" path="res://Assets/Images/UI/story_mask.png" id="3_xh1ju"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="4_417kt"]
+[ext_resource type="PackedScene" uid="uid://7mgppbsebrtc" path="res://Scenes/UI-Components/Map/mode_button.tscn" id="5_qfhjl"]
+[ext_resource type="Texture2D" uid="uid://cmcwqpp82dvp0" path="res://Assets/Images/UI/DataUIs/health.res" id="6_m2044"]
+[ext_resource type="Texture2D" uid="uid://dek2nsm8le6t0" path="res://Assets/Images/UI/DataUIs/wave.res" id="7_sacr2"]
+[ext_resource type="Texture2D" uid="uid://w6voiv18a3cl" path="res://Assets/Images/UI/Maps/附魔台.png" id="8_svhto"]
+[ext_resource type="Texture2D" uid="uid://bcglomkfwq15i" path="res://Assets/Images/UI/Upgrade/Archer.png" id="9_4ev4k"]
+[ext_resource type="Texture2D" uid="uid://1gt3uw1ogmkw" path="res://Assets/Images/UI/Upgrade/Barrack.png" id="10_egxfc"]
+[ext_resource type="Texture2D" uid="uid://lurtbin8e3pm" path="res://Assets/Images/UI/Upgrade/Magic.png" id="11_cl4dc"]
+[ext_resource type="Texture2D" uid="uid://dwv4y4trbacj8" path="res://Assets/Images/UI/Upgrade/bombard.png" id="12_ph18q"]
+[ext_resource type="PackedScene" uid="uid://5wpq8h2i2s8m" path="res://Scenes/UI-Components/normal_button.tscn" id="13_27bpy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_to70m"]
+bg_color = Color(0, 0, 0, 0.498039)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i8lqa"]
+bg_color = Color(0.147672, 0.147672, 0.147672, 0.843137)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i7hpt"]
+bg_color = Color(0, 0, 0, 0.843137)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbgsg"]
+atlas = ExtResource("8_svhto")
+region = Rect2(173, 199, 181, 217)
+
+[sub_resource type="Animation" id="Animation_3xqlx"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_g1uk5"]
+resource_name = "hide"
+length = 0.7
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1.2, -0.25, 0, 0.25, 0, 1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3, 0.7)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1.2, -0.25, 0, 0.25, 0, 1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3, 0.7)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_5n5l2"]
+resource_name = "show"
+length = 0.7
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 1.2, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4, 0.7)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 1.2, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4, 0.7)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r6hs8"]
+_data = {
+"RESET": SubResource("Animation_3xqlx"),
+"hide": SubResource("Animation_g1uk5"),
+"show": SubResource("Animation_5n5l2")
+}
+
+[node name="ReadyToFightUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_elwal")
+stage_level = 1
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -29.0
+offset_top = -25.0
+offset_right = 29.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 960.0
+offset_top = 540.0
+offset_right = 960.0
+offset_bottom = 540.0
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -680.0
+offset_top = -340.0
+offset_right = 680.0
+offset_bottom = 396.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_to70m")
+
+[node name="VSeparator" type="VSeparator" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -328.0
+offset_top = -315.0
+offset_right = -276.0
+offset_bottom = 315.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ViewTexture" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = -258.0
+offset_top = -197.0
+offset_right = 1722.0
+offset_bottom = 883.0
+scale = Vector2(0.449387, 0.449387)
+
+[node name="DifficultyLabel" type="Label" parent="Control/ViewTexture"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -400.0
+offset_bottom = 64.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 0.631373, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.631373, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("4_417kt")
+theme_override_font_sizes/font_size = 64
+text = "已完成 - 普通"
+
+[node name="Mask" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = -260.0
+offset_top = 59.0
+offset_right = 632.0
+offset_bottom = 289.0
+texture = ExtResource("3_xh1ju")
+
+[node name="Intro" type="Control" parent="Control"]
+clip_contents = true
+anchors_preset = 0
+offset_left = -258.0
+offset_top = 59.0
+offset_right = 630.0
+offset_bottom = 282.0
+
+[node name="IntroLabel" type="Label" parent="Control/Intro"]
+layout_mode = 2
+offset_top = 9.0
+offset_right = 2225.0
+offset_bottom = 73.0
+scale = Vector2(0.399599, 0.399599)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 24
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_417kt")
+theme_override_font_sizes/font_size = 64
+autowrap_mode = 3
+
+[node name="TitleLabel" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = -255.0
+offset_top = -285.0
+offset_right = 908.0
+offset_bottom = -189.0
+scale = Vector2(0.762669, 0.762669)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 15
+theme_override_constants/shadow_offset_y = 15
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("4_417kt")
+theme_override_font_sizes/font_size = 96
+text = "皇城东门"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloseButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 564.0
+offset_top = -312.0
+offset_right = 671.0
+offset_bottom = -216.0
+scale = Vector2(0.753179, 0.753179)
+focus_mode = 0
+theme_override_font_sizes/font_size = 64
+theme_override_styles/hover = SubResource("StyleBoxFlat_i8lqa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i7hpt")
+theme_override_styles/normal = SubResource("StyleBoxFlat_i7hpt")
+text = "X"
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = -623.0
+offset_top = -303.0
+offset_right = -335.0
+offset_bottom = -219.0
+theme_override_font_sizes/font_size = 42
+text = "模式选择"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ModeSelect" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = -639.0
+offset_top = -191.0
+offset_right = -323.0
+offset_bottom = 119.0
+theme_override_constants/separation = 155
+
+[node name="Campaign" type="Control" parent="Control/ModeSelect"]
+layout_mode = 2
+
+[node name="ModeButton" parent="Control/ModeSelect/Campaign" node_paths=PackedStringArray("ready_ui") instance=ExtResource("5_qfhjl")]
+layout_mode = 0
+ready_ui = NodePath("../../../..")
+
+[node name="Diamond" type="Control" parent="Control/ModeSelect"]
+layout_mode = 2
+
+[node name="ModeButton" parent="Control/ModeSelect/Diamond" node_paths=PackedStringArray("ready_ui") instance=ExtResource("5_qfhjl")]
+layout_mode = 0
+game_mode = 1
+ready_ui = NodePath("../../../..")
+
+[node name="Bedrock" type="Control" parent="Control/ModeSelect"]
+layout_mode = 2
+
+[node name="ModeButton" parent="Control/ModeSelect/Bedrock" node_paths=PackedStringArray("ready_ui") instance=ExtResource("5_qfhjl")]
+layout_mode = 0
+game_mode = 2
+ready_ui = NodePath("../../../..")
+
+[node name="DiamondSlot" type="Control" parent="Control"]
+visible = false
+anchors_preset = 0
+offset_left = -258.0
+offset_top = 61.0
+offset_right = 634.0
+offset_bottom = 285.0
+
+[node name="Health" type="TextureRect" parent="Control/DiamondSlot"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 30.0
+offset_right = 101.0
+offset_bottom = 89.0
+texture = ExtResource("6_m2044")
+
+[node name="IntroLabel" type="Label" parent="Control/DiamondSlot/Health"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 4.0
+offset_right = 594.0
+offset_bottom = 134.0
+scale = Vector2(0.399599, 0.399599)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 24
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_417kt")
+theme_override_font_sizes/font_size = 64
+text = "1点生命值"
+vertical_alignment = 1
+
+[node name="Wave" type="TextureRect" parent="Control/DiamondSlot"]
+layout_mode = 0
+offset_left = 642.0
+offset_top = 30.0
+offset_right = 701.0
+offset_bottom = 89.0
+texture = ExtResource("7_sacr2")
+
+[node name="IntroLabel" type="Label" parent="Control/DiamondSlot/Wave"]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 4.0
+offset_right = 539.0
+offset_bottom = 134.0
+scale = Vector2(0.399599, 0.399599)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 24
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_417kt")
+theme_override_font_sizes/font_size = 64
+text = "5波精锐部队"
+vertical_alignment = 1
+
+[node name="LevelLimit" type="TextureRect" parent="Control/DiamondSlot"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 109.0
+offset_right = 101.0
+offset_bottom = 168.0
+scale = Vector2(0.360683, 0.360683)
+texture = SubResource("AtlasTexture_mbgsg")
+
+[node name="IntroLabel" type="Label" parent="Control/DiamondSlot/LevelLimit"]
+layout_mode = 0
+offset_left = 205.166
+offset_top = 49.9053
+offset_right = 733.167
+offset_bottom = 179.905
+scale = Vector2(0.922659, 0.922659)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 24
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_417kt")
+theme_override_font_sizes/font_size = 64
+text = "限制科技等级1级"
+vertical_alignment = 1
+
+[node name="BedrockSlot" type="Control" parent="Control"]
+visible = false
+anchors_preset = 0
+offset_left = -258.0
+offset_top = 61.0
+offset_right = 634.0
+offset_bottom = 285.0
+
+[node name="Health" type="TextureRect" parent="Control/BedrockSlot"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 30.0
+offset_right = 101.0
+offset_bottom = 89.0
+texture = ExtResource("6_m2044")
+
+[node name="IntroLabel" type="Label" parent="Control/BedrockSlot/Health"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 4.0
+offset_right = 594.0
+offset_bottom = 134.0
+scale = Vector2(0.399599, 0.399599)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 24
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_417kt")
+theme_override_font_sizes/font_size = 64
+text = "1点生命值"
+vertical_alignment = 1
+
+[node name="Wave" type="TextureRect" parent="Control/BedrockSlot"]
+layout_mode = 0
+offset_left = 642.0
+offset_top = 30.0
+offset_right = 701.0
+offset_bottom = 89.0
+texture = ExtResource("7_sacr2")
+
+[node name="IntroLabel" type="Label" parent="Control/BedrockSlot/Wave"]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 4.0
+offset_right = 539.0
+offset_bottom = 134.0
+scale = Vector2(0.399599, 0.399599)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 24
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_417kt")
+theme_override_font_sizes/font_size = 64
+text = "1波超精英部队"
+vertical_alignment = 1
+
+[node name="LevelLimit" type="TextureRect" parent="Control/BedrockSlot"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 109.0
+offset_right = 101.0
+offset_bottom = 168.0
+scale = Vector2(0.360683, 0.360683)
+texture = SubResource("AtlasTexture_mbgsg")
+
+[node name="IntroLabel" type="Label" parent="Control/BedrockSlot/LevelLimit"]
+layout_mode = 0
+offset_left = 205.166
+offset_top = 49.9053
+offset_right = 733.167
+offset_bottom = 179.905
+scale = Vector2(0.922659, 0.922659)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 24
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_417kt")
+theme_override_font_sizes/font_size = 64
+text = "限制科技等级1级"
+vertical_alignment = 1
+
+[node name="TowerTypes" type="HBoxContainer" parent="Control/BedrockSlot"]
+layout_mode = 0
+offset_left = 526.0
+offset_top = 124.0
+offset_right = 778.0
+offset_bottom = 172.0
+scale = Vector2(1.37325, 1.37325)
+theme_override_constants/separation = 20
+
+[node name="Archer" type="PanelContainer" parent="Control/BedrockSlot/TowerTypes"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/BedrockSlot/TowerTypes/Archer"]
+layout_mode = 2
+texture = ExtResource("9_4ev4k")
+
+[node name="Barrack" type="PanelContainer" parent="Control/BedrockSlot/TowerTypes"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/BedrockSlot/TowerTypes/Barrack"]
+layout_mode = 2
+texture = ExtResource("10_egxfc")
+
+[node name="Magic" type="PanelContainer" parent="Control/BedrockSlot/TowerTypes"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/BedrockSlot/TowerTypes/Magic"]
+layout_mode = 2
+texture = ExtResource("11_cl4dc")
+
+[node name="Bombard" type="PanelContainer" parent="Control/BedrockSlot/TowerTypes"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/BedrockSlot/TowerTypes/Bombard"]
+layout_mode = 2
+texture = ExtResource("12_ph18q")
+
+[node name="StartButton" parent="Control" instance=ExtResource("13_27bpy")]
+layout_mode = 0
+offset_left = 402.0
+offset_top = 316.0
+offset_right = 733.0
+offset_bottom = 459.0
+scale = Vector2(0.657655, 0.657655)
+button_title = "准备战斗"
+
+[node name="Panel2" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -29.0
+offset_top = -25.0
+offset_right = 29.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_r6hs8")
+}
+autoplay = "show"
+
+[connection signal="gui_input" from="Control/Intro" to="." method="_on_intro_gui_input"]
+[connection signal="pressed" from="Control/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="Control/StartButton" to="." method="_on_start_button_pressed"]

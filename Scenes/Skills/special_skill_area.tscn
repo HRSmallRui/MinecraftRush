@@ -1,0 +1,100 @@
+[gd_scene load_steps=14 format=3 uid="uid://b3r3foqyhnjat"]
+
+[ext_resource type="Script" path="res://Scripts/Skills/special_skill_area.gd" id="1_ob5yo"]
+[ext_resource type="PackedScene" uid="uid://djs30vrk3cqvd" path="res://Scenes/Effects/fuchen_land_dust.tscn" id="2_ewywd"]
+[ext_resource type="Texture2D" uid="uid://dsowkj1p2vif0" path="res://Assets/Images/Effects/紫色激光.png" id="2_rc6ql"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/skill_particle_shooter.gd" id="3_72cna"]
+[ext_resource type="AudioStream" uid="uid://fr2csv8b0ofi" path="res://Assets/Sounds/FXs/DefenceTowers/ProtectorChurch/Ray1.wav" id="3_ebpew"]
+[ext_resource type="AudioStream" uid="uid://dt6x3iyeqcmqd" path="res://Assets/Sounds/FXs/DefenceTowers/ProtectorChurch/RayElec.wav" id="4_pxqkt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wdb1s"]
+radius = 73.9444
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qyhw"]
+atlas = ExtResource("2_rc6ql")
+region = Rect2(0, 47, 800, 46)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_71tng"]
+particle_flag_disable_z = true
+angle_min = -17.8
+angle_max = 78.6
+radial_velocity_min = 480.1
+radial_velocity_max = 480.1
+gravity = Vector3(0, 0, 0)
+radial_accel_min = 42.38
+radial_accel_max = 75.83
+scale_min = 0.5
+
+[sub_resource type="Gradient" id="Gradient_6bg12"]
+offsets = PackedFloat32Array(0, 0.303636)
+colors = PackedColorArray(1, 1, 1, 1, 0.552941, 0, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cgfqi"]
+gradient = SubResource("Gradient_6bg12")
+fill = 1
+fill_from = Vector2(0.495726, 0.512821)
+
+[sub_resource type="Gradient" id="Gradient_3atkt"]
+offsets = PackedFloat32Array(0.298182, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.568627, 0, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_lr66j"]
+gradient = SubResource("Gradient_3atkt")
+fill = 1
+fill_from = Vector2(0.487179, 0.512821)
+fill_to = Vector2(0.782051, 0.222222)
+
+[node name="SpecialSkillArea" type="Area2D"]
+collision_layer = 0
+collision_mask = 96
+script = ExtResource("1_ob5yo")
+dust_scene = ExtResource("2_ewywd")
+
+[node name="Ray1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ebpew")
+autoplay = true
+bus = &"Sound"
+
+[node name="RayElec" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_pxqkt")
+autoplay = true
+bus = &"Sound"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 0.7)
+shape = SubResource("CircleShape2D_wdb1s")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="LineNode" type="Node2D" parent="."]
+
+[node name="Line2D" type="Line2D" parent="LineNode"]
+position = Vector2(-12, 0)
+points = PackedVector2Array(0, 0, 0, -3000)
+width = 250.0
+texture = SubResource("AtlasTexture_1qyhw")
+texture_mode = 2
+
+[node name="StartPointParticle" type="GPUParticles2D" parent="."]
+process_mode = 3
+scale = Vector2(3.5, 3.5)
+amount = 12
+process_material = SubResource("ParticleProcessMaterial_71tng")
+texture = SubResource("GradientTexture2D_cgfqi")
+lifetime = 0.2
+script = ExtResource("3_72cna")
+
+[node name="Light" type="Sprite2D" parent="StartPointParticle"]
+texture = SubResource("GradientTexture2D_lr66j")
+
+[node name="DustTimer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 6.0
+one_shot = true
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="DustTimer" to="." method="_on_dust_timer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

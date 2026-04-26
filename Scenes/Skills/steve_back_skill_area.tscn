@@ -1,0 +1,58 @@
+[gd_scene load_steps=11 format=3 uid="uid://dpr553lmxdmf8"]
+
+[ext_resource type="Script" path="res://Scripts/Skills/steve_back_skill_area.gd" id="1_vnibe"]
+[ext_resource type="PackedScene" uid="uid://dqulx3g6cvgqk" path="res://Scenes/Buffs/EnvironmentBuffs/lily_heal_buff.tscn" id="2_b41vw"]
+[ext_resource type="Shader" path="res://Assets/Shaders/hue_color.gdshader" id="2_hq5my"]
+[ext_resource type="PackedScene" uid="uid://b33aer858lqtu" path="res://Scenes/Buffs/SteveSP/steve_skill_protection_buff.tscn" id="2_iom4q"]
+[ext_resource type="Texture2D" uid="uid://ccglhhifm554s" path="res://Assets/Images/Effects/鼓舞光环.png" id="3_e08h1"]
+[ext_resource type="PackedScene" uid="uid://d1xwu3yq5mwdq" path="res://Scenes/Buffs/SteveSP/steve_armor_up_buff.tscn" id="3_ormn1"]
+[ext_resource type="PackedScene" uid="uid://bi8hxlk4frye6" path="res://Scenes/Buffs/SteveSP/steve_skill_heal_buff.tscn" id="4_avh4w"]
+[ext_resource type="AudioStream" uid="uid://b6k07hqofnnxa" path="res://Assets/Sounds/FXs/Heroes/Fuchen/护盾.wav" id="8_rcsed"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6sh4v"]
+radius = 73.9444
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jfvbt"]
+shader = ExtResource("2_hq5my")
+shader_parameter/hue_shift = 0.5
+
+[node name="SteveBackSkillArea" type="Area2D"]
+z_index = -1
+collision_layer = 0
+collision_mask = 24
+script = ExtResource("1_vnibe")
+skill_duration_list = Array[float]([3.0, 5.0, 7.0, 10.0])
+protection_buff_scene = ExtResource("2_iom4q")
+heal_rate_list = Array[float]([0.3, 0.4, 0.5, 0.6])
+steve_armor_up_buff_scene = ExtResource("3_ormn1")
+steve_heal_rate = 0.4
+heal_buff_scene = ExtResource("4_avh4w")
+heal_buff_effect_scene = ExtResource("2_b41vw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 1.4)
+shape = SubResource("CircleShape2D_6sh4v")
+debug_color = Color(0, 1, 1, 0)
+
+[node name="BuffSprite" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.792157)
+material = SubResource("ShaderMaterial_jfvbt")
+position = Vector2(0, -33)
+scale = Vector2(3.144, 5.155)
+texture = ExtResource("3_e08h1")
+region_rect = Rect2(20, 24, 110, 63)
+
+[node name="ShotTimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="DurationTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="ReleaseAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_rcsed")
+autoplay = true
+bus = &"Sound"
+
+[connection signal="timeout" from="ShotTimer" to="." method="_on_shot_timer_timeout"]
+[connection signal="timeout" from="DurationTimer" to="." method="_on_duration_timer_timeout"]

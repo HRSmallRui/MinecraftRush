@@ -1,0 +1,654 @@
+[gd_scene load_steps=130 format=3 uid="uid://d375eovp4mj6l"]
+
+[ext_resource type="PackedScene" uid="uid://bt1fb5p0tpyur" path="res://Scenes/DefenceTowers/BuyingSoldierTower/buying_soldier_tower.tscn" id="1_dn718"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/BuyingSoldierTower/trader_shop.gd" id="2_8kykg"]
+[ext_resource type="Texture2D" uid="uid://bwg2b63fn3c8b" path="res://Assets/Images/UI/InformationBar/Towers/trader_shop.png" id="3_3k3e0"]
+[ext_resource type="PackedScene" uid="uid://cjpn07gcbekr1" path="res://Scenes/DefenceTowers/tower_skill_button.tscn" id="3_6wqil"]
+[ext_resource type="PackedScene" uid="uid://d15y1ooajds26" path="res://Scenes/Bullets/oil_shell.tscn" id="3_k32iu"]
+[ext_resource type="Texture2D" uid="uid://beblk55kekbag" path="res://Assets/Images/DefenceTowers/Specials/UIs/收藏书.png" id="5_qlmj6"]
+[ext_resource type="Texture2D" uid="uid://s60uf0s7c4ck" path="res://Assets/Images/DefenceTowers/Specials/UIs/收藏书select.png" id="6_3irgp"]
+[ext_resource type="Texture2D" uid="uid://bweuq1qdc0l1j" path="res://Assets/Images/DefenceTowers/Specials/UIs/收藏书disabled.png" id="7_qcus0"]
+[ext_resource type="Texture2D" uid="uid://cn0dc407vvkrj" path="res://Assets/Images/DefenceTowers/Specials/UIs/羊驼不好惹.png" id="8_mnn0m"]
+[ext_resource type="Texture2D" uid="uid://b1vd6ffgbrjsx" path="res://Assets/Images/DefenceTowers/Specials/UIs/羊驼不好惹select.png" id="9_4kfn3"]
+[ext_resource type="Texture2D" uid="uid://c8vcseewsiv62" path="res://Assets/Images/DefenceTowers/Specials/UIs/羊驼不好惹disabled.png" id="10_drloo"]
+[ext_resource type="Texture2D" uid="uid://cayoh6tx4mqmw" path="res://Assets/Images/DefenceTowers/Specials/UIs/石油炸弹.png" id="11_n6b7d"]
+[ext_resource type="Texture2D" uid="uid://bv5u623jf3g6w" path="res://Assets/Images/DefenceTowers/Specials/UIs/石油炸弹select.png" id="12_nu83b"]
+[ext_resource type="Texture2D" uid="uid://djsr1hg4rbedn" path="res://Assets/Images/DefenceTowers/Specials/UIs/石油炸弹disabled.png" id="13_bqlbb"]
+[ext_resource type="Texture2D" uid="uid://tn6i5tv5qc6w" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_00.png" id="13_nw47e"]
+[ext_resource type="Texture2D" uid="uid://dhd6kwmrjmia7" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_01.png" id="14_ag8ln"]
+[ext_resource type="Texture2D" uid="uid://fg1y0i3ubnh4" path="res://Assets/Images/DefenceTowers/UI/集结范围.png" id="14_vsvof"]
+[ext_resource type="Texture2D" uid="uid://hnbl82fpplby" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_02.png" id="15_lug3j"]
+[ext_resource type="Texture2D" uid="uid://d3g4vomgvpvqr" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_03.png" id="16_p8706"]
+[ext_resource type="Texture2D" uid="uid://bg3qn8blvynbh" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_04.png" id="17_c2dhx"]
+[ext_resource type="Texture2D" uid="uid://minevmq22h16" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_05.png" id="18_72pp8"]
+[ext_resource type="Texture2D" uid="uid://0bfset5d0rdy" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_06.png" id="19_2s2p7"]
+[ext_resource type="Texture2D" uid="uid://brgxnq6dyealb" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_07.png" id="20_47lju"]
+[ext_resource type="Texture2D" uid="uid://dd4xv8suglm34" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_08.png" id="21_wcvh4"]
+[ext_resource type="Texture2D" uid="uid://dqxkmvhkinjq3" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_09.png" id="22_4u72j"]
+[ext_resource type="Texture2D" uid="uid://vy78063t562q" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_10.png" id="23_a25fq"]
+[ext_resource type="Texture2D" uid="uid://bxxghw0c0wth0" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_11.png" id="24_phf6g"]
+[ext_resource type="Texture2D" uid="uid://bl0dlwf4y6773" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_12.png" id="25_qi7nt"]
+[ext_resource type="Texture2D" uid="uid://d1g024avu0juv" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_13.png" id="26_rc02u"]
+[ext_resource type="Texture2D" uid="uid://cssqvr41of0gv" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_14.png" id="27_pbtlp"]
+[ext_resource type="Texture2D" uid="uid://dcdqa7206q3lo" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_15.png" id="28_i8e24"]
+[ext_resource type="Texture2D" uid="uid://chkikgm3qxfku" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_16.png" id="29_20adv"]
+[ext_resource type="Texture2D" uid="uid://bxwmy3tw1rob" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_17.png" id="30_ffsg0"]
+[ext_resource type="Texture2D" uid="uid://dol85fn15muym" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_18.png" id="31_0j426"]
+[ext_resource type="Texture2D" uid="uid://dobu4shkjnmti" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_19.png" id="32_5noxq"]
+[ext_resource type="Texture2D" uid="uid://cfn1oxbxce56o" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_20.png" id="33_vg4eq"]
+[ext_resource type="Texture2D" uid="uid://cxxmobv7crxnq" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_21.png" id="34_q87qn"]
+[ext_resource type="Texture2D" uid="uid://dr3ins3j0yfnp" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_22.png" id="35_iijoj"]
+[ext_resource type="Texture2D" uid="uid://bmnf7jlgq4phq" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_23.png" id="36_ktwp6"]
+[ext_resource type="Texture2D" uid="uid://q14uq8bg7v42" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_24.png" id="37_vayp1"]
+[ext_resource type="Texture2D" uid="uid://b5ao7yvp4itx4" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_25.png" id="38_rrstu"]
+[ext_resource type="Texture2D" uid="uid://crg7hmgp3chpi" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_26.png" id="39_cs43o"]
+[ext_resource type="Texture2D" uid="uid://bsfogvtwq74eo" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_27.png" id="40_psgax"]
+[ext_resource type="Texture2D" uid="uid://ddjrexn6dl4vx" path="res://Assets/Images/DefenceTowers/Barracks/Towers/LV1/barrack_fire_28.png" id="41_my7o5"]
+[ext_resource type="Texture2D" uid="uid://cr77u61nf6rqt" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_00.png" id="43_fd6e3"]
+[ext_resource type="Texture2D" uid="uid://dpkrnfy7apyvg" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_01.png" id="44_hmojw"]
+[ext_resource type="Texture2D" uid="uid://2x3kgbeflw3f" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_02.png" id="45_tqtm4"]
+[ext_resource type="Texture2D" uid="uid://cfh1wu5l54f7a" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_03.png" id="46_8lbv1"]
+[ext_resource type="Texture2D" uid="uid://xfh74k1fx4eg" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_04.png" id="47_h65fd"]
+[ext_resource type="Texture2D" uid="uid://0oyk6puvo7f0" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_05.png" id="48_f1gic"]
+[ext_resource type="Texture2D" uid="uid://d3s6kb3d7d34d" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_06.png" id="49_ka6yb"]
+[ext_resource type="Texture2D" uid="uid://ccynyy6ce6sll" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_07.png" id="50_j6372"]
+[ext_resource type="Texture2D" uid="uid://bdlnn7mib4yqo" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_08.png" id="51_5fc6u"]
+[ext_resource type="Texture2D" uid="uid://oncb6nmhgnwb" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_09.png" id="52_7u85w"]
+[ext_resource type="Texture2D" uid="uid://bee8iunnuoemf" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_10.png" id="53_p4sxt"]
+[ext_resource type="Texture2D" uid="uid://d3xusvkhvbylq" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_11.png" id="54_q4amy"]
+[ext_resource type="Texture2D" uid="uid://cvbb1hu5klot2" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_12.png" id="55_i0ke0"]
+[ext_resource type="Texture2D" uid="uid://bilkmws6f1u3v" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_13.png" id="56_vjqck"]
+[ext_resource type="Texture2D" uid="uid://5p7oaylp4h54" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_14.png" id="57_rird8"]
+[ext_resource type="Texture2D" uid="uid://dutsbr055054h" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_15.png" id="58_oyl5x"]
+[ext_resource type="Texture2D" uid="uid://de2satrr0w4vi" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_16.png" id="59_duq2i"]
+[ext_resource type="Texture2D" uid="uid://dttoesg5wpwbt" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_17.png" id="60_a4m4p"]
+[ext_resource type="Texture2D" uid="uid://b8sf74qqit6ql" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_18.png" id="61_8b82d"]
+[ext_resource type="Texture2D" uid="uid://dxob6g082nhv6" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_19.png" id="62_dg0y3"]
+[ext_resource type="Texture2D" uid="uid://c312jpv4ekbb7" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_20.png" id="63_e7vyb"]
+[ext_resource type="Texture2D" uid="uid://mayqstrgtx3s" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_21.png" id="64_iwarq"]
+[ext_resource type="Texture2D" uid="uid://w8addwhdulk3" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_22.png" id="65_xhlgr"]
+[ext_resource type="Texture2D" uid="uid://babwqauossbxc" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_23.png" id="66_l5cmf"]
+[ext_resource type="Texture2D" uid="uid://bqoi1sbdp04xq" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_24.png" id="67_c67am"]
+[ext_resource type="Texture2D" uid="uid://hfu22yr3yppj" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_25.png" id="68_bstgm"]
+[ext_resource type="Texture2D" uid="uid://bo8dbv48vu1f2" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_26.png" id="69_mx4cv"]
+[ext_resource type="Texture2D" uid="uid://cmp17xlici8mj" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_27.png" id="70_dsdlg"]
+[ext_resource type="Texture2D" uid="uid://6qvj2leyr2iq" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_28.png" id="71_ef0al"]
+[ext_resource type="Texture2D" uid="uid://c5ysdu0dwf5ub" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_29.png" id="72_qvtgp"]
+[ext_resource type="Texture2D" uid="uid://chuck0vqfqgb5" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_30.png" id="73_g3354"]
+[ext_resource type="Texture2D" uid="uid://bddgv3u0xxn8j" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_31.png" id="74_ncwip"]
+[ext_resource type="Texture2D" uid="uid://ca5jydrb7e8t7" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_32.png" id="75_35jo8"]
+[ext_resource type="Texture2D" uid="uid://qnx6nfaiuxf7" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_33.png" id="76_igr4g"]
+[ext_resource type="Texture2D" uid="uid://wdolehyq8ar3" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_34.png" id="77_fn8ay"]
+[ext_resource type="Texture2D" uid="uid://bltfn782a3v1h" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_35.png" id="78_u6rfy"]
+[ext_resource type="Texture2D" uid="uid://djxvuymdrpslh" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_36.png" id="79_a21xj"]
+[ext_resource type="Texture2D" uid="uid://ca0oj16551ih" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_37.png" id="80_8xkcb"]
+[ext_resource type="Texture2D" uid="uid://tl1bjyd72ttv" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_38.png" id="81_2on7u"]
+[ext_resource type="Texture2D" uid="uid://5ycjscncke7f" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_39.png" id="82_1qefd"]
+[ext_resource type="Texture2D" uid="uid://ci6bdnorqrw7h" path="res://Assets/Animations/SummonAllys/WanderingTrader/hello_40.png" id="83_1f3wb"]
+[ext_resource type="Texture2D" uid="uid://cmjjd2qjhg765" path="res://Assets/Animations/SummonAllys/WanderingTrader/tree.png" id="84_vse7s"]
+[ext_resource type="Texture2D" uid="uid://dl2usge04c2as" path="res://Assets/Images/UI/dialog_panel.png" id="85_oa05r"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/dialog_panel.gd" id="86_546g4"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="87_lgtb1"]
+[ext_resource type="Texture2D" uid="uid://bmt2cbk7s55cn" path="res://Assets/Animations/SummonAllys/Lama/shoot_00.png" id="88_sba3a"]
+[ext_resource type="Texture2D" uid="uid://csi3x67xnokwd" path="res://Assets/Animations/SummonAllys/Lama/shoot_01.png" id="89_ucn0m"]
+[ext_resource type="Texture2D" uid="uid://bb6878sd7l53f" path="res://Assets/Animations/SummonAllys/Lama/shoot_02.png" id="90_dw8g2"]
+[ext_resource type="Texture2D" uid="uid://dt8ri8gvicrno" path="res://Assets/Animations/SummonAllys/Lama/shoot_03.png" id="91_fnvtc"]
+[ext_resource type="Texture2D" uid="uid://bd1xg1xyukgky" path="res://Assets/Animations/SummonAllys/Lama/shoot_04.png" id="92_sbdam"]
+[ext_resource type="Texture2D" uid="uid://b4v3e08igg1d0" path="res://Assets/Animations/SummonAllys/Lama/shoot_05.png" id="93_isb0j"]
+[ext_resource type="Texture2D" uid="uid://beqyuvi67giwm" path="res://Assets/Animations/SummonAllys/Lama/shoot_06.png" id="94_vrnyq"]
+[ext_resource type="Texture2D" uid="uid://biioau22dscoc" path="res://Assets/Animations/SummonAllys/Lama/shoot_07.png" id="95_tr7vy"]
+[ext_resource type="Texture2D" uid="uid://ckqkoxyognjta" path="res://Assets/Animations/SummonAllys/Lama/shoot_08.png" id="96_6ynpt"]
+[ext_resource type="Texture2D" uid="uid://bd2jwgcane5r3" path="res://Assets/Animations/SummonAllys/Lama/shoot_09.png" id="97_p5ejq"]
+[ext_resource type="Texture2D" uid="uid://bgn07pb77pljk" path="res://Assets/Animations/SummonAllys/Lama/shoot_10.png" id="98_7u34t"]
+[ext_resource type="Texture2D" uid="uid://b4n83blmn3fij" path="res://Assets/Animations/SummonAllys/Lama/shoot_11.png" id="99_2dmty"]
+[ext_resource type="Texture2D" uid="uid://cylghnsnsp0ln" path="res://Assets/Animations/SummonAllys/Lama/shoot_12.png" id="100_rd244"]
+[ext_resource type="Texture2D" uid="uid://dl3trtlfhy6kx" path="res://Assets/Animations/SummonAllys/Lama/shoot_13.png" id="101_5j6pq"]
+[ext_resource type="Texture2D" uid="uid://dtor5rdotetwd" path="res://Assets/Animations/SummonAllys/Lama/shoot_14.png" id="102_fbhj3"]
+[ext_resource type="Texture2D" uid="uid://dr1uwpsm5gxup" path="res://Assets/Animations/SummonAllys/Lama/shoot_15.png" id="103_k1ayx"]
+[ext_resource type="Texture2D" uid="uid://cwmimfmuinpp0" path="res://Assets/Animations/SummonAllys/Lama/shoot_16.png" id="104_bs6xg"]
+[ext_resource type="Texture2D" uid="uid://7yl1wumtd3x6" path="res://Assets/Animations/SummonAllys/Lama/shoot_17.png" id="105_3y1c5"]
+[ext_resource type="Texture2D" uid="uid://5rw7c7heff8p" path="res://Assets/Animations/SummonAllys/Lama/shoot_18.png" id="106_uvump"]
+[ext_resource type="Texture2D" uid="uid://bjw3al24p6vnu" path="res://Assets/Animations/SummonAllys/Lama/shoot_19.png" id="107_76045"]
+[ext_resource type="Texture2D" uid="uid://cyj4k7rts6slv" path="res://Assets/Animations/SummonAllys/Lama/shoot_20.png" id="108_oe1xs"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/BuyingSoldierTower/lama.gd" id="109_gihlp"]
+[ext_resource type="Script" path="res://Library/Heroes/damage_block.gd" id="110_ljqf6"]
+[ext_resource type="AudioStream" uid="uid://dcxedmcxuhtdx" path="res://Assets/Sounds/FXs/DefenceTowers/羊驼吐唾沫.wav" id="110_umrsa"]
+[ext_resource type="PackedScene" uid="uid://bkvtst0kbrl2e" path="res://Scenes/Bullets/lama_spit.tscn" id="111_h00kt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qu126"]
+atlas = ExtResource("5_qlmj6")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1x3h"]
+atlas = ExtResource("7_qcus0")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2mbf"]
+atlas = ExtResource("8_mnn0m")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05g6k"]
+atlas = ExtResource("10_drloo")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i7m1b"]
+atlas = ExtResource("11_n6b7d")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kasex"]
+atlas = ExtResource("13_bqlbb")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n3ykp"]
+radius = 73.9444
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gua28"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_nw47e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ag8ln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_lug3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_p8706")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_c2dhx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_72pp8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_2s2p7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_47lju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_wcvh4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_4u72j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_a25fq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_phf6g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_qi7nt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_rc02u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_pbtlp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_i8e24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_20adv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_ffsg0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_0j426")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_5noxq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_vg4eq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_q87qn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_iijoj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_ktwp6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_vayp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_rrstu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_cs43o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_psgax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_my7o5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6d78o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("43_fd6e3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_hmojw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_tqtm4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_8lbv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_h65fd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_f1gic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_ka6yb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_j6372")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_5fc6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_7u85w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_p4sxt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_q4amy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_i0ke0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_vjqck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_rird8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_oyl5x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_duq2i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_a4m4p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_8b82d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_dg0y3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_e7vyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_iwarq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_xhlgr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_l5cmf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_c67am")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_bstgm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_mx4cv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_dsdlg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_ef0al")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_qvtgp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_g3354")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_ncwip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_35jo8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_igr4g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_fn8ay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_u6rfy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_a21xj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_8xkcb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_2on7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_1qefd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_1f3wb")
+}],
+"loop": false,
+"name": &"hello",
+"speed": 30.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4npxw"]
+atlas = ExtResource("85_oa05r")
+region = Rect2(9, 9, 302, 302)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8jb6c"]
+texture = SubResource("AtlasTexture_4npxw")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_03i0a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("88_sba3a")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("88_sba3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_ucn0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_dw8g2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_fnvtc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_sbdam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_isb0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_vrnyq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_tr7vy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_6ynpt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_p5ejq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_7u34t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_2dmty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_rd244")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_5j6pq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_fbhj3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_k1ayx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_bs6xg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_3y1c5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_uvump")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_76045")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_oe1xs")
+}],
+"loop": false,
+"name": &"shoot",
+"speed": 32.0
+}]
+
+[sub_resource type="Resource" id="Resource_w8dqg"]
+script = ExtResource("110_ljqf6")
+damage_low = 5
+damage_high = 10
+
+[sub_resource type="Resource" id="Resource_2ewje"]
+script = ExtResource("110_ljqf6")
+damage_low = 8
+damage_high = 16
+
+[sub_resource type="Resource" id="Resource_r460r"]
+script = ExtResource("110_ljqf6")
+damage_low = 10
+damage_high = 20
+
+[node name="TraderShop" instance=ExtResource("1_dn718")]
+script = ExtResource("2_8kykg")
+max_wait_time = 20.0
+min_wait_time = 15.0
+trader_words_list = Array[String](["我这里可有不少好东西在卖。", "进了一些稀有的货，要看看吗？", "欢迎，要买啥？", "要买点啥吗？", "这些东西全都物超所值，我保证。", "来看看吧，肯定有你喜欢的东西。", "这可都是最新货，不来看一眼吗？"])
+trader_words_finished_list = Array[String](["你都已经在我这买断货了，伙计。", "等着补货吧，朋友。", "钱不是问题，我知道，但货要等明天了伙计。", "真不幸，朋友，得等明天了。", "我现在只剩下这张嘴了，要听个笑话吗？算了，还是等明天有货再讲吧。", "您真是够大气的，我这小店可经不起您这样买，朋友。", "钱不是问题？货是问题啊……我比你还急。"])
+oil_scene = ExtResource("3_k32iu")
+tower_intro = "欢迎光顾流浪商人的花哨小玩意！"
+tower_name = "流浪商人营地"
+tower_texture = ExtResource("3_3k3e0")
+tower_id = 2
+tower_level = 4
+start_tower_range = 360
+tower_skill_levels = Array[int]([0, 0, 0])
+
+[node name="Sprite2D" parent="TowerUI/TowerRange" index="0"]
+visible = true
+
+[node name="TowerPanelUI" parent="TowerUI" index="3"]
+z_index = 1
+
+[node name="Circle" parent="TowerUI" index="4"]
+position = Vector2(0, -39)
+
+[node name="FlagButton" parent="TowerUI/Circle" index="1"]
+visible = false
+
+[node name="TowerSkillButton" parent="TowerUI/Circle" index="2" node_paths=PackedStringArray("linked_tower") instance=ExtResource("3_6wqil")]
+offset_top = -98.7494
+offset_bottom = -13.7493
+texture_normal = SubResource("AtlasTexture_qu126")
+texture_pressed = SubResource("AtlasTexture_qu126")
+texture_hover = ExtResource("6_3irgp")
+texture_disabled = SubResource("AtlasTexture_f1x3h")
+linked_tower = NodePath("../../..")
+skill_name = "收藏书"
+skill_prices = Array[int]([175, 100, 100])
+skill_intro = PackedStringArray("购买收藏书，在敌人死亡赏金上讨价还价，在营地附近死亡的敌人会额外增加10%绿宝石。", "购买收藏书，在敌人死亡赏金上讨价还价，在营地附近死亡的敌人会额外增加20%绿宝石。", "购买收藏书，在敌人死亡赏金上讨价还价，在营地附近死亡的敌人会额外增加30%绿宝石。")
+skill_words = "这是艺术品，可不是什么石头收藏书！"
+
+[node name="TowerSkillButton2" parent="TowerUI/Circle" index="3" node_paths=PackedStringArray("linked_tower") instance=ExtResource("3_6wqil")]
+offset_left = -42.5007
+offset_top = -147.5
+offset_right = 42.4989
+offset_bottom = -62.4998
+texture_normal = SubResource("AtlasTexture_n2mbf")
+texture_pressed = SubResource("AtlasTexture_n2mbf")
+texture_hover = ExtResource("9_4kfn3")
+texture_disabled = SubResource("AtlasTexture_05g6k")
+linked_tower = NodePath("../../..")
+skill_name = "羊驼不好惹"
+skill_id = 1
+skill_prices = Array[int]([200, 150, 150])
+skill_intro = PackedStringArray("购买羊驼增值服务，持续对射程内的敌人进行口水攻击，造成5-10点物理伤害，每次命中有概率眩晕敌人0.5秒。", "购买羊驼增值服务，持续对射程内的敌人进行口水攻击，造成8-16点物理伤害，每次命中有概率眩晕敌人0.6秒。", "购买羊驼增值服务，持续对射程内的敌人进行口水攻击，造成10-20点物理伤害，每次命中有概率眩晕敌人0.7秒。")
+skill_words = "你怎么这么自私，呸！"
+
+[node name="TowerSkillButton3" parent="TowerUI/Circle" index="4" node_paths=PackedStringArray("linked_tower") instance=ExtResource("3_6wqil")]
+offset_left = 57.4995
+offset_top = -98.7503
+offset_right = 142.499
+offset_bottom = -13.7502
+texture_normal = SubResource("AtlasTexture_i7m1b")
+texture_pressed = SubResource("AtlasTexture_i7m1b")
+texture_hover = ExtResource("12_nu83b")
+texture_disabled = SubResource("AtlasTexture_kasex")
+linked_tower = NodePath("../../..")
+skill_name = "石油炸弹"
+skill_id = 2
+skill_prices = Array[int]([250, 200])
+skill_intro = PackedStringArray("扔出一颗重质石油炸弹，炸开的瞬间眩晕溅射范围内所有敌人2s，并对命中目标造成20-40点范围伤害，同时留下一滩持续6秒的粘液，持续减速路过的敌人。", "扔出一颗重质石油炸弹，炸开的瞬间眩晕溅射范围内所有敌人2s，并对命中目标造成30-60点范围伤害，同时留下一滩持续8秒的粘液，持续减速路过的敌人。")
+skill_words = "石油？！哪里有石油？！"
+
+[node name="TowerArea" parent="." index="6"]
+collision_layer = 0
+collision_mask = 96
+
+[node name="Sprite2D" parent="TowerArea" index="1"]
+visible = false
+
+[node name="Skill2Area" type="Area2D" parent="." index="7"]
+z_index = 100
+scale = Vector2(3.6, 3.6)
+collision_layer = 0
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skill2Area" index="0"]
+scale = Vector2(1, 0.7)
+shape = SubResource("CircleShape2D_n3ykp")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Skill2Area" index="1"]
+visible = false
+scale = Vector2(0.383358, 0.268351)
+texture = ExtResource("14_vsvof")
+
+[node name="Campfire" type="AnimatedSprite2D" parent="." index="11"]
+position = Vector2(-23, 17)
+sprite_frames = SubResource("SpriteFrames_gua28")
+autoplay = "default"
+frame_progress = 0.252143
+offset = Vector2(-1, -11)
+
+[node name="WanderingTrader" type="AnimatedSprite2D" parent="." index="12"]
+position = Vector2(26, -3)
+sprite_frames = SubResource("SpriteFrames_6d78o")
+animation = &"hello"
+frame = 40
+frame_progress = 1.0
+offset = Vector2(2, -15)
+flip_h = true
+
+[node name="Tree" type="Sprite2D" parent="WanderingTrader" index="0"]
+show_behind_parent = true
+position = Vector2(7, -2)
+scale = Vector2(0.213914, 0.213914)
+texture = ExtResource("84_vse7s")
+
+[node name="DialogPanel" type="PanelContainer" parent="WanderingTrader" index="1"]
+visible = false
+modulate = Color(0, 0.427451, 1, 1)
+z_index = 101
+offset_left = 27.0
+offset_top = -37.0
+offset_right = 802.0
+offset_bottom = 284.0
+scale = Vector2(0.300044, 0.300044)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_8jb6c")
+script = ExtResource("86_546g4")
+
+[node name="MarginContainer" type="MarginContainer" parent="WanderingTrader/DialogPanel" index="0"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_right = 30
+
+[node name="DialogLabel" type="Label" parent="WanderingTrader/DialogPanel/MarginContainer" index="0"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("87_lgtb1")
+theme_override_font_sizes/font_size = 64
+text = "啊啊啊啊啊啊啊啊啊啊啊"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="HelloTimer" type="Timer" parent="." index="13"]
+wait_time = 16.0
+autostart = true
+
+[node name="Lama" type="AnimatedSprite2D" parent="." index="14" node_paths=PackedStringArray("linked_tower")]
+position = Vector2(1, -4)
+sprite_frames = SubResource("SpriteFrames_03i0a")
+animation = &"shoot"
+autoplay = "idle"
+offset = Vector2(0, -22)
+flip_h = true
+script = ExtResource("109_gihlp")
+linked_tower = NodePath("..")
+bullet_damage_list = Array[ExtResource("110_ljqf6")]([SubResource("Resource_w8dqg"), SubResource("Resource_2ewje"), SubResource("Resource_r460r")])
+spit_scene = ExtResource("111_h00kt")
+
+[node name="ShootMarker" type="Marker2D" parent="Lama" index="0"]
+position = Vector2(12, -36)
+
+[node name="ShootMarkerFlip" type="Marker2D" parent="Lama" index="1"]
+position = Vector2(-12, -36)
+
+[node name="ShootAudio" type="AudioStreamPlayer" parent="Lama" index="2"]
+stream = ExtResource("110_umrsa")
+volume_db = -8.0
+bus = &"Sound"
+
+[node name="NormalAttackTimer" type="Timer" parent="Lama" index="3"]
+one_shot = true
+
+[node name="Skill2Timer" type="Timer" parent="." index="15"]
+wait_time = 15.0
+one_shot = true
+
+[connection signal="body_exited" from="TowerArea" to="." method="_on_tower_area_body_exited"]
+[connection signal="body_exited" from="Skill2Area" to="." method="_on_tower_area_body_exited"]
+[connection signal="input_event" from="Skill2Area" to="." method="_on_tower_area_input_event"]
+[connection signal="timeout" from="HelloTimer" to="." method="_on_hello_timer_timeout"]

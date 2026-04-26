@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dd6xov5ialh6a"]
+
+[ext_resource type="PackedScene" uid="uid://86c75yb50mgo" path="res://Scenes/Classes/loop_music_player.tscn" id="1_pq11f"]
+[ext_resource type="AudioStream" uid="uid://by40njy625qc5" path="res://Assets/Sounds/Music/roller_mobster_loop.mp3" id="2_qnc1c"]
+[ext_resource type="AudioStream" uid="uid://brw3tn6rpey4b" path="res://Assets/Sounds/Music/roller_mobster_start.mp3" id="3_ssola"]
+
+[node name="BossStep2MusicPlayer" node_paths=PackedStringArray("music_list") instance=ExtResource("1_pq11f")]
+music_mode = 2
+music_list = [NodePath("RollerMobsterStart"), NodePath("RollerMobsterLoop")]
+next_wait_time = Array[float]([17.11])
+
+[node name="RollerMobsterStart" type="AudioStreamPlayer" parent="." index="0"]
+stream = ExtResource("3_ssola")
+volume_db = -4.0
+bus = &"Music"
+
+[node name="RollerMobsterLoop" type="AudioStreamPlayer" parent="." index="1"]
+stream = ExtResource("2_qnc1c")
+volume_db = -4.0
+bus = &"Music"

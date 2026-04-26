@@ -1,0 +1,80 @@
+[gd_scene load_steps=10 format=3 uid="uid://c5x88rohdiv78"]
+
+[ext_resource type="PackedScene" uid="uid://bgi3ibffayb11" path="res://Scenes/Allys/Soldiers/soldier_class.tscn" id="1_1526n"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="2_b6csl"]
+[ext_resource type="Script" path="res://Scripts/Allys/Soldiers/royal_guard.gd" id="2_w4ts0"]
+[ext_resource type="Texture2D" uid="uid://282jkph6kkqr" path="res://Assets/Images/UI/InformationBar/SoldierLV4-1.png" id="3_vavyk"]
+[ext_resource type="SpriteFrames" uid="uid://t2xe231tp4h0" path="res://Assets/Animations/Soldiers/LV4-1/royal_guard.tres" id="4_c5ct0"]
+[ext_resource type="AudioStream" uid="uid://crlkuw7dwgl3j" path="res://Assets/Sounds/FXs/DefenceTowers/Defence.mp3" id="6_uebbt"]
+[ext_resource type="AudioStream" uid="uid://t747tp5trjru" path="res://Assets/Sounds/FXs/DefenceTowers/皇家审判.wav" id="7_ot6av"]
+
+[sub_resource type="Resource" id="Resource_xebkm"]
+script = ExtResource("2_b6csl")
+health = 200
+dodge_rate = 0.0
+near_damage_low = 12
+near_damage_high = 15
+near_attack_speed = 1.0
+near_hit_rate = 1.3
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.65
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 3.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ls58e"]
+radius = 73.9444
+
+[node name="RoyalGuard" instance=ExtResource("1_1526n")]
+script = ExtResource("2_w4ts0")
+soldier_name_list = Array[String](["卢凌风", "李元芳", "李金吾", "暗一", "影二", "赵龙武", "钱虎贲", "秦琼", "李叔宝", "尉迟恭", "王鹏", "李御前", "李天枢", "赵羽林"])
+ally_name = "皇家近卫军"
+ally_level = 4
+ally_texture = ExtResource("3_vavyk")
+start_data = SubResource("Resource_xebkm")
+intercepting_range = 140
+heal_speed = 18
+rebirth_time = 14
+
+[node name="AllySprite" parent="UnitBody" index="0"]
+position = Vector2(-25, -120)
+sprite_frames = ExtResource("4_c5ct0")
+animation = &"skill1"
+autoplay = "idle"
+
+[node name="ProtectionArea" type="Area2D" parent="UnitBody" index="7"]
+scale = Vector2(1.5, 1.5)
+collision_layer = 0
+collision_mask = 24
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/ProtectionArea" index="0"]
+scale = Vector2(5, 3.5)
+shape = SubResource("CircleShape2D_ls58e")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="ProtectionBuffTimer" type="Timer" parent="." index="5"]
+wait_time = 1.8
+
+[node name="DefenceAudio" type="AudioStreamPlayer" parent="." index="7"]
+stream = ExtResource("6_uebbt")
+volume_db = -10.0
+max_polyphony = 10
+bus = &"Sound"
+
+[node name="Skill1Audio" type="AudioStreamPlayer" parent="." index="8"]
+stream = ExtResource("7_ot6av")
+volume_db = -4.0
+bus = &"Sound"
+
+[node name="Skill1Timer" type="Timer" parent="." index="9"]
+wait_time = 6.0
+one_shot = true
+
+[connection signal="timeout" from="ProtectionBuffTimer" to="." method="_on_protection_buff_timer_timeout"]

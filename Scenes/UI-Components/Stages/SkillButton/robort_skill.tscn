@@ -1,0 +1,264 @@
+[gd_scene load_steps=17 format=3 uid="uid://bj5yga3t4ujcx"]
+
+[ext_resource type="PackedScene" uid="uid://dakq012d6gh6m" path="res://Scenes/UI-Components/Stages/skill_button.tscn" id="1_2lkls"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Stages/SkillButtons/robort_skill.gd" id="2_ef2h4"]
+[ext_resource type="Texture2D" uid="uid://brp4ngaouh57t" path="res://Assets/Images/UI/SkillButton/Heroskill/Robort/robort_skill.png" id="3_u00e2"]
+[ext_resource type="Texture2D" uid="uid://dss0myl1srlmb" path="res://Assets/Images/UI/SkillButton/Heroskill/Robort/robort_skill_using.png" id="4_lxs68"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Stages/SkillButtons/robort_rain_layer.gd" id="5_xcixx"]
+[ext_resource type="Shader" path="res://Assets/Shaders/rain_shader.gdshader" id="6_m1xo1"]
+[ext_resource type="Texture2D" uid="uid://b2dexm1rfeitu" path="res://Assets/Images/Stages/Stage6/Rain.png" id="7_svmtv"]
+[ext_resource type="AudioStream" uid="uid://ii3cyt1ie7ls" path="res://Assets/Sounds/FXs/Stages/Rains/暴雨2.mp3" id="8_3aw00"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_010d0"]
+shader = ExtResource("6_m1xo1")
+shader_parameter/speed = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4q7ss"]
+shader = ExtResource("6_m1xo1")
+shader_parameter/speed = 1.2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i6yh4"]
+shader = ExtResource("6_m1xo1")
+shader_parameter/speed = 1.5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i1rdt"]
+shader = ExtResource("6_m1xo1")
+shader_parameter/speed = 1.5
+
+[sub_resource type="Animation" id="Animation_xj8sf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RainSmall:material:shader_parameter/speed")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RainMedium:material:shader_parameter/speed")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RainBig:material:shader_parameter/speed")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("RainSuper:material:shader_parameter/speed")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5]
+}
+
+[sub_resource type="Animation" id="Animation_in0y7"]
+resource_name = "no_pause"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RainSmall:material:shader_parameter/speed")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RainMedium:material:shader_parameter/speed")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RainBig:material:shader_parameter/speed")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("RainSuper:material:shader_parameter/speed")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.8]
+}
+
+[sub_resource type="Animation" id="Animation_6j6m1"]
+resource_name = "pause"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RainMedium:material:shader_parameter/speed")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RainBig:material:shader_parameter/speed")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RainSmall:material:shader_parameter/speed")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("RainSuper:material:shader_parameter/speed")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eqv3m"]
+_data = {
+"RESET": SubResource("Animation_xj8sf"),
+"no_pause": SubResource("Animation_in0y7"),
+"pause": SubResource("Animation_6j6m1")
+}
+
+[node name="RobortSkill" instance=ExtResource("1_2lkls")]
+script = ExtResource("2_ef2h4")
+skill_type = 2
+texture_normal = ExtResource("3_u00e2")
+texture_select = ExtResource("4_lxs68")
+skill_name = "天雷"
+skill_intro = "召唤闪电轰击目标区域，同时降下暴雨减速所有敌人"
+cooling_time = 50.0
+
+[node name="RobortRainLayer" type="CanvasLayer" parent="." index="3"]
+process_mode = 3
+layer = 0
+script = ExtResource("5_xcixx")
+
+[node name="BlackMask" type="ColorRect" parent="RobortRainLayer" index="0"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.106)
+
+[node name="RainSmall" type="Sprite2D" parent="RobortRainLayer" index="1"]
+material = SubResource("ShaderMaterial_010d0")
+position = Vector2(887, 538)
+rotation = -0.0406255
+texture = ExtResource("7_svmtv")
+
+[node name="RainMedium" type="Sprite2D" parent="RobortRainLayer" index="2"]
+material = SubResource("ShaderMaterial_4q7ss")
+position = Vector2(1059, 300)
+rotation = -0.0406255
+texture = ExtResource("7_svmtv")
+
+[node name="RainBig" type="Sprite2D" parent="RobortRainLayer" index="3"]
+material = SubResource("ShaderMaterial_i6yh4")
+position = Vector2(889, 556)
+rotation = -0.0406255
+texture = ExtResource("7_svmtv")
+
+[node name="RainSuper" type="Sprite2D" parent="RobortRainLayer" index="4"]
+material = SubResource("ShaderMaterial_i1rdt")
+position = Vector2(1041, 528)
+rotation = -0.0406255
+texture = ExtResource("7_svmtv")
+
+[node name="RainAnimationPlayer" type="AnimationPlayer" parent="RobortRainLayer" index="5"]
+libraries = {
+"": SubResource("AnimationLibrary_eqv3m")
+}
+autoplay = "no_pause"
+
+[node name="RainAudioSuper" type="AudioStreamPlayer" parent="." index="4"]
+process_mode = 1
+stream = ExtResource("8_3aw00")
+volume_db = -2.0
+bus = &"Sound"
+
+[node name="RainTimer" type="Timer" parent="." index="5"]
+one_shot = true
+
+[node name="RainShotTimer" type="Timer" parent="." index="6"]
+wait_time = 0.1
+
+[node name="EnemyConditionArea" type="Area2D" parent="." index="7"]
+top_level = true
+collision_layer = 0
+collision_mask = 96
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyConditionArea" index="0"]
+
+[connection signal="timeout" from="RainShotTimer" to="." method="_on_rain_shot_timer_timeout"]

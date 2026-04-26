@@ -1,0 +1,184 @@
+[gd_scene load_steps=12 format=3 uid="uid://dakq012d6gh6m"]
+
+[ext_resource type="Script" path="res://Scripts/Stages/skill_button.gd" id="1_be1f3"]
+[ext_resource type="Texture2D" uid="uid://bx7canjsuxyg4" path="res://Assets/Images/UI/SkillButton/Reinforce/reinforce_canuse.png" id="2_uduj1"]
+[ext_resource type="Texture2D" uid="uid://dach5ilmmhdhf" path="res://Assets/Images/UI/SkillButton/Reinforce/reinforce_select.png" id="3_bhcug"]
+[ext_resource type="Texture2D" uid="uid://bisavj4a0r1as" path="res://Assets/Images/UI/SkillButton/skill_progress.png" id="4_rnjcw"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="5_kpsbl"]
+[ext_resource type="AudioStream" uid="uid://duvqp5eu8d8c3" path="res://Assets/Sounds/FXs/UIs/mcexp.wav" id="6_5tv2c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrfuq"]
+atlas = ExtResource("4_rnjcw")
+region = Rect2(56, 40, 146, 172)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rcd8a"]
+bg_color = Color(0, 0, 0, 0.8)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="Animation" id="Animation_34lqn"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TotalComponent:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TotalComponent:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(285, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_5v13l"]
+resource_name = "unlock"
+length = 0.4
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TotalComponent:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TotalComponent:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(285, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_476u2"]
+_data = {
+"RESET": SubResource("Animation_34lqn"),
+"unlock": SubResource("Animation_5v13l")
+}
+
+[node name="SkillButton" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_be1f3")
+texture_normal = ExtResource("2_uduj1")
+texture_select = ExtResource("3_bhcug")
+skill_name = "召唤援军"
+skill_intro = "在战场上召唤援军前来支援战场"
+
+[node name="TotalComponent" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 0
+offset_top = 285.0
+offset_right = 40.0
+offset_bottom = 325.0
+
+[node name="Button" type="Button" parent="TotalComponent"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.0
+offset_top = -108.0
+offset_right = 51.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+
+[node name="NormalTexture" type="TextureRect" parent="TotalComponent"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -148.0
+offset_top = -148.0
+offset_right = 108.0
+offset_bottom = 108.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_uduj1")
+
+[node name="HoverTexture" type="TextureRect" parent="TotalComponent"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -148.0
+offset_top = -148.0
+offset_right = 108.0
+offset_bottom = 108.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_bhcug")
+
+[node name="CoolingProgressBar" type="TextureProgressBar" parent="TotalComponent"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.0
+offset_top = -106.0
+offset_right = 53.0
+offset_bottom = 66.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+max_value = 1.0
+step = 0.0
+fill_mode = 2
+texture_progress = SubResource("AtlasTexture_wrfuq")
+
+[node name="FastButton" type="Button" parent="TotalComponent"]
+layout_mode = 0
+offset_left = -21.0
+offset_top = 66.0
+offset_right = 75.0
+offset_bottom = 146.0
+scale = Vector2(0.485862, 0.485862)
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("5_kpsbl")
+theme_override_font_sizes/font_size = 72
+theme_override_styles/normal = SubResource("StyleBoxFlat_rcd8a")
+text = "1"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_476u2")
+}
+
+[node name="CoolingFinishedAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_5tv2c")
+volume_db = 10.0
+bus = &"Sound"
+
+[connection signal="pressed" from="TotalComponent/Button" to="." method="_on_button_pressed"]

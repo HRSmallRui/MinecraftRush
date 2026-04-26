@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjj80hcm672tg"]
+
+[ext_resource type="PackedScene" uid="uid://c3gyjosb382do" path="res://Scenes/Classes/buff_class.tscn" id="1_a7g3s"]
+[ext_resource type="Script" path="res://Scripts/Classes/potion_particle_leader.gd" id="2_o42l1"]
+[ext_resource type="Texture2D" uid="uid://byuxgccp7nsep" path="res://Assets/Images/Effects/heal_particle_green.png" id="3_jn8t3"]
+
+[node name="WhiteWitchHealBuff" instance=ExtResource("1_a7g3s")]
+duration = 0.5
+buff_tag = "white_heal"
+
+[node name="PotionParticleLeader" type="Node2D" parent="." index="0" node_paths=PackedStringArray("buff_vehicle")]
+script = ExtResource("2_o42l1")
+potion_texture = ExtResource("3_jn8t3")
+buff_vehicle = NodePath("..")
+particle_size_rate = 0.5
+max_interval_time = 0.15

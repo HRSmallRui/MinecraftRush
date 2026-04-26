@@ -1,0 +1,570 @@
+[gd_scene load_steps=130 format=3 uid="uid://cwbpaqknpx70u"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_ujhr3"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="2_888x6"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_7.gd" id="2_auoov"]
+[ext_resource type="Texture2D" uid="uid://cbyb6q08j02s" path="res://Assets/Images/UI/InformationBar/尸国贵族战士.png" id="3_kb72m"]
+[ext_resource type="Texture2D" uid="uid://bvfnxi4pg1toj" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_00.png" id="5_4h5wj"]
+[ext_resource type="Texture2D" uid="uid://dmlffqpl7niqe" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_01.png" id="6_rojs6"]
+[ext_resource type="Texture2D" uid="uid://chxxvrrj8onb4" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_02.png" id="7_2dh2f"]
+[ext_resource type="Texture2D" uid="uid://ciknqoryydutu" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_03.png" id="8_0en3q"]
+[ext_resource type="Texture2D" uid="uid://bhwggmi56ssl1" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_04.png" id="9_ghyws"]
+[ext_resource type="Texture2D" uid="uid://b0vu3pigkvrac" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_05.png" id="10_tmt27"]
+[ext_resource type="Texture2D" uid="uid://bln3w32xb663v" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_06.png" id="11_6ew3s"]
+[ext_resource type="Texture2D" uid="uid://dwxxgc0jdshed" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_07.png" id="12_4mo54"]
+[ext_resource type="Texture2D" uid="uid://ptc822i5cd8x" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_08.png" id="13_a7a2s"]
+[ext_resource type="Texture2D" uid="uid://bs3yuy78wcoo8" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_09.png" id="14_uhc6u"]
+[ext_resource type="Texture2D" uid="uid://cle5jac6fafml" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_10.png" id="15_lnfim"]
+[ext_resource type="Texture2D" uid="uid://sa1m0u7e7jar" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_11.png" id="16_fgdsa"]
+[ext_resource type="Texture2D" uid="uid://0bgo5i477ep0" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_12.png" id="17_p1tye"]
+[ext_resource type="Texture2D" uid="uid://c2oyntn0u6pg4" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_13.png" id="18_15sgj"]
+[ext_resource type="Texture2D" uid="uid://dx627324ufn86" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_14.png" id="19_12vqc"]
+[ext_resource type="Texture2D" uid="uid://dlt1drjrvg6br" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_15.png" id="20_sq7wr"]
+[ext_resource type="Texture2D" uid="uid://dvjyeepaxcosp" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_16.png" id="21_xf4uq"]
+[ext_resource type="Texture2D" uid="uid://cb3i5j6s7ajyo" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_17.png" id="22_0y82g"]
+[ext_resource type="Texture2D" uid="uid://bjssimygctl11" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_18.png" id="23_lqwhx"]
+[ext_resource type="Texture2D" uid="uid://dup73t334iljx" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_19.png" id="24_5w7h3"]
+[ext_resource type="Texture2D" uid="uid://cjyj2it77k42p" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_20.png" id="25_dn1ed"]
+[ext_resource type="Texture2D" uid="uid://4sg6ita21vij" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_21.png" id="26_5umif"]
+[ext_resource type="Texture2D" uid="uid://dssj1ptgvxwfl" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_22.png" id="27_vqw27"]
+[ext_resource type="Texture2D" uid="uid://doaeixsaw16ep" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_23.png" id="28_ae0lh"]
+[ext_resource type="Texture2D" uid="uid://cqnnip6xukiun" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_24.png" id="29_2s4bk"]
+[ext_resource type="Texture2D" uid="uid://dm0dnflg6k0iy" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_25.png" id="30_gll80"]
+[ext_resource type="Texture2D" uid="uid://cmdixopay6nvx" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_26.png" id="31_w6ngt"]
+[ext_resource type="Texture2D" uid="uid://cv74v8n6y0a0k" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_27.png" id="32_dk1mk"]
+[ext_resource type="Texture2D" uid="uid://bk2vxqfmba17e" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_28.png" id="33_qe5xp"]
+[ext_resource type="Texture2D" uid="uid://c53ae8rrrvbaa" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_29.png" id="34_bohm0"]
+[ext_resource type="Texture2D" uid="uid://lnmrtrenrtdg" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_30.png" id="35_jc2fu"]
+[ext_resource type="Texture2D" uid="uid://htew64fe4yph" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_31.png" id="36_aepyq"]
+[ext_resource type="Texture2D" uid="uid://cwnbph8dhb1c" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_32.png" id="37_e4msg"]
+[ext_resource type="Texture2D" uid="uid://r856542mqlt3" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_33.png" id="38_fdn0a"]
+[ext_resource type="Texture2D" uid="uid://bjqi1x0h21ejn" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_34.png" id="39_i2uij"]
+[ext_resource type="Texture2D" uid="uid://cnw3rp35uii6" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_35.png" id="40_o2c7l"]
+[ext_resource type="Texture2D" uid="uid://dxmll3l5xf317" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_36.png" id="41_7s63h"]
+[ext_resource type="Texture2D" uid="uid://e6r2ndim7tty" path="res://Assets/Animations/Enemies/7尸国贵族战士/attack_37.png" id="42_ah0oc"]
+[ext_resource type="Texture2D" uid="uid://dgmue80he7m4q" path="res://Assets/Animations/Enemies/7尸国贵族战士/die_00.png" id="43_f3mf3"]
+[ext_resource type="Texture2D" uid="uid://bcdi6e76qug48" path="res://Assets/Animations/Enemies/7尸国贵族战士/die_01.png" id="44_yd41e"]
+[ext_resource type="Texture2D" uid="uid://ogkte077f0b3" path="res://Assets/Animations/Enemies/7尸国贵族战士/die_02.png" id="45_dcr2b"]
+[ext_resource type="Texture2D" uid="uid://bg4lg0cmab4r8" path="res://Assets/Animations/Enemies/7尸国贵族战士/die_03.png" id="46_l0j8k"]
+[ext_resource type="Texture2D" uid="uid://ng2m7tb6iq51" path="res://Assets/Animations/Enemies/7尸国贵族战士/die_04.png" id="47_12uis"]
+[ext_resource type="Texture2D" uid="uid://b41fwx2hhute3" path="res://Assets/Animations/Enemies/7尸国贵族战士/die_05.png" id="48_6un50"]
+[ext_resource type="Texture2D" uid="uid://ba328q37kicr8" path="res://Assets/Animations/Enemies/7尸国贵族战士/die_06.png" id="49_porc2"]
+[ext_resource type="Texture2D" uid="uid://kk50mbjxpxdu" path="res://Assets/Animations/Enemies/7尸国贵族战士/die_07.png" id="50_boaoe"]
+[ext_resource type="Texture2D" uid="uid://u7qoy3peoty2" path="res://Assets/Animations/Enemies/7尸国贵族战士/die_08.png" id="51_iqhj5"]
+[ext_resource type="Texture2D" uid="uid://c8rrgdy3h51nh" path="res://Assets/Animations/Enemies/7尸国贵族战士/die_09.png" id="52_ftiod"]
+[ext_resource type="Texture2D" uid="uid://c034bamat3hfl" path="res://Assets/Animations/Enemies/7尸国贵族战士/die_10.png" id="53_lqnpu"]
+[ext_resource type="Texture2D" uid="uid://b8k0lcqomwoqe" path="res://Assets/Animations/Enemies/7尸国贵族战士/die_11.png" id="54_4jol8"]
+[ext_resource type="Texture2D" uid="uid://boslfvh4hm1os" path="res://Assets/Animations/Enemies/7尸国贵族战士/die_12.png" id="55_7ir46"]
+[ext_resource type="Texture2D" uid="uid://omk2tm7vsufy" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_back_00.png" id="56_2j778"]
+[ext_resource type="Texture2D" uid="uid://clcni0e1iyvo6" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_front_00.png" id="56_y2rda"]
+[ext_resource type="Texture2D" uid="uid://ryx83iwrj33v" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_back_01.png" id="57_f8n7u"]
+[ext_resource type="Texture2D" uid="uid://bs2l0phycy5kq" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_front_01.png" id="57_re6ae"]
+[ext_resource type="Texture2D" uid="uid://my02o63s0tyd" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_front_02.png" id="58_8wfpu"]
+[ext_resource type="Texture2D" uid="uid://80qhips1clpq" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_back_02.png" id="58_aveqb"]
+[ext_resource type="Texture2D" uid="uid://b0n2ksdu7xeuk" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_front_03.png" id="59_cdt0d"]
+[ext_resource type="Texture2D" uid="uid://lb81t2nfc5th" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_back_03.png" id="59_xpaj6"]
+[ext_resource type="Texture2D" uid="uid://dh8mgl8jsjoem" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_front_04.png" id="60_4opk8"]
+[ext_resource type="Texture2D" uid="uid://kwaa2trcbuom" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_back_04.png" id="60_ffbye"]
+[ext_resource type="Texture2D" uid="uid://vp3oyltiphsw" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_back_05.png" id="61_8j16o"]
+[ext_resource type="Texture2D" uid="uid://dqkrg1li1kaxk" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_front_05.png" id="61_31qw4"]
+[ext_resource type="Texture2D" uid="uid://bp8om4fm4kqbq" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_back_06.png" id="62_uexwy"]
+[ext_resource type="Texture2D" uid="uid://dxgi1ttg3co64" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_front_06.png" id="62_y7rxr"]
+[ext_resource type="Texture2D" uid="uid://igklm8okiiqv" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_back_07.png" id="63_5b4pi"]
+[ext_resource type="Texture2D" uid="uid://dwlcu1r14bhc0" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_front_07.png" id="63_m2mkm"]
+[ext_resource type="Texture2D" uid="uid://dd77b8ax6p3j1" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_back_08.png" id="64_17i06"]
+[ext_resource type="Texture2D" uid="uid://dwaebx352acm" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_front_08.png" id="64_ect1i"]
+[ext_resource type="Texture2D" uid="uid://b2kkq6650sd6l" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_front_09.png" id="65_w3fqy"]
+[ext_resource type="Texture2D" uid="uid://jattxpdjjo20" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_back_09.png" id="65_xmqgp"]
+[ext_resource type="Texture2D" uid="uid://dusdybwdcknco" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_back_10.png" id="66_p823v"]
+[ext_resource type="Texture2D" uid="uid://6p2aw3c2m41b" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_front_10.png" id="66_udfhf"]
+[ext_resource type="Texture2D" uid="uid://c05ultj4p1y85" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_back_11.png" id="67_1rqq2"]
+[ext_resource type="Texture2D" uid="uid://cfk5ewwod2ipt" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_front_11.png" id="67_ecuqa"]
+[ext_resource type="Texture2D" uid="uid://cj5jx6ri7e14e" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_front_12.png" id="68_6dt2s"]
+[ext_resource type="Texture2D" uid="uid://c7qnwpj3qkymu" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_back_12.png" id="68_2173p"]
+[ext_resource type="Texture2D" uid="uid://dxipjuiyyf656" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_front_13.png" id="69_kaslm"]
+[ext_resource type="Texture2D" uid="uid://bs0dhlcmomi1u" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_back_13.png" id="69_uo8rw"]
+[ext_resource type="Texture2D" uid="uid://bbxpcf0fhq2bb" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_back_14.png" id="70_7ysew"]
+[ext_resource type="Texture2D" uid="uid://5l32j5n1wsry" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_front_14.png" id="70_wcfdy"]
+[ext_resource type="Texture2D" uid="uid://bvy4aw765t87b" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_back_15.png" id="71_0wb4y"]
+[ext_resource type="Texture2D" uid="uid://dq8x2n8sqthte" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_front_15.png" id="71_2eem1"]
+[ext_resource type="Texture2D" uid="uid://cx8lk2kuwwolt" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_front_16.png" id="72_a842g"]
+[ext_resource type="Texture2D" uid="uid://hn4gfbpppfog" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_back_16.png" id="72_ynniq"]
+[ext_resource type="Texture2D" uid="uid://dytnkothrc6m8" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_front_17.png" id="73_4b6yq"]
+[ext_resource type="Texture2D" uid="uid://dv1iyi1wqqglm" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_back_17.png" id="73_gsvix"]
+[ext_resource type="Texture2D" uid="uid://7o2jqaf7mwa8" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_front_18.png" id="74_4kvk1"]
+[ext_resource type="Texture2D" uid="uid://bbhkgdg021tt0" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_back_18.png" id="74_rwnt8"]
+[ext_resource type="Texture2D" uid="uid://bfmsbtvvwfbyf" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_front_19.png" id="75_pfnfa"]
+[ext_resource type="Texture2D" uid="uid://dnesg0l1tj8nd" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_back_19.png" id="75_ra7y0"]
+[ext_resource type="Texture2D" uid="uid://bqxf4pck7dr1d" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_back_20.png" id="76_2onlt"]
+[ext_resource type="Texture2D" uid="uid://ba4pfu5tts457" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_front_20.png" id="76_17rvt"]
+[ext_resource type="Texture2D" uid="uid://dop7tgeq3errk" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_front_21.png" id="77_bm6rq"]
+[ext_resource type="Texture2D" uid="uid://lkybqo84fqld" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_back_21.png" id="77_rhoja"]
+[ext_resource type="Texture2D" uid="uid://cf86d106ugixn" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_back_22.png" id="78_tc0f6"]
+[ext_resource type="Texture2D" uid="uid://dqfon8u7hphdp" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_front_22.png" id="78_uv7ky"]
+[ext_resource type="Texture2D" uid="uid://ci45x4eorxjfb" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_back_23.png" id="79_dqi6u"]
+[ext_resource type="Texture2D" uid="uid://g3d0nna2wugs" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_front_23.png" id="79_gfja0"]
+[ext_resource type="Texture2D" uid="uid://dq3ap7ft827o6" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_normal_00.png" id="80_220sk"]
+[ext_resource type="Texture2D" uid="uid://cyvs5wnuk1upq" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_normal_01.png" id="81_u3ut0"]
+[ext_resource type="Texture2D" uid="uid://crwp4yvabbekn" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_normal_02.png" id="82_aqbd5"]
+[ext_resource type="Texture2D" uid="uid://cd3ugdwpcpbjp" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_normal_03.png" id="83_orfrt"]
+[ext_resource type="Texture2D" uid="uid://bxwv20dddjdbi" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_normal_04.png" id="84_qkmiv"]
+[ext_resource type="Texture2D" uid="uid://pap43656ehe3" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_normal_05.png" id="85_alx0k"]
+[ext_resource type="Texture2D" uid="uid://dmwnkgrjujkll" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_normal_06.png" id="86_mbd7x"]
+[ext_resource type="Texture2D" uid="uid://dthdvrko8drmd" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_normal_07.png" id="87_iku1f"]
+[ext_resource type="Texture2D" uid="uid://cuqsxlwk2wxen" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_normal_08.png" id="88_cw33e"]
+[ext_resource type="Texture2D" uid="uid://dvj8v0pc63kcs" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_normal_09.png" id="89_8m7tg"]
+[ext_resource type="Texture2D" uid="uid://kwaplbf1t6um" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_normal_10.png" id="90_ywgy2"]
+[ext_resource type="Texture2D" uid="uid://dqr23mqtmeyk4" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_normal_11.png" id="91_2boa8"]
+[ext_resource type="Texture2D" uid="uid://b6yuvk5m6rv77" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_normal_12.png" id="92_huehv"]
+[ext_resource type="Texture2D" uid="uid://dhgrqsdwwpwyj" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_normal_13.png" id="93_i7uwj"]
+[ext_resource type="Texture2D" uid="uid://i7o0ekbuiyk4" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_normal_14.png" id="94_m6d5b"]
+[ext_resource type="Texture2D" uid="uid://i26d8gsay6rk" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_normal_15.png" id="95_lrwd2"]
+[ext_resource type="Texture2D" uid="uid://dl12gwt8lgoab" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_normal_16.png" id="96_ouq00"]
+[ext_resource type="Texture2D" uid="uid://nvmcrtrwpqul" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_normal_17.png" id="97_b6632"]
+[ext_resource type="Texture2D" uid="uid://cicexldu61ocm" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_normal_18.png" id="98_g4o6q"]
+[ext_resource type="Texture2D" uid="uid://b84xb1mjyxlnm" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_normal_19.png" id="99_643on"]
+[ext_resource type="Texture2D" uid="uid://bkb2x6bj8yrf4" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_normal_20.png" id="100_7qsav"]
+[ext_resource type="Texture2D" uid="uid://cfm5qokj3ndx3" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_normal_21.png" id="101_6r8lc"]
+[ext_resource type="Texture2D" uid="uid://dy0o08lixgox5" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_normal_22.png" id="102_mbmyg"]
+[ext_resource type="Texture2D" uid="uid://cowxcvagqddsr" path="res://Assets/Animations/Enemies/7尸国贵族战士/move_normal_23.png" id="103_jpcx8"]
+
+[sub_resource type="Resource" id="Resource_70rnm"]
+script = ExtResource("2_888x6")
+health = 500
+dodge_rate = 0.0
+near_damage_low = 12
+near_damage_high = 24
+near_attack_speed = 1.3
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.4
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 0.8
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3gyeq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_4h5wj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_rojs6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2dh2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0en3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ghyws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tmt27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_6ew3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4mo54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_a7a2s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_uhc6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_lnfim")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_fgdsa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_p1tye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_15sgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_12vqc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_sq7wr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_xf4uq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_0y82g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_lqwhx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_5w7h3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_dn1ed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_5umif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_vqw27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_ae0lh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_2s4bk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_gll80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_w6ngt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_dk1mk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_qe5xp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_bohm0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_jc2fu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_aepyq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_e4msg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_fdn0a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_i2uij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_o2c7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_7s63h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_ah0oc")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("43_f3mf3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_yd41e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_dcr2b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_l0j8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_12uis")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_6un50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_porc2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_boaoe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_iqhj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_ftiod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_lqnpu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_4jol8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_7ir46")
+}],
+"loop": false,
+"name": &"die",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_4h5wj")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("56_2j778")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_f8n7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_aveqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_xpaj6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_ffbye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_8j16o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_uexwy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_5b4pi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_17i06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_xmqgp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_p823v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_1rqq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_2173p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_uo8rw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_7ysew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_0wb4y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_ynniq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_gsvix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_rwnt8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_ra7y0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_2onlt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_rhoja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_tc0f6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_dqi6u")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("56_y2rda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_re6ae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_8wfpu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_cdt0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_4opk8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_31qw4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_y7rxr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_m2mkm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_ect1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_w3fqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_udfhf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_ecuqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_6dt2s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_kaslm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_wcfdy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_2eem1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_a842g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_4b6yq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_4kvk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_pfnfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_17rvt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_bm6rq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_uv7ky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_gfja0")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("80_220sk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_u3ut0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_aqbd5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_orfrt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_qkmiv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_alx0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_mbd7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_iku1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_cw33e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_8m7tg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_ywgy2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_2boa8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_huehv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_i7uwj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_m6d5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_lrwd2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_ouq00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_b6632")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_g4o6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_643on")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_7qsav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_6r8lc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_mbmyg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_jpcx8")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 24.0
+}]
+
+[node name="Enemy7" instance=ExtResource("1_ujhr3")]
+script = ExtResource("2_auoov")
+enemy_name = "尸国贵族战士"
+enemy_id = 7
+enemy_texture = ExtResource("3_kb72m")
+start_data = SubResource("Resource_70rnm")
+lives_taken = 2
+bounty = 60
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(5, -120)
+sprite_frames = SubResource("SpriteFrames_3gyeq")
+animation = &"attack"
+autoplay = "idle"

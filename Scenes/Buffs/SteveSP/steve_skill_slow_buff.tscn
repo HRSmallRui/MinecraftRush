@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bu71x0boy17c4"]
+
+[ext_resource type="PackedScene" uid="uid://bjfa3t67tpsbr" path="res://Scenes/Buffs/property_buff.tscn" id="1_p7ao0"]
+[ext_resource type="Script" path="res://Scripts/Buffs/property_buff_block.gd" id="2_g5qut"]
+
+[sub_resource type="Resource" id="Resource_htb5c"]
+script = ExtResource("2_g5qut")
+property_type = 9
+operation_type = 1
+operation_data = 0.5
+
+[node name="SteveSkillSlowBuff" instance=ExtResource("1_p7ao0")]
+buff_blocks = Array[ExtResource("2_g5qut")]([SubResource("Resource_htb5c")])
+buff_type = 1
+duration = 3.0
+buff_tag = "SteveSkillSlowBuff"
+immune_groups = Array[String](["god", "boss", "super_unit"])

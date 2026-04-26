@@ -1,0 +1,80 @@
+[gd_scene load_steps=9 format=3 uid="uid://c4xpleea41xie"]
+
+[ext_resource type="PackedScene" uid="uid://bwifge7de0uys" path="res://Scenes/Buffs/dot_buff.tscn" id="1_elruw"]
+[ext_resource type="Script" path="res://Scripts/Buffs/medical_plugin_dot_debuff.gd" id="2_y6eys"]
+[ext_resource type="AudioStream" uid="uid://b08x363rslmia" path="res://Assets/Sounds/FXs/DefenceTowers/MedicalCamp/PluginExplosion.mp3" id="3_rwdvy"]
+[ext_resource type="Texture2D" uid="uid://bqdije0cnh2r5" path="res://Assets/Images/Effects/plugin_effect.png" id="4_x81nm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2dfxd"]
+radius = 73.9444
+
+[sub_resource type="Animation" id="Animation_bjvy8"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PluginEffect:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_mxl1e"]
+resource_name = "loop"
+loop_mode = 1
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PluginEffect:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(1, 1),
+"points": PackedFloat32Array(0, 0, 0, 0, 0, -6.28319, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yn6cp"]
+_data = {
+"RESET": SubResource("Animation_bjvy8"),
+"loop": SubResource("Animation_mxl1e")
+}
+
+[node name="MedicalPluginDotDebuff" instance=ExtResource("1_elruw")]
+script = ExtResource("2_y6eys")
+dot_damage = Array[int]([2, 2, 2])
+buff_tag = "MedicalPluginDot"
+immune_groups = Array[String](["god", "super_unit", "no_live"])
+
+[node name="DotTimer" parent="." index="0"]
+wait_time = 0.25
+
+[node name="ExplosionArea" type="Area2D" parent="." index="1"]
+z_index = 100
+scale = Vector2(0.8, 0.8)
+collision_layer = 0
+collision_mask = 96
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExplosionArea" index="0"]
+scale = Vector2(1, 0.7)
+shape = SubResource("CircleShape2D_2dfxd")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="PluginExplosion" type="AudioStreamPlayer" parent="." index="2"]
+stream = ExtResource("3_rwdvy")
+volume_db = -6.0
+bus = &"Sound"
+
+[node name="PluginEffect" type="Sprite2D" parent="." index="3"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_x81nm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
+libraries = {
+"": SubResource("AnimationLibrary_yn6cp")
+}
+autoplay = "loop"

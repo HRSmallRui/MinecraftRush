@@ -1,0 +1,110 @@
+[gd_scene load_steps=18 format=3 uid="uid://4rrr2mb6m5uc"]
+
+[ext_resource type="PackedScene" uid="uid://58cc8ohjp6pd" path="res://Scenes/Allys/Heroes/hero_class.tscn" id="1_6ilo6"]
+[ext_resource type="Script" path="res://Scripts/Allys/Heroes/rosa.gd" id="2_iuvn5"]
+[ext_resource type="Resource" uid="uid://c6xvdedhivr" path="res://Library/Heroes/HeroPropertyBlocks/Rosa.tres" id="3_vrg7k"]
+[ext_resource type="Texture2D" uid="uid://b4inaw07x1ahy" path="res://Assets/Images/UI/InformationBar/Rosa.png" id="4_4rl4f"]
+[ext_resource type="Texture2D" uid="uid://buvpgsqxhku2p" path="res://Assets/Images/UI/HeroHall/HeadTexs/蔷薇.png" id="4_yeql8"]
+[ext_resource type="PackedScene" uid="uid://du4jskccj6yeb" path="res://Scenes/Bullets/rosa_physics_arrow.tscn" id="5_1p641"]
+[ext_resource type="SpriteFrames" uid="uid://dt5d31ne3x1gc" path="res://Assets/Animations/Heroes/Rosa/SpriteFrames/rosa_far.res" id="5_cbxqa"]
+[ext_resource type="SpriteFrames" uid="uid://cfsfsxk1gom5o" path="res://Assets/Animations/Heroes/Rosa/SpriteFrames/rosa_near.res" id="5_q3uxe"]
+[ext_resource type="PackedScene" uid="uid://dng356yvhe1hu" path="res://Scenes/Bullets/rosa_magic_arrow.tscn" id="6_s0o6a"]
+[ext_resource type="Texture2D" uid="uid://oov3qeqnyjho" path="res://Assets/Images/Effects/smoke_particle.png" id="9_w4cg3"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/skill_particle_shooter.gd" id="10_2rkh8"]
+[ext_resource type="AudioStream" uid="uid://cvr85147a6civ" path="res://Assets/Sounds/FXs/Enemies/瞬移1.wav" id="10_g2vfi"]
+[ext_resource type="AudioStream" uid="uid://c7r7ydgqlmmlf" path="res://Assets/Sounds/FXs/Enemies/瞬移2.wav" id="11_j3ykn"]
+[ext_resource type="AudioStream" uid="uid://c3ulw48v0hsxy" path="res://Assets/Sounds/FXs/Heroes/Johnny/heavy_slash.mp3" id="12_g7i7b"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_307yl"]
+radius = 73.9444
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_x8pwa"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 86.68
+angle_min = -145.6
+angle_max = 188.1
+radial_velocity_min = 0.999978
+radial_velocity_max = 4.99998
+gravity = Vector3(0, 0, 0)
+linear_accel_min = -11.99
+linear_accel_max = 16.42
+scale_min = 0.05
+scale_max = 0.1
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_cselm"]
+playback_mode = 1
+streams_count = 2
+stream_0/stream = ExtResource("10_g2vfi")
+stream_1/stream = ExtResource("11_j3ykn")
+
+[node name="Rosa" instance=ExtResource("1_6ilo6")]
+script = ExtResource("2_iuvn5")
+near_animation = ExtResource("5_q3uxe")
+far_animation = ExtResource("5_cbxqa")
+physics_arrow_scene = ExtResource("5_1p641")
+magic_arrow_scene = ExtResource("6_s0o6a")
+heal_speeds = Array[int]([18, 20, 22, 24, 26, 28, 30, 32, 34, 36])
+teleport_limit_length = 300.0
+hero_property_block = ExtResource("3_vrg7k")
+skill2_exp_get = Array[int]([150, 250, 300])
+skill3_exp_get = Array[int]([300, 460, 640])
+ally_id = 10
+ally_name = "蔷薇"
+ally_texture = ExtResource("4_4rl4f")
+ally_group = 1
+intercepting_range = 70
+rebirth_time = 18
+
+[node name="AllySprite" parent="UnitBody" index="0"]
+position = Vector2(-35, -75)
+sprite_frames = ExtResource("5_cbxqa")
+animation = &"skill1"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnitBody/InterceptingArea" index="0"]
+scale = Vector2(1, 0.699999)
+shape = SubResource("CircleShape2D_307yl")
+debug_color = Color(1, 1, 1, 0.121569)
+
+[node name="FarAttackMarker" parent="UnitBody" index="8"]
+position = Vector2(15, -90)
+
+[node name="FarAttackMarkerFlip" parent="UnitBody" index="9"]
+position = Vector2(-15, -90)
+
+[node name="DodgeParticle" type="GPUParticles2D" parent="UnitBody" index="11"]
+process_mode = 3
+modulate = Color(0, 0, 0, 0.0941176)
+position = Vector2(0, -85)
+amount = 150
+process_material = SubResource("ParticleProcessMaterial_x8pwa")
+texture = ExtResource("9_w4cg3")
+script = ExtResource("10_2rkh8")
+
+[node name="HeroTexture" parent="HeroUI/HeroUnitButton" index="1"]
+texture = ExtResource("4_yeql8")
+
+[node name="IdleAnimationTimer" type="Timer" parent="." index="8"]
+wait_time = 20.0
+autostart = true
+
+[node name="TeleportAudio" type="AudioStreamPlayer" parent="." index="9"]
+stream = SubResource("AudioStreamRandomizer_cselm")
+bus = &"Sound"
+
+[node name="Skill1Timer" type="Timer" parent="." index="10"]
+one_shot = true
+
+[node name="Skill2Timer" type="Timer" parent="." index="11"]
+one_shot = true
+
+[node name="Skill3Timer" type="Timer" parent="." index="12"]
+one_shot = true
+
+[node name="Skill2Audio" type="AudioStreamPlayer" parent="." index="13"]
+stream = ExtResource("12_g7i7b")
+volume_db = -5.0
+bus = &"Sound"
+
+[connection signal="timeout" from="IdleAnimationTimer" to="." method="_on_idle_animation_timer_timeout"]

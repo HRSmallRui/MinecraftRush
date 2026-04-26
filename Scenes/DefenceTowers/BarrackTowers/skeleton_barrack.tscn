@@ -1,0 +1,123 @@
+[gd_scene load_steps=23 format=3 uid="uid://tf7do34gqsgt"]
+
+[ext_resource type="PackedScene" uid="uid://i17sy4bx2dfh" path="res://Scenes/DefenceTowers/BarrackTowers/barrack_tower.tscn" id="1_lvwlm"]
+[ext_resource type="Script" path="res://Scripts/Datas/BarrackData.gd" id="2_3vaek"]
+[ext_resource type="PackedScene" uid="uid://b2x2bvhxhfb8r" path="res://Scenes/Allys/Soldiers/skeleton_soldier.tscn" id="3_4fk6e"]
+[ext_resource type="PackedScene" uid="uid://cjpn07gcbekr1" path="res://Scenes/DefenceTowers/tower_skill_button.tscn" id="3_62i2t"]
+[ext_resource type="Texture2D" uid="uid://bsk2qbhinfeji" path="res://Assets/Images/UI/InformationBar/Towers/barrack-skeleton.png" id="3_tbrmo"]
+[ext_resource type="Texture2D" uid="uid://c2rd8uauwcavq" path="res://Assets/Images/DefenceTowers/Barracks/UI/Skeleton1/强化附魔.png" id="5_525t3"]
+[ext_resource type="Texture2D" uid="uid://ds1tfuy2q3ojq" path="res://Assets/Images/DefenceTowers/Barracks/UI/Skeleton1/强化附魔select.png" id="6_gxoiv"]
+[ext_resource type="Texture2D" uid="uid://c5vo6easwg6j5" path="res://Assets/Images/DefenceTowers/Barracks/UI/Skeleton1/强化附魔disabled.png" id="7_ua3qr"]
+[ext_resource type="Texture2D" uid="uid://hblrvqdo1sk7" path="res://Assets/Images/DefenceTowers/Barracks/UI/Skeleton1/猩红狙击.png" id="8_1c45m"]
+[ext_resource type="Texture2D" uid="uid://dq854wsvf4bja" path="res://Assets/Images/DefenceTowers/Barracks/UI/Skeleton1/猩红狙击select.png" id="9_0mdr2"]
+[ext_resource type="Texture2D" uid="uid://bl5kv67gdh58o" path="res://Assets/Images/DefenceTowers/Barracks/UI/Skeleton1/猩红狙击disabled.png" id="10_n7rws"]
+[ext_resource type="Texture2D" uid="uid://20p0d5p4fqgr" path="res://Assets/Images/DefenceTowers/Barracks/UI/Skeleton1/雨过天晴.png" id="11_oymiq"]
+[ext_resource type="Texture2D" uid="uid://pdtoxn6loefh" path="res://Assets/Images/DefenceTowers/Barracks/UI/Skeleton1/雨过天晴select.png" id="12_8h8qq"]
+[ext_resource type="Texture2D" uid="uid://d4essqb4vf1ss" path="res://Assets/Images/DefenceTowers/Barracks/UI/Skeleton1/雨过天晴disabled.png" id="13_mq408"]
+[ext_resource type="Texture2D" uid="uid://fkfj6w2jm4wi" path="res://Assets/Images/DefenceTowers/Barracks/Towers/荆棘殿堂.png" id="14_7cbgn"]
+
+[sub_resource type="Resource" id="Resource_bmsg5"]
+script = ExtResource("2_3vaek")
+soldier_health = 180
+damage_low = 7
+damage_high = 12
+armor = 0.4
+rebirth_time = 10
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_scsk6"]
+atlas = ExtResource("5_525t3")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bukbe"]
+atlas = ExtResource("7_ua3qr")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ia7ns"]
+atlas = ExtResource("8_1c45m")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2h13"]
+atlas = ExtResource("10_n7rws")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wvnbe"]
+atlas = ExtResource("11_oymiq")
+region = Rect2(6, 6, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_je80h"]
+atlas = ExtResource("13_mq408")
+region = Rect2(6, 6, 85, 85)
+
+[node name="SkeletonBarrack" instance=ExtResource("1_lvwlm")]
+barrack_data = SubResource("Resource_bmsg5")
+unit_count = 2
+soldier_scene = ExtResource("3_4fk6e")
+tower_name = "荆棘殿堂"
+tower_texture = ExtResource("3_tbrmo")
+tower_id = 6
+tower_level = 4
+start_tower_range = 320
+
+[node name="TowerButton" parent="." index="2"]
+offset_left = -72.0
+offset_top = -122.0
+offset_right = 71.0
+
+[node name="TowerPanelUI" parent="TowerUI" index="3"]
+z_index = 0
+
+[node name="Circle" parent="TowerUI" index="4"]
+position = Vector2(0, -41)
+
+[node name="SellButton" parent="TowerUI/Circle" index="0"]
+visible = false
+
+[node name="TowerSkillButton" parent="TowerUI/Circle" index="2" node_paths=PackedStringArray("linked_tower") instance=ExtResource("3_62i2t")]
+offset_top = -98.7494
+offset_bottom = -13.7493
+texture_normal = SubResource("AtlasTexture_scsk6")
+texture_pressed = SubResource("AtlasTexture_scsk6")
+texture_hover = ExtResource("6_gxoiv")
+texture_disabled = SubResource("AtlasTexture_bukbe")
+linked_tower = NodePath("../../..")
+skill_name = "强化附魔"
+skill_prices = Array[int]([150, 125, 125])
+skill_intro = PackedStringArray("荆棘射手每次受到伤害后会将所受伤害的40%反弹给伤害来源。", "荆棘射手每次受到伤害后会将所受伤害的50%反弹给伤害来源。", "荆棘射手每次受到伤害后会将所受伤害的60%反弹给伤害来源。")
+skill_words = "出来混，早晚要还的！"
+
+[node name="TowerSkillButton2" parent="TowerUI/Circle" index="3" node_paths=PackedStringArray("linked_tower") instance=ExtResource("3_62i2t")]
+offset_left = -42.5007
+offset_top = -147.5
+offset_right = 42.4989
+offset_bottom = -62.4998
+texture_normal = SubResource("AtlasTexture_ia7ns")
+texture_pressed = SubResource("AtlasTexture_ia7ns")
+texture_hover = ExtResource("9_0mdr2")
+texture_disabled = SubResource("AtlasTexture_b2h13")
+linked_tower = NodePath("../../..")
+skill_name = "猩红狙击"
+skill_id = 1
+skill_prices = Array[int]([250, 250, 250])
+skill_intro = PackedStringArray("锁定极远距离一名生命值最高的敌人，对该敌人造成基于对方最大生命值40%的真实伤害。", "锁定极远距离一名生命值最高的敌人，对该敌人造成基于对方最大生命值50%的真实伤害。", "锁定极远距离一名生命值最高的敌人，对该敌人造成基于对方最大生命值60%的真实伤害。")
+skill_words = "一击，毙命！"
+
+[node name="TowerSkillButton3" parent="TowerUI/Circle" index="4" node_paths=PackedStringArray("linked_tower") instance=ExtResource("3_62i2t")]
+offset_left = 57.4995
+offset_top = -98.7503
+offset_right = 142.499
+offset_bottom = -13.7502
+texture_normal = SubResource("AtlasTexture_wvnbe")
+texture_pressed = SubResource("AtlasTexture_wvnbe")
+texture_hover = ExtResource("12_8h8qq")
+texture_disabled = SubResource("AtlasTexture_je80h")
+linked_tower = NodePath("../../..")
+skill_name = "雨过天晴"
+skill_id = 2
+skill_prices = Array[int]([240, 200, 200])
+skill_intro = PackedStringArray("荆棘射手生命低于40%时进入极速恢复状态，每0.2秒恢复自身4点生命，持续4秒。", "荆棘射手生命低于40%时进入极速恢复状态，每0.2秒恢复自身4点生命，持续5秒。", "荆棘射手生命低于40%时进入极速恢复状态，每0.2秒恢复自身4点生命，持续6秒。")
+skill_words = "拨开云雾，重见晴空"
+
+[node name="TowerSprite" type="Sprite2D" parent="." index="10"]
+position = Vector2(0, 31)
+texture = ExtResource("14_7cbgn")
+offset = Vector2(0, -82)

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1v6c158wodx2"]
+
+[ext_resource type="Script" path="res://Scripts/Effects/water_move_effect.gd" id="1_kgknh"]
+
+[sub_resource type="Gradient" id="Gradient_m7gq3"]
+offsets = PackedFloat32Array(0.495984, 0.570281)
+colors = PackedColorArray(0.513726, 0.905882, 0.85098, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_x8f07"]
+gradient = SubResource("Gradient_m7gq3")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="WaterMoveEffect" type="Sprite2D"]
+z_index = -1
+scale = Vector2(0.5, 0.3)
+texture = SubResource("GradientTexture2D_x8f07")
+script = ExtResource("1_kgknh")

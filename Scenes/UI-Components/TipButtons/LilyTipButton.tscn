@@ -1,0 +1,20 @@
+[gd_scene load_steps=7 format=3 uid="uid://c55tou27ixhrb"]
+
+[ext_resource type="PackedScene" uid="uid://cqyt0huygl0sb" path="res://Scenes/UI-Components/enemy_tip_button.tscn" id="1_f0g8y"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/tip_button.gd" id="2_gm1rx"]
+[ext_resource type="PackedScene" uid="uid://b112coqp0s88a" path="res://Scenes/TipUI/lily_tip_ui.tscn" id="3_n3s7q"]
+[ext_resource type="Texture2D" uid="uid://h0sfglw4t0nv" path="res://Assets/Images/UI/TipIcons/lily_tip.png" id="4_1a80l"]
+[ext_resource type="Texture2D" uid="uid://x7eo8kgrvyfv" path="res://Assets/Images/UI/TipIcons/lily_tip-hover.png" id="5_2l3p6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iua1r"]
+atlas = ExtResource("4_1a80l")
+region = Rect2(10, 9, 106, 108)
+
+[node name="EnemyTipButton" instance=ExtResource("1_f0g8y")]
+script = ExtResource("2_gm1rx")
+open_tip_scene = ExtResource("3_n3s7q")
+
+[node name="TextureButton" parent="Button" index="0"]
+texture_normal = SubResource("AtlasTexture_iua1r")
+texture_pressed = SubResource("AtlasTexture_iua1r")
+texture_hover = ExtResource("5_2l3p6")

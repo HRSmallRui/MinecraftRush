@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://174hc6y32pu3"]
+
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/EnemyTower/enemy_tower.gd" id="1_kq47i"]
+[ext_resource type="Script" path="res://Scripts/DefenceTowers/EnemyTower/enemy_tower_shooter.gd" id="2_l5mdf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_580u3"]
+radius = 73.9444
+
+[node name="EnemyTowerClass" type="Node2D" node_paths=PackedStringArray("tower_shooter")]
+script = ExtResource("1_kq47i")
+tower_shooter = NodePath("EnemyTowerShooter")
+
+[node name="TowerArea" type="Area2D" parent="."]
+z_index = 100
+scale = Vector2(2.8, 2.8)
+collision_layer = 0
+collision_mask = 24
+
+[node name="AreaCollision" type="CollisionShape2D" parent="TowerArea"]
+scale = Vector2(1, 0.7)
+shape = SubResource("CircleShape2D_580u3")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="EnemyTowerShooter" type="AnimatedSprite2D" parent="." node_paths=PackedStringArray("linked_tower", "summon_marker_front", "summon_marker_front_flip", "summon_marker_back", "summon_marker_back_flip")]
+script = ExtResource("2_l5mdf")
+linked_tower = NodePath("..")
+summon_marker_front = NodePath("Front")
+summon_marker_front_flip = NodePath("FrontFlip")
+summon_marker_back = NodePath("Back")
+summon_marker_back_flip = NodePath("BackFlip")
+
+[node name="Front" type="Marker2D" parent="EnemyTowerShooter"]
+
+[node name="FrontFlip" type="Marker2D" parent="EnemyTowerShooter"]
+
+[node name="Back" type="Marker2D" parent="EnemyTowerShooter"]
+
+[node name="BackFlip" type="Marker2D" parent="EnemyTowerShooter"]
+
+[node name="NormalAttackTimer" type="Timer" parent="."]
+one_shot = true

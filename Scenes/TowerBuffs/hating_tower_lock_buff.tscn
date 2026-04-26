@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://blccxnuu7bi7v"]
+
+[ext_resource type="PackedScene" uid="uid://du4s3nu3di0he" path="res://Scenes/TowerBuffs/tower_lock_buff.tscn" id="1_1301j"]
+[ext_resource type="Texture2D" uid="uid://ddabpk6opguk2" path="res://Assets/Images/Effects/RobortSkill/LightningRandom1.png" id="2_vhaay"]
+[ext_resource type="Texture2D" uid="uid://b7opqi6uaik2a" path="res://Assets/Images/Effects/RobortSkill/LightningRandom2.png" id="3_m05fc"]
+[ext_resource type="Texture2D" uid="uid://qvtngcyrqvvp" path="res://Assets/Images/Effects/RobortSkill/LightningRandom3.png" id="4_ryxhw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pe08h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vhaay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_m05fc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ryxhw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="HatingTowerLockBuff" instance=ExtResource("1_1301j")]
+duration = 8.0
+buff_tag = "HatingTowerLockBuff"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+z_index = 1
+position = Vector2(0, -20)
+sprite_frames = SubResource("SpriteFrames_pe08h")
+autoplay = "default"
+frame_progress = 0.616746

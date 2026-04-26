@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://woabp5g5oy4m"]
+
+[ext_resource type="PackedScene" uid="uid://caufauw6v502y" path="res://Scenes/Classes/bullet_class.tscn" id="1_rbqid"]
+[ext_resource type="Script" path="res://Scripts/Bullets/steve_sp_kill_bullet.gd" id="2_u8n86"]
+[ext_resource type="PackedScene" uid="uid://b76b7g5n6efop" path="res://Scenes/Buffs/dizness_buff.tscn" id="3_bues6"]
+[ext_resource type="Texture2D" uid="uid://b6g465hmch6qg" path="res://Assets/Images/Bullets/skeleton_seckill_arrow.png" id="3_j0bkk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o5n3q"]
+radius = 11.0
+
+[sub_resource type="Curve" id="Curve_3es4e"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 2.99159, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_mnl6y"]
+colors = PackedColorArray(1, 0, 0, 0.717647, 1, 0, 0, 0)
+
+[node name="SteveKillBullet" instance=ExtResource("1_rbqid")]
+script = ExtResource("2_u8n86")
+dizness_buff_scene = ExtResource("3_bues6")
+dizness_duration = 2.0
+tail_max_length = 20
+move_type = 1
+bullet_speed = 1500.0
+
+[node name="BulletSprite" parent="." index="0"]
+position = Vector2(-1, 0)
+rotation = 0.189153
+scale = Vector2(0.711681, 0.183747)
+texture = ExtResource("3_j0bkk")
+
+[node name="HitBox" parent="." index="1"]
+scale = Vector2(0.649891, 0.649891)
+collision_mask = 96
+monitorable = false
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+shape = SubResource("CircleShape2D_o5n3q")
+
+[node name="FreeTimer" parent="." index="2"]
+wait_time = 1.5
+
+[node name="Tail" type="Line2D" parent="." index="3"]
+top_level = true
+width_curve = SubResource("Curve_3es4e")
+gradient = SubResource("Gradient_mnl6y")
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 16
+
+[node name="TailTimer" type="Timer" parent="Tail" index="0"]
+wait_time = 0.05
+autostart = true

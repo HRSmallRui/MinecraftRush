@@ -1,0 +1,85 @@
+[gd_scene load_steps=10 format=3 uid="uid://dbhfcarsc2d65"]
+
+[ext_resource type="PackedScene" uid="uid://caufauw6v502y" path="res://Scenes/Classes/bullet_class.tscn" id="1_tjcpv"]
+[ext_resource type="Script" path="res://Scripts/Bullets/plane_super_shell.gd" id="2_o5npm"]
+[ext_resource type="Texture2D" uid="uid://cvfm61j4g8tlf" path="res://Assets/Images/Bullets/雷管-open.png" id="3_sdmor"]
+
+[sub_resource type="Gradient" id="Gradient_v6uq2"]
+offsets = PackedFloat32Array(0, 0.427788, 1)
+colors = PackedColorArray(1, 0, 0, 0.760784, 1, 0, 0, 0.47532, 1, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_t1yp6"]
+gradient = SubResource("Gradient_v6uq2")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.867521, 0.132479)
+
+[sub_resource type="Animation" id="Animation_u3h3l"]
+resource_name = "loop"
+length = 0.2
+loop_mode = 2
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.1, 0, 0.1, 0, 1.5, -0.1, 0, 0.1, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+
+[sub_resource type="Animation" id="Animation_o6go2"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.1, 0, 0.1, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bvt7u"]
+_data = {
+"RESET": SubResource("Animation_o6go2"),
+"loop": SubResource("Animation_u3h3l")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tv1n8"]
+radius = 7.0
+
+[node name="PlaneSuperShell" instance=ExtResource("1_tjcpv")]
+script = ExtResource("2_o5npm")
+move_type = 1
+bullet_speed = 1000.0
+damage_source = ""
+
+[node name="BulletSprite" parent="." index="0"]
+position = Vector2(-7.62939e-06, 0)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_sdmor")
+offset = Vector2(-171.813, 0)
+
+[node name="DangerLight" type="PointLight2D" parent="BulletSprite" index="0"]
+position = Vector2(-343.625, 0)
+energy = 0.0
+texture = SubResource("GradientTexture2D_t1yp6")
+texture_scale = 1.66
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BulletSprite/DangerLight" index="0"]
+libraries = {
+"": SubResource("AnimationLibrary_bvt7u")
+}
+autoplay = "loop"
+
+[node name="HitBox" parent="." index="1"]
+collision_mask = 96
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+shape = SubResource("CircleShape2D_tv1n8")

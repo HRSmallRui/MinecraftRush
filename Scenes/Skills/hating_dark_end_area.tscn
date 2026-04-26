@@ -1,0 +1,97 @@
+[gd_scene load_steps=17 format=3 uid="uid://c21kjgrm2duwe"]
+
+[ext_resource type="Script" path="res://Scripts/Skills/hating_dark_end_area.gd" id="1_03yn3"]
+[ext_resource type="Texture2D" uid="uid://bjqd4l7lvkdk3" path="res://Assets/Images/Skills/Firerain/fire1.png" id="2_66ioa"]
+[ext_resource type="PackedScene" uid="uid://bs6di8bd3aqqc" path="res://Scenes/Buffs/Enemies/hating_dark_buff.tscn" id="2_lxbek"]
+[ext_resource type="Shader" path="res://Assets/Shaders/hue_color.gdshader" id="2_xfwpj"]
+[ext_resource type="Script" path="res://Library/Heroes/damage_block.gd" id="3_dtxgd"]
+[ext_resource type="Texture2D" uid="uid://dryb5uixkktvo" path="res://Assets/Images/Skills/Firerain/fire2.png" id="3_ulxm7"]
+[ext_resource type="Texture2D" uid="uid://bgnmllpvmj6s8" path="res://Assets/Images/Skills/Firerain/fire3.png" id="4_gjiru"]
+[ext_resource type="Texture2D" uid="uid://bp4mm2qr04sfd" path="res://Assets/Images/Skills/Firerain/shadow.png" id="5_1ji6l"]
+[ext_resource type="Texture2D" uid="uid://bd674kbilvbyt" path="res://Assets/Images/Effects/bomb.png" id="6_wsa7d"]
+
+[sub_resource type="Resource" id="Resource_fhurq"]
+script = ExtResource("3_dtxgd")
+damage_low = 200
+damage_high = 280
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cgefb"]
+radius = 73.9444
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_miy2l"]
+shader = ExtResource("2_xfwpj")
+shader_parameter/hue_shift = 0.7
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fnpwn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_66ioa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ulxm7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gjiru")
+}],
+"loop": true,
+"name": &"default",
+"speed": 18.0
+}]
+
+[sub_resource type="Curve" id="Curve_1kmc0"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_g4htk"]
+colors = PackedColorArray(0.672746, 0.304475, 1, 0.678431, 0.67451, 0.305882, 1, 0.101961)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_aig7h"]
+shader = ExtResource("2_xfwpj")
+shader_parameter/hue_shift = 0.567
+
+[node name="HatingDarkEndArea" type="Area2D"]
+collision_layer = 0
+collision_mask = 24
+script = ExtResource("1_03yn3")
+max_point_limit = 60
+dark_buff_scene = ExtResource("2_lxbek")
+dark_damage = SubResource("Resource_fhurq")
+damage_percent = 0.2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 1.4)
+shape = SubResource("CircleShape2D_cgefb")
+debug_color = Color(1, 1, 1, 0)
+
+[node name="FireSprite" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_miy2l")
+rotation = -2.42444
+sprite_frames = SubResource("SpriteFrames_fnpwn")
+autoplay = "default"
+
+[node name="TailLine" type="Line2D" parent="."]
+top_level = true
+points = PackedVector2Array(-117, -118, 2, 2)
+width_curve = SubResource("Curve_1kmc0")
+gradient = SubResource("Gradient_g4htk")
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Shadow" type="Sprite2D" parent="."]
+z_index = -1
+texture = ExtResource("5_1ji6l")
+
+[node name="TailTimer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 0.01
+autostart = true
+
+[node name="Bomb" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_aig7h")
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_wsa7d")
+offset = Vector2(0, -120)
+
+[connection signal="timeout" from="TailTimer" to="." method="_on_tail_timer_timeout"]

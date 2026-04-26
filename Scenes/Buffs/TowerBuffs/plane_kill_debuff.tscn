@@ -1,0 +1,113 @@
+[gd_scene load_steps=15 format=3 uid="uid://cx2kgig01jgmy"]
+
+[ext_resource type="PackedScene" uid="uid://c3gyjosb382do" path="res://Scenes/Classes/buff_class.tscn" id="1_xn37i"]
+[ext_resource type="Script" path="res://Scripts/Buffs/plane_kill_debuff.gd" id="2_tf4dl"]
+[ext_resource type="Texture2D" uid="uid://xk6igmndfmfx" path="res://Assets/Images/Bullets/雷管-close.png" id="3_jxf4x"]
+[ext_resource type="Script" path="res://Library/Heroes/damage_block.gd" id="3_v84ho"]
+[ext_resource type="AudioStream" uid="uid://3nfy5wuw21en" path="res://Assets/Sounds/FXs/DefenceTowers/PlaneController/bomb.mp3" id="4_kds0p"]
+
+[sub_resource type="Resource" id="Resource_5p7u2"]
+script = ExtResource("3_v84ho")
+damage_low = 80
+damage_high = 120
+
+[sub_resource type="Resource" id="Resource_qi86e"]
+script = ExtResource("3_v84ho")
+damage_low = 100
+damage_high = 150
+
+[sub_resource type="Resource" id="Resource_w88d1"]
+script = ExtResource("3_v84ho")
+damage_low = 120
+damage_high = 180
+
+[sub_resource type="Gradient" id="Gradient_4duox"]
+offsets = PackedFloat32Array(0, 0.427788, 1)
+colors = PackedColorArray(1, 0, 0, 0.760784, 1, 0, 0, 0.47532, 1, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rm2ob"]
+gradient = SubResource("Gradient_4duox")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.867521, 0.132479)
+
+[sub_resource type="Animation" id="Animation_u3h3l"]
+resource_name = "loop"
+length = 0.2
+loop_mode = 2
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.1, 0, 0.1, 0, 1.5, -0.1, 0, 0.1, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+
+[sub_resource type="Animation" id="Animation_o6go2"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.1, 0, 0.1, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bvt7u"]
+_data = {
+"RESET": SubResource("Animation_o6go2"),
+"loop": SubResource("Animation_u3h3l")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ac60u"]
+radius = 73.9444
+
+[node name="PlaneKillDebuff" instance=ExtResource("1_xn37i")]
+script = ExtResource("2_tf4dl")
+explosion_damage_list = Array[ExtResource("3_v84ho")]([SubResource("Resource_5p7u2"), SubResource("Resource_qi86e"), SubResource("Resource_w88d1")])
+another_damage_list = Array[int]([400, 600, 800])
+buff_type = 1
+duration = 1.5
+can_be_overlay = true
+buff_tag = "PlaneKill"
+
+[node name="Bullet" type="Sprite2D" parent="." index="0"]
+position = Vector2(-3.8147e-06, -3.55271e-15)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_jxf4x")
+offset = Vector2(-165, -2.98023e-07)
+
+[node name="DangerLight" type="PointLight2D" parent="Bullet" index="0"]
+position = Vector2(-340, 0)
+energy = 0.0
+texture = SubResource("GradientTexture2D_rm2ob")
+texture_scale = 2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Bullet/DangerLight" index="0"]
+libraries = {
+"": SubResource("AnimationLibrary_bvt7u")
+}
+autoplay = "loop"
+
+[node name="Bomb" type="AudioStreamPlayer" parent="." index="1"]
+stream = ExtResource("4_kds0p")
+autoplay = true
+bus = &"Sound"
+
+[node name="BombardArea" type="Area2D" parent="." index="2"]
+collision_layer = 0
+collision_mask = 96
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BombardArea" index="0"]
+scale = Vector2(1.8, 1.26)
+shape = SubResource("CircleShape2D_ac60u")
+debug_color = Color(0, 1, 1, 0.137255)

@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3abax6utyxjy"]
+
+[ext_resource type="PackedScene" uid="uid://doqtusnl6v3jq" path="res://Scenes/StageComponents/story_layer.tscn" id="1_iirtn"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Stages/dialog_block.gd" id="2_ubxhj"]
+
+[sub_resource type="Resource" id="Resource_1vip4"]
+script = ExtResource("2_ubxhj")
+dialog_text = "结束了，尼古拉斯！"
+text_color = Color(0, 1, 1, 1)
+text_exist_time = 2.0
+
+[sub_resource type="Resource" id="Resource_jkqne"]
+script = ExtResource("2_ubxhj")
+dialog_text = ""
+text_color = Color(1, 1, 1, 1)
+text_exist_time = 5.0
+
+[node name="HatingEmperorStoryLayer" instance=ExtResource("1_iirtn")]
+ending_time = 6.0
+dialog_list = Array[ExtResource("2_ubxhj")]([SubResource("Resource_1vip4"), SubResource("Resource_jkqne")])
+
+[node name="ColorRect" parent="." index="0"]
+visible = false
+
+[node name="CGPlayer" parent="." index="1"]
+visible = false
+
+[node name="SkipButton" parent="." index="3"]
+visible = false

@@ -1,0 +1,363 @@
+[gd_scene load_steps=15 format=3 uid="uid://b112coqp0s88a"]
+
+[ext_resource type="PackedScene" uid="uid://bw0kjoybdcexh" path="res://Scenes/Classes/tip_ui.tscn" id="1_41u43"]
+[ext_resource type="Texture2D" uid="uid://c5f4smo15cmrv" path="res://Assets/Images/UI/Pages/title-gray.png" id="2_kdawx"]
+[ext_resource type="Texture2D" uid="uid://c3moupyebseb5" path="res://Assets/Images/Stages/Stage16/Lily.png" id="3_r3lsv"]
+[ext_resource type="Texture2D" uid="uid://btygux8ja2ahr" path="res://Assets/Images/Stages/Stage16/LilyLight.png" id="4_e5wpx"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="5_13gs6"]
+[ext_resource type="Texture2D" uid="uid://r4sgg28pov62" path="res://Assets/Animations/Soldiers/LV2/SoldierLV2-attack_00.png" id="6_0k7kg"]
+[ext_resource type="Texture2D" uid="uid://bavhey6wumglg" path="res://Assets/Images/Effects/heal_particle.png" id="7_8b1ux"]
+[ext_resource type="Texture2D" uid="uid://c5wct2665q6qw" path="res://Assets/Images/UI/SkillButton/Reinforce/reinforce_colding.png" id="8_w2wel"]
+[ext_resource type="Texture2D" uid="uid://bisavj4a0r1as" path="res://Assets/Images/UI/SkillButton/skill_progress.png" id="9_t7ao2"]
+[ext_resource type="AudioStream" uid="uid://b2wskyv0fi2i6" path="res://Assets/Sounds/FXs/UIs/TipWritingAudio.wav" id="10_tk2tg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r6plo"]
+atlas = ExtResource("9_t7ao2")
+region = Rect2(56, 40, 146, 172)
+
+[sub_resource type="Animation" id="Animation_r01ox"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Paper/TipContent/WhiteLily:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Paper/TipContent/RedLily:modulate:a")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Paper/TipContent/WhiteTip:modulate:a")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Paper/TipContent/RedtTip:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Paper/TipContent/Label:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Paper/OKButton:position:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(86.6527, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".:can_control")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_a7ld7"]
+resource_name = "auto"
+length = 4.0
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Paper/TipContent/WhiteLily:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(1, 1.4)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Paper/TipContent/RedLily:modulate:a")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(1.2, 1.6)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Paper/TipContent/WhiteTip:modulate:a")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(1.4, 1.8)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Paper/TipContent/RedtTip:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(1.6, 2)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Paper/TipContent/Label:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(2, 3.5)
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Paper/TipWritingAudio:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Paper/OKButton:position:y")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(86.6527, -0.25, 0, 0.25, 0, 183.704, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(3.5, 4)
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ButtonAppearAudio:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(3.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath(".:can_control")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_aese0"]
+_data = {
+"RESET": SubResource("Animation_r01ox"),
+"auto": SubResource("Animation_a7ld7")
+}
+
+[node name="LilyTipUI" instance=ExtResource("1_41u43")]
+
+[node name="Title" parent="Paper" index="0"]
+texture = ExtResource("2_kdawx")
+
+[node name="Label" parent="Paper/Title" index="0"]
+text = "情报"
+
+[node name="OKButton" parent="Paper" index="1"]
+offset_left = 126.166
+offset_top = 86.6527
+offset_right = 360.166
+offset_bottom = 174.653
+
+[node name="TipContent" type="Node2D" parent="Paper" index="2"]
+
+[node name="WhiteLily" type="Sprite2D" parent="Paper/TipContent" index="0"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-263.175, -75.5612)
+scale = Vector2(1.9671, 1.9671)
+texture = ExtResource("3_r3lsv")
+region_enabled = true
+region_rect = Rect2(6, 5, 51, 38)
+
+[node name="Sprite2D" type="Sprite2D" parent="Paper/TipContent/WhiteLily" index="0"]
+position = Vector2(0, -8.31866)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("4_e5wpx")
+region_enabled = true
+region_rect = Rect2(4, 0, 62, 45)
+
+[node name="RedLily" type="Sprite2D" parent="Paper/TipContent" index="1"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-263.175, 83.1866)
+scale = Vector2(1.9671, 1.9671)
+texture = ExtResource("3_r3lsv")
+region_enabled = true
+region_rect = Rect2(42, 55, 51, 38)
+
+[node name="Sprite2D" type="Sprite2D" parent="Paper/TipContent/RedLily" index="0"]
+position = Vector2(0, -8.31866)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("4_e5wpx")
+region_enabled = true
+region_rect = Rect2(32, 51, 62, 45)
+
+[node name="Label" type="Label" parent="Paper/TipContent" index="2"]
+offset_left = -59.0
+offset_top = -67.2425
+offset_right = 937.0
+offset_bottom = 336.758
+scale = Vector2(0.431734, 0.431734)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 8
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("5_13gs6")
+theme_override_font_sizes/font_size = 48
+text = "将军，这些蕴含魔力神秘路边花似乎可以协助我军作战。
+白花：恢复我方单位大量生命值
+红花：缩短少许主动技能冷却时间"
+autowrap_mode = 3
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Label2" type="Label" parent="Paper/TipContent" index="3"]
+offset_left = -75.5612
+offset_top = -155.282
+offset_right = 831.439
+offset_bottom = -38.2816
+scale = Vector2(0.46703, 0.46703)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 8
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("5_13gs6")
+theme_override_font_sizes/font_size = 64
+text = "关于路边花"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="WhiteTip" type="Node2D" parent="Paper/TipContent" index="4"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(6.23899, -16.6373)
+
+[node name="SoldierLv2-attack00" type="Sprite2D" parent="Paper/TipContent/WhiteTip" index="0"]
+position = Vector2(-142.11, -56.8442)
+texture = ExtResource("6_0k7kg")
+
+[node name="HealParticle" type="Sprite2D" parent="Paper/TipContent/WhiteTip" index="1"]
+position = Vector2(-158.055, -67.2425)
+scale = Vector2(0.634331, 0.634331)
+texture = ExtResource("7_8b1ux")
+
+[node name="HealParticle2" type="Sprite2D" parent="Paper/TipContent/WhiteTip" index="2"]
+position = Vector2(-125.473, -72.7883)
+scale = Vector2(0.634331, 0.634331)
+texture = ExtResource("7_8b1ux")
+
+[node name="HealParticle3" type="Sprite2D" parent="Paper/TipContent/WhiteTip" index="3"]
+position = Vector2(-135.178, -45.7526)
+scale = Vector2(0.634331, 0.634331)
+texture = ExtResource("7_8b1ux")
+
+[node name="RedtTip" type="Node2D" parent="Paper/TipContent" index="5"]
+modulate = Color(1, 1, 1, 0)
+
+[node name="ReinforceColding" type="Sprite2D" parent="Paper/TipContent/RedtTip" index="0"]
+position = Vector2(-125.473, 72.095)
+scale = Vector2(0.470544, 0.470544)
+texture = ExtResource("8_w2wel")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Paper/TipContent/RedtTip/ReinforceColding" index="0"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -201.0
+offset_top = -214.0
+offset_right = -55.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 1.0
+step = 0.0
+value = 0.65
+fill_mode = 2
+texture_progress = SubResource("AtlasTexture_r6plo")
+
+[node name="Label" type="Label" parent="Paper/TipContent/RedtTip" index="1"]
+offset_left = -158.748
+offset_top = -4.15933
+offset_right = 49.2522
+offset_bottom = 59.8407
+scale = Vector2(0.349783, 0.349783)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 24
+theme_override_fonts/font = ExtResource("5_13gs6")
+theme_override_font_sizes/font_size = 64
+text = "-2.2s"
+
+[node name="TipWritingAudio" type="AudioStreamPlayer" parent="Paper" index="3"]
+stream = ExtResource("10_tk2tg")
+bus = &"Sound"
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="." index="6"]
+libraries = {
+"": SubResource("AnimationLibrary_aese0")
+}
+autoplay = "auto"

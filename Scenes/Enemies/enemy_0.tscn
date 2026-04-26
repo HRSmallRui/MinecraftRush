@@ -1,0 +1,498 @@
+[gd_scene load_steps=112 format=3 uid="uid://44npbgu1xrd5"]
+
+[ext_resource type="PackedScene" uid="uid://c3a06iwf4hcp1" path="res://Scenes/Classes/enemy_class.tscn" id="1_7yrb0"]
+[ext_resource type="Script" path="res://Scripts/Datas/UnitData.gd" id="2_06cbw"]
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy_0.gd" id="2_qbco0"]
+[ext_resource type="Texture2D" uid="uid://bvgmbhga1m1me" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵attack_00.png" id="3_lhbh5"]
+[ext_resource type="Texture2D" uid="uid://cih6minnj53g8" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵attack_01.png" id="4_n65m3"]
+[ext_resource type="Texture2D" uid="uid://b3hs3eq8q8oci" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_front_00.png" id="4_thw2y"]
+[ext_resource type="Texture2D" uid="uid://bbb47707chk20" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_front_01.png" id="5_j8d2g"]
+[ext_resource type="Texture2D" uid="uid://b2p4pxkputpm8" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵attack_02.png" id="5_p8btc"]
+[ext_resource type="Texture2D" uid="uid://b438jafteuqd7" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_front_02.png" id="6_tamh3"]
+[ext_resource type="Texture2D" uid="uid://b2ushyyvgjkyk" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵attack_03.png" id="6_wqabg"]
+[ext_resource type="Texture2D" uid="uid://dw7nkxjpp7t8" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵attack_04.png" id="7_byg2q"]
+[ext_resource type="Texture2D" uid="uid://bjl53aycw7mgt" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_front_03.png" id="7_glaog"]
+[ext_resource type="Texture2D" uid="uid://cawjp4lnl2v0k" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_front_04.png" id="8_jord1"]
+[ext_resource type="Texture2D" uid="uid://5r3us0tj5fb1" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵attack_05.png" id="8_oo4qe"]
+[ext_resource type="Texture2D" uid="uid://crvwdt6n1p2px" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵attack_06.png" id="9_0b30r"]
+[ext_resource type="Texture2D" uid="uid://koxv0voprfxg" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_front_05.png" id="9_c8ee2"]
+[ext_resource type="Texture2D" uid="uid://dbe2a0gm3dspy" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵attack_07.png" id="10_dgebv"]
+[ext_resource type="Texture2D" uid="uid://bd2rdnhjspa7t" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_front_06.png" id="10_fo3ob"]
+[ext_resource type="Texture2D" uid="uid://ckk8doh3pup3h" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_front_07.png" id="11_1ruu6"]
+[ext_resource type="Texture2D" uid="uid://cdp5j75ircw31" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵attack_08.png" id="11_7qloe"]
+[ext_resource type="Texture2D" uid="uid://m33qim1ixvnf" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵attack_09.png" id="12_fb7is"]
+[ext_resource type="Texture2D" uid="uid://dytrbxuwmi48s" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_front_08.png" id="12_tvy3s"]
+[ext_resource type="Texture2D" uid="uid://daqqtf2cqbjkw" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵attack_10.png" id="13_gyy4l"]
+[ext_resource type="Texture2D" uid="uid://t4kspdveds34" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_front_09.png" id="13_tw2qy"]
+[ext_resource type="Texture2D" uid="uid://b4q5rmbvefg8b" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_front_10.png" id="14_5gm41"]
+[ext_resource type="Texture2D" uid="uid://c65sdw1t3jn4l" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵attack_11.png" id="14_tkuho"]
+[ext_resource type="Texture2D" uid="uid://buo5w4xg40teb" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵attack_12.png" id="15_imwnt"]
+[ext_resource type="Texture2D" uid="uid://bl3msatani6tk" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_front_11.png" id="15_ktnbj"]
+[ext_resource type="Texture2D" uid="uid://h8ledv2qdtd3" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_front_12.png" id="16_nyy77"]
+[ext_resource type="Texture2D" uid="uid://cn6mav3hv56w" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵attack_13.png" id="16_tsain"]
+[ext_resource type="Texture2D" uid="uid://ccki65e8ukyu6" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵attack_14.png" id="17_i785l"]
+[ext_resource type="Texture2D" uid="uid://blog6i1gatmj8" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_front_13.png" id="17_qww3q"]
+[ext_resource type="Texture2D" uid="uid://b3vugsrk5117m" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_front_14.png" id="18_5ofcm"]
+[ext_resource type="Texture2D" uid="uid://bgwf1ormuv4tx" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵attack_15.png" id="18_uwour"]
+[ext_resource type="Texture2D" uid="uid://0evwo1td6sq1" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵attack_16.png" id="19_hr0gj"]
+[ext_resource type="Texture2D" uid="uid://8srnas00frso" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_front_15.png" id="19_s2rfy"]
+[ext_resource type="Texture2D" uid="uid://b7v0a4rqko54k" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_front_16.png" id="20_0b2f2"]
+[ext_resource type="Texture2D" uid="uid://djglnekbnfhuh" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵attack_17.png" id="20_qnfqp"]
+[ext_resource type="Texture2D" uid="uid://bd6lplw5byesg" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_front_17.png" id="21_pdyx2"]
+[ext_resource type="Texture2D" uid="uid://cm1vk7fbc3gn5" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵attack_18.png" id="21_t6yr6"]
+[ext_resource type="Texture2D" uid="uid://cp5e5lh5g6wh2" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵attack_19.png" id="22_nj6m2"]
+[ext_resource type="Texture2D" uid="uid://ccr8usaj831xl" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_front_18.png" id="22_rt83w"]
+[ext_resource type="Texture2D" uid="uid://dsxn85wjk756r" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_front_19.png" id="23_kovvs"]
+[ext_resource type="Texture2D" uid="uid://u5mqeqajeuw1" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵attack_20.png" id="23_v0w1t"]
+[ext_resource type="Texture2D" uid="uid://nblm6ykwhav6" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵die_00.png" id="24_1uyf0"]
+[ext_resource type="Texture2D" uid="uid://b8klf5let7n2a" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_front_20.png" id="24_lmuol"]
+[ext_resource type="Texture2D" uid="uid://c7mj6w7p1hd5u" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵die_01.png" id="25_443dv"]
+[ext_resource type="Texture2D" uid="uid://dct108xevxcgs" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_front_21.png" id="25_kcvto"]
+[ext_resource type="Texture2D" uid="uid://woute8lon8wb" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵die_02.png" id="26_f4e0b"]
+[ext_resource type="Texture2D" uid="uid://bpntlgacddgkf" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_front_22.png" id="26_vwjdj"]
+[ext_resource type="Texture2D" uid="uid://c0o2ncj5kqhb6" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_front_23.png" id="27_gm3gi"]
+[ext_resource type="Texture2D" uid="uid://dv3lepu7nyyux" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵die_03.png" id="27_kux72"]
+[ext_resource type="Texture2D" uid="uid://costfdprwfqba" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_normal_00.png" id="28_8d144"]
+[ext_resource type="Texture2D" uid="uid://lvspgdk4t24a" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵die_04.png" id="28_ewwto"]
+[ext_resource type="Texture2D" uid="uid://bh0lrafcby1es" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵die_05.png" id="29_jc1gm"]
+[ext_resource type="Texture2D" uid="uid://br113on0015md" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_normal_01.png" id="29_lqigd"]
+[ext_resource type="Texture2D" uid="uid://bu66ff78ccxrx" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_normal_02.png" id="30_4wlix"]
+[ext_resource type="Texture2D" uid="uid://cgpu1kaaydhij" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵die_06.png" id="30_m0gd1"]
+[ext_resource type="Texture2D" uid="uid://dq1i12j55psn1" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_normal_03.png" id="31_pwdqw"]
+[ext_resource type="Texture2D" uid="uid://d3qw1srdbnygb" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵die_07.png" id="31_qi68n"]
+[ext_resource type="Texture2D" uid="uid://cpoaaghj1qmqc" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_normal_04.png" id="32_6vpfh"]
+[ext_resource type="Texture2D" uid="uid://cj5dwqyqqoqse" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵die_08.png" id="32_a2u87"]
+[ext_resource type="Texture2D" uid="uid://cr6yj7el6devc" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_normal_05.png" id="33_1qb8g"]
+[ext_resource type="Texture2D" uid="uid://011gworp877q" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵die_09.png" id="33_fa5al"]
+[ext_resource type="Texture2D" uid="uid://bi7e20oop0qd1" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_normal_06.png" id="34_arnee"]
+[ext_resource type="Texture2D" uid="uid://bnt5xk2810iaj" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵die_10.png" id="34_qwl7r"]
+[ext_resource type="Texture2D" uid="uid://bv75v6dmj01t0" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_normal_07.png" id="35_7xytg"]
+[ext_resource type="Texture2D" uid="uid://m7pcefril4b2" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵die_11.png" id="35_ohe2n"]
+[ext_resource type="Texture2D" uid="uid://cfk6nls7sj6ou" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_normal_08.png" id="36_0b2yb"]
+[ext_resource type="Texture2D" uid="uid://dr3bs740mn756" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵die_12.png" id="36_xmnrk"]
+[ext_resource type="Texture2D" uid="uid://bko4rkiha0266" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_normal_09.png" id="37_hskqw"]
+[ext_resource type="Texture2D" uid="uid://cshm4j2s80o07" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_back_00.png" id="37_rkpyt"]
+[ext_resource type="Texture2D" uid="uid://c4u84cllg6ilb" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_back_01.png" id="38_7bsqw"]
+[ext_resource type="Texture2D" uid="uid://lmbsp5wgve0p" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_normal_10.png" id="38_vihhd"]
+[ext_resource type="Texture2D" uid="uid://bj8x1mmu4wah7" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_normal_11.png" id="39_g0elm"]
+[ext_resource type="Texture2D" uid="uid://d2bowcf1j60jj" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_back_02.png" id="39_mcy16"]
+[ext_resource type="Texture2D" uid="uid://bdpwmhfsd3uu8" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_normal_12.png" id="40_h8tcq"]
+[ext_resource type="Texture2D" uid="uid://hh4ee13ou3aj" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_back_03.png" id="40_q30o4"]
+[ext_resource type="Texture2D" uid="uid://bcjkl723p88tp" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_back_04.png" id="41_o51td"]
+[ext_resource type="Texture2D" uid="uid://bvqv0v7qik8p7" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_normal_13.png" id="41_uomro"]
+[ext_resource type="Texture2D" uid="uid://bymrsimyqqn5s" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_normal_14.png" id="42_a0iwt"]
+[ext_resource type="Texture2D" uid="uid://c7js5e7uplpql" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_back_05.png" id="42_efqsf"]
+[ext_resource type="Texture2D" uid="uid://bn287eliadixw" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_normal_15.png" id="43_daxh8"]
+[ext_resource type="Texture2D" uid="uid://dsewsk8j3q8nc" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_back_06.png" id="43_g7lu4"]
+[ext_resource type="Texture2D" uid="uid://3liwaec2h5as" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_normal_16.png" id="44_4q7ol"]
+[ext_resource type="Texture2D" uid="uid://cc872vaw10d6h" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_back_07.png" id="44_vpih6"]
+[ext_resource type="Texture2D" uid="uid://be2rc3chshci7" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_normal_17.png" id="45_idi80"]
+[ext_resource type="Texture2D" uid="uid://oeoebap481ut" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_back_08.png" id="45_q5fuc"]
+[ext_resource type="Texture2D" uid="uid://jhvexlins2j5" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_back_09.png" id="46_dh7xl"]
+[ext_resource type="Texture2D" uid="uid://vq0xmy1qarqt" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_normal_18.png" id="46_piatv"]
+[ext_resource type="Texture2D" uid="uid://cxjlk0lv5tj4b" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_normal_19.png" id="47_4f3bh"]
+[ext_resource type="Texture2D" uid="uid://bs2xfu2mgmr4b" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_back_10.png" id="47_66bqh"]
+[ext_resource type="Texture2D" uid="uid://cpjxirb2mk6uj" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_back_11.png" id="48_61ehr"]
+[ext_resource type="Texture2D" uid="uid://donua222vt8gv" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_normal_20.png" id="48_yg4fs"]
+[ext_resource type="Texture2D" uid="uid://myopmoi335i5" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_normal_21.png" id="49_2n84x"]
+[ext_resource type="Texture2D" uid="uid://bsmth4ac4efdd" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_back_12.png" id="49_q4q1i"]
+[ext_resource type="Texture2D" uid="uid://dh25rvt55cysn" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_normal_22.png" id="50_apmd4"]
+[ext_resource type="Texture2D" uid="uid://dbfmva4ifnbe4" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_back_13.png" id="50_nemmb"]
+[ext_resource type="Texture2D" uid="uid://laq7bd2wbi0n" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_back_14.png" id="51_rl8iq"]
+[ext_resource type="Texture2D" uid="uid://crv02aefyi511" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_normal_23.png" id="51_swiug"]
+[ext_resource type="Texture2D" uid="uid://bd2an2ht0sdxm" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_back_15.png" id="52_0rqb4"]
+[ext_resource type="Texture2D" uid="uid://dmobinhhcxc4q" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_back_16.png" id="53_dobxu"]
+[ext_resource type="Texture2D" uid="uid://ck2vtsfmnwq0i" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_back_17.png" id="54_5l2sr"]
+[ext_resource type="Texture2D" uid="uid://db2nume7hxa1j" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_back_18.png" id="55_3pj8y"]
+[ext_resource type="Texture2D" uid="uid://dgdo2fbb2mfpb" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_back_19.png" id="56_l8q3x"]
+[ext_resource type="Texture2D" uid="uid://bxfmxfnj3nru4" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_back_20.png" id="57_ls5k4"]
+[ext_resource type="Texture2D" uid="uid://dyrvmv5vfm7ol" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_back_21.png" id="58_k01me"]
+[ext_resource type="Texture2D" uid="uid://bvb8jdrvkibj0" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_back_22.png" id="59_4318w"]
+[ext_resource type="Texture2D" uid="uid://cnl4qir2hqfu3" path="res://Assets/Animations/Enemies/0尸国杂兵/尸国杂兵move_back_23.png" id="60_3hs3v"]
+
+[sub_resource type="Resource" id="Resource_eop1a"]
+script = ExtResource("2_06cbw")
+health = 20
+dodge_rate = 0.0
+near_damage_low = 2
+near_damage_high = 4
+near_attack_speed = 1.0
+near_hit_rate = 1.0
+far_damage_low = 0
+far_damage_high = 0
+far_attack_speed = 0.0
+far_damage_range = 0
+armor = 0.0
+physic_immune = false
+magic_defence = 0.0
+magic_immune = false
+explode_defence = 0.0
+explode_immune = false
+total_defence_rate = 0.0
+unit_move_speed = 1.1
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v0cye"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_lhbh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n65m3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_p8btc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wqabg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_byg2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_oo4qe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0b30r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_dgebv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7qloe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_fb7is")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_gyy4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_tkuho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_imwnt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_tsain")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_i785l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_uwour")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_hr0gj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_qnfqp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_t6yr6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_nj6m2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_v0w1t")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_1uyf0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_443dv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_f4e0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_kux72")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_ewwto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_jc1gm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_m0gd1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_qi68n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_a2u87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_fa5al")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_qwl7r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ohe2n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_xmnrk")
+}],
+"loop": false,
+"name": &"die",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_lhbh5")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_rkpyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_7bsqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_mcy16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_q30o4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_o51td")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_efqsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_g7lu4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_vpih6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_q5fuc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_dh7xl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_66bqh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_61ehr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_q4q1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_nemmb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_rl8iq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_0rqb4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_dobxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_5l2sr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_3pj8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_l8q3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_ls5k4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_k01me")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_4318w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_3hs3v")
+}],
+"loop": true,
+"name": &"move_back",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_thw2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_j8d2g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tamh3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_glaog")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jord1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_c8ee2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_fo3ob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1ruu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_tvy3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_tw2qy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_5gm41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ktnbj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_nyy77")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_qww3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_5ofcm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_s2rfy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_0b2f2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_pdyx2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_rt83w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_kovvs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_lmuol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_kcvto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_vwjdj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_gm3gi")
+}],
+"loop": true,
+"name": &"move_front",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_8d144")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_lqigd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_4wlix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_pwdqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_6vpfh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_1qb8g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_arnee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_7xytg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_0b2yb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_hskqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_vihhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_g0elm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_h8tcq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_uomro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_a0iwt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_daxh8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_4q7ol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_idi80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_piatv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_4f3bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_yg4fs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_2n84x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_apmd4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_swiug")
+}],
+"loop": true,
+"name": &"move_normal",
+"speed": 24.0
+}]
+
+[node name="Enemy0" instance=ExtResource("1_7yrb0")]
+script = ExtResource("2_qbco0")
+enemy_name = "尸国杂兵"
+start_data = SubResource("Resource_eop1a")
+bounty = 3
+
+[node name="EnemySprite" parent="UnitBody" index="0"]
+position = Vector2(-7.62939e-06, -85)
+sprite_frames = SubResource("SpriteFrames_v0cye")
+animation = &"attack"
+autoplay = "idle"

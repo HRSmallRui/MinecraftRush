@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddbc1xhcc3d3e"]
+
+[ext_resource type="PackedScene" uid="uid://dakq012d6gh6m" path="res://Scenes/UI-Components/Stages/skill_button.tscn" id="1_2wtn4"]
+[ext_resource type="Texture2D" uid="uid://cgqvtdtcpu8nd" path="res://Assets/Images/UI/SkillButton/Heroskill/Steve/steve_canuse.png" id="2_6clph"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/Stages/SkillButtons/steve_skill.gd" id="2_q0u2c"]
+[ext_resource type="Texture2D" uid="uid://dfegr2mf1hf25" path="res://Assets/Images/UI/SkillButton/Heroskill/Steve/steve_select.png" id="3_brc1b"]
+
+[node name="SteveSkill" instance=ExtResource("1_2wtn4")]
+script = ExtResource("2_q0u2c")
+skill_type = 2
+texture_normal = ExtResource("2_6clph")
+texture_select = ExtResource("3_brc1b")
+skill_name = "药水风暴雨"
+skill_intro = "倾泻一场药水风暴，伤害敌人，并支援友军"
+cooling_time = 30.0

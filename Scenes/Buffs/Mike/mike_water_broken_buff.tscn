@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://b1puw18cdilke"]
+
+[ext_resource type="PackedScene" uid="uid://bjfa3t67tpsbr" path="res://Scenes/Buffs/property_buff.tscn" id="1_6c67c"]
+[ext_resource type="Script" path="res://Scripts/Buffs/property_buff_block.gd" id="2_73g1b"]
+[ext_resource type="Script" path="res://Scripts/Classes/potion_particle_leader.gd" id="3_cp37a"]
+
+[sub_resource type="Resource" id="Resource_k47sa"]
+script = ExtResource("2_73g1b")
+property_type = 5
+operation_type = 1
+operation_data = 0.0
+
+[sub_resource type="Resource" id="Resource_qng07"]
+script = ExtResource("2_73g1b")
+property_type = 6
+operation_type = 1
+operation_data = 0.0
+
+[sub_resource type="Resource" id="Resource_eqocn"]
+script = ExtResource("2_73g1b")
+property_type = 12
+operation_type = 1
+operation_data = 0.0
+
+[node name="MikeWaterBrokenBuff" instance=ExtResource("1_6c67c")]
+buff_blocks = Array[ExtResource("2_73g1b")]([SubResource("Resource_k47sa"), SubResource("Resource_qng07"), SubResource("Resource_eqocn")])
+buff_type = 1
+buff_tag = "MikeWaterBroken"
+immune_groups = Array[String](["god", "boss"])
+
+[node name="PotionParticleLeader" type="Node2D" parent="." index="0" node_paths=PackedStringArray("buff_vehicle")]
+script = ExtResource("3_cp37a")
+potion_color = Color(0, 0.345098, 1, 1)
+buff_vehicle = NodePath("..")

@@ -1,0 +1,22 @@
+[gd_scene load_steps=7 format=3 uid="uid://b6ot0a5pdjonq"]
+
+[ext_resource type="PackedScene" uid="uid://d11w8wb6ou4nk" path="res://Scenes/UI-Components/TipButtons/ArmorTipButton.tscn" id="1_5jx5q"]
+[ext_resource type="PackedScene" uid="uid://60navrslpetq" path="res://Scenes/TipUI/drag_tip_ui.tscn" id="2_lm42f"]
+[ext_resource type="Texture2D" uid="uid://bfruitls85oun" path="res://Assets/Images/UI/TipIcons/drag_tip.png" id="2_n8auw"]
+[ext_resource type="Texture2D" uid="uid://h8ohdshyv6tl" path="res://Assets/Images/UI/TipIcons/drag_tip-hover.png" id="3_tklrh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h1mwl"]
+atlas = ExtResource("2_n8auw")
+region = Rect2(10, 9, 106, 108)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbdxs"]
+atlas = ExtResource("3_tklrh")
+region = Rect2(4, 4, 118, 118)
+
+[node name="DragTipButton" instance=ExtResource("1_5jx5q")]
+open_tip_scene = ExtResource("2_lm42f")
+
+[node name="TextureButton" parent="Button" index="0"]
+texture_normal = SubResource("AtlasTexture_h1mwl")
+texture_pressed = SubResource("AtlasTexture_h1mwl")
+texture_hover = SubResource("AtlasTexture_tbdxs")

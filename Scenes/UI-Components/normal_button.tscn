@@ -1,0 +1,54 @@
+[gd_scene load_steps=12 format=3 uid="uid://5wpq8h2i2s8m"]
+
+[ext_resource type="Texture2D" uid="uid://bkq3q4lwcyx63" path="res://Assets/Images/UI/button.png" id="1_kb567"]
+[ext_resource type="Script" path="res://Scripts/UI-Components/normal_button.gd" id="1_wyp6l"]
+[ext_resource type="Texture2D" uid="uid://c76iypqsudcoy" path="res://Assets/Images/UI/button_pressed.png" id="2_8bkoj"]
+[ext_resource type="Texture2D" uid="uid://dy4e5740gddnu" path="res://Assets/Images/UI/button_hover.png" id="3_6m0sd"]
+[ext_resource type="Texture2D" uid="uid://cujq2ir1ycdq5" path="res://Assets/Images/UI/button_disabled.png" id="4_5wmgi"]
+[ext_resource type="FontFile" uid="uid://b0ev28ueo51cu" path="res://Assets/Fonts/5_Minecraft AE(支持中文).ttf" id="6_takkn"]
+[ext_resource type="AudioStream" uid="uid://i0to3f5pe1rc" path="res://Assets/Sounds/FXs/UIs/MC_Click.mp3" id="7_wot8n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_klj4v"]
+atlas = ExtResource("1_kb567")
+region = Rect2(98, 192, 331, 143)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mq23s"]
+atlas = ExtResource("2_8bkoj")
+region = Rect2(98, 192, 331, 143)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q44q3"]
+atlas = ExtResource("3_6m0sd")
+region = Rect2(68, 162, 391, 203)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xq17l"]
+atlas = ExtResource("4_5wmgi")
+region = Rect2(98, 192, 331, 143)
+
+[node name="NormalButton" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+focus_mode = 0
+texture_normal = SubResource("AtlasTexture_klj4v")
+texture_pressed = SubResource("AtlasTexture_mq23s")
+texture_hover = SubResource("AtlasTexture_q44q3")
+texture_disabled = SubResource("AtlasTexture_xq17l")
+stretch_mode = 3
+script = ExtResource("1_wyp6l")
+
+[node name="ButtonTitleLabel" type="Label" parent="."]
+layout_mode = 0
+offset_right = 822.0
+offset_bottom = 352.0
+scale = Vector2(0.400207, 0.400207)
+theme_override_fonts/font = ExtResource("6_takkn")
+theme_override_font_sizes/font_size = 96
+text = "开始"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClickAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_wot8n")
+volume_db = 2.0
+bus = &"Sound"
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
