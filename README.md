@@ -73,7 +73,6 @@
 ## 📖 深入阅读
 
 - [工程架构说明](doc/ARCHITECTURE.md) — 了解各模块的职责和文件位置
-- [Mod 开发指南](doc/MOD_DEV_GUIDE.md) — 如果你想基于此工程制作自己的 Mod
 
 ---
 
